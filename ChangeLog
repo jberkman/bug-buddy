@@ -1,3 +1,8 @@
+2001-02-11  jacob berkman  <jacob@ximian.com>
+
+	* `find .`: (almost) completely rewritten to support bugzilla and
+	have a new UI
+
 2001-02-05  Fatih Demir	<kabalak@gmx.net>
 
 	* src/gnome.appmap: Added gtranslator.

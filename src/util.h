@@ -28,6 +28,7 @@
 #include <ctype.h>
 #include <sys/types.h>
 #include <glib.h>
+#include <gtk/gtkeditable.h>
 
 void destroy_hash_table (GHashTable *table, gboolean free_data);
 

@@ -29,7 +29,6 @@
 #include "bug-buddy.h"
 #include "distro.h"
 #include "util.h"
-#include "glade-druid.h"
 
 static char *get_debian_version (Distribution *distro);
 static void get_package_versions (GSList *packages);
@@ -65,10 +64,7 @@ ioc_destroy (gpointer data)
 {
 	GHashTable *table = data;
 	g_hash_table_destroy (table);
-
-	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
-					   TRUE, TRUE, TRUE);
-
+	druid_set_sensitive (TRUE, TRUE, TRUE);
 	append_packages ();
 }
 
@@ -160,6 +156,6 @@ get_package_versions (GSList *packages)
 	g_io_add_watch_full (ioc, 0, G_IO_IN | G_IO_HUP, handle_input,
 			     table, ioc_destroy);
 	g_io_channel_unref (ioc);
-	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
-					   FALSE, FALSE, TRUE);
+	druid_set_sensitive (FALSE, FALSE, TRUE);
+		
 }

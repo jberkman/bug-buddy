@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 1.2)
+AM_INIT_AUTOMAKE(bug-buddy, 1.89cvs)
 
 AM_MAINTAINER_MODE
 
@@ -34,7 +34,7 @@ LIBS=$LIBS_save
 
 AM_PATH_LIBGLADE(,,gnome)
 
-ALL_LINGUAS="az ca cs da de el en_AU en_GB es fi fr ga gl hu it ja ko nl nn no pl pt_BR ro ru sk sl sv tr uk zh_CN.GB2312"
+ALL_LINGUAS="az ca cs de el en_AU en_GB es fi fr ga gl hu it ja ko nl nn no pl pt_BR ro ru sk sl sv tr uk zh_CN.GB2312"
 AM_GNOME_GETTEXT
 
 AC_MSG_CHECKING(whether this is boc's machine)
@@ -46,8 +46,8 @@ else
     AC_MSG_RESULT(no)
 fi
 
-EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui libglade xml`
-EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui libglade xml`
+EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
+EXTRA_GNOME_LIBS=`gnome-config   --libs   gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
 AC_SUBST(EXTRA_GNOME_CFLAGS)
 AC_SUBST(EXTRA_GNOME_LIBS)
 
@@ -57,9 +57,9 @@ Makefile
 docs/Makefile
 docs/C/Makefile
 docs/it/Makefile
-po/Makefile.in
 intl/Makefile
 pixmaps/Makefile
+po/Makefile.in
 src/Makefile
 ])
 

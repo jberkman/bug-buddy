@@ -1,9 +1,9 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) 1999, 2000 Jacob Berkman
- * Copyright 2000 Helix Code, Inc.
+ * Copyright (C) 1999 - 2001 Jacob Berkman
+ * Copyright 2000, 2001 Ximian, Inc.
  *
- * Author:  Jacob Berkman  <jacob@helixcode.com>
+ * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,6 @@
 #include "util.h"
 #include "distro.h"
 #include "bts.h"
-#include "glade-druid.h"
 
 static Distribution distros[] = {
 	{ "Slackware",     "/etc/slackware-version",  &debian_phy },
@@ -91,7 +90,7 @@ update_das_clist ()
 
         /* system config page */
 
-	w = VERSION_LIST;
+	w = GET_WIDGET ("version-clist");
 	gtk_clist_clear (GTK_CLIST (w));
 
 	for (i = 0; distros[i].name; i++) {
@@ -187,8 +186,10 @@ load_bts_xml ()
 				break;
 			cur2 = cur->childs;
 			while (cur2) {
-				if (strcmp (cur2->name, "package"))
+				if (strcmp (cur2->name, "package")) {
+					cur2 = cur2->next;
 					continue;
+				}
 				druid_data.packages = g_slist_append (
 					druid_data.packages, 
 					make_package_from_node (cur2));

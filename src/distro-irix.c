@@ -1,6 +1,6 @@
 /* bug-buddy bug submitting program
  *
- * Copyright 2000 Helix Code, Inc.
+ * Copyright 2000 Ximian, Inc.
  *
  * Author:  David Kaelbling <drk@sgi.com>
  *

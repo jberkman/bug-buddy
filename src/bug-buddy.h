@@ -1,9 +1,9 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) 1999, 2000 Jacob Berkman
- * Copyright 2000 Helix Code, Inc.
+ * Copyright (C) 1999 - 2001 Jacob Berkman
+ * Copyright 2000 Ximian, Inc.
  *
- * Author:  Jacob Berkman  <jacob@helixcode.com>
+ * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,9 +24,12 @@
 #define __BUG_BUDDY_H__
 
 #include <glade/glade.h>
+#include <libgnomeui/gnome-canvas.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
+
 #include <sys/types.h>
 #include "distro.h"
-#include "bts.h"
+#include "bugzilla.h"
 
 typedef enum {
 	CRASH_DIALOG,
@@ -46,18 +49,19 @@ typedef enum {
 } BugType;
 
 typedef enum {
-	SEVERITY_CRITICAL,
-	SEVERITY_GRAVE,
-	SEVERITY_NORMAL,
-	SEVERITY_WISHLIST
-} SeverityType;
+	STATE_INTRO,
+	STATE_GDB,
+	STATE_DESC,
+	STATE_UPDATE,
+	STATE_PRODUCT,
+	STATE_COMPONENT,
+	STATE_SYSTEM,
+	STATE_EMAIL,
+	STATE_FINISHED,
+	STATE_LAST
+} BuddyState;
 
-typedef enum {
-	BUG_CLASS_SW,
-	BUG_CLASS_DOC,
-	BUG_CLASS_CHANGE,
-	BUG_CLASS_SUPPORT
-} BugClassType;
+#define GET_WIDGET(name) (glade_xml_get_widget (druid_data.xml, (name)))
 
 typedef struct {
 	/* contact page */
@@ -81,13 +85,25 @@ typedef struct {
 extern PoptData popt_data;
 
 typedef struct {
-	GtkWidget *the_druid;
 	GladeXML  *xml;
+	BuddyState state;
 
-	gboolean default_email;
+	/* canvas stuff */
+	GnomeCanvasItem *title_box;
+	GnomeCanvasItem *banner;
+	GnomeCanvasItem *logo;
+
+	GnomeCanvasItem *side_box;
+	GnomeCanvasItem *side_image;
+
+	/* throbber */
+	GnomeCanvasItem *throbber;
+	GdkPixbuf *throbber_pb;
+	guint            throbber_id;
+
+	gboolean already_run;
 
 	Distribution      *distro;
-	BugTrackingSystem *bts;
 	char              *bts_file;
 
 	CrashType  crash_type;
@@ -102,17 +118,36 @@ typedef struct {
 	int         fd;
 	gboolean    explicit_dirty;
 
+	BugzillaBTS *all_products;
+	GSList      *bugzillas;
+
 	/* Debian BTS stuff */
 	SubmitType    submit_type;
+#if 0
 	BugType       bug_type; 
 	SeverityType  severity;
 	BugClassType  bug_class;
+#endif
 	GSList       *packages;
+
+	/* Bugzilla BTS stuff */
+	BugzillaProduct   *product;
+	BugzillaComponent *component;
+	char              *severity;
+
+	GList *dlsources;
+	GList *dldests;
+	GnomeVFSAsyncHandle *vfshandle;
+	gboolean need_to_download;
 } DruidData;
+
 extern DruidData druid_data;
 
 extern const gchar *severity[];
 extern const gchar *bug_class[][2];
+
+void druid_set_sensitive (gboolean prev, gboolean next, gboolean cancel);
+void druid_set_state (BuddyState state);
 
 void get_trace_from_core (const gchar *core_file);
 void get_trace_from_pair (const gchar *app, const gchar *extra);
@@ -122,4 +157,8 @@ void start_gdb (void);
 void stop_progress (void);
 
 void append_packages (void);
+
+void load_config (void);
+void save_config (void);
+
 #endif /* __bug_buddy_h__ */

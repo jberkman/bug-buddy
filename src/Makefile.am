@@ -12,29 +12,27 @@ INCLUDES = \
 bin_PROGRAMS = bug-buddy
 
 bug_buddy_SOURCES = \
-	bts.c		\
-	bts.h		\
-	bts-debian.c	\
-	bug-buddy.c	\
-	bug-buddy.h	\
-	ctree-combo.c	\
-	ctree-combo.h	\
-	distro.h	\
-	distro-debian.c	\
-	distro-irix.c	\
-	distro-redhat.c	\
-	gdb-buddy.c	\
-	glade-druid.h	\
-	gtk-combo-box.c	\
-	gtk-combo-box.h	\
-	util.c		\
-	util.h
+	bug-buddy.c		\
+	bug-buddy.h		\
+	bugzilla.c		\
+	bugzilla.h		\
+	config.c		\
+	distro.h		\
+	distro-debian.c		\
+	distro-irix.c		\
+	distro-redhat.c		\
+	gdb-buddy.c		\
+	libglade-buddy.h	\
+	util.c			\
+	util.h			\
+	united-states-of-bug-buddy.c
 
 bug_buddy_LDFLAGS = \
 	-export-dynamic
 
 bug_buddy_LDADD = \
-	$(EXTRA_GNOME_LIBS)	$(INTLLIBS)
+	$(EXTRA_GNOME_LIBS)	\
+	$(INTLLIBS)
 
 noinst_PROGRAMS = gnome-crash
 

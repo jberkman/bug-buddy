@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 2000-11-20 10:53+0100\n"
+"POT-Creation-Date: 2001-02-11 14:13-0500\n"
 "PO-Revision-Date: 2000-11-03 09:19CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -14,135 +14,149 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.6\n"
 
-#: src/bts.c:100
+#: src/bts.c:99
 msgid "Distribution"
 msgstr "Distribúcia"
 
-#: src/bts.c:108
+#: src/bts.c:107
 msgid "System"
 msgstr "Systém"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:53
 msgid "critical"
 msgstr "kritická"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:54
 msgid "grave"
 msgstr "vá¾na"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:55
 msgid "normal"
 msgstr "normálna"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:56
 msgid "wishlist"
 msgstr "prianie"
 
-#: src/bug-buddy.c:89
+#: src/bug-buddy.c:61
 msgid "software bug"
 msgstr "chyba softvéru"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:62
 msgid "documentation bug"
 msgstr "chyba dokumentácie"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:63
 msgid "change request"
 msgstr "po¾iadavka zmeny"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:64
 msgid "support"
 msgstr "podpora"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:69
 msgid "Submit bug report"
 msgstr "Posla» správu o chybe"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:70
 msgid "Only send report to yourself"
 msgstr "Posla» správu len sebe"
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:71
 msgid "Save report to file"
 msgstr "Ulo¾i» správu do súboru"
 
-#: src/bug-buddy.c:104
-msgid "Collect debugging information from a crashed application"
-msgstr "Získa» ladiace informácie zo spadnutej aplikácie"
+#: src/bug-buddy.c:76
+#, fuzzy
+msgid "crashed application"
+msgstr "Vyberte binárny súbor spadnutej aplikácie"
 
-#: src/bug-buddy.c:105
-msgid "Collect debugging information from a core file"
-msgstr "Získa» ladiace informácie z core súboru"
+#: src/bug-buddy.c:77
+#, fuzzy
+msgid "core file"
+msgstr "Súbor core"
 
-#: src/bug-buddy.c:106
-msgid "Skip this step"
-msgstr "Preskoèi»"
+#: src/bug-buddy.c:78
+msgid "nothing"
+msgstr ""
 
-#: src/bug-buddy.c:111
+#: src/bug-buddy.c:83
 msgid "Create a new bug report"
 msgstr "Vytvori» novú správu o chybe"
 
-#: src/bug-buddy.c:112
+#: src/bug-buddy.c:84
 msgid "Add more information to existing report"
 msgstr "Prida» ïal¹ie informácie k existujúcej správe"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:93
 msgid "Name of contact"
 msgstr "Meno kontaktu"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:93
 msgid "NAME"
 msgstr "NAME"
 
-#: src/bug-buddy.c:122
+#: src/bug-buddy.c:94
 msgid "Email address of contact"
 msgstr "E-mailová adresa kontaktu"
 
-#: src/bug-buddy.c:122
+#: src/bug-buddy.c:94
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:95
 msgid "Package containing the program"
 msgstr "Balík obsahujúci program"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:95
 msgid "PACKAGE"
 msgstr "PACKAGE"
 
-#: src/bug-buddy.c:124
+#: src/bug-buddy.c:96
 msgid "Version of the package"
 msgstr "Verzia balíku"
 
-#: src/bug-buddy.c:124
+#: src/bug-buddy.c:96
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:125
+#: src/bug-buddy.c:97
 msgid "File name of crashed program"
 msgstr "Meno súbor spadnutého programu"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
+#: src/bug-buddy.c:97 src/bug-buddy.c:99 src/bug-buddy.c:100
 msgid "FILE"
 msgstr "FILE"
 
-#: src/bug-buddy.c:126
+#: src/bug-buddy.c:98
 msgid "PID of crashed program"
 msgstr "PID spadnutého programu"
 
-#: src/bug-buddy.c:126
+#: src/bug-buddy.c:98
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:99
 msgid "Core file from program"
 msgstr "Súbor core programu"
 
-#: src/bug-buddy.c:128
+#: src/bug-buddy.c:100
 msgid "Text file to include in the report"
 msgstr "Textový súbor prilo¾ený k správe"
 
-#: src/bug-buddy.c:332
+#: src/bug-buddy.c:257
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb e¹te nedokonèil získavanie ladiacich informácií.\n"
+"Zabi» proces gdb (krokovanie zásobníku bude neúplné)?"
+
+#: src/bug-buddy.c:265 src/gdb-buddy.c:116
+msgid "gdb has already exited"
+msgstr "gdb u¾ skonèil"
+
+#: src/bug-buddy.c:340
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -154,21 +168,21 @@ msgstr ""
 "\n"
 "Prosím, uveïte balík."
 
-#: src/bug-buddy.c:374
+#: src/bug-buddy.c:382
 msgid "The specified file does not exist."
 msgstr "Uvedený súbor neexistuje."
 
-#: src/bug-buddy.c:379
+#: src/bug-buddy.c:387
 #, c-format
 msgid "File is of type: %s"
 msgstr "Súbor je typu: %s"
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:390
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' nevyzerá ako textový súbor."
 
-#: src/bug-buddy.c:396
+#: src/bug-buddy.c:404
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -176,35 +190,15 @@ msgstr ""
 "Vo Va¹ej správe o chybe\n"
 "musíte uvies» predmet a popis."
 
-#: src/bug-buddy.c:439
-msgid ""
-"gdb has not finished getting the debugging information.\n"
-"Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"gdb e¹te nedokonèil získavanie ladiacich informácií.\n"
-"Zabi» proces gdb (krokovanie zásobníku bude neúplné)?"
-
-#: src/bug-buddy.c:447 src/gdb-buddy.c:83
-msgid "gdb has already exited"
-msgstr "gdb u¾ skonèil"
-
-#: src/bug-buddy.c:490
-msgid "The graphical bug reporting tool for GNOME."
-msgstr "Grafický nástroj GNOME pre posielanie správ o chybách."
-
-#: src/bug-buddy.c:500
-msgid "The lame bug-buddy web page"
-msgstr "Neuspokojivá stránka Priateµa v núdzi"
-
-#: src/bug-buddy.c:607
+#: src/bug-buddy.c:522
 msgid "Please enter your name."
 msgstr "Prosím, uvedte svoje meno."
 
-#: src/bug-buddy.c:613
+#: src/bug-buddy.c:528
 msgid "Please enter a valid email address."
 msgstr "Prosím, uvedte platnú e-mailovú adresu."
 
-#: src/bug-buddy.c:624
+#: src/bug-buddy.c:539
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -217,27 +211,27 @@ msgstr ""
 "\n"
 "Chcete uvies» nové umiestnenie programu sendmail?"
 
-#: src/bug-buddy.c:675
+#: src/bug-buddy.c:590
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nepodarilo sa otvori» súbor: '%s'"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:604
 #, c-format
 msgid "about to run '%s'"
 msgstr "spú¹»am '%s'"
 
-#: src/bug-buddy.c:693
+#: src/bug-buddy.c:608
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nepodarilo sa spusti» po¹tový program: '%s'"
 
-#: src/bug-buddy.c:722
+#: src/bug-buddy.c:637
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Va¹a správa o chybe bola ulo¾ená do '%s'"
 
-#: src/bug-buddy.c:725
+#: src/bug-buddy.c:640
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -248,19 +242,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:855
+#: src/bug-buddy.c:772
 msgid "You must specify a recipient email address"
 msgstr "Musíte uvies» e-mailovú adresu príjemcu"
 
-#: src/bug-buddy.c:861
+#: src/bug-buddy.c:778
 msgid "Submit this bug report now?"
 msgstr "Odosla» správu o chybe?"
 
-#: src/bug-buddy.c:871
+#: src/bug-buddy.c:788
 msgid "Please choose a file to save to."
 msgstr "Prosím, vyberte súbor, do ktorého sa má ulo¾i»."
 
-#: src/bug-buddy.c:878
+#: src/bug-buddy.c:795
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -269,23 +263,23 @@ msgstr ""
 "Súbor '%s' u¾ existuje.\n"
 "Prepísa»?"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847 src/glade-strings.c:70
 msgid "About"
 msgstr "O Programe"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847
 msgid "Help"
 msgstr "Pomocník"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847 src/glade-strings.c:25
 msgid "Stop"
 msgstr "Zastavi»"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847
 msgid "Refresh"
 msgstr "Obnovi»"
 
-#: src/bug-buddy.c:971
+#: src/bug-buddy.c:896
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -294,7 +288,7 @@ msgstr ""
 "Nemô¾em otvori» '%s'.\n"
 "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
 
-#: src/bug-buddy.c:1076
+#: src/bug-buddy.c:1144
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -302,7 +296,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME u¾ nie je podporované.\n"
 "Prosím, namiesto toho pou¾ite voµbu príkazového riadku --appname."
 
-#: src/bug-buddy.c:1089
+#: src/bug-buddy.c:1157
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -310,21 +304,21 @@ msgstr ""
 "$GNOME_CRASHED_PID u¾ nie je podporované.\n"
 "Prosím, namiesto toho pou¾ite voµbu príkazového riadku --pid."
 
-#: src/bug-buddy.c:1221
-#, c-format
+#: src/bug-buddy.c:1251
+#, fuzzy, c-format
 msgid ""
-"Could not find '%s'.\n"
+"Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Nemô¾em nájs» '%s'.\n"
+"Nemô¾em otvori» '%s'.\n"
 "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
 
-#: src/gdb-buddy.c:43
-#, c-format
-msgid "obtaining stack trace... (%d)"
+#: src/gdb-buddy.c:72
+#, fuzzy, c-format
+msgid "Obtaining stack trace... (%d)"
 msgstr "získavam krokovanie zásobníku... (%d)"
 
-#: src/gdb-buddy.c:117
+#: src/gdb-buddy.c:153
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -333,7 +327,7 @@ msgstr ""
 "Nepodarilo sa spracova» core súbor pomocou gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:179
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -342,11 +336,17 @@ msgstr ""
 "Nepodarilo sa zisti», ktorý program vytvoril\n"
 "'%s'"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:215
 msgid "Error on read... aborting"
 msgstr "Chyba pri èítaní...konèím"
 
-#: src/gdb-buddy.c:218
+#: src/gdb-buddy.c:247
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+
+#: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -354,7 +354,7 @@ msgstr ""
 "Nemô¾em nájs» súbor pre príkaz gdb.\n"
 "Prosím, skúste znovu nain¹talova» Priateµa v núdzi."
 
-#: src/gdb-buddy.c:227 src/util.c:75
+#: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
 msgstr "Chyba pri fork()."
 
@@ -364,203 +364,239 @@ msgstr "Chyba pri fork()."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-msgid "bug-buddy"
+#, fuzzy
+msgid "Bug Buddy"
 msgstr "Priateµ v núdzi"
 
 #: src/glade-strings.c:8
-msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr "Vítajte v Nádhernom svete Priateµa v núdzi"
-
-#: src/glade-strings.c:9
 msgid ""
-"bug-buddy will walk you through the process\n"
-"of submitting a bug report.  If this is your first time \n"
-"using bug-buddy, you will be prompted for your\n"
-"email address so that the bug report can be\n"
-"submitted."
+"This program will walk you through the steps for \n"
+"submitting a bug report for projects such as GNOME.\n"
+"\n"
+"These bug reports are submitted via email, so\n"
+"please specify your email address so you can be\n"
+"contacted if furthur information is requred, or\n"
+"when a fixed version is available."
 msgstr ""
-"Priateµ v núdzi Vás prevedie procesom\n"
-"odoslania správy o chybe. Ak je to prvýkrát,\n"
-"èo ho pou¾ívate, budete vyzvaní, aby ste zadali\n"
-"e-mailovú adresu, aby mohla by» správa odoslaná."
-
-#: src/glade-strings.c:14
-msgid "Contact Information"
-msgstr "Informácia o kontakte"
 
 #: src/glade-strings.c:15
-msgid "Choose which sendmail to use"
-msgstr "Vyberte, ktorý sendmail pou¾i»"
+#, fuzzy
+msgid "Skip this step in the future"
+msgstr "Preskoèi»"
 
 #: src/glade-strings.c:16
-msgid "Email Address"
-msgstr "E-mailová adresa"
-
-#: src/glade-strings.c:17
-msgid "Full path of sendmail"
-msgstr "Úplná cesta k sendmailu"
-
-#: src/glade-strings.c:18
-msgid "Your Name"
+#, fuzzy
+msgid "Name"
 msgstr "Va¹e meno"
 
-#: src/glade-strings.c:19
-msgid ""
-"bug-buddy will walk you through the process of\n"
-"submitting a bug report.  You can click the help\n"
-"button for a more in-depth explanation of the process."
+#: src/glade-strings.c:17
+msgid "Sendmail"
 msgstr ""
-"Priateµ v núdzi Vás prevedie procesom\n"
-"odoslania správy o chybe. Pre získanie dôkladnej¹ej\n"
-"informácie mô¾ete kliknú» na tlaèidlo Pomocníka."
 
-#: src/glade-strings.c:22
-msgid "Report Information"
-msgstr "Informácia o správe"
+#: src/glade-strings.c:18
+msgid "Email"
+msgstr ""
+
+#: src/glade-strings.c:19
+msgid "intro"
+msgstr ""
+
+#: src/glade-strings.c:20
+msgid ""
+"Bug Buddy can send debugging information with your bug report.\n"
+"The correct options should have been selected for you automatically.\n"
+"For more information, please click the Help button below."
+msgstr ""
 
 #: src/glade-strings.c:23
-msgid ""
-"Select a bug tracking system to use, and then fill out\n"
-"the remaining information."
+msgid "Debug"
 msgstr ""
-"Vyberte systém sledovania chýb a potom doplòte\n"
-"ostatné informácie."
 
-#: src/glade-strings.c:25
-msgid "Bug Tracking System "
-msgstr "Systém sledovania chýb"
-
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
-msgid "Package"
-msgstr "Balík"
-
-#: src/glade-strings.c:27
-msgid "Severity"
-msgstr "Vá¾nos»"
-
-#: src/glade-strings.c:28
-msgid "Class"
-msgstr "Trieda"
-
-#: src/glade-strings.c:29 src/glade-strings.c:31
-msgid "Version"
-msgstr "Verzia"
-
-#: src/glade-strings.c:32
-msgid ""
-"Please check to see if your bug has already been submitted,\n"
-"and if so, use \"Add information to existing report\" above."
+#: src/glade-strings.c:24
+msgid "Go"
 msgstr ""
-"Prosím, overte, èi bola Va¹a správa u¾ odoslaná,\n"
-"a ak áno, pou¾ite \"Prida» ïal¹ie informácie k existujúcej správe\"."
 
-#: src/glade-strings.c:34 src/glade-strings.c:35
-msgid "Bug Number"
-msgstr "Èíslo chyby"
-
-#: src/glade-strings.c:36
-msgid "Description"
-msgstr "Popis"
-
-#: src/glade-strings.c:37
-msgid "Please make your bug report in English, if possible."
-msgstr "Ak je to mo¾né, prosím, vyplòte správu v angliètine."
-
-#: src/glade-strings.c:38
-msgid "Short subject for the bug report"
-msgstr "Krátky predmet správy"
-
-#: src/glade-strings.c:39
-msgid "Full description of the bug, including how to reproduce it"
-msgstr "Úplný popis chyby, vrátane postupu, ako ju zopakova»"
-
-#: src/glade-strings.c:40
-msgid "Include a text file"
-msgstr "Vlo¾i» textový súbor"
-
-#: src/glade-strings.c:41
-msgid "Debugging Information"
-msgstr "Ladiace informácie"
-
-#: src/glade-strings.c:42
-msgid "Select the crashed application's binary"
-msgstr "Vyberte binárny súbor spadnutej aplikácie"
-
-#: src/glade-strings.c:43
-msgid "Binary"
+#: src/glade-strings.c:26
+#, fuzzy
+msgid "Binary file"
 msgstr "Binárny súbor"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:27
 msgid "Process ID"
 msgstr "ID procesu"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:28
 msgid "Core file"
 msgstr "Súbor core"
 
+#: src/glade-strings.c:29
+#, fuzzy
+msgid "Automatically continue to next step when debugging is complete"
+msgstr "Automaticky prejs» na následujúcu stránku pri dokonèení"
+
+#: src/glade-strings.c:30
+msgid "gdb"
+msgstr ""
+
+#: src/glade-strings.c:31
+msgid "Please make your bug report in English, if possible."
+msgstr "Ak je to mo¾né, prosím, vyplòte správu v angliètine."
+
+#: src/glade-strings.c:32
+msgid "Short subject for the bug report"
+msgstr "Krátky predmet správy"
+
+#: src/glade-strings.c:33
+msgid "Full description of the bug, including how to reproduce it"
+msgstr "Úplný popis chyby, vrátane postupu, ako ju zopakova»"
+
+#: src/glade-strings.c:34
+msgid "Include a text file"
+msgstr "Vlo¾i» textový súbor"
+
+#: src/glade-strings.c:35
+msgid "desc"
+msgstr ""
+
+#: src/glade-strings.c:36
+msgid ""
+"Please wait while Bug Buddy updates its list\n"
+"of products for the bug tracking systems."
+msgstr ""
+
+#: src/glade-strings.c:38
+msgid "Saving:"
+msgstr ""
+
+#: src/glade-strings.c:39
+#, fuzzy
+msgid "To:"
+msgstr "Komu"
+
+#: src/glade-strings.c:40 src/glade-strings.c:57
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:41
+msgid "download"
+msgstr ""
+
+#: src/glade-strings.c:42
+msgid "Please select the product for the bug you wish to report."
+msgstr ""
+
+#: src/glade-strings.c:43
+msgid "Product"
+msgstr ""
+
+#: src/glade-strings.c:44 src/glade-strings.c:50
+msgid "Description"
+msgstr "Popis"
+
+#: src/glade-strings.c:45
+msgid "Show products for"
+msgstr ""
+
 #: src/glade-strings.c:46
-msgid "Select a core file"
-msgstr "Vyberte súbor core"
+#, fuzzy
+msgid "bug tracking systems."
+msgstr "Systém sledovania chýb"
 
 #: src/glade-strings.c:47
-msgid "Collecting Debugging Information"
-msgstr "Získanie ladiacich informácií"
+msgid "product"
+msgstr ""
 
 #: src/glade-strings.c:48
+msgid "Please choose a component, version, and severity level."
+msgstr ""
+
+#: src/glade-strings.c:49
+#, fuzzy
+msgid "Component"
+msgstr "Obsah"
+
+#: src/glade-strings.c:51
+msgid "Version"
+msgstr "Verzia"
+
+#: src/glade-strings.c:52
+msgid "Severity"
+msgstr "Vá¾nos»"
+
+#: src/glade-strings.c:53
+#, fuzzy
+msgid "component"
+msgstr "Obsah"
+
+#: src/glade-strings.c:54
+#, fuzzy
 msgid ""
-"Please wait while debugging\n"
-"information is collected..."
+"Please wait while bug-buddy determines some information about your system."
 msgstr ""
 "Prosím, poèkajte pokým nebudú\n"
 "získané ladiace informácie..."
 
-#: src/glade-strings.c:50
-msgid "System Configuration"
-msgstr "Konfigurácia systému"
+#: src/glade-strings.c:55
+msgid "Package"
+msgstr "Balík"
 
-#: src/glade-strings.c:51
-msgid "Please verify that this information is correct"
-msgstr "Prosím, overte, èi je táto informácia správna"
-
-#: src/glade-strings.c:53
+#: src/glade-strings.c:56
 msgid "Version installed"
 msgstr "Nain¹talovaná verzia"
 
-#: src/glade-strings.c:54
-msgid "%P %%"
-msgstr "%P %%"
-
-#: src/glade-strings.c:55
+#: src/glade-strings.c:58
 msgid "Automatically go to next page when complete"
 msgstr "Automaticky prejs» na následujúcu stránku pri dokonèení"
 
-#: src/glade-strings.c:56
-msgid "Submitting the Report"
-msgstr "Odoslanie správy"
+#: src/glade-strings.c:59
+#, fuzzy
+msgid "system"
+msgstr "Systém"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:60
+#, fuzzy
+msgid "Select an action"
+msgstr "Vyberte súbor core"
+
+#: src/glade-strings.c:61
+msgid "Cc"
+msgstr ""
+
+#: src/glade-strings.c:62
 msgid "To"
 msgstr "Komu"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:63
 msgid "Send copy to yourself"
 msgstr "Posla» kópiu sebe"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:64
 msgid "Save the report to..."
 msgstr "Ulo¾i» správu do..."
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:65
 msgid "Content"
 msgstr "Obsah"
 
-#: src/glade-strings.c:61
-msgid "Summary"
-msgstr "Zhrnutie"
+#: src/glade-strings.c:66
+msgid "email info"
+msgstr ""
 
-#: src/glade-strings.c:62
-msgid "The GEGL is watching."
-msgstr "GEGL Vás pozoruje."
+#: src/glade-strings.c:67
+msgid "Assbarn Phenomeon"
+msgstr ""
+
+#: src/glade-strings.c:68
+msgid "Submit another bug"
+msgstr ""
+
+#: src/glade-strings.c:69
+msgid "finished"
+msgstr ""
+
+#: src/glade-strings.c:71
+msgid "Finish"
+msgstr ""
 
 #: src/util.c:60
 msgid "Unable to open pipe"
@@ -574,3 +610,102 @@ msgstr "Nemô¾em spusti» '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Chyba pri èítaní..."
+
+#~ msgid "Collect debugging information from a crashed application"
+#~ msgstr "Získa» ladiace informácie zo spadnutej aplikácie"
+
+#~ msgid "Collect debugging information from a core file"
+#~ msgstr "Získa» ladiace informácie z core súboru"
+
+#~ msgid "The graphical bug reporting tool for GNOME."
+#~ msgstr "Grafický nástroj GNOME pre posielanie správ o chybách."
+
+#~ msgid "The lame bug-buddy web page"
+#~ msgstr "Neuspokojivá stránka Priateµa v núdzi"
+
+#~ msgid ""
+#~ "Could not find '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Nemô¾em nájs» '%s'.\n"
+#~ "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
+
+#~ msgid "Welcome to the Wonderful World of bug-buddy"
+#~ msgstr "Vítajte v Nádhernom svete Priateµa v núdzi"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process\n"
+#~ "of submitting a bug report.  If this is your first time \n"
+#~ "using bug-buddy, you will be prompted for your\n"
+#~ "email address so that the bug report can be\n"
+#~ "submitted."
+#~ msgstr ""
+#~ "Priateµ v núdzi Vás prevedie procesom\n"
+#~ "odoslania správy o chybe. Ak je to prvýkrát,\n"
+#~ "èo ho pou¾ívate, budete vyzvaní, aby ste zadali\n"
+#~ "e-mailovú adresu, aby mohla by» správa odoslaná."
+
+#~ msgid "Contact Information"
+#~ msgstr "Informácia o kontakte"
+
+#~ msgid "Choose which sendmail to use"
+#~ msgstr "Vyberte, ktorý sendmail pou¾i»"
+
+#~ msgid "Email Address"
+#~ msgstr "E-mailová adresa"
+
+#~ msgid "Full path of sendmail"
+#~ msgstr "Úplná cesta k sendmailu"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process of\n"
+#~ "submitting a bug report.  You can click the help\n"
+#~ "button for a more in-depth explanation of the process."
+#~ msgstr ""
+#~ "Priateµ v núdzi Vás prevedie procesom\n"
+#~ "odoslania správy o chybe. Pre získanie dôkladnej¹ej\n"
+#~ "informácie mô¾ete kliknú» na tlaèidlo Pomocníka."
+
+#~ msgid "Report Information"
+#~ msgstr "Informácia o správe"
+
+#~ msgid ""
+#~ "Select a bug tracking system to use, and then fill out\n"
+#~ "the remaining information."
+#~ msgstr ""
+#~ "Vyberte systém sledovania chýb a potom doplòte\n"
+#~ "ostatné informácie."
+
+#~ msgid "Class"
+#~ msgstr "Trieda"
+
+#~ msgid ""
+#~ "Please check to see if your bug has already been submitted,\n"
+#~ "and if so, use \"Add information to existing report\" above."
+#~ msgstr ""
+#~ "Prosím, overte, èi bola Va¹a správa u¾ odoslaná,\n"
+#~ "a ak áno, pou¾ite \"Prida» ïal¹ie informácie k existujúcej správe\"."
+
+#~ msgid "Bug Number"
+#~ msgstr "Èíslo chyby"
+
+#~ msgid "Debugging Information"
+#~ msgstr "Ladiace informácie"
+
+#~ msgid "Collecting Debugging Information"
+#~ msgstr "Získanie ladiacich informácií"
+
+#~ msgid "System Configuration"
+#~ msgstr "Konfigurácia systému"
+
+#~ msgid "Please verify that this information is correct"
+#~ msgstr "Prosím, overte, èi je táto informácia správna"
+
+#~ msgid "Submitting the Report"
+#~ msgstr "Odoslanie správy"
+
+#~ msgid "Summary"
+#~ msgstr "Zhrnutie"
+
+#~ msgid "The GEGL is watching."
+#~ msgstr "GEGL Vás pozoruje."

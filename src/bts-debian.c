@@ -1,9 +1,9 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) 1999, 2000 Jacob Berkman
- * Copyright 2000 Helix Code, Inc.
+ * Copyright (C) 1999 - 2001 Jacob Berkman
+ * Copyright 2000, 2001 Ximian, Inc.
  *
- * Author:  Jacob Berkman  <jacob@helixcode.com>
+ * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,12 +32,10 @@
 
 #include <gnome.h>
 
-#include "glade-druid.h"
 #include "bug-buddy.h"
 #include "util.h"
 #include "bts.h"
 
-#include "ctree-combo.h"
 
 #define MAKE_LEAF(w, r, rw) gtk_ctree_insert_node (GTK_CTREE (w), r, NULL, rw,\
                                                    0, NULL, NULL, NULL, NULL,\
@@ -78,6 +76,7 @@ debian_bts_get_email ()
 	return debian_data.email;
 }
 
+#if 0
 GtkWidget *
 make_miggie_combo (gchar *widget_name, gchar *s1,
 		   gchar *s2, gint i1, gint i2)
@@ -96,6 +95,7 @@ on_already_href_clicked (GtkWidget *w, gpointer data)
 	g_free (url);
 	g_free (package);
 }
+#endif
 
 /* ugly stupid dumb stuff stolen from the bug reporting web page */
 static gchar *
@@ -157,8 +157,9 @@ debian_bts_init (xmlNodePtr node)
 
 	combo = GET_WIDGET ("miggie_combo");
 	/*gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), "general");*/
+#if 0
 	gtk_clist_clear    (GTK_CLIST (CTREE_COMBO (combo)->ctree));
-
+#endif
 	while (cur) {
 		switch (cur->name[0]) {
 		case 'e':
@@ -178,12 +179,12 @@ debian_bts_init (xmlNodePtr node)
 			g_free (line);
 			if (fd == -1) break;
 
-			w = APP_FILE;
+			w = GET_WIDGET ("gdb-binary-entry");
 			s = gtk_entry_get_text (GTK_ENTRY (w));
 			p = g_strdup (popt_data.package);
 			appmap = xmlGetProp (cur, "appmap");
 
-			pa = gtk_entry_get_text (GTK_ENTRY (CTREE_COMBO (GET_WIDGET ("miggie_combo"))->entry));
+			pa = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("bts-package-entry")));
 
 			/*
 			  if (the string is general or there is no string)
@@ -195,12 +196,12 @@ debian_bts_init (xmlNodePtr node)
 			if (!pa[0] || !strcmp (pa, "general")) {
 				if (!p && appmap && s)
 					p = get_package_from_appname (appmap, s);
-				gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), p ? p : "general");
+				gtk_entry_set_text (GTK_ENTRY (GET_WIDGET ("bts-package-entry")), p ? p : "general");
 			}
 			g_free (p);
 			
 			xmlFree (appmap);
-
+#if 0
 			w = CTREE_COMBO (combo)->ctree;
 			gtk_clist_freeze (GTK_CLIST (w));
 			while ((row[0] = get_line_from_fd (fd))) {
@@ -220,13 +221,14 @@ debian_bts_init (xmlNodePtr node)
 				g_free (row[0]);
 			}
 			gtk_clist_thaw (GTK_CLIST (w));
+#endif
 			break;
 		default:
 			g_warning ("unknown node: %s", cur->name);
 		}
 		cur = cur->next;
 	}
-
+	return 0;
 	{
 		char *hrefs[] = { 
 			"packages_href", "packages_label", "%s/db/ix/packages.html",
@@ -288,7 +290,7 @@ debian_bts_doit (GtkEditable *edit)
 	from_name  = GET_TEXT (GET_WIDGET ("name_entry"));
 	from_email = GET_TEXT (GET_WIDGET ("email_entry"));
 	subject    = GET_TEXT (GET_WIDGET ("desc_entry"));
-	package    = GET_TEXT (CTREE_COMBO (w)->entry);
+	package    = GET_TEXT (GET_WIDGET ("bts-package-entry"));
 	version    = GET_TEXT (GET_WIDGET ("version_entry"));
 
 	s = g_strdup_printf ("From: %s <%s>\n"
@@ -311,7 +313,7 @@ debian_bts_doit (GtkEditable *edit)
 
 	APPEND_TEXT (s);
 
-	w = VERSION_LIST;
+	w = GET_WIDGET ("version-clist");
 	for (i = 0; i < GTK_CLIST (w)->rows; i++) {
 		s = s2 = NULL;
 		gtk_clist_get_text (GTK_CLIST (w), i, 0, &s);

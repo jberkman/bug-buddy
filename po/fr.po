@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2001-02-05 11:49+0100\n"
+"POT-Creation-Date: 2001-02-11 14:13-0500\n"
 "PO-Revision-Date: 2001-02-05 11:42+0100\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
@@ -15,135 +15,149 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bts.c:100
+#: src/bts.c:99
 msgid "Distribution"
 msgstr "Distribution"
 
-#: src/bts.c:108
+#: src/bts.c:107
 msgid "System"
 msgstr "Système"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:53
 msgid "critical"
 msgstr "critique"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:54
 msgid "grave"
 msgstr "grave"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:55
 msgid "normal"
 msgstr "normal"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:56
 msgid "wishlist"
 msgstr "souhait"
 
-#: src/bug-buddy.c:89
+#: src/bug-buddy.c:61
 msgid "software bug"
 msgstr "anomalie logicielle"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:62
 msgid "documentation bug"
 msgstr "anomalie de documentation"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:63
 msgid "change request"
 msgstr "demande de changement"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:64
 msgid "support"
 msgstr "support"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:69
 msgid "Submit bug report"
 msgstr "Transmettre le rapport d'anomalies"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:70
 msgid "Only send report to yourself"
 msgstr "Envoyer le rapport à votre adresse seulement"
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:71
 msgid "Save report to file"
 msgstr "Enregistrer le rapport dans un fichier"
 
-#: src/bug-buddy.c:104
-msgid "Collect debugging information from a crashed application"
-msgstr "Collecter les informations de débogage depuis une application plantée"
+#: src/bug-buddy.c:76
+#, fuzzy
+msgid "crashed application"
+msgstr "Attacher une application plantée"
 
-#: src/bug-buddy.c:105
-msgid "Collect debugging information from a core file"
-msgstr "Collecter les informations de débogage depuis un fichier core"
+#: src/bug-buddy.c:77
+#, fuzzy
+msgid "core file"
+msgstr "Nom du fichier core"
 
-#: src/bug-buddy.c:106
-msgid "Skip this step"
-msgstr "Sauter cette étape"
+#: src/bug-buddy.c:78
+msgid "nothing"
+msgstr ""
 
-#: src/bug-buddy.c:111
+#: src/bug-buddy.c:83
 msgid "Create a new bug report"
 msgstr "Créer un nouveau rapport d'anomalies"
 
-#: src/bug-buddy.c:112
+#: src/bug-buddy.c:84
 msgid "Add more information to existing report"
 msgstr "Ajouter plus d'informations à un rapport d'anomalies existant"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:93
 msgid "Name of contact"
 msgstr "Nom du contact"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:93
 msgid "NAME"
 msgstr "NOM"
 
-#: src/bug-buddy.c:122
+#: src/bug-buddy.c:94
 msgid "Email address of contact"
 msgstr "Adresse électronique du contact"
 
-#: src/bug-buddy.c:122
+#: src/bug-buddy.c:94
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:95
 msgid "Package containing the program"
 msgstr "Paquet contenant le programme"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:95
 msgid "PACKAGE"
 msgstr "PAQUET"
 
-#: src/bug-buddy.c:124
+#: src/bug-buddy.c:96
 msgid "Version of the package"
 msgstr "Version du paquet"
 
-#: src/bug-buddy.c:124
+#: src/bug-buddy.c:96
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:125
+#: src/bug-buddy.c:97
 msgid "File name of crashed program"
 msgstr "Nom de fichier de l'application plantée"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
+#: src/bug-buddy.c:97 src/bug-buddy.c:99 src/bug-buddy.c:100
 msgid "FILE"
 msgstr "FICHIER"
 
-#: src/bug-buddy.c:126
+#: src/bug-buddy.c:98
 msgid "PID of crashed program"
 msgstr "PID de l'application plantée"
 
-#: src/bug-buddy.c:126
+#: src/bug-buddy.c:98
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:99
 msgid "Core file from program"
 msgstr "Fichier core de l'application"
 
-#: src/bug-buddy.c:128
+#: src/bug-buddy.c:100
 msgid "Text file to include in the report"
 msgstr "Fichier texte à inclure dans le rapport"
 
-#: src/bug-buddy.c:332
+#: src/bug-buddy.c:257
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb n'a pas pu obtenir toutes les informations de débogage.\n"
+"Tuer le processus gdb (la trace de pile sera incomplète) ?"
+
+#: src/bug-buddy.c:265 src/gdb-buddy.c:116
+msgid "gdb has already exited"
+msgstr "gdb a déjà quitté"
+
+#: src/bug-buddy.c:340
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -155,21 +169,21 @@ msgstr ""
 "\n"
 "Veuillez spécifier un paquet."
 
-#: src/bug-buddy.c:374
+#: src/bug-buddy.c:382
 msgid "The specified file does not exist."
 msgstr "Le fichier spécifié n'existe pas."
 
-#: src/bug-buddy.c:379
+#: src/bug-buddy.c:387
 #, c-format
 msgid "File is of type: %s"
 msgstr "Le fichier est de type : %s"
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:390
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ne semble pas être un fichier texte."
 
-#: src/bug-buddy.c:396
+#: src/bug-buddy.c:404
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -177,35 +191,15 @@ msgstr ""
 "Vous devez inclure un sujet et une description\n"
 "dans votre rapport d'anomalie."
 
-#: src/bug-buddy.c:439
-msgid ""
-"gdb has not finished getting the debugging information.\n"
-"Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"gdb n'a pas pu obtenir toutes les informations de débogage.\n"
-"Tuer le processus gdb (la trace de pile sera incomplète) ?"
-
-#: src/bug-buddy.c:447 src/gdb-buddy.c:83
-msgid "gdb has already exited"
-msgstr "gdb a déjà quitté"
-
-#: src/bug-buddy.c:490
-msgid "The graphical bug reporting tool for GNOME."
-msgstr "L'outil graphique GNOME pour rapporter les anomalies."
-
-#: src/bug-buddy.c:500
-msgid "The lame bug-buddy web page"
-msgstr "La page web de bug-buddy"
-
-#: src/bug-buddy.c:607
+#: src/bug-buddy.c:522
 msgid "Please enter your name."
 msgstr "Veuillez saisir votre nom."
 
-#: src/bug-buddy.c:613
+#: src/bug-buddy.c:528
 msgid "Please enter a valid email address."
 msgstr "Veuillez saisir une adresse électronique valide."
 
-#: src/bug-buddy.c:624
+#: src/bug-buddy.c:539
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -218,27 +212,27 @@ msgstr ""
 "\n"
 "Spécifier un nouvel emplacement pour sendmail ?"
 
-#: src/bug-buddy.c:675
+#: src/bug-buddy.c:590
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Incapable d'ouvrir le fichier : « %s »"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:604
 #, c-format
 msgid "about to run '%s'"
 msgstr "prêt à exécuter « %s »"
 
-#: src/bug-buddy.c:693
+#: src/bug-buddy.c:608
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Incapable de lancer le programme de messagerie : « %s »"
 
-#: src/bug-buddy.c:722
+#: src/bug-buddy.c:637
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Votre rapport d'anomalies a été enregistré dans « %s »"
 
-#: src/bug-buddy.c:725
+#: src/bug-buddy.c:640
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -249,19 +243,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:855
+#: src/bug-buddy.c:772
 msgid "You must specify a recipient email address"
 msgstr "Vous devez spécifier l'adresse électronique d'un destinataire"
 
-#: src/bug-buddy.c:861
+#: src/bug-buddy.c:778
 msgid "Submit this bug report now?"
 msgstr "Transmettre ce rapport d'anomalies maintenant ?"
 
-#: src/bug-buddy.c:871
+#: src/bug-buddy.c:788
 msgid "Please choose a file to save to."
 msgstr "Choisissez un fichier l'enregistrement."
 
-#: src/bug-buddy.c:878
+#: src/bug-buddy.c:795
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -270,23 +264,23 @@ msgstr ""
 "Le fichier « %s » existe déjà.\n"
 "Écraser ce fichier ?"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847 src/glade-strings.c:70
 msgid "About"
 msgstr "À propos"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847
 msgid "Help"
 msgstr "Aide"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847 src/glade-strings.c:25
 msgid "Stop"
 msgstr "Arrêter"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:847
 msgid "Refresh"
 msgstr "Rafraîchir"
 
-#: src/bug-buddy.c:971
+#: src/bug-buddy.c:896
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -295,7 +289,7 @@ msgstr ""
 "Ne peut ouvrir « %s ».\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
-#: src/bug-buddy.c:1076
+#: src/bug-buddy.c:1144
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -303,7 +297,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME est obsolète.\n"
 "Utilisez plutôt le paramètre de ligne de commande --appname."
 
-#: src/bug-buddy.c:1089
+#: src/bug-buddy.c:1157
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -311,21 +305,21 @@ msgstr ""
 "$GNOME_CRASHED_PID est obsolète.\n"
 "Utilisez plutôt le paramètre de ligne de commande --pid."
 
-#: src/bug-buddy.c:1221
-#, c-format
+#: src/bug-buddy.c:1251
+#, fuzzy, c-format
 msgid ""
-"Could not find '%s'.\n"
+"Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Ne peut trouver « %s ».\n"
+"Ne peut ouvrir « %s ».\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
-#: src/gdb-buddy.c:43
-#, c-format
-msgid "obtaining stack trace... (%d)"
+#: src/gdb-buddy.c:72
+#, fuzzy, c-format
+msgid "Obtaining stack trace... (%d)"
 msgstr "obtention de la trace de la pile... (%d)"
 
-#: src/gdb-buddy.c:117
+#: src/gdb-buddy.c:153
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -334,7 +328,7 @@ msgstr ""
 "Incapable de procéder à l'examen du fichier core avec gdb :\n"
 "« %s »"
 
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:179
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -343,11 +337,17 @@ msgstr ""
 "Incapable de déterminer quel exécutable a créé\n"
 "« %s »"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:215
 msgid "Error on read... aborting"
 msgstr "Erreur en lecture... abandon"
 
-#: src/gdb-buddy.c:218
+#: src/gdb-buddy.c:247
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+
+#: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -355,7 +355,7 @@ msgstr ""
 "Ne peut trouver le fichier gdb-cmd.\n"
 "Essayer de réinstaller bug-buddy."
 
-#: src/gdb-buddy.c:227 src/util.c:75
+#: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
 msgstr "Erreur sur fork()."
 
@@ -365,207 +365,240 @@ msgstr "Erreur sur fork()."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-msgid "bug-buddy"
+#, fuzzy
+msgid "Bug Buddy"
 msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
-msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr "Bienvenue dans le monde merveilleux de bug-buddy"
-
-#: src/glade-strings.c:9
 msgid ""
-"bug-buddy will walk you through the process\n"
-"of submitting a bug report.  If this is your first time \n"
-"using bug-buddy, you will be prompted for your\n"
-"email address so that the bug report can be\n"
-"submitted."
+"This program will walk you through the steps for \n"
+"submitting a bug report for projects such as GNOME.\n"
+"\n"
+"These bug reports are submitted via email, so\n"
+"please specify your email address so you can be\n"
+"contacted if furthur information is requred, or\n"
+"when a fixed version is available."
 msgstr ""
-"bug-buddy vous guidera à travers le processus de\n"
-"transmission d'un rapport d'anomalies.  Si c'est\n"
-"la première fois que vous utilisez bug-buddy, il\n"
-"vous sera demandé votre adresse électronique afin\n"
-"que le rapport d'anomalies puisse être transmis."
-
-#: src/glade-strings.c:14
-msgid "Contact Information"
-msgstr "Information sur le contact"
 
 #: src/glade-strings.c:15
-msgid "Choose which sendmail to use"
-msgstr "Choisissez le sendmail à utiliser"
+#, fuzzy
+msgid "Skip this step in the future"
+msgstr "Sauter cette étape"
 
 #: src/glade-strings.c:16
-msgid "Email Address"
-msgstr "Votre adresse électronique"
-
-#: src/glade-strings.c:17
-msgid "Full path of sendmail"
-msgstr "Chemin complet de sendmail"
-
-#: src/glade-strings.c:18
-msgid "Your Name"
+#, fuzzy
+msgid "Name"
 msgstr "Votre nom"
 
-#: src/glade-strings.c:19
-msgid ""
-"bug-buddy will walk you through the process of\n"
-"submitting a bug report.  You can click the help\n"
-"button for a more in-depth explanation of the process."
+#: src/glade-strings.c:17
+msgid "Sendmail"
 msgstr ""
-"bug-buddy vous guidera à travers le processus\n"
-"de transmission d'un rapport d'anomalies. Vous\n"
-"pouvez cliquer sur le bouton « Aide » pour une\n"
-"explication plus complète du processus."
 
-#: src/glade-strings.c:22
-msgid "Report Information"
-msgstr "Information sur le rapport"
+#: src/glade-strings.c:18
+msgid "Email"
+msgstr ""
+
+#: src/glade-strings.c:19
+msgid "intro"
+msgstr ""
+
+#: src/glade-strings.c:20
+msgid ""
+"Bug Buddy can send debugging information with your bug report.\n"
+"The correct options should have been selected for you automatically.\n"
+"For more information, please click the Help button below."
+msgstr ""
 
 #: src/glade-strings.c:23
-msgid ""
-"Select a bug tracking system to use, and then fill out\n"
-"the remaining information."
+msgid "Debug"
 msgstr ""
-"Sélectionnez le système de suivi d'anomalies à utiliser,\n"
-"et remplissez les informations demandées."
 
-#: src/glade-strings.c:25
-msgid "Bug Tracking System "
-msgstr "Système de suivi d'anomalies"
+#: src/glade-strings.c:24
+msgid "Go"
+msgstr ""
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
-msgid "Package"
-msgstr "Paquet"
+#: src/glade-strings.c:26
+#, fuzzy
+msgid "Binary file"
+msgstr "Binaire"
 
 #: src/glade-strings.c:27
-msgid "Severity"
-msgstr "Sévérité"
+msgid "Process ID"
+msgstr "Numéro de processus (PID)"
 
 #: src/glade-strings.c:28
-msgid "Class"
-msgstr "Classe"
+msgid "Core file"
+msgstr "Nom du fichier core"
 
-#: src/glade-strings.c:29 src/glade-strings.c:31
-msgid "Version"
-msgstr "Version"
+#: src/glade-strings.c:29
+#, fuzzy
+msgid "Automatically continue to next step when debugging is complete"
+msgstr "Aller automatiquement à la page suivante"
 
-#: src/glade-strings.c:32
-msgid ""
-"Please check to see if your bug has already been submitted,\n"
-"and if so, use \"Add information to existing report\" above."
+#: src/glade-strings.c:30
+msgid "gdb"
 msgstr ""
-"Veuillez vérifiez que votre anomalie n'a pas déjà été soumise,\n"
-"et, si c'est le cas, utilisez « Ajouter plus d'informations\n"
-"à un rapport d'anomalies existant » ci-dessus."
 
-#: src/glade-strings.c:34 src/glade-strings.c:35
-msgid "Bug Number"
-msgstr "Numéro d'anomalie"
-
-#: src/glade-strings.c:36
-msgid "Description"
-msgstr "Description"
-
-#: src/glade-strings.c:37
+#: src/glade-strings.c:31
 msgid "Please make your bug report in English, if possible."
 msgstr "Veillez faire votre rapport d'anomalies en anglais, si possible."
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:32
 msgid "Short subject for the bug report"
 msgstr "Sujet succint pour le rapport d'anomalies"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:33
 msgid "Full description of the bug, including how to reproduce it"
 msgstr ""
 "Description complète de l'anomalie, incluant une manière de la reproduire"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:34
 msgid "Include a text file"
 msgstr "Inclure un fichier texte"
 
+#: src/glade-strings.c:35
+msgid "desc"
+msgstr ""
+
+#: src/glade-strings.c:36
+msgid ""
+"Please wait while Bug Buddy updates its list\n"
+"of products for the bug tracking systems."
+msgstr ""
+
+#: src/glade-strings.c:38
+msgid "Saving:"
+msgstr ""
+
+#: src/glade-strings.c:39
+#, fuzzy
+msgid "To:"
+msgstr "À"
+
+#: src/glade-strings.c:40 src/glade-strings.c:57
+msgid "%P %%"
+msgstr "%P %%"
+
 #: src/glade-strings.c:41
-msgid "Debugging Information"
-msgstr "Information de débogage"
+msgid "download"
+msgstr ""
 
 #: src/glade-strings.c:42
-msgid "Select the crashed application's binary"
-msgstr "Sélectionnez le binaire de l'application plantée"
+msgid "Please select the product for the bug you wish to report."
+msgstr ""
 
 #: src/glade-strings.c:43
-msgid "Binary"
-msgstr "Binaire"
+msgid "Product"
+msgstr ""
 
-#: src/glade-strings.c:44
-msgid "Process ID"
-msgstr "Numéro de processus (PID)"
+#: src/glade-strings.c:44 src/glade-strings.c:50
+msgid "Description"
+msgstr "Description"
 
 #: src/glade-strings.c:45
-msgid "Core file"
-msgstr "Nom du fichier core"
+msgid "Show products for"
+msgstr ""
 
 #: src/glade-strings.c:46
-msgid "Select a core file"
-msgstr "Sélectionnez un fichier core"
+#, fuzzy
+msgid "bug tracking systems."
+msgstr "Système de suivi d'anomalies"
 
 #: src/glade-strings.c:47
-msgid "Collecting Debugging Information"
-msgstr "Collecte d'informations de débogage"
+msgid "product"
+msgstr ""
 
 #: src/glade-strings.c:48
+msgid "Please choose a component, version, and severity level."
+msgstr ""
+
+#: src/glade-strings.c:49
+#, fuzzy
+msgid "Component"
+msgstr "Contenu"
+
+#: src/glade-strings.c:51
+msgid "Version"
+msgstr "Version"
+
+#: src/glade-strings.c:52
+msgid "Severity"
+msgstr "Sévérité"
+
+#: src/glade-strings.c:53
+#, fuzzy
+msgid "component"
+msgstr "Contenu"
+
+#: src/glade-strings.c:54
+#, fuzzy
 msgid ""
-"Please wait while debugging\n"
-"information is collected..."
+"Please wait while bug-buddy determines some information about your system."
 msgstr ""
 "Veullez patientez le temps que les\n"
 "informations de débogage soient collectées..."
 
-#: src/glade-strings.c:50
-msgid "System Configuration"
-msgstr "Configuration du système"
+#: src/glade-strings.c:55
+msgid "Package"
+msgstr "Paquet"
 
-#: src/glade-strings.c:51
-msgid "Please verify that this information is correct"
-msgstr "Vérifiez que ces information sont correctes"
-
-#: src/glade-strings.c:53
+#: src/glade-strings.c:56
 msgid "Version installed"
 msgstr "Version installée"
 
-#: src/glade-strings.c:54
-msgid "%P %%"
-msgstr "%P %%"
-
-#: src/glade-strings.c:55
+#: src/glade-strings.c:58
 msgid "Automatically go to next page when complete"
 msgstr "Aller automatiquement à la page suivante"
 
-#: src/glade-strings.c:56
-msgid "Submitting the Report"
-msgstr "Transmettre le rapport d'anomalies"
+#: src/glade-strings.c:59
+#, fuzzy
+msgid "system"
+msgstr "Système"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:60
+#, fuzzy
+msgid "Select an action"
+msgstr "Sélectionnez un fichier core"
+
+#: src/glade-strings.c:61
+msgid "Cc"
+msgstr ""
+
+#: src/glade-strings.c:62
 msgid "To"
 msgstr "À"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:63
 msgid "Send copy to yourself"
 msgstr "Envoyer une copie a vous-même"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:64
 msgid "Save the report to..."
 msgstr "Enregistrez le rapport dans..."
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:65
 msgid "Content"
 msgstr "Contenu"
 
-#: src/glade-strings.c:61
-msgid "Summary"
-msgstr "Sommaire"
+#: src/glade-strings.c:66
+msgid "email info"
+msgstr ""
 
-#: src/glade-strings.c:62
-msgid "The GEGL is watching."
-msgstr "Le GEGL est en train de regarder."
+#: src/glade-strings.c:67
+msgid "Assbarn Phenomeon"
+msgstr ""
+
+#: src/glade-strings.c:68
+msgid "Submit another bug"
+msgstr ""
+
+#: src/glade-strings.c:69
+msgid "finished"
+msgstr ""
+
+#: src/glade-strings.c:71
+msgid "Finish"
+msgstr ""
 
 #: src/util.c:60
 msgid "Unable to open pipe"
@@ -579,6 +612,112 @@ msgstr "Ne peut exécuter « %s »."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Erreur en lecture..."
+
+#~ msgid "Collect debugging information from a crashed application"
+#~ msgstr ""
+#~ "Collecter les informations de débogage depuis une application plantée"
+
+#~ msgid "Collect debugging information from a core file"
+#~ msgstr "Collecter les informations de débogage depuis un fichier core"
+
+#~ msgid "The graphical bug reporting tool for GNOME."
+#~ msgstr "L'outil graphique GNOME pour rapporter les anomalies."
+
+#~ msgid "The lame bug-buddy web page"
+#~ msgstr "La page web de bug-buddy"
+
+#~ msgid ""
+#~ "Could not find '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ne peut trouver « %s ».\n"
+#~ "Vérifiez que bug-buddy a été correctement installé."
+
+#~ msgid "Welcome to the Wonderful World of bug-buddy"
+#~ msgstr "Bienvenue dans le monde merveilleux de bug-buddy"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process\n"
+#~ "of submitting a bug report.  If this is your first time \n"
+#~ "using bug-buddy, you will be prompted for your\n"
+#~ "email address so that the bug report can be\n"
+#~ "submitted."
+#~ msgstr ""
+#~ "bug-buddy vous guidera à travers le processus de\n"
+#~ "transmission d'un rapport d'anomalies.  Si c'est\n"
+#~ "la première fois que vous utilisez bug-buddy, il\n"
+#~ "vous sera demandé votre adresse électronique afin\n"
+#~ "que le rapport d'anomalies puisse être transmis."
+
+#~ msgid "Contact Information"
+#~ msgstr "Information sur le contact"
+
+#~ msgid "Choose which sendmail to use"
+#~ msgstr "Choisissez le sendmail à utiliser"
+
+#~ msgid "Email Address"
+#~ msgstr "Votre adresse électronique"
+
+#~ msgid "Full path of sendmail"
+#~ msgstr "Chemin complet de sendmail"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process of\n"
+#~ "submitting a bug report.  You can click the help\n"
+#~ "button for a more in-depth explanation of the process."
+#~ msgstr ""
+#~ "bug-buddy vous guidera à travers le processus\n"
+#~ "de transmission d'un rapport d'anomalies. Vous\n"
+#~ "pouvez cliquer sur le bouton « Aide » pour une\n"
+#~ "explication plus complète du processus."
+
+#~ msgid "Report Information"
+#~ msgstr "Information sur le rapport"
+
+#~ msgid ""
+#~ "Select a bug tracking system to use, and then fill out\n"
+#~ "the remaining information."
+#~ msgstr ""
+#~ "Sélectionnez le système de suivi d'anomalies à utiliser,\n"
+#~ "et remplissez les informations demandées."
+
+#~ msgid "Class"
+#~ msgstr "Classe"
+
+#~ msgid ""
+#~ "Please check to see if your bug has already been submitted,\n"
+#~ "and if so, use \"Add information to existing report\" above."
+#~ msgstr ""
+#~ "Veuillez vérifiez que votre anomalie n'a pas déjà été soumise,\n"
+#~ "et, si c'est le cas, utilisez « Ajouter plus d'informations\n"
+#~ "à un rapport d'anomalies existant » ci-dessus."
+
+#~ msgid "Bug Number"
+#~ msgstr "Numéro d'anomalie"
+
+#~ msgid "Debugging Information"
+#~ msgstr "Information de débogage"
+
+#~ msgid "Select the crashed application's binary"
+#~ msgstr "Sélectionnez le binaire de l'application plantée"
+
+#~ msgid "Collecting Debugging Information"
+#~ msgstr "Collecte d'informations de débogage"
+
+#~ msgid "System Configuration"
+#~ msgstr "Configuration du système"
+
+#~ msgid "Please verify that this information is correct"
+#~ msgstr "Vérifiez que ces information sont correctes"
+
+#~ msgid "Submitting the Report"
+#~ msgstr "Transmettre le rapport d'anomalies"
+
+#~ msgid "Summary"
+#~ msgstr "Sommaire"
+
+#~ msgid "The GEGL is watching."
+#~ msgstr "Le GEGL est en train de regarder."
 
 #~ msgid "Copyright (C) 1999 Jacob Berkman"
 #~ msgstr "Copyright (C) 1999 Jacob Berkman"
@@ -671,9 +810,6 @@ msgstr "Erreur en lecture..."
 
 #~ msgid "How to collect debugging information"
 #~ msgstr "Comment collecter les informations de débugage"
-
-#~ msgid "Attach to a crashed application"
-#~ msgstr "Attacher une application plantée"
 
 #~ msgid "Read from a core file"
 #~ msgstr "Lecture à partir d'un fichier core"
