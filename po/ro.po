@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
-"POT-Creation-Date: 2000-04-18 00:14-0400\n"
+"POT-Creation-Date: 2000-04-29 17:02-0400\n"
 "PO-Revision-Date: 2000-04-05 19:24+0300\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -13,14 +13,294 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: src/bts.c:99
+#, fuzzy
+msgid "Distribution"
+msgstr "Descriere"
+
+#: src/bts.c:107
+msgid "System"
+msgstr ""
+
+#: src/bug-buddy.c:74
+msgid "critical"
+msgstr "criticã"
+
+#: src/bug-buddy.c:75
+msgid "grave"
+msgstr "gravã"
+
+#: src/bug-buddy.c:76
+msgid "normal"
+msgstr "normalã"
+
+#: src/bug-buddy.c:77
+msgid "wishlist"
+msgstr "dorinþã"
+
+#: src/bug-buddy.c:82
+msgid "software bug"
+msgstr "problemã software"
+
+#: src/bug-buddy.c:83
+msgid "documentation bug"
+msgstr "problemã în documentaþie"
+
+#: src/bug-buddy.c:84
+msgid "change request"
+msgstr "cerere schimbare"
+
+#: src/bug-buddy.c:85
+msgid "support"
+msgstr "suport"
+
+#: src/bug-buddy.c:90
+#, fuzzy
+msgid "Submit bug report"
+msgstr "Trimite raportul"
+
+#: src/bug-buddy.c:91
+#, fuzzy
+msgid "Only send report to yourself"
+msgstr "Trimite raportul doar adresei dvs. de email"
+
+#: src/bug-buddy.c:92
+#, fuzzy
+msgid "Save report to file"
+msgstr "Salveazã raportul într-un fiºier"
+
+#: src/bug-buddy.c:97
+#, fuzzy
+msgid "Collect debugging information from a crashed application"
+msgstr "Colecteazã informaþii de depanare"
+
+#: src/bug-buddy.c:98
+#, fuzzy
+msgid "Collect debugging information from a core file"
+msgstr "Colecteazã informaþii de depanare"
+
+#: src/bug-buddy.c:99
+msgid "Skip this step"
+msgstr "Sari peste acest pas"
+
+#: src/bug-buddy.c:104
+#, fuzzy
+msgid "Create a new bug report"
+msgstr "Trimite un nou raport de probleme"
+
+#: src/bug-buddy.c:105
+#, fuzzy
+msgid "Add more information to existing report"
+msgstr "Adaugã informaþie la un raport de probleme existent"
+
+#: src/bug-buddy.c:114
+msgid "Name of contact"
+msgstr ""
+
+#: src/bug-buddy.c:114
+msgid "NAME"
+msgstr "NAME"
+
+#: src/bug-buddy.c:115
+#, fuzzy
+msgid "Email address of contact"
+msgstr "Adresã email"
+
+#: src/bug-buddy.c:115
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:116
+#, fuzzy
+msgid "Package containing the program"
+msgstr "Pachetul corespunzãtor programului"
+
+#: src/bug-buddy.c:116
+msgid "PACKAGE"
+msgstr "PACKAGE"
+
+#: src/bug-buddy.c:117
+msgid "Version of the package"
+msgstr "Versiunea pachetului"
+
+#: src/bug-buddy.c:117
+msgid "VERSION"
+msgstr "VERSION"
+
+#: src/bug-buddy.c:118
+#, fuzzy
+msgid "File name of crashed program"
+msgstr "Pachetul corespunzãtor programului"
+
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
+msgid "FILE"
+msgstr "FILE"
+
+#: src/bug-buddy.c:119
+#, fuzzy
+msgid "PID of crashed program"
+msgstr "PID-ul aplicaþiei crãpate"
+
+#: src/bug-buddy.c:119
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:120
+#, fuzzy
+msgid "Core file from program"
+msgstr "fiºier core din aplicaþie"
+
+#: src/bug-buddy.c:365
+msgid "The specified file does not exist."
+msgstr ""
+
+#: src/bug-buddy.c:370
+#, c-format
+msgid "File is of type: %s"
+msgstr ""
+
+#: src/bug-buddy.c:373
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr ""
+
+#: src/bug-buddy.c:387
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+
+#: src/bug-buddy.c:430
+#, fuzzy
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb nu a terminat obþinerea\n"
+"informaþiilor de depanare.\n"
+"Omorâþi procesul gdb (stack trace-ul\n"
+"va fi incomplet)?"
+
+#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "gdb deja a ieºit"
+
+#: src/bug-buddy.c:481
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Copyright (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:483
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Utilitarul grafic GNOME de raportare a problemelor"
+
+#: src/bug-buddy.c:490
+msgid "The lame bug-buddy web page"
+msgstr "Pagina web 'naºpa' a lui bug-buddy"
+
+#: src/bug-buddy.c:578
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' se pare cã nu existã. Nu veþi fi capabil sã\n"
+"trimiteþi raportul, însã veþi putea sã îl salvaþi într-un fiºier.\n"
+"\n"
+"Specificaþi o nouã locaþie pentru sendmail?"
+
+#: src/bug-buddy.c:614
+msgid "Please enter your name and email address"
+msgstr "Vã rog sã introduceþi numele ºi adresa cvs. de email"
+
+#: src/bug-buddy.c:633
+#, fuzzy, c-format
+msgid "Unable to open file: '%s'"
+msgstr ""
+"Nu pot procesa fiºierul core cu gdb:\n"
+"'%s'"
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid "about to run '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:650
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:681
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:684
+#, c-format
+msgid "Your bug report has been submitted to <%s>"
+msgstr ""
+
+#: src/bug-buddy.c:814
+msgid "You must specify a recipient email address"
+msgstr ""
+
+#: src/bug-buddy.c:820
+#, fuzzy
+msgid "Submit this bug report now?"
+msgstr "Trimite raportul"
+
+#: src/bug-buddy.c:830
+msgid "Please choose a file to save to."
+msgstr "Vã rog sã salvaþi un fiºier pentru salvare."
+
+#: src/bug-buddy.c:837
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Fiºierul '%s' existã deja.\n"
+"Doriþi sã îl suprascrieþi?"
+
+#: src/bug-buddy.c:934
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Nu am putut deschide '%s'\n"
+"Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
+
+#: src/bug-buddy.c:1041
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME este depãºit.\n"
+"Vã rog sã folosiþi în locul lui argumentul --appname."
+
+#: src/bug-buddy.c:1054
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID este depãºit\n"
+"Vã rog sã folosiþi în locul lui argumentul --pid."
+
+#: src/bug-buddy.c:1181
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Nu am putut gãsi '%s'.\n"
+"Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
+
 #: src/gdb-buddy.c:41
 #, fuzzy, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "obþin stack trace-ul"
-
-#: src/bug-buddy.c:410 src/gdb-buddy.c:81
-msgid "gdb has already exited"
-msgstr "gdb deja a ieºit"
 
 #: src/gdb-buddy.c:115
 #, c-format
@@ -57,266 +337,9 @@ msgstr ""
 "Nu am putut gãsu fiºierul gdb-cmd.\n"
 "Vã rog sã încercaþi sã reinstalaþi bug-buddy."
 
-#: src/gdb-buddy.c:214
+#: src/gdb-buddy.c:214 src/util.c:75
 msgid "Error on fork()."
 msgstr "Eroare la fork()."
-
-#: src/bug-buddy.c:73
-msgid "critical"
-msgstr "criticã"
-
-#: src/bug-buddy.c:74
-msgid "grave"
-msgstr "gravã"
-
-#: src/bug-buddy.c:75
-msgid "normal"
-msgstr "normalã"
-
-#: src/bug-buddy.c:76
-msgid "wishlist"
-msgstr "dorinþã"
-
-#: src/bug-buddy.c:81
-msgid "software bug"
-msgstr "problemã software"
-
-#: src/bug-buddy.c:82
-msgid "documentation bug"
-msgstr "problemã în documentaþie"
-
-#: src/bug-buddy.c:83
-msgid "change request"
-msgstr "cerere schimbare"
-
-#: src/bug-buddy.c:84
-msgid "support"
-msgstr "suport"
-
-#: src/bug-buddy.c:89
-#, fuzzy
-msgid "Submit bug report"
-msgstr "Trimite raportul"
-
-#: src/bug-buddy.c:90
-#, fuzzy
-msgid "Only send report to yourself"
-msgstr "Trimite raportul doar adresei dvs. de email"
-
-#: src/bug-buddy.c:91
-#, fuzzy
-msgid "Save report to file"
-msgstr "Salveazã raportul într-un fiºier"
-
-#: src/bug-buddy.c:96
-#, fuzzy
-msgid "Collect debugging information from a crashed application"
-msgstr "Colecteazã informaþii de depanare"
-
-#: src/bug-buddy.c:97
-#, fuzzy
-msgid "Collect debugging information from a core file"
-msgstr "Colecteazã informaþii de depanare"
-
-#: src/bug-buddy.c:98
-msgid "Skip this step"
-msgstr "Sari peste acest pas"
-
-#: src/bug-buddy.c:103
-#, fuzzy
-msgid "Create a new bug report"
-msgstr "Trimite un nou raport de probleme"
-
-#: src/bug-buddy.c:104
-#, fuzzy
-msgid "Add more information to existing report"
-msgstr "Adaugã informaþie la un raport de probleme existent"
-
-#: src/bug-buddy.c:113
-msgid "Name of contact"
-msgstr ""
-
-#: src/bug-buddy.c:113
-msgid "NAME"
-msgstr "NAME"
-
-#: src/bug-buddy.c:114
-#, fuzzy
-msgid "Email address of contact"
-msgstr "Adresã email"
-
-#: src/bug-buddy.c:114
-msgid "EMAIL"
-msgstr "EMAIL"
-
-#: src/bug-buddy.c:115
-#, fuzzy
-msgid "Package containing the program"
-msgstr "Pachetul corespunzãtor programului"
-
-#: src/bug-buddy.c:115
-msgid "PACKAGE"
-msgstr "PACKAGE"
-
-#: src/bug-buddy.c:116
-msgid "Version of the package"
-msgstr "Versiunea pachetului"
-
-#: src/bug-buddy.c:116
-msgid "VERSION"
-msgstr "VERSION"
-
-#: src/bug-buddy.c:117
-#, fuzzy
-msgid "File name of crashed program"
-msgstr "Pachetul corespunzãtor programului"
-
-#: src/bug-buddy.c:117 src/bug-buddy.c:119
-msgid "FILE"
-msgstr "FILE"
-
-#: src/bug-buddy.c:118
-#, fuzzy
-msgid "PID of crashed program"
-msgstr "PID-ul aplicaþiei crãpate"
-
-#: src/bug-buddy.c:118
-msgid "PID"
-msgstr "PID"
-
-#: src/bug-buddy.c:119
-#, fuzzy
-msgid "Core file from program"
-msgstr "fiºier core din aplicaþie"
-
-#: src/bug-buddy.c:359
-msgid ""
-"You must include a subject and a description\n"
-"in your bug report."
-msgstr ""
-
-#: src/bug-buddy.c:402
-#, fuzzy
-msgid ""
-"gdb has not finished getting the debugging information.\n"
-"Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"gdb nu a terminat obþinerea\n"
-"informaþiilor de depanare.\n"
-"Omorâþi procesul gdb (stack trace-ul\n"
-"va fi incomplet)?"
-
-#: src/bug-buddy.c:453
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Copyright (C) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:455
-msgid "The GNOME graphical bug reporting tool"
-msgstr "Utilitarul grafic GNOME de raportare a problemelor"
-
-#: src/bug-buddy.c:462
-msgid "The lame bug-buddy web page"
-msgstr "Pagina web 'naºpa' a lui bug-buddy"
-
-#: src/bug-buddy.c:550
-#, c-format
-msgid ""
-"'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a bug report, but you will be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"'%s' se pare cã nu existã. Nu veþi fi capabil sã\n"
-"trimiteþi raportul, însã veþi putea sã îl salvaþi într-un fiºier.\n"
-"\n"
-"Specificaþi o nouã locaþie pentru sendmail?"
-
-#: src/bug-buddy.c:586
-msgid "Please enter your name and email address"
-msgstr "Vã rog sã introduceþi numele ºi adresa cvs. de email"
-
-#: src/bug-buddy.c:605
-#, fuzzy, c-format
-msgid "Unable to open file: '%s'"
-msgstr ""
-"Nu pot procesa fiºierul core cu gdb:\n"
-"'%s'"
-
-#: src/bug-buddy.c:618
-#, c-format
-msgid "about to run '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:622
-#, c-format
-msgid "Unable to start mail program: '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:653
-#, c-format
-msgid "Your bug report was saved in '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:656
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
-msgstr ""
-
-#: src/bug-buddy.c:786
-msgid "You must specify a recipient email address"
-msgstr ""
-
-#: src/bug-buddy.c:792
-#, fuzzy
-msgid "Submit this bug report now?"
-msgstr "Trimite raportul"
-
-#: src/bug-buddy.c:802
-msgid "Please choose a file to save to."
-msgstr "Vã rog sã salvaþi un fiºier pentru salvare."
-
-#: src/bug-buddy.c:809
-#, c-format
-msgid ""
-"The file '%s' already exists.\n"
-"Overwrite this file?"
-msgstr ""
-"Fiºierul '%s' existã deja.\n"
-"Doriþi sã îl suprascrieþi?"
-
-#: src/bug-buddy.c:906
-#, c-format
-msgid ""
-"Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Nu am putut deschide '%s'\n"
-"Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
-
-#: src/bug-buddy.c:1010
-msgid ""
-"$GNOME_CRASHED_APPNAME is deprecated.\n"
-"Please use the --appname command lineargument instead."
-msgstr ""
-"$GNOME_CRASHED_APPNAME este depãºit.\n"
-"Vã rog sã folosiþi în locul lui argumentul --appname."
-
-#: src/bug-buddy.c:1023
-msgid ""
-"$GNOME_CRASHED_PID is deprecated.\n"
-"Please use the --pid command lineargument instead."
-msgstr ""
-"$GNOME_CRASHED_PID este depãºit\n"
-"Vã rog sã folosiþi în locul lui argumentul --pid."
-
-#: src/bug-buddy.c:1151
-#, c-format
-msgid ""
-"Could not find '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Nu am putut gãsi '%s'.\n"
-"Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -382,92 +405,78 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Sistem gestiune probleme"
 
-#: src/glade-strings.c:26
-#, fuzzy
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr "Adaugã informaþie la un raport de probleme existent"
-
-#: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
 msgid "Package"
 msgstr "Pachet"
 
-#: src/glade-strings.c:30
+#: src/glade-strings.c:27
 msgid "Severity"
 msgstr "Severitate"
 
-#: src/glade-strings.c:31
+#: src/glade-strings.c:28
 msgid "Class"
 msgstr "Clasã"
 
-#: src/glade-strings.c:32 src/glade-strings.c:34
+#: src/glade-strings.c:29 src/glade-strings.c:31
 msgid "Version"
 msgstr "Versiune"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:32
 msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
 
-#: src/glade-strings.c:37 src/glade-strings.c:38
+#: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
 msgstr "Numãr problemã"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:36
 msgid "Description"
 msgstr "Descriere"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:37
 msgid "Short subject for the bug report"
 msgstr "Subiect scurt pentru raport-ul de probleme"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:38
 #, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Descriere completã a problemei"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:39
 msgid "Include a text file"
 msgstr "Include un fiºier text"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:40
 msgid "Debugging Information"
 msgstr "Informaþii de depanare"
 
-#: src/glade-strings.c:44
-msgid ""
-"Collect debugging information from a crashed application\n"
-"Collect debugging information from a core file\n"
-"Skip this step\n"
-msgstr ""
-
-#: src/glade-strings.c:48
+#: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
 msgstr "Selecteazã fiºierul binar al aplicaþiei crãpate"
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:42
 msgid "Binary"
 msgstr "Binar"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:43
 msgid "Process ID"
 msgstr "ID proces"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:44
 msgid "Core file"
 msgstr "Fiºier core"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:45
 msgid "Select a core file"
 msgstr "Selecteazã un fiºier core"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:46
 msgid "Collecting Debugging Information"
 msgstr "Colecteazã informaþii de depanare"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:47
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -475,61 +484,83 @@ msgstr ""
 "Vã rog sã aºteptaþi, colectez\n"
 "informaþii de depanare..."
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:49
 msgid "System Configuration"
 msgstr "Configurare sistem"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:50
 msgid "Please verify that this information is correct"
 msgstr "Vã rog sã vã asiguraþi de corectitudinea informaþiei."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:52
 msgid "Version installed"
 msgstr "Versiune instalatã"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:53
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:54
 msgid "Automatically go to next page when complete"
 msgstr "Treci automat la urmãtoarea paginã când termini"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:55
 msgid "Submitting the Report"
 msgstr "Trimite raportul"
 
-#: src/glade-strings.c:63
-#, fuzzy
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr "Trimite raportul doar adresei dvs. de email"
-
-#: src/glade-strings.c:67
+#: src/glade-strings.c:56
 msgid "To"
 msgstr ""
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:57
 msgid "Send copy to yourself"
 msgstr ""
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:58
 msgid "Save the report to..."
 msgstr "Salveazã raportul în..."
 
-#: src/glade-strings.c:70
+#: src/glade-strings.c:59
 msgid "Content"
 msgstr ""
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:60
 msgid "Summary"
 msgstr "Sumar"
 
-#: src/glade-strings.c:72
+#: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "GEGL vegheazã"
+
+#: src/util.c:60
+#, fuzzy
+msgid "Unable to open pipe"
+msgstr ""
+"Nu pot procesa fiºierul core cu gdb:\n"
+"'%s'"
+
+#: src/util.c:72
+#, c-format
+msgid "Could not run '%s'."
+msgstr ""
+
+#: src/util.c:112
+#, fuzzy
+msgid "Error on read..."
+msgstr "Eroare la citire... renunþ"
+
+#, fuzzy
+#~ msgid ""
+#~ "Submit new report\n"
+#~ "Add information to an existing report\n"
+#~ msgstr "Adaugã informaþie la un raport de probleme existent"
+
+#, fuzzy
+#~ msgid ""
+#~ "Submit bug report\n"
+#~ "Send to your amail address only\n"
+#~ "Save report to file\n"
+#~ msgstr "Trimite raportul doar adresei dvs. de email"
 
 #~ msgid "Contact's name"
 #~ msgstr "Nume contact"

@@ -1,3 +1,14 @@
+0.9:
+
+ * Fixes:
+
+	- GTK warnings fixed
+
+ * Improvements:
+
+	- gnome-mime is now used to try to guard against non-text
+	  files being sent to the bug tracker
+
 0.8:
 
 * Fixes:

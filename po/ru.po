@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-04-18 17:18+0400\n"
+"POT-Creation-Date: 2000-04-29 17:02-0400\n"
 "PO-Revision-Date: 2000-04-18 17:33+04:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -12,14 +12,274 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8 bit\n"
 
+#: src/bts.c:99
+#, fuzzy
+msgid "Distribution"
+msgstr "Описание"
+
+#: src/bts.c:107
+msgid "System"
+msgstr ""
+
+#: src/bug-buddy.c:74
+msgid "critical"
+msgstr "критичная"
+
+#: src/bug-buddy.c:75
+msgid "grave"
+msgstr "серьезная"
+
+#: src/bug-buddy.c:76
+msgid "normal"
+msgstr "обычная"
+
+#: src/bug-buddy.c:77
+msgid "wishlist"
+msgstr "запрос улучшения"
+
+#: src/bug-buddy.c:82
+msgid "software bug"
+msgstr "ошибка программы"
+
+#: src/bug-buddy.c:83
+msgid "documentation bug"
+msgstr "ошибка в документации"
+
+#: src/bug-buddy.c:84
+msgid "change request"
+msgstr "запрос изменений"
+
+#: src/bug-buddy.c:85
+msgid "support"
+msgstr "поддержка"
+
+#: src/bug-buddy.c:90
+msgid "Submit bug report"
+msgstr "Отправка сообщения об ошибке"
+
+#: src/bug-buddy.c:91
+msgid "Only send report to yourself"
+msgstr "Послать сообщение только по себе"
+
+#: src/bug-buddy.c:92
+msgid "Save report to file"
+msgstr "Сохранить отчет в файл"
+
+#: src/bug-buddy.c:97
+msgid "Collect debugging information from a crashed application"
+msgstr "Сборка отладочной информации из рухнувшего приложения"
+
+#: src/bug-buddy.c:98
+msgid "Collect debugging information from a core file"
+msgstr "Сборка отладочной информации из файла core"
+
+#: src/bug-buddy.c:99
+msgid "Skip this step"
+msgstr "Пропустить этот шаг"
+
+#: src/bug-buddy.c:104
+msgid "Create a new bug report"
+msgstr "Создать новое сообщение об ошибке"
+
+#: src/bug-buddy.c:105
+msgid "Add more information to existing report"
+msgstr "Добавить информацию к существующему сообщению об ошибке"
+
+#: src/bug-buddy.c:114
+msgid "Name of contact"
+msgstr "Имя контактного лица"
+
+#: src/bug-buddy.c:114
+msgid "NAME"
+msgstr "ИМЯ"
+
+#: src/bug-buddy.c:115
+msgid "Email address of contact"
+msgstr "Эл. адрес контактного лица"
+
+#: src/bug-buddy.c:115
+msgid "EMAIL"
+msgstr "Эл.Почта"
+
+#: src/bug-buddy.c:116
+msgid "Package containing the program"
+msgstr "Программный пакет содержащий программу"
+
+#: src/bug-buddy.c:116
+msgid "PACKAGE"
+msgstr "ПАКЕТ"
+
+#: src/bug-buddy.c:117
+msgid "Version of the package"
+msgstr "Версия пакета"
+
+#: src/bug-buddy.c:117
+msgid "VERSION"
+msgstr "ВЕРСИЯ"
+
+#: src/bug-buddy.c:118
+msgid "File name of crashed program"
+msgstr "Название файла рухнувшей программы"
+
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
+msgid "FILE"
+msgstr "ФАЙЛ"
+
+#: src/bug-buddy.c:119
+msgid "PID of crashed program"
+msgstr "PID рухнувшей программы"
+
+#: src/bug-buddy.c:119
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:120
+msgid "Core file from program"
+msgstr "core-файл программы"
+
+#: src/bug-buddy.c:365
+msgid "The specified file does not exist."
+msgstr ""
+
+#: src/bug-buddy.c:370
+#, c-format
+msgid "File is of type: %s"
+msgstr ""
+
+#: src/bug-buddy.c:373
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr ""
+
+#: src/bug-buddy.c:387
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+"Вы должны включить тему и описание\n"
+"в ваше сообщение об ошибке."
+
+#: src/bug-buddy.c:430
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb не закончил получение отладочной информации.\n"
+"Уничтожить gdb процесс (трассировка стека будет неполной)?"
+
+#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "gdb уже закрыт"
+
+#: src/bug-buddy.c:481
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Авторское право (С) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:483
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Средство Gnome для сообщения об ошибках"
+
+#: src/bug-buddy.c:490
+msgid "The lame bug-buddy web page"
+msgstr "Небольшая веб-страничка bug-buddy"
+
+#: src/bug-buddy.c:578
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' кажется не существует. Вы не сможете действительно отправить\n"
+"сообщение об ошибке, но вы сможете сохранить его в файле.\n"
+"\n"
+"Укажете новое расположение sendmail?"
+
+#: src/bug-buddy.c:614
+msgid "Please enter your name and email address"
+msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+
+#: src/bug-buddy.c:633
+#, c-format
+msgid "Unable to open file: '%s'"
+msgstr "Не удалось открыть файл core: \"%s\""
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid "about to run '%s'"
+msgstr "о запуске '%s'"
+
+#: src/bug-buddy.c:650
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr "Не удалось запустить почтовую программу: '%s'"
+
+#: src/bug-buddy.c:681
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "Ваше сообщение об ошибке сохранено в '%s'"
+
+#: src/bug-buddy.c:684
+#, c-format
+msgid "Your bug report has been submitted to <%s>"
+msgstr "Ваше сообщение об ошибке отправлено <%s>"
+
+#: src/bug-buddy.c:814
+msgid "You must specify a recipient email address"
+msgstr "Вы должны указать эл.адрес получателя"
+
+#: src/bug-buddy.c:820
+msgid "Submit this bug report now?"
+msgstr "Отправить это сообщение об ошибке сейчас?"
+
+#: src/bug-buddy.c:830
+msgid "Please choose a file to save to."
+msgstr "Пожалуйста, выберите файл для сохранения."
+
+#: src/bug-buddy.c:837
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Файл \"%s\" уже существует.\n"
+"Переписать?"
+
+#: src/bug-buddy.c:934
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Не удалось открыть \"%s\".\n"
+"Убедитесь, что bug-buddy правильно установлен."
+
+#: src/bug-buddy.c:1041
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:1054
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:1181
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Не удалось найти \"%s\".\n"
+"Убедитесь, что bug-buddy правильно установлен."
+
 #: src/gdb-buddy.c:41
 #, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "получение состояния стека... (%d)"
-
-#: src/bug-buddy.c:410 src/gdb-buddy.c:81
-msgid "gdb has already exited"
-msgstr "gdb уже закрыт"
 
 #: src/gdb-buddy.c:115
 #, c-format
@@ -56,246 +316,9 @@ msgstr ""
 "Не удалось найти файл gdb-cmd.\n"
 "Пожалуйста, попытайтесь переустановить bug-buddy."
 
-#: src/gdb-buddy.c:214
+#: src/gdb-buddy.c:214 src/util.c:75
 msgid "Error on fork()."
 msgstr "Ошибка на fork()."
-
-#: src/bug-buddy.c:73
-msgid "critical"
-msgstr "критичная"
-
-#: src/bug-buddy.c:74
-msgid "grave"
-msgstr "серьезная"
-
-#: src/bug-buddy.c:75
-msgid "normal"
-msgstr "обычная"
-
-#: src/bug-buddy.c:76
-msgid "wishlist"
-msgstr "запрос улучшения"
-
-#: src/bug-buddy.c:81
-msgid "software bug"
-msgstr "ошибка программы"
-
-#: src/bug-buddy.c:82
-msgid "documentation bug"
-msgstr "ошибка в документации"
-
-#: src/bug-buddy.c:83
-msgid "change request"
-msgstr "запрос изменений"
-
-#: src/bug-buddy.c:84
-msgid "support"
-msgstr "поддержка"
-
-#: src/bug-buddy.c:89
-msgid "Submit bug report"
-msgstr "Отправка сообщения об ошибке"
-
-#: src/bug-buddy.c:90
-msgid "Only send report to yourself"
-msgstr "Послать сообщение только по себе"
-
-#: src/bug-buddy.c:91
-msgid "Save report to file"
-msgstr "Сохранить отчет в файл"
-
-#: src/bug-buddy.c:96
-msgid "Collect debugging information from a crashed application"
-msgstr "Сборка отладочной информации из рухнувшего приложения"
-
-#: src/bug-buddy.c:97
-msgid "Collect debugging information from a core file"
-msgstr "Сборка отладочной информации из файла core"
-
-#: src/bug-buddy.c:98
-msgid "Skip this step"
-msgstr "Пропустить этот шаг"
-
-#: src/bug-buddy.c:103
-msgid "Create a new bug report"
-msgstr "Создать новое сообщение об ошибке"
-
-#: src/bug-buddy.c:104
-msgid "Add more information to existing report"
-msgstr "Добавить информацию к существующему сообщению об ошибке"
-
-#: src/bug-buddy.c:113
-msgid "Name of contact"
-msgstr "Имя контактного лица"
-
-#: src/bug-buddy.c:113
-msgid "NAME"
-msgstr "ИМЯ"
-
-#: src/bug-buddy.c:114
-msgid "Email address of contact"
-msgstr "Эл. адрес контактного лица"
-
-#: src/bug-buddy.c:114
-msgid "EMAIL"
-msgstr "Эл.Почта"
-
-#: src/bug-buddy.c:115
-msgid "Package containing the program"
-msgstr "Программный пакет содержащий программу"
-
-#: src/bug-buddy.c:115
-msgid "PACKAGE"
-msgstr "ПАКЕТ"
-
-#: src/bug-buddy.c:116
-msgid "Version of the package"
-msgstr "Версия пакета"
-
-#: src/bug-buddy.c:116
-msgid "VERSION"
-msgstr "ВЕРСИЯ"
-
-#: src/bug-buddy.c:117
-msgid "File name of crashed program"
-msgstr "Название файла рухнувшей программы"
-
-#: src/bug-buddy.c:117 src/bug-buddy.c:119
-msgid "FILE"
-msgstr "ФАЙЛ"
-
-#: src/bug-buddy.c:118
-msgid "PID of crashed program"
-msgstr "PID рухнувшей программы"
-
-#: src/bug-buddy.c:118
-msgid "PID"
-msgstr "PID"
-
-#: src/bug-buddy.c:119
-msgid "Core file from program"
-msgstr "core-файл программы"
-
-#: src/bug-buddy.c:359
-msgid ""
-"You must include a subject and a description\n"
-"in your bug report."
-msgstr ""
-"Вы должны включить тему и описание\n"
-"в ваше сообщение об ошибке."
-
-#: src/bug-buddy.c:402
-msgid ""
-"gdb has not finished getting the debugging information.\n"
-"Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"gdb не закончил получение отладочной информации.\n"
-"Уничтожить gdb процесс (трассировка стека будет неполной)?"
-
-#: src/bug-buddy.c:453
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Авторское право (С) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:455
-msgid "The GNOME graphical bug reporting tool"
-msgstr "Средство Gnome для сообщения об ошибках"
-
-#: src/bug-buddy.c:462
-msgid "The lame bug-buddy web page"
-msgstr "Небольшая веб-страничка bug-buddy"
-
-#: src/bug-buddy.c:550
-#, c-format
-msgid ""
-"'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a bug report, but you will be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"'%s' кажется не существует. Вы не сможете действительно отправить\n"
-"сообщение об ошибке, но вы сможете сохранить его в файле.\n"
-"\n"
-"Укажете новое расположение sendmail?"
-
-#: src/bug-buddy.c:586
-msgid "Please enter your name and email address"
-msgstr "Пожалуйста, введите ваше имя и эл.адрес"
-
-#: src/bug-buddy.c:605
-#, c-format
-msgid "Unable to open file: '%s'"
-msgstr "Не удалось открыть файл core: \"%s\""
-
-#: src/bug-buddy.c:618
-#, c-format
-msgid "about to run '%s'"
-msgstr "о запуске '%s'"
-
-#: src/bug-buddy.c:622
-#, c-format
-msgid "Unable to start mail program: '%s'"
-msgstr "Не удалось запустить почтовую программу: '%s'"
-
-#: src/bug-buddy.c:653
-#, c-format
-msgid "Your bug report was saved in '%s'"
-msgstr "Ваше сообщение об ошибке сохранено в '%s'"
-
-#: src/bug-buddy.c:656
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
-msgstr "Ваше сообщение об ошибке отправлено <%s>"
-
-#: src/bug-buddy.c:786
-msgid "You must specify a recipient email address"
-msgstr "Вы должны указать эл.адрес получателя"
-
-#: src/bug-buddy.c:792
-msgid "Submit this bug report now?"
-msgstr "Отправить это сообщение об ошибке сейчас?"
-
-#: src/bug-buddy.c:802
-msgid "Please choose a file to save to."
-msgstr "Пожалуйста, выберите файл для сохранения."
-
-#: src/bug-buddy.c:809
-#, c-format
-msgid ""
-"The file '%s' already exists.\n"
-"Overwrite this file?"
-msgstr ""
-"Файл \"%s\" уже существует.\n"
-"Переписать?"
-
-#: src/bug-buddy.c:906
-#, c-format
-msgid ""
-"Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Не удалось открыть \"%s\".\n"
-"Убедитесь, что bug-buddy правильно установлен."
-
-#: src/bug-buddy.c:1010
-msgid ""
-"$GNOME_CRASHED_APPNAME is deprecated.\n"
-"Please use the --appname command lineargument instead."
-msgstr ""
-
-#: src/bug-buddy.c:1023
-msgid ""
-"$GNOME_CRASHED_PID is deprecated.\n"
-"Please use the --pid command lineargument instead."
-msgstr ""
-
-#: src/bug-buddy.c:1151
-#, c-format
-msgid ""
-"Could not find '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Не удалось найти \"%s\".\n"
-"Убедитесь, что bug-buddy правильно установлен."
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -497,3 +520,18 @@ msgstr "Резюме"
 #: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr ""
+
+#: src/util.c:60
+#, fuzzy
+msgid "Unable to open pipe"
+msgstr "Не удалось открыть файл core: \"%s\""
+
+#: src/util.c:72
+#, fuzzy, c-format
+msgid "Could not run '%s'."
+msgstr "о запуске '%s'"
+
+#: src/util.c:112
+#, fuzzy
+msgid "Error on read..."
+msgstr "Ошибка при чтении... прервание"

@@ -29,7 +29,7 @@
      Front-Cover Texts, and no Back-Cover Texts. You may obtain a copy
      of the <citetitle>GNU Free Documentation License</citetitle> from
      the Free Software Foundation by visiting <ulink type="http"
-     url="http://www.fsf.org">their Web site</ulink> or by writing to:
+     url="http://www.fsf.org/">their Web site</ulink> or by writing to:
      Free Software Foundation, Inc., 59 Temple Place - Suite 330,
      Boston, MA 02111-1307, USA.
    </para>
@@ -167,7 +167,7 @@
   <para>
     There is an <guibutton>About</guibutton> button in the lower corner,
     which provides access to an About box and to
-    <ulink type="http" url="http://www.bug-buddy.org">
+    <ulink type="http" url="http://bug-buddy.org/">
     bug-buddy's home on the web</ulink>. 
   </para>
  </sect1>
@@ -182,10 +182,10 @@
     (And sometimes you realise you forgot something in one of your
     earlier reports, and you want to add it.) You can search the bug 
     trackers for 
-    <ulink type="http" url="http://bugs.gnome.org">GNOME</ulink>,
-    <ulink type="http" url="http://bugs.kde.org">KDE</ulink>,
-    <ulink type="http" url="http://bugs.debian.org">Debian</ulink> or
-    <ulink type="http" url="http://bugs.helixcode.com">Helix Code</ulink>
+    <ulink type="http" url="http://bugs.gnome.org/">GNOME</ulink>,
+    <ulink type="http" url="http://bugs.kde.org/">KDE</ulink>,
+    <ulink type="http" url="http://bugs.debian.org/">Debian</ulink> or
+    <ulink type="http" url="http://bugs.helixcode.com/">Helix Code</ulink>
     to find a relevant bug report and note down the number. 
   </para>
 
@@ -647,13 +647,13 @@
     <application>bug-buddy</application> was written by Jacob Berkman
     (<email>jberkman@andrew.cmu.edu</email>). To find more information
     about it, please visit 
-    <ulink type="http" url="http://www.bug-buddy.org">
+    <ulink type="http" url="http://bug-buddy.org/">
     bug-buddy's home on the web</ulink>.
   </para>
 
   <para>
      Please send all comments, suggestions, and bug reports to the
-     <ulink url="http://bugs.gnome.org" type="http">GNOME bug
+     <ulink url="http://bugs.gnome.org/" type="http">GNOME bug
      tracking database</ulink>. The package is of course bug-buddy.
   </para>
   

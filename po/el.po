@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
-"POT-Creation-Date: 2000-04-18 00:14-0400\n"
+"POT-Creation-Date: 2000-04-29 17:02-0400\n"
 "PO-Revision-Date: 2000-03-21 13:58+0000\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -14,15 +14,338 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #
+#: src/bts.c:99
+#, fuzzy
+msgid "Distribution"
+msgstr "Περιγραφή"
+
+#: src/bts.c:107
+msgid "System"
+msgstr ""
+
+#
+#: src/bug-buddy.c:74
+msgid "critical"
+msgstr "κρίσιμο"
+
+#
+#: src/bug-buddy.c:75
+msgid "grave"
+msgstr "σημαντικό"
+
+#
+#: src/bug-buddy.c:76
+msgid "normal"
+msgstr "κανονικο"
+
+#
+#: src/bug-buddy.c:77
+msgid "wishlist"
+msgstr "προς υλοποίηση"
+
+#
+#: src/bug-buddy.c:82
+msgid "software bug"
+msgstr "σφάλμα λογισμικού"
+
+#
+#: src/bug-buddy.c:83
+msgid "documentation bug"
+msgstr "σφάλμα τεκμηρίωσης"
+
+#
+#: src/bug-buddy.c:84
+msgid "change request"
+msgstr "αίτημα αλλαγής"
+
+#
+#: src/bug-buddy.c:85
+msgid "support"
+msgstr "υποστήριξη"
+
+#
+#
+#: src/bug-buddy.c:90
+msgid "Submit bug report"
+msgstr "Αποστολή αναφοράς σφάλματος"
+
+#
+#: src/bug-buddy.c:91
+#, fuzzy
+msgid "Only send report to yourself"
+msgstr "Αποστολή αναφοράς στη δική σας ηλεκ.διεύθυνση μόνο"
+
+#
+#: src/bug-buddy.c:92
+#, fuzzy
+msgid "Save report to file"
+msgstr "Αποθήκευση της αναφοράς σε αρχείο"
+
+#
+#: src/bug-buddy.c:97
+#, fuzzy
+msgid "Collect debugging information from a crashed application"
+msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
+
+#
+#: src/bug-buddy.c:98
+#, fuzzy
+msgid "Collect debugging information from a core file"
+msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
+
+#
+#: src/bug-buddy.c:99
+msgid "Skip this step"
+msgstr "Παράκαμψη αυτού του βήματος"
+
+#
+#: src/bug-buddy.c:104
+#, fuzzy
+msgid "Create a new bug report"
+msgstr "Συμπλήρωση νέας αναφοράς σφάλματος"
+
+#
+#: src/bug-buddy.c:105
+#, fuzzy
+msgid "Add more information to existing report"
+msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
+
+#: src/bug-buddy.c:114
+msgid "Name of contact"
+msgstr ""
+
+#
+#: src/bug-buddy.c:114
+msgid "NAME"
+msgstr "ΟΝΟΜΑ"
+
+#
+#: src/bug-buddy.c:115
+#, fuzzy
+msgid "Email address of contact"
+msgstr "Ηλεκτρονική Διεύθυνση"
+
+#
+#: src/bug-buddy.c:115
+msgid "EMAIL"
+msgstr "ΗΛ.ΔΙΕΥΘΥΝΣΗ"
+
+#
+#: src/bug-buddy.c:116
+#, fuzzy
+msgid "Package containing the program"
+msgstr "Πακέτο προγράμματος"
+
+#
+#: src/bug-buddy.c:116
+msgid "PACKAGE"
+msgstr "ΠΑΚΕΤΟ"
+
+#
+#: src/bug-buddy.c:117
+msgid "Version of the package"
+msgstr "Έκδοση πακέτου"
+
+#
+#: src/bug-buddy.c:117
+msgid "VERSION"
+msgstr "ΕΚΔΟΣΗ"
+
+#
+#: src/bug-buddy.c:118
+#, fuzzy
+msgid "File name of crashed program"
+msgstr "Πακέτο προγράμματος"
+
+#
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
+msgid "FILE"
+msgstr "ΑΡΧΕΙΟ"
+
+#
+#: src/bug-buddy.c:119
+#, fuzzy
+msgid "PID of crashed program"
+msgstr "Αριθμός Διεργασίας εφαρμογής που κατέρρευσε"
+
+#
+#: src/bug-buddy.c:119
+msgid "PID"
+msgstr "ΑΡΙΘΜ.ΔΙΕΡΓΑΣΙΑΣ"
+
+#
+#: src/bug-buddy.c:120
+#, fuzzy
+msgid "Core file from program"
+msgstr "αρχείο core από εφαρμογή"
+
+#: src/bug-buddy.c:365
+msgid "The specified file does not exist."
+msgstr ""
+
+#: src/bug-buddy.c:370
+#, c-format
+msgid "File is of type: %s"
+msgstr ""
+
+#: src/bug-buddy.c:373
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr ""
+
+#: src/bug-buddy.c:387
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+
+#
+#: src/bug-buddy.c:430
+#, fuzzy
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"Το gdb δεν τελείωσε τη λήψη πληροφοριών εκσφαλμάτωσης.\n"
+"Τερματισμός της διεργασίας gdb (η ακολουθία στοίβας θα είναι ελλιπής);"
+
+#
+#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "το gdb έχει ήδη τερματίσει"
+
+#
+#: src/bug-buddy.c:481
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Πνευματικό Δικαιώματα (C) 1999 Ιάκωβος Μπέρκμαν"
+
+#
+#: src/bug-buddy.c:483
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Το γραφικό εργαλείο αναφοράς σφαλμάτων του GNOME"
+
+#
+#: src/bug-buddy.c:490
+msgid "The lame bug-buddy web page"
+msgstr "Η σελίδα WWW του bug-buddy"
+
+#
+#: src/bug-buddy.c:578
+#, fuzzy, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"Το '%s' δε φαίνετε να υπάρχει. Δε θα μπορέσετε να αποστείλετε\n"
+"μια αναφορά σφάλματος, αλλά θα μπορέσετε να το αποθηκεύσετε σε αρχείο.\n"
+"\n"
+"Θέλετε να ορίσετε νέα θέση για το sendmail;"
+
+#
+#: src/bug-buddy.c:614
+msgid "Please enter your name and email address"
+msgstr "Παρακαλώ εισάγετε το όνομά σας και τη διεύθυνση ηλεκ.ταχυδρομείου"
+
+#
+#: src/bug-buddy.c:633
+#, fuzzy, c-format
+msgid "Unable to open file: '%s'"
+msgstr ""
+"Η επεξεργασία του αρχείου core μέσω του gdb είναι αδύνατη:\n"
+"'%s'"
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid "about to run '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:650
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:681
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:684
+#, c-format
+msgid "Your bug report has been submitted to <%s>"
+msgstr ""
+
+#: src/bug-buddy.c:814
+msgid "You must specify a recipient email address"
+msgstr ""
+
+#
+#
+#: src/bug-buddy.c:820
+#, fuzzy
+msgid "Submit this bug report now?"
+msgstr "Αποστολή αναφοράς σφάλματος"
+
+#
+#: src/bug-buddy.c:830
+msgid "Please choose a file to save to."
+msgstr "Παρακαλώ επιλέξτε ένα αρχείου για να αποθηκεύσετε."
+
+#
+#: src/bug-buddy.c:837
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Το αρχείο '%s' υπάρχει ήδη.\n"
+"Επανεγγραφή στο ίδιο αρχείο;"
+
+#
+#: src/bug-buddy.c:934
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Το άνοιγμα του '%s' είναι αδύνατο.\n"
+"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
+
+#
+#: src/bug-buddy.c:1041
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"To $GNOME_CRASHED_APPNAME βαίνει εκτός χρήσης.\n"
+"Παρακαλώ κάντε χρήση της επιλογής --appname command lineargument."
+
+#
+#: src/bug-buddy.c:1054
+#, fuzzy
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+"To $GNOME_CRASHED_PID βαίνει εκτός χρήσης.\n"
+"Παρακαλώ κάντε χρήση της επιλογής --pid command lineargument."
+
+#
+#: src/bug-buddy.c:1181
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Η εύρεση του '%s' ήταν αδύνατη.\n"
+"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
+
+#
 #: src/gdb-buddy.c:41
 #, fuzzy, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "λήψη ακολουθίας στοίβας..."
-
-#
-#: src/bug-buddy.c:410 src/gdb-buddy.c:81
-msgid "gdb has already exited"
-msgstr "το gdb έχει ήδη τερματίσει"
 
 #
 #: src/gdb-buddy.c:115
@@ -65,308 +388,9 @@ msgstr ""
 "Παρακαλώ εγκαταστήστε ξανά το bug-buddy."
 
 #
-#: src/gdb-buddy.c:214
+#: src/gdb-buddy.c:214 src/util.c:75
 msgid "Error on fork()."
 msgstr "Σφάλμα στην κλήση συστήματος fork()."
-
-#
-#: src/bug-buddy.c:73
-msgid "critical"
-msgstr "κρίσιμο"
-
-#
-#: src/bug-buddy.c:74
-msgid "grave"
-msgstr "σημαντικό"
-
-#
-#: src/bug-buddy.c:75
-msgid "normal"
-msgstr "κανονικο"
-
-#
-#: src/bug-buddy.c:76
-msgid "wishlist"
-msgstr "προς υλοποίηση"
-
-#
-#: src/bug-buddy.c:81
-msgid "software bug"
-msgstr "σφάλμα λογισμικού"
-
-#
-#: src/bug-buddy.c:82
-msgid "documentation bug"
-msgstr "σφάλμα τεκμηρίωσης"
-
-#
-#: src/bug-buddy.c:83
-msgid "change request"
-msgstr "αίτημα αλλαγής"
-
-#
-#: src/bug-buddy.c:84
-msgid "support"
-msgstr "υποστήριξη"
-
-#
-#
-#: src/bug-buddy.c:89
-msgid "Submit bug report"
-msgstr "Αποστολή αναφοράς σφάλματος"
-
-#
-#: src/bug-buddy.c:90
-#, fuzzy
-msgid "Only send report to yourself"
-msgstr "Αποστολή αναφοράς στη δική σας ηλεκ.διεύθυνση μόνο"
-
-#
-#: src/bug-buddy.c:91
-#, fuzzy
-msgid "Save report to file"
-msgstr "Αποθήκευση της αναφοράς σε αρχείο"
-
-#
-#: src/bug-buddy.c:96
-#, fuzzy
-msgid "Collect debugging information from a crashed application"
-msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
-
-#
-#: src/bug-buddy.c:97
-#, fuzzy
-msgid "Collect debugging information from a core file"
-msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
-
-#
-#: src/bug-buddy.c:98
-msgid "Skip this step"
-msgstr "Παράκαμψη αυτού του βήματος"
-
-#
-#: src/bug-buddy.c:103
-#, fuzzy
-msgid "Create a new bug report"
-msgstr "Συμπλήρωση νέας αναφοράς σφάλματος"
-
-#
-#: src/bug-buddy.c:104
-#, fuzzy
-msgid "Add more information to existing report"
-msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
-
-#: src/bug-buddy.c:113
-msgid "Name of contact"
-msgstr ""
-
-#
-#: src/bug-buddy.c:113
-msgid "NAME"
-msgstr "ΟΝΟΜΑ"
-
-#
-#: src/bug-buddy.c:114
-#, fuzzy
-msgid "Email address of contact"
-msgstr "Ηλεκτρονική Διεύθυνση"
-
-#
-#: src/bug-buddy.c:114
-msgid "EMAIL"
-msgstr "ΗΛ.ΔΙΕΥΘΥΝΣΗ"
-
-#
-#: src/bug-buddy.c:115
-#, fuzzy
-msgid "Package containing the program"
-msgstr "Πακέτο προγράμματος"
-
-#
-#: src/bug-buddy.c:115
-msgid "PACKAGE"
-msgstr "ΠΑΚΕΤΟ"
-
-#
-#: src/bug-buddy.c:116
-msgid "Version of the package"
-msgstr "Έκδοση πακέτου"
-
-#
-#: src/bug-buddy.c:116
-msgid "VERSION"
-msgstr "ΕΚΔΟΣΗ"
-
-#
-#: src/bug-buddy.c:117
-#, fuzzy
-msgid "File name of crashed program"
-msgstr "Πακέτο προγράμματος"
-
-#
-#: src/bug-buddy.c:117 src/bug-buddy.c:119
-msgid "FILE"
-msgstr "ΑΡΧΕΙΟ"
-
-#
-#: src/bug-buddy.c:118
-#, fuzzy
-msgid "PID of crashed program"
-msgstr "Αριθμός Διεργασίας εφαρμογής που κατέρρευσε"
-
-#
-#: src/bug-buddy.c:118
-msgid "PID"
-msgstr "ΑΡΙΘΜ.ΔΙΕΡΓΑΣΙΑΣ"
-
-#
-#: src/bug-buddy.c:119
-#, fuzzy
-msgid "Core file from program"
-msgstr "αρχείο core από εφαρμογή"
-
-#: src/bug-buddy.c:359
-msgid ""
-"You must include a subject and a description\n"
-"in your bug report."
-msgstr ""
-
-#
-#: src/bug-buddy.c:402
-#, fuzzy
-msgid ""
-"gdb has not finished getting the debugging information.\n"
-"Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"Το gdb δεν τελείωσε τη λήψη πληροφοριών εκσφαλμάτωσης.\n"
-"Τερματισμός της διεργασίας gdb (η ακολουθία στοίβας θα είναι ελλιπής);"
-
-#
-#: src/bug-buddy.c:453
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Πνευματικό Δικαιώματα (C) 1999 Ιάκωβος Μπέρκμαν"
-
-#
-#: src/bug-buddy.c:455
-msgid "The GNOME graphical bug reporting tool"
-msgstr "Το γραφικό εργαλείο αναφοράς σφαλμάτων του GNOME"
-
-#
-#: src/bug-buddy.c:462
-msgid "The lame bug-buddy web page"
-msgstr "Η σελίδα WWW του bug-buddy"
-
-#
-#: src/bug-buddy.c:550
-#, fuzzy, c-format
-msgid ""
-"'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a bug report, but you will be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"Το '%s' δε φαίνετε να υπάρχει. Δε θα μπορέσετε να αποστείλετε\n"
-"μια αναφορά σφάλματος, αλλά θα μπορέσετε να το αποθηκεύσετε σε αρχείο.\n"
-"\n"
-"Θέλετε να ορίσετε νέα θέση για το sendmail;"
-
-#
-#: src/bug-buddy.c:586
-msgid "Please enter your name and email address"
-msgstr "Παρακαλώ εισάγετε το όνομά σας και τη διεύθυνση ηλεκ.ταχυδρομείου"
-
-#
-#: src/bug-buddy.c:605
-#, fuzzy, c-format
-msgid "Unable to open file: '%s'"
-msgstr ""
-"Η επεξεργασία του αρχείου core μέσω του gdb είναι αδύνατη:\n"
-"'%s'"
-
-#: src/bug-buddy.c:618
-#, c-format
-msgid "about to run '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:622
-#, c-format
-msgid "Unable to start mail program: '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:653
-#, c-format
-msgid "Your bug report was saved in '%s'"
-msgstr ""
-
-#: src/bug-buddy.c:656
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
-msgstr ""
-
-#: src/bug-buddy.c:786
-msgid "You must specify a recipient email address"
-msgstr ""
-
-#
-#
-#: src/bug-buddy.c:792
-#, fuzzy
-msgid "Submit this bug report now?"
-msgstr "Αποστολή αναφοράς σφάλματος"
-
-#
-#: src/bug-buddy.c:802
-msgid "Please choose a file to save to."
-msgstr "Παρακαλώ επιλέξτε ένα αρχείου για να αποθηκεύσετε."
-
-#
-#: src/bug-buddy.c:809
-#, c-format
-msgid ""
-"The file '%s' already exists.\n"
-"Overwrite this file?"
-msgstr ""
-"Το αρχείο '%s' υπάρχει ήδη.\n"
-"Επανεγγραφή στο ίδιο αρχείο;"
-
-#
-#: src/bug-buddy.c:906
-#, c-format
-msgid ""
-"Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Το άνοιγμα του '%s' είναι αδύνατο.\n"
-"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
-
-#
-#: src/bug-buddy.c:1010
-msgid ""
-"$GNOME_CRASHED_APPNAME is deprecated.\n"
-"Please use the --appname command lineargument instead."
-msgstr ""
-"To $GNOME_CRASHED_APPNAME βαίνει εκτός χρήσης.\n"
-"Παρακαλώ κάντε χρήση της επιλογής --appname command lineargument."
-
-#
-#: src/bug-buddy.c:1023
-#, fuzzy
-msgid ""
-"$GNOME_CRASHED_PID is deprecated.\n"
-"Please use the --pid command lineargument instead."
-msgstr ""
-"To $GNOME_CRASHED_PID βαίνει εκτός χρήσης.\n"
-"Παρακαλώ κάντε χρήση της επιλογής --pid command lineargument."
-
-#
-#: src/bug-buddy.c:1151
-#, c-format
-msgid ""
-"Could not find '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Η εύρεση του '%s' ήταν αδύνατη.\n"
-"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
 
 #
 #.
@@ -441,109 +465,94 @@ msgid "Bug Tracking System "
 msgstr "Σύστημα Παρακολούθησης Σφαλμάτων"
 
 #
-#: src/glade-strings.c:26
-#, fuzzy
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
-
-#
-#: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
 msgid "Package"
 msgstr "Πακέτο"
 
 #
-#: src/glade-strings.c:30
+#: src/glade-strings.c:27
 msgid "Severity"
 msgstr "Σοβαρότητα"
 
 #
-#: src/glade-strings.c:31
+#: src/glade-strings.c:28
 msgid "Class"
 msgstr "Τάξη"
 
 #
-#: src/glade-strings.c:32 src/glade-strings.c:34
+#: src/glade-strings.c:29 src/glade-strings.c:31
 msgid "Version"
 msgstr "Έκδοση"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:32
 msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
 
 #
-#: src/glade-strings.c:37 src/glade-strings.c:38
+#: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
 msgstr "Αριθμός Σφάλματος"
 
 #
-#: src/glade-strings.c:39
+#: src/glade-strings.c:36
 msgid "Description"
 msgstr "Περιγραφή"
 
 #
-#: src/glade-strings.c:40
+#: src/glade-strings.c:37
 msgid "Short subject for the bug report"
 msgstr "Σύντομη περιγραφή της αναφοράς σφάλματος"
 
 #
-#: src/glade-strings.c:41
+#: src/glade-strings.c:38
 #, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Πλήρης περιγραφή του σφάλματος"
 
 #
-#: src/glade-strings.c:42
+#: src/glade-strings.c:39
 msgid "Include a text file"
 msgstr "Συμπερίληψη αρχείου κειμένου"
 
 #
-#: src/glade-strings.c:43
+#: src/glade-strings.c:40
 msgid "Debugging Information"
 msgstr "Πληροφορίες Εκσφαλμάτωσης"
 
-#: src/glade-strings.c:44
-msgid ""
-"Collect debugging information from a crashed application\n"
-"Collect debugging information from a core file\n"
-"Skip this step\n"
-msgstr ""
-
 #
-#: src/glade-strings.c:48
+#: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
 msgstr "Επιλογή του δυαδικού αρχείου της εφαρμογής που κατέρρευσε"
 
 #
-#: src/glade-strings.c:49
+#: src/glade-strings.c:42
 msgid "Binary"
 msgstr "Δυαδικό"
 
 #
-#: src/glade-strings.c:50
+#: src/glade-strings.c:43
 msgid "Process ID"
 msgstr "Αριθμός Διεργασίας"
 
 #
-#: src/glade-strings.c:51
+#: src/glade-strings.c:44
 msgid "Core file"
 msgstr "Αρχείο core"
 
 #
-#: src/glade-strings.c:52
+#: src/glade-strings.c:45
 msgid "Select a core file"
 msgstr "Επιλογή του αρχείου core"
 
 #
-#: src/glade-strings.c:53
+#: src/glade-strings.c:46
 msgid "Collecting Debugging Information"
 msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
 
 #
-#: src/glade-strings.c:54
+#: src/glade-strings.c:47
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -552,70 +561,95 @@ msgstr ""
 "οι πληροφορίες εκσφαλμάτωσης..."
 
 #
-#: src/glade-strings.c:56
+#: src/glade-strings.c:49
 msgid "System Configuration"
 msgstr "Διαμόρφωση Συστήματος"
 
 #
-#: src/glade-strings.c:57
+#: src/glade-strings.c:50
 msgid "Please verify that this information is correct"
 msgstr "Παρακαλώ επιβεβεώστε ότι αυτές οι πληροφορίες είναι σωστές"
 
 #
-#: src/glade-strings.c:59
+#: src/glade-strings.c:52
 msgid "Version installed"
 msgstr "Εγκατεστημένη έκδοση"
 
 #
-#: src/glade-strings.c:60
+#: src/glade-strings.c:53
 msgid "%P %%"
 msgstr "%P %%"
 
 #
-#: src/glade-strings.c:61
+#: src/glade-strings.c:54
 msgid "Automatically go to next page when complete"
 msgstr "Αυτόματη μετάβαση στην επόμενη σελίδα μετά την ολοκλήρωση"
 
 #
-#: src/glade-strings.c:62
+#: src/glade-strings.c:55
 msgid "Submitting the Report"
 msgstr "Αποστολή της Αναφοράς"
 
-#
-#: src/glade-strings.c:63
-#, fuzzy
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr "Αποστολή αναφοράς στη δική σας ηλεκ.διεύθυνση μόνο"
-
-#: src/glade-strings.c:67
+#: src/glade-strings.c:56
 msgid "To"
 msgstr ""
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:57
 msgid "Send copy to yourself"
 msgstr ""
 
 #
-#: src/glade-strings.c:69
+#: src/glade-strings.c:58
 msgid "Save the report to..."
 msgstr "Αποθήκευση της αναφοράς στο..."
 
-#: src/glade-strings.c:70
+#: src/glade-strings.c:59
 msgid "Content"
 msgstr ""
 
 #
-#: src/glade-strings.c:71
+#: src/glade-strings.c:60
 msgid "Summary"
 msgstr "Περίληψη"
 
 #
-#: src/glade-strings.c:72
+#: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "Το GEGL παρατηρεί."
+
+#
+#: src/util.c:60
+#, fuzzy
+msgid "Unable to open pipe"
+msgstr ""
+"Η επεξεργασία του αρχείου core μέσω του gdb είναι αδύνατη:\n"
+"'%s'"
+
+#: src/util.c:72
+#, c-format
+msgid "Could not run '%s'."
+msgstr ""
+
+#
+#: src/util.c:112
+#, fuzzy
+msgid "Error on read..."
+msgstr "Σφάλμα στην ανάγνωση... ματαίωση"
+
+#
+#, fuzzy
+#~ msgid ""
+#~ "Submit new report\n"
+#~ "Add information to an existing report\n"
+#~ msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
+
+#
+#, fuzzy
+#~ msgid ""
+#~ "Submit bug report\n"
+#~ "Send to your amail address only\n"
+#~ "Save report to file\n"
+#~ msgstr "Αποστολή αναφοράς στη δική σας ηλεκ.διεύθυνση μόνο"
 
 #
 #~ msgid "Contact's name"
