@@ -1,5 +1,8 @@
 2001-11-08  jacob berkman  <jacob@ximian.com>
 
+	* src/united-states-of-bug-buddy.c (desc_page_ok): use the public
+	mime type function
+
 	* src/Makefile.am (EXTRA_DIST): ship the .desktop.in file
 
 2001-11-07  jacob berkman  <jacob@ximian.com>

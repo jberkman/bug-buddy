@@ -27,7 +27,7 @@
 #include <gnome.h>
 #include <string.h>
 
-#include <libgnomevfs/gnome-vfs-mime.h>
+#include <libgnomevfs/gnome-vfs-mime-utils.h>
 
 #if 0
 static char *help_pages[] = {
@@ -379,7 +379,7 @@ desc_page_ok (void)
 			return FALSE;
 		}
 
-		mime_type = gnome_vfs_get_file_mime_type (s, NULL, FALSE);
+		mime_type = gnome_vfs_get_mime_type (s);
 		d(g_message (_("File is of type: %s"), mime_type));
 		
 		if (strncmp ("text/", mime_type, 5)) {
