@@ -1,5 +1,7 @@
 1999-10-27  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/packages.c (packages): fix tyop
+
 	* src/bug-buddy.c (update_selected_row): don't crash when
 	no rows have been selected
 
