@@ -67,6 +67,9 @@ mime_DATA = \
 	bug-buddy.keys	\
 	bug-buddy.mime
 
+applicationsdir = $(datadir)/application-registry
+applications_DATA = bug-buddy.applications
+
 buddy_DATA = \
 	bug-buddy.glade	\
 	gdb-cmd

@@ -1,3 +1,16 @@
+2002-06-05  Alex Graveley  <alex@ximian.com>
+
+	* src/bug-buddy.keys.in: Remove unsupported open action, add
+	settings for nautilus1 user-levels, and set default_action_type to
+	'application'.
+
+	* src/bug-buddy.applications: Add bug-buddy-core-file handler for
+	application/x-core-file mimetype, with the command "buddy --core",
+	and the name "Bug Buddy".
+
+	* src/Makefile.am (applications_DATA): Install
+	bug-buddy.applications.
+
 2002-06-04  Yanko Kaneti <yaneti@declera.com>
 
 	* configure.in: (ALL_LINGUAS) Added Bulgarian (bg).
