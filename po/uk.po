@@ -46,6 +46,8 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
+"Неможливо визначити який дв╕йковий файл створено\n"
+"\"%s\""
 
 #: src/gdb-buddy.c:178
 msgid "Error on read... aborting"
@@ -299,10 +301,13 @@ msgid ""
 "Enter your name and email address, so you will be notified when the\n"
 "bug is resolved, or for developers to request more information from you."
 msgstr ""
+"Введ╕ть сво╓ ╕м'я та адресу е-пошти, щоб можна було вас пов╕домити,\n"
+"коли помилку буде виправлено, або для розробник╕в, якщо ╖м стане\n"
+"необх╕дною додаткова ╕нформац╕я в╕д вас."
 
 #: src/glade-strings.c:14
 msgid "Bug Track System"
-msgstr ""
+msgstr "Система в╕дсл╕дковування помилок"
 
 #: src/glade-strings.c:15
 msgid ""
