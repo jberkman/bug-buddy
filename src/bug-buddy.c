@@ -374,8 +374,8 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 		break;
 	case SUBMIT_NONE:
 		gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page),
-						  "Click \"Finish\" to exit bug-buddy.\n"
-						  "No bug report will be submitted.");
+						  _("Click \"Finish\" to exit bug-buddy.\n"
+						    "No bug report will be submitted."))
 		return FALSE;
 	default:
 		g_assert_not_reached ();

@@ -1,5 +1,8 @@
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.c (on_complete_page_prepare): mark another
+	string for i18n (sorry kmarass)
+
 	* src/bug-buddy.c (on_less_page_prepare):
 	* src/gdb-buddy.c (handle_gdb_input): fix some things when you
 	get a trace, then go back and change things and get another one
