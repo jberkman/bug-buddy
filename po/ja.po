@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20001005\n"
+"Project-Id-Version: bug-buddy CVS-20001013\n"
 "POT-Creation-Date: 2000-10-05 15:31+0900\n"
-"PO-Revision-Date: 2000-10-05 15:37+0900\n"
+"PO-Revision-Date: 2000-10-13 02:02+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -147,7 +147,7 @@ msgstr ""
 "'general' より特定のパッケージを指定するなら\n"
 "それははるかに役立っています\n"
 "\n"
-"ばっケ−ジを指定してください"
+"パッケージを指定してください"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
