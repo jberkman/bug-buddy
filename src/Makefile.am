@@ -83,7 +83,6 @@ xml_DATA = \
 	Independent_Project.bts
 
 EXTRA_DIST = \
-	glade-strings.c	\
 	$(buddy_DATA)	\
 	$(utils_DATA)	\
 	$(xml_DATA)	\

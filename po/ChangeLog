@@ -1,14 +1,10 @@
+2001-06-03  Karl Eichwalder  <keichwa@gmx.net>
+
+	* POTFILES.in: Remove src/glade-strings.c.
+
 2001-06-02  Karl Eichwalder  <ke@suse.de>
 
 	* de.po: Small cleanup.
-
-2001-06-02  gettextize  <bug-gnu-utils@gnu.org>
-
-	* Makefile.in.in: Upgrade to gettext-0.10.38.
-
-2001-06-02  gettextize  <bug-gnu-utils@gnu.org>
-
-	* Makefile.in.in: Upgrade to gettext-0.10.38.
 
 2001-06-02  Ole Laursen  <olau@hardworking.dk>
 
@@ -35,7 +31,7 @@
 2001-05-21  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2001-05-21  Pablo Saratxaga <pablo@mandrakesoft.com>
 
 	* zh*.po: fixed invalid multibyte
@@ -55,7 +51,7 @@
 2001-03-27  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* no.po: Update Norwegian (bokmål) translation.
-	
+
 2001-03-27  Stanislav Visnovsky  <visnovsky@nenya.ms.mff.cuni.cz>
 
 	* sk.po: Updated Slovak translation.
@@ -102,8 +98,7 @@
 
 2001-03-21  Fatih Demir <kabalak@gtranslator.org>
 
-	* tr.po: Updated Turkish translation by 
-		Görkem and Kemal.
+	* tr.po: Updated Turkish translation by Görkem and Kemal.
 
 2001-03-20  Karl Eichwalder  <ke@suse.de>
 
@@ -342,7 +337,7 @@
 
 2000-10-29  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
 
-	* it.po: Updated italian translation by Giovanni Bortolozzo 
+	* it.po: Updated italian translation by Giovanni Bortolozzo
 	<borto@pluto.linux.it>
 
 2000-10-29  Jesus Bravo Alvarez  <jba@pobox.com>

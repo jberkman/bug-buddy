@@ -1,7 +1,6 @@
 src/bug-buddy.c
 src/bugzilla.c
 src/gdb-buddy.c
-src/glade-strings.c
 src/bug-buddy.glade
 src/united-states-of-bug-buddy.c
 src/util.c

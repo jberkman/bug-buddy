@@ -1,3 +1,9 @@
+2001-06-03  Karl Eichwalder  <ke@suse.de>
+
+	* src/Makefile.am (EXTRA_DIST): Remove 
+	xml-i18n-extract will directly work on .glade files.
+	* glade-strings.c: Remove file.
+
 2001-05-31  Karl Eichwalder  <ke@suse.de>
 
 	* .cvsignore: Add xml-i18n-extract, xml-i18n-merge, and
