@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Bug Report Tool
+Name[pt_BR]=Ferramenta de Relatσrio de Erros
 Name[da]=Fejl-Frede
 Name[de]=Fehlermelder
 Name[el]=Εργαλείο Αναφοράς Σφαλμάτων
@@ -15,6 +16,7 @@ Name[sl]=bug-buddy
 Name[sv]=Felrapporteringsverktyg
 Name[tr]=Hata rapolayύcύsύ
 Comment=Report a bug in GNOME
+Comment[pt_BR]=Informar erro no GNOME
 Comment[da]=Indberet en fejl i Gnome
 Comment[de]=Einen Fehler bei GNOME melden
 Comment[el]=Αναφορά σφαλμάτων του GNOME
