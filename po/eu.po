@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Josu Waliño <josu@elhuyar.com>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 2.0.8\n"
+"POT-Creation-Date: 2002-04-29 20:20+0200\n"
+"PO-Revision-Date: 2001-05-25 13:35+0200\n"
+"Last-Translator: Unmaintained\n"
+"Language-Team: Euskara\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/bug-buddy.c:55
+msgid "Submit bug report"
+msgstr "Bidali programa-erroreen berri-ematea"
+
+#: src/bug-buddy.c:56
+msgid "Only send report to yourself"
+msgstr "Berri-ematea zure buruari soilik bidali"
+
+#: src/bug-buddy.c:57
+msgid "Save report to file"
+msgstr "Gorde berri-ematea fitxategian"
+
+#: src/bug-buddy.c:62
+msgid "crashed application"
+msgstr "huts egindako aplikazioa"
+
+#: src/bug-buddy.c:63
+msgid "core file"
+msgstr "nukleo-fitxategia"
+
+#: src/bug-buddy.c:64
+msgid "nothing"
+msgstr "ezer ere ez"
+
+#: src/bug-buddy.c:69
+msgid "Create a new bug report"
+msgstr "Sortu programa-erroreen berri-emate berria"
+
+#: src/bug-buddy.c:70
+msgid "Add more information to existing report"
+msgstr "Gehitu informazio gehiago lehendik dagoen berri-ematean"
+
+#: src/bug-buddy.c:79
+msgid "Name of contact"
+msgstr "Kontaktuaren izena"
+
+#: src/bug-buddy.c:79
+msgid "NAME"
+msgstr "IZENA"
+
+#: src/bug-buddy.c:80
+msgid "Email address of contact"
+msgstr "Kontaktuaren helbide elektronikoa"
+
+#: src/bug-buddy.c:80
+msgid "EMAIL"
+msgstr "HELB. EL."
+
+#: src/bug-buddy.c:81
+msgid "Package containing the program"
+msgstr "Programa daukan paketea"
+
+#: src/bug-buddy.c:81
+msgid "PACKAGE"
+msgstr "PAKETEA"
+
+#: src/bug-buddy.c:82
+msgid "Version of the package"
+msgstr "Paketearen bertsioa"
+
+#: src/bug-buddy.c:82
+msgid "VERSION"
+msgstr "BERTSIOA"
+
+#: src/bug-buddy.c:83
+msgid "File name of crashed program"
+msgstr "Huts egindako programaren fitxategi-izena"
+
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
+msgid "FILE"
+msgstr "FITXATEGIA"
+
+#: src/bug-buddy.c:84
+msgid "PID of crashed program"
+msgstr "Huts egindako programaren PIDa"
+
+#: src/bug-buddy.c:84
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:85
+msgid "Core file from program"
+msgstr "Programako nukleo-fitxategia"
+
+#: src/bug-buddy.c:86
+msgid "Text file to include in the report"
+msgstr "Berri-ematean sartzeko testu-fitxategia"
+
+#: src/bug-buddy.c:96
+#, c-format
+msgid "Could not find widget named %s at %s"
+msgstr ""
+
+#: src/bug-buddy.c:208
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb-k ez du arazketa-informazioa biltzen bukatu.\n"
+"gdb prozesua amaitu (pila-aztarna osatu gabe egongo da)?"
+
+#: src/bug-buddy.c:219 src/gdb-buddy.c:125
+msgid "gdb has already exited"
+msgstr "gdb irten da jadanik"
+
+#: src/bug-buddy.c:285
+msgid "Save Backtrace"
+msgstr ""
+
+#: src/bug-buddy.c:304
+#, c-format
+msgid ""
+"There was an error trying to save %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Please choose another file and try again."
+msgstr ""
+
+#: src/bug-buddy.c:401
+msgid "_Start Mailer"
+msgstr ""
+
+#: src/bug-buddy.c:405
+msgid "_Send Report"
+msgstr ""
+
+#: src/bug-buddy.c:474
+#, fuzzy
+msgid "Hide Debugging Options"
+msgstr "Arazketa-informazioa"
+
+#: src/bug-buddy.c:475
+#, fuzzy
+msgid "Show Debugging Options"
+msgstr "Arazketa-informazioa"
+
+#: src/bug-buddy.c:539
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME gaitzetsi egin da.\n"
+"Erabili --appname komando-lerroko argumentua horren ordez."
+
+#: src/bug-buddy.c:549
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID gaitzetsi egin da.\n"
+"Erabili --pid komando-lerroko argumentua horren ordez."
+
+#: src/bug-buddy.c:565
+msgid ""
+"Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
+"It will step you through the process of submitting a bug report."
+msgstr ""
+
+#: src/bug-buddy.c:568
+msgid ""
+"\n"
+"\n"
+"You are seeing this because another application has crashed."
+msgstr ""
+
+#: src/bug-buddy.c:571
+msgid ""
+"\n"
+"\n"
+"Please wait a few moments while Bug Buddy obtains debugging information from "
+"the applications.  This allows Bug Buddy to provide a more useful bug report."
+msgstr ""
+
+#: src/bug-buddy.c:712
+#, c-format
+msgid "Could not find pixmap: %s (%d)\n"
+msgstr ""
+
+#: src/bug-buddy.c:779
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not load its user interface file (%s).\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"Ezin izan da '%s' kargatu.\n"
+"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
+
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Produktua"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Osagaia"
+
+#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
+msgid "Description"
+msgstr "Azalpena"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"Ezin izan da '%s' ireki.\n"
+"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
+
+#: src/bugzilla.c:792
+msgid "All"
+msgstr "Dena"
+
+#: src/config.c:86
+msgid "Evolution"
+msgstr ""
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Pila-aztarna eskuratzen... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Ezin da nukleo-fitxategia gdb-rekin prozesatu:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, fuzzy, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Ezin da zehaztu zein bitarrek sortu duen\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Errorea irakurtzean... abortatzen"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"Ezin izan da GDB aurkitu zure sisteman.\n"
+"Ez da arazketa-informaziorik eskuratuko."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Ezin izan da gdb-cmd fitxategia aurkitu.\n"
+"Saiatu Bug Buddy berriro instalatzen."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Welcome to Bug Buddy"
+msgstr "Ongi etorri Bug Buddy-ra"
+
+#: src/united-states-of-bug-buddy.c:50
+#, fuzzy
+msgid "Select a Product"
+msgstr "Hautatu ekintza bat"
+
+#: src/united-states-of-bug-buddy.c:51
+#, fuzzy
+msgid "Select a Component"
+msgstr "osagaia"
+
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:53
+msgid "Bug Description"
+msgstr "Programa-errorearen azalpena"
+
+#: src/united-states-of-bug-buddy.c:54
+#, fuzzy
+msgid "Mail Configuration"
+msgstr "Sistemaren konfigurazioa"
+
+#: src/united-states-of-bug-buddy.c:55
+#, fuzzy
+msgid "Confirmation"
+msgstr "Sistemaren konfigurazioa"
+
+#: src/united-states-of-bug-buddy.c:56
+msgid "Finished!"
+msgstr "Amaituta!"
+
+#: src/united-states-of-bug-buddy.c:95
+msgid "Bug Buddy"
+msgstr "Bug Buddy"
+
+#: src/united-states-of-bug-buddy.c:98
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "GNOMEren erroreen berri emateko tresna grafikoa."
+
+#: src/united-states-of-bug-buddy.c:109
+msgid "The lame Bug Buddy web page"
+msgstr "Bug Buddy-ren web orria"
+
+#: src/united-states-of-bug-buddy.c:284
+msgid "Please enter your name."
+msgstr "Idatzi zure izena."
+
+#: src/united-states-of-bug-buddy.c:300
+msgid "Please enter a valid email address."
+msgstr "Idatzi baliozko helbide elektroniko bat."
+
+#: src/united-states-of-bug-buddy.c:316
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.\n"
+"\n"
+"Please check the path to sendmail again."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:348
+#, fuzzy
+msgid "Please enter a valid email command."
+msgstr "Idatzi baliozko helbide elektroniko bat."
+
+#: src/united-states-of-bug-buddy.c:412
+msgid "The specified file does not exist."
+msgstr "Zehaztutako fitxategia ez dago."
+
+#: src/united-states-of-bug-buddy.c:422
+#, c-format
+msgid "File is of type: %s"
+msgstr "Fitxategi-mota: %s"
+
+#: src/united-states-of-bug-buddy.c:429
+#, c-format
+msgid ""
+"'%s' is a %s file.\n"
+"\n"
+"Bug Buddy can only submit plaintext (text/*) files."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:449
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr ""
+"Programa-erroreen berri emateko mezuan gai ulergarria sartu behar duzu."
+
+#: src/united-states-of-bug-buddy.c:465
+msgid "You must include a comprehensible description in your bug report."
+msgstr ""
+"Programa-erroreen berri emateko mezuan azalpen ulergarria sartu behar duzu."
+
+#: src/united-states-of-bug-buddy.c:488
+msgid "Submit this bug report now?"
+msgstr "Berri-emate hau orain bidali nahi duzu?"
+
+#: src/united-states-of-bug-buddy.c:508
+#, fuzzy, c-format
+msgid ""
+"Unable to open file '%s':\n"
+"%s"
+msgstr "Ezin da fitxategia ireki: '%s'"
+
+#: src/united-states-of-bug-buddy.c:522
+#, c-format
+msgid "about to run '%s'"
+msgstr "'%s' exekutatzera doa"
+
+#: src/united-states-of-bug-buddy.c:530
+#, fuzzy, c-format
+msgid ""
+"Unable to start mail program '%s':\n"
+"%s"
+msgstr "Ezin da posta-programa abiarazi: '%s'"
+
+#: src/united-states-of-bug-buddy.c:568
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "Programa-erroreen berri-ematea '%s'(e)n gorde da."
+
+#: src/united-states-of-bug-buddy.c:571
+#, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>\n"
+"\n"
+"Thanks!"
+msgstr ""
+"Programa-erroreen berri-ematea hona bidali da:\n"
+"\n"
+"        <%s>\n"
+"\n"
+"Eskerrik asko!"
+
+#: src/united-states-of-bug-buddy.c:626
+msgid ""
+"Since Bug Buddy doesn't know about the product you wish to submit a bug "
+"report in, you will have to manually address the bug report."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:647
+msgid "You must specify a product for your bug report."
+msgstr "Produktu bat adierazi behar duzu berri-ematea bidaltzeko."
+
+#: src/united-states-of-bug-buddy.c:670
+msgid "You must specify a component for your bug report."
+msgstr "Osagai bat adierazi behar duzu berri-ematea bidaltzeko."
+
+#: src/united-states-of-bug-buddy.c:684
+msgid "You must specify a version for your bug report."
+msgstr "Bertsio bat adierazi behar duzu berri-ematea bidaltzeko."
+
+#: src/united-states-of-bug-buddy.c:765
+msgid ""
+"Your email program has been launched.  Please look it over and send it.\n"
+"\n"
+"Thank you for submitting this bug report."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:792
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
+msgstr ""
+"Ziur zaude programa-erroreen berri-emate hau\n"
+"bertan behera utzi nahi duzula?"
+
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Programa-erroreen berri emateko tresna"
+
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Eman GNOMEren programa-errore baten berri"
+
+#~ msgid "Are you sure you want to cancel this update?"
+#~ msgstr "Ziur zaude eguneratze hau bertan behera utzi nahi duzula?"
+
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug Buddy-k erroreen segimendu-sistema batzuei buruzko hainbat \n"
+#~ "informazio eguneratu egin beharko dela erabaki du.\n"
+#~ "\n"
+#~ "Bug Buddy-k fitxategi hauek orain eguneratzea nahi duzu?"
+
+#~ msgid "Error on fork()."
+#~ msgstr "Errorea fork egitean()."
+
+#~ msgid "%P %%"
+#~ msgstr "%% %P"
+
+#~ msgid "About"
+#~ msgstr "Honi buruz"
+
+#~ msgid "Assbarn Phenomenon"
+#~ msgstr "Assbarn fenomenoa"
+
+#~ msgid "Automatically continue to next step when debugging is complete"
+#~ msgstr "Jarraitu automatikoki hurrengo urratsera arazketa bukatzen denean"
+
+#~ msgid "Automatically go to next page when complete"
+#~ msgstr "Joan automatikoki hurrengo orrialdera bukatzean"
+
+#~ msgid "Binary file"
+#~ msgstr "Fitxategi bitarra"
+
+#~ msgid ""
+#~ "Bug Buddy can send debugging information with your bug report.\n"
+#~ "The correct options should have been selected for you automatically.\n"
+#~ "For more information, please click the Help button below."
+#~ msgstr ""
+#~ "Bug Buddy-k arazketa-informazioa bidal dezake erroreen berri-emateekin.\n"
+#~ "Aukera zuzenak automatikoki hautatuta egon behar lukete.\n"
+#~ "Informazio gehiago nahi baduzu, egin klik beheko Laguntza botoian."
+
+#~ msgid "Bug tracking system"
+#~ msgstr "Programa-erroreen segimendu-sistema"
+
+#~ msgid "Cc"
+#~ msgstr "Cc"
+
+#~ msgid "Content"
+#~ msgstr "Edukia"
+
+#~ msgid "Core file"
+#~ msgstr "Nukleo-fitxategia"
+
+#~ msgid "Debug"
+#~ msgstr "Araztu"
+
+#~ msgid "Email"
+#~ msgstr "Helbide elektronikoa"
+
+#~ msgid "Full description of the bug, including how to reproduce it"
+#~ msgstr "Programa-errorearen azalpen osoa, nola sortzen den barne"
+
+#~ msgid "Go"
+#~ msgstr "Joan"
+
+#~ msgid "Include a text file"
+#~ msgstr "Sartu testu-fitxategi bat"
+
+#~ msgid "Name"
+#~ msgstr "Izena"
+
+#~ msgid "Package"
+#~ msgstr "Paketea"
+
+#~ msgid "Please choose a component, version, and severity level."
+#~ msgstr "Aukeratu osagaia, bertsioa eta larritasun-maila."
+
+#~ msgid "Please make your bug report in English, if possible."
+#~ msgstr "Eman programa-erroreen berri ingelesez, ahal bada."
+
+#~ msgid "Please select the product for the bug you wish to report."
+#~ msgstr "Hautatu zein programaren errorea azaldu nahi duzun."
+
+#~ msgid ""
+#~ "Please wait while Bug Buddy determines some information about your system."
+#~ msgstr ""
+#~ "Itxaron Bug Buddy-k zure sistemari buruzko hainbat informazio zehaztu "
+#~ "bitartean."
+
+#~ msgid ""
+#~ "Please wait while Bug Buddy updates its list\n"
+#~ "of products for the bug tracking systems."
+#~ msgstr ""
+#~ "Itxaron Bug Buddy-k erroreen segimendu-sistemen\n"
+#~ "produktuen zerrenda eguneratu bitartean."
+
+#~ msgid "Process ID"
+#~ msgstr "Prozesuaren IDa"
+
+#~ msgid "Save the report to..."
+#~ msgstr "Gorde berri-ematea hemen..."
+
+#~ msgid "Saving:"
+#~ msgstr "Gordetzen:"
+
+#~ msgid "Send copy to yourself"
+#~ msgstr "Bidali kopia zeure buruari"
+
+#~ msgid "Sendmail"
+#~ msgstr "Sendmail"
+
+#~ msgid "Severity"
+#~ msgstr "Larritasuna"
+
+#~ msgid "Short subject for the bug report"
+#~ msgstr "Berri-ematearen gai laburra"
+
+#~ msgid "Skip this step in the future"
+#~ msgstr "Saltatu urrats hau aurrerantzean"
+
+#~ msgid "Stop"
+#~ msgstr "Gelditu"
+
+#~ msgid "Submit another bug"
+#~ msgstr "Bidali beste berri-emate bat"
+
+#~ msgid ""
+#~ "This program will walk you through the steps for \n"
+#~ "submitting a bug report for projects such as GNOME.\n"
+#~ "\n"
+#~ "These bug reports are submitted via email, so\n"
+#~ "please specify your email address so you can be\n"
+#~ "contacted if further information is required, or\n"
+#~ "when a fixed version is available."
+#~ msgstr ""
+#~ "Programa honek GNOME bezalako proiektuen programa-erroreen \n"
+#~ "berri emateko urratsak egiten lagunduko dizu.\n"
+#~ "\n"
+#~ "Akatsen berri-emateak posta elektronikoz bidaltzen\n"
+#~ "dira, beraz zehaztu zure helbide elektronikoa mesedez\n"
+#~ "zurekin harremanetan jarri ahal izateko informazio gehiago\n"
+#~ "behar bada edo bertsio konpondu bat erabilgarri badago."
+
+#~ msgid "To"
+#~ msgstr "Nori"
+
+#~ msgid "To:"
+#~ msgstr "Nori:"
+
+#~ msgid "Version"
+#~ msgstr "Bertsioa"
+
+#~ msgid "Version installed"
+#~ msgstr "Instalatutako bertsioa"
+
+#~ msgid "desc"
+#~ msgstr "desc"
+
+#~ msgid "download"
+#~ msgstr "deskargatu"
+
+#~ msgid "email info"
+#~ msgstr "helbide elektronikoa"
+
+#~ msgid "finished"
+#~ msgstr "amaituta"
+
+#~ msgid "gdb"
+#~ msgstr "gdb"
+
+#~ msgid "intro"
+#~ msgstr "intro"
+
+#~ msgid "product"
+#~ msgstr "produktua"
+
+#~ msgid "system"
+#~ msgstr "sistema"
+
+#~ msgid "Updating Product Listing"
+#~ msgstr "Produktuen zerrenda eguneratzen"
+
+#~ msgid "Submitting the Report"
+#~ msgstr "Berri-ematea bidaltzen"
+
+#~ msgid ""
+#~ "'%s' doesn't seem to exist.\n"
+#~ "\n"
+#~ "You won't be able to actually submit a bug report, but you will\n"
+#~ "be able to save it to a file.\n"
+#~ "\n"
+#~ "Specify a new location for sendmail?"
+#~ msgstr ""
+#~ "ez dirudi '%s' dagoenik.\n"
+#~ "\n"
+#~ "Ezin izango duzu programa-erroreen berri-ematea bidali, baina \n"
+#~ "fitxategi batean gorde ahal izango duzu.\n"
+#~ "\n"
+#~ "Sendmail-entzat kokaleku berri bat zehaztu?"
+
+#~ msgid "'%s' does not look like a text file."
+#~ msgstr "ez dirudi '%s' testu-fitxategi denik."
+
+#~ msgid "Unable to open pipe"
+#~ msgstr "Ezin da kanalizaziorik ireki"
+
+#~ msgid "Could not run '%s'."
+#~ msgstr "Ezin izan da '%s' exekutatu."
+
+#~ msgid "Error on read..."
+#~ msgstr "Errorea irakurtzean..."
