@@ -1,14 +1,14 @@
 # Copyright (C) 2002 Free Software Foundation.
 # This file is distributed under the same license as the bug-buddy package.
-# pclouds <pclouds@gmx.n�et>, 2002.
+# pclouds <pclouds@gmx.net>, 2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2002-06-19 15:19-0400\n"
+"Project-Id-Version: bug-buddy for Gnome 2.x\n"
+"POT-Creation-Date: 2002-07-03 09:15+0200\n"
 "PO-Revision-Date: 2002-06-08 02:52+0700\n"
 "Last-Translator: pclouds <pclouds@gmx.net>\n"
-"Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
+"Language-Team: Gnome-Vi <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -169,29 +169,27 @@ msgid "Show Debugging Options"
 msgstr "Hiện tùy chọn debug"
 
 #: src/bug-buddy.c:556
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME is deprecated.\n"
-"Please use the --appname command lineargument instead."
+"$GNOME_CRASHED_APPNAME bị phản đối.\n"
+"Hãy dùng đối số dòng lệnh --appname để thay thế."
 
 #: src/bug-buddy.c:566
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID is deprecated.\n"
-"Please use the --pid command lineargument instead."
+"$GNOME_CRASHED_PID bị phản đối.\n"
+"Hãy dùng đối số dòng lệnh  --pid để thay thế."
 
 #: src/bug-buddy.c:582
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
-"Chào mừng đến Bug Buddy, một công cụ giúp báo cáo lỗi cho GNOME.\n"
+"Chào mừng Bug Buddy, một công cụ giúp báo cáo lỗi cho GNOME.\n"
 "Nó sẽ giúp bạn từng bước để gửi một báo cáo lỗi."
 
 #: src/bug-buddy.c:585
@@ -252,9 +250,8 @@ msgid "Advanced"
 msgstr "Nân cao"
 
 #: src/bug-buddy.glade.h:4
-#, fuzzy
 msgid "Assbarn Phenomenon"
-msgstr "Assbarn Phenomenon"
+msgstr "Hiện Tượng Assbarn"
 
 #: src/bug-buddy.glade.h:5
 msgid "Binary file:"
@@ -406,9 +403,8 @@ msgid "Sendmail Settings"
 msgstr "Thiết lập sendmail"
 
 #: src/bug-buddy.glade.h:43
-#, fuzzy
 msgid "Severity"
-msgstr "Severity"
+msgstr "Sự Trầm Trọng"
 
 #: src/bug-buddy.glade.h:44
 msgid "Show _Debugging Details"
@@ -825,3 +821,4 @@ msgstr "Bạn có chắc muốn hủy bỏ bản báo cáo này?"
 
 #~ msgid "Username"
 #~ msgstr "Tên người dùng"
+
