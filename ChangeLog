@@ -1,3 +1,7 @@
+2000-04-05  Dan Damian  <dand@dnttm.ro>
+
+	* configure.in: Added "ro" to ALL_LINGUAS.
+
 2000-03-29  Karl EICHWALDER  <ke@suse.de>
 
 	* src/bug-buddy.desktop: Add de.
