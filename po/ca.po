@@ -1,26 +1,26 @@
-# SOME DESCRIPTIVE TITLE.
+# bug-buddy translation to Catalan.
 # Copyright (C) 2000 Free Software Foundation, Inc.
-# Softcatala <linux@softcatala.org>, 2000
+# Softcatalà <info@softcatala.org>, 2000.
 #
+# Traducció per Softcatalà <info@softcatala.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-04-18 20:38+0200\n"
-"Last-Translator: Softcatala <linux@softcatala.org>\n"
-"Language-Team: Catalan <linux@softcatala.org>\n"
+"Project-Id-Version: bug-buddy VERSION\n"
+"POT-Creation-Date: 2000-06-27 15:55+0200\n"
+"PO-Revision-Date: 2000-06-25 14:00+0200\n"
+"Last-Translator: Quico Llach <quico@softcatala.org>\n"
+"Language-Team: Catalan <info@softcatala.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Descripció"
+msgstr "Distribució"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -36,11 +36,11 @@ msgstr "normal"
 
 #: src/bug-buddy.c:77
 msgid "wishlist"
-msgstr "llista de desitjos"
+msgstr "llista de desigs"
 
 #: src/bug-buddy.c:82
 msgid "software bug"
-msgstr "error de programa"
+msgstr "error de programari"
 
 #: src/bug-buddy.c:83
 msgid "documentation bug"
@@ -48,72 +48,65 @@ msgstr "error de documentació"
 
 #: src/bug-buddy.c:84
 msgid "change request"
-msgstr "canvieu petició"
+msgstr "petició de canvi"
 
 #: src/bug-buddy.c:85
 msgid "support"
 msgstr "suport"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Submit bug report"
-msgstr "Enviant l'informe"
+msgstr "Envia l'informe d'errors"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Only send report to yourself"
-msgstr "Enviar informe només a la vostra adreça electrònica"
+msgstr "Només se us enviarà l'error a vós mateix"
 
 #: src/bug-buddy.c:92
-#, fuzzy
 msgid "Save report to file"
-msgstr "Desar l'informe en un fitxer"
+msgstr "Desa l'informe en un fitxer"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "Reunir informació per a la solució d'errors"
+msgstr ""
+"Reuneix la informació de depuració d'una aplicació que no ha funcionat "
+"correctament"
 
 #: src/bug-buddy.c:98
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "Reunir informació per a la solució d'errors"
+msgstr "Reuneix la informació de depuració d'un fitxer de nucli"
 
 #: src/bug-buddy.c:99
 msgid "Skip this step"
-msgstr "Saltar aquest pas"
+msgstr "omet aquest pas"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Create a new bug report"
-msgstr "Arxivar un nou infome d'errors"
+msgstr "Crea un nou infome d'errors"
 
 #: src/bug-buddy.c:105
-#, fuzzy
 msgid "Add more information to existing report"
-msgstr "Afegir informació a un informe d'errors ja existent"
+msgstr "Afegeix més informació a un informe ja existent"
 
 #: src/bug-buddy.c:114
 msgid "Name of contact"
-msgstr ""
+msgstr "Nom del contacte"
 
 #: src/bug-buddy.c:114
 msgid "NAME"
 msgstr "NOM"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Email address of contact"
-msgstr "Adreça electrònica"
+msgstr "Adreça electrònica del contacte"
 
 #: src/bug-buddy.c:115
 msgid "EMAIL"
-msgstr "EMAIL"
+msgstr "ADREÇA ELECTRÒNICA"
 
 #: src/bug-buddy.c:116
-#, fuzzy
 msgid "Package containing the program"
-msgstr "Paquet del programa"
+msgstr "Paquet que conté el programa"
 
 #: src/bug-buddy.c:116
 msgid "PACKAGE"
@@ -128,27 +121,24 @@ msgid "VERSION"
 msgstr "VERSIÓ"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "File name of crashed program"
-msgstr "Paquet del programa"
+msgstr "Nom de fitxer del programa que no ha funcionat correctament"
 
 #: src/bug-buddy.c:118 src/bug-buddy.c:120
 msgid "FILE"
 msgstr "FITXER"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "PID of crashed program"
-msgstr "PDI de l'aplicació en mal estat"
+msgstr "PID del programa que no ha funcionat correctament"
 
 #: src/bug-buddy.c:119
 msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:120
-#, fuzzy
 msgid "Core file from program"
-msgstr "fitxer principal de l'aplicació"
+msgstr "Fitxer de nucli del programa"
 
 #: src/bug-buddy.c:335
 msgid ""
@@ -160,36 +150,37 @@ msgstr ""
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "El fitxer especificat no existeix."
 
 #: src/bug-buddy.c:383
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "El fitxer és del tipus: %s"
 
 #: src/bug-buddy.c:386
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "'%s' no sembla un fitxer de text."
 
 #: src/bug-buddy.c:400
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
+"Heu d'incloure un assumpte i una descripció\n"
+"en el vostre informe d'errors."
 
 #: src/bug-buddy.c:443
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb no ha acabat d'obtenir la informació de comprovació d'errades.\n"
-"Abandonar el procés gdb (no s'hauran completat els indicis de la pila)?"
+"El gdb no ha acabat d'obtenir la informació de depuració.\n"
+"Voleu interrompre el procés gdb? (el seguiment de la pila serà incomplet)"
 
 #: src/bug-buddy.c:451 src/gdb-buddy.c:81
 msgid "gdb has already exited"
-msgstr "ja s'ha abandonat gdb"
+msgstr "El gdb ja s'ha abandonat"
 
 #: src/bug-buddy.c:494
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -197,71 +188,68 @@ msgstr "Copyright (C) 1999 Jacob Berkman"
 
 #: src/bug-buddy.c:496
 msgid "The GNOME graphical bug reporting tool"
-msgstr "L'eina gràfica GNOME que informa de les errades"
+msgstr "L'eina gràfica del GNOME per informar d'errors"
 
 #: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
-msgstr "La poc convincent pàgina web sobre bug-buddy"
+msgstr "La poc convincent pàgina web del bug-buddy"
 
 #: src/bug-buddy.c:591
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
 "submit a bug report, but you will be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s' aparentment inexistent. No podreu enviar\n"
+"Sembla que '%s' no existeix. No podreu enviar realment\n"
 "un informe d'errors, però podreu desar-lo en un fitxer.\n"
 "\n"
-"Especificar una nova adreça per enviar correu?"
+"Voleu especificar una nova ubicació per a \"sendmail\"?"
 
 #: src/bug-buddy.c:627
 msgid "Please enter your name and email address"
 msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
 
 #: src/bug-buddy.c:646
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"No s'ha pogut processar el fitxer principal amb gdb:\n"
-"'%s'"
+msgstr "No es pot obrir el fitxer: '%s'"
 
 #: src/bug-buddy.c:659
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "ara s'executarà '%s'"
 
 #: src/bug-buddy.c:663
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "No es pot iniciar el programa de correu: '%s'"
 
 #: src/bug-buddy.c:691
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
 #: src/bug-buddy.c:694
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
-msgstr ""
+msgstr "S'ha enviat el vostre informe d'errors a <%s>"
 
 #: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "Heu d'especificar una adreça electrònic destinatària"
 
 #: src/bug-buddy.c:830
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Enviant l'informe"
+msgstr "Voleu enviar ara aquest informe d'errors?"
 
 #: src/bug-buddy.c:840
 msgid "Please choose a file to save to."
-msgstr "Si us plau, seleccioneu un fitxer on volgueu desar-lo"
+msgstr "Si us plau, seleccioneu un fitxer per desar-lo"
 
 #: src/bug-buddy.c:847
 #, c-format
@@ -270,7 +258,7 @@ msgid ""
 "Overwrite this file?"
 msgstr ""
 "El fitxer '%s' ja existeix.\n"
-"Sobrescriure aquest fitxer?"
+"Voleu sobrescriure aquest fitxer?"
 
 #: src/bug-buddy.c:899
 msgid "About"
@@ -295,24 +283,23 @@ msgid ""
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "No s'ha pogut obrir '%s'.\n"
-"Si us plau, asegureu-vos que bud-buddy és correctament instal.lat."
+"Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
 #: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME no és permés.\n"
-"Si us plau, substituiu aquest comandament per --appname."
+"No s'accepta $GNOME_CRASHED_APPNAME.\n"
+"Si us plau, substituïu-ho per l'ordre -appname en la línia d'ordres."
 
 #: src/bug-buddy.c:1067
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID no és permés.\n"
-" Si us plau, substitiu aquesta línia de comandament per --pid."
+"No s'accepta $GNOME_CRASHED_PID.\n"
+"Si us plau, substituïu-ho per l'ordre -pid en la línia d'ordres."
 
 #: src/bug-buddy.c:1199
 #, c-format
@@ -321,12 +308,12 @@ msgid ""
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "No s'ha pogut trobar '%s'.\n"
-"Si us plau, assegureu-vos que bug-buddy és correctament instal.lat."
+"Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "obtenint indicis de la pila..."
+msgstr "s'està obtenint el seguiment de la pila... (%d)"
 
 #: src/gdb-buddy.c:115
 #, c-format
@@ -334,7 +321,7 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"No s'ha pogut processar el fitxer principal amb gdb:\n"
+"No s'ha pogut processar el fitxer de nucli amb el gdb:\n"
 "'%s'"
 
 #: src/gdb-buddy.c:141
@@ -343,12 +330,12 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"No s'ha pogut determinar quin és el binari creat\n"
+"No s'ha pogut determinar quin és el binari que va crear\n"
 "'%s'"
 
 #: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
-msgstr "Error de lectura...abandonant"
+msgstr "Error de lectura...s'està avortant"
 
 #: src/gdb-buddy.c:204
 msgid ""
@@ -356,11 +343,11 @@ msgid ""
 "Please try reinstalling bug-buddy."
 msgstr ""
 "No s'ha pogut trobar el fitxer gdb-cmd.\n"
-"Si su plau, proveu a instal.lar bug-buddy de nou."
+"Si us plau, intenteu tornar a instal·lar el bug-buddy."
 
 #: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
-msgstr "Error a la bifurcació()."
+msgstr "Error a fork()."
 
 #.
 #. * Translatable strings file generated by Glade.
@@ -373,7 +360,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "Benvingut al meravellós món del bug-buddy"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -383,6 +370,10 @@ msgid ""
 "email address so that the bug report can be\n"
 "submitted."
 msgstr ""
+"El bug-buddy us guiarà al llarg del procés\n"
+"d'enviar un informe d'errors. Si aquesta és la primera vegada\n"
+"que utilitzeu el bug-buddy, se us preguntarà la vostra\n"
+"adreça electrònica per poder enviar l'informe d'errors."
 
 #: src/glade-strings.c:14
 msgid "Contact Information"
@@ -390,7 +381,7 @@ msgstr "Dades de contacte"
 
 #: src/glade-strings.c:15
 msgid "Choose which sendmail to use"
-msgstr "Escolliu el procediment de tramesa de correu"
+msgstr "Escolliu el sendmail per utilitzar"
 
 #: src/glade-strings.c:16
 msgid "Email Address"
@@ -398,7 +389,7 @@ msgstr "Adreça electrònica"
 
 #: src/glade-strings.c:17
 msgid "Full path of sendmail"
-msgstr "Tramesa de correu de camí complet"
+msgstr "Camí complet del sendmail "
 
 #: src/glade-strings.c:18
 msgid "Your Name"
@@ -410,21 +401,25 @@ msgid ""
 "submitting a bug report.  You can click the help\n"
 "button for a more in-depth explanation of the process."
 msgstr ""
+"El bug-buddy us guiarà al llarg del procés\n"
+"d'enviar un informe d'errors. Podeu fer clic\n"
+"al botó d'ajuda per a una explicació més detallada del procés."
 
 #: src/glade-strings.c:22
 msgid "Report Information"
-msgstr "Comunicar informació"
+msgstr "Comunica la informació"
 
 #: src/glade-strings.c:23
 msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"Seleccioneu el sistema de seguiment d'errors que voleu utilitzar i després\n"
+"ompliu la informació restant."
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
-msgstr "Sistema de seguiment d'errades"
+msgstr "Sistema de seguiment d'errors"
 
 #: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
@@ -447,6 +442,9 @@ msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"Si us plau, comproveu si el vostre error ja ha estat enviat i,\n"
+"si és així, utilitzeu \"Afegir més informació a un informe ja existent\" més "
+"amunt."
 
 #: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
@@ -462,24 +460,23 @@ msgstr ""
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
-msgstr "Títol curt per l'informe d'errors"
+msgstr "Assumpte breu per a l'informe d'errors"
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "Descripció completa de l'error"
+msgstr "Descripció completa de l'error, incloent com reproduir-lo"
 
 #: src/glade-strings.c:40
 msgid "Include a text file"
-msgstr "Inclure un fitxer de text"
+msgstr "Incloure un fitxer de text"
 
 #: src/glade-strings.c:41
 msgid "Debugging Information"
-msgstr "Informació sobre solució d'errors"
+msgstr "Informació de depuració"
 
 #: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
-msgstr "Seleccionar el binari de l'aplicació que ha fallat"
+msgstr "Seleccioneu el binari de l'aplicació que no ha funcionat correctament"
 
 #: src/glade-strings.c:43
 msgid "Binary"
@@ -491,15 +488,15 @@ msgstr "Identificació de procés"
 
 #: src/glade-strings.c:45
 msgid "Core file"
-msgstr "Fitxer principal"
+msgstr "Fitxer de nucli"
 
 #: src/glade-strings.c:46
 msgid "Select a core file"
-msgstr "Seleccionar un fitxer principal"
+msgstr "Seleccioneu un fitxer de nucli"
 
 #: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
-msgstr "Reunir informació per a la solució d'errors"
+msgstr "S'està reunint informació de depuració"
 
 #: src/glade-strings.c:48
 msgid ""
@@ -507,7 +504,7 @@ msgid ""
 "information is collected..."
 msgstr ""
 "Si us plau, espereu mentre es reuneix\n"
-"informació sobre la solució d'errors..."
+"la informació de depuració..."
 
 #: src/glade-strings.c:50
 msgid "System Configuration"
@@ -527,27 +524,27 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
-msgstr "Anar automàticament a la pàgina següent en acabar"
+msgstr "Vés automàticament a la pàgina següent en acabar"
 
 #: src/glade-strings.c:56
 msgid "Submitting the Report"
-msgstr "Enviant l'informe"
+msgstr "S'està enviant l'informe"
 
 #: src/glade-strings.c:57
 msgid "To"
-msgstr ""
+msgstr "A"
 
 #: src/glade-strings.c:58
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "Enviar-vos una còpia "
 
 #: src/glade-strings.c:59
 msgid "Save the report to..."
-msgstr "Desar l'informe a..."
+msgstr "Desa l'informe a..."
 
 #: src/glade-strings.c:60
 msgid "Content"
-msgstr ""
+msgstr "Contingut"
 
 #: src/glade-strings.c:61
 msgid "Summary"
@@ -559,42 +556,41 @@ msgstr "El GEGL vigila"
 
 #: src/util.c:60
 msgid "Unable to open pipe"
-msgstr ""
+msgstr "No es pot obrir el conducte"
 
 #: src/util.c:72
 #, c-format
 msgid "Could not run '%s'."
-msgstr ""
+msgstr "No s'ha pogut executar '%s'"
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Error de lectura...abandonant"
+msgstr "Error de lectura..."
 
 #~ msgid "Child process exited with status %d"
-#~ msgstr "S'ha abandonat el procés child amb estat %d"
+#~ msgstr "El procés fill ha acabat amb l'estat %d"
 
 #~ msgid "Contact's name"
 #~ msgstr "Nom del contacte"
 
 #~ msgid "Contact's email address"
-#~ msgstr "Adreça de correu electrònic del contacte"
+#~ msgstr "Adreça electrònica del contacte"
 
 #~ msgid "Crashed file name"
-#~ msgstr "Nom del fitxer en mal estat"
+#~ msgstr "Nom del fitxer que no ha funcionat correctament "
 
 #~ msgid ""
 #~ "Click \"Finish\" to exit bug-buddy.\n"
 #~ "No bug report will be submitted."
 #~ msgstr ""
-#~ "Feu clic \"Finish\" per sortir de bug-buddy.\n"
+#~ "Feu clic a \"Finalitza\" per sortir del bug-buddy.\n"
 #~ "No s'enviarà cap informe d'errors."
 
 #~ msgid ""
 #~ "You are about to save a bug report in '%s'.\n"
 #~ "This can later be used to report a bug in '%s'."
 #~ msgstr ""
-#~ "Sou a punt de desar un informe d'errors a '%s'.\n"
+#~ "Esteu a punt de desar un informe d'errors a '%s'.\n"
 #~ "El podreu utilitzar més tard per informar d'un error a '%s'."
 
 #~ msgid ""
@@ -607,26 +603,25 @@ msgstr "Error de lectura...abandonant"
 #~ "\n"
 #~ "Clicking on 'Finish' will submit the bug report."
 #~ msgstr ""
-#~ "Sou a punt d'informar d'un error a '%s'.\n"
+#~ "Esteu a punt d'informar d'un error a '%s'.\n"
 #~ "\n"
 #~ "S'enviarà per correu electrònic:\n"
 #~ "A: %s\n"
 #~ "De: %s <%s>\n"
-#~ "Tema: %s\n"
+#~ "Assumpte: %s\n"
 #~ "\n"
-#~ "Feu clic a 'Acabar' i enviareu l'informe d'errors."
+#~ "Feu clic a 'Acabar' per enviar l'informe d'errors."
 
 #~ msgid "all will be revealed."
-#~ msgstr "es posarà tot de manifest"
+#~ msgstr "tot sortirà a la llum. "
 
 #~ msgid ""
 #~ "Enter your name and email address, so you will be notified when the\n"
 #~ "bug is resolved, or for developers to request more information from you."
 #~ msgstr ""
-#~ "Introduiu el vostre nom i adreça electrònica, de forma que podeu rebre una "
-#~ "notificació\n"
-#~ "quan s'hagin resolt els errors, o perquè els desenvolupadors us demanin més "
-#~ "informació."
+#~ "Introduïu el vostre nom i adreça electrònica per rebre una notificació\n"
+#~ "quan l'error s'hagi solucionat, o a fi que els desenvolupadors us puguin\n"
+#~ "demanar més informació."
 
 #~ msgid ""
 #~ "\n"
@@ -642,19 +637,19 @@ msgstr "Error de lectura...abandonant"
 #~ msgstr "Més informació"
 
 #~ msgid "Detailed instructions on how to reproduce the bug"
-#~ msgstr "Instruccions pormenoritzades sobre com reproduir l'error"
+#~ msgstr "Instruccions detallades sobre com reproduir l'error"
 
 #~ msgid "How to collect debugging information"
-#~ msgstr "Com obtenir informació sobre la solució d'errors"
+#~ msgstr "Com reunir informació de depuració"
 
 #~ msgid "Attach to a crashed application"
 #~ msgstr "Afegir a una aplicació que ha fallat"
 
 #~ msgid "Read from a core file"
-#~ msgstr "Llegir a partir d'un fitxer principal"
+#~ msgstr "Llegir a partir d'un fitxer de nucli"
 
 #~ msgid "Submit bug report to bug tracking system"
-#~ msgstr "Enviar informe d'errors al sistema de seguiment d'errors"
+#~ msgstr "Envia l'informe d'errors al sistema de seguiment d'errors"
 
 #~ msgid "Submit to individual author"
-#~ msgstr "Enviar a autor individual"
+#~ msgstr "Enviar-lo a l'autor"
