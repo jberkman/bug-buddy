@@ -1,3 +1,8 @@
+2000-05-13  Karl Eichwalder  <ke@suse.de>
+
+	* src/bug-buddy.c (on_complete_page_prepare): Improve the looking
+	of the msg string; remove \t.
+
 2000-05-12  Andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* src/bug-buddy.desktop: Added Swedish translation.

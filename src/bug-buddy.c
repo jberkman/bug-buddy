@@ -679,7 +679,7 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 		s = g_strdup_printf (_("Your bug report was saved in '%s'"), file);
 	} else {
 		pclose (fp);
-		s = g_strdup_printf (_("Your bug report has been submitted to:\n\t<%s>"), to);
+		s = g_strdup_printf (_("Your bug report has been submitted to:\n\n        <%s>"), to);
 	}
 	g_free (to);
 
