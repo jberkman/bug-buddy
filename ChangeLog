@@ -1,3 +1,11 @@
+2002-04-16  jacob berkman  <jacob@ximian.com>
+
+	* src/bug-buddy.glade: fix packing of copy/save buttons (fixes bug
+	#78674)
+	
+	* src/gdb-cmd: do 'bt full' rather than 'bt' - suggested by havoc
+	(fixes bug #78675)
+
 2002-04-10  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.c (gify): if convert didn't work just strdup
