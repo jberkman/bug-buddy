@@ -1,18 +1,19 @@
+# Slovak translation of sk.po
 # bug-buddy sk.po
 # Copyright (C) 2000, 2001,2002 Free Software Foundation, Inc.
 # Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000,2001,2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2002-04-10 16:11+0200\n"
-"PO-Revision-Date: 2002-04-10 16:13+0200\n"
-"Last-Translator: Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>\n"
+"Project-Id-Version: sk\n"
+"POT-Creation-Date: 2002-05-11 14:59+0200\n"
+"PO-Revision-Date: 2002-05-11 15:00+0200\n"
+"Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0beta1\n"
 
 #: src/bug-buddy.c:55
 msgid "Submit bug report"
@@ -214,24 +215,24 @@ msgstr ""
 "Priateľ v núdzi nemohol používateľské rozhranie (%s).\n"
 "Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:616
 msgid "ID"
 msgstr "ID"
 
-#: src/bugzilla.c:625 src/bugzilla.c:660
+#: src/bugzilla.c:630 src/bugzilla.c:665
 msgid "Product"
 msgstr "Produkt"
 
-#: src/bugzilla.c:631 src/bugzilla.c:700
+#: src/bugzilla.c:636 src/bugzilla.c:705
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:637 src/bugzilla.c:678
-#: src/bugzilla.c:706
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "Popis"
 
-#: src/bugzilla.c:769
+#: src/bugzilla.c:774
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -240,7 +241,7 @@ msgstr ""
 "Priateľ v núdzi nemohol otvoriť '%s'.\n"
 "Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
 
-#: src/bugzilla.c:787
+#: src/bugzilla.c:792
 msgid "All"
 msgstr "Všetko"
 
@@ -702,11 +703,15 @@ msgstr "Vo vašej správe o chybe musíte uviesť podrobný predmet."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť podrobný popis."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:493
 msgid "Submit this bug report now?"
 msgstr "Odoslať správu o chybe?"
 
-#: src/united-states-of-bug-buddy.c:508
+#: src/united-states-of-bug-buddy.c:496
+msgid "_Submit"
+msgstr "_Poslať"
+
+#: src/united-states-of-bug-buddy.c:517
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -715,12 +720,12 @@ msgstr ""
 "Nepodarilo sa otvoriť súbor: '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:522
+#: src/united-states-of-bug-buddy.c:531
 #, c-format
 msgid "about to run '%s'"
 msgstr "spúšťam '%s'"
 
-#: src/united-states-of-bug-buddy.c:530
+#: src/united-states-of-bug-buddy.c:539
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -729,12 +734,12 @@ msgstr ""
 "Nepodarilo sa spustiť poštový program: '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:568
+#: src/united-states-of-bug-buddy.c:577
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Vaša správa o chybe bola uložená do '%s'"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:580
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -749,7 +754,7 @@ msgstr ""
 "\n"
 "Vďaka!"
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:635
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
@@ -757,19 +762,19 @@ msgstr ""
 "Pretože Priateľ v núdzi nepozná váš produkt, o ktorom chcete poslať správu o "
 "chybe, musíte zadať adresu, kam správu poslať, ručne."
 
-#: src/united-states-of-bug-buddy.c:647
+#: src/united-states-of-bug-buddy.c:656
 msgid "You must specify a product for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť produkt."
 
-#: src/united-states-of-bug-buddy.c:670
+#: src/united-states-of-bug-buddy.c:679
 msgid "You must specify a component for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť komponent."
 
-#: src/united-states-of-bug-buddy.c:684
+#: src/united-states-of-bug-buddy.c:693
 msgid "You must specify a version for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť verziu."
 
-#: src/united-states-of-bug-buddy.c:765
+#: src/united-states-of-bug-buddy.c:774
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -779,7 +784,7 @@ msgstr ""
 "\n"
 "Ďakujeme, že posielate túto správu."
 
-#: src/united-states-of-bug-buddy.c:792
+#: src/united-states-of-bug-buddy.c:801
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
