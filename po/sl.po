@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-06-19 15:19-0400\n"
+"POT-Creation-Date: 2002-06-07 21:41+0200\n"
 "PO-Revision-Date: 2002-06-07 21:46+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -212,8 +212,8 @@ msgstr ""
 "\n"
 "\n"
 "Prosim, počakajte nekaj trenutkov medtem, ko Bug Buddy pridobiva "
-"razhroščevalne podatke od programov. To bo omogočilo Bug Buddyu narediti "
-"bolj uporabno poročilo o hrošču."
+"razhroščevalne podatke od programov. To bo omogočilo Bug Buddyu narediti bolj "
+"uporabno poročilo o hrošču."
 
 #: src/bug-buddy.c:727
 #, c-format
@@ -229,13 +229,119 @@ msgstr ""
 "Nisem mogel odpreti datoteke z uporabiškim vmesnikom (%s).\n"
 "Preverite, ali je bil Bug Buddy pravilno nameščen."
 
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Orodje za poročanje o hroščih"
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
 
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Poročaj o hrošču v GNOME"
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Produkt"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Komponenta"
+
+#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
+#: src/bug-buddy.glade.h:20
+msgid "Description"
+msgstr "Opis"
+
+#: src/bugzilla.c:774
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy ni mogel odpreti '%s'.\n"
+"Preverite, ali je bil Bug Buddy pravilno nameščen."
+"\n"
+"Bug Buddy se bo sedaj zaprl."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Vse"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug buddy ni našel podatkov o tem kam poslati poročila o hroščih.\n"
+"\n"
+"Preverite, ali je bil Bug Buddy pravilno nameščen.\n"
+"\n"
+"Bug Buddy se bo zdaj zaprl."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolucija"
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "URI, ki naj se pokaže, ko je kliknjen."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Obiskan"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Če je bil URI že obiskan."
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Pridobivam sled sklada... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Ne morem obdelati core datoteke z gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDM ni mogel ugotoviti kater program je ustvaril\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Napaka pri branju... razveljavljam"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDBja ni mogoče najti na sistemu.\n"
+"Podatkov o razhroščevanju ni mogoče pridobiti."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Nisem našel datoteke gdb-cmd.\n"
+"Poskusite znova namestiti Bug Buddy-a."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "Ob poganjanju programa gdb se je zgodila napaka."
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -281,8 +387,8 @@ msgid ""
 msgstr ""
 "Bug Buddy uporablja e-pošto za oddajo poročil o hroščih.\n"
 "Prosim, izberite kako želite, da Bug Buddy pošlje e-pošto.\n"
-"Če boste uporabili privzet poštni program GNOME, bo ta nastavitev enaka kot "
-"v drugih programih GNOME."
+"Če boste uporabili privzet poštni program GNOME, bo ta nastavitev enaka kot v "
+"drugih programih GNOME."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
@@ -307,11 +413,6 @@ msgstr "Poljuben poštni program"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Razhroščevanje"
-
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
-msgid "Description"
-msgstr "Opis"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -511,115 +612,6 @@ msgstr "produkt"
 msgid "sendmail"
 msgstr "sendmail"
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
-
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Produkt"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Komponenta"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy ni mogel odpreti '%s'.\n"
-"Preverite, ali je bil Bug Buddy pravilno nameščen.\n"
-"Bug Buddy se bo sedaj zaprl."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Vse"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug buddy ni našel podatkov o tem kam poslati poročila o hroščih.\n"
-"\n"
-"Preverite, ali je bil Bug Buddy pravilno nameščen.\n"
-"\n"
-"Bug Buddy se bo zdaj zaprl."
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "URI, ki naj se pokaže, ko je kliknjen."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Obiskan"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "Če je bil URI že obiskan."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolucija"
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Pridobivam sled sklada... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Ne morem obdelati core datoteke z gdb:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDM ni mogel ugotoviti kater program je ustvaril\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Napaka pri branju... razveljavljam"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"GDBja ni mogoče najti na sistemu.\n"
-"Podatkov o razhroščevanju ni mogoče pridobiti."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Nisem našel datoteke gdb-cmd.\n"
-"Poskusite znova namestiti Bug Buddy-a."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "Ob poganjanju programa gdb se je zgodila napaka."
-
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Dobrodošli v Bug Buddy-a"
@@ -800,6 +792,14 @@ msgid ""
 msgstr ""
 "Ste prepričani, da želite \n"
 "preklicati poročilo o hrošču?"
+
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Orodje za poročanje o hroščih"
+
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Poročaj o hrošču v GNOME"
 
 #~ msgid "Go"
 #~ msgstr "Pojdi"
