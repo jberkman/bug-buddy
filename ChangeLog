@@ -1,4 +1,13 @@
+1999-11-11  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.c (on_action_page_next): ask the
+	user if they really want to override a file if
+	it exists  (based on a patch from Ali Abdin 
+	<ALIABDIN@aucegypt.edu>)
+
 1999-11-10  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/packages.c (packages): add crescendo
 
 	* configure.in: 
 	* bug-buddy.spec.in: may as well have one

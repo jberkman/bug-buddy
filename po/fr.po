@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-06 17:08-0500\n"
+"POT-Creation-Date: 1999-11-10 22:58-0500\n"
 "PO-Revision-Date: 1999-10-30 00:33+02:00\n"
 "Last-Translator: Hervé Dréau <hdreau@cybercable.fr>\n"
 "Language-Team:GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/gdb-buddy.c:41
+#: src/gdb-buddy.c:42
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -24,6 +24,11 @@ msgstr ""
 
 #: src/gdb-buddy.c:66
 #, c-format
+msgid "Child process exited with status %d\n"
+msgstr ""
+
+#: src/gdb-buddy.c:68
+#, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
@@ -31,7 +36,12 @@ msgstr ""
 "Impossible de déterminer quel éxécutable à créer\n"
 "'%s'"
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:90
+#, c-format
+msgid "subprocess exited with status %d\n"
+msgstr ""
+
+#: src/gdb-buddy.c:118
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -39,143 +49,159 @@ msgstr ""
 "Impossible de trouver le fichier gdb-cmd.\n"
 "Essayer de réinstaller bug-buddy."
 
-#: src/gdb-buddy.c:130
+#: src/gdb-buddy.c:132
 #, fuzzy, c-format
 msgid "Unable to start '%s'.\n"
 msgstr "Impossible de démarrer le programme de méssagerie: '%s'"
-
-#: src/bug-buddy.c:53
-msgid "normal"
-msgstr "normal"
 
 #: src/bug-buddy.c:54
 msgid "critical"
 msgstr "critique"
 
 #: src/bug-buddy.c:55
-msgid "severe"
-msgstr "sévère"
+msgid "grave"
+msgstr ""
 
 #: src/bug-buddy.c:56
+msgid "normal"
+msgstr "normal"
+
+#: src/bug-buddy.c:57
 msgid "wishlist"
 msgstr "souhait"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:61
+msgid "software bug"
+msgstr ""
+
+#: src/bug-buddy.c:62
+msgid "documentaion bug"
+msgstr ""
+
+#: src/bug-buddy.c:63
+msgid "change request"
+msgstr ""
+
+#: src/bug-buddy.c:64
+msgid "support"
+msgstr ""
+
+#: src/bug-buddy.c:87
 msgid "Operating System"
 msgstr "Système d'exploitation"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:88
 msgid "Distribution"
 msgstr "Distribution"
 
-#: src/bug-buddy.c:86
+#: src/bug-buddy.c:94
 #, fuzzy
 msgid "Distribution version"
 msgstr "Distribution"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:100
 msgid "C library"
 msgstr ""
 
-#: src/bug-buddy.c:93
+#: src/bug-buddy.c:101
 #, fuzzy
 msgid "C Compiler"
 msgstr "Compilateur"
 
-#: src/bug-buddy.c:94
+#: src/bug-buddy.c:102
 msgid "glib"
 msgstr "glib"
 
-#: src/bug-buddy.c:95
+#: src/bug-buddy.c:103
 msgid "GTK+"
 msgstr ""
 
-#: src/bug-buddy.c:96
+#: src/bug-buddy.c:104
 msgid "ORBit"
 msgstr "ORBit"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:105
 msgid "gnome-libs"
 msgstr "gnome-libs"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:106
 msgid "gnome-core"
 msgstr "gnome-core"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:115
 msgid "Contact's name"
 msgstr "Nom"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:115
 msgid "NAME"
 msgstr "NOM"
 
-#: src/bug-buddy.c:106
+#: src/bug-buddy.c:117
 msgid "Contact's email address"
 msgstr "Adresse électronique"
 
-#: src/bug-buddy.c:106
+#: src/bug-buddy.c:117
 msgid "EMAIL"
 msgstr "ADDRESSE ELECTRONIQUE"
 
-#: src/bug-buddy.c:108
+#: src/bug-buddy.c:119
 msgid "Package of the program"
 msgstr "Package du programme"
 
-#: src/bug-buddy.c:108
+#: src/bug-buddy.c:119
 msgid "PACKAGE"
 msgstr "\"PACKAGE"
 
-#: src/bug-buddy.c:110
+#: src/bug-buddy.c:121
 msgid "Version of the package"
 msgstr "Version du package"
 
-#: src/bug-buddy.c:110
+#: src/bug-buddy.c:121
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:112
+#: src/bug-buddy.c:123
 msgid "Crashed file name"
 msgstr "Nom du fichier planté"
 
-#: src/bug-buddy.c:112 src/bug-buddy.c:116
+#: src/bug-buddy.c:123 src/bug-buddy.c:127
 msgid "FILE"
 msgstr "FICHIER"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:125
 msgid "PID of crashed app"
 msgstr "PID de l'application qui a planté"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:125
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:127
 msgid "core file from app"
 msgstr "fichier core de l'application"
 
-#: src/bug-buddy.c:262
+#: src/bug-buddy.c:273
 msgid "obtaining stack trace..."
 msgstr "obtention de l'état de la pile ..."
 
-#: src/bug-buddy.c:354
+#: src/bug-buddy.c:365
 msgid "Please enter your name and email address"
 msgstr ""
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:394
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
 msgstr ""
 
-#: src/bug-buddy.c:403
+#: src/bug-buddy.c:414
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
 "This can later be used to report a bug in '%s'."
 msgstr ""
 
-#: src/bug-buddy.c:408
+#: src/bug-buddy.c:419
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -188,14 +214,14 @@ msgid ""
 "Clicking on 'Finish' will submit the bug report."
 msgstr ""
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:455
 #, fuzzy, c-format
 msgid ""
 "Unable to start mail program:\n"
 "'%s'"
 msgstr "Impossible de démarrer le programme de méssagerie: '%s'"
 
-#: src/bug-buddy.c:456
+#: src/bug-buddy.c:468
 #, fuzzy, c-format
 msgid ""
 "Unable to open file:\n"
@@ -204,33 +230,34 @@ msgstr ""
 "Impossible de procéder à l'examen du fichier core avec gdb :\n"
 "'%s' "
 
-#: src/bug-buddy.c:592
+#: src/bug-buddy.c:608
 msgid "Please choose a file to save to."
 msgstr ""
 
-#: src/bug-buddy.c:605
+#: src/bug-buddy.c:621
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Impossible d'éxécuter le commande '%s'"
 
-#: src/bug-buddy.c:610
+#: src/bug-buddy.c:626
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Erreur en lisant l'entrée de '%s'"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:854
 msgid "Could not find a mail program.\n"
 msgstr "Imposible de trouver un prgramme de messagerie.\n"
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:863
+#, fuzzy, c-format
 msgid ""
-"Could not find bug-buddy.glade file.\n"
+"Could not find our glade file '%s'\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "Impossible de trouver le fichier bug-budd.glade\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:875
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "Le fichier XML '%s' ne peut pas être chargé"
@@ -336,30 +363,38 @@ msgstr ""
 "du bug que vous voulez reporter "
 
 #: src/glade-strings.c:31
-msgid "Nature of the Bug"
+msgid "Bug class"
 msgstr ""
 
 #: src/glade-strings.c:32
+msgid "(descriptions)"
+msgstr ""
+
+#: src/glade-strings.c:33
+msgid "Nature of the Bug"
+msgstr ""
+
+#: src/glade-strings.c:34
 msgid "What type of bug are you reporting?"
 msgstr "Quel type de bug voulez vous reporter ?"
 
-#: src/glade-strings.c:33
+#: src/glade-strings.c:35
 msgid "Application crash with crash dialog"
 msgstr "L'application a planté avec un dialogue d'erreur"
 
-#: src/glade-strings.c:34
+#: src/glade-strings.c:36
 msgid "Application crash with core file"
 msgstr "L'application a planté en générant un core"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:37
 msgid "No crash"
 msgstr "Pas de plantage"
 
-#: src/glade-strings.c:36
+#: src/glade-strings.c:38
 msgid "Crashed Application"
 msgstr ""
 
-#: src/glade-strings.c:37
+#: src/glade-strings.c:39
 #, fuzzy
 msgid ""
 "Please enter the filename and pid of\n"
@@ -368,74 +403,80 @@ msgstr ""
 "Entrez le nom et le PID de \n"
 "l'application qui a planté"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:41
 msgid "File"
 msgstr "Fichier"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:42
 msgid "Process ID"
 msgstr "Numéro de processus (PID)"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:43
 #, fuzzy
 msgid "Application Core Dump"
 msgstr "L'application a planté en générant un core"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:44
 msgid "Enter the filename of the core dump"
 msgstr "Etrez le nom du fichier core"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:45
 msgid "Debugging Information"
 msgstr ""
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:46
 msgid "Please wait while bug-buddy collects debugging info..."
 msgstr ""
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:47
 msgid "Extra Information"
 msgstr ""
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:48
+#, fuzzy
+msgid "Full description of the bug:"
+msgstr ""
+"Description courte \n"
+"du problème"
+
+#: src/glade-strings.c:49
 msgid "How to repeat the bug:"
 msgstr ""
 
-#: src/glade-strings.c:47
-msgid "Extra information (patches, special configuration, etc)"
-msgstr ""
-
-#: src/glade-strings.c:48
+#: src/glade-strings.c:50
 msgid "Action"
 msgstr ""
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:51
 msgid "Choose the action you wish to take"
 msgstr "Choisissez l'action que vous voulez réaliser"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:52
 msgid "Submit bug report"
 msgstr "Soumettre le rapport de bug"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:53
 msgid "Send report to your email address *only*"
 msgstr "Seulement  envoyer le rapport de bug a votre addresse "
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:54
 msgid "Do not send bug report anywhere"
 msgstr "Ne pas envoyer de rapport de bug du tout"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:55
 msgid "Save the report to a file"
 msgstr ""
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:56
 msgid "Summary"
 msgstr ""
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:57
 msgid "The GEGL is watching."
 msgstr ""
+
+#~ msgid "severe"
+#~ msgstr "sévère"
 
 #~ msgid "libc version"
 #~ msgstr "libc version"

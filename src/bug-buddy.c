@@ -505,7 +505,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	fprintf (fp, 
 		 "Version: %s\n\n"
 		 ">Synopsis: %s\n"
-		 ">Class: %s\n", bug_class[druid_data.bug_class][1], s);
+		 ">Class: %s\n", s, subject, bug_class[druid_data.bug_class][1]);
 
 	for (data  = list_data; data->label; data++) {
 		s = NULL;
@@ -591,8 +591,9 @@ on_file_radio_toggled (GtkWidget *radio, gpointer data)
 gboolean
 on_action_page_next (GtkWidget *page, GtkWidget *druid)
 {
-	GtkWidget *entry;
-	char *s;
+	GtkWidget *entry, *d;
+	char *s, *title;
+	int res;
 
 	if (druid_data.submit_type != SUBMIT_FILE)
 		return FALSE;
@@ -602,11 +603,26 @@ on_action_page_next (GtkWidget *page, GtkWidget *druid)
 	
 	s = gtk_entry_get_text (GTK_ENTRY (entry));
 
-	if (s && strlen (s))
-		return FALSE;
+	if (!(s && strlen (s))) {
+		gnome_error_dialog (_("Please choose a file to save to."));
+		return TRUE;
+	}
 
-	gnome_error_dialog (_("Please choose a file to save to."));
-	return TRUE;
+	if (!g_file_exists (s))
+		return FALSE;
+		
+	title = g_strdup_printf (_("The file '%s' already exists.\n"
+				   "Overwrite this file?"), s);
+
+	g_message ("hrm: %s\n", title);
+
+	d = gnome_dialog_new (title, 
+			      GNOME_STOCK_BUTTON_YES,
+			      GNOME_STOCK_BUTTON_NO,
+			      NULL);
+	res = gnome_dialog_run_and_close (GNOME_DIALOG (d));
+	g_free (title);
+	return (res == GNOME_NO);
 }
 
 static gchar *
