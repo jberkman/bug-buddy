@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-02 16:18+0200\n"
 "PO-Revision-Date: 1999-12-30 21:06+01:00\n"
 "Last-Translator: Andreas Hyden <a.hyden@cyberpoint.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -14,13 +14,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Beskrivning"
+msgstr "Distribution"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -140,17 +139,17 @@ msgstr "Core-fil från programmet"
 
 #: src/bug-buddy.c:365
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Den angivna filen finns inte."
 
 #: src/bug-buddy.c:370
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Filen är av typ: %s"
 
 #: src/bug-buddy.c:373
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "\"%s\" verkar inte vara en textfil."
 
 #: src/bug-buddy.c:387
 msgid ""
@@ -528,19 +527,16 @@ msgid "The GEGL is watching."
 msgstr "GEGL:en ser oss."
 
 #: src/util.c:60
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "Kunde inte öppna filen: \"%s\""
+msgstr "Kunde inte öppna rör"
 
 #: src/util.c:72
-#, fuzzy, c-format
 msgid "Could not run '%s'."
-msgstr "håller på att köra \"%s\""
+msgstr "Kunde inte köra \"%s\"."
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Fel vid läsning... avbryter"
+msgstr "Fel vid läsning..."
 
 #, fuzzy
 #~ msgid ""
