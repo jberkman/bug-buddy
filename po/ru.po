@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-12-06 16:39-0500\n"
-"PO-Revision-Date: 2001-11-18 00:06+03:00\n"
+"POT-Creation-Date: 2001-12-15 19:36+0300\n"
+"PO-Revision-Date: 2001-12-15 19:39+03:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb уже закрыт"
 
-#: src/bug-buddy.c:424
+#: src/bug-buddy.c:413
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -120,7 +120,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --appname."
 
-#: src/bug-buddy.c:434
+#: src/bug-buddy.c:423
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -128,7 +128,7 @@ msgstr ""
 "$GNOME_CRASHED_PID больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --pid."
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:544
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -137,21 +137,26 @@ msgstr ""
 "Не удалось загрузить файл интерфейса пользователя (%s).\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bug-buddy.glade.h:49 src/bugzilla.c:562
-#: src/united-states-of-bug-buddy.c:52
+#: src/bugzilla.c:584
+msgid "ID"
+msgstr "ID"
+
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:598 src/bugzilla.c:638
+#: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Программа"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:568 src/bugzilla.c:596
-msgid "Description"
-msgstr "Описание"
-
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:590
-#: src/united-states-of-bug-buddy.c:53
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:604 src/bugzilla.c:666
+#: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Компонент"
 
-#: src/bugzilla.c:617
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:610 src/bugzilla.c:644
+#: src/bugzilla.c:672
+msgid "Description"
+msgstr "Описание"
+
+#: src/bugzilla.c:693
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -160,21 +165,9 @@ msgstr ""
 "Не удалось открыть \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bugzilla.c:633
+#: src/bugzilla.c:711
 msgid "All"
 msgstr "Все"
-
-#: src/bugzilla.c:662
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug Buddy определил, что некоторая из этой информации о\n"
-"различных системах отслеживания ошибок может нуждаться в обновлении.\n"
-"\n"
-"Должен ли Bug Buddy попытаться обновить эти файлы сейчас?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -237,7 +230,7 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
-msgid "Automatically continue to next step when debugging is complete"
+msgid "Automatically continue to the next step when debugging is complete"
 msgstr "Автоматически переходить к следующему шагу при завершении отладки"
 
 #: src/bug-buddy.glade.h:6
@@ -359,12 +352,21 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:45
 msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+"Пожалуйста, потратьте минуту на то чтобы проверить, что о вашей ошибке не сообщил кто-то ещё.\n"
+"Если об ошибке уже сообщено, не сообщайте о ней ещё раз."
+
+#: src/bug-buddy.glade.h:47
+msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "Пожалуйста подождите пока Bug Buddy определит некоторую информацию о вашей "
 "системе."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:48
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -372,51 +374,55 @@ msgstr ""
 "Подождите пожалуйста, пока Bug Buddy обновит свой список\n"
 "программ для системы отслеживания ошибок."
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:50
 msgid "Process ID"
 msgstr "Идентификатор процесса"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:52
 msgid "Save the report to..."
 msgstr "Сохранить отчет в..."
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:53
 msgid "Saving:"
 msgstr "Сохранение:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:54
 msgid "Select an action"
 msgstr "Выбрать действие"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:55
 msgid "Send copy to yourself"
 msgstr "Послать копию себе"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:56
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:57
 msgid "Severity"
 msgstr "Важность"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:58
+msgid "Show most frequent bugs in:"
+msgstr "Показать наиболее частые сообщения об ошибках:"
+
+#: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
 msgstr "Пропустить этот шаг в будущем"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:60
 msgid "Stop"
 msgstr "Стоп"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:61
 msgid "Submit another bug"
 msgstr "Сообщение о другой ошибке"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:62
 msgid "Summary"
 msgstr "Сводка"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:63
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
@@ -435,55 +441,63 @@ msgstr ""
 "получения дополнительной информации если она потребуется или\n"
 "когда исправленная версия будет доступна."
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:70
 msgid "To"
 msgstr "Кому"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:71
 msgid "To:"
 msgstr "Кому:"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:72
 msgid "Version"
 msgstr "Версия"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:73
 msgid "Version installed"
 msgstr "Установленная версия"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:74
 msgid "component"
 msgstr "компонент"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:75
 msgid "desc"
 msgstr "описание"
 
-#: src/bug-buddy.glade.h:73
-msgid "download"
-msgstr "скачать"
-
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:76
 msgid "email info"
 msgstr "информ. об эл.адресе"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:77
 msgid "finished"
 msgstr "завершено"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:78
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:79
 msgid "intro"
 msgstr "вступление"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:80
+msgid "label143"
+msgstr "label143"
+
+#: src/bug-buddy.glade.h:81
+msgid "label144"
+msgstr "label143"
+
+#: src/bug-buddy.glade.h:82
+msgid "mostfreq"
+msgstr "наиболее частые"
+
+#: src/bug-buddy.glade.h:83
 msgid "product"
 msgstr "программа"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:84
 msgid "system"
 msgstr "система"
 
@@ -495,13 +509,13 @@ msgstr "Добро пожаловать в Bug Buddy"
 msgid "Debugging Information"
 msgstr "Отладочная информация"
 
-#: src/united-states-of-bug-buddy.c:50
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr "Частые сообщения об ошибках"
+
+#: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "Описание ошибки"
-
-#: src/united-states-of-bug-buddy.c:51
-msgid "Updating Product Listing"
-msgstr "Обновление списка программ"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
@@ -523,15 +537,15 @@ msgstr "Графический инструмент Gnome для сообщения об ошибках."
 msgid "The lame Bug Buddy web page"
 msgstr "Небольшая веб-страничка bug-buddy"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:277
 msgid "Please enter your name."
 msgstr "Пожалуйста, введите ваше имя."
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter a valid email address."
 msgstr "Пожалуйста, введите ваш электронный адрес."
 
-#: src/united-states-of-bug-buddy.c:321
+#: src/united-states-of-bug-buddy.c:310
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -548,16 +562,16 @@ msgstr ""
 "\n"
 "Укажете новое расположение sendmail?"
 
-#: src/united-states-of-bug-buddy.c:381
+#: src/united-states-of-bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "Указанный файл не существует."
 
-#: src/united-states-of-bug-buddy.c:391
+#: src/united-states-of-bug-buddy.c:380
 #, c-format
 msgid "File is of type: %s"
 msgstr "Файл типа: %s"
 
-#: src/united-states-of-bug-buddy.c:398
+#: src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -568,19 +582,19 @@ msgstr ""
 "\n"
 "Bug Buddy может отправлять только текстовые файлы (text/*)."
 
-#: src/united-states-of-bug-buddy.c:418
+#: src/united-states-of-bug-buddy.c:407
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Вы должны включить разумную строку темы в ваше сообщение об ошибке."
 
-#: src/united-states-of-bug-buddy.c:434
+#: src/united-states-of-bug-buddy.c:423
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Вы должны включить разумное описание в ваше сообщение об ошибке."
 
-#: src/united-states-of-bug-buddy.c:457
+#: src/united-states-of-bug-buddy.c:446
 msgid "Submit this bug report now?"
 msgstr "Отправить это сообщение об ошибке сейчас?"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:468
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -589,12 +603,12 @@ msgstr ""
 "Не удалось открыть файл \"%s\":\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:494
+#: src/united-states-of-bug-buddy.c:483
 #, c-format
 msgid "about to run '%s'"
 msgstr "о запуске '%s'"
 
-#: src/united-states-of-bug-buddy.c:502
+#: src/united-states-of-bug-buddy.c:491
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -603,12 +617,12 @@ msgstr ""
 "Не удалось запустить почтовую программу \"%s\":\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:545
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваше сообщение об ошибке сохранено в '%s'"
 
-#: src/united-states-of-bug-buddy.c:548
+#: src/united-states-of-bug-buddy.c:537
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -623,19 +637,19 @@ msgstr ""
 "\n"
 "Спасибо!"
 
-#: src/united-states-of-bug-buddy.c:609
+#: src/united-states-of-bug-buddy.c:593
 msgid "You must specify a product for your bug report."
 msgstr "Вы должны указать программу для вашего сообщения об ошибке."
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:610
 msgid "You must specify a component for your bug report."
 msgstr "Вы должны указать компонент для вашего сообщения об ошибке."
 
-#: src/united-states-of-bug-buddy.c:640
+#: src/united-states-of-bug-buddy.c:624
 msgid "You must specify a version for your bug report."
 msgstr "Вы должны указать версию в вашем сообщении об ошибке."
 
-#: src/united-states-of-bug-buddy.c:676
+#: src/united-states-of-bug-buddy.c:670
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
