@@ -43,7 +43,7 @@ msgstr "programski hro¹è"
 
 #: src/bug-buddy.c:90
 msgid "documentation bug"
-msgstr "dokumentacijski hro¹è"
+msgstr "napaka v dokumentaciji"
 
 #: src/bug-buddy.c:91
 msgid "change request"
