@@ -221,7 +221,7 @@ msgstr "%P %%"
 
 #: src/bug-buddy.glade.h:3
 msgid "About"
-msgstr "O"
+msgstr "O programu"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
