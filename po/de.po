@@ -1,6 +1,6 @@
 # German message file for bug-buddy.
 # Christian Meyer <cm@ggtt.de>, 2000.
-# Karl Eichwalder <ke@suse.de>, 2000.
+# Karl Eichwalder <ke@suse.de>, 2000, 2001.
 # Matthias Warkus  <mawa@iname.com>, 2000.
 #
 # Please, feel free to take over this translation -- but just
@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2001-02-11 14:13-0500\n"
-"PO-Revision-Date: 2000-12-09 08:55+01:00\n"
+"Project-Id-Version: bug-buddy 1.89cvs\n"
+"POT-Creation-Date: 2001-02-11 20:54+0100\n"
+"PO-Revision-Date: 2001-02-11 21:14+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -71,18 +71,16 @@ msgid "Save report to file"
 msgstr "Den Bericht in einer Datei speichern"
 
 #: src/bug-buddy.c:76
-#, fuzzy
 msgid "crashed application"
-msgstr "Die Binärdatei des abgestürzten Programmes auswählen"
+msgstr "abgestürztes Programm"
 
 #: src/bug-buddy.c:77
-#, fuzzy
 msgid "core file"
 msgstr "Core-Datei"
 
 #: src/bug-buddy.c:78
 msgid "nothing"
-msgstr ""
+msgstr "nichts"
 
 #: src/bug-buddy.c:83
 msgid "Create a new bug report"
@@ -351,7 +349,7 @@ msgid ""
 "'%s'"
 msgstr ""
 "Kann nicht feststellen, welches Programm\n"
-"`%s'\n"
+"»%s«\n"
 "erstellt hat."
 
 #: src/gdb-buddy.c:215
@@ -363,6 +361,8 @@ msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
+"Der GDB konnte auf Ihrem System nicht gefunden werden.\n"
+"Debug-Informationen können nicht zusammengestellt werden."
 
 #: src/gdb-buddy.c:272
 msgid ""
@@ -384,9 +384,8 @@ msgstr "Fehler bei fork()."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-#, fuzzy
 msgid "Bug Buddy"
-msgstr "bug-buddy"
+msgstr "Bug Buddy"
 
 #: src/glade-strings.c:8
 msgid ""
@@ -400,26 +399,24 @@ msgid ""
 msgstr ""
 
 #: src/glade-strings.c:15
-#, fuzzy
 msgid "Skip this step in the future"
-msgstr "Diesen Schritt überspringen"
+msgstr "Diesen Schritt zukünftig überspringen"
 
 #: src/glade-strings.c:16
-#, fuzzy
 msgid "Name"
-msgstr "Ihr Name"
+msgstr "Name"
 
 #: src/glade-strings.c:17
 msgid "Sendmail"
-msgstr ""
+msgstr "Sendmail"
 
 #: src/glade-strings.c:18
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 #: src/glade-strings.c:19
 msgid "intro"
-msgstr ""
+msgstr "Eröffnung"
 
 #: src/glade-strings.c:20
 msgid ""
@@ -430,14 +427,13 @@ msgstr ""
 
 #: src/glade-strings.c:23
 msgid "Debug"
-msgstr ""
+msgstr "Debuggen"
 
 #: src/glade-strings.c:24
 msgid "Go"
-msgstr ""
+msgstr "Los"
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid "Binary file"
 msgstr "Binärdatei"
 
@@ -450,13 +446,14 @@ msgid "Core file"
 msgstr "Core-Datei"
 
 #: src/glade-strings.c:29
-#, fuzzy
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Wenn vollständig, automatisch zur nächsten Seite gehen"
+msgstr ""
+"Wenn das Debuggen vollständigist, automatisch mit dem nächsten\n"
+"Schritt fortfahren."
 
 #: src/glade-strings.c:30
 msgid "gdb"
-msgstr ""
+msgstr "gdb"
 
 #: src/glade-strings.c:31
 msgid "Please make your bug report in English, if possible."
@@ -464,7 +461,7 @@ msgstr "Wenn möglich, schreiben Sie den Fehlerbericht bitte auf Englisch."
 
 #: src/glade-strings.c:32
 msgid "Short subject for the bug report"
-msgstr "Kurze Überschrift für den Fehlerbericht"
+msgstr "Kurze Betreff für den Fehlerbericht"
 
 #: src/glade-strings.c:33
 msgid "Full description of the bug, including how to reproduce it"
@@ -478,22 +475,24 @@ msgstr "Eine Textdatei einfügen"
 
 #: src/glade-strings.c:35
 msgid "desc"
-msgstr ""
+msgstr "Beschreibung"
 
 #: src/glade-strings.c:36
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
+"Bitte warten Sie.  Bug Buddy aktualisiert gerade\n"
+"die Liste der produkte für die Fehlermeldestellen\n"
+"(Bug Tracking Systems)."
 
 #: src/glade-strings.c:38
 msgid "Saving:"
-msgstr ""
+msgstr "Speichern:"
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "To:"
-msgstr "An"
+msgstr "An:"
 
 #: src/glade-strings.c:40 src/glade-strings.c:57
 msgid "%P %%"
@@ -501,15 +500,17 @@ msgstr "%P%%"
 
 #: src/glade-strings.c:41
 msgid "download"
-msgstr ""
+msgstr "Download"
 
 #: src/glade-strings.c:42
 msgid "Please select the product for the bug you wish to report."
 msgstr ""
+"Bitte wählen Sie das Produkt, zu dem Sie einen Fehlerbericht\n"
+" einsenden wollen."
 
 #: src/glade-strings.c:43
 msgid "Product"
-msgstr ""
+msgstr "Produkt"
 
 #: src/glade-strings.c:44 src/glade-strings.c:50
 msgid "Description"
@@ -520,13 +521,12 @@ msgid "Show products for"
 msgstr ""
 
 #: src/glade-strings.c:46
-#, fuzzy
 msgid "bug tracking systems."
-msgstr "Fehlermeldestelle "
+msgstr "Fehlermeldestellen."
 
 #: src/glade-strings.c:47
 msgid "product"
-msgstr ""
+msgstr "Produkt"
 
 #: src/glade-strings.c:48
 msgid "Please choose a component, version, and severity level."
@@ -571,18 +571,16 @@ msgid "Automatically go to next page when complete"
 msgstr "Wenn vollständig, automatisch zur nächsten Seite gehen"
 
 #: src/glade-strings.c:59
-#, fuzzy
 msgid "system"
 msgstr "System"
 
 #: src/glade-strings.c:60
-#, fuzzy
 msgid "Select an action"
-msgstr "Eine Core-Datei auswählen"
+msgstr "Eine Aktion auswählen"
 
 #: src/glade-strings.c:61
 msgid "Cc"
-msgstr ""
+msgstr "Cc"
 
 #: src/glade-strings.c:62
 msgid "To"
@@ -602,7 +600,7 @@ msgstr "Inhalt"
 
 #: src/glade-strings.c:66
 msgid "email info"
-msgstr ""
+msgstr "E-Mail-Info"
 
 #: src/glade-strings.c:67
 msgid "Assbarn Phenomeon"
@@ -618,16 +616,16 @@ msgstr ""
 
 #: src/glade-strings.c:71
 msgid "Finish"
-msgstr ""
+msgstr "Beenden"
 
 #: src/util.c:60
 msgid "Unable to open pipe"
-msgstr "Kann Pipe nicht öffnen"
+msgstr "Es ist nicht möglich, eine Pipe zu öffnen."
 
 #: src/util.c:72
 #, c-format
 msgid "Could not run '%s'."
-msgstr "Kann '%s' nicht starten."
+msgstr "Kann »%s« nicht starten."
 
 #: src/util.c:113
 msgid "Error on read..."

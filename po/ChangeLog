@@ -1,7 +1,11 @@
+2001-02-11  Karl Eichwalder  <ke@suse.de>
+
+	* de.po: Update.
+
 2001-02-07  Fatih Demir	<kabalak@kabalak.net>
 
 	* tr.po: Added the updated and corrected Turkish
-		translation from Görkem Cetin.
+		translation from Gvrkem Cetin.
 
 2001-02-05  Christophe Merlet  <redfox@eikonex.org>
 
@@ -9,22 +13,22 @@
 
 2001-01-26  Szabolcs Ban  <shooby@gnome.hu>
 
-        * hu.po: More fixes by Andras (spelling, terminology)
+	* hu.po: More fixes by Andras (spelling, terminology).
 
 2001-01-24  Szabolcs Ban  <shooby@gnome.hu>
 
-        * hu.po: Tons of fixes by Andras and Emese (spelling,
-          terminology, headers)
+	* hu.po: Tons of fixes by Andras and Emese (spelling, terminology,
+	  headers).
 
 2001-01-19  Szabolcs Ban <shooby@gnome.hu>
 
-	* hu.po: Updated Hungarian translations from 
-	Gergely Nagy <greg@gnome.hu>
+	* hu.po: Updated Hungarian translations from Gergely Nagy
+	<greg@gnome.hu>
 
 2001-01-08  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* nn.po: Added Norwegian (nynorsk) translation.
-	
+
 2001-01-01  Yukihiro Nakai <nakai@gnome.gr.jp>
 
 	* ja.po: Update Japanese translation
@@ -73,7 +77,7 @@
 2000-11-17  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* no.po: Updated Norwegian (bokmel) translation.
-	
+
 2000-11-17  Valek Filippov  <frob@df.ru>
 
 	* ru.po: updated russian translation.
@@ -89,7 +93,7 @@
 2000-11-09 Sami Pesonen <spesonen@dlc.fi>
 
 	* fi.po: Updated Finnish translation.
-	
+
 2000-11-05  Yukihiro Nakai  <nakai@gnome.gr.jp>
 
 	* sk.po: Initial Slovak translation from Stanislav Visnovsky.
@@ -115,7 +119,7 @@
 2000-10-09  Christian Meyer  <cm@ggtt.de>
 
 	* de.po: Updated Dutch translation from sienap.
-	
+
 2000-10-08  Valek Filippov  <frob@df.ru>
 
 	* ru.po: updated russian translation.
@@ -161,11 +165,11 @@
 	* el.po: Updated Greek file
 
 2000-06-24  Andraz Tori	<andraz.tori1@guest.arnes.si>
-	
+
 	* sl.po: Added Slovenian translation.
 
 2000-06-07  Fatih Demir	<kabalak@gmx.net>
-	
+
 	* tr.po: Updated the Turkish translation.
 
 2000-05-27 Sami Pesonen <spesonen@dlc.fi>
@@ -173,11 +177,11 @@
 	* fi.po: Finnish update
 
 2000-05-27  Arjan van de Ven <arjan@fenrus.demon.nl>
-	
+
 	* nl.po: Updated the Dutch translation.
 
 2000-05-25  Fatih Demir	<kabalak@gmx.net>
-	
+
 	* tr.po: Updated the Turkish translation.
 
 2000-05-23  Valek Filippov  <frob@df.ru>
@@ -565,7 +569,7 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 	
 1999-11-03  Vincent Renardias  <vincent@ldsol.com>
 
-	* fr.po: contributed by Herv$Bi.(B
+	* fr.po: contributed by Herv$(Bi.(B
 
 1999-10-23  Kjartan Maraas  <kmaraas@online.no>
 
