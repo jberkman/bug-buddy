@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
+"POT-Creation-Date: 2000-11-20 10:53+0100\n"
 "PO-Revision-Date: 2000-11-03 09:19CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -100,7 +100,7 @@ msgstr "E-mailová adresa kontaktu"
 
 #: src/bug-buddy.c:122
 msgid "EMAIL"
-msgstr "EMAIL7"
+msgstr "EMAIL"
 
 #: src/bug-buddy.c:123
 msgid "Package containing the program"
@@ -140,7 +140,7 @@ msgstr "Súbor core programu"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Textový súbor prilo¾ený k správe"
 
 #: src/bug-buddy.c:332
 msgid ""
