@@ -161,6 +161,8 @@ load_config ()
 	s = gnome_config_get_string ("/bug-buddy/last/name");
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
+	else
+		gtk_entry_set_text (GTK_ENTRY (w), g_get_real_name ());
 	g_free (s);
 	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
 	gnome_entry_load_history (GNOME_ENTRY (w));
@@ -169,6 +171,8 @@ load_config ()
 	s = gnome_config_get_string ("/bug-buddy/last/email");
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
+	else 
+		gtk_entry_set_text (GTK_ENTRY (w), g_get_user_name ());
 	g_free (s);
 	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
 	gnome_entry_load_history (GNOME_ENTRY (w));
@@ -466,7 +470,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		return FALSE;
 	}
 
-	fprintf (fp, "From %s\nTo: %s\n", s, s2);
+	fprintf (fp, "From %s\nTo: %s\n", g_get_user_name(), s2);
 
 	w = glade_xml_get_widget (druid_data.xml, "name_entry");
 	s2 = gtk_entry_get_text (GTK_ENTRY (w));

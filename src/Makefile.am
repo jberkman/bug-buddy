@@ -8,7 +8,7 @@ bin_PROGRAMS = bug-buddy
 bug_buddy_SOURCES = \
 	bug-buddy.c	\
 	gdb-buddy.c	\
-	gdb-buddy.h	\
+	bug-buddy.h	\
 	packages.c
 
 bug_buddy_LDADD = \

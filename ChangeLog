@@ -1,5 +1,9 @@
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.c (load_config): initially default to real/user name
+
+	* src/Makefile.am (bug_buddy_SOURCES): distcheck fix
+
 	* src/bug-buddy.mime: better regexp
 
 	* src/gdb-buddy.c (handle_gdb_input): don't print a line of
