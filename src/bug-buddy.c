@@ -317,6 +317,8 @@ on_email_group_toggled (GtkWidget *w, gpointer data)
 
 	g_object_set (GET_WIDGET ("druid-next"),
 		      "label", label,
+		      "use-underline", TRUE,
+
 		      NULL);
 }
 
@@ -505,6 +507,7 @@ init_ui (void)
 
 	gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid-window")));
 
+#if 0
 	g_object_set (G_OBJECT (GET_WIDGET ("druid-about")),
 		      "label", GNOME_STOCK_ABOUT,
 		      "use_stock", TRUE,
@@ -516,6 +519,7 @@ init_ui (void)
 		      "use_stock", TRUE,
 		      "use_underline", TRUE,
 		      NULL);
+#endif
 
 	{
 		GtkButtonBox *bbox;
@@ -666,7 +670,7 @@ main (int argc, char *argv[])
 	g_free (s);
 
 	s = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_DATADIR,
-				       "bug-buddy/bug-buddy.glade2", TRUE, NULL);
+				       "bug-buddy/bug-buddy.glade", TRUE, NULL);
 	if (s)
 		druid_data.xml = glade_xml_new (s, NULL, GETTEXT_PACKAGE);
 	else

@@ -47,9 +47,6 @@ bug_buddy_SOURCES = \
 	libglade-buddy.h	\
 	united-states-of-bug-buddy.c
 
-bug_buddy_LDFLAGS = \
-	-export-dynamic
-
 bug_buddy_LDADD = \
 	$(BUG_BUDDY_LIBS)
 
@@ -71,12 +68,8 @@ mime_DATA = \
 	bug-buddy.mime
 
 buddy_DATA = \
-	bug-buddy.glade2	\
+	bug-buddy.glade	\
 	gdb-cmd
-
-bug-buddy.glade2: bug-buddy.glade $(LIBGLADE_CONVERT)
-	$(LIBGLADE_CONVERT) $(srcdir)/bug-buddy.glade > bug-buddy.glade.tmp \
-	&& mv bug-buddy.glade.tmp bug-buddy.glade2
 
 utilsdir = $(datadir)/applications
 utils_in_files = bug-buddy.desktop.in
@@ -87,7 +80,6 @@ EXTRA_DIST = \
 	$(utils_DATA)		\
 	$(utils_in_files)	\
 	$(buddy_DATA)		\
-	bug-buddy.glade		\
 	bug-buddy.mime		\
 	bug-buddy.keys.in	\
 	bb-marshal.list
