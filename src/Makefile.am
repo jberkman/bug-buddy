@@ -32,7 +32,7 @@ bb-marshal.c: $(srcdir)/bb-marshal.list
 
 bin_PROGRAMS = bug-buddy
 
-$(OBJECTS): $(bb_built_sources)
+$(bug_buddy_OBJECTS): $(bb_built_sources)
 
 bug_buddy_SOURCES = \
 	$(bb_built_sources)	\
