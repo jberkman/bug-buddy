@@ -1,3 +1,9 @@
+1999-11-24  Jacob Berkman  <jberkman@serendipity.res.cmu.edu>
+
+	* src/bug-buddy.c: fudge around with dpkg and extract
+	some things.  This is really slow and sucks.  Better
+	ways will follow.
+
 1999-11-24  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* debian/*: add stuff to make .debs   (no idea if this really

@@ -106,16 +106,28 @@ static ListData list_data[] = {
 	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) || "
 	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
 	    "echo \"\"" } },
-	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc" } },
+	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc",
+			     "dpkg -l libc6 | tail -n 1 | "
+			     "awk '{ print $2\" \"$3 }'" } },
 	{ N_("C Compiler"), { "gcc --version", "cc -V" } },
-	{ N_("glib"), { "glib-config --version", "rpm -q glib" } },
-	{ N_("GTK+"), { "gtk-config --version", "rpm -q gtk+" } },
-	{ N_("ORBit"), { "orbit-config --version", "rpm -q ORBit" } },
-	{ N_("gnome-libs"), { "gnome-config --version", "rpm -q gnome-libs" } },
+	{ N_("glib"), { "glib-config --version", "rpm -q glib",
+			"dpkg -l libglib1.2 | tail -n 1 | "
+			"awk '{ print \"glib \"$3 }'" } },
+	{ N_("GTK+"), { "gtk-config --version", "rpm -q gtk+",
+			"dpkg -l libgtk1.2 | tail -n 1 | "
+			"awk '{ print \"GTK+ \"$3 }'" } },
+	{ N_("ORBit"), { "orbit-config --version", "rpm -q ORBit",
+			 "dpkg -l liborbit0 | tail -n 1 | "
+			 "awk '{ print \"ORBit \"$3 }'" } },
+	{ N_("gnome-libs"), { "gnome-config --version", "rpm -q gnome-libs",
+			      "dpkg -l gnome-libs-data | tail -n 1 | "
+			      "awk '{ print \"gnome-libs \"$3 }'" } },
 	{ N_("gnome-core"), { "gnome-config --modversion applets "
 			      "| grep -v gnome-libs "
 			      "| sed -e 's^applets-^gnome-core ^g'", 
-			      "rpm -q gnome-core" } },
+			      "rpm -q gnome-core",
+			      "dpkg -l gnome-core | tail -n 1 | "
+			      "awk '{ print \"gnome-core \"$3 }'" } },
 	{ NULL }
 };
 
