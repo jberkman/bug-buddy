@@ -403,7 +403,7 @@ msgstr ""
 
 #: src/glade-strings.c:25
 msgid "Bug Tracking System "
-msgstr "Feluppföljningssystem "
+msgstr "Felsökningssystem "
 
 #: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
