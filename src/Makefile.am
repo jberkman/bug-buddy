@@ -47,9 +47,6 @@ bug_buddy_SOURCES = \
 	libglade-buddy.h	\
 	united-states-of-bug-buddy.c
 
-bug_buddy_LDFLAGS = \
-	-export-dynamic
-
 bug_buddy_LDADD = \
 	$(BUG_BUDDY_LIBS)
 

@@ -1,5 +1,8 @@
 2002-04-01  jacob berkman  <jacob@ximian.com>
 
+	* src/Makefile.am (bug_buddy_LDFLAGS): 
+	* configure.in: fix #77035 and #76834 (thanks to danw)
+
 	* src/Makefile.am (bug_buddy_LDFLAGS): add back -export-dynamic
 	for now (fixes #77035)
 
