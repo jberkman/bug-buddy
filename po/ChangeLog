@@ -1,6 +1,10 @@
+2001-07-15 Sami Pesonen <spesonen@dlc.fi>
+
+	* fi.po: Updated Finnish translation.
+
 2001-07-13  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* no.po: Updated Norwegian (bokmål) translation.
+	* no.po: Updated Norwegian (bokmel) translation.
 	* nn.po: Updated Norwegian (nynorsk) translation.
 	
 2001-07-11  Gustavo Maciel Dias Vieira <gdvieira@zaz.com.br>
@@ -63,7 +67,7 @@
 
 	* zh_TW.Big5.po: Updated by Joe Man <trmetal@yahoo.com.hk>
 
-2001-06-12  Carlos Perell)Bó Marín <carlos@gnome-db.org>
+2001-06-12  Carlos Perells Marmn <carlos@gnome-db.org>
 
 	* es.po: Reviewed to the next release.
 
@@ -107,7 +111,7 @@
 	translations from old src/bug-buddy.desktop file.
 	* POTFILES.in: Add src/bug-buddy.desktop.in.
 
-2001-05-24  Carlos Perell)Bó Marín <carlos@gnome-db.org>
+2001-05-24  Carlos Perells Marmn <carlos@gnome-db.org>
 
 	* es.po: Updated Spanish translation.
 
@@ -137,7 +141,7 @@
 
 2001-03-27  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* no.po: Update Norwegian (bokm)Bål) translation.
+	* no.po: Update Norwegian (bokmel) translation.
 
 2001-03-27  Stanislav Visnovsky  <visnovsky@nenya.ms.mff.cuni.cz>
 
@@ -173,7 +177,7 @@
 
 2001-03-23  Fatih Demir <kabalak@gtranslator.org>
 
-	* tr.po: Updated Turkish translation by G)Börkem.
+	* tr.po: Updated Turkish translation by Gvrkem.
 
 2001-03-22  Ole Laursen  <olau@hardworking.dk>
 
@@ -185,7 +189,7 @@
 
 2001-03-21  Fatih Demir <kabalak@gtranslator.org>
 
-	* tr.po: Updated Turkish translation by G)Börkem and Kemal.
+	* tr.po: Updated Turkish translation by Gvrkem and Kemal.
 
 2001-03-20  Karl Eichwalder  <ke@suse.de>
 
@@ -208,7 +212,7 @@
 
 	* gl.po: Updated Galician translation.
 
-2001-03-01  Martin Norb)Bäck  <d95mback@dtek.chalmers.se>
+2001-03-01  Martin Norbdck  <d95mback@dtek.chalmers.se>
 
 	* sv.po: Translated the stupid "Assbarn phenomenon" string.
 
@@ -219,7 +223,7 @@
 2001-02-26  Fatih Demir	<kabalak@gtranslator.org>
 
 	* tr.po: Committed updated Turkish translation from
-		)BÖzgür Doðan.
+		Vzg|r Dopan.
 
 2001-02-19  Gustavo Maciel Dias Vieira <gdvieira@zaz.com.br>
 

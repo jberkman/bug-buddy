@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2001-04-07 00:32+03:00\n"
+"POT-Creation-Date: 2001-07-15 22:17+0300\n"
+"PO-Revision-Date: 2001-07-15 22:19+03:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -545,9 +545,8 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "Virheraportissa tulee olla kattava selitysosa."
 
 #: src/united-states-of-bug-buddy.c:383
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Lähetä virheraportti"
+msgstr "Lähetetäänkö tämä virheraportti nyt?"
 
 #: src/united-states-of-bug-buddy.c:397
 #, c-format
@@ -570,7 +569,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -580,7 +579,9 @@ msgid ""
 msgstr ""
 "Virheraportti on lähetetty osoitteeseen:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Kiitos!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
