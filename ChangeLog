@@ -1,3 +1,7 @@
+1999-10-23  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/gdb-cmd: use bt not w
+
 1999-10-23  Kjartan Maraas  <kmaraas@online.no>
 
 	* configure.in: Added "no" to ALL_LINGUAS.
