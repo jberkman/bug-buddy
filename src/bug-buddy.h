@@ -29,6 +29,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtkliststore.h>
 #include <gtk/gtktreeviewcolumn.h>
+#include <libgnomevfs/gnome-vfs-async-ops.h>
 
 #include <sys/types.h>
 

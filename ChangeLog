@@ -1,3 +1,16 @@
+2001-12-28  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.h: gnome-vfs-types.h is deprecated
+
+	* src/bugzilla.c (load_bugzilla): gdk_pixbuf_unref is deprecated
+
+	* src/bug-buddy.h: include gnome-vfs-async-ops.h
+
+	* src/bug-buddy.c (init_canvi): gdk_pixbuf_unref is deprecated
+
+	* src/Makefile.am (INCLUDES): add some more
+	-DFOO_DISABLE_DEPRECATED
+
 2001-12-21  jacob berkman  <jacob@ximian.com>
 
 	* src/gdb-buddy.c (stop_gdb): fix a crash by jumping to the

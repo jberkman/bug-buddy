@@ -22,7 +22,7 @@
 #ifndef __BUGZILLA_H__
 #define __BUGZILLA_H__
 
-#include <libgnomevfs/gnome-vfs-types.h>
+#include <libgnomevfs/gnome-vfs-uri.h>
 #include <libxml/parser.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 

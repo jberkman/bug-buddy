@@ -374,7 +374,7 @@ init_canvi (void)
 	
 	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-buddy.png", NULL);
 	druid_data.throbber_pb = gdk_pixbuf_scale_simple (pb, 24, 24, GDK_INTERP_BILINEAR);
-	gdk_pixbuf_unref (pb);
+	g_object_ref (pb);
 
 	druid_data.throbber =
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),

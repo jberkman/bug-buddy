@@ -393,7 +393,7 @@ load_bugzilla (const char *filename)
 	pb = gdk_pixbuf_new_from_file (bts->icon, NULL);
 	if (pb) {
 		bts->pixbuf = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_HYPER);
-		gdk_pixbuf_unref (pb);
+		g_object_unref (pb);
 	}
 
 	bts->severity_node   = gnome_config_get_string ("severity_node=severities");
