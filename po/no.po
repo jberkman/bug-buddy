@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-02-12 11:37+0100\n"
-"PO-Revision-Date: 2001-02-12 11:37+01:00\n"
+"POT-Creation-Date: 2001-02-14 15:50+0100\n"
+"PO-Revision-Date: 2001-02-14 15:51+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -260,7 +260,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:847 src/glade-strings.c:70
+#: src/bug-buddy.c:847 src/glade-strings.c:69
 msgid "About"
 msgstr "Om"
 
@@ -276,14 +276,14 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Oppdatér"
 
-#: src/bug-buddy.c:896 src/bugzilla.c:556
+#: src/bug-buddy.c:896
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunne ikke åpne '%s'.\n"
-"Vennligst forsikre deg om at bug-buddy ble riktig installert."
+"Vennligst forsikre deg om at Bug Buddy ble riktig installert."
 
 #: src/bug-buddy.c:1144
 msgid ""
@@ -305,14 +305,23 @@ msgstr ""
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunne ikke laste '%s'.\n"
-"Vennligst forsikre deg om at bug-buddy ble riktig installert."
+"Vennligst forsikre deg om at Bug Buddy ble riktig installert."
 
 #: src/bugzilla.c:441
 msgid "Are you sure you want to cancel this update?"
 msgstr "Er du sikker på at du vil avbryte denne oppdateringen?"
+
+#: src/bugzilla.c:556
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Kunne ikke åpne '%s'.\n"
+"Vennligst forsikre deg om at bug-buddy ble riktig installert."
 
 #: src/bugzilla.c:567
 msgid "All"
@@ -323,12 +332,12 @@ msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
 "\n"
-"Should Bug Buddy try and update these files now?"
+"Should Bug Buddy try to update these files now?"
 msgstr ""
-"Bug-buddy har funnet ut at deler av informasjonen om\n"
+"Bug Buddy har funnet ut at deler av informasjonen om\n"
 "de forskjellige feiloppfølgingssystemene må oppdateres.\n"
 "\n"
-"Skal Bug-buddy forsøke å oppdatere disse filene nå?"
+"Skal Bug Buddy forsøke å oppdatere disse filene nå?"
 
 #: src/gdb-buddy.c:72
 #, c-format
@@ -499,7 +508,7 @@ msgstr "Lagrer:"
 msgid "To:"
 msgstr "Til:"
 
-#: src/glade-strings.c:40 src/glade-strings.c:57
+#: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
 msgstr "%P %%"
 
@@ -515,104 +524,100 @@ msgstr "Vennligst velg produkt for feilen du ønsker å rapportere."
 msgid "Product"
 msgstr "Produkt"
 
-#: src/glade-strings.c:44 src/glade-strings.c:50
+#: src/glade-strings.c:44 src/glade-strings.c:49
 msgid "Description"
 msgstr "Beskrivelse"
 
 #: src/glade-strings.c:45
-msgid "Show products for"
-msgstr "Vis produkter for"
+msgid "Bug tracking system"
+msgstr "Feiloppfølgingsystem"
 
 #: src/glade-strings.c:46
-msgid "bug tracking systems."
-msgstr "feiloppfølgingsystem."
-
-#: src/glade-strings.c:47
 msgid "product"
 msgstr "produkt"
 
-#: src/glade-strings.c:48
+#: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
 msgstr "Vennligst velg en komponent, versjon og alvorlighetsgrad."
 
-#: src/glade-strings.c:49 src/united-states-of-bug-buddy.c:46
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 msgid "Component"
 msgstr "Komponent"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:50
 msgid "Version"
 msgstr "Versjon"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:51
 msgid "Severity"
 msgstr "Viktighet"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:52
 msgid "component"
 msgstr "komponent"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:53
 msgid ""
-"Please wait while bug-buddy determines some information about your system."
-msgstr "Vennlist vent mens bug-buddy finner informasjon om ditt system."
+"Please wait while Bug Buddy determines some information about your system."
+msgstr "Vennlist vent mens Bug Buddy finner informasjon om ditt system."
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:54
 msgid "Package"
 msgstr "Pakke"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "Versjon installert"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "Gå til neste side automatisk når ferdig"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:58
 msgid "system"
 msgstr "system"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:59
 msgid "Select an action"
 msgstr "Velg en handling"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:60
 msgid "Cc"
 msgstr "Cc"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:61
 msgid "To"
 msgstr "Til"
 
-#: src/glade-strings.c:63
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "Send kopi til deg selv"
 
-#: src/glade-strings.c:64
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "Lagre rapporten til..."
 
-#: src/glade-strings.c:65
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "Innhold"
 
-#: src/glade-strings.c:66
+#: src/glade-strings.c:65
 msgid "email info"
 msgstr "e-postinfo"
 
-#: src/glade-strings.c:67
+#: src/glade-strings.c:66
 msgid "Assbarn Phenomeon"
 msgstr "Assbarn Phenomeon"
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:67
 msgid "Submit another bug"
 msgstr "Send inn en feil til"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:68
 msgid "finished"
 msgstr "fullført"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:70
 msgid "Finish"
 msgstr "Fullfør"
 
@@ -649,8 +654,8 @@ msgid "The graphical bug reporting tool for GNOME."
 msgstr "Grafisk verktøy for feilrapportering for GNOME."
 
 #: src/united-states-of-bug-buddy.c:95
-msgid "The lame bug-buddy web page"
-msgstr "Den lamme bug-buddy hjemmesiden"
+msgid "The lame Bug Buddy web page"
+msgstr "Den lamme Bug Buddy hjemmesiden"
 
 #: src/united-states-of-bug-buddy.c:273
 #, c-format
@@ -709,3 +714,6 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
+
+#~ msgid "Show products for"
+#~ msgstr "Vis produkter for"
