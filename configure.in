@@ -9,6 +9,15 @@ AM_INIT_AUTOMAKE(bug-buddy, 2.1.6)
 AM_MAINTAINER_MODE
 AC_PROG_INTLTOOL
 
+SCROLLKEEPER_REQUIRED=0.3.8
+AC_SUBST(SCROLLKEEPER_REQUIRED)
+
+## Begin tests for scrollkeeper
+AC_PATH_PROG(SCROLLKEEPER_CONFIG, scrollkeeper-config,no)
+if test x$SCROLLKEEPER_CONFIG = xno; then
+  AC_MSG_ERROR(Couldn't find scrollkeeper-config, please install the scrollkeeper package)
+fi
+
 AC_PROG_CC
 AC_ISC_POSIX
 AC_HEADER_STDC
@@ -59,7 +68,6 @@ bugzilla/gnome/Makefile
 bugzilla/ximian/Makefile
 docs/Makefile
 docs/C/Makefile
-omf-install/Makefile
 pixmaps/Makefile
 po/Makefile.in
 src/Makefile

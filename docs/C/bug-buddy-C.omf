@@ -9,11 +9,16 @@
     </contributor>
     <title>Bug Buddy Manual</title>
     <date>March 18, 2002</date>
+    <version identifier="2.0" date="2002-05-26" description="Updated to full OMF format"/>
     <subject category="GNOME|Utilites"/>
-    <type>manual</type>
+    <description>
+     User Manual for Bug Buddy"
+    </description>
+    <type>user's guide</type>
     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-    <identifier url="bug-buddy.xml"/>
+    <identifier url="file://usr/share/gnome/help/bug-buddy/C/bug-buddy.xml"/>
     <language code="C"/>
     <relation seriesid="69b6f5ee-6cc5-11d6-8051-fe97a46511fa"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Telsa Gwynne"/>
   </resource>
 </omf>

@@ -1,4 +1,4 @@
-SUBDIRS = po pixmaps src bugzilla docs omf-install
+SUBDIRS = po pixmaps src bugzilla docs
 
 EXTRA_DIST = \
 	bug-buddy.spec.in	\
@@ -7,6 +7,7 @@ EXTRA_DIST = \
 	intltool-merge.in	\
 	intltool-update.in	\
 	COPYING.ximian-logos	\
+	omf.make		\
 	xmldocs.make
 
 # this should probably be run at dist time or something

@@ -1,3 +1,13 @@
+2002-05-26  Chris Lyttle  <chris@wilddev.net>
+
+	* docs/C/bug-buddy-C.omf: Added rights and version tags
+	* docs/C/Makefile.am: changed figs to figdir
+	* Makefile.am: Add omf.make to EXTRA_DIST
+	* configure.in: Added scrollkeeper test for v0.3.8 and removed
+	omf-install from makefile list
+	* omf.make: Added for new scrollkeeper
+	* xmldocs.make: changed to new version
+	
 2002-05-21  Eric Baudais  <baudais@okstate.edu>
 
 	* docs/C/bug-buddy-C.omf: Changed the OMF file to conform with 

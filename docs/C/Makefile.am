@@ -1,4 +1,4 @@
-figs = 
+figdir =
 docname = bug-buddy
 lang = C
 omffile = bug-buddy-C.omf
