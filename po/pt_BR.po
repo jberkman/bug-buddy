@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-07-11 22:56-0300\n"
 "PO-Revision-Date: 2000-07-18 15:55-0300\n"
-"Last-Translator: Juan Carlos Castro y Castro <jcastro@appi.com.br>\n"
+"Last-Translator: Juan Carlos Castro y Castro <jcastro@vialink.com.br>\n"
 "Language-Team: Brazilian Portuguese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -205,13 +205,12 @@ msgstr ""
 "Não serão recolhidas informações de depuração."
 
 #: src/gdb-buddy.c:274
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "Impossível encontrar arquivo gdb-cmd.\n"
-"Por favor, tente reinstalar o bug-buddy."
+"Por favor, tente reinstalar o Bug Buddy."
 
 #: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
@@ -499,7 +498,7 @@ msgid "Please enter a valid email address."
 msgstr "Por favor, entre um endereço de email válido."
 
 #: src/united-states-of-bug-buddy.c:288
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -510,8 +509,8 @@ msgid ""
 msgstr ""
 "Aparentemente, '%s' não existe.\n"
 "\n"
-"Você não poderá enviar um\n"
-"relatório de erro, mas poderá salvá-lo em um arquivo.\n"
+"Você não poderá enviar um relatório de erro,\n"
+"mas poderá salvá-lo em um arquivo.\n"
 "\n"
 "Indicar um novo caminho para o sendmail?"
 
@@ -563,7 +562,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Seu relatório de erro foi gravado em '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -572,7 +571,10 @@ msgid ""
 "Thanks!"
 msgstr ""
 "Seu relatório de erro foi enviado para:\n"
-"        <%s>"
+"\n"
+"        <%s>\n"
+"\n"
+"Obrigado!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
@@ -614,91 +616,3 @@ msgstr "Ferramenta de Relatório de Erros"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Informar erro no GNOME"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Impossível abrir '%s'.\n"
-#~ "Por favor, assegure-se de que o bug-buddy foi instalado corretamente."
-
-#~ msgid "critical"
-#~ msgstr "crítico"
-
-#~ msgid "grave"
-#~ msgstr "grave"
-
-#~ msgid "normal"
-#~ msgstr "normal"
-
-#~ msgid "wishlist"
-#~ msgstr "lista de desejos"
-
-#~ msgid "software bug"
-#~ msgstr "erro de software"
-
-#~ msgid "documentation bug"
-#~ msgstr "erro de documentação"
-
-#~ msgid "change request"
-#~ msgstr "pedido de mudança"
-
-#~ msgid "support"
-#~ msgstr "suporte"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "Será muito mais útil se você especificar\n"
-#~ "um pacote específico em vez de 'general'.\n"
-#~ "\n"
-#~ "Por favor, especifique um pacote."
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Você tem que incluir um título e uma descrição\n"
-#~ "no seu relatório de erro."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "Aparentemente, '%s' não existe.  Você não poderá enviar um\n"
-#~ "relatório de erro, mas poderá salvá-lo em um arquivo.\n"
-#~ "\n"
-#~ "Indicar un novo caminho para o sendmail?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "Você precisa especificar o email do destinatário"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Escolha um arquivo no qual salvar."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "O arquivo '%s' já existe.\n"
-#~ "Sobrescrever este arquivo?"
-
-#~ msgid "Help"
-#~ msgstr "Ajuda"
-
-#~ msgid "Refresh"
-#~ msgstr "Atualizar"
-
-#~ msgid "Distribution"
-#~ msgstr "Distribuição"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "Bug Number"
-#~ msgstr "Número do Erro"
