@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-04-15 00:10+0900\n"
-"PO-Revision-Date: 2002-04-15 00:12+0900\n"
+"Project-Id-Version: bug-buddy 2.1.5\n"
+"POT-Creation-Date: 2002-04-29 12:55+0900\n"
+"PO-Revision-Date: 2002-04-29 12:58+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -312,8 +312,8 @@ msgid "There was an error running gdb."
 msgstr "gdb를 실행하는 데 오류가 발생했습니다."
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;버그버디&lt;/span&gt;"
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "<span size=\"xx-large\">버그버디</span>"
 
 #: src/bug-buddy.glade.h:2
 msgid "*"
