@@ -894,7 +894,7 @@ init_bts_menu (void)
 	dir = opendir (BUDDY_DATADIR "/xml/");
 	if (!dir) {
 		s = g_strdup_printf (_("Could not open '%s'.\n"
-				       "Please make sure bug-buddy was "
+				       "Please make sure Bug Buddy was "
 				       "installed correctly."),
 				     BUDDY_DATADIR "/xml/");
 		w = gnome_error_dialog (s);
@@ -1249,7 +1249,7 @@ main (int argc, char *argv[])
 
 	if (!druid_data.xml) {
 		char *s2 = g_strdup_printf (_("Could not load '%s'.\n"
-					      "Please make sure bug-buddy was "
+					      "Please make sure Bug Buddy was "
 					      "installed correctly."), s);
 		w = gnome_error_dialog (s2);
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));

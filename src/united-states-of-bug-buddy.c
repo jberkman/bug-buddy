@@ -92,7 +92,7 @@ on_druid_about_clicked (GtkWidget *button, gpointer data)
 			    &about);
 
 	href = gnome_href_new ("http://bug-buddy.org/",
-			       _("The lame bug-buddy web page"));
+			       _("The lame Bug Buddy web page"));
 	gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (about)->vbox),
 			    href, FALSE, FALSE, 0);
 

@@ -1,5 +1,12 @@
 2001-02-12  Karl Eichwalder  <ke@suse.de>
 
+	* src/bug-buddy.c (init_bts_menu): s/bug-buddy/Bug Buddy/ .
+	* src/gdb-buddy.c (get_trace_from_pair): Ditto.
+	* src/gdb-buddy (main): Ditto.
+	* src/bug-buddy.glade: Ditto.
+	* src/glade-strings.c (N_): Ditto.
+	* src/united-states-of-bug-buddy.c (on_druid_about_clicked): Ditto.
+
 	* src/bugzilla.c (load_bugzillas): Fix message.
 
 2001-02-12  jacob berkman  <jacob@ximian.com>

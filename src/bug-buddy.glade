@@ -1546,7 +1546,7 @@ of products for the bug tracking systems.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label94</name>
-	    <label>Please wait while bug-buddy determines some information about your system.</label>
+	    <label>Please wait while Bug Buddy determines some information about your system.</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>True</wrap>
 	    <xalign>0.5</xalign>
