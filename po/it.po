@@ -5,13 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-25 03:59+0200\n"
 "PO-Revision-Date: 2000-11-25 12:27+01:00\n"
 "Last-Translator: Giovanni Bortolozzo <borto@pluto.linux.it>\n"
 "Language-Team: ITALIANO <it@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=US-ASCII\n"
-"Content-Transfer-Encoding: 7bit\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/bug-buddy.c:53
 msgid "Submit bug report"
@@ -145,10 +145,10 @@ msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
 #: src/bugzilla.c:538
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Impossibile aprire '%s'.\n"
 "Ci si assicuri che bug-buddy sia installato correttamente."
@@ -199,9 +199,10 @@ msgid ""
 msgstr ""
 
 #: src/gdb-buddy.c:272
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Impossibile trovare il file gdb-cmd.\n"
 "Reinstallare bug-buddy."
@@ -501,7 +502,7 @@ msgstr "Inserire un indirizzo email valido."
 #: src/united-states-of-bug-buddy.c:286
 #, fuzzy, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -612,6 +613,13 @@ msgstr "Impossibile eseguire '%s'"
 msgid "Error on read..."
 msgstr "Errore in lettura..."
 
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Impossibile aprire '%s'.\n"
+#~ "Ci si assicuri che bug-buddy sia installato correttamente."
+
 #~ msgid "Distribution"
 #~ msgstr "Distribuzione"
 
@@ -692,14 +700,6 @@ msgstr "Errore in lettura..."
 
 #~ msgid "Refresh"
 #~ msgstr "Aggiorna"
-
-#, fuzzy
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Impossibile aprire '%s'.\n"
-#~ "Ci si assicuri che bug-buddy sia installato correttamente."
 
 #~ msgid "Collect debugging information from a crashed application"
 #~ msgstr "Raccolta informazioni sul crash per il debugging"

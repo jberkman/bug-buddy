@@ -5,13 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-25 03:59+0200\n"
 "PO-Revision-Date: 2001-02-17 17:42+0100\n"
 "Last-Translator: Gergely Nagy <greg@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
-"Content-Transfer-Encoding: iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/bug-buddy.c:53
 msgid "Submit bug report"
@@ -147,7 +147,7 @@ msgstr "Biztos félbeszakítod ezt a frissítést?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
@@ -204,9 +204,10 @@ msgstr ""
 "Debug információ gyûjtése ki lesz hagyva."
 
 #: src/gdb-buddy.c:272
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "A gdb-cmd file nem található\n"
 "Próbáld orvosolni a bug-buddy újratelepítésével."
@@ -502,9 +503,9 @@ msgid "Please enter a valid email address."
 msgstr "Írd be az e-mail címed!"
 
 #: src/united-states-of-bug-buddy.c:286
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -605,6 +606,13 @@ msgstr "Nem tudtam futtatni '%s'-t."
 msgid "Error on read..."
 msgstr "Hiba olvasás közben..."
 
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Nem lehet '%s'-t megnyitni.\n"
+#~ "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
+
 #~ msgid "critical"
 #~ msgstr "kritikus"
 
@@ -677,13 +685,6 @@ msgstr "Hiba olvasás közben..."
 
 #~ msgid "Refresh"
 #~ msgstr "Frissítés"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Nem lehet '%s'-t megnyitni.\n"
-#~ "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
 #~ msgid "Distribution"
 #~ msgstr "Disztribúció"
