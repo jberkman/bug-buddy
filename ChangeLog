@@ -1,3 +1,7 @@
+2000-10-02  Christophe Merlet  <christophe@merlet.net>
+
+	* src/bug-buddy.desktop: added french strings.
+
 2000-09-06  Simos Xenitellis  <simos@hellug.gr>
 
 	* src/bug-buddy.desktop: added messages for the Greek language
