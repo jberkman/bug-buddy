@@ -1,5 +1,11 @@
 1999-11-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.c:
+	* src/bug-buddy.glade: ugly glade hackery to get an about
+	button
+
+	Please do not look at the code for this commit.
+
 	* src/bug-buddy.glade: more ui nicities
 
 	* src/bug-buddy.c (on_the_druid_cancel): save config

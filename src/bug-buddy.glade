@@ -53,12 +53,7 @@
       <name>druidpagestart1</name>
       <cxx_use_heap>True</cxx_use_heap>
       <title>GNOME bug-buddy</title>
-      <text>This will guide you through the bug report submission process.
-
-
-
-Copyright (C) 1999 Jacob Berkman
-Author:  Jacob Berkman  &lt;jberkman@andrew.cmu.edu&gt;</text>
+      <text>This will guide you through the bug report submission process.</text>
       <title_color>255,255,255</title_color>
       <text_color>0,0,0</text_color>
       <background_color>0,0,1</background_color>
@@ -310,6 +305,41 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <yshrink>False</yshrink>
 	      <xfill>True</xfill>
 	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GtkHBox</class>
+	  <name>hbox14</name>
+	  <cxx_use_heap>True</cxx_use_heap>
+	  <homogeneous>False</homogeneous>
+	  <spacing>0</spacing>
+	  <child>
+	    <padding>0</padding>
+	    <expand>False</expand>
+	    <fill>False</fill>
+	    <pack>GTK_PACK_END</pack>
+	  </child>
+
+	  <widget>
+	    <class>Placeholder</class>
+	  </widget>
+
+	  <widget>
+	    <class>Custom</class>
+	    <name>about_button</name>
+	    <cxx_use_heap>True</cxx_use_heap>
+	    <creation_function>make_pixmap_button</creation_function>
+	    <string1>About</string1>
+	    <int1>0</int1>
+	    <int2>0</int2>
+	    <last_modification_time>Tue, 30 Nov 1999 17:28:54 GMT</last_modification_time>
+	    <child>
+	      <padding>0</padding>
+	      <expand>False</expand>
+	      <fill>False</fill>
+	      <pack>GTK_PACK_END</pack>
 	    </child>
 	  </widget>
 	</widget>

@@ -686,16 +686,15 @@ set_bug_class (GtkWidget *w, gpointer data)
 	return FALSE;
 }
 
+
 GtkWidget *
 make_pixmap_button (gchar *widget_name, gchar *text, 
-		    gchar *s2, int stop, int i2)
+		    gchar *s2, int type, int i2)
 {
 	GtkWidget *p, *w;
-	char *type = stop 
-		? GNOME_STOCK_PIXMAP_STOP
-		: GNOME_STOCK_PIXMAP_REFRESH;
 
-	p = gnome_stock_pixmap_widget (NULL, type);
+	/* this is slightly bad but should be ok */
+	p = gnome_stock_pixmap_widget (NULL, text);
 	w = gnome_pixmap_button (p, text);
 	GTK_WIDGET_SET_FLAGS (w, GTK_CAN_DEFAULT);
 	gtk_container_set_border_width (GTK_CONTAINER (w), GNOME_PAD_SMALL);

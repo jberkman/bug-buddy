@@ -6,12 +6,7 @@
 
 gchar *s = N_("bug-buddy");
 gchar *s = N_("GNOME bug-buddy");
-gchar *s = N_("This will guide you through the bug report submission process.\n"
-              "\n"
-              "\n"
-              "\n"
-              "Copyright (C) 1999 Jacob Berkman\n"
-              "Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>");
+gchar *s = N_("This will guide you through the bug report submission process.");
 gchar *s = N_("Contact Information");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
