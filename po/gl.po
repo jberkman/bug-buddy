@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-05-21 23:34+0200\n"
+"POT-Creation-Date: 2000-05-22 05:02-0400\n"
 "PO-Revision-Date: 2000-05-21 23:35+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
@@ -268,7 +268,23 @@ msgstr ""
 "O ficheiro '%s' xa existe.\n"
 "¿Sobrescribilo?"
 
-#: src/bug-buddy.c:947
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr ""
+
+#: src/bug-buddy.c:949
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -279,7 +295,7 @@ msgstr ""
 
 # Xa sei que 'obsoleto' non é o mesmo que "deprecated", pero non
 # atopo outra traducción, e 'deprecado' non ten nada que ver
-#: src/bug-buddy.c:1052
+#: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -287,7 +303,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --appname no seu lugar."
 
-#: src/bug-buddy.c:1065
+#: src/bug-buddy.c:1067
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -295,7 +311,7 @@ msgstr ""
 "$GNOME_CRASHED_PID é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --pid no seu lugar."
 
-#: src/bug-buddy.c:1197
+#: src/bug-buddy.c:1199
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

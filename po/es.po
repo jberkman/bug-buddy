@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-05-21 23:34+0200\n"
+"POT-Creation-Date: 2000-05-22 05:02-0400\n"
 "PO-Revision-Date: 2000-05-21 23:36+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -265,7 +265,23 @@ msgstr ""
 "El archivo '%s' ya existe.\n"
 "¿Sobreescribir este archivo?"
 
-#: src/bug-buddy.c:947
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr ""
+
+#: src/bug-buddy.c:949
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -274,7 +290,7 @@ msgstr ""
 "No se pudo abrir '%s'.\n"
 "Por favor, asegúrese de que bug-buddy está bien instalado."
 
-#: src/bug-buddy.c:1052
+#: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -282,7 +298,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --apname."
 
-#: src/bug-buddy.c:1065
+#: src/bug-buddy.c:1067
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -290,7 +306,7 @@ msgstr ""
 "$GNOME_CRASHED_PID está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --pid."
 
-#: src/bug-buddy.c:1197
+#: src/bug-buddy.c:1199
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

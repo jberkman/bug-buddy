@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2000-05-21 15:24-0400\n"
+"POT-Creation-Date: 2000-05-22 05:02-0400\n"
 "PO-Revision-Date: 2000-04-24 23:59+02:00\n"
 "Last-Translator: Dennis Smit <synap@area101.penguin.nl>\n"
 "Language-Team:\n"
@@ -137,21 +137,29 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "Core bestand van het programma"
 
-#: src/bug-buddy.c:365
+#: src/bug-buddy.c:335
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: src/bug-buddy.c:378
 msgid "The specified file does not exist."
 msgstr "Het gekozen bestand bestaat niet."
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:383
 #, c-format
 msgid "File is of type: %s"
 msgstr "Het betstand is van het type: %s"
 
-#: src/bug-buddy.c:373
+#: src/bug-buddy.c:386
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' lijkt geen tekstbestand te zijn."
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:400
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -159,7 +167,7 @@ msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/bug-buddy.c:430
+#: src/bug-buddy.c:443
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -167,23 +175,23 @@ msgstr ""
 "gdb is nog niet klaar met het vekrijgen van debug informatie.\n"
 "Kill het gdb proces (de strack trace zou niet compleet zijn)?"
 
-#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+#: src/bug-buddy.c:451 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "De gdb debugger is reeds beeindigd"
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:494
 msgid "Copyright (C) 1999 Jacob Berkman"
 msgstr "Copyright (C) 1999 Jacob Berkman"
 
-#: src/bug-buddy.c:483
+#: src/bug-buddy.c:496
 msgid "The GNOME graphical bug reporting tool"
 msgstr "Het grafische bug-rapporteringsprogramma van GNOME"
 
-#: src/bug-buddy.c:490
+#: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
 msgstr "De gave bug-buddy webpagina"
 
-#: src/bug-buddy.c:578
+#: src/bug-buddy.c:591
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -197,31 +205,31 @@ msgstr ""
 "\n"
 "Wil u de plaats van sendmail opnieuw invullen?"
 
-#: src/bug-buddy.c:614
+#: src/bug-buddy.c:627
 msgid "Please enter your name and email address"
 msgstr "Vul AUB uw naam en email-adres in"
 
-#: src/bug-buddy.c:633
+#: src/bug-buddy.c:646
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kan het bestand '%s' niet openen."
 
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:659
 #, c-format
 msgid "about to run '%s'"
 msgstr "Het programma '%s' wordt zodadelijk uitgevoerd"
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:663
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kan het '%s' mailprogramma niet starten"
 
-#: src/bug-buddy.c:678
+#: src/bug-buddy.c:691
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Uw bugrapport is opgeslagen in '%s'"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:694
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -231,19 +239,19 @@ msgstr ""
 "Uw bugrapport is opgestuurd naar:\n"
 "\tr <%s>"
 
-#: src/bug-buddy.c:811
+#: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
 msgstr "U dient een email-adres van de ontvanger op te geven"
 
-#: src/bug-buddy.c:817
+#: src/bug-buddy.c:830
 msgid "Submit this bug report now?"
 msgstr "Dit bugrapport nu opsturen?"
 
-#: src/bug-buddy.c:827
+#: src/bug-buddy.c:840
 msgid "Please choose a file to save to."
 msgstr "Kiest U een bestand waarin de bug opgeslagen moet worden"
 
-#: src/bug-buddy.c:834
+#: src/bug-buddy.c:847
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -252,7 +260,23 @@ msgstr ""
 "Het bestand '%s' bestaat reeds. \n"
 "Wilt U dit bestand overschrijven?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr ""
+
+#: src/bug-buddy.c:949
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -261,7 +285,7 @@ msgstr ""
 "Ik kan het '%s' bestand niet vinden.\n"
 "Controleer of bug-buddy correct is geinstalleerd."
 
-#: src/bug-buddy.c:1039
+#: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -269,7 +293,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME is niet meer te gebruiken.\n"
 "Gebruik alstublieft --appname command line optie."
 
-#: src/bug-buddy.c:1052
+#: src/bug-buddy.c:1067
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -277,7 +301,7 @@ msgstr ""
 "$GNOME_CRASHED_PID is niet meer te gebruiken.\n"
 "Gebruik alstublieft --pid command line optie."
 
-#: src/bug-buddy.c:1184
+#: src/bug-buddy.c:1199
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

@@ -4,6 +4,11 @@
 
 	- bug #11485
 
+	- some other bugs
+
+	- make the text widget in the miggie combo a bit smarter
+
+	- fixed some i18n issues
 0.90:
 
  * Fixes:

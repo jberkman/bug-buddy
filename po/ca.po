@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-05-21 15:24-0400\n"
+"POT-Creation-Date: 2000-05-22 05:02-0400\n"
 "PO-Revision-Date: 2000-04-18 20:38+0200\n"
 "Last-Translator: Softcatala <linux@softcatala.org>\n"
 "Language-Team: Catalan <linux@softcatala.org>\n"
@@ -150,27 +150,35 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "fitxer principal de l'aplicació"
 
-#: src/bug-buddy.c:365
+#: src/bug-buddy.c:335
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Do you want to continue anyway?"
+msgstr ""
+
+#: src/bug-buddy.c:378
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:383
 #, c-format
 msgid "File is of type: %s"
 msgstr ""
 
-#: src/bug-buddy.c:373
+#: src/bug-buddy.c:386
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr ""
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:400
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
 
-#: src/bug-buddy.c:430
+#: src/bug-buddy.c:443
 #, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
@@ -179,23 +187,23 @@ msgstr ""
 "gdb no ha acabat d'obtenir la informació de comprovació d'errades.\n"
 "Abandonar el procés gdb (no s'hauran completat els indicis de la pila)?"
 
-#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+#: src/bug-buddy.c:451 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "ja s'ha abandonat gdb"
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:494
 msgid "Copyright (C) 1999 Jacob Berkman"
 msgstr "Copyright (C) 1999 Jacob Berkman"
 
-#: src/bug-buddy.c:483
+#: src/bug-buddy.c:496
 msgid "The GNOME graphical bug reporting tool"
 msgstr "L'eina gràfica GNOME que informa de les errades"
 
-#: src/bug-buddy.c:490
+#: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
 msgstr "La poc convincent pàgina web sobre bug-buddy"
 
-#: src/bug-buddy.c:578
+#: src/bug-buddy.c:591
 #, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -208,33 +216,33 @@ msgstr ""
 "\n"
 "Especificar una nova adreça per enviar correu?"
 
-#: src/bug-buddy.c:614
+#: src/bug-buddy.c:627
 msgid "Please enter your name and email address"
 msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
 
-#: src/bug-buddy.c:633
+#: src/bug-buddy.c:646
 #, fuzzy, c-format
 msgid "Unable to open file: '%s'"
 msgstr ""
 "No s'ha pogut processar el fitxer principal amb gdb:\n"
 "'%s'"
 
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:659
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:663
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:678
+#: src/bug-buddy.c:691
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:694
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -242,20 +250,20 @@ msgid ""
 "        <%s>"
 msgstr ""
 
-#: src/bug-buddy.c:811
+#: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:817
+#: src/bug-buddy.c:830
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Enviant l'informe"
 
-#: src/bug-buddy.c:827
+#: src/bug-buddy.c:840
 msgid "Please choose a file to save to."
 msgstr "Si us plau, seleccioneu un fitxer on volgueu desar-lo"
 
-#: src/bug-buddy.c:834
+#: src/bug-buddy.c:847
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -264,7 +272,23 @@ msgstr ""
 "El fitxer '%s' ja existeix.\n"
 "Sobrescriure aquest fitxer?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr ""
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr ""
+
+#: src/bug-buddy.c:949
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -273,7 +297,7 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, asegureu-vos que bud-buddy és correctament instal.lat."
 
-#: src/bug-buddy.c:1039
+#: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -281,7 +305,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME no és permés.\n"
 "Si us plau, substituiu aquest comandament per --appname."
 
-#: src/bug-buddy.c:1052
+#: src/bug-buddy.c:1067
 #, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
@@ -290,7 +314,7 @@ msgstr ""
 "$GNOME_CRASHED_PID no és permés.\n"
 " Si us plau, substitiu aquesta línia de comandament per --pid."
 
-#: src/bug-buddy.c:1184
+#: src/bug-buddy.c:1199
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
