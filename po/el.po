@@ -6,11 +6,12 @@
 # simos: 140 messages, 13Feb2001.
 # simos: 137 messages, 16Feb2001.
 # simos: 119 messages, 26Mar2001, (sgpbea).
+# simos: 122 messages, 06Jul2001, (sgpbea).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"Project-Id-Version: bug-buddy 2.0.6\n"
+"POT-Creation-Date: 2001-07-06 01:13+0100\n"
 "PO-Revision-Date: 2001-03-26 19:15:45+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -636,7 +637,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Η αναφορά σφάλματος έχει αποθηκευθεί στο '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -646,7 +647,9 @@ msgid ""
 msgstr ""
 "Η αναφορά σφάλματός σας έχει σταλεί στο:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Ευχαριστούμε!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
