@@ -271,7 +271,9 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	GtkWidget *d;
 	char *s;
-	char *app2;
+	const char *short_app;
+	char *long_app;
+	GError *error = NULL;
 	char *args[] = { "gdb",
 			 "--batch", 
 			 "--quiet",
@@ -298,21 +300,26 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	if (!app || !extra || !*app || !*extra)
 		return;
 	
-	/* FIXME: we should probably be fully expanding the link to
-	   see if it is a directory, but unix sucks and i am lazy */
-	if (g_file_test (app, G_FILE_TEST_IS_REGULAR | G_FILE_TEST_IS_SYMLINK))
-		app2 = g_strdup (app);
-	else
-		app2 = g_find_program_in_path (app);
 
-	if (!app2) {
+	if (*app == G_DIR_SEPARATOR) {
+		long_app = g_strdup (app);
+		short_app = strrchr (app, G_DIR_SEPARATOR) + 1;
+	} else {
+		long_app = g_find_program_in_path (app);
+		short_app = app;
+	}	
+
+	g_free (druid_data.current_appname);
+	druid_data.current_appname = g_strdup (short_app);
+
+	if (!long_app) {
 		g_free (args[0]);
 		return;
 	}
 
-	args[4] = app2;
+	args[4] = long_app;
 
-	d(g_message ("About to debug '%s'", app2));
+	d(g_message ("About to debug '%s'", long_app));
 	
 	if (!g_file_test (BUDDY_DATADIR "/gdb-cmd", G_FILE_TEST_EXISTS)) {
 		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
@@ -325,32 +332,33 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 		gtk_dialog_set_default_response (GTK_DIALOG (d),
 						 GTK_RESPONSE_OK);
 		gtk_widget_destroy (d);
-		g_free (app2);
+		g_free (long_app);
 		return;
 	}
 
-	/* FIXME: use GError */
 	if (!g_spawn_async_with_pipes (NULL, args, NULL, 0, NULL, NULL,
 				       &druid_data.gdb_pid,
 				       NULL, 
 				       &druid_data.fd, 
-				       NULL, NULL)) {
+				       NULL, &error)) {
 		d = gtk_message_dialog_new (GTK_WINDOW (GTK_WIDGET ("druid-window")),
 					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
-					    _("There was an error running gdb."));
+					    _("There was an error running gdb:\n\n%s"),
+					    error->message);
 		gtk_dialog_run (GTK_DIALOG (d));
 		gtk_dialog_set_default_response (GTK_DIALOG (d),
 						 GTK_RESPONSE_OK);
 		gtk_widget_destroy (d);
-		g_free (app2);
+		g_error_free (error);
+		g_free (long_app);
 		return;
 	}
 	
 	druid_data.ioc = g_io_channel_unix_new (druid_data.fd);
 	
-	s = g_strdup_printf ("Backtrace was generated from '%s'\n\n", app2);
+	s = g_strdup_printf ("Backtrace was generated from '%s'\n\n", long_app);
 	buddy_set_text ("gdb-text", s);
 	g_free (s);
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP,
@@ -365,5 +373,5 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	druid_data.explicit_dirty = FALSE;
 
-	g_free (app2);
+	g_free (long_app);
 }

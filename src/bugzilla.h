@@ -25,6 +25,7 @@
 #include <libgnomevfs/gnome-vfs-uri.h>
 #include <libxml/parser.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gtk/gtktreemodel.h>
 
 typedef struct _BugzillaBTS BugzillaBTS;
 
@@ -109,6 +110,7 @@ typedef struct {
 	char *product;
 	char *component;
 	char *email;
+	GtkTreeIter iter;
 } BugzillaApplication;
 
 enum {

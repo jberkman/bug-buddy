@@ -790,7 +790,7 @@ main (int argc, char *argv[])
 		gtk_widget_destroy (w);
 		return 0;
 	}
-	g_free (s);
+	g_free (s);	
 
 	druid_set_state (STATE_GDB);
 

@@ -616,7 +616,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 
 	switch (druid_data.state) {
 	case STATE_GDB:
-		/* nothing */
+		products_list_load ();
 		break;
 	case STATE_PRODUCT:
 	{

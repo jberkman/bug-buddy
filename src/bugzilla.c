@@ -816,29 +816,35 @@ load_bugzillas (void)
 	"		     'IDL:GNOME/Vertigo/PanelAppletShell:1.0']) && " \
 	"defined (panel:icon) && defined (panel:category)"
 
-#define BUGZILLA_BUGZILLA  "X-GNOME-Bugzilla-Bugzilla"
-#define BUGZILLA_PRODUCT   "X-GNOME-Bugzilla-Product"
-#define BUGZILLA_COMPONENT "X-GNOME-Bugzilla-Component"
-#define BUGZILLA_EMAIL     "X-GNOME-Bugzilla-Email"
+#define BUGZILLA_BUGZILLA               "X-GNOME-Bugzilla-Bugzilla"
+#define BUGZILLA_PRODUCT                "X-GNOME-Bugzilla-Product"
+#define BUGZILLA_COMPONENT              "X-GNOME-Bugzilla-Component"
+#define BUGZILLA_EMAIL                  "X-GNOME-Bugzilla-Email"
+#define BUGZILLA_OTHER_BINARIES         "X-Gnome-Bugzilla-OtherBinaries"
 
-#define BA_BUGZILLA_BUGZILLA  "bugzilla:bugzilla"
-#define BA_BUGZILLA_PRODUCT   "bugzilla:product"
-#define BA_BUGZILLA_COMPONENT "bugzilla:component"
-#define BA_BUGZILLA_EMAIL     "bugzilla:email"
+#define BA_BUGZILLA_BUGZILLA            "bugzilla:bugzilla"
+#define BA_BUGZILLA_PRODUCT             "bugzilla:product"
+#define BA_BUGZILLA_COMPONENT           "bugzilla:component"
+#define BA_BUGZILLA_EMAIL               "bugzilla:email"
+#define BA_BUGZILLA_OTHER_BINARIES      "bugzilla:other_binaries"
 
 static void
 bugzilla_application_new (const char *name, 
 			  const char *comment, 
 			  const char *bugzilla, 
-			  const char *product, 
+			  const char *product,
 			  const char *component, 
 			  const char *email, 
-			  const char *icon)
+			  const char *icon,
+			  const char *program,
+			  const char *other_programs)
 {
 	BugzillaApplication *app;
 	GdkPixbuf *pb = NULL;
 	char *icon_copy;
 	GError *error = NULL;
+	char **programv;
+	int i;
 
 	app = g_new0 (BugzillaApplication, 1);
 	
@@ -870,6 +876,28 @@ bugzilla_application_new (const char *name,
 	}
 	
 	druid_data.applications = g_slist_prepend (druid_data.applications, app);
+
+	if (program) {
+		g_shell_parse_argv (program, &i, &programv, NULL);
+		if (programv[0]) {
+			char *s;
+			s = strrchr (programv[0], G_DIR_SEPARATOR);
+			s = s ? s+1 : programv[0];
+			d(g_print ("adding app: %s\n", s));
+			g_hash_table_insert (druid_data.program_to_application, g_strdup (s), app);
+		}
+		if (programv)
+			g_strfreev (programv);
+	}
+
+	if (other_programs) {
+		programv = g_strsplit (other_programs, ";", -1);
+		for (i=0; programv[i]; i++) {
+			d(g_print ("adding app: %s\n", programv[i]));
+			g_hash_table_insert (druid_data.program_to_application, g_strdup (programv[i]), app);
+		}
+		g_strfreev (programv);
+	}
 }
 
 static const GSList *
@@ -921,7 +949,9 @@ load_applets (GnomeIconLoader *gil)
 			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_PRODUCT,   NULL),
 			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_COMPONENT, NULL),
 			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_EMAIL,     NULL),
-			bonobo_server_info_prop_lookup (info, "panel:icon", NULL));
+			bonobo_server_info_prop_lookup (info, "panel:icon", NULL),
+			NULL,
+			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_OTHER_BINARIES, NULL));
 	}
 
 	CORBA_free (info_list);
@@ -960,7 +990,9 @@ visit_cb (const char *rel_path,
 		gnome_desktop_item_get_string (ditem, BUGZILLA_PRODUCT),
 		gnome_desktop_item_get_string (ditem, BUGZILLA_COMPONENT),
 		gnome_desktop_item_get_string (ditem, BUGZILLA_EMAIL),
-		icon);
+		icon,
+		gnome_desktop_item_get_string (ditem, GNOME_DESKTOP_ITEM_EXEC),
+		gnome_desktop_item_get_string (ditem, BUGZILLA_OTHER_BINARIES));
 	g_free (icon);
 
  visit_cb_out:
@@ -978,6 +1010,8 @@ load_applications (void)
 {
 	GnomeIconLoader *gil;
 
+	druid_data.program_to_application = g_hash_table_new (g_str_hash, g_str_equal);
+
 	gil = gnome_icon_loader_new ();
 	gnome_icon_loader_set_allow_svg (gil, FALSE);
 	
@@ -989,9 +1023,6 @@ load_applications (void)
 
 
 	load_applets (gil);
-
-	if (!druid_data.show_products)
-		products_list_load ();
 
 	g_object_unref (gil);
 }
@@ -1056,10 +1087,8 @@ add_products (gpointer key, BugzillaBTS *bts, GtkListStore *store)
 static void
 add_application (BugzillaApplication *app, GtkListStore *store)
 {
-	GtkTreeIter iter;
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
+	gtk_list_store_append (store, &app->iter);
+	gtk_list_store_set (store, &app->iter,
 			    PRODUCT_ICON, app->pixbuf,
 			    PRODUCT_NAME, app->name,
 			    PRODUCT_DESC, app->comment,
@@ -1067,13 +1096,24 @@ add_application (BugzillaApplication *app, GtkListStore *store)
 			    -1);
 }
 
+static gboolean
+unselect (gpointer data)
+{
+	gtk_tree_selection_unselect_all (data);
+	return FALSE;
+}
+
 void
 products_list_load (void)
 {
+	BugzillaApplication *app;
 	GtkTreeView *view;
 	GtkListStore *store;
+	GtkTreeSelection *selection;
+	GtkTreeIter *iter = NULL;
 
 	view = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
+	selection = gtk_tree_view_get_selection (view);
 	g_object_get (G_OBJECT (view), "model", &store, NULL);
 	gtk_list_store_clear (store);
 
@@ -1085,8 +1125,26 @@ products_list_load (void)
 		g_hash_table_foreach (druid_data.bugzillas, (GHFunc)add_products, store);
 	} else {
 		g_slist_foreach (druid_data.applications, (GFunc)add_application, store);
+		if (druid_data.current_appname) {
+			app = g_hash_table_lookup (druid_data.program_to_application,
+						   druid_data.current_appname);
+			d(g_print ("looking for: %s -> %p\n", druid_data.current_appname, app));
+			if (app)
+				iter = &app->iter;
+		}
 	}
 	gtk_tree_view_columns_autosize (view);
+
+	d(g_print ("selecting: %p\n", iter));
+
+#if 0
+	/* this doesn't work; gtk treeview is broke */
+	if (iter)
+		gtk_tree_selection_select_iter (selection, iter);
+	else
+		gtk_tree_selection_unselect_all (selection);
+	g_idle_add (unselect, selection);
+#endif
 }
 
 void

@@ -113,6 +113,8 @@ typedef struct {
 
 	GHashTable  *bugzillas;
 	GSList *applications;
+	GHashTable *program_to_application;
+	char *current_appname;
 
 	/* Debian BTS stuff */
 	SubmitType    submit_type;
