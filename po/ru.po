@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-05-23 22:45+0000\n"
+"POT-Creation-Date: 2000-10-04 04:36-0400\n"
 "PO-Revision-Date: 2000-05-23 22:50+00:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -12,157 +12,158 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-r\n"
 "Content-Transfer-Encoding: 8 bit\n"
 
-#: src/bts.c:99
+#: src/bts.c:100
 msgid "Distribution"
 msgstr "Дистрибутив"
 
-#: src/bts.c:107
+#: src/bts.c:108
 msgid "System"
 msgstr "Система"
 
-#: src/bug-buddy.c:74
+#: src/bug-buddy.c:81
 msgid "critical"
 msgstr "критичная"
 
-#: src/bug-buddy.c:75
+#: src/bug-buddy.c:82
 msgid "grave"
 msgstr "серьезная"
 
-#: src/bug-buddy.c:76
+#: src/bug-buddy.c:83
 msgid "normal"
 msgstr "обычная"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:84
 msgid "wishlist"
 msgstr "запрос улучшения"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:89
 msgid "software bug"
 msgstr "ошибка программы"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:90
 msgid "documentation bug"
 msgstr "ошибка в документации"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:91
 msgid "change request"
 msgstr "запрос изменений"
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:92
 msgid "support"
 msgstr "поддержка"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:97
 msgid "Submit bug report"
 msgstr "Отправка сообщения об ошибке"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:98
 msgid "Only send report to yourself"
 msgstr "Послать сообщение только по себе"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:99
 msgid "Save report to file"
 msgstr "Сохранить отчет в файл"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:104
 msgid "Collect debugging information from a crashed application"
 msgstr "Сборка отладочной информации из рухнувшего приложения"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:105
 msgid "Collect debugging information from a core file"
 msgstr "Сборка отладочной информации из файла core"
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:106
 msgid "Skip this step"
 msgstr "Пропустить этот шаг"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:111
 msgid "Create a new bug report"
 msgstr "Создать новое сообщение об ошибке"
 
-#: src/bug-buddy.c:105
+#: src/bug-buddy.c:112
 msgid "Add more information to existing report"
 msgstr "Добавить информацию к существующему сообщению об ошибке"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "Name of contact"
 msgstr "Имя контактного лица"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "NAME"
 msgstr "ИМЯ"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "Email address of contact"
 msgstr "Эл. адрес контактного лица"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "EMAIL"
 msgstr "Эл.Почта"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "Package containing the program"
 msgstr "Программный пакет содержащий программу"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "PACKAGE"
 msgstr "ПАКЕТ"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "Version of the package"
 msgstr "Версия пакета"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "VERSION"
 msgstr "ВЕРСИЯ"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:125
 msgid "File name of crashed program"
 msgstr "Название файла рухнувшей программы"
 
-#: src/bug-buddy.c:118 src/bug-buddy.c:120
+#: src/bug-buddy.c:125 src/bug-buddy.c:127
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID of crashed program"
 msgstr "PID рухнувшей программы"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:120
+#: src/bug-buddy.c:127
 msgid "Core file from program"
 msgstr "core-файл программы"
 
-#: src/bug-buddy.c:335
+#: src/bug-buddy.c:328
+#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
-"Do you want to continue anyway?"
+"Please specify a package."
 msgstr ""
 "Гораздо полезнее, если вы укажете\n"
 "более конкретный пакет чем 'general'.\n"
 "\n"
 "Вы хотите продолжать?"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "Указанный файл не существует."
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:375
 #, c-format
 msgid "File is of type: %s"
 msgstr "Файл типа: %s"
 
-#: src/bug-buddy.c:386
+#: src/bug-buddy.c:378
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' выглядит не как текстовый файл."
 
-#: src/bug-buddy.c:400
+#: src/bug-buddy.c:392
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -170,7 +171,7 @@ msgstr ""
 "Вы должны включить тему и описание\n"
 "в ваше сообщение об ошибке."
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:435
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -178,23 +179,30 @@ msgstr ""
 "gdb не закончил получение отладочной информации.\n"
 "Уничтожить gdb процесс (трассировка стека будет неполной)?"
 
-#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+#: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb уже закрыт"
 
-#: src/bug-buddy.c:494
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Авторское право (С) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:496
-msgid "The GNOME graphical bug reporting tool"
+#: src/bug-buddy.c:486
+#, fuzzy
+msgid "The graphical bug reporting tool for GNOME."
 msgstr "Средство Gnome для сообщения об ошибках"
 
-#: src/bug-buddy.c:503
+#: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "Небольшая веб-страничка bug-buddy"
 
-#: src/bug-buddy.c:591
+#: src/bug-buddy.c:603
+#, fuzzy
+msgid "Please enter your name."
+msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+
+#: src/bug-buddy.c:609
+#, fuzzy
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+
+#: src/bug-buddy.c:620
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -207,31 +215,27 @@ msgstr ""
 "\n"
 "Укажете новое расположение sendmail?"
 
-#: src/bug-buddy.c:627
-msgid "Please enter your name and email address"
-msgstr "Пожалуйста, введите ваше имя и эл.адрес"
-
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:671
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Не удалось открыть файл core: \"%s\""
 
-#: src/bug-buddy.c:659
+#: src/bug-buddy.c:685
 #, c-format
 msgid "about to run '%s'"
 msgstr "о запуске '%s'"
 
-#: src/bug-buddy.c:663
+#: src/bug-buddy.c:689
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Не удалось запустить почтовую программу: '%s'"
 
-#: src/bug-buddy.c:691
+#: src/bug-buddy.c:718
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваше сообщение об ошибке сохранено в '%s'"
 
-#: src/bug-buddy.c:694
+#: src/bug-buddy.c:721
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -242,19 +246,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:824
+#: src/bug-buddy.c:851
 msgid "You must specify a recipient email address"
 msgstr "Вы должны указать эл.адрес получателя"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:857
 msgid "Submit this bug report now?"
 msgstr "Отправить это сообщение об ошибке сейчас?"
 
-#: src/bug-buddy.c:840
+#: src/bug-buddy.c:867
 msgid "Please choose a file to save to."
 msgstr "Пожалуйста, выберите файл для сохранения."
 
-#: src/bug-buddy.c:847
+#: src/bug-buddy.c:874
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -263,23 +267,23 @@ msgstr ""
 "Файл \"%s\" уже существует.\n"
 "Переписать?"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "About"
 msgstr "О программе"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Help"
 msgstr "Справка"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Stop"
 msgstr "Стоп"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Refresh"
 msgstr "Обновить"
 
-#: src/bug-buddy.c:949
+#: src/bug-buddy.c:979
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -288,7 +292,7 @@ msgstr ""
 "Не удалось открыть \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1084
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -296,7 +300,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --appname."
 
-#: src/bug-buddy.c:1067
+#: src/bug-buddy.c:1097
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -304,7 +308,7 @@ msgstr ""
 "$GNOME_CRASHED_PID больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --pid."
 
-#: src/bug-buddy.c:1199
+#: src/bug-buddy.c:1229
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -313,12 +317,12 @@ msgstr ""
 "Не удалось найти \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/gdb-buddy.c:41
+#: src/gdb-buddy.c:43
 #, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "получение состояния стека... (%d)"
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:117
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -327,7 +331,7 @@ msgstr ""
 "Не удалось обработать gdb файл core:\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:141
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -336,11 +340,11 @@ msgstr ""
 "Невозможно определить какой двойичный файл создан\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:172
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr "Ошибка при чтении... прервание"
 
-#: src/gdb-buddy.c:204
+#: src/gdb-buddy.c:218
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -348,7 +352,7 @@ msgstr ""
 "Не удалось найти файл gdb-cmd.\n"
 "Пожалуйста, попытайтесь переустановить bug-buddy."
 
-#: src/gdb-buddy.c:212 src/util.c:75
+#: src/gdb-buddy.c:227 src/util.c:75
 msgid "Error on fork()."
 msgstr "Ошибка на fork()."
 
@@ -566,6 +570,9 @@ msgstr "Не удалось открыть канал"
 msgid "Could not run '%s'."
 msgstr "Не удалось запустить '%s'."
 
-#: src/util.c:112
+#: src/util.c:113
 msgid "Error on read..."
 msgstr "Ошибка при чтении..."
+
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Авторское право (С) 1999 Jacob Berkman"

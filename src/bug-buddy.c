@@ -22,13 +22,19 @@
 
 #include "config.h"
 
+#include <stdio.h>
+#include <unistd.h>
+
+#include <errno.h>
+
 #include <gnome.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <glade/glade.h>
 
-#include <gnome-xml/tree.h>
-#include <gnome-xml/parser.h>
+#include <tree.h>
+#include <parser.h>
 
+#include <sys/types.h>
 #include <signal.h>
 #include <dirent.h>
 
@@ -43,6 +49,7 @@
 gboolean on_front_page_next (GtkWidget *, GnomeDruid *);
 gboolean delete_me (GtkWidget *, GdkEventAny *, gpointer data);
 gboolean on_nature_page_next  (GtkWidget *, GnomeDruid *);
+gboolean on_debian_page_next (GtkWidget *page, GnomeDruid *druid);
 gboolean on_desc_page_next (GtkWidget *, GnomeDruid *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_less_page_next    (GtkWidget *, GtkWidget *);
@@ -121,23 +128,6 @@ static const struct poptOption options[] = {
 	{ NULL } 
 };
 
-#if 0
-static void
-set_icon_on_window (GtkWidget *w, gpointer data)
-{
-	GdkPixbuf *pixbuf;
-	static GdkPixmap *pixmap;
-	static GdkBitmap *bitmap;
-	
-	pixbuf = gdk_pixbuf_new_from_file (BUDDY_ICONDIR"/bug-buddy.png");
-	if (!pixbuf)
-		return;
-
-	gdk_pixbuf_render_pixmap_and_mask (pixbuf, &pixmap, &bitmap, 128);
-	gdk_window_set_icon (w->window, NULL, pixmap, bitmap);
-}
-#endif
-
 static void
 save_entry (const char *name, const char *name2, const char *save_path)
 {
@@ -150,7 +140,8 @@ save_entry (const char *name, const char *name2, const char *save_path)
 	w = GET_WIDGET (name2);
 	if (GNOME_IS_FILE_ENTRY (w))
 		w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
-	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
+	if (s && *s)
+		gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
 	gnome_entry_save_history (GNOME_ENTRY (w));
 }
 
@@ -161,7 +152,7 @@ save_config ()
 	gboolean b;
 
 	save_entry ("name_entry",   "name_entry2",   "/bug-buddy/last/name");
-	save_entry ("email_entry",  "email_entry2",  "/bug-buddy/last/email");
+	save_entry ("email_entry",  "email_entry2",  "/bug-buddy/last/email_address");
 	save_entry ("file_entry",   "file_entry2",   "/bug-buddy/last/bugfile");
 	save_entry ("mailer_entry", "mailer_entry2", "/bug-buddy/last/mailer");
 
@@ -206,7 +197,7 @@ static void
 load_config ()
 {
 	GtkWidget *w;
-	char *sendmail;
+	char *sendmail, *email = NULL;
 	gboolean b;
 
 	load_entry ("name_entry", "name_entry2",
@@ -214,7 +205,8 @@ load_config ()
 
 	druid_data.default_email = 
 		load_entry ("email_entry", "email_entry2",
-			    "/bug-buddy/last/email", g_get_user_name ());
+			    "/bug-buddy/last/email_address", email);
+	g_free (email);
 
 	load_entry ("file_entry", "file_entry2",
 		    "/bug-buddy/last/bugfile", NULL);
@@ -327,20 +319,20 @@ gboolean
 on_debian_page_next (GtkWidget *page, GnomeDruid *druid)
 {
 	GtkWidget *w;
-	char *s, *email;
+	char *s;
+	const char *email;
 	int bugnum;
 
 	s = gtk_entry_get_text (GTK_ENTRY (CTREE_COMBO (GET_WIDGET ("miggie_combo"))->entry));
 	if (!strcmp ("general", s)) {
 		w = gnome_message_box_new (_("It is much more helpful if you specify\n"
 					     "a more specific package than 'general'.\n\n"
-					     "Do you want to continue anyway?"),
-					   GNOME_MESSAGE_BOX_QUESTION,
-					   GNOME_STOCK_BUTTON_YES,
-					   GNOME_STOCK_BUTTON_NO,
+					     "Please specify a package."),
+					   GNOME_MESSAGE_BOX_ERROR,
+					   GNOME_STOCK_BUTTON_OK,
 					   NULL);
-		if (GNOME_NO == gnome_dialog_run_and_close (w))
-			return TRUE;		
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		return TRUE;		
 	}
 
 	email = druid_data.bts->get_email ();
@@ -371,7 +363,7 @@ on_desc_page_next (GtkWidget *page, GnomeDruid *druid)
 	char *s = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("include_entry")),
 					  0, -1);
 	if (s && strlen (s) > 0) {
-		char *mime_type;
+		const char *mime_type;
 		if (!g_file_exists (s)) {
 			g_free (s);
 			gnome_dialog_run_and_close (
@@ -480,7 +472,7 @@ on_about_button_clicked (GtkWidget *button, gpointer data)
 {
 	static GtkWidget *about, *href;
 	static const char *authors[] = {
-		"Jacob Berkman  <jacob@helixcode.com>",
+		"Jacob Berkman  <jacob@bug-buddy.org>",
 		NULL
 	};
 
@@ -491,9 +483,10 @@ on_about_button_clicked (GtkWidget *button, gpointer data)
 	}
 		
 	about = gnome_about_new (_(PACKAGE), VERSION,
-				 _("Copyright (C) 1999 Jacob Berkman"),
+				 _("The graphical bug reporting tool for GNOME."),
 				 authors,
-				 _("The GNOME graphical bug reporting tool"),
+				 "Copyright (C) 1999, 2000 Jacob Berkman\n"
+				 "Copyright 2000 Helix Code, Inc.",
 				 BUDDY_ICONDIR"/bug-buddy.png");
 	gtk_signal_connect (GTK_OBJECT (about), "destroy",
 			    GTK_SIGNAL_FUNC (gtk_widget_destroyed),
@@ -565,6 +558,39 @@ on_version_page_prepare (GnomeDruidPage *page, GnomeDruid *druid)
 	return FALSE;
 }
 
+static gboolean
+email_is_invalid (const char *addy)
+{
+	char *rev;
+
+	if (!addy || strlen (addy) < 4 || !strchr (addy, '@') || strstr (addy, "@."))
+		return TRUE;
+
+	g_strreverse (rev = g_strdup (addy));
+	
+	/* assume that the country thingies are ok */
+	if (rev[2] == '.') {
+		g_free (rev);
+		return FALSE;
+	}
+
+	if (g_strncasecmp (rev, "moc.", 4) &&
+	    g_strncasecmp (rev, "gro.", 4) &&
+	    g_strncasecmp (rev, "ten.", 4) &&
+	    g_strncasecmp (rev, "ude.", 4) &&
+	    g_strncasecmp (rev, "lim.", 4) &&
+	    g_strncasecmp (rev, "vog.", 4) &&
+	    g_strncasecmp (rev, "tni.", 4) &&
+	    g_strncasecmp (rev, "apra.", 5)) {
+		g_free (rev);
+		return TRUE;
+	}
+
+	g_free (rev);
+
+	return FALSE;
+}
+
 gboolean
 on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 {
@@ -573,13 +599,16 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 
 	w = GET_WIDGET ("name_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
-	if (!s || strlen(s) == 0)
-		goto contact_failed;
-       
+	if (!s || strlen(s) == 0) {
+		gnome_error_dialog (_("Please enter your name."));
+		return TRUE;
+	}
 	w = GET_WIDGET ("email_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
-	if (!s || strlen(s) == 0)
-		goto contact_failed;
+	if (email_is_invalid (s)) {
+		gnome_error_dialog (_("Please enter a valid email address."));
+		return TRUE;
+	}
 
 	w = GET_WIDGET ("mailer_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
@@ -622,16 +651,12 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 					   TRUE, TRUE, TRUE);
 
 	return FALSE;
-
- contact_failed:
-	gnome_error_dialog (_("Please enter your name and email address"));
-	return TRUE;
 }
 
 gboolean
 on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 {
-	gchar *to, *s, *s2, *file, *command;
+	gchar *to, *s, *s2, *file=NULL, *command;
 	GtkWidget *w;
 	FILE *fp;
 
@@ -648,7 +673,8 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 			g_free (s);
 			g_free (to);
 			gnome_dialog_run_and_close (GNOME_DIALOG (w));
-			gnome_druid_set_page (GNOME_DRUID (druid), ACTION_PAGE);
+			gnome_druid_set_page (GNOME_DRUID (druid),
+					      GNOME_DRUID_PAGE (ACTION_PAGE));
 			return TRUE;
 		}
 	} else {
@@ -665,7 +691,8 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 			g_free (s);
 			g_free (s2);
 			gnome_dialog_run_and_close (GNOME_DIALOG (w));
-			gnome_druid_set_page (GNOME_DRUID (druid), ACTION_PAGE);
+			gnome_druid_set_page (GNOME_DRUID (druid), 
+					      GNOME_DRUID_PAGE (ACTION_PAGE));
 			return TRUE;
 		}
 		g_free (s);
@@ -826,9 +853,9 @@ on_action_page_next (GtkWidget *page, GtkWidget *druid)
 		}
 		g_free (to);
 
-		return GNOME_NO == gnome_dialog_run_and_close (
+		return GNOME_NO == gnome_dialog_run_and_close (GNOME_DIALOG (
 			gnome_question_dialog (_("Submit this bug report now?"),
-					       NULL, NULL));
+					       NULL, NULL)));
 	}
 
 	entry = glade_xml_get_widget (druid_data.xml,
@@ -905,6 +932,7 @@ make_pixmap_button (gchar *widget_name, gchar *text,
 	GTK_WIDGET_SET_FLAGS (w, GTK_CAN_DEFAULT);
 	gtk_container_set_border_width (GTK_CONTAINER (w), GNOME_PAD_SMALL);
 	return w;
+	s2 = this_is_an_ugly_hack_for_kmaraas_and_the_rest_of_the_gnome_i18n_team[0];
 }
 
 GtkWidget *
@@ -923,16 +951,6 @@ make_anim (gchar *widget_name, gchar *imgname,
 						pixmap, 0, 0, freq, size);
 	g_free (pixmap);
 	return w;
-}
-
-static void 
-init_toggle (const char *name, int test, int data, GtkSignalFunc func)
-{
-	GtkWidget *w;
-	w = GET_WIDGET (name);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled", func,
-			    GINT_TO_POINTER (data));
-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w), test == data);
 }
 
 static void
@@ -1013,7 +1031,7 @@ init_ui ()
 
 	load_config ();
 
-	gtk_button_set_relief (GET_WIDGET ("already_href"),
+	gtk_button_set_relief (GTK_BUTTON (GET_WIDGET ("already_href")),
 			       GTK_RELIEF_NONE);
 
 	m = gtk_menu_new ();

@@ -97,7 +97,8 @@ char *
 get_line_from_ioc (GIOChannel *ioc)
 {
 	char buf[1024];
-	int pos, len;
+	int pos; 
+	guint len;
 
 	buf[0] = '\0';
 

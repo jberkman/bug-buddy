@@ -41,5 +41,6 @@ struct _BugTrackingSystem {
 extern BugTrackingSystem debian_bts;
 
 gboolean load_bts_xml (void);
+void update_das_clist (void);
 
 #endif /* __BTS_H__ */

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2000-06-30 13:34+0200\n"
+"POT-Creation-Date: 2000-10-04 04:36-0400\n"
 "PO-Revision-Date: 2000-06-29 14:00+0200\n"
 "Last-Translator: Quico Llach <quico@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
@@ -14,159 +14,160 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bts.c:99
+#: src/bts.c:100
 msgid "Distribution"
 msgstr "Distribució"
 
-#: src/bts.c:107
+#: src/bts.c:108
 msgid "System"
 msgstr "Sistema"
 
-#: src/bug-buddy.c:74
+#: src/bug-buddy.c:81
 msgid "critical"
 msgstr "crític"
 
-#: src/bug-buddy.c:75
+#: src/bug-buddy.c:82
 msgid "grave"
 msgstr "greu"
 
-#: src/bug-buddy.c:76
+#: src/bug-buddy.c:83
 msgid "normal"
 msgstr "normal"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:84
 msgid "wishlist"
 msgstr "llista de desigs"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:89
 msgid "software bug"
 msgstr "error de programari"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:90
 msgid "documentation bug"
 msgstr "error de documentació"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:91
 msgid "change request"
 msgstr "petició de canvi"
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:92
 msgid "support"
 msgstr "suport"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:97
 msgid "Submit bug report"
 msgstr "Envia l'informe d'errors"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:98
 msgid "Only send report to yourself"
 msgstr "Només se us enviarà l'error a vós mateix"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:99
 msgid "Save report to file"
 msgstr "Desa l'informe en un fitxer"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:104
 msgid "Collect debugging information from a crashed application"
 msgstr ""
 "Reuneix la informació de depuració d'una aplicació que no ha funcionat "
 "correctament"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:105
 msgid "Collect debugging information from a core file"
 msgstr "Reuneix la informació de depuració d'un fitxer de nucli"
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:106
 msgid "Skip this step"
 msgstr "omet aquest pas"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:111
 msgid "Create a new bug report"
 msgstr "Crea un nou infome d'errors"
 
-#: src/bug-buddy.c:105
+#: src/bug-buddy.c:112
 msgid "Add more information to existing report"
 msgstr "Afegeix més informació a un informe ja existent"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "Name of contact"
 msgstr "Nom del contacte"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "NAME"
 msgstr "NOM"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "Email address of contact"
 msgstr "Adreça electrònica del contacte"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "EMAIL"
 msgstr "ADREÇA ELECTRÒNICA"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "Package containing the program"
 msgstr "Paquet que conté el programa"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "PACKAGE"
 msgstr "PAQUET"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "Version of the package"
 msgstr "Versió del paquet"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "VERSION"
 msgstr "VERSIÓ"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:125
 msgid "File name of crashed program"
 msgstr "Nom de fitxer del programa que no ha funcionat correctament"
 
-#: src/bug-buddy.c:118 src/bug-buddy.c:120
+#: src/bug-buddy.c:125 src/bug-buddy.c:127
 msgid "FILE"
 msgstr "FITXER"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID of crashed program"
 msgstr "PID del programa que no ha funcionat correctament"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:120
+#: src/bug-buddy.c:127
 msgid "Core file from program"
 msgstr "Fitxer de nucli del programa"
 
-#: src/bug-buddy.c:335
+#: src/bug-buddy.c:328
+#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
-"Do you want to continue anyway?"
+"Please specify a package."
 msgstr ""
 "És molt més útil si especifiqueu\n"
 "un paquet més específic que no pas 'general'.\n"
 "\n"
 "Voleu continuar igualment?"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "El fitxer especificat no existeix."
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:375
 #, c-format
 msgid "File is of type: %s"
 msgstr "El fitxer és del tipus: %s"
 
-#: src/bug-buddy.c:386
+#: src/bug-buddy.c:378
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' no sembla un fitxer de text."
 
-#: src/bug-buddy.c:400
+#: src/bug-buddy.c:392
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -174,7 +175,7 @@ msgstr ""
 "Heu d'incloure un assumpte i una descripció\n"
 "en el vostre informe d'errors."
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:435
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -182,23 +183,30 @@ msgstr ""
 "El gdb no ha acabat d'obtenir la informació de depuració.\n"
 "Voleu interrompre el procés gdb? (el seguiment de la pila serà incomplet)"
 
-#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+#: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "El gdb ja s'ha abandonat"
 
-#: src/bug-buddy.c:494
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Copyright (C) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:496
-msgid "The GNOME graphical bug reporting tool"
+#: src/bug-buddy.c:486
+#, fuzzy
+msgid "The graphical bug reporting tool for GNOME."
 msgstr "L'eina gràfica del GNOME per informar d'errors"
 
-#: src/bug-buddy.c:503
+#: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "La poc convincent pàgina web del bug-buddy"
 
-#: src/bug-buddy.c:591
+#: src/bug-buddy.c:603
+#, fuzzy
+msgid "Please enter your name."
+msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
+
+#: src/bug-buddy.c:609
+#, fuzzy
+msgid "Please enter a valid email address."
+msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
+
+#: src/bug-buddy.c:620
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -211,31 +219,27 @@ msgstr ""
 "\n"
 "Voleu especificar una nova ubicació per a \"sendmail\"?"
 
-#: src/bug-buddy.c:627
-msgid "Please enter your name and email address"
-msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
-
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:671
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "No es pot obrir el fitxer: '%s'"
 
-#: src/bug-buddy.c:659
+#: src/bug-buddy.c:685
 #, c-format
 msgid "about to run '%s'"
 msgstr "ara s'executarà '%s'"
 
-#: src/bug-buddy.c:663
+#: src/bug-buddy.c:689
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "No es pot iniciar el programa de correu: '%s'"
 
-#: src/bug-buddy.c:691
+#: src/bug-buddy.c:718
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
-#: src/bug-buddy.c:694
+#: src/bug-buddy.c:721
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -246,19 +250,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:824
+#: src/bug-buddy.c:851
 msgid "You must specify a recipient email address"
 msgstr "Heu d'especificar una adreça electrònic destinatària"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:857
 msgid "Submit this bug report now?"
 msgstr "Voleu enviar ara aquest informe d'errors?"
 
-#: src/bug-buddy.c:840
+#: src/bug-buddy.c:867
 msgid "Please choose a file to save to."
 msgstr "Si us plau, seleccioneu un fitxer per desar-lo"
 
-#: src/bug-buddy.c:847
+#: src/bug-buddy.c:874
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -267,23 +271,23 @@ msgstr ""
 "El fitxer '%s' ja existeix.\n"
 "Voleu sobrescriure aquest fitxer?"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "About"
 msgstr "Quant a"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Help"
 msgstr "Ajuda"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Stop"
 msgstr "Atura"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Refresh"
 msgstr "Refresca"
 
-#: src/bug-buddy.c:949
+#: src/bug-buddy.c:979
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -292,7 +296,7 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1084
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -300,7 +304,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_APPNAME.\n"
 "Si us plau, substituïu-ho per l'ordre -appname en la línia d'ordres."
 
-#: src/bug-buddy.c:1067
+#: src/bug-buddy.c:1097
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -308,7 +312,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_PID.\n"
 "Si us plau, substituïu-ho per l'ordre -pid en la línia d'ordres."
 
-#: src/bug-buddy.c:1199
+#: src/bug-buddy.c:1229
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -317,12 +321,12 @@ msgstr ""
 "No s'ha pogut trobar '%s'.\n"
 "Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
-#: src/gdb-buddy.c:41
+#: src/gdb-buddy.c:43
 #, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "s'està obtenint el seguiment de la pila... (%d)"
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:117
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -331,7 +335,7 @@ msgstr ""
 "No s'ha pogut processar el fitxer de nucli amb el gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:141
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -340,11 +344,11 @@ msgstr ""
 "No s'ha pogut determinar quin és el binari que va crear\n"
 "'%s'"
 
-#: src/gdb-buddy.c:172
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr "Error de lectura...s'està avortant"
 
-#: src/gdb-buddy.c:204
+#: src/gdb-buddy.c:218
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -352,7 +356,7 @@ msgstr ""
 "No s'ha pogut trobar el fitxer gdb-cmd.\n"
 "Si us plau, intenteu tornar a instal·lar el bug-buddy."
 
-#: src/gdb-buddy.c:212 src/util.c:75
+#: src/gdb-buddy.c:227 src/util.c:75
 msgid "Error on fork()."
 msgstr "Error a fork()."
 
@@ -571,9 +575,12 @@ msgstr "No es pot obrir el conducte"
 msgid "Could not run '%s'."
 msgstr "No s'ha pogut executar '%s'"
 
-#: src/util.c:112
+#: src/util.c:113
 msgid "Error on read..."
 msgstr "Error de lectura..."
+
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Copyright (C) 1999 Jacob Berkman"
 
 #~ msgid "Child process exited with status %d"
 #~ msgstr "El procés fill ha acabat amb l'estat %d"

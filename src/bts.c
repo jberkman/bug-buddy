@@ -35,12 +35,13 @@
 #include "glade-druid.h"
 
 static Distribution distros[] = {
-	{ "Slackware", "/etc/slackware-version", &debian_phy },
-	{ "Debian",    "/etc/debian_version",    &debian_phy },
-	{ "Mandrake",  "/etc/mandrake-release",  &redhat_phy },
-	{ "TurboLinux","/etc/turbolinux-release",&turbolinux_phy },
-	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
-	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
+	{ "Slackware",     "/etc/slackware-version",  &debian_phy },
+	{ "Debian",        "/etc/debian_version",     &debian_phy },
+	{ "Mandrake",      "/etc/mandrake-release",   &redhat_phy },
+	{ "TurboLinux",    "/etc/turbolinux-release", &turbolinux_phy },
+	{ "SuSE",          "/etc/SuSE-release",       &redhat_phy },
+	{ "Red Hat",       "/etc/redhat-release",     &redhat_phy },
+	{ "IRIX Freeware", "/bin/hinv",               &irix_phy },
 	{ NULL }
 };
 

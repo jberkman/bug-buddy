@@ -201,7 +201,7 @@ debian_bts_init (xmlNodePtr node)
 			
 			xmlFree (appmap);
 
-			w = GTK_CLIST (CTREE_COMBO (combo)->ctree);
+			w = CTREE_COMBO (combo)->ctree;
 			gtk_clist_freeze (GTK_CLIST (w));
 			while ((row[0] = get_line_from_fd (fd))) {
 				if (row[0][0] != last_letter ||

@@ -1,3 +1,28 @@
+2000-10-04  Jacob "Ulysses" Berkman  <jacob@helixcode.com>
+
+	* src/gdb-buddy.c (get_trace_from_pair): check that the file
+	exists, and is not a directory.  If it doesn't, look for it in our
+	path.  This fixes problems with evolution and ~/evolution.
+
+	* src/bug-buddy.c: warning fixes, removed #if 0'd code
+	(save_entry): don't prepend history if entry is blank
+	(save_config): change the email var name
+	(load_config): pass NULL for email, since we don't want to guess
+	(on_debian_page_next): do not accept 'general' as a package at all
+	(email_is_invalid): add stricter checking of email addresses.
+	Based on a patch from Robert Brady <robert@suse.co.uk>.
+
+	* src/util.c:
+	* src/gtk-combo-box.c:
+	* src/bug-buddy.h:
+	* src/bts.h:
+	* src/bts-debian.c: warning fixes
+
+	* src/distro.h:
+	* src/bts.c:
+	* src/distro-irix.c:
+	* src/Makefile.am: add irix support
+
 2000-10-02  Christophe Merlet  <christophe@merlet.net>
 
 	* src/bug-buddy.desktop: added french strings.

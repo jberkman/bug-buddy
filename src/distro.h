@@ -55,5 +55,6 @@ struct _Distribution {
 extern Phylum debian_phy;
 extern Phylum redhat_phy;
 extern Phylum turbolinux_phy;
+extern Phylum irix_phy;
 
 #endif /* __DISTRO_H__ */

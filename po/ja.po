@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20000524\n"
-"POT-Creation-Date: 2000-05-24 00:50+0900\n"
+"POT-Creation-Date: 2000-10-04 04:36-0400\n"
 "PO-Revision-Date: 2000-05-24 00:52+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
@@ -13,163 +13,164 @@ msgstr ""
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bts.c:99
+#: src/bts.c:100
 msgid "Distribution"
 msgstr "Distribution"
 
-#: src/bts.c:107
+#: src/bts.c:108
 msgid "System"
 msgstr "System"
 
-#: src/bug-buddy.c:74
+#: src/bug-buddy.c:81
 msgid "critical"
 msgstr "重大"
 
-#: src/bug-buddy.c:75
+#: src/bug-buddy.c:82
 msgid "grave"
 msgstr "深刻"
 
-#: src/bug-buddy.c:76
+#: src/bug-buddy.c:83
 msgid "normal"
 msgstr "普通"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:84
 msgid "wishlist"
 msgstr "願望"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:89
 msgid "software bug"
 msgstr "ソフトウェアの不具合"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:90
 msgid "documentation bug"
 msgstr "ドキュメントの不具合"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:91
 msgid "change request"
 msgstr "変更要求"
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:92
 msgid "support"
 msgstr "サポート"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:97
 msgid "Submit bug report"
 msgstr "不具合報告を送信"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:98
 msgid "Only send report to yourself"
 msgstr "自分自身にだけ報告を送信する"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:99
 msgid "Save report to file"
 msgstr "ファイルに報告を保存する"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:104
 msgid "Collect debugging information from a crashed application"
 msgstr "クラッシュしたアプリケーションからデバッグ情報を収集します"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:105
 msgid "Collect debugging information from a core file"
 msgstr "core ファイルからデバッグ情報を収集します"
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:106
 msgid "Skip this step"
 msgstr "このステップは飛ばします"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:111
 msgid "Create a new bug report"
 msgstr "新しい不具合報告を作成する"
 
-#: src/bug-buddy.c:105
+#: src/bug-buddy.c:112
 msgid "Add more information to existing report"
 msgstr "既存の不具合報告により多くの情報を追加する"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "Name of contact"
 msgstr "連絡者の名前"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "NAME"
 msgstr "NAME"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "Email address of contact"
 msgstr "連絡者の Email アドレス"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "Package containing the program"
 msgstr "プログラムを含むパッケージ"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "PACKAGE"
 msgstr "PACKAGE"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "Version of the package"
 msgstr "パッケージのバージョン"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:125
 msgid "File name of crashed program"
 msgstr "クラッシュしたプログラムのファイル名"
 
-#: src/bug-buddy.c:118 src/bug-buddy.c:120
+#: src/bug-buddy.c:125 src/bug-buddy.c:127
 msgid "FILE"
 msgstr "FILE"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID of crashed program"
 msgstr "クラッシュしたプログラムの PID"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:120
+#: src/bug-buddy.c:127
 msgid "Core file from program"
 msgstr "プログラムからの core ファイル"
 
-#: src/bug-buddy.c:335
+#: src/bug-buddy.c:328
+#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
-"Do you want to continue anyway?"
+"Please specify a package."
 msgstr ""
 "'general' より特定のパッケージを指定するなら\n"
 "それははるかに役立っています\n"
 "\n"
 "どうしても続けたいですか?"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "指定されたファイルはありません"
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:375
 #, c-format
 msgid "File is of type: %s"
 msgstr "ファイルの種類: %s"
 
-#: src/bug-buddy.c:386
+#: src/bug-buddy.c:378
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' はテキストファイルの様には見えません"
 
-#: src/bug-buddy.c:400
+#: src/bug-buddy.c:392
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr "不具合報告に表題と説明を含めなければなりません"
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:435
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -177,23 +178,30 @@ msgstr ""
 "gdb はデバッグ情報の収集が完了しませんでした\n"
 "gdb プロセスを終了しますか (スタックトレースは不完全でしょう)?"
 
-#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+#: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb はすでに終了しています"
 
-#: src/bug-buddy.c:494
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Copyright (C) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:496
-msgid "The GNOME graphical bug reporting tool"
+#: src/bug-buddy.c:486
+#, fuzzy
+msgid "The graphical bug reporting tool for GNOME."
 msgstr "GNOME のグラフィカルな不具合報告ツールです"
 
-#: src/bug-buddy.c:503
+#: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "不完全な bug-buddy の web ページ"
 
-#: src/bug-buddy.c:591
+#: src/bug-buddy.c:603
+#, fuzzy
+msgid "Please enter your name."
+msgstr "あなたの名前と email アドレスを入れてください"
+
+#: src/bug-buddy.c:609
+#, fuzzy
+msgid "Please enter a valid email address."
+msgstr "あなたの名前と email アドレスを入れてください"
+
+#: src/bug-buddy.c:620
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -206,31 +214,27 @@ msgstr ""
 "\n"
 "sendmail のために新しい位置を指定しますか?"
 
-#: src/bug-buddy.c:627
-msgid "Please enter your name and email address"
-msgstr "あなたの名前と email アドレスを入れてください"
-
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:671
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "ファイルを開くことが出来ません: '%s'"
 
-#: src/bug-buddy.c:659
+#: src/bug-buddy.c:685
 #, c-format
 msgid "about to run '%s'"
 msgstr "実行される '%s' について"
 
-#: src/bug-buddy.c:663
+#: src/bug-buddy.c:689
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "メールプログラムを開始することが出来ません: '%s'"
 
-#: src/bug-buddy.c:691
+#: src/bug-buddy.c:718
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "あなたの不具合報告は '%s' に保存されました"
 
-#: src/bug-buddy.c:694
+#: src/bug-buddy.c:721
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -241,19 +245,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:824
+#: src/bug-buddy.c:851
 msgid "You must specify a recipient email address"
 msgstr "受取人の email アドレスを指定しなければなりません"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:857
 msgid "Submit this bug report now?"
 msgstr "この不具合報告を今提出しますか?"
 
-#: src/bug-buddy.c:840
+#: src/bug-buddy.c:867
 msgid "Please choose a file to save to."
 msgstr "保存するファイルを選択してください"
 
-#: src/bug-buddy.c:847
+#: src/bug-buddy.c:874
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -262,23 +266,23 @@ msgstr ""
 "ファイル '%s' はすでに存在しています\n"
 "上書きしますか?"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "About"
 msgstr "bug-buddy について"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Help"
 msgstr "ヘルプ"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Stop"
 msgstr "停止"
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Refresh"
 msgstr "リフレッシュ"
 
-#: src/bug-buddy.c:949
+#: src/bug-buddy.c:979
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -287,7 +291,7 @@ msgstr ""
 "'%s' が開けません\n"
 "bug-buddy が正しくインストールされているか確認してください"
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1084
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -295,7 +299,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME は反対です\n"
 "代わりにコマンドラインオプションの --appname を使ってください"
 
-#: src/bug-buddy.c:1067
+#: src/bug-buddy.c:1097
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -303,7 +307,7 @@ msgstr ""
 "$GNOME_CRASHED_PID は反対です\n"
 "代わりにコマンドラインオプションの --pid を使ってください"
 
-#: src/bug-buddy.c:1199
+#: src/bug-buddy.c:1229
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -312,12 +316,12 @@ msgstr ""
 "'%s' が見つかりません\n"
 "bug-buddy が正しくインストールされているか確認してください"
 
-#: src/gdb-buddy.c:41
+#: src/gdb-buddy.c:43
 #, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr "スタックトレースを獲得中... (%d)"
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:117
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -326,18 +330,18 @@ msgstr ""
 "gdb によって core ファイルを処理できません:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:141
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr "作られたバイナリ '%s' から確定することが出来ません"
 
-#: src/gdb-buddy.c:172
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr "読み込みでエラー...中断します"
 
-#: src/gdb-buddy.c:204
+#: src/gdb-buddy.c:218
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -345,7 +349,7 @@ msgstr ""
 "gdb-cmd ファイルを見つけることが出来ません\n"
 "bug-buddy を再インストールしてください"
 
-#: src/gdb-buddy.c:212 src/util.c:75
+#: src/gdb-buddy.c:227 src/util.c:75
 msgid "Error on fork()."
 msgstr "fork() でエラー"
 
@@ -563,6 +567,9 @@ msgstr "パイプを開くことが出来ません"
 msgid "Could not run '%s'."
 msgstr "'%s' を実行できませんでした"
 
-#: src/util.c:112
+#: src/util.c:113
 msgid "Error on read..."
 msgstr "読み込みでエラー..."
+
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Copyright (C) 1999 Jacob Berkman"

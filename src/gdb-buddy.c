@@ -22,6 +22,8 @@
 #include <config.h>
 #include <gnome.h>
 
+#include <stdio.h>
+
 #include <sys/wait.h>
 #include <unistd.h>
 
@@ -193,17 +195,30 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 			       "--quiet",
 			       "--command=" BUDDY_DATADIR "/gdb-cmd",
 			       NULL, NULL, NULL };
-
-	args[4] = app;
 	args[5] = extra;
 
-	if (!app || !extra || !app[0] || !extra[0])
+	if (!app || !extra || !*app || !*extra)
 		return;
+	
+	/* FIXME: we should probably be fully expanding the link to
+	   see if it is a directory, but unix sucks and i am lazy */
+	if (g_file_test (app, G_FILE_TEST_ISFILE | G_FILE_TEST_ISLINK))
+		app = g_strdup (app);
+	else
+		app = gnome_is_program_in_path (app);
+
+	if (!app)
+		return;
+
+	args[4] = app;
+
+	g_message ("About to debug '%s'", app);
 	
 	if (!g_file_exists (BUDDY_DATADIR "/gdb-cmd")) {
 		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
 					  "Please try reinstalling bug-buddy."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		g_free (app);
 		return;
 	}
 
@@ -211,6 +226,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	if (druid_data.gdb_pid == -1) {
 		d = gnome_error_dialog (_("Error on fork()."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		g_free (app);
 		return;
 	}
 	
@@ -228,6 +244,8 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 				  FALSE);
 
 	druid_data.explicit_dirty = FALSE;
+
+	g_free (app);
 }
 
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
+"POT-Creation-Date: 2000-10-04 04:36-0400\n"
 "PO-Revision-Date: 2000-02-23 18:50+0000\n"
 "Last-Translator: Robert Brady <rwb197@zepler.org>\n"
 "Language-Team: \n"
@@ -13,181 +13,185 @@ msgstr ""
 "Content-Type: text/plain; charset=US-ASCII\n"
 "Content-Transfer-Encoding: 7bit\n"
 
-#: src/bts.c:99
+#: src/bts.c:100
 msgid "Distribution"
 msgstr ""
 
-#: src/bts.c:107
+#: src/bts.c:108
 msgid "System"
 msgstr ""
 
-#: src/bug-buddy.c:74
+#: src/bug-buddy.c:81
 msgid "critical"
 msgstr ""
 
-#: src/bug-buddy.c:75
+#: src/bug-buddy.c:82
 msgid "grave"
 msgstr ""
 
-#: src/bug-buddy.c:76
+#: src/bug-buddy.c:83
 msgid "normal"
 msgstr ""
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:84
 msgid "wishlist"
 msgstr ""
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:89
 msgid "software bug"
 msgstr ""
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:90
 msgid "documentation bug"
 msgstr ""
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:91
 msgid "change request"
 msgstr ""
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:92
 msgid "support"
 msgstr ""
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:97
 msgid "Submit bug report"
 msgstr ""
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:98
 msgid "Only send report to yourself"
 msgstr ""
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:99
 msgid "Save report to file"
 msgstr ""
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:104
 msgid "Collect debugging information from a crashed application"
 msgstr ""
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:105
 msgid "Collect debugging information from a core file"
 msgstr ""
 
-#: src/bug-buddy.c:99
+#: src/bug-buddy.c:106
 msgid "Skip this step"
 msgstr ""
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:111
 msgid "Create a new bug report"
 msgstr ""
 
-#: src/bug-buddy.c:105
+#: src/bug-buddy.c:112
 msgid "Add more information to existing report"
 msgstr ""
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "Name of contact"
 msgstr ""
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:121
 msgid "NAME"
 msgstr ""
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "Email address of contact"
 msgstr ""
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:122
 msgid "EMAIL"
 msgstr ""
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "Package containing the program"
 msgstr ""
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:123
 msgid "PACKAGE"
 msgstr ""
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "Version of the package"
 msgstr ""
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:124
 msgid "VERSION"
 msgstr ""
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:125
 msgid "File name of crashed program"
 msgstr ""
 
-#: src/bug-buddy.c:118 src/bug-buddy.c:120
+#: src/bug-buddy.c:125 src/bug-buddy.c:127
 msgid "FILE"
 msgstr ""
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID of crashed program"
 msgstr ""
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:126
 msgid "PID"
 msgstr ""
 
-#: src/bug-buddy.c:120
+#: src/bug-buddy.c:127
 msgid "Core file from program"
 msgstr ""
 
-#: src/bug-buddy.c:335
+#: src/bug-buddy.c:328
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
-"Do you want to continue anyway?"
+"Please specify a package."
 msgstr ""
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:375
 #, c-format
 msgid "File is of type: %s"
 msgstr ""
 
-#: src/bug-buddy.c:386
+#: src/bug-buddy.c:378
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr ""
 
-#: src/bug-buddy.c:400
+#: src/bug-buddy.c:392
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:435
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+#: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr ""
 
-#: src/bug-buddy.c:494
-msgid "Copyright (C) 1999 Jacob Berkman"
+#: src/bug-buddy.c:486
+msgid "The graphical bug reporting tool for GNOME."
 msgstr ""
 
 #: src/bug-buddy.c:496
-msgid "The GNOME graphical bug reporting tool"
-msgstr ""
-
-#: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
 msgstr "The lame bug-mate web page"
 
-#: src/bug-buddy.c:591
+#: src/bug-buddy.c:603
+msgid "Please enter your name."
+msgstr ""
+
+#: src/bug-buddy.c:609
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: src/bug-buddy.c:620
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -196,31 +200,27 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/bug-buddy.c:627
-msgid "Please enter your name and email address"
-msgstr ""
-
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:671
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:659
+#: src/bug-buddy.c:685
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:663
+#: src/bug-buddy.c:689
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:691
+#: src/bug-buddy.c:718
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:694
+#: src/bug-buddy.c:721
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -228,42 +228,42 @@ msgid ""
 "        <%s>"
 msgstr ""
 
-#: src/bug-buddy.c:824
+#: src/bug-buddy.c:851
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:857
 msgid "Submit this bug report now?"
 msgstr ""
 
-#: src/bug-buddy.c:840
+#: src/bug-buddy.c:867
 msgid "Please choose a file to save to."
 msgstr ""
 
-#: src/bug-buddy.c:847
+#: src/bug-buddy.c:874
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "About"
 msgstr ""
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Help"
 msgstr ""
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Stop"
 msgstr ""
 
-#: src/bug-buddy.c:899
+#: src/bug-buddy.c:926
 msgid "Refresh"
 msgstr ""
 
-#: src/bug-buddy.c:949
+#: src/bug-buddy.c:979
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -272,19 +272,19 @@ msgstr ""
 "Could not open '%s'.\n"
 "Please make sure bug-mate was installed correctly."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1084
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:1067
+#: src/bug-buddy.c:1097
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:1199
+#: src/bug-buddy.c:1229
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -293,30 +293,30 @@ msgstr ""
 "Could not find '%s'.\n"
 "Please make sure bug-mate was installed correctly."
 
-#: src/gdb-buddy.c:41
+#: src/gdb-buddy.c:43
 #, c-format
 msgid "obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:117
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:141
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:172
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr ""
 
-#: src/gdb-buddy.c:204
+#: src/gdb-buddy.c:218
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -324,7 +324,7 @@ msgstr ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-mate."
 
-#: src/gdb-buddy.c:212 src/util.c:75
+#: src/gdb-buddy.c:227 src/util.c:75
 msgid "Error on fork()."
 msgstr ""
 
@@ -528,7 +528,7 @@ msgstr ""
 msgid "Could not run '%s'."
 msgstr ""
 
-#: src/util.c:112
+#: src/util.c:113
 msgid "Error on read..."
 msgstr ""
 

@@ -49,7 +49,7 @@ typedef enum {
 	SEVERITY_CRITICAL,
 	SEVERITY_GRAVE,
 	SEVERITY_NORMAL,
-	SEVERITY_WISHLIST,
+	SEVERITY_WISHLIST
 } SeverityType;
 
 typedef enum {
