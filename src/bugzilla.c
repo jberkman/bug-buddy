@@ -290,9 +290,9 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 		d(g_warning ("could not stat sys file: `%s': %s\n", xmlfile->system_path, err));
 		goto append_uris;
 	}
-
-	if ((sys_stat.st_mtime > local_stat.st_mtime) ||
-	    (time (NULL) - local_stat.st_mtime < (7 * 24 * 60 * 60))) {
+       
+	if ((sys_stat.st_mtime < local_stat.st_mtime) &&
+	    ((time (NULL) - local_stat.st_mtime) < (7 * 24 * 60 * 60))) {
 		xmlDoc *doc;
 		doc = xmlParseFile (xmlfile->cache_path);
 		if (!doc)

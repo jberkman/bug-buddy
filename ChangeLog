@@ -1,3 +1,9 @@
+2001-03-26  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.c (get_xml_file): turn an or into an and to make
+	the cache update itself.  also added some ()'s so people will
+	think twice about changing this code.
+
 2001-03-20  Karl Eichwalder  <ke@suse.de>
 
 	* src/united-states-of-bug-buddy.c (intro_page_ok): Normalize
