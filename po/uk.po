@@ -14,13 +14,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Опис"
+msgstr "Дистрибуц╕я"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -140,17 +139,17 @@ msgstr "Файл core в╕д програми"
 
 #: src/bug-buddy.c:365
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Вказаного файлу нема╓."
 
 #: src/bug-buddy.c:370
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Тип файлу: %s"
 
 #: src/bug-buddy.c:373
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "\"%s\" не схожий на текстовий файл."
 
 #: src/bug-buddy.c:387
 msgid ""
@@ -447,7 +446,7 @@ msgstr "Налагоджувальна ╕нформац╕я"
 
 #: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
-msgstr "Вибур╕ть виконуваний файл, що зазна╓ збою"
+msgstr "Вибер╕ть виконуваний файл, що зазна╓ збою"
 
 #: src/glade-strings.c:42
 msgid "Binary"
@@ -526,41 +525,14 @@ msgid "The GEGL is watching."
 msgstr "GEGL спостер╕га╓."
 
 #: src/util.c:60
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "Не вдалося в╕дкити файл: \"%s\""
+msgstr "Не вдалося в╕дкити канал"
 
 #: src/util.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Could not run '%s'."
-msgstr "запуск \"%s\""
+msgstr "Не вдалося запустити \"%s\"."
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Помилка на зчитуванн╕... переривання"
-
-#~ msgid ""
-#~ "Submit new report\n"
-#~ "Add information to an existing report\n"
-#~ msgstr ""
-#~ "В╕д╕слати новий зв╕т\n"
-#~ "Додати ╕нформац╕ю до ╕снуючого зв╕ту\n"
-
-#~ msgid ""
-#~ "Collect debugging information from a crashed application\n"
-#~ "Collect debugging information from a core file\n"
-#~ "Skip this step\n"
-#~ msgstr ""
-#~ "З╕брати налагоджувальну ╕нформац╕ю з програми, що зазнали збою\n"
-#~ "З╕брати налагоджувальну ╕нформац╕ю з файлу core\n"
-#~ "Пропустити цей крок\n"
-
-#~ msgid ""
-#~ "Submit bug report\n"
-#~ "Send to your amail address only\n"
-#~ "Save report to file\n"
-#~ msgstr ""
-#~ "В╕д╕слати зв╕т\n"
-#~ "В╕д╕слати зв╕т лише на вашу адресу\n"
-#~ "Зберегти зв╕т у файл╕\n"
+msgstr "Помилка на зчитуванн╕..."
