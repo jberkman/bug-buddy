@@ -1,3 +1,9 @@
+2001-12-17  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.c (gify): g_convert() rather than g_strdup() since
+	i think the xml files are ISO8859-1 or something.  the spanish n
+	thing displays correctly now instead of generating a pango warning
+
 2001-12-13  jacob berkman  <jacob@ximian.com>
 
 	* gentool/gentool.m4: some games
