@@ -287,9 +287,9 @@ on_stop_button_clicked (GtkWidget *button, gpointer data)
 	if (!druid_data.fd)
 		return;
 
-	w = gnome_question_dialog (_("gdb has not finished getting the"
+	w = gnome_question_dialog (_("gdb has not finished getting the\n"
 				     "debugging information.\n"
-				     "Kill the gdb process (the stack trace"
+				     "Kill the gdb process (the stack trace\n"
 				     "will be incomplete)?"),
 				   NULL, NULL);
 
