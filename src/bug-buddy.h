@@ -60,8 +60,6 @@ typedef enum {
 	STATE_LAST
 } BuddyState;
 
-#define GET_WIDGET(name) (glade_xml_get_widget (druid_data.xml, (name)))
-
 typedef struct {
 	/* contact page */
 	gchar *name;
@@ -162,5 +160,14 @@ void append_packages (void);
 
 void load_config (void);
 void save_config (void);
+
+#define GET_WIDGET(name) (glade_xml_get_widget (druid_data.xml, (name)))
+
+/* GTK's text widgets have sucky apis */
+char *buddy_get_text_widget (GtkWidget *w);
+#define buddy_get_text(w) (buddy_get_text_widget (GET_WIDGET (w)))
+
+void  buddy_set_text_widget (GtkWidget *w, const char *s);
+#define buddy_set_text(w, s) (buddy_set_text_widget (GET_WIDGET (w), s))
 
 #endif /* __bug_buddy_h__ */

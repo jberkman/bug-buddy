@@ -192,12 +192,12 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 	d(g_print ("%lu\n", info->bytes_copied));
 	if (info->source_name) {
 		d(g_print ("source: %s\n", info->source_name));
-		gtk_label_set_text (GTK_LABEL (GET_WIDGET ("progress-source")), info->source_name);
+		buddy_set_text ("progress-source", info->source_name);
 	}
 
 	if (info->target_name) {
 		d(g_print ("target: %s\n", info->target_name));
-		gtk_label_set_text (GTK_LABEL (GET_WIDGET ("progress-dest")), info->target_name);
+		buddy_set_text ("progress-dest", info->target_name);
 	}
 
 	if (info->bytes_total)
@@ -829,19 +829,20 @@ generate_email_text (void)
 	char *sysinfo, *debug_info, *text_file;
 	char *email, *email1;
 
-	subject    = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("desc-subject")), 0, -1);
+	subject    = buddy_get_text ("desc-subject");
 	product    = druid_data.product->name;
 	component  = druid_data.component->name;
-	version    = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("the-version-entry")), 0, -1);
+	version    = buddy_get_text ("the-version-entry");
 	opsys      = "Linux";
 	platform   = "Debian";
 	severity   = druid_data.severity ? druid_data.severity : "Normal";
 	/* sysinfo    = generate_sysinfo (); */
-	tmp_body   = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("desc-text")), 0, -1);
+	tmp_body   = buddy_get_text ("desc-text");
+		
 	body = format_for_width (tmp_body);
 	g_free (tmp_body);
 
-	debug_info = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("gdb-text")), 0, -1);
+	debug_info = buddy_get_text ("gdb-text");
 
 	if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_FREITAG) {
 		email1 = g_strdup_printf (

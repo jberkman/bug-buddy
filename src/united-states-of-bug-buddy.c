@@ -173,10 +173,8 @@ druid_set_state (BuddyState state)
 #if 0
 		if (!druid_data.package_name)
 			determine_our_package ();
-		gtk_entry_set_text (GTK_ENTRY (GET_WIDGET ("bts-package-entry")),
-				    druid_data.package_name
-				    ? druid_data.package_name
-				    : "");
+		buddy_set_text ("bts-package-entry".
+				druid_data.package_name);
 #endif
 		load_bugzilla_xml ();
 #if 0
@@ -202,8 +200,7 @@ druid_set_state (BuddyState state)
 		/* fill in the content text */
 		s = generate_email_text ();
 		w = GET_WIDGET ("email-text");
-		gtk_editable_delete_text (GTK_EDITABLE (w), 0, -1);
-		gtk_editable_insert_text (GTK_EDITABLE (w), s, strlen (s), &pos);
+		buddy_set_text ("email-text", s);
 		g_free (s);
 		break;
 	case STATE_FINISHED:
@@ -275,9 +272,9 @@ intro_page_ok (void)
 	GtkWidget *w;
 	gchar *s;
 
-	w = GET_WIDGET ("email-name-entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
+	s = buddy_get_text ("email-name-entry");
 	if (! (s && strlen (s))) {
+		g_free (s);
 		w = gnome_message_box_new (_("Please enter your name."),
 					   GNOME_MESSAGE_BOX_ERROR,
 					   GNOME_STOCK_BUTTON_OK,
@@ -285,10 +282,11 @@ intro_page_ok (void)
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return FALSE;
 	}
+	g_free (s);
 
-	w = GET_WIDGET ("email-email-entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
+	s = buddy_get_text ("email-email-entry");
 	if (!email_is_valid (s)) {
+		g_free (s);
 		w = gnome_message_box_new (_("Please enter a valid email address."),
 					   GNOME_MESSAGE_BOX_ERROR,
 					   GNOME_STOCK_BUTTON_OK,
@@ -296,9 +294,9 @@ intro_page_ok (void)
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return FALSE;
 	}
+	g_free (s);
 
-	w = GET_WIDGET ("email-sendmail-entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
+	s = buddy_get_text ("email-sendmail-entry");
 	if (! (s && strlen (s) && g_file_exists (s))) {
 		if (druid_data.submit_type == SUBMIT_TO_SELF ||
 		    druid_data.submit_type == SUBMIT_REPORT) {
@@ -312,10 +310,13 @@ intro_page_ok (void)
 					     s);	
 			d = gnome_question_dialog (m, NULL, NULL);
 			g_free (m);
-			if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (d)))
+			if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (d))) {
+				g_free (s);
 				return FALSE;
+			}
 		}
 	}
+	g_free (s);
 
 	return TRUE;
 }
@@ -345,7 +346,7 @@ desc_page_ok (void)
 {
 	GtkWidget *w;
 
-	char *s = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("desc-file-entry")));
+	char *s = buddy_get_text ("desc-file-entry");
 
 	if (getenv ("BUG_ME_HARDER"))
 		return TRUE;
@@ -356,6 +357,7 @@ desc_page_ok (void)
 			w = gnome_error_dialog (
 				_("The specified file does not exist."));
 			gnome_dialog_run_and_close (GNOME_DIALOG (w));
+			g_free (s);
 			return FALSE;
 		}
 
@@ -368,20 +370,24 @@ desc_page_ok (void)
 			gnome_dialog_run_and_close (
 				GNOME_DIALOG (gnome_error_dialog (msg)));
 			g_free (msg);
+			g_free (s);
 			return FALSE;
 		}
 #endif
 	}
-	
-	s = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("desc-subject")));
+	g_free (s);
+
+	s = buddy_get_text ("desc-subject");
 	if (!text_is_sensical (s, 6)) {
+		g_free (s);
 		w = gnome_error_dialog (
 			_("You must include a comprehensible subject line in your bug report."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return FALSE;
 	}
-	
-	s = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("desc-text")), 0, -1);
+	g_free (s);
+
+	s = buddy_get_text ("desc-text");
 	if (!text_is_sensical (s, 8)) {
 		w = gnome_error_dialog (
 			_("You must include a comprehensible description in your bug report."));		
@@ -389,7 +395,7 @@ desc_page_ok (void)
 		g_free (s);
 		return FALSE;
 	}
-
+	g_free (s);
 	return TRUE;
 }
 
@@ -407,24 +413,25 @@ submit_ok (void)
 			return FALSE;
 	}
 
-	w = GET_WIDGET ( (druid_data.submit_type == SUBMIT_TO_SELF)
-			 ? "email-email-entry" : "email-to-entry");
-	to = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	to = buddy_get_text (druid_data.submit_type == SUBMIT_TO_SELF 
+			     ? "email-email-entry"
+			     : "email-to-entry");
 
 	if (druid_data.submit_type == SUBMIT_FILE) {
-		file = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("email-file-entry")));
+		file = buddy_get_text ("email-file-entry");
 		fp = fopen (file, "w");
 		if (!fp) {
 			s = g_strdup_printf (_("Unable to open file: '%s'"), file);
 			w = gnome_error_dialog (s);
+			g_free (file);
 			g_free (s);
 			g_free (to);
 			gnome_dialog_run_and_close (GNOME_DIALOG (w));
 			return FALSE;
 		}
+		g_free (file);
 	} else {
-		w = GET_WIDGET ("email-sendmail-entry");
-		s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+		s = buddy_get_text ("email-sendmail-entry");
 		command = g_strdup_printf ("%s -i -t", s);
 
 		d(g_message (_("about to run '%s'"), command));
@@ -444,12 +451,8 @@ submit_ok (void)
 	{
 		char *name, *from;
 		
-		w = GET_WIDGET ("email-name-entry");
-		name = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-
-
-		w = GET_WIDGET ("email-email-entry");
-		from = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+		name = buddy_get_text ("email-name-entry");
+		from = buddy_get_text ("email-email-entry");
 
 		fprintf (fp, "From: %s <%s>\n", name, from);
 		g_free (from);
@@ -460,21 +463,18 @@ submit_ok (void)
 
 	if (druid_data.submit_type == SUBMIT_REPORT &&
 	    GTK_TOGGLE_BUTTON (GET_WIDGET ("email-cc-toggle"))->active) {
-		w = GET_WIDGET ("email-email-entry");
-		s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+		s = buddy_get_text ("email-email-entry");
 		fprintf (fp, "Cc: %s\n", s);
 		g_free (s);
 	}
 	
-	w = GET_WIDGET ("email-cc-entry");
-	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	s = buddy_get_text ("email-cc-entry");
 	if (*s) fprintf (fp, "Cc: %s\n", s);
 	g_free (s);
 
 	fprintf (fp, "X-Mailer: %s %s\n", PACKAGE, VERSION);
 
-	w = GET_WIDGET ("email-text");
-	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	s = buddy_get_text ("email-text");
 	fprintf (fp, "%s", s);
 	g_free (s);
 
@@ -487,8 +487,7 @@ submit_ok (void)
 	}
 	g_free (to);
 
-	w = GET_WIDGET ("finished-label");
-	gtk_label_set_text (GTK_LABEL (w), s);
+	buddy_set_text ("finished-label", s);
 	g_free (s);
 
 	return TRUE;
@@ -533,7 +532,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 						      _("You must specify a component for your bug report."))));
 			return;
 		}
-		s = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("the-version-entry")), 0, -1);
+		s = buddy_get_text ("the-version-entry");
 		if (!s[0] && !getenv ("BUG_ME_HARDER")) {
 			g_free (s);
 			gnome_dialog_run_and_close (

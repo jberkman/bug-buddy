@@ -84,6 +84,56 @@ static const struct poptOption options[] = {
 	{ NULL } 
 };
 
+void
+buddy_set_text_widget (GtkWidget *w, const char *s)
+{
+	g_return_if_fail (GTK_IS_ENTRY (w) || 
+			  GTK_IS_TEXT_VIEW (w) ||
+			  GTK_IS_LABEL (w));
+
+	if (!s) s = "";
+
+#if 0
+	g_object_set (G_OBJECT (w), "text", s, NULL);
+#else
+	if (GTK_IS_ENTRY (w)) {
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	} else if (GTK_IS_TEXT_VIEW (w)) {
+		gtk_text_buffer_set_text (
+			gtk_text_view_get_buffer (GTK_TEXT_VIEW (w)),
+			s, strlen (s));
+	} else if (GTK_IS_LABEL (w)) {
+		gtk_label_set_text (GTK_LABEL (w), s);
+	}
+#endif
+}
+
+char *
+buddy_get_text_widget (GtkWidget *w)
+{
+	char *s = NULL;
+	g_return_val_if_fail (GTK_IS_ENTRY (w) || 
+			      GTK_IS_TEXT_VIEW (w) ||
+			      GTK_IS_LABEL (w), NULL);
+#if 0
+	g_object_get (G_OBJECT (w), "text", &s, NULL);
+#else
+	if (GTK_IS_ENTRY (w)) {
+		s = g_strdup (gtk_entry_get_text (GTK_ENTRY (w)));
+	} else if (GTK_IS_TEXT_VIEW (w)) {
+		GtkTextIter start, end;
+
+		gtk_text_buffer_get_bounds (
+			gtk_text_view_get_buffer (GTK_TEXT_VIEW (w)),
+			&start, &end);
+		s = gtk_text_iter_get_text (&start, &end);
+	} else if (GTK_IS_LABEL (w)) {
+		s = g_strdup (gtk_label_get_text (GTK_LABEL (w)));
+	}
+#endif
+	return s;
+}
+
 static gboolean
 update_crash_type (GtkWidget *w, gpointer data)
 {
@@ -187,8 +237,8 @@ on_product_list_select_row (GtkWidget *w, int row, int col, gpointer data)
 	if (druid_data.state == STATE_PRODUCT)
 		druid_set_sensitive (TRUE, TRUE, TRUE);
 	druid_data.product = gtk_clist_get_row_data (GTK_CLIST (w), row);
-	gtk_entry_set_text (GTK_ENTRY (GET_WIDGET ("email-to-entry")),
-			    druid_data.product->bts->email);
+	buddy_set_text ("email-to-entry", 
+			druid_data.product->bts->email);
 }
 
 void
@@ -236,13 +286,14 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 	gchar *s;
 	druid_data.selected_row = row;
 	if (gtk_clist_get_text (list, row, 1, &s))
-		gtk_entry_set_text (GTK_ENTRY (GET_WIDGET ("version-entry")), s);
+		buddy_set_text ("the-version-entry", s);
 	else
-		gtk_editable_delete_text (
-			GTK_EDITABLE (GET_WIDGET ("the-version-entry")), 0, -1);
+		buddy_set_text ("the-version-entry", NULL);
 			
-	gtk_clist_get_text (list, row, 0, &s);
-	gtk_label_set_text (GTK_LABEL (GET_WIDGET ("version-label")), _(s));
+	if (gtk_clist_get_text (list, row, 0, &s))
+		buddy_set_text ("version-label", _(s));
+	else
+		buddy_set_text ("version-label", NULL);
 }
 
 void
@@ -265,7 +316,7 @@ update_selected_row (GtkWidget *w, gpointer data)
 		return;
 
 	row = druid_data.selected_row;
-	s = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("the-version-entry")));
+	s = buddy_get_text ("version-entry");
 	gtk_clist_set_text (GTK_CLIST (GET_WIDGET ("version-clist")), row, 1, s);
 }
 
@@ -430,7 +481,6 @@ init_ui (void)
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (w), FALSE);
 
 	/* dialog crash page */
-	w = GET_WIDGET ("gdb-binary-entry");
 	s = popt_data.app_file;
 	if (!s) {
 		s = getenv ("GNOME_CRASHED_APPNAME");
@@ -439,11 +489,8 @@ init_ui (void)
 				     "Please use the --appname command line"
 				     "argument instead."));
 	}
+	buddy_set_text ("gdb-binary-entry", s);
 
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-
-	w = GET_WIDGET ("gdb-pid-entry");
 	s = popt_data.pid;
 	if (!s) {
 		s = getenv ("GNOME_CRASHED_PID");
@@ -452,24 +499,19 @@ init_ui (void)
 				     "Please use the --pid command line"
 				     "argument instead."));
 	}
-
 	if (s) {
-		gtk_entry_set_text (GTK_ENTRY (w), s);
+		buddy_set_text ("gdb-pid-entry", s);
 		druid_data.crash_type = CRASH_DIALOG;
 	}
 
 	/* core crash page */
-	w = GET_WIDGET ("gdb-core-entry");
 	if (popt_data.core_file) {
-		gtk_entry_set_text (GTK_ENTRY (w), popt_data.core_file);
+		buddy_set_text ("gdb-core-entry", popt_data.core_file);
 		druid_data.crash_type = CRASH_CORE;
 	}
 
 	/* package version */
-	if (popt_data.package_ver) {
-		w = GET_WIDGET ("the-version-entry");
-		gtk_entry_set_text (GTK_ENTRY (w), popt_data.package_ver);
-	}
+	buddy_set_text ("the-version-entry", popt_data.package_ver);
 
         /* init some ex-radio buttons */
 	m = gtk_menu_new ();

@@ -80,17 +80,20 @@ save_config (void)
 
 		if (item->path) {
 			w = GET_WIDGET (item->w2);;
-			s = gtk_entry_get_text (GTK_ENTRY (w));
+			s = buddy_get_text (item->w2);
 			gnome_config_set_string (item->path, s);
-		} else
+		} else {
 			s = NULL;
+		}
 		
 		w = GET_WIDGET (item->w);
 		if (GNOME_IS_FILE_ENTRY (w))
 			w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
+
 		if (s && *s)
 			gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
 
+		g_free (s);
 #ifdef FIXME
 		gnome_entry_save_history (GNOME_ENTRY (w));
 #endif
@@ -137,7 +140,6 @@ load_config (void)
 		}
 
 		if (item->w2) {
-			w = GET_WIDGET (item->w2);
 			if (item->path) {
 				d2 = gnome_config_get_string (item->path);
 				if (d2) {
@@ -145,8 +147,7 @@ load_config (void)
 					def = d2;
 				}
 			}
-			if (def)
-				gtk_entry_set_text (GTK_ENTRY (w), def);
+			buddy_set_text (item->w2, def);
 		}
 
 		g_free (def);

@@ -1,3 +1,18 @@
+2001-11-02  jacob berkman  <jacob@ximian.com>
+
+	* src/bug-buddy.glade: use the template description from
+	bugzilla.ximian.com.
+	
+	* src/gdb-buddy.c (handle_gdb_input): port to GtkTextView
+
+	* src/bug-buddy.c (buddy_set_text_widget): 
+	(buddy_get_text_widget): sane and consistent api for get/set of
+	text across multiple gtk widgets
+
+	* src/*.c: use new text calls
+
+	* po/POTFILES.in: remove some removed files
+
 2001-10-28  jacob berkman  <jacob@ximian.com>
 
 	* src/gdb-buddy.c (get_trace_from_pair): use the awesome

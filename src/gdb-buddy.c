@@ -79,8 +79,8 @@ start_gdb (void)
 	case CRASH_NONE:
 		return;
 	case CRASH_DIALOG:
-		app = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("gdb-binary-entry")));
-		extra = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("gdb-pid-entry")));
+		app = buddy_get_text ("gdb-binary-entry");
+		extra = buddy_get_text ("gdb-pid-entry");
 		druid_data.app_pid = atoi (extra);
 		kill (druid_data.app_pid, SIGCONT);
 		if (druid_data.explicit_dirty ||
@@ -91,7 +91,7 @@ start_gdb (void)
 		}
 		break;
 	case CRASH_CORE:
-		extra = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("gdb-core-entry")));
+		extra = buddy_get_text ("gdb-core-entry");
 		if (druid_data.explicit_dirty ||
 		    (old_type != CRASH_CORE) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
@@ -104,10 +104,10 @@ start_gdb (void)
 	}
 
 	g_free (old_extra);
-	old_extra = g_strdup (extra);
+	old_extra = extra;
 
 	g_free (old_app);
-	old_app = g_strdup (app);
+	old_app = app;
 
 	old_type = druid_data.crash_type;
 }
@@ -220,11 +220,17 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 		return FALSE;
 	}
 
-	w = GET_WIDGET ("gdb-text");
-	gtk_text_set_point (GTK_TEXT (w),
-			    gtk_text_get_length (GTK_TEXT (w)));
-	gtk_text_insert (GTK_TEXT (w), 
-			 NULL, NULL, NULL, buf, len);
+	{
+		GtkTextIter end;
+		GtkTextBuffer *buffy;
+		GtkTextView *tv;
+
+		tv = GTK_TEXT_VIEW (GET_WIDGET ("gdb-text"));
+		buffy = gtk_text_view_get_buffer (tv);
+
+		gtk_text_buffer_get_end_iter (buffy, &end);
+		gtk_text_buffer_insert (buffy, &end, buf, len);
+	}
 
 	return TRUE;
 }
@@ -295,7 +301,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP,
 			handle_gdb_input, NULL);
 	g_io_channel_unref (druid_data.ioc);
-	gtk_editable_delete_text (GTK_EDITABLE (GET_WIDGET ("gdb-text")), 0, -1);
+	buddy_set_text ("gdb-text", NULL);
 
 	druid_set_sensitive (FALSE, FALSE, TRUE);
 	start_animation ();
