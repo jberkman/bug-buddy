@@ -1,13 +1,13 @@
-# bug-buddy Finnish translation
+# bug-buddy Finnish Translation
 # http://gnome-fi.sourceforge.net/
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Sami Pesonen <spesonen@dlc.fi>, 2000.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.1\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-11-09 22:00+02:00\n"
+"Project-Id-Version: bug-buddy 1.2\n"
+"POT-Creation-Date: 2000-11-18 23:26+0200\n"
+"PO-Revision-Date: 2000-11-18 23:29+02:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -140,7 +140,7 @@ msgstr "Sovelluksen jättämä core-tiedosto"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Raporttiin sisällytettävä tekstitiedosto"
 
 #: src/bug-buddy.c:332
 msgid ""
