@@ -70,10 +70,15 @@ bugzilla_product_insert_component (BugzillaProduct *prod, BugzillaComponent *com
 }
 
 /* i think the bugzilla files are ISO8859-1 */
+/* they aren't anymore, and my iconv on solaris isn't doing UTF-8 for
+ * some reason */
 static char *
 gify (char *x)
 {
-	char *g = g_convert (x, strlen (x), "UTF-8", "ISO8859-1", NULL, NULL, NULL);
+	char *g;
+	g = g_convert (x, strlen (x), "UTF-8", "ISO8859-1", NULL, NULL, NULL);
+	if (!g)
+		g = g_strdup (x);
 	xmlFree (x);
 	return g;
 }

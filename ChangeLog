@@ -1,6 +1,11 @@
+2002-04-10  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.c (gify): if convert didn't work just strdup
+
 2002-04-09  jacob berkman  <jacob@ximian.com>
 
-	* src/bug-buddy.glade: add copy/save buttons
+	* src/bug-buddy.glade: turn word wrap on
+	add copy/save buttons
 
 	* src/bug-buddy.c (on_gdb_copy_clicked): copy the contents of the
 	gdb text widget to the clipboard
