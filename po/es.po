@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-03-28 11:37-0500\n"
+"POT-Creation-Date: 2001-05-24 20:25+0200\n"
 "PO-Revision-Date: 2001-02-14 23:07+0100\n"
 "Last-Translator: Carlos Perelló Marín <carlos@gnome-db.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -205,13 +205,12 @@ msgstr ""
 "No se obtendrá información de depuración."
 
 #: src/gdb-buddy.c:274
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "No se pudo encontrar el archivo gdb-cmd.\n"
-"Pruebe a reinstalar bug-buddy."
+"Pruebe a reinstalar Bug Buddy."
 
 #: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
@@ -501,7 +500,7 @@ msgid "Please enter a valid email address."
 msgstr "Introduzca una dirección de correo válida"
 
 #: src/united-states-of-bug-buddy.c:288
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -511,6 +510,7 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 "No parece que '%s' exista.\n"
+"\n"
 "No será capaz de enviar un informe de error, pero podrá guardarlo\n"
 "en un archivo.\n"
 "\n"
