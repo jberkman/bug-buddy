@@ -1,3 +1,5 @@
-src/gdb-buddy.c
+src/bts.c
 src/bug-buddy.c
+src/gdb-buddy.c
 src/glade-strings.c
+src/util.c
