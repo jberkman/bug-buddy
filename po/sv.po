@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
+"POT-Creation-Date: 2000-11-17 14:27+0100\n"
 "PO-Revision-Date: 2000-10-06 20:00+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -141,7 +141,7 @@ msgstr "Core-fil från programmet"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Textfil som skall inkluderas i rapporten"
 
 #: src/bug-buddy.c:332
 msgid ""
