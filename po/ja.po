@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20000516\n"
-"POT-Creation-Date: 2000-05-21 15:24-0400\n"
-"PO-Revision-Date: 2000-05-18 19:19+0900\n"
+"Project-Id-Version: bug-buddy CVS-20000522\n"
+"POT-Creation-Date: 2000-05-22 08:33+0900\n"
+"PO-Revision-Date: 2000-05-22 08:37+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -137,27 +137,39 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "プログラムからの core ファイル"
 
-#: src/bug-buddy.c:365
+#: src/bug-buddy.c:335
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Do you want to continue anyway?"
+msgstr ""
+"'general' より特定のパッケージを指定するなら\n"
+"それははるかに役立っています\n"
+"\n"
+"どうしても続けたいですか?"
+
+#: src/bug-buddy.c:378
 msgid "The specified file does not exist."
 msgstr "指定されたファイルはありません"
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:383
 #, c-format
 msgid "File is of type: %s"
 msgstr "ファイルの種類: %s"
 
-#: src/bug-buddy.c:373
+#: src/bug-buddy.c:386
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' はテキストファイルの様には見えません"
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:400
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr "不具合報告に表題と説明を含めなければなりません"
 
-#: src/bug-buddy.c:430
+#: src/bug-buddy.c:443
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -165,23 +177,23 @@ msgstr ""
 "gdb はデバッグ情報の収集が完了しませんでした\n"
 "gdb プロセスを終了しますか (スタックトレースは不完全でしょう)?"
 
-#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+#: src/bug-buddy.c:451 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "gdb はすでに終了しています"
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:494
 msgid "Copyright (C) 1999 Jacob Berkman"
 msgstr "Copyright (C) 1999 Jacob Berkman"
 
-#: src/bug-buddy.c:483
+#: src/bug-buddy.c:496
 msgid "The GNOME graphical bug reporting tool"
 msgstr "GNOME のグラフィカルな不具合報告ツールです"
 
-#: src/bug-buddy.c:490
+#: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
 msgstr "不完全な bug-buddy の web ページ"
 
-#: src/bug-buddy.c:578
+#: src/bug-buddy.c:591
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -194,31 +206,31 @@ msgstr ""
 "\n"
 "sendmail のために新しい位置を指定しますか?"
 
-#: src/bug-buddy.c:614
+#: src/bug-buddy.c:627
 msgid "Please enter your name and email address"
 msgstr "あなたの名前と email アドレスを入れてください"
 
-#: src/bug-buddy.c:633
+#: src/bug-buddy.c:646
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "ファイルを開くことが出来ません: '%s'"
 
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:659
 #, c-format
 msgid "about to run '%s'"
 msgstr "実行される '%s' について"
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:663
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "メールプログラムを開始することが出来ません: '%s'"
 
-#: src/bug-buddy.c:678
+#: src/bug-buddy.c:691
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "あなたの不具合報告は '%s' に保存されました"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:694
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -229,19 +241,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:811
+#: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
 msgstr "受取人の email アドレスを指定しなければなりません"
 
-#: src/bug-buddy.c:817
+#: src/bug-buddy.c:830
 msgid "Submit this bug report now?"
 msgstr "この不具合報告を今提出しますか?"
 
-#: src/bug-buddy.c:827
+#: src/bug-buddy.c:840
 msgid "Please choose a file to save to."
 msgstr "保存するファイルを選択してください"
 
-#: src/bug-buddy.c:834
+#: src/bug-buddy.c:847
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -250,7 +262,7 @@ msgstr ""
 "ファイル '%s' はすでに存在しています\n"
 "上書きしますか?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:947
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -259,7 +271,7 @@ msgstr ""
 "'%s' が開けません\n"
 "bug-buddy が正しくインストールされているか確認してください"
 
-#: src/bug-buddy.c:1039
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -267,7 +279,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME は反対です\n"
 "代わりにコマンドラインオプションの --appname を使ってください"
 
-#: src/bug-buddy.c:1052
+#: src/bug-buddy.c:1065
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -275,7 +287,7 @@ msgstr ""
 "$GNOME_CRASHED_PID は反対です\n"
 "代わりにコマンドラインオプションの --pid を使ってください"
 
-#: src/bug-buddy.c:1184
+#: src/bug-buddy.c:1197
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -538,6 +550,3 @@ msgstr "'%s' を実行できませんでした"
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "読み込みでエラー..."
-
-#~ msgid "Child process exited with status %d"
-#~ msgstr "子プロセスはステータス '%d' で終了しています"
