@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-02-23 12:09-0500\n"
-"PO-Revision-Date: 2000-01-06 16:04+0100\n"
+"Project-Id-Version: bug-buddy 0.7\n"
+"POT-Creation-Date: 2000-04-01 20:29+0200\n"
+"PO-Revision-Date: 2000-04-01 20:36+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -148,11 +148,15 @@ msgstr "archivo core de la aplicación"
 
 #: src/bug-buddy.c:290
 msgid ""
-"gdb has not finished getting thedebugging information.\n"
-"Kill the gdb process (the stack tracewill be incomplete)?"
+"gdb has not finished getting the\n"
+"debugging information.\n"
+"Kill the gdb process (the stack trace\n"
+"will be incomplete)?"
 msgstr ""
-"gdb aún no terminó de obtener la información de debug.\n"
-"¿Matar el proceso gdb (la traza de la pila no estará completa)?"
+"gdb aún no terminó de obtener la\n"
+"información de debug.\n"
+"¿Matar el proceso gdb (la traza de la\n"
+"pila no estará completa)?"
 
 #: src/bug-buddy.c:341
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -170,7 +174,7 @@ msgstr "La pobre página web de bug-buddy"
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a but report, but you will be able to save it to a file.\n"
+"submit a bug report, but you will be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
@@ -183,7 +187,7 @@ msgstr ""
 msgid "Please enter your name and email address"
 msgstr "Por favor, introduzca su nombre y su dirección de correo"
 
-#: src/bug-buddy.c:500
+#: src/bug-buddy.c:501
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -191,7 +195,7 @@ msgstr ""
 "Apriete en \"Acabar\" para salir de bug-buddy.\n"
 "No se enviará ningún informe de error."
 
-#: src/bug-buddy.c:523
+#: src/bug-buddy.c:524
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -200,7 +204,7 @@ msgstr ""
 "Usted va a guardar un informe de error en '%s'.\n"
 "Esto se podrá usar más adelante para hacer un informe en '%s'."
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:529
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -221,11 +225,11 @@ msgstr ""
 "\n"
 "Si aprieta en 'Acabar' se enviará el informe."
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:651
 msgid "Please choose a file to save to."
 msgstr "Elija un archivo al que grabar."
 
-#: src/bug-buddy.c:657
+#: src/bug-buddy.c:658
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -234,7 +238,7 @@ msgstr ""
 "El archivo '%s' ya existe.\n"
 "¿Sobreescribir este archivo?"
 
-#: src/bug-buddy.c:768
+#: src/bug-buddy.c:769
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -243,7 +247,7 @@ msgstr ""
 "No se pudo abrir '%s'.\n"
 "Por favor, asegúrese de que bug-buddy está bien instalado."
 
-#: src/bug-buddy.c:864
+#: src/bug-buddy.c:865
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -251,15 +255,15 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --apname."
 
-#: src/bug-buddy.c:877
+#: src/bug-buddy.c:878
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
-" Please use the --pid command lineargument instead."
+"Please use the --pid command lineargument instead."
 msgstr ""
 "$GNOME_CRASHED_PID está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --pid."
 
-#: src/bug-buddy.c:990
+#: src/bug-buddy.c:991
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -303,7 +307,6 @@ msgstr ""
 "puedan pedirle más información"
 
 #: src/glade-strings.c:14
-#, fuzzy
 msgid "Bug Tracking System"
 msgstr "Sistema de Seguimiento de Errores"
 
@@ -461,11 +464,11 @@ msgstr "Enviando el Informe"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr ""
+msgstr "Enviar el informe de error al sistema de seguimiento de errores"
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr ""
+msgstr "Enviar al autor individual"
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
@@ -486,9 +489,3 @@ msgstr "Resumen"
 #: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "El GEGL está mirando."
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "El subproceso salió con estado %d"
-
-#~ msgid "Submit bug report"
-#~ msgstr "Enviar el informe de error"
