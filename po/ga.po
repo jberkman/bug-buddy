@@ -1,12 +1,12 @@
 # Irish Translations for bug-buddy
 # Copyright (C) 2000 Free Software Foundation, Inc.
-# ALastair McKinstry <mckinstry@computer.org>, 2000.
+# Sean O Ceallaigh <s_oceallaigh@yahoo.com>, 2000.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-08-25\n"
+"POT-Creation-Date: 2000-08-26 07:57+0000\n"
+"PO-Revision-Date: 2000-08-26 07:39+0600\n"
 "Last-Translator: Sean O Ceallaigh <s_oceallaigh@yahoo.com>\n"
 "Language-Team: Gaeilge <gaeilge-a@listserv.heanet.ie>\n"
 "MIME-Version: 1.0\n"
@@ -15,55 +15,55 @@ msgstr ""
 
 #: src/bts.c:99
 msgid "Distribution"
-msgstr ""
+msgstr "Dáileadh"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "Córas"
 
 #: src/bug-buddy.c:74
 msgid "critical"
-msgstr ""
+msgstr "criticiúl"
 
 #: src/bug-buddy.c:75
 msgid "grave"
-msgstr ""
+msgstr "tromcúiseach"
 
 #: src/bug-buddy.c:76
 msgid "normal"
-msgstr ""
+msgstr "gnách"
 
 #: src/bug-buddy.c:77
 msgid "wishlist"
-msgstr ""
+msgstr "liosta mian"
 
 #: src/bug-buddy.c:82
 msgid "software bug"
-msgstr ""
+msgstr "fadbh ríomhchlár"
 
 #: src/bug-buddy.c:83
 msgid "documentation bug"
-msgstr ""
+msgstr "fadhb doiciméad"
 
 #: src/bug-buddy.c:84
 msgid "change request"
-msgstr ""
+msgstr "athraigh iarratas"
 
 #: src/bug-buddy.c:85
 msgid "support"
-msgstr ""
+msgstr "taca"
 
 #: src/bug-buddy.c:90
 msgid "Submit bug report"
-msgstr ""
+msgstr "Cuir isteach tuairisc fadbh"
 
 #: src/bug-buddy.c:91
 msgid "Only send report to yourself"
-msgstr ""
+msgstr "Ná chuir isteach tuairisc ach chugat féin"
 
 #: src/bug-buddy.c:92
 msgid "Save report to file"
-msgstr ""
+msgstr "Sábháil tuairisc mar chomhad"
 
 #: src/bug-buddy.c:97
 msgid "Collect debugging information from a crashed application"
@@ -96,11 +96,11 @@ msgstr "AINM"
 #: src/bug-buddy.c:115
 #, fuzzy
 msgid "Email address of contact"
-msgstr "Seoladh R-phost"
+msgstr "Ríomhsheoladh"
 
 #: src/bug-buddy.c:115
 msgid "EMAIL"
-msgstr "R-PHOST"
+msgstr "RÍOMHPHOST"
 
 #: src/bug-buddy.c:116
 msgid "Package containing the program"
@@ -524,13 +524,5 @@ msgid "Could not run '%s'."
 msgstr ""
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Earráid: fork() "
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
+msgstr "Earráid ar léamh..."
