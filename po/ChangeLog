@@ -1,3 +1,8 @@
+2001-12-08  Abel Cheung  <maddog@linux.org.hk>
+
+	* lv.po: number of format specifications mismatch at line 182.
+	  Marked as fuzzy.
+
 2001-11-29  Abel Cheung  <maddog@linux.org.hk>
 
 	* zh_TW.po: Updated traditional Chinese translation from

@@ -178,7 +178,7 @@ msgstr ""
 "Vai Blusu Draugam vajadzçtu tagad ðos failus atjauninât?"
 
 #: src/gdb-buddy.c:74
-#, c-format
+#, fuzzy, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Veicu masîva izmeklçðanu..."
 

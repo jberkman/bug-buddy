@@ -1,3 +1,8 @@
+2001-12-08  Abel Cheung  <maddog@linux.org.hk>
+
+	* configure.in: Re-enable zh_TW.po. It's in UTF8 encoding,
+	  shouldn't fail even with older version of gettext.
+
 2001-12-06  jacob berkman  <jacob@ximian.com>
 
 	* src/Makefile.am (INCLUDES): add -DLIBGLADE_DISABLE_DEPRECATED
