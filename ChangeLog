@@ -1,3 +1,16 @@
+2001-12-21  jacob berkman  <jacob@ximian.com>
+
+	* src/gdb-buddy.c (stop_gdb): fix a crash by jumping to the
+	correct page
+
+	* src/bugzilla.c (generate_email_text): print the gnome version if
+	we had one
+
+	* src/bug-buddy.h: add a gnome_version field
+
+	* src/bug-buddy.c (init_ui): get the "gnome version" from the
+	environment.  this is set by gnome_segv.
+
 2001-12-17  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.c (init_ui): set the help / about buttons as

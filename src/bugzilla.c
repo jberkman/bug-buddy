@@ -955,6 +955,7 @@ generate_email_text (void)
 	char *opsys,   *platform, *severity,  *body, *tmp_body;
 	char *debug_info;
 	char *email, *email1;
+	char *gnome_version;
 #if 0
 	char *text_file, *sysinfo;
 #endif
@@ -968,6 +969,9 @@ generate_email_text (void)
 	severity   = druid_data.severity ? druid_data.severity : "Normal";
 	/* sysinfo    = generate_sysinfo (); */
 	tmp_body   = buddy_get_text ("desc-text");
+	gnome_version = druid_data.gnome_version
+		? g_strdup_printf ("BugBuddy-GnomeVersion: %s\n", druid_data.gnome_version)
+		: "";
 		
 	body = format_for_width (tmp_body);
 	g_free (tmp_body);
@@ -1009,6 +1013,7 @@ generate_email_text (void)
 			"Synopsis: %s\n"
 			"Bugzilla-Product: %s\n"
 			"Bugzilla-Component: %s\n"
+			"%s"
 			"\n"
 			"Description:\n"
 			"%s\n"
@@ -1021,6 +1026,7 @@ generate_email_text (void)
 			subject,
 			product,
 			component,
+			gnome_version,
 			body);
 	} else 
 		email1 = g_strdup ("Unkown format.");
@@ -1035,6 +1041,8 @@ generate_email_text (void)
 	g_free (version);
 	g_free (body);
 	g_free (debug_info);
+	if (druid_data.gnome_version)
+		g_free (gnome_version);
 
 	return email;
 }

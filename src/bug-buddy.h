@@ -146,6 +146,8 @@ typedef struct {
 
 	GtkTreeViewColumn *uri_column;
 	gboolean           showing_hand;
+
+	const char *gnome_version;
 } DruidData;
 
 extern DruidData druid_data;

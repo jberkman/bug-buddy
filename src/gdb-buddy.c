@@ -132,7 +132,7 @@ stop_gdb (void)
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-go")), TRUE);
 
 	if (GTK_TOGGLE_BUTTON (GET_WIDGET ("gdb-continue-toggle"))->active)
-		druid_set_state (STATE_DESC);
+		druid_set_state (STATE_PRODUCT);
 	return;
 }
 

@@ -405,6 +405,8 @@ init_ui (void)
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (w), FALSE);
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (w), FALSE);
 
+	druid_data.gnome_version = g_getenv ("BUG_BUDDY_GNOME_VERSION");
+
 	/* dialog crash page */
 	s = popt_data.app_file;
 	if (!s) {
