@@ -1,3 +1,7 @@
+1999-12-29  Yuri Syrota  <rasta@renome.rovno.ua>
+
+	* configure.in (ALL_LINGUAS): added "uk"
+
 1999-12-09  Arjan van de Ven <arjan@fenrus.demon.nl>
 
 	* po/nl.po: Updated Dutch translation
