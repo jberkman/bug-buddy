@@ -7,13 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.x\n"
-"POT-Creation-Date: 2002-06-19 15:19-0400\n"
-"PO-Revision-Date: 2002-05-01 23:30+0100\n"
-"Last-Translator: Benjamin Greiner <benjamin.greiner@gmx.net>\n"
+"POT-Creation-Date: 2002-07-02 19:29+0200\n"
+"PO-Revision-Date: 2002-07-02 19:29GMT\n"
+"Last-Translator: Manuel Borchers <webmaster@matronix.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #
 #: src/bug-buddy.c:55
@@ -184,6 +185,12 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Es trat ein Fehler beim Anzeigen der Proxy-Einstellungen auf:\n"
+"\n"
+"%s.\n"
+"\n"
+"Bitte stellen Sie sicher, dass das GNOME-Control-Center korrekt\n"
+"installiert ist."
 
 #
 #: src/bug-buddy.c:491
@@ -284,9 +291,8 @@ msgstr "*"
 
 # für die liebe Statistik
 #: src/bug-buddy.glade.h:2
-#, fuzzy
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #
 #: src/bug-buddy.glade.h:3
@@ -639,16 +645,17 @@ msgstr "Komponente"
 
 #
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"»%s« kann nicht geöffnet werden.\n"
+"Bug Buddy konnte »%s« nicht öffnen.\n"
+"Bitte stellen Sie sicher, dass Bug Buddy richtig installiert wurde.\n"
 "\n"
-"Bitte überprüfen Sie, ob Bug Buddy richtig installiert wurde."
+"Bug Buddy wird nun beendet."
 
 #
 #: src/bugzilla.c:793
@@ -657,7 +664,6 @@ msgstr "Alle"
 
 #
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -665,8 +671,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"Bug Buddy konnte seine Oberflächendatei (%s) nicht finden.\n"
-"Bitte überprüfen Sie, ob Bug Buddy richtig installiert wurde."
+"Bug Buddy konnte keine Informationen finden, wo Bugs gemeldet\n"
+"werden müssen.\n"
+"Bitte stellen Sie sicher, dass Bug Buddy richtig installiert wurde.\n"
+"\n"
+"Bug Buddy wird nun beendet."
 
 #
 #: src/cell-renderer-uri.c:145
@@ -863,7 +872,7 @@ msgstr "Diesen Bericht jetzt abschicken?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "_Senden"
 
 #
 #: src/united-states-of-bug-buddy.c:526
