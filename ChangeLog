@@ -1,3 +1,34 @@
+2001-08-06  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: 
+	* NEWS: 2.0.7
+
+	* src/util.c (format_for_width): wrap to GStrings rather than text
+	entries
+
+	* src/bugzilla.c (generate_email_text): wrap the mail bodies at 72
+	chars again
+
+	* src/gdb-cmd: also run `thread apply all bt' to get all of the
+	stack traces for currently running threads
+
+	* bugzilla/*: update
+
+2001-08-05  Leonard Norrgard  <vinsci@bugg.lnorrgard.com>
+
+	* gdb-buddy.c (get_trace_from_core): Add --nw option for running
+	GDB, to make Bug-Buddy work with the GNUPro Insight debugger,
+	which defaults to using a GUI.  All GDB versions, starting with
+	gdb-4.13 released in 1994, support the --nw option.)
+	(get_trace_from_pair): Likewise.	
+
+2001-08-04  Leonard Norrgård  <vinsci@sourceforge.net>
+
+	* united-states-f-bug-buddy.c (email_is_valid):
+	Added the seven new toplevel domains.
+	* gdb-buddy.c (start_gdb):
+	Moved the CRASH_NONE case into the switch.
+	
 Tue Jul 10 12:34:00 2001  Jonathan Blandford  <jrb@redhat.com>
 
 	* configure.in: change order of xml in gnome-config command to fix

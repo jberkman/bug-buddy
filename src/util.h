@@ -41,6 +41,6 @@ char *get_line_from_file (const char *filename);
 char *get_line_from_command (const char *command);
 char *get_line_from_commandv (const char *argv[]);
 
-void append_widthv (GtkEditable *edit, const char *s, int *pos);
+char *format_for_width (const char *s);
 
 #endif /* __UTIL_H__ */

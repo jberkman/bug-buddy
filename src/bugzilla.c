@@ -33,6 +33,7 @@
 
 #include "bug-buddy.h"
 #include "libglade-buddy.h"
+#include "util.h"
 #include <dirent.h>
 
 #include <libxml/tree.h>
@@ -770,7 +771,7 @@ gchar *
 generate_email_text (void)
 {	
 	char *subject, *product,  *component, *version;
-	char *opsys,   *platform, *severity,  *body;
+	char *opsys,   *platform, *severity,  *body, *tmp_body;
 	char *sysinfo, *debug_info, *text_file;
 	char *email, *email1;
 
@@ -782,7 +783,10 @@ generate_email_text (void)
 	platform   = "Debian";
 	severity   = druid_data.severity ? druid_data.severity : "Normal";
 	/* sysinfo    = generate_sysinfo (); */
-	body       = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("desc-text")), 0, -1);
+	tmp_body   = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("desc-text")), 0, -1);
+	body = format_for_width (tmp_body);
+	g_free (tmp_body);
+
 	debug_info = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("gdb-text")), 0, -1);
 
 	if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_FREITAG) {

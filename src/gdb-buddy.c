@@ -73,10 +73,9 @@ start_gdb (void)
 
 	d(g_message (_("Obtaining stack trace... (%d)"), druid_data.crash_type));
 
-	if (druid_data.crash_type == CRASH_NONE)
-		return;
-	
 	switch (druid_data.crash_type) {
+	case CRASH_NONE:
+		return;
 	case CRASH_DIALOG:
 		app = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("gdb-binary-entry")));
 		extra = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("gdb-pid-entry")));
@@ -146,7 +145,7 @@ get_trace_from_core (const gchar *core_file)
 	int status;
 	FILE *f;
 
-	gdb_cmd = g_strdup_printf ("gdb --batch --core=%s", core_file);
+	gdb_cmd = g_strdup_printf ("gdb --nw --batch --core=%s", core_file);
 
 	f = popen (gdb_cmd, "r");
 	g_free (gdb_cmd);
@@ -234,7 +233,8 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	GtkWidget *d;
 	int fd;
 	char *app2;
-	char *args[] = { "gdb", 
+	char *args[] = { "gdb",
+			 "--nw",
 			 "--batch", 
 			 "--quiet",
 			 "--command=" BUDDY_DATADIR "/gdb-cmd",

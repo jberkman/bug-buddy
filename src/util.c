@@ -192,14 +192,14 @@ get_line_from_file (const char *filename)
 
 #define LINE_WIDTH 72
 static void
-write_line_width (GtkEditable *edit, char *s, int *pos)
+append_line_width (GString *str, char *s)
 {
 	gchar *sp;
 	if (!s) return;
 
 	if (strlen (s) < LINE_WIDTH) {
-		gtk_editable_insert_text (edit, s, strlen (s), pos);
-		gtk_editable_insert_text (edit, "\n", 1, pos);
+		g_string_append (str, s);
+		g_string_append_c (str, '\n');
 		return;
 	}
 
@@ -210,20 +210,26 @@ write_line_width (GtkEditable *edit, char *s, int *pos)
        
 	if (sp)	*sp = '\0';
 
-	gtk_editable_insert_text (edit, s, strlen (s), pos);
-	gtk_editable_insert_text (edit, "\n", 1, pos);
+	g_string_append (str, s);
+	g_string_append_c (str, '\n');
 
-	if (sp) write_line_width (edit, sp+1, pos);
+	if (sp) append_line_width (str, sp+1);
 }
 
-void
-append_widthv (GtkEditable *edit, const char *s, int *pos)
+char *
+format_for_width (const char *s)
 {
+	GString *str;
 	int i;
-	gchar **sv = g_strsplit (s, "\n", 0);
-	
+	char **sv, *r;
+
+	str = g_string_new (NULL);
+
+	sv = g_strsplit (s, "\n", -1);
 	for (i = 0; sv[i]; i++)
-		write_line_width (edit, sv[i], pos);
-	
-	g_strfreev (sv);
+		append_line_width (str, sv[i]);
+
+	r = str->str;
+	g_string_free (str, FALSE);
+	return r;
 }

@@ -239,7 +239,16 @@ email_is_valid (const char *addy)
 	    g_strncasecmp (rev, "lim.", 4) &&
 	    g_strncasecmp (rev, "vog.", 4) &&
 	    g_strncasecmp (rev, "tni.", 4) &&
-	    g_strncasecmp (rev, "apra.", 5)) {
+	    g_strncasecmp (rev, "apra.", 5) &&
+
+	    /* In the year 2000, seven new toplevel domains were approved by ICANN. */
+	    g_strncasecmp (rev, "orea.", 5) &&
+	    g_strncasecmp (rev, "zib.", 4) &&
+	    g_strncasecmp (rev, "pooc.", 5) &&
+	    g_strncasecmp (rev, "ofni.", 5) &&
+	    g_strncasecmp (rev, "muesum.", 5) &&
+	    g_strncasecmp (rev, "eman.", 5) &&
+	    g_strncasecmp (rev, "orp.", 5)) {
 		g_free (rev);
 		return FALSE;
 	}
