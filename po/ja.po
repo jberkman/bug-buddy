@@ -1,5 +1,5 @@
 # bug-buddy ja.po
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# Copyright (C) 2000 Free Software Foundation, Inc.
 # Akira TAGOH <at@ff.iij4u.or.jp>, 2000.
 #
 msgid ""
