@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.95\n"
-"POT-Creation-Date: 2001-08-06 17:14-0400\n"
-"PO-Revision-Date: 2001-03-04 22:22+0900\n"
-"Last-Translator: Chideok Hwang <hwang@mizi.co.kr>\n"
+"Project-Id-Version: bug-buddy 2.0.8\n"
+"POT-Creation-Date: 2001-09-07 10:11+0900\n"
+"PO-Revision-Date: 2001-09-07 01:14+0900\n"
+"Last-Translator: Nam SungHyun <namsh@kldp.org>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-kr\n"
@@ -143,13 +143,13 @@ msgid "Are you sure you want to cancel this update?"
 msgstr "정말로 이 갱신을 취소하기를 원하십니까?"
 
 #: src/bugzilla.c:593
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "'%s'을 열수가 없습니다.\n"
-"bug-buddy가 제대로 설치되었는지를 확인해주시요."
+"Bug Buddy가 제대로 설치되었는지를 확인해주시요."
 
 #: src/bugzilla.c:604
 msgid "All"
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "읽는 도중에 에러 발생.. 중단합니다"
 
-#: src/gdb-buddy.c:249
+#: src/gdb-buddy.c:248
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -202,16 +202,15 @@ msgstr ""
 "시스템에서 GDB를 발견할 수가 없습니다.\n"
 "디버깅 정보를 얻을 수가 없을겁니다."
 
-#: src/gdb-buddy.c:274
-#, fuzzy
+#: src/gdb-buddy.c:273
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "gdb-cmd 파일을 발견할 수가 없습니다.\n"
-"bug-buddy를 다시 설치하십시요."
+"Bug Buddy를 다시 설치하십시요."
 
-#: src/gdb-buddy.c:283 src/util.c:76
+#: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
 msgstr "fork 실행 도중 에러 발생."
 
@@ -496,7 +495,7 @@ msgid "Please enter a valid email address."
 msgstr "당신의 전자우편 주소를 기입하세요"
 
 #: src/united-states-of-bug-buddy.c:297
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -505,7 +504,9 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s'는 존재하지않습니다. 버그레포팅을 지금 보낼수는 없습니다.\n"
+"'%s'는 존재하지않습니다.\n"
+"\n"
+"버그레포팅을 지금 보낼수는 없습니다.\n"
 "하지만 파일로 저장을 하실수가 있습니다.\n"
 "\n"
 "sendmail의 위치를 다시 지정하시겠습니까?"
@@ -533,9 +534,8 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "버그 레포트에는 설명을 포함하여야합니다."
 
 #: src/united-states-of-bug-buddy.c:392
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "버그 레포트를 보냄"
+msgstr "버그 레포트를 지금 보낼까요?"
 
 #: src/united-states-of-bug-buddy.c:406
 #, c-format
@@ -558,7 +558,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "버그 레포트가 '%s'에 저장되었습니다"
 
 #: src/united-states-of-bug-buddy.c:474
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -568,7 +568,9 @@ msgid ""
 msgstr ""
 "버그 레포트가 다음 주소로 보내졌습니다.\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"고맙습니다!"
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
@@ -605,15 +607,8 @@ msgstr "읽는 도중 에러가 발생했습니다"
 
 #: src/bug-buddy.desktop.in.h:1
 msgid "Bug Report Tool"
-msgstr ""
+msgstr "버그 레포트 도구"
 
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
-msgstr ""
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "'%s'을 열수가 없습니다.\n"
-#~ "bug-buddy가 제대로 설치되었는지를 확인해주시요."
+msgstr "GNOME 버그 레포트"
