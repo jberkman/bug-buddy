@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-05-12 11:42+02:00\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
@@ -286,7 +286,7 @@ msgstr "Stop"
 msgid "Refresh"
 msgstr "Opdatér"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -295,7 +295,7 @@ msgstr ""
 "Kunne ikke åbne '%s'.\n"
 "Tjek venligst om Fejl-Frede er korrekt installeret."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -303,7 +303,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME bruges ikke længere.\n"
 "Brug venligst --appname kommandolineargumentet istedet."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -311,7 +311,7 @@ msgstr ""
 "$GNOME_CRASHED_PID bruges ikke længere.\n"
 "Brug venligst --pid kommandolinieargumentet istedet."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

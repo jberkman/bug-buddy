@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-05-08 20:05+02:00\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -286,7 +286,7 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Uppdatera"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -295,7 +295,7 @@ msgstr ""
 "Kunde inte öppna \"%s\".\n"
 "Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -303,7 +303,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME är ur bruk.\n"
 "Var vänlig och använd kommandoradsflaggan --appname istället."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -311,7 +311,7 @@ msgstr ""
 "$GNOME_CRASHED_PID är ur bruk.\n"
 "Var vänlig och använd kommandoradsflaggan --pid istället."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

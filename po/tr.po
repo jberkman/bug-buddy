@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-08-05 11:10+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -285,7 +285,7 @@ msgstr "Dur"
 msgid "Refresh"
 msgstr "Yenile"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -294,7 +294,7 @@ msgstr ""
 "'%s''yi açamadým .\n"
 "Lütfen bug-buddy'nin doðruca yüklendiðini te'min et ."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -302,7 +302,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME tam desteklenmiyor .\n"
 "Lütfen o'nun yerine --appname komuta seçeneðini seç ."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -310,7 +310,7 @@ msgstr ""
 "$GNOME_CRASHED_PID tam deskteklenmiyor .\n"
 "Lütfen o'nun yerine --pid komuta seçeneðini seç ."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

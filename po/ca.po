@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-06-29 14:00+0200\n"
 "Last-Translator: Quico Llach <quico@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
@@ -287,7 +287,7 @@ msgstr "Atura"
 msgid "Refresh"
 msgstr "Refresca"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -296,7 +296,7 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -304,7 +304,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_APPNAME.\n"
 "Si us plau, substituïu-ho per l'ordre -appname en la línia d'ordres."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -312,7 +312,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_PID.\n"
 "Si us plau, substituïu-ho per l'ordre -pid en la línia d'ordres."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

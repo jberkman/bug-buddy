@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-09-09 18:40+02:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -293,7 +293,7 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Neu anzeigen"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -304,7 +304,7 @@ msgstr ""
 "Bitte überprüfen Sie, ob bug-buddy richtig\n"
 "installiert wurde."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -314,7 +314,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --appname als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -324,7 +324,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --pid als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

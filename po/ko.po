@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20000905\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-09-05 13:22+0900\n"
 "Last-Translator: Chideok Hwang <hwang@mizi.co.kr>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -282,7 +282,7 @@ msgstr "그만"
 msgid "Refresh"
 msgstr "갱신"
 
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -291,7 +291,7 @@ msgstr ""
 "'%s'을 열수가 없습니다.\n"
 "bug-buddy가 제대로 설치되었는지를 확인해주시요."
 
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -299,7 +299,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME을 지정하여 사용하는 것보다는\n"
 "--appname 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -307,7 +307,7 @@ msgstr ""
 "$GNOME_CRASHED_PID를 사용하시는 것보다는\n"
 "--pid 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

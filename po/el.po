@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 04:36-0400\n"
+"POT-Creation-Date: 2000-10-04 16:50-0400\n"
 "PO-Revision-Date: 2000-07-15 00:18+0000\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -327,7 +327,7 @@ msgid "Refresh"
 msgstr "Ανανέωση"
 
 #
-#: src/bug-buddy.c:979
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -337,7 +337,7 @@ msgstr ""
 "Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
 
 #
-#: src/bug-buddy.c:1084
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -346,7 +346,7 @@ msgstr ""
 "Παρακαλώ κάντε χρήση της επιλογής --appname command lineargument."
 
 #
-#: src/bug-buddy.c:1097
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -355,7 +355,7 @@ msgstr ""
 "Αντί αυτού, παρακαλώ κάντε χρήση της επιλογής γραμμής εντολών --pid."
 
 #
-#: src/bug-buddy.c:1229
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
