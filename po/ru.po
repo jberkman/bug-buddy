@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-08-06 17:14-0400\n"
-"PO-Revision-Date: 2001-03-26 18:18+04:00\n"
+"POT-Creation-Date: 2001-09-29 20:52+0400\n"
+"PO-Revision-Date: 2001-09-29 20:53+0400\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Ошибка при чтении... прервание"
 
-#: src/gdb-buddy.c:249
+#: src/gdb-buddy.c:248
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -201,7 +201,7 @@ msgstr ""
 "GDB не был найден в вашей системе.\n"
 "Отладочная информация не будет собрана."
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:273
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -209,7 +209,7 @@ msgstr ""
 "Не удалось найти файл gdb-cmd.\n"
 "Пожалуйста, попытайтесь переустановить bug-buddy."
 
-#: src/gdb-buddy.c:283 src/util.c:76
+#: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
 msgstr "Ошибка на fork()."
 
@@ -561,7 +561,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Ваше сообщение об ошибке сохранено в '%s'"
 
 #: src/united-states-of-bug-buddy.c:474
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -571,7 +571,9 @@ msgid ""
 msgstr ""
 "Ваше сообщение об ошибке отправлено:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Спасибо!"
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
@@ -608,96 +610,8 @@ msgstr "Ошибка при чтении..."
 
 #: src/bug-buddy.desktop.in.h:1
 msgid "Bug Report Tool"
-msgstr ""
+msgstr "Инструмент сообщений об ошибках"
 
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
-msgstr ""
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Не удалось открыть \"%s\".\n"
-#~ "Убедитесь, что bug-buddy правильно установлен."
-
-#~ msgid "Distribution"
-#~ msgstr "Дистрибутив"
-
-#~ msgid "System"
-#~ msgstr "Система"
-
-#~ msgid "critical"
-#~ msgstr "критичная"
-
-#~ msgid "grave"
-#~ msgstr "серьезная"
-
-#~ msgid "normal"
-#~ msgstr "обычная"
-
-#~ msgid "wishlist"
-#~ msgstr "запрос улучшения"
-
-#~ msgid "software bug"
-#~ msgstr "ошибка программы"
-
-#~ msgid "documentation bug"
-#~ msgstr "ошибка в документации"
-
-#~ msgid "change request"
-#~ msgstr "запрос изменений"
-
-#~ msgid "support"
-#~ msgstr "поддержка"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "Гораздо полезнее, если вы укажете\n"
-#~ "более конкретный пакет чем 'general'.\n"
-#~ "\n"
-#~ "Пожалуйста, укажите пакет."
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Вы должны включить тему и описание\n"
-#~ "в ваше сообщение об ошибке."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "'%s' кажется не существует. Вы не сможете действительно отправить\n"
-#~ "сообщение об ошибке, но вы сможете сохранить его в файле.\n"
-#~ "\n"
-#~ "Укажете новое расположение sendmail?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "Вы должны указать эл.адрес получателя"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Пожалуйста, выберите файл для сохранения."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "Файл \"%s\" уже существует.\n"
-#~ "Переписать?"
-
-#~ msgid "Help"
-#~ msgstr "Справка"
-
-#~ msgid "Refresh"
-#~ msgstr "Обновить"
-
-#~ msgid "Finish"
-#~ msgstr "Завершить"
+msgstr "Сообщение об ошибке в GNOME"
