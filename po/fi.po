@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
 "POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-05-14 22:00+0300\n"
+"PO-Revision-Date: 2000-05-22 23:00+0300\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -144,6 +144,10 @@ msgid ""
 "\n"
 "Do you want to continue anyway?"
 msgstr ""
+"On suositeltavaa, että valitset tietyn\n"
+"paketin 'general':n sijaan.\n"
+"\n"
+"Haluatko kuitenkin jatkaa?"
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
@@ -231,14 +235,15 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
 #: src/bug-buddy.c:694
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
 msgstr ""
 "Virheraportti on lähetetty osoitteeseen:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
@@ -263,19 +268,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "Tietoja"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Ohje"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Pysäytä"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Päivitä"
 
 #: src/bug-buddy.c:949
 #, c-format
@@ -456,7 +461,7 @@ msgstr "Kuvaus"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr "Tee virheraportti Englannin kielellä, mikäli mahdollista."
+msgstr "Tee virheraportti englanniksi, mikäli mahdollista."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
@@ -566,6 +571,3 @@ msgstr "Ei voinut ajaa '%s'"
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
-
-#~ msgid "Child process exited with status %d"
-#~ msgstr "Lapsiprosessi lopetti toimintansa tilassa %d"
