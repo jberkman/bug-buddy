@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
 "POT-Creation-Date: 2002-06-01 13:42+0300\n"
-"PO-Revision-Date: 2002-06-01 13:09+0200\n"
+"PO-Revision-Date: 2002-06-01 14:01+0200\n"
 "Last-Translator: Yuriy Syrota <yuri@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -411,7 +411,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:30
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Будь ласка, робіть ваш звіт англійською, якщо можете"
 
 #: src/bug-buddy.glade.h:31
 msgid "Please select the product for the bug you wish to report."
@@ -440,9 +440,8 @@ msgid "Save in"
 msgstr ""
 
 #: src/bug-buddy.glade.h:39
-#, fuzzy
 msgid "Save the report to..."
-msgstr "Зберегти звіт у файлі"
+msgstr "Зберегти звіт у файлі..."
 
 #: src/bug-buddy.glade.h:40
 msgid "Saving:"
@@ -539,9 +538,8 @@ msgid "email info"
 msgstr ""
 
 #: src/bug-buddy.glade.h:63
-#, fuzzy
 msgid "finished"
-msgstr "Завершено!"
+msgstr "завершено"
 
 #: src/bug-buddy.glade.h:64
 msgid "gdb"
@@ -552,18 +550,16 @@ msgid "gnome"
 msgstr ""
 
 #: src/bug-buddy.glade.h:66
-#, fuzzy
 msgid "mail config"
-msgstr "Системна конфігурація"
+msgstr "поштова конфігурація"
 
 #: src/bug-buddy.glade.h:67
 msgid "mostfreq"
 msgstr ""
 
 #: src/bug-buddy.glade.h:68
-#, fuzzy
 msgid "product"
-msgstr "Продукт"
+msgstr "продукт"
 
 #: src/bug-buddy.glade.h:69
 msgid "sendmail"
@@ -578,9 +574,8 @@ msgid "Select a Product"
 msgstr "Виберіть продукт"
 
 #: src/united-states-of-bug-buddy.c:51
-#, fuzzy
 msgid "Select a Component"
-msgstr "компонент"
+msgstr "Виберіть компонент"
 
 #: src/united-states-of-bug-buddy.c:52
 msgid "Frequently Reported Bugs"
@@ -591,14 +586,12 @@ msgid "Bug Description"
 msgstr "Опис помилки"
 
 #: src/united-states-of-bug-buddy.c:54
-#, fuzzy
 msgid "Mail Configuration"
-msgstr "Системна конфігурація"
+msgstr "Поштова конфігурація"
 
 #: src/united-states-of-bug-buddy.c:55
-#, fuzzy
 msgid "Confirmation"
-msgstr "Системна конфігурація"
+msgstr "Підтвердження"
 
 #: src/united-states-of-bug-buddy.c:56
 msgid "Finished!"
