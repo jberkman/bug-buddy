@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-14 23:38-0500\n"
-"PO-Revision-Date: 1999-11-06 11:55+01:00\n"
+"Project-Id-Version: bug-buddy 0.4\n"
+"POT-Creation-Date: 1999-11-15 13:16+0100\n"
+"PO-Revision-Date: 1999-11-19 19:30+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,12 +19,12 @@ msgstr "henter stack trace..."
 
 #: src/bug-buddy.c:287 src/gdb-buddy.c:81
 msgid "gdb has already exited"
-msgstr ""
+msgstr "gdb har allerede avsluttet"
 
 #: src/bug-buddy.c:527 src/bug-buddy.c:626 src/gdb-buddy.c:90
 #, c-format
 msgid "Subprocess exited with status %d"
-msgstr ""
+msgstr "Underprosess avsluttet med status %d"
 
 #: src/gdb-buddy.c:118
 #, c-format
@@ -38,7 +38,7 @@ msgstr ""
 #: src/gdb-buddy.c:143
 #, c-format
 msgid "Child process exited with status %d"
-msgstr ""
+msgstr "Barnprosess avsluttet med status %d"
 
 #: src/gdb-buddy.c:146
 #, c-format
@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/gdb-buddy.c:175
 msgid "Error on read... aborting"
-msgstr ""
+msgstr "Feil ved lesing... avbryter"
 
 #: src/gdb-buddy.c:207
 msgid ""
@@ -62,19 +62,16 @@ msgstr ""
 "Vennligst installer bug-buddy på nytt."
 
 #: src/gdb-buddy.c:214
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr ""
-"Kunne ikke åpne filen:\n"
-"'%s'"
+msgstr "Kunne ikke åpne rør"
 
 #: src/gdb-buddy.c:226
 msgid "Could not run gdb.  Time to panic."
-msgstr ""
+msgstr "Kunne ikke kjøre gdb. Tid for panikk."
 
 #: src/gdb-buddy.c:230
 msgid "Error on fork()."
-msgstr ""
+msgstr "Feil ved fork()."
 
 #: src/bug-buddy.c:60
 msgid "critical"
@@ -82,7 +79,7 @@ msgstr "kritisk"
 
 #: src/bug-buddy.c:61
 msgid "grave"
-msgstr ""
+msgstr "alvorlig"
 
 #: src/bug-buddy.c:62
 msgid "normal"
@@ -94,23 +91,23 @@ msgstr "ønskeliste"
 
 #: src/bug-buddy.c:67
 msgid "software bug"
-msgstr ""
+msgstr "programfeil"
 
 #: src/bug-buddy.c:68
 msgid "documentation bug"
-msgstr ""
+msgstr "dokumentasjonsfeil"
 
 #: src/bug-buddy.c:69
 msgid "change request"
-msgstr ""
+msgstr "endre forespørsel"
 
 #: src/bug-buddy.c:70
 msgid "support"
-msgstr ""
+msgstr "støtte"
 
 #: src/bug-buddy.c:93
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: src/bug-buddy.c:94
 msgid "Distribution"
@@ -201,6 +198,8 @@ msgid ""
 "gdb has not finished getting thedebugging information.\n"
 "Kill the gdb process (the stack tracewill be incomplete)?"
 msgstr ""
+"gdb er ikke ferdig med å innhente debugginginformasjonen.\n"
+"Drep gdb prosessen (stack trace vil ikke være komplett)?"
 
 #: src/bug-buddy.c:354
 msgid "Please enter your name and email address"
@@ -246,9 +245,9 @@ msgstr ""
 
 #. s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
 #: src/bug-buddy.c:441
-#, fuzzy, c-format
+#, c-format
 msgid "about to run '%s'"
-msgstr "Kunne ikke starte '%s'.\n"
+msgstr "i ferd med å kjøre '%s'"
 
 #: src/bug-buddy.c:444
 #, c-format
@@ -278,6 +277,8 @@ msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
+"Filen '%s' eksisterer allerede.\n"
+"Overskriv denne filen?"
 
 #: src/bug-buddy.c:615
 #, c-format
@@ -294,24 +295,28 @@ msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
+"$GNOME_CRASHED_APPNAME er utgått.\n"
+"Vennligst bruk --appname kommandolinjeflagget i stedet."
 
 #: src/bug-buddy.c:822
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
 msgstr ""
+"$GNOME_CRASHED_PID er utgått.\n"
+"Vennligst bruk --pid kommandolinjeflagget i stedet."
 
 #: src/bug-buddy.c:944
 msgid "Could not find a mail program.\n"
 msgstr "Kunne ikke finne et e-post program.\n"
 
 #: src/bug-buddy.c:952
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not find our glade file '%s'\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Kunne ikke finne bug-buddy.glade filen.\n"
+"Kunne ikke finne vår glade fil, '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble korrekt installert."
 
 #: src/bug-buddy.c:962
@@ -415,22 +420,19 @@ msgstr ""
 
 #: src/glade-strings.c:31
 msgid "Bug class"
-msgstr ""
+msgstr "Feilklasse"
 
 #: src/glade-strings.c:32
 msgid "(descriptions)"
-msgstr ""
+msgstr "(beskrivelser)"
 
 #: src/glade-strings.c:33
 msgid "Extra Information"
 msgstr "Ekstra informasjon"
 
 #: src/glade-strings.c:34
-#, fuzzy
 msgid "Full description of the bug:"
-msgstr ""
-"Kort beskrivelse\n"
-"av problemet"
+msgstr "Kort beskrivelse av feilen:"
 
 #: src/glade-strings.c:35
 msgid "How to repeat the bug:"
@@ -489,11 +491,12 @@ msgid "Debugging Information"
 msgstr "Debugginginformasjon"
 
 #: src/glade-strings.c:49
-#, fuzzy
 msgid ""
 "Please wait while bug-buddy\n"
 "collects debugging info..."
-msgstr "Vennligst vent mens bug-buddy samler debugginginformasjon..."
+msgstr ""
+"Vennligst vent mens bug-buddy\n"
+"samler debugginginformasjon..."
 
 #: src/glade-strings.c:51
 msgid "Action"
