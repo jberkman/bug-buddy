@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-05-10 01:33-0400\n"
-"PO-Revision-Date: 2000-05-03 11:13+00:00\n"
+"POT-Creation-Date: 2000-05-13 15:00+0000\n"
+"PO-Revision-Date: 2000-05-13 15:01+00:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -220,11 +220,15 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Ваше сообщение об ошибке сохранено в '%s'"
 
 #: src/bug-buddy.c:682
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
-"\t<%s>"
-msgstr "Ваше сообщение об ошибке отправлено <%s>"
+"\n"
+"        <%s>"
+msgstr ""
+"Ваше сообщение об ошибке отправлено:\n"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
@@ -432,7 +436,7 @@ msgstr "Описание"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Пожалуйста, если возможно, сообщайте об ошибке на английском языке."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
