@@ -14,9 +14,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "отримання страси стеку..."
+msgstr "отримання страси стеку... (%d)"
 
 #: src/bug-buddy.c:410 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -98,60 +98,52 @@ msgid "Submit bug report"
 msgstr "В╕д╕слати зв╕т"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Only send report to yourself"
-msgstr "В╕д╕слати зв╕т лише на вашу адресу"
+msgstr "В╕д╕слати зв╕т лише соб╕"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Save report to file"
-msgstr "Зберегти зв╕т в файл╕"
+msgstr "Зберегти зв╕т у файл╕"
 
 #: src/bug-buddy.c:96
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "Збирання налагоджувально╖ ╕нформац╕╖"
+msgstr "Збирання налагоджувально╖ ╕нформац╕╖ з програми, що зазнала збою"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "Збирання налагоджувально╖ ╕нформац╕╖"
+msgstr "Збирання налагоджувально╖ ╕нформац╕╖ з файлу core"
 
 #: src/bug-buddy.c:98
 msgid "Skip this step"
 msgstr "Пропустити цей крок"
 
 #: src/bug-buddy.c:103
-#, fuzzy
 msgid "Create a new bug report"
-msgstr "В╕д╕слати новий зв╕т про помилку"
+msgstr "Створити новий зв╕т про помилку"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Add more information to existing report"
-msgstr "Додати ╕нформац╕ю до ╕снуючого зв╕ту про помилку"
+msgstr "Додати ╕нформац╕ю до ╕снуючого зв╕ту"
 
 #: src/bug-buddy.c:113
 msgid "Name of contact"
-msgstr ""
+msgstr "Назва контактно╖ ╕нформац╕╖"
 
 #: src/bug-buddy.c:113
 msgid "NAME"
-msgstr "╤М'Я"
+msgstr "НАЗВА"
 
 #: src/bug-buddy.c:114
-#, fuzzy
 msgid "Email address of contact"
-msgstr "Ваша е-адреса"
+msgstr "Електронна адреса"
 
 #: src/bug-buddy.c:114
 msgid "EMAIL"
 msgstr "ЕПОШТА"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Package containing the program"
-msgstr "Пакет програми"
+msgstr "Пакет, що м╕стить програму"
 
 #: src/bug-buddy.c:115
 msgid "PACKAGE"
@@ -166,16 +158,14 @@ msgid "VERSION"
 msgstr "ВЕРС╤Я"
 
 #: src/bug-buddy.c:117
-#, fuzzy
 msgid "File name of crashed program"
-msgstr "Пакет програми"
+msgstr "Назва файлу програми, що зазнали збою"
 
 #: src/bug-buddy.c:117 src/bug-buddy.c:119
 msgid "FILE"
 msgstr "ФАЙЛ"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "PID of crashed program"
 msgstr "PID програми, що зазнала збою"
 
@@ -184,18 +174,18 @@ msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "Core file from program"
-msgstr "core-файл в╕д програми"
+msgstr "Файл core в╕д програми"
 
 #: src/bug-buddy.c:359
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
+"Вам необх╕дно вставити заголовок та опис\n"
+"у ваш зв╕т."
 
 #: src/bug-buddy.c:402
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -216,7 +206,7 @@ msgid "The lame bug-buddy web page"
 msgstr "Простенька веб-стор╕нка bug-buddy"
 
 #: src/bug-buddy.c:550
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
 "submit a bug report, but you will be able to save it to a file.\n"
@@ -233,40 +223,37 @@ msgid "Please enter your name and email address"
 msgstr "Будь ласка, введ╕ть ваш╕ ╕м'я та е-адресу"
 
 #: src/bug-buddy.c:605
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"Не вдалося обробити core-файл gdb:\n"
-"\"%s\""
+msgstr "Не вдалося в╕дкити файл: \"%s\""
 
 #: src/bug-buddy.c:618
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "запуск \"%s\""
 
 #: src/bug-buddy.c:622
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "Не вдалося запустити програму: \"%s\""
 
 #: src/bug-buddy.c:653
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "Ваш зв╕т було збережено в \"%s\""
 
 #: src/bug-buddy.c:656
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
-msgstr ""
+msgstr "Ваш зв╕т було в╕д╕слано до <%s>"
 
 #: src/bug-buddy.c:786
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "Вам необх╕дно вказати адреси адресат╕в"
 
 #: src/bug-buddy.c:792
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "В╕д╕слати зв╕т"
+msgstr "В╕д╕слати зв╕т зараз?"
 
 #: src/bug-buddy.c:802
 msgid "Please choose a file to save to."
@@ -299,7 +286,6 @@ msgstr ""
 "зам╕сть $GNOME_CRASHED_APPNAME."
 
 #: src/bug-buddy.c:1023
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -327,7 +313,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "Запрошу╓мо у чудовий св╕т bug-buddy"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -337,6 +323,10 @@ msgid ""
 "email address so that the bug report can be\n"
 "submitted."
 msgstr ""
+"bug-buddy проведе вас процесом п╕дготування зв╕ту про\n"
+"помилку. Якщо ви вперше використову╓те bug-buddy, вас\n"
+"спитають вашу адресу електронно╖ пошти, ╕ п╕сля цього\n"
+"зв╕т може бути п╕дготовано."
 
 #: src/glade-strings.c:14
 msgid "Contact Information"
@@ -364,6 +354,9 @@ msgid ""
 "submitting a bug report.  You can click the help\n"
 "button for a more in-depth explanation of the process."
 msgstr ""
+"bug-buddy проведе вас процесом п╕дготування зв╕ту про\n"
+"помилку.  Ви можете клацнути на кнопку дов╕дки\n"
+"для додаткового пояснення сут╕ процесу."
 
 #: src/glade-strings.c:22
 msgid "Report Information"
@@ -374,18 +367,20 @@ msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"Вибер╕ть систему в╕дсл╕дковування помилок для використання, та введ╕ть\n"
+"╕нформац╕ю, що лишилася."
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
 msgstr "Система в╕дсл╕дковування помилок"
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid ""
 "Submit new report\n"
 "Add information to an existing report\n"
-msgstr "Додати ╕нформац╕ю до ╕снуючого зв╕ту про помилку"
+msgstr ""
+"В╕д╕слати новий зв╕т\n"
+"Додати ╕нформац╕ю до ╕снуючого зв╕ту\n"
 
 #: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
 msgid "Package"
@@ -408,6 +403,8 @@ msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"Перев╕рте що вашу помилку вже було п╕дготовано та, якщо \n"
+"це так, використайте \"Додати ╕нформац╕ю до ╕снуючого зв╕ту\"."
 
 #: src/glade-strings.c:37 src/glade-strings.c:38
 msgid "Bug Number"
@@ -422,9 +419,8 @@ msgid "Short subject for the bug report"
 msgstr "Короткий заголовок зв╕ту про помилку"
 
 #: src/glade-strings.c:41
-#, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "Повний опис помилки"
+msgstr "Повний опис помилки, включаючи опис того як ╖╖ ╕н╕ц╕ювати"
 
 #: src/glade-strings.c:42
 msgid "Include a text file"
@@ -440,6 +436,9 @@ msgid ""
 "Collect debugging information from a core file\n"
 "Skip this step\n"
 msgstr ""
+"З╕брати налагоджувальну ╕нформац╕ю з програми, що зазнали збою\n"
+"З╕брати налагоджувальну ╕нформац╕ю з файлу core\n"
+"Пропустити цей крок\n"
 
 #: src/glade-strings.c:48
 msgid "Select the crashed application's binary"
@@ -455,7 +454,7 @@ msgstr "╤дентиф╕катор процесу"
 
 #: src/glade-strings.c:51
 msgid "Core file"
-msgstr "core-файл"
+msgstr "Файл core"
 
 #: src/glade-strings.c:52
 msgid "Select a core file"
@@ -498,20 +497,22 @@ msgid "Submitting the Report"
 msgstr "В╕дсилання зв╕ту"
 
 #: src/glade-strings.c:63
-#, fuzzy
 msgid ""
 "Submit bug report\n"
 "Send to your amail address only\n"
 "Save report to file\n"
-msgstr "В╕д╕слати зв╕т лише на вашу адресу"
+msgstr ""
+"В╕д╕слати зв╕т\n"
+"В╕д╕слати зв╕т лише на вашу адресу\n"
+"Зберегти зв╕т у файл╕\n"
 
 #: src/glade-strings.c:67
 msgid "To"
-msgstr ""
+msgstr "До"
 
 #: src/glade-strings.c:68
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "В╕д╕слати коп╕ю соб╕"
 
 #: src/glade-strings.c:69
 msgid "Save the report to..."
@@ -519,7 +520,7 @@ msgstr "Зберегти зв╕т в..."
 
 #: src/glade-strings.c:70
 msgid "Content"
-msgstr ""
+msgstr "Вм╕ст"
 
 #: src/glade-strings.c:71
 msgid "Summary"
@@ -528,90 +529,3 @@ msgstr "Резюме"
 #: src/glade-strings.c:72
 msgid "The GEGL is watching."
 msgstr "GEGL спостер╕га╓."
-
-#~ msgid "Contact's name"
-#~ msgstr "Контактне ╕м'я"
-
-#~ msgid "Contact's email address"
-#~ msgstr "Контакнта електронна адреса"
-
-#~ msgid "Crashed file name"
-#~ msgstr "Назва файлу, що зазна╓ збою"
-
-#~ msgid ""
-#~ "Click \"Finish\" to exit bug-buddy.\n"
-#~ "No bug report will be submitted."
-#~ msgstr ""
-#~ "Клацн╕ть \"Finish\" для звершення роботи з bug-buddy.\n"
-#~ "Н╕яких зв╕т╕в над╕слано не буде."
-
-#~ msgid ""
-#~ "You are about to save a bug report in '%s'.\n"
-#~ "This can later be used to report a bug in '%s'."
-#~ msgstr ""
-#~ "Ви зберегли зв╕т про помилку в \"%s\".\n"
-#~ "Це дозволя╓ зв╕тувати про помилку в \"%s\" п╕зн╕ше."
-
-#~ msgid ""
-#~ "You are about to report a bug in '%s'.\n"
-#~ "\n"
-#~ "This will be submitted via email:\n"
-#~ "To: %s\n"
-#~ "From: %s <%s>\n"
-#~ "Subject: %s\n"
-#~ "\n"
-#~ "Clicking on 'Finish' will submit the bug report."
-#~ msgstr ""
-#~ "Ви п╕дготували зв╕т про пом╕лку в \"%s\".\n"
-#~ "\n"
-#~ "Його буде в╕д╕слано через е-пошту:\n"
-#~ "До: %s\n"
-#~ "В╕д: %s <%s>\n"
-#~ "Заголовок: %s\n"
-#~ "\n"
-#~ "Клацн╕ть на \"Finish\" для в╕дсилання зв╕ту."
-
-#~ msgid "all will be revealed."
-#~ msgstr "все буде виявлено."
-
-#~ msgid ""
-#~ "Enter your name and email address, so you will be notified when the\n"
-#~ "bug is resolved, or for developers to request more information from you."
-#~ msgstr ""
-#~ "Введ╕ть сво╓ ╕м'я та адресу е-пошти, щоб можна було вас пов╕домити,\n"
-#~ "коли помилку буде виправлено, або для розробник╕в, якщо ╖м стане\n"
-#~ "необх╕дною додаткова ╕нформац╕я в╕д вас."
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Action"
-#~ msgstr "Д╕я"
-
-#~ msgid "More Information"
-#~ msgstr "Додатова ╕нформац╕я"
-
-#~ msgid "Detailed instructions on how to reproduce the bug"
-#~ msgstr "Детальн╕ ╕нструкц╕╖, як повторити помилку"
-
-#~ msgid "How to collect debugging information"
-#~ msgstr "Де знаходиться налагоджувальна ╕нформац╕я"
-
-#~ msgid "Attach to a crashed application"
-#~ msgstr "Долучено до програми, що зазнала збою"
-
-#~ msgid "Read from a core file"
-#~ msgstr "Знаходиться в core-файл╕"
-
-#~ msgid "Submit bug report to bug tracking system"
-#~ msgstr "В╕д╕слати зв╕т у систему в╕дсл╕дковування помилок"
-
-#~ msgid "Submit to individual author"
-#~ msgstr "В╕д╕слати автору"
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "П╕дпроцес завершено ╕з кодом снану %d"
