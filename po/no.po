@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-02-23 12:09-0500\n"
-"PO-Revision-Date: 1999-12-10 21:06+01:00\n"
+"POT-Creation-Date: 2000-02-26 12:30+0100\n"
+"PO-Revision-Date: 2000-02-26 12:31+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -301,7 +301,6 @@ msgstr ""
 "informasjon fra deg."
 
 #: src/glade-strings.c:14
-#, fuzzy
 msgid "Bug Tracking System"
 msgstr "Feiloppfølgingsystem"
 
@@ -459,11 +458,11 @@ msgstr "Sending av feilrapporten"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr ""
+msgstr "Send feilrapport til feiloppfølgingssystemet"
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr ""
+msgstr "Send til individuell programmerer"
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
@@ -484,9 +483,3 @@ msgstr "Sammendrag"
 #: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGLen overvåker oss."
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "Underprosess avsluttet med status %d"
-
-#~ msgid "Submit bug report"
-#~ msgstr "Send feilrapport"
