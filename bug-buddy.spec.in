@@ -71,7 +71,7 @@ rm -fr $RPM_BUILD_ROOT
 %doc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
 %{prefix}/bin/*
 %{prefix}/share/pixmaps/*
-%{prefix}/share/gnome/*/*
+%{prefix}/share/gnome/*
 %{prefix}/share/mime-info/*
 %{prefix}/share/bug-buddy
-%{prefix}/share/locale/*/*/*
+%{prefix}/share/locale/*

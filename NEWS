@@ -1,3 +1,26 @@
+0.8:
+
+* Fixes:
+
+	- all bugs on bugs.gnome.org that can be fixed are either
+	  fixed or somewhat addressed
+
+	- Checks for version on TuboLinux
+
+* Improvements:
+
+	- much of the .glade was redone
+
+	- it is now possible to cc yourself on bug submitions
+
+	- you get a preview of the message before you send it
+
+	- (not finished) user documentation
+
+	- you can submit bugs to arbitrary people now
+
+	- Helix Code BTS
+
 0.7:
 
 * Fixes:

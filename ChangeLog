@@ -1,3 +1,22 @@
+2000-04-28  Jacob Berkman  <jacob@helixcode.com>
+
+	* src/Helix_Code.bts: 
+	* src/GNOME.bts: add gnome-print for jody
+
+	* src/bug-buddy.c (init_ui): show the href again
+	(on_desc_page_next): use gnome-mime to ensure we have a text
+	file
+
+	* src/bts-debian.c (debian_bts_doit): get rid of warning when we
+	start feeding the GtkText
+
+2000-04-27  Jacob Berkman  <jacob@helixcode.com>
+
+	* src/bug-buddy.c (init_ui): only have border on mouseover for
+	the Big Ugly Button
+
+	* docs/C/bug-buddy.sgml: doc updates
+	
 2000-04-25  Sami Pesonen <spesonen@dlc.fi>
 
 	* src/bug-buddy.desktop : Added [fi]

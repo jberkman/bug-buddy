@@ -23,8 +23,8 @@
 #include "config.h"
 
 #include <gnome.h>
+/*#include <libgnomeui/gnome-window-icon.h>*/
 #include <glade/glade.h>
-#include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include <gnome-xml/tree.h>
 #include <gnome-xml/parser.h>
@@ -51,6 +51,7 @@ gboolean on_the_druid_cancel  (GtkWidget *);
 gboolean on_complete_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_complete_page_finish  (GtkWidget *, GtkWidget *);
 gboolean on_gnome_page_prepare    (GtkWidget *, GtkWidget *);
+gboolean on_version_page_back (GtkWidget *page, GnomeDruid *druid);
 gboolean on_contact_page_next     (GtkWidget *, GtkWidget *);
 void on_version_list_select_row   (GtkCList *list, gint row, gint col,
 				   GdkEventButton *event, gpointer udata);
@@ -120,6 +121,7 @@ static const struct poptOption options[] = {
 	{ NULL } 
 };
 
+#if 0
 static void
 set_icon_on_window (GtkWidget *w, gpointer data)
 {
@@ -134,6 +136,7 @@ set_icon_on_window (GtkWidget *w, gpointer data)
 	gdk_pixbuf_render_pixmap_and_mask (pixbuf, &pixmap, &bitmap, 128);
 	gdk_window_set_icon (w->window, NULL, pixmap, bitmap);
 }
+#endif
 
 static void
 save_entry (const char *name, const char *name2, const char *save_path)
@@ -352,6 +355,31 @@ on_debian_page_next (GtkWidget *page, GnomeDruid *druid)
 gboolean
 on_desc_page_next (GtkWidget *page, GnomeDruid *druid)
 {
+	char *s = gtk_editable_get_chars (GTK_EDITABLE (GET_WIDGET ("include_entry")),
+					  0, -1);
+	if (s && strlen (s) > 0) {
+		char *mime_type;
+		if (!g_file_exists (s)) {
+			g_free (s);
+			gnome_dialog_run_and_close (
+				GNOME_DIALOG (gnome_error_dialog (_("The specified file does not exist."))));
+			return TRUE;
+		}
+
+		mime_type = gnome_mime_type_of_file (s);
+		g_message (_("File is of type: %s"), mime_type);
+
+		if (!mime_type || strncmp ("text/", mime_type, 5)) {
+			char *msg = g_strdup_printf (_("'%s' does not look like a text file."), s);
+			gnome_dialog_run_and_close (
+				GNOME_DIALOG (gnome_error_dialog (msg)));
+			g_free (msg);
+			g_free (s);
+			return TRUE;
+		}
+	}
+	g_free (s);
+
 	if (GTK_ENTRY (GET_WIDGET ("desc_entry"))->text_length &&
 	    gtk_text_get_length (GTK_TEXT (GET_WIDGET ("desc_area"))))
 		return FALSE;
@@ -972,6 +1000,9 @@ init_ui ()
 
 	init_bts_menu ();
 
+	gtk_button_set_relief (GET_WIDGET ("already_href"),
+			       GTK_RELIEF_NONE);
+
 	m = gtk_menu_new ();
 	for (i = 0; severity[i]; i++) {
 		w = gtk_menu_item_new_with_label (_(severity[i]));
@@ -1112,9 +1143,7 @@ init_ui ()
 	gnome_druid_set_page (GNOME_DRUID (druid_data.the_druid), 
 			      GNOME_DRUID_PAGE (GET_WIDGET ("contact_page")));
 
-	gtk_signal_connect (GTK_OBJECT (GET_WIDGET ("druid_window")),
-			    "realize", GTK_SIGNAL_FUNC (set_icon_on_window),
-			    NULL);
+	/*gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid_window")));*/
 }
 
 gint
@@ -1140,6 +1169,7 @@ main (int argc, char *argv[])
 
 	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, 
 				    options, 0, NULL);
+	/*gnome_window_icon_set_default_from_file (BUDDY_ICONDIR"/bug-buddy.png");*/
 	glade_gnome_init ();
 
 	s = "bug-buddy.glade";

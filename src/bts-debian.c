@@ -265,7 +265,7 @@ debian_bts_doit (GtkEditable *edit)
 	GtkWidget *w;
 	char *s, *s2, *s3;
 	char *from_name, *from_email, *subject, *package, *version;
-	int i, pos;
+	int i, pos = 0;
 
 	w = GET_WIDGET ("miggie_combo");
 
