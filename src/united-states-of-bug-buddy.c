@@ -283,7 +283,7 @@ intro_page_ok (void)
 		    druid_data.submit_type == SUBMIT_REPORT) {
 			GtkWidget *d;
 			char *m;
-			m = g_strdup_printf (_("`%s' doesn't seem to exist.\n\n"
+			m = g_strdup_printf (_("'%s' doesn't seem to exist.\n\n"
 					       "You won't be able to actually "
 					       "submit a bug report, but you will\n"
 					       "be able to save it to a file.\n\n"
