@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
+"POT-Creation-Date: 2000-11-15 15:29-0500\n"
 "PO-Revision-Date: 2000-04-05 19:24+0300\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -132,7 +132,7 @@ msgstr "VERSION"
 msgid "File name of crashed program"
 msgstr "Pachetul corespunzãtor programului"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
 msgid "FILE"
 msgstr "FILE"
 
@@ -150,7 +150,11 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "fiºier core din aplicaþie"
 
-#: src/bug-buddy.c:328
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -158,27 +162,27 @@ msgid ""
 "Please specify a package."
 msgstr ""
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:374
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/bug-buddy.c:375
+#: src/bug-buddy.c:379
 #, c-format
 msgid "File is of type: %s"
 msgstr ""
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:382
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr ""
 
-#: src/bug-buddy.c:392
+#: src/bug-buddy.c:396
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
 
-#: src/bug-buddy.c:435
+#: src/bug-buddy.c:439
 #, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
@@ -189,30 +193,30 @@ msgstr ""
 "Omorâþi procesul gdb (stack trace-ul\n"
 "va fi incomplet)?"
 
-#: src/bug-buddy.c:443 src/gdb-buddy.c:83
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb deja a ieºit"
 
-#: src/bug-buddy.c:486
+#: src/bug-buddy.c:490
 #, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Utilitarul grafic GNOME de raportare a problemelor"
 
-#: src/bug-buddy.c:496
+#: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "Pagina web 'naºpa' a lui bug-buddy"
 
-#: src/bug-buddy.c:603
+#: src/bug-buddy.c:607
 #, fuzzy
 msgid "Please enter your name."
 msgstr "Vã rog sã introduceþi numele ºi adresa cvs. de email"
 
-#: src/bug-buddy.c:609
+#: src/bug-buddy.c:613
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Vã rog sã introduceþi numele ºi adresa cvs. de email"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:624
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -225,29 +229,29 @@ msgstr ""
 "\n"
 "Specificaþi o nouã locaþie pentru sendmail?"
 
-#: src/bug-buddy.c:671
+#: src/bug-buddy.c:675
 #, fuzzy, c-format
 msgid "Unable to open file: '%s'"
 msgstr ""
 "Nu pot procesa fiºierul core cu gdb:\n"
 "'%s'"
 
-#: src/bug-buddy.c:685
+#: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:718
+#: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:721
+#: src/bug-buddy.c:725
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -255,20 +259,20 @@ msgid ""
 "        <%s>"
 msgstr ""
 
-#: src/bug-buddy.c:851
+#: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:857
+#: src/bug-buddy.c:861
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Trimite raportul"
 
-#: src/bug-buddy.c:867
+#: src/bug-buddy.c:871
 msgid "Please choose a file to save to."
 msgstr "Vã rog sã salvaþi un fiºier pentru salvare."
 
-#: src/bug-buddy.c:874
+#: src/bug-buddy.c:878
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -277,23 +281,23 @@ msgstr ""
 "Fiºierul '%s' existã deja.\n"
 "Doriþi sã îl suprascrieþi?"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "About"
 msgstr ""
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Help"
 msgstr ""
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Stop"
 msgstr ""
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Refresh"
 msgstr ""
 
-#: src/bug-buddy.c:967
+#: src/bug-buddy.c:971
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -302,7 +306,7 @@ msgstr ""
 "Nu am putut deschide '%s'\n"
 "Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
 
-#: src/bug-buddy.c:1072
+#: src/bug-buddy.c:1076
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -310,7 +314,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME este depãºit.\n"
 "Vã rog sã folosiþi în locul lui argumentul --appname."
 
-#: src/bug-buddy.c:1085
+#: src/bug-buddy.c:1089
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -318,7 +322,7 @@ msgstr ""
 "$GNOME_CRASHED_PID este depãºit\n"
 "Vã rog sã folosiþi în locul lui argumentul --pid."
 
-#: src/bug-buddy.c:1217
+#: src/bug-buddy.c:1221
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

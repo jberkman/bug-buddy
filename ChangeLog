@@ -1,3 +1,9 @@
+2000-11-15  Jacob "Ulysses" Berkman  <jacob@helixcode.com>
+
+	* src/bug-buddy.c (on_debian_page_next): fix bug #29310
+	(load_config): allow the included file to be set by a command line
+	argument
+
 2000-11-14  Stanislav Visnovsky  <visnovsky@nenya.ms.mff.cuni.cz>
 
 	* src/bug-buddy.desktop: added Slovak strings.

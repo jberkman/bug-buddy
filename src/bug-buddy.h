@@ -74,6 +74,9 @@ typedef struct {
 	
 	/* core page */
 	gchar *core_file;
+
+	/* file to include */
+	gchar *include_file;
 } PoptData;
 extern PoptData popt_data;
 

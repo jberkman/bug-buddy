@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.1\n"
-"POT-Creation-Date: 2000-11-09 21:55+0200\n"
+"POT-Creation-Date: 2000-11-15 15:29-0500\n"
 "PO-Revision-Date: 2000-11-09 22:00+02:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -122,7 +122,7 @@ msgstr "VERSIO"
 msgid "File name of crashed program"
 msgstr "Kaatuneen ohjelman tiedostonimi"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
 msgid "FILE"
 msgstr "TIEDOSTO"
 
@@ -138,7 +138,11 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "Sovelluksen jättämä core-tiedosto"
 
-#: src/bug-buddy.c:328
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -150,21 +154,21 @@ msgstr ""
 "\n"
 "Tarkenna paketti."
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:374
 msgid "The specified file does not exist."
 msgstr "Annettu tiedostonimi ei ole olemassa."
 
-#: src/bug-buddy.c:375
+#: src/bug-buddy.c:379
 #, c-format
 msgid "File is of type: %s"
 msgstr "Tiedosto on tyyppiä: %s"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:382
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ei ole tekstitiedosto."
 
-#: src/bug-buddy.c:392
+#: src/bug-buddy.c:396
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -172,7 +176,7 @@ msgstr ""
 "Virheraportin tulee sisältää otsikkotiedot ja\n"
 "selitysosan."
 
-#: src/bug-buddy.c:435
+#: src/bug-buddy.c:439
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -182,27 +186,27 @@ msgstr ""
 "Lopeta gdb-prosessi (jäljitystiedot\n"
 "pinosta ovat tällöin epätäydelliset)?"
 
-#: src/bug-buddy.c:443 src/gdb-buddy.c:83
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb on lopettanut toimintansa"
 
-#: src/bug-buddy.c:486
+#: src/bug-buddy.c:490
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "GNOME:n graafinen ohjelmavirheiden raportointityökalu"
 
-#: src/bug-buddy.c:496
+#: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "Vaisut bug-buddy Internet sivut"
 
-#: src/bug-buddy.c:603
+#: src/bug-buddy.c:607
 msgid "Please enter your name."
 msgstr "Anna nimesi tähän."
 
-#: src/bug-buddy.c:609
+#: src/bug-buddy.c:613
 msgid "Please enter a valid email address."
 msgstr "Anna sähköpostiosoitteesi tähän."
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:624
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -215,27 +219,27 @@ msgstr ""
 "\n"
 "Haluatko määritellä uuden kohteen sendmailille?"
 
-#: src/bug-buddy.c:671
+#: src/bug-buddy.c:675
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Ei pysty aukaisemaan tiedostoa: '%s'"
 
-#: src/bug-buddy.c:685
+#: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
 msgstr "juuri ajamassa '%s'"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Ei pysty käynnistämään sähköpostiohjelmaa: '%s'"
 
-#: src/bug-buddy.c:718
+#: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
-#: src/bug-buddy.c:721
+#: src/bug-buddy.c:725
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -246,19 +250,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:851
+#: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
 msgstr "Määrittele vastaanottajan sähköpostiosoite"
 
-#: src/bug-buddy.c:857
+#: src/bug-buddy.c:861
 msgid "Submit this bug report now?"
 msgstr "Lähetätkö tämän virheraportin nyt?"
 
-#: src/bug-buddy.c:867
+#: src/bug-buddy.c:871
 msgid "Please choose a file to save to."
 msgstr "Valitse talletettavan tiedoston nimi."
 
-#: src/bug-buddy.c:874
+#: src/bug-buddy.c:878
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -267,23 +271,23 @@ msgstr ""
 "Tiedosto '%s' on jo olemassa.\n"
 "Kirjoitetaanko tämän tiedoston päälle?"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "About"
 msgstr "Tietoja"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Help"
 msgstr "Ohje"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Stop"
 msgstr "Pysäytä"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Refresh"
 msgstr "Päivitä"
 
-#: src/bug-buddy.c:967
+#: src/bug-buddy.c:971
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -292,7 +296,7 @@ msgstr ""
 "Ei pystynyt avaamaan tiedostoa '%s'\n"
 "Varmista, että bug-buddy on oikein asennettu."
 
-#: src/bug-buddy.c:1072
+#: src/bug-buddy.c:1076
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -300,7 +304,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME on virheellinen.\n"
 "Käytä sen sijaan komennon --appname lisäargumenttia."
 
-#: src/bug-buddy.c:1085
+#: src/bug-buddy.c:1089
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -308,7 +312,7 @@ msgstr ""
 "$GNOME_CRASHED_PID on virheellinen.\n"
 "Käytä sen sijaan komennon --pid lisäargumenttia."
 
-#: src/bug-buddy.c:1217
+#: src/bug-buddy.c:1221
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

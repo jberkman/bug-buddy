@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
+"POT-Creation-Date: 2000-11-15 15:29-0500\n"
 "PO-Revision-Date: 2000-06-29 14:00+0200\n"
 "Last-Translator: Quico Llach <quico@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
@@ -124,7 +124,7 @@ msgstr "VERSIÓ"
 msgid "File name of crashed program"
 msgstr "Nom de fitxer del programa que no ha funcionat correctament"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
 msgid "FILE"
 msgstr "FITXER"
 
@@ -140,7 +140,11 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "Fitxer de nucli del programa"
 
-#: src/bug-buddy.c:328
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
 #, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
@@ -153,21 +157,21 @@ msgstr ""
 "\n"
 "Voleu continuar igualment?"
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:374
 msgid "The specified file does not exist."
 msgstr "El fitxer especificat no existeix."
 
-#: src/bug-buddy.c:375
+#: src/bug-buddy.c:379
 #, c-format
 msgid "File is of type: %s"
 msgstr "El fitxer és del tipus: %s"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:382
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' no sembla un fitxer de text."
 
-#: src/bug-buddy.c:392
+#: src/bug-buddy.c:396
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -175,7 +179,7 @@ msgstr ""
 "Heu d'incloure un assumpte i una descripció\n"
 "en el vostre informe d'errors."
 
-#: src/bug-buddy.c:435
+#: src/bug-buddy.c:439
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -183,30 +187,30 @@ msgstr ""
 "El gdb no ha acabat d'obtenir la informació de depuració.\n"
 "Voleu interrompre el procés gdb? (el seguiment de la pila serà incomplet)"
 
-#: src/bug-buddy.c:443 src/gdb-buddy.c:83
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "El gdb ja s'ha abandonat"
 
-#: src/bug-buddy.c:486
+#: src/bug-buddy.c:490
 #, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "L'eina gràfica del GNOME per informar d'errors"
 
-#: src/bug-buddy.c:496
+#: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "La poc convincent pàgina web del bug-buddy"
 
-#: src/bug-buddy.c:603
+#: src/bug-buddy.c:607
 #, fuzzy
 msgid "Please enter your name."
 msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
 
-#: src/bug-buddy.c:609
+#: src/bug-buddy.c:613
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:624
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -219,27 +223,27 @@ msgstr ""
 "\n"
 "Voleu especificar una nova ubicació per a \"sendmail\"?"
 
-#: src/bug-buddy.c:671
+#: src/bug-buddy.c:675
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "No es pot obrir el fitxer: '%s'"
 
-#: src/bug-buddy.c:685
+#: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
 msgstr "ara s'executarà '%s'"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "No es pot iniciar el programa de correu: '%s'"
 
-#: src/bug-buddy.c:718
+#: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
-#: src/bug-buddy.c:721
+#: src/bug-buddy.c:725
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -250,19 +254,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:851
+#: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
 msgstr "Heu d'especificar una adreça electrònic destinatària"
 
-#: src/bug-buddy.c:857
+#: src/bug-buddy.c:861
 msgid "Submit this bug report now?"
 msgstr "Voleu enviar ara aquest informe d'errors?"
 
-#: src/bug-buddy.c:867
+#: src/bug-buddy.c:871
 msgid "Please choose a file to save to."
 msgstr "Si us plau, seleccioneu un fitxer per desar-lo"
 
-#: src/bug-buddy.c:874
+#: src/bug-buddy.c:878
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -271,23 +275,23 @@ msgstr ""
 "El fitxer '%s' ja existeix.\n"
 "Voleu sobrescriure aquest fitxer?"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "About"
 msgstr "Quant a"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Help"
 msgstr "Ajuda"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Stop"
 msgstr "Atura"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Refresh"
 msgstr "Refresca"
 
-#: src/bug-buddy.c:967
+#: src/bug-buddy.c:971
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -296,7 +300,7 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, assegureu-vos que el bug-buddy està instal·lat correctament."
 
-#: src/bug-buddy.c:1072
+#: src/bug-buddy.c:1076
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -304,7 +308,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_APPNAME.\n"
 "Si us plau, substituïu-ho per l'ordre -appname en la línia d'ordres."
 
-#: src/bug-buddy.c:1085
+#: src/bug-buddy.c:1089
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -312,7 +316,7 @@ msgstr ""
 "No s'accepta $GNOME_CRASHED_PID.\n"
 "Si us plau, substituïu-ho per l'ordre -pid en la línia d'ordres."
 
-#: src/bug-buddy.c:1217
+#: src/bug-buddy.c:1221
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 1.1)
+AM_INIT_AUTOMAKE(bug-buddy, 1.2)
 
 AM_MAINTAINER_MODE
 
@@ -53,7 +53,6 @@ AC_SUBST(EXTRA_GNOME_LIBS)
 
 AC_OUTPUT([
 bug-buddy.spec
-debian/changelog
 Makefile
 docs/Makefile
 docs/C/Makefile
@@ -63,3 +62,13 @@ intl/Makefile
 pixmaps/Makefile
 src/Makefile
 ])
+
+echo "
+
+Configuration:
+
+	CFLAGS:	${EXTRA_GNOME_CFLAGS}
+
+	LIBS:	${EXTRA_GNOME_LIBS}
+
+"

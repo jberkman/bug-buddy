@@ -118,13 +118,14 @@ PoptData popt_data;
 DruidData druid_data;
 
 static const struct poptOption options[] = {
-	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        0, N_("Name of contact"),                 N_("NAME") },
-	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       0, N_("Email address of contact"),        N_("EMAIL") },
-	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     0, N_("Package containing the program"),  N_("PACKAGE") },
-	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 0, N_("Version of the package"),          N_("VERSION") },
-	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    0, N_("File name of crashed program"),    N_("FILE") },
-	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         0, N_("PID of crashed program"),          N_("PID") },
-	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("Core file from program"),          N_("FILE") },
+	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        0, N_("Name of contact"),                    N_("NAME") },
+	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       0, N_("Email address of contact"),           N_("EMAIL") },
+	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     0, N_("Package containing the program"),     N_("PACKAGE") },
+	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 0, N_("Version of the package"),             N_("VERSION") },
+	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    0, N_("File name of crashed program"),       N_("FILE") },
+	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         0, N_("PID of crashed program"),             N_("PID") },
+	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("Core file from program"),             N_("FILE") },
+	{ "include",     0, POPT_ARG_STRING, &popt_data.include_file,0, N_("Text file to include in the report"), N_("FILE") },
 	{ NULL } 
 };
 
@@ -214,6 +215,9 @@ load_config ()
 	w = gnome_file_entry_gnome_entry (
 		GNOME_FILE_ENTRY (GET_WIDGET ("include_entry2")));
 	gnome_entry_load_history (GNOME_ENTRY (w));
+	if (popt_data.include_file)
+		gtk_entry_set_text (GTK_ENTRY (GET_WIDGET ("include_entry")),
+				    popt_data.include_file);
 
 	sendmail = gnome_is_program_in_path ("sendmail");
 	if (!sendmail) {
@@ -324,7 +328,7 @@ on_debian_page_next (GtkWidget *page, GnomeDruid *druid)
 	int bugnum;
 
 	s = gtk_entry_get_text (GTK_ENTRY (CTREE_COMBO (GET_WIDGET ("miggie_combo"))->entry));
-	if (!strcmp ("general", s)) {
+	if (druid_data.bug_type == BUG_NEW && !strcmp ("general", s)) {
 		w = gnome_message_box_new (_("It is much more helpful if you specify\n"
 					     "a more specific package than 'general'.\n\n"
 					     "Please specify a package."),

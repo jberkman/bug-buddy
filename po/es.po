@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
+"POT-Creation-Date: 2000-11-15 15:29-0500\n"
 "PO-Revision-Date: 2000-05-22 19:05+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -123,7 +123,7 @@ msgstr "VERSIÓN"
 msgid "File name of crashed program"
 msgstr "Nombre de archivo de la aplicación estropeada"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
 msgid "FILE"
 msgstr "ARCHIVO"
 
@@ -139,7 +139,11 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "Archivo core de la aplicación"
 
-#: src/bug-buddy.c:328
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
 #, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
@@ -152,21 +156,21 @@ msgstr ""
 "\n"
 "¿Quiere seguir así de cualquier modo?"
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:374
 msgid "The specified file does not exist."
 msgstr "El archivo especificado no existe."
 
-#: src/bug-buddy.c:375
+#: src/bug-buddy.c:379
 #, c-format
 msgid "File is of type: %s"
 msgstr "El archivo es del tipo: %s"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:382
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' no parece un archivo de texto."
 
-#: src/bug-buddy.c:392
+#: src/bug-buddy.c:396
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -174,7 +178,7 @@ msgstr ""
 "Tiene que incluir un asunto y una descripción\n"
 "en su informe de error."
 
-#: src/bug-buddy.c:435
+#: src/bug-buddy.c:439
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -182,30 +186,30 @@ msgstr ""
 "gdb aún no terminó de obtener la información de debug.\n"
 "¿Matar el proceso gdb (la traza de la pila no estará completa)?"
 
-#: src/bug-buddy.c:443 src/gdb-buddy.c:83
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb ya ha salido"
 
-#: src/bug-buddy.c:486
+#: src/bug-buddy.c:490
 #, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "La utilidad de GNOME para informar de errores"
 
-#: src/bug-buddy.c:496
+#: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "La pobre página web de bug-buddy"
 
-#: src/bug-buddy.c:603
+#: src/bug-buddy.c:607
 #, fuzzy
 msgid "Please enter your name."
 msgstr "Por favor, introduzca su nombre y su dirección de correo"
 
-#: src/bug-buddy.c:609
+#: src/bug-buddy.c:613
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Por favor, introduzca su nombre y su dirección de correo"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:624
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -218,27 +222,27 @@ msgstr ""
 "\n"
 "¿Indicar un nuevo lugar para sendmail?"
 
-#: src/bug-buddy.c:671
+#: src/bug-buddy.c:675
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "No se puede abrir el archivo: '%s'"
 
-#: src/bug-buddy.c:685
+#: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
 msgstr "a punto de ejecutar '%s'"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "No se puede ejecutar el programa de correo: '%s'"
 
-#: src/bug-buddy.c:718
+#: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
-#: src/bug-buddy.c:721
+#: src/bug-buddy.c:725
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -248,19 +252,19 @@ msgstr ""
 "Su informe de error fue enviado a:\n"
 "        <%s>"
 
-#: src/bug-buddy.c:851
+#: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
 msgstr "Tiene que indicar la dirección de email del destinatario"
 
-#: src/bug-buddy.c:857
+#: src/bug-buddy.c:861
 msgid "Submit this bug report now?"
 msgstr "¿Enviar este informe de error ahora?"
 
-#: src/bug-buddy.c:867
+#: src/bug-buddy.c:871
 msgid "Please choose a file to save to."
 msgstr "Elija un archivo al que grabar."
 
-#: src/bug-buddy.c:874
+#: src/bug-buddy.c:878
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -269,23 +273,23 @@ msgstr ""
 "El archivo '%s' ya existe.\n"
 "¿Sobreescribir este archivo?"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "About"
 msgstr "Acerca de"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Help"
 msgstr "Ayuda"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Stop"
 msgstr "Parar"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Refresh"
 msgstr "Refrescar"
 
-#: src/bug-buddy.c:967
+#: src/bug-buddy.c:971
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -294,7 +298,7 @@ msgstr ""
 "No se pudo abrir '%s'.\n"
 "Por favor, asegúrese de que bug-buddy está bien instalado."
 
-#: src/bug-buddy.c:1072
+#: src/bug-buddy.c:1076
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -302,7 +306,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --apname."
 
-#: src/bug-buddy.c:1085
+#: src/bug-buddy.c:1089
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -310,7 +314,7 @@ msgstr ""
 "$GNOME_CRASHED_PID está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --pid."
 
-#: src/bug-buddy.c:1217
+#: src/bug-buddy.c:1221
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

@@ -1,3 +1,14 @@
+1.2:
+
+ * FIxes:
+
+	- bug #29310
+
+ * Improvements:
+
+	- Added a --include argument to set which file is included in
+	  the report
+
 1.1:
 
  * Fixes:

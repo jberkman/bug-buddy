@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-10-05 00:16+0200\n"
+"POT-Creation-Date: 2000-11-15 15:29-0500\n"
 "PO-Revision-Date: 2000-05-12 11:42+02:00\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
@@ -123,7 +123,7 @@ msgstr "VERSION"
 msgid "File name of crashed program"
 msgstr "Filnavn på program der gik ned"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
 msgid "FILE"
 msgstr "FILE"
 
@@ -139,7 +139,11 @@ msgstr "PID"
 msgid "Core file from program"
 msgstr "core-fil fra programmet"
 
-#: src/bug-buddy.c:328
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -151,21 +155,21 @@ msgstr ""
 "\n"
 "Angiv venligst en pakke."
 
-#: src/bug-buddy.c:370
+#: src/bug-buddy.c:374
 msgid "The specified file does not exist."
 msgstr "Den specificerede file eksisterer ikke."
 
-#: src/bug-buddy.c:375
+#: src/bug-buddy.c:379
 #, c-format
 msgid "File is of type: %s"
 msgstr "Filen er af type: %s"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:382
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ser ikke ud som en tekstfil."
 
-#: src/bug-buddy.c:392
+#: src/bug-buddy.c:396
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -173,7 +177,7 @@ msgstr ""
 "Du skal angive et emne og en beskrivelse \n"
 "i din fejlrapport."
 
-#: src/bug-buddy.c:435
+#: src/bug-buddy.c:439
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -182,27 +186,27 @@ msgstr ""
 "fejlanalyseringsinformation.\n"
 "Skal gdb-processen dræbes (stak-tracen vil mangle noget)?"
 
-#: src/bug-buddy.c:443 src/gdb-buddy.c:83
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb er allerede afsluttet"
 
-#: src/bug-buddy.c:486
+#: src/bug-buddy.c:490
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Gnomes grafiske fejlrapporteringsværktøj"
 
-#: src/bug-buddy.c:496
+#: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "Den kedelige Fejl-Frede hjemmeside"
 
-#: src/bug-buddy.c:603
+#: src/bug-buddy.c:607
 msgid "Please enter your name."
 msgstr "Indtast venligst dit navn."
 
-#: src/bug-buddy.c:609
+#: src/bug-buddy.c:613
 msgid "Please enter a valid email address."
 msgstr "Indtast venligst din epostadresse"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:624
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -215,27 +219,27 @@ msgstr ""
 "\n"
 "Angiv en ny placering for sendmail?"
 
-#: src/bug-buddy.c:671
+#: src/bug-buddy.c:675
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kunne ikke åbne fil: '%s'"
 
-#: src/bug-buddy.c:685
+#: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
 msgstr "Skal til at køre '%s'"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kan ikke starte post-program: '%s'"
 
-#: src/bug-buddy.c:718
+#: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din fejlrapport blev gemt i '%s'"
 
-#: src/bug-buddy.c:721
+#: src/bug-buddy.c:725
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -245,19 +249,19 @@ msgstr ""
 "Din fejlrapport er bevet indsendt til:n\n"
 "        <%s>"
 
-#: src/bug-buddy.c:851
+#: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
 msgstr "Du skal angive en e-postadresse på modtageren"
 
-#: src/bug-buddy.c:857
+#: src/bug-buddy.c:861
 msgid "Submit this bug report now?"
 msgstr "Send fejlrapport nu?"
 
-#: src/bug-buddy.c:867
+#: src/bug-buddy.c:871
 msgid "Please choose a file to save to."
 msgstr "Vælg venligst en fil at gemme i."
 
-#: src/bug-buddy.c:874
+#: src/bug-buddy.c:878
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -266,23 +270,23 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne fil?"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "About"
 msgstr "Om"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Help"
 msgstr "Hjælp"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Stop"
 msgstr "Stop"
 
-#: src/bug-buddy.c:926
+#: src/bug-buddy.c:930
 msgid "Refresh"
 msgstr "Opdatér"
 
-#: src/bug-buddy.c:967
+#: src/bug-buddy.c:971
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -291,7 +295,7 @@ msgstr ""
 "Kunne ikke åbne '%s'.\n"
 "Tjek venligst om Fejl-Frede er korrekt installeret."
 
-#: src/bug-buddy.c:1072
+#: src/bug-buddy.c:1076
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -299,7 +303,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME bruges ikke længere.\n"
 "Brug venligst --appname kommandolineargumentet istedet."
 
-#: src/bug-buddy.c:1085
+#: src/bug-buddy.c:1089
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -307,7 +311,7 @@ msgstr ""
 "$GNOME_CRASHED_PID bruges ikke længere.\n"
 "Brug venligst --pid kommandolinieargumentet istedet."
 
-#: src/bug-buddy.c:1217
+#: src/bug-buddy.c:1221
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
