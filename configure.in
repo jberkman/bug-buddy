@@ -54,7 +54,6 @@ if test -z "$LIBGLADE_CONVERT" ; then
 fi
 
 AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
-AC_SUBST(GLIB
 
 AC_OUTPUT([
 bug-buddy.spec

@@ -80,8 +80,8 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The Ximian Red Carpet package management and updating system." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Red Carpet">
-    <component initialowner="191" description="General Red Carpet issues" initialqacontact="191" value="Red Carpet" />
-    <component initialowner="191" description="bugs against the installer should go here." initialqacontact="191" value="Installer" />
+    <component initialowner="191" description="General Red Carpet issues" initialqacontact="3117" value="Red Carpet" />
+    <component initialowner="191" description="bugs against the installer should go here." initialqacontact="3117" value="Installer" />
     <version value="unspecified" />
     <version value="0.9" />
     <version value="0.9.1" />
