@@ -1,1 +1,12 @@
 bug-buddy.glade2
+Makefile.in
+Makefile
+.deps
+.libs
+bug-buddy
+gnome-crash
+bug-buddy.keys
+debian-packages
+gnome-packages
+bug-buddy.desktop
+bug-buddy.glade.tmp
