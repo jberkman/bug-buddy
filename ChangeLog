@@ -1,5 +1,7 @@
 1999-11-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/Makefile.am (EXTRA_DIST): make it distcheck
+
 	* src/bug-buddy.c (on_complete_page_prepare): print a summary
 	of the bug submission.
 

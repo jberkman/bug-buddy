@@ -45,7 +45,8 @@ EXTRA_DIST = \
 	glade-strings.c	\
 	$(buddy_DATA)	\
 	$(utils_DATA)	\
-	$(mime_DATA)
+	bug-buddy.mime	\
+	bug-buddy.keys.in
 
 
 

@@ -1387,8 +1387,8 @@ bug-buddy has obtained:</label>
       </signal>
       <title>Summary</title>
       <title>Summary</title>
-      <text></text>
-      <text></text>
+      <text>The GEGL is watching.</text>
+      <text>The GEGL is watching.</text>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
       <textbox_color>255,255,255</textbox_color>
