@@ -123,7 +123,7 @@ msgstr "gdb ya ha salido"
 
 #: src/bug-buddy.c:286
 msgid "Save Backtrace"
-msgstr ""
+msgstr "Guardar traza"
 
 #: src/bug-buddy.c:305
 #, c-format
@@ -134,6 +134,11 @@ msgid ""
 "\n"
 "Please choose another file and try again."
 msgstr ""
+"Hubo un error tratando de guardar %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Por favor elija otro archivo e intentelo de nuevo."
 
 #: src/bug-buddy.c:402
 msgid "_Start Mailer"
@@ -152,6 +157,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Hubo un error al mostrar la configuracion del proxy:\n"
+"\n"
+"%s.\n"
+"\n"
+"Asegurese que el Centro de Control GNOME esta instalado correctamente."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -240,22 +250,22 @@ msgid "Description"
 msgstr "Descripción"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"Bug Buddy no se pudo abrir '%s'.\n"
-"Asegúrese que Bug Buddy se instaló correctamente."
+"Bug Buddy no pudo abrir '%s'.\n"
+"Asegúrese que Bug Buddy se instaló correctamente.\n"
+"\n"
+"Bug Buddy se cerrara ahora."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Todo"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -263,8 +273,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"No se pudo cargar su archivo de interfaz de usuario (%s).\n"
-"Asegúrese que Bug Buddy se instaló correctamente."
+"Bug Buddy no pudo encontrar informacion acerca de donde enviar el error.\n"
+"\n"
+"Asegúrese que Bug Buddy se instaló correctamente.\n"
+"\n"
+"Bug Buddy se cerrara ahora."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -335,11 +348,11 @@ msgstr "Hubo un error ejecutando gdb."
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: src/bug-buddy.glade.h:2
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr ""
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -350,9 +363,8 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
-#, fuzzy
 msgid "Binary file:"
-msgstr "Archivo binario"
+msgstr "Archivo binario:"
 
 #: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:95
 msgid "Bug Buddy"
@@ -467,9 +479,8 @@ msgstr ""
 "de productos de los sistemas de seguimiento de errores."
 
 #: src/bug-buddy.glade.h:36
-#, fuzzy
 msgid "Process ID:"
-msgstr "ID del proceso"
+msgstr "ID del proceso:"
 
 #: src/bug-buddy.glade.h:37
 msgid "Proxy Settings..."
@@ -500,9 +511,8 @@ msgid "Severity"
 msgstr "Severidad"
 
 #: src/bug-buddy.glade.h:44
-#, fuzzy
 msgid "Show _Debugging Details"
-msgstr "Mostrar mensajes de depuración"
+msgstr "Mostrar _detalles de depuración"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
@@ -701,7 +711,7 @@ msgstr "¿Enviar este informe de error ahora?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "_Enviar"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
