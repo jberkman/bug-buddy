@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-23 12:29+0200\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -146,7 +146,7 @@ msgstr "Ви впевнен╕, що хочете в╕дм╕нити це поновлення?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Не вдалося в╕дкрити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
@@ -205,9 +205,9 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
-"Незнайдено файл gdb-cmd.\n"
+"Не знайдено файл gdb-cmd.\n"
 "Будь ласка, спробуйте перевстановити Bug Buddy."
 
 #: src/gdb-buddy.c:281 src/util.c:75
@@ -501,7 +501,7 @@ msgstr "Введ╕ть вашу електронну адресу."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -599,85 +599,3 @@ msgstr "Не вдалося запустити \"%s\"."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Помилка на зчитуванн╕..."
-
-#~ msgid "critical"
-#~ msgstr "критична"
-
-#~ msgid "grave"
-#~ msgstr "загрозлива"
-
-#~ msgid "normal"
-#~ msgstr "звичайна"
-
-#~ msgid "wishlist"
-#~ msgstr "побажання"
-
-#~ msgid "software bug"
-#~ msgstr "помилка програмного забезпечення"
-
-#~ msgid "documentation bug"
-#~ msgstr "помилка документац╕╖"
-
-#~ msgid "change request"
-#~ msgstr "запит на зм╕ну"
-
-#~ msgid "support"
-#~ msgstr "п╕дтримка"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "Було б краще, якби ви вказали\n"
-#~ "пакет зам╕сть \"general\".\n"
-#~ "\n"
-#~ "Будь ласка, вкаж╕ть пакет"
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Вам необх╕дно вставити заголовок та опис\n"
-#~ "у ваш зв╕т."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "Зда╓ться, що \"%s\" нема╓.  Ви не зможете зараз в╕д╕слати\n"
-#~ "зв╕т про помилку, але ви можете зберегти його у файл╕.\n"
-#~ "\n"
-#~ "Вказати нове м╕сце знаходження sendmail?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "Вам необх╕дно вказати адреси адресат╕в"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "В╕д╕слати зв╕т зараз?"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Будь ласка, вибер╕ть файл для збереження."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "Файл \"%s\" вже ╕сну╓.\n"
-#~ "Переписати його?"
-
-#~ msgid "Help"
-#~ msgstr "Дов╕дка"
-
-#~ msgid "Refresh"
-#~ msgstr "Поновити"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Не вдалося в╕дкрити \"%s\".\n"
-#~ "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
