@@ -31,6 +31,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <signal.h>
 
 #define MAX_LINK_LEVEL 256
 

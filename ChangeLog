@@ -1,3 +1,7 @@
+2002-09-06  jacob berkman  <jacob@ximian.com>
+
+	* src/save-buddy.c: include signal.h
+
 2002-09-04  Ross Burton  <ross@burtonini.com>
 
 	* src/bug-buddy.desktop.in: Fix the desktop file so that it
