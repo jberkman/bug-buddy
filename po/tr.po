@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-20 11:41+0200\n"
+"POT-Creation-Date: 2000-04-24 23:03+0200\n"
 "PO-Revision-Date: 2000-04-20 12:51+0100\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -146,16 +146,16 @@ msgid "Package containing the program"
 msgstr "Uygulamanýn pakajý"
 
 #: src/bug-buddy.c:115
-msgid "bug-buddy"
-msgstr "bug-buddy"
+msgid "PACKAGE"
+msgstr ""
 
 #: src/bug-buddy.c:116
 msgid "Version of the package"
 msgstr "Pakajýn nesli"
 
 #: src/bug-buddy.c:116
-msgid "0.8"
-msgstr "0.8"
+msgid "VERSION"
+msgstr ""
 
 #: src/bug-buddy.c:117
 msgid "File name of crashed program"
@@ -191,7 +191,8 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 "gdb çöküntü bilgilerini toplamayla hala daha meþgul .\n"
-"gdb iþlemini buna raðmen öldüreyim mi ( çöküntü bilgileri tam olmayabilir ) ? "
+"gdb iþlemini buna raðmen öldüreyim mi ( çöküntü bilgileri tam olmayabilir ) "
+"? "
 
 #: src/bug-buddy.c:453
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -396,7 +397,8 @@ msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
-"Lütfen hata raporunun önceden baþka birisi tarafýnda gönderilmiþliðini kontrol et,\n"
+"Lütfen hata raporunun önceden baþka birisi tarafýnda gönderilmiþliðini "
+"kontrol et,\n"
 "ve durum öyleyse \"Varolan hata raporuna bilgileri ekle\"'yi seç ."
 
 #: src/glade-strings.c:34 src/glade-strings.c:35
@@ -502,3 +504,6 @@ msgstr "Bir toplama'da"
 #: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "GEGL þimdi seyrediyor ."
+
+#~ msgid "0.8"
+#~ msgstr "0.8"
