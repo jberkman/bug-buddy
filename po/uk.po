@@ -347,7 +347,7 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:25
 msgid "Automatically go to next page when complete"
-msgstr ""
+msgstr "Автоматично переходити на нову стор╕нку по завершенню"
 
 #: src/glade-strings.c:26
 msgid "Report Information"
