@@ -127,9 +127,19 @@ stop_gdb (void)
 	}
 	
 	g_io_channel_shutdown (druid_data.ioc, 1, NULL);
+	
+	kill (druid_data.gdb_pid, SIGTERM);
+	/* i don't think we need to SIGKILL it */
+	/*kill (druid_data.gdb_pid, SIGKILL);*/
 	waitpid (druid_data.gdb_pid, NULL, 0);
 	
 	druid_data.gdb_pid = 0;
+
+	/* sometimes gdb doesn't restart the old app... */
+	if (druid_data.app_pid) {
+		kill (druid_data.app_pid, SIGCONT);
+		druid_data.app_pid = 0;
+	}
 
 	druid_set_sensitive (FALSE, TRUE, TRUE);
 	stop_animation ();
@@ -215,7 +225,7 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 {	
 	gboolean retval = FALSE;
 	gchar buf[1024];
-	guint len;
+	gsize len;
 	GIOStatus io_status;
 
  gdb_try_read:
@@ -238,12 +248,16 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 		GtkTextIter end;
 		GtkTextBuffer *buffy;
 		GtkTextView *tv;
+		char *utftext;
+		gsize utflen;
 
 		tv = GTK_TEXT_VIEW (GET_WIDGET ("gdb-text"));
 		buffy = gtk_text_view_get_buffer (tv);
 
 		gtk_text_buffer_get_end_iter (buffy, &end);
-		gtk_text_buffer_insert (buffy, &end, buf, len);
+		utftext = g_locale_to_utf8 (buf, len, NULL, &utflen, NULL);
+		gtk_text_buffer_insert (buffy, &end, utftext, utflen);
+		g_free (utftext);
 	}
 
 	if (!retval)

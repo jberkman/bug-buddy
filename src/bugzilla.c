@@ -43,7 +43,7 @@
 #include <libxml/xmlmemory.h>
 
 /* define to x for some debugging output */
-#define d(x)
+#define d(x) x
 
 static int
 prod_cmp (BugzillaProduct *a, BugzillaProduct *b)

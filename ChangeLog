@@ -1,3 +1,20 @@
+2002-08-12  jacob berkman  <jacob@ximian.com>
+
+	* NEWS (2.2.1): updates, but need to fix the other part of 84914
+	before releasing a new version
+
+	* src/save-buddy.c (bb_save_file): steal file saving from gedit
+	(fixes #80334)
+
+	* src/united-states-of-bug-buddy.c (on_druid_cancel_clicked): kill
+	gdb (should fix bug #86404)
+
+	* src/save-buddy.c (bb_save_file): prompt the user to overwrite
+	the file if it already exists (bug #84914)
+
+	* src/gdb-buddy.c (handle_gdb_input): convert gdb data to UTF-8
+	(michael meeks, bug #82722)
+
 2002-07-28  Christian Rose  <menthos@menthos.com>
 
 	* configure.in: Added "sq" to ALL_LINGUAS.

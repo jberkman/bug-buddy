@@ -45,6 +45,8 @@ bug_buddy_SOURCES = \
 	config.c		\
 	gdb-buddy.c		\
 	libglade-buddy.h	\
+	save-buddy.c		\
+	save-buddy.h		\
 	united-states-of-bug-buddy.c
 
 bug_buddy_LDADD = \

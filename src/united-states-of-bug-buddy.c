@@ -819,6 +819,7 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 	}
 	gtk_widget_destroy (d);
 
+	stop_gdb ();
 	save_config ();
 	gtk_main_quit ();
 }
