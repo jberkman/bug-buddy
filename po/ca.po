@@ -1,15 +1,15 @@
 # bug-buddy translation to Catalan.
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Softcatalà <info@softcatala.org>, 2000.
+# Copyright (C) 2000, 2001 Free Software Foundation, Inc.
+# Softcatalà <info@softcatala.org>, 2000, 2001.
+# Jordi Mallach <jordi@sindominio.net>, 2002.
 #
-# Traducció per Softcatalà <info@softcatala.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2001-07-28 12:34+0200\n"
-"Last-Translator: Softcatalà <tradgnome@softcatala.org>\n"
-"Language-Team: Catalan <info@softcatala.org>\n"
+"Project-Id-Version: bug-buddy 2.1.6\n"
+"POT-Creation-Date: 2002-06-02 09:06+0200\n"
+"PO-Revision-Date: 2002-06-02 14:11+0200\n"
+"Last-Translator: Jordi Mallach <jordi@sindominio.net>\n"
+"Language-Team: Catalan <gnome@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr "Envia l'informe d'errors"
 
 #: src/bug-buddy.c:56
 msgid "Only send report to yourself"
-msgstr "Només se us enviarà l'error a vós mateix"
+msgstr "Només envia l'informe d'error a vós mateix"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
@@ -32,7 +32,7 @@ msgstr "aplicació fallida"
 
 #: src/bug-buddy.c:63
 msgid "core file"
-msgstr "fitxer de nucli"
+msgstr "fitxer core"
 
 #: src/bug-buddy.c:64
 msgid "nothing"
@@ -40,7 +40,7 @@ msgstr "res"
 
 #: src/bug-buddy.c:69
 msgid "Create a new bug report"
-msgstr "Crea un nou infome d'errors"
+msgstr "Crea un nou infome d'error"
 
 #: src/bug-buddy.c:70
 msgid "Add more information to existing report"
@@ -60,7 +60,7 @@ msgstr "Adreça electrònica del contacte"
 
 #: src/bug-buddy.c:80
 msgid "EMAIL"
-msgstr "ADREÇA ELECTRÒNICA"
+msgstr "CORREU-E"
 
 #: src/bug-buddy.c:81
 msgid "Package containing the program"
@@ -80,7 +80,7 @@ msgstr "VERSIÓ"
 
 #: src/bug-buddy.c:83
 msgid "File name of crashed program"
-msgstr "Nom de fitxer del programa que no ha funcionat correctament"
+msgstr "Nom de fitxer del programa fallit"
 
 #: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
@@ -88,7 +88,7 @@ msgstr "FITXER"
 
 #: src/bug-buddy.c:84
 msgid "PID of crashed program"
-msgstr "PID del programa que no ha funcionat correctament"
+msgstr "PID del programa fallit"
 
 #: src/bug-buddy.c:84
 msgid "PID"
@@ -96,7 +96,7 @@ msgstr "PID"
 
 #: src/bug-buddy.c:85
 msgid "Core file from program"
-msgstr "Fitxer de nucli del programa"
+msgstr "Fitxer core del programa"
 
 #: src/bug-buddy.c:86
 msgid "Text file to include in the report"
@@ -105,7 +105,7 @@ msgstr "Fitxer de text que s'ha d'incloure a l'informe"
 #: src/bug-buddy.c:96
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr ""
+msgstr "No s'ha pogut trobar un widget anomenat %s en %s"
 
 #: src/bug-buddy.c:208
 msgid ""
@@ -113,15 +113,15 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 "El gdb no ha acabat d'obtenir la informació de depuració.\n"
-"Voleu interrompre el procés gdb? (el seguiment de la pila serà incomplet)"
+"Voleu interrompre el procés gdb? (la traça de la pila serà incompleta)"
 
 #: src/bug-buddy.c:219 src/gdb-buddy.c:125
 msgid "gdb has already exited"
-msgstr "El gdb ja s'ha abandonat"
+msgstr "gdb ja ha sortit"
 
 #: src/bug-buddy.c:286
 msgid "Save Backtrace"
-msgstr ""
+msgstr "Desa la traça"
 
 #: src/bug-buddy.c:305
 #, c-format
@@ -132,14 +132,19 @@ msgid ""
 "\n"
 "Please choose another file and try again."
 msgstr ""
+"S'ha trobat un error al desar %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Si us plau, seleccioneu un altre fitxer i proveu de nou."
 
 #: src/bug-buddy.c:402
 msgid "_Start Mailer"
-msgstr ""
+msgstr "_Inicia programa de correu"
 
 #: src/bug-buddy.c:406
 msgid "_Send Report"
-msgstr ""
+msgstr "_Envia l'informe"
 
 #: src/bug-buddy.c:443
 #, c-format
@@ -150,45 +155,50 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"S'ha trobat un error al mostrar la configuració del proxy:\n"
+"\n"
+"%s.\n"
+"\n"
+"Si us plau, assegureu-vos de que el Centre de Control del GNOME està instal·lat correctament."
 
 #: src/bug-buddy.c:491
-#, fuzzy
 msgid "Hide Debugging Options"
-msgstr "Informació de depuració"
+msgstr "Amaga les opcions de depuració"
 
 #: src/bug-buddy.c:492
-#, fuzzy
 msgid "Show Debugging Options"
-msgstr "Informació de depuració"
+msgstr "Mostra les opcions de depuració"
 
 #: src/bug-buddy.c:556
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"No s'accepta $GNOME_CRASHED_APPNAME.\n"
-"Si us plau, substituïu-ho per l'ordre -appname en la línia d'ordres."
+"$GNOME_CRASHED_APPNAME és a estingir.\n"
+"Si us plau, utilitzeu en el seu lloc l'ordre --appname en la línia d'ordres."
 
 #: src/bug-buddy.c:566
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"No s'accepta $GNOME_CRASHED_PID.\n"
-"Si us plau, substituïu-ho per l'ordre -pid en la línia d'ordres."
+"$GNOME_CRASHED_PID és a exingir.\n"
+"Si us plau, utilitzeu en el seu lloc l'ordre --pid en la línia d'ordres."
 
 #: src/bug-buddy.c:582
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
+"Benvinguts a Bug Buddy, una eina per a informar d'errors per al GNOME.\n"
+"Vos guiarà pel procés d'enviar un informe d'error."
 
 #: src/bug-buddy.c:585
 msgid ""
 "\n"
 "\n"
 "You are seeing this because another application has crashed."
-msgstr ""
+msgstr "\n\nEsteu veient açò perque un altra aplicació ha fallat."
 
 #: src/bug-buddy.c:588
 msgid ""
@@ -196,26 +206,25 @@ msgid ""
 "\n"
 "Please wait a few moments while Bug Buddy obtains debugging information from "
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
-msgstr ""
+msgstr "\n\nSi us plau, espereu uns moments fins que Bug Buddy obtinga informació de la depuració de les aplicacions. Açò permet a Bug Buddy proveïr un informe d'error més útil."
 
 #: src/bug-buddy.c:727
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
-msgstr ""
+msgstr "No s'ha pogut trobar el pixmap: %s (%d)\n"
 
 #: src/bug-buddy.c:794
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"No s'ha pogut carregar '%s'.\n"
+"Bug Buddy no ha pogut carregar el fitxer d'interfície d'usuari (%s).\n"
 "Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament."
 
 #: src/bugzilla.c:616
-#, fuzzy
 msgid "ID"
-msgstr "PID"
+msgstr "ID"
 
 #: src/bugzilla.c:630 src/bugzilla.c:665
 msgid "Product"
@@ -225,20 +234,20 @@ msgstr "Producte"
 msgid "Component"
 msgstr "Component"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "Descripció"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"No s'ha pogut obrir '%s'.\n"
+"Bug Buddy no ha pogut obrir '%s'.\n"
 "Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament."
 
 #: src/bugzilla.c:793
@@ -246,7 +255,6 @@ msgid "All"
 msgstr "Tots"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -254,28 +262,31 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"No s'ha pogut carregar '%s'.\n"
-"Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament."
+"Bug Buddy no ha pogut trobar informació sobre on enviar els informes d'error.\n"
+"\n"
+"Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament.\n"
+"\n"
+"Bug Buddy sortirà ara."
 
 #: src/config.c:75
 msgid "Evolution"
-msgstr ""
+msgstr "Evolution"
 
 #: src/cell-renderer-uri.c:145
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: src/cell-renderer-uri.c:146
 msgid "URI to show when clicked."
-msgstr ""
+msgstr "URI a mostrar quan es fa clic."
 
 #: src/cell-renderer-uri.c:153
 msgid "Visited"
-msgstr ""
+msgstr "Visitat"
 
 #: src/cell-renderer-uri.c:154
 msgid "If the URI has been visited before."
-msgstr ""
+msgstr "Si s'ha visitat la URI anteriorment."
 
 #: src/gdb-buddy.c:82
 #, c-format
@@ -288,21 +299,21 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"No s'ha pogut processar el fitxer de nucli amb el gdb:\n"
+"No s'ha pogut processar el fitxer core amb el gdb:\n"
 "'%s'"
 
 #: src/gdb-buddy.c:196
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"No s'ha pogut determinar quin és el binari que va crear\n"
+"GDB no ha pogut determinar quin és el binari que va crear\n"
 "'%s'"
 
 #: src/gdb-buddy.c:228
 msgid "Error on read... aborting"
-msgstr "Error de lectura...s'està avortant"
+msgstr "Error de lectura... s'està avortant"
 
 #: src/gdb-buddy.c:274
 msgid ""
@@ -322,28 +333,27 @@ msgstr ""
 
 #: src/gdb-buddy.c:328
 msgid "There was an error running gdb."
-msgstr ""
+msgstr "S'ha produït un error al executar gdb."
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: src/bug-buddy.glade.h:2
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr ""
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
-msgstr ""
+msgstr "Avançat"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
-#, fuzzy
 msgid "Binary file:"
-msgstr "Fitxer binari"
+msgstr "Fitxer binari:"
 
 #: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:95
 msgid "Bug Buddy"
@@ -366,6 +376,10 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
+"Bug Buddy utilitza el correu electrònic per a enviar els informes d'errors.\n"
+"Seleccioneu com voleu que envie el correu Bug Buddy.\n"
+"Si seleccioneu el programa de correu predeterminat del GNOME, aquesta\n"
+"configuració es compartirà amb algunes altres aplicacions del GNOME."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
@@ -377,7 +391,7 @@ msgstr "Cc"
 
 #: src/bug-buddy.glade.h:16
 msgid "Command"
-msgstr ""
+msgstr "Ordre"
 
 #: src/bug-buddy.glade.h:17
 msgid "Core file"
@@ -385,7 +399,7 @@ msgstr "Fitxer de nucli"
 
 #: src/bug-buddy.glade.h:18
 msgid "Custom mailer"
-msgstr ""
+msgstr "Programa de correu personalitzat"
 
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
@@ -393,7 +407,7 @@ msgstr "Depura"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
-msgstr ""
+msgstr "Progrés de la descàrrega"
 
 #: src/bug-buddy.glade.h:22
 msgid "Email"
@@ -401,7 +415,7 @@ msgstr "Adreça electrònica"
 
 #: src/bug-buddy.glade.h:23
 msgid "GNOME Mailer Settings"
-msgstr ""
+msgstr "Configuració del correu del GNOME"
 
 #: src/bug-buddy.glade.h:24
 msgid "Include a text file"
@@ -409,16 +423,15 @@ msgstr "Incloure un fitxer de text"
 
 #: src/bug-buddy.glade.h:25
 msgid "Just save to a file so I can submit a bug report manually"
-msgstr ""
+msgstr "Simplement desa a un fitxer per a que es puga enviar un informe d'error manualment"
 
 #: src/bug-buddy.glade.h:26
 msgid "Name"
 msgstr "Nom"
 
 #: src/bug-buddy.glade.h:27
-#, fuzzy
 msgid "Path of sendmail"
-msgstr "Camí complet del sendmail "
+msgstr "Camí complet del sendmail"
 
 #: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
@@ -426,7 +439,7 @@ msgstr "Si us plau, escolliu un component, versió, i nivell de gravetat."
 
 #: src/bug-buddy.glade.h:29
 msgid "Please make any final corrections to the bug report."
-msgstr ""
+msgstr "Feu qualsevol correcció final a l'informe d'error."
 
 #: src/bug-buddy.glade.h:30
 msgid "Please make your bug report in English, if possible."
@@ -445,6 +458,8 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
+"Preneu un minut per a comprovar si el vostre error és un dels que més freqüentment s'informa.\n"
+"Si ja s'ha informat de l'error, si us plau no el torneu a enviar."
 
 #: src/bug-buddy.glade.h:34
 msgid ""
@@ -455,18 +470,16 @@ msgstr ""
 "de productes per als sistemes de seguiment d'errors."
 
 #: src/bug-buddy.glade.h:36
-#, fuzzy
 msgid "Process ID:"
-msgstr "Identificació de procés"
+msgstr "Identificació del procés:"
 
 #: src/bug-buddy.glade.h:37
 msgid "Proxy Settings..."
-msgstr ""
+msgstr "Configuració del Proxy..."
 
 #: src/bug-buddy.glade.h:38
-#, fuzzy
 msgid "Save in"
-msgstr "S'està desant:"
+msgstr "Desa en"
 
 #: src/bug-buddy.glade.h:39
 msgid "Save the report to..."
@@ -477,39 +490,36 @@ msgid "Saving:"
 msgstr "S'està desant:"
 
 #: src/bug-buddy.glade.h:41
-#, fuzzy
 msgid "Select a mailer"
-msgstr "Seleccioneu una acció"
+msgstr "Seleccioneu un programa de correu"
 
 #: src/bug-buddy.glade.h:42
-#, fuzzy
 msgid "Sendmail Settings"
-msgstr "Sendmail"
+msgstr "Configuració de Sendmail"
 
 #: src/bug-buddy.glade.h:43
 msgid "Severity"
 msgstr "Gravetat"
 
 #: src/bug-buddy.glade.h:44
-#, fuzzy
 msgid "Show _Debugging Details"
-msgstr "Informació de depuració"
+msgstr "Mostra detalls de la _depuració"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
-msgstr ""
+msgstr "Mostra els errors més frequents en:"
 
 #: src/bug-buddy.glade.h:46
 msgid "Simple"
-msgstr ""
+msgstr "Simple"
 
 #: src/bug-buddy.glade.h:47
 msgid "Start"
-msgstr ""
+msgstr "Comença"
 
 #: src/bug-buddy.glade.h:48
 msgid "Start in terminal"
-msgstr ""
+msgstr "Comença en un terminal"
 
 #: src/bug-buddy.glade.h:49
 msgid "Stop"
@@ -525,7 +535,7 @@ msgstr "Resum"
 
 #: src/bug-buddy.glade.h:52
 msgid "The product is not listed above."
-msgstr ""
+msgstr "El producte no està llistat ací."
 
 #: src/bug-buddy.glade.h:53
 msgid "To"
@@ -537,20 +547,19 @@ msgstr "A:"
 
 #: src/bug-buddy.glade.h:55
 msgid "Understands Netscape remote control"
-msgstr ""
+msgstr "Enten el control remot de Netscape"
 
 #: src/bug-buddy.glade.h:56
-#, fuzzy
 msgid "Updating products list:"
-msgstr "S'està actualitzant el llistat de productes"
+msgstr "S'està actualitzant el llistat de productes:"
 
 #: src/bug-buddy.glade.h:57
 msgid "Use sendmail directly"
-msgstr ""
+msgstr "Utilitza sendmail directament"
 
 #: src/bug-buddy.glade.h:58
 msgid "Use the default GNOME mailer"
-msgstr ""
+msgstr "Utilitza el programa de correu predeterminat del GNOME"
 
 #: src/bug-buddy.glade.h:59
 msgid "Version"
@@ -566,7 +575,7 @@ msgstr "desc"
 
 #: src/bug-buddy.glade.h:62
 msgid "email info"
-msgstr "informació del c/e"
+msgstr "info del correu-e"
 
 #: src/bug-buddy.glade.h:63
 msgid "finished"
@@ -578,57 +587,51 @@ msgstr "gdb"
 
 #: src/bug-buddy.glade.h:65
 msgid "gnome"
-msgstr ""
+msgstr "gnome"
 
 #: src/bug-buddy.glade.h:66
-#, fuzzy
 msgid "mail config"
-msgstr "informació del c/e"
+msgstr "config del correu-e"
 
 #: src/bug-buddy.glade.h:67
 msgid "mostfreq"
-msgstr ""
+msgstr "mésfreq"
 
 #: src/bug-buddy.glade.h:68
 msgid "product"
 msgstr "producte"
 
 #: src/bug-buddy.glade.h:69
-#, fuzzy
 msgid "sendmail"
-msgstr "Sendmail"
+msgstr "sendmail"
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Benvingut al Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:50
-#, fuzzy
 msgid "Select a Product"
-msgstr "Seleccioneu una acció"
+msgstr "Seleccioneu un producte"
 
 #: src/united-states-of-bug-buddy.c:51
-#, fuzzy
 msgid "Select a Component"
-msgstr "component"
+msgstr "Seleccioneu un component"
 
 #: src/united-states-of-bug-buddy.c:52
 msgid "Frequently Reported Bugs"
-msgstr ""
+msgstr "Errors dels que s'informa freqüentment"
 
 #: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "Descripció de l'error"
 
 #: src/united-states-of-bug-buddy.c:54
-#, fuzzy
 msgid "Mail Configuration"
-msgstr "Configuració del sistema"
+msgstr "Configuració del correu"
 
 #: src/united-states-of-bug-buddy.c:55
-#, fuzzy
 msgid "Confirmation"
-msgstr "Més informació"
+msgstr "Confirmació"
 
 #: src/united-states-of-bug-buddy.c:56
 msgid "Finished!"
@@ -657,11 +660,13 @@ msgid ""
 "\n"
 "Please check the path to sendmail again."
 msgstr ""
+"'%s' no pareix existir.\n"
+"\n"
+"Si us plau, comproveu el camí a sendmail de nou."
 
 #: src/united-states-of-bug-buddy.c:357
-#, fuzzy
 msgid "Please enter a valid email command."
-msgstr "Si us plau, introduïu una adreça electrònica vàlida."
+msgstr "Si us plau, introduïu una ordre de correu vàlida."
 
 #: src/united-states-of-bug-buddy.c:421
 msgid "The specified file does not exist."
@@ -679,6 +684,9 @@ msgid ""
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
+"'%s' és un fitxer %s.\n"
+"\n"
+"Bug Buddy només pot fitxers de text pla (text/*)."
 
 #: src/united-states-of-bug-buddy.c:458
 msgid "You must include a comprehensible subject line in your bug report."
@@ -694,14 +702,16 @@ msgstr "Voleu enviar ara aquest informe d'errors?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "_Envia"
 
 #: src/united-states-of-bug-buddy.c:526
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
-msgstr "No es pot obrir el fitxer: '%s'"
+msgstr ""
+"No es pot obrir el fitxer '%s:'\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:540
 #, c-format
@@ -709,11 +719,13 @@ msgid "about to run '%s'"
 msgstr "ara s'executarà '%s'"
 
 #: src/united-states-of-bug-buddy.c:548
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
-msgstr "No es pot iniciar el programa de correu: '%s'"
+msgstr ""
+"No es pot iniciar el programa de correu '%s':\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:586
 #, c-format
@@ -738,7 +750,7 @@ msgstr ""
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
-msgstr ""
+msgstr "Ja que Bug Buddy no sap res sobre el producte del que voleu informar d'un error, tindreu que ficar l'adreça de l'informe d'error a ma."
 
 #: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
@@ -758,6 +770,9 @@ msgid ""
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
+"El vostre programa de correu s'ha executat. Si us plau, pegueu una ullada per damunt i envieu-lo.\n"
+"\n"
+"Gràcies per envier aquest informe d'error."
 
 #: src/united-states-of-bug-buddy.c:812
 msgid ""
@@ -784,11 +799,9 @@ msgstr "Informeu d'un error al GNOME"
 #~ msgid "Go"
 #~ msgstr "Vés"
 
-#, fuzzy
 #~ msgid "Location"
-#~ msgstr "Acció"
+#~ msgstr "Localització"
 
-#, fuzzy
 #~ msgid "Automatically continue to the next step when debugging is complete"
 #~ msgstr "Vés automàticament al pas següent quan hagi finalitzat la depuració"
 
@@ -1146,3 +1159,5 @@ msgstr "Informeu d'un error al GNOME"
 
 #~ msgid "Submit to individual author"
 #~ msgstr "Enviar-lo a l'autor"
+
+
