@@ -41,7 +41,6 @@ gchar *s = N_("Short subject for the bug report");
 gchar *s = N_("Full description of the bug, including how to reproduce it");
 gchar *s = N_("Include a text file");
 gchar *s = N_("Debugging Information");
-gchar *s = N_("App go BOOM!!");
 gchar *s = N_("Collect debugging information from a crashed application\n"
               "Collect debugging information from a core file\n"
               "Skip this step\n"
