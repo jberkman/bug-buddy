@@ -24,7 +24,7 @@
 
 #include <libgnomevfs/gnome-vfs-types.h>
 #include <libxml/parser.h>
-#include <gdk/gdktypes.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
 
 typedef struct _BugzillaBTS BugzillaBTS;
 
@@ -60,8 +60,7 @@ struct _BugzillaBTS {
 	BugzillaSubmitType submit_type;
 	char *icon;
 
-	GdkPixmap *pixmap;
-	GdkBitmap *mask;
+	GdkPixbuf *pixbuf;
 
 	char *severity_node;
 	char *severity_item;
@@ -87,6 +86,21 @@ typedef struct {
 	char            *name;
 	char            *description;
 } BugzillaComponent;
+
+enum {
+	PRODUCT_ICON,
+	PRODUCT_NAME,
+	PRODUCT_DESC,
+	PRODUCT_DATA,
+	PRODUCT_COLS
+};
+
+enum {
+	COMPONENT_NAME,
+	COMPONENT_DESC,
+	COMPONENT_DATA,
+	COMPONENT_COLS
+};
 
 void load_bugzillas (void);
 void load_bugzilla_xml (void);

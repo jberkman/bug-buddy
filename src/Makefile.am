@@ -6,7 +6,6 @@ INCLUDES = \
 	$(BUG_BUDDY_CFLAGS) -I$(includedir)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"	\
-	-DCLIST_HEIGHT=20				\
 	-D_GNU_SOURCE
 
 
@@ -50,7 +49,7 @@ buddy_DATA = \
 	gdb-cmd
 
 bug-buddy.glade2: bug-buddy.glade $(LIBGLADE_CONVERT)
-	$(LIBGLADE_CONVERT) $(srcdir)/bug-buddy.glade > bug-buddy.glade.tmp \
+	$(LIBGLADE_CONVERT) --no-upgrade $(srcdir)/bug-buddy.glade > bug-buddy.glade.tmp \
 	&& mv bug-buddy.glade.tmp bug-buddy.glade2
 
 utilsdir = $(datadir)/gnome/apps/Utilities

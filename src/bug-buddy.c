@@ -232,54 +232,6 @@ on_gdb_stop_clicked (GtkWidget *button, gpointer data)
 }
 
 void
-on_product_list_select_row (GtkWidget *w, int row, int col, gpointer data)
-{
-	if (druid_data.state == STATE_PRODUCT)
-		druid_set_sensitive (TRUE, TRUE, TRUE);
-	druid_data.product = gtk_clist_get_row_data (GTK_CLIST (w), row);
-	buddy_set_text ("email-to-entry", 
-			druid_data.product->bts->email);
-}
-
-void
-on_product_list_unselect_row (GtkWidget *w, int row, int col, gpointer data)
-{
-	if (druid_data.state == STATE_PRODUCT)
-		druid_set_sensitive (TRUE, FALSE, TRUE);
-	druid_data.product = NULL;
-}
-
-void
-on_component_list_select_row (GtkWidget *w, int row, int col, gpointer data)
-{
-	if (druid_data.state == STATE_COMPONENT)
-		druid_set_sensitive (TRUE, TRUE, TRUE);
-	druid_data.component = gtk_clist_get_row_data (GTK_CLIST (w), row);
-}
-
-void
-on_component_list_unselect_row (GtkWidget *w, int row, int col, gpointer data)
-{
-	if (druid_data.state == STATE_COMPONENT)
-		druid_set_sensitive (TRUE, FALSE, TRUE);
-	druid_data.component = NULL;
-}
-
-static gboolean
-on_timer (GtkProgress *progress)
-{
-	static int orient = 0;	
-	gfloat val = gtk_progress_get_value (progress);
-	if (val >= 100.0) {
-		gtk_progress_bar_set_orientation (GTK_PROGRESS_BAR (progress),
-						  (orient+1)%2);
-		val = -5.0;
-	}
-	gtk_progress_set_value (progress, val+5.0);
-	return TRUE;
-}
-
-void
 on_version_list_select_row (GtkCList *list, gint row, gint col,
 			    GdkEventButton *event, gpointer udata)
 {	
@@ -545,8 +497,28 @@ init_ui (void)
 
 	gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid-window")));
 
-	w = GET_WIDGET ("product_list");
-	gtk_clist_set_row_height (GTK_CLIST (w), CLIST_HEIGHT);
+	g_object_set (G_OBJECT (GET_WIDGET ("druid-about")),
+		      "label", GNOME_STOCK_ABOUT,
+		      "use_stock", TRUE,
+		      "use_underline", TRUE,
+		      NULL);
+
+	g_object_set (G_OBJECT (GET_WIDGET ("gdb-stop")),
+		      "label", GTK_STOCK_STOP,
+		      "use_stock", TRUE,
+		      "use_underline", TRUE,
+		      NULL);
+
+#if 0
+	/* set the cursor at the beginning of the second line */
+	{
+		GtkTextBuffer *buffy;
+		GtkTextIter iter;
+
+		buffy = gtk_text_view_get_buffer (GTK_TEXT_VIEW (GET_WIDGET ("desc-text")));
+		gtk_text_buffer_get_iter_at_line (buffer, &iter, 2);
+	}
+#endif
 }
 
 gint

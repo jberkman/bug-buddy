@@ -493,6 +493,26 @@ submit_ok (void)
 	return TRUE;
 }
 
+static gpointer
+get_selected_row (const char *w, int col)
+{
+	GtkTreeView *view;
+	GtkTreeSelection *selection;
+	GtkTreeIter iter;
+	gpointer retval;
+
+	view = GTK_TREE_VIEW (GET_WIDGET (w));
+	selection = gtk_tree_view_get_selection (view);
+	
+	if (!gtk_tree_selection_get_selected (selection, NULL, &iter))
+		return NULL;
+
+	gtk_tree_model_get (gtk_tree_view_get_model (view),
+			    &iter, col, &retval, -1);
+	
+	return retval;
+}
+
 void
 on_druid_next_clicked (GtkWidget *w, gpointer data)
 {
@@ -517,6 +537,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		break;
 	case STATE_PRODUCT:
 		/* check that the package is ok */
+		druid_data.product = get_selected_row ("product-list", PRODUCT_DATA);
 		if (!druid_data.product) {
 			gnome_dialog_run_and_close (
 				GNOME_DIALOG (gnome_error_dialog (
@@ -524,8 +545,10 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 			return;
 		}
 		bugzilla_product_add_components_to_clist (druid_data.product);
+		buddy_set_text ("email-to-entry", druid_data.product->bts->email);
 		break;
 	case STATE_COMPONENT:
+		druid_data.component = get_selected_row ("component-list", COMPONENT_DATA);
 		if (!druid_data.component) {
 			gnome_dialog_run_and_close (
 				GNOME_DIALOG (gnome_error_dialog (

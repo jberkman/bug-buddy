@@ -27,6 +27,7 @@
 #include <glade/glade.h>
 #include <libgnomecanvas/gnome-canvas.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gtk/gtkliststore.h>
 
 #include <sys/types.h>
 
@@ -139,6 +140,9 @@ typedef struct {
 
 	GnomeVFSAsyncHandle *vfshandle;
 	gboolean need_to_download;
+
+	GtkListStore *products_list;
+	GtkListStore *components_list;
 } DruidData;
 
 extern DruidData druid_data;

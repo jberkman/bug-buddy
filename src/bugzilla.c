@@ -385,8 +385,8 @@ load_bugzilla (const char *filename)
 	BugzillaBTS *bts;
 	char *path, *pixmap;
 	gboolean def;
-	GdkPixbuf *pb;
 	char *s;
+	GdkPixbuf *pb;
 	
 	d(g_print ("loading `%s'...\n", filename));
 
@@ -428,10 +428,8 @@ load_bugzilla (const char *filename)
 
 	pb = gdk_pixbuf_new_from_file (bts->icon, NULL);
 	if (pb) {
-		GdkPixbuf *pb2 = gdk_pixbuf_scale_simple (pb, CLIST_HEIGHT, CLIST_HEIGHT, GDK_INTERP_BILINEAR);
-		gdk_pixbuf_render_pixmap_and_mask (pb2, &bts->pixmap, &bts->mask, 127);
+		bts->pixbuf = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_HYPER);
 		gdk_pixbuf_unref (pb);
-		gdk_pixbuf_unref (pb2);
 	}
 
 	bts->severity_node   = gnome_config_get_string ("severity_node=severities");
@@ -588,6 +586,72 @@ p_string (GnomeVFSURI *uri, gpointer data)
 	g_free (s);
 }
 
+static void
+create_products_list (void)
+{
+	GtkListStore *model;
+	GtkTreeView *view;
+	GtkCellRenderer *ren;
+
+	view = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
+
+	model = gtk_list_store_new (PRODUCT_COLS, GDK_TYPE_PIXBUF, 
+				    G_TYPE_STRING, G_TYPE_STRING,
+				    G_TYPE_POINTER);
+
+	g_object_set (G_OBJECT (view), "model", model, NULL);
+	
+	ren = gtk_cell_renderer_pixbuf_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     "", ren,
+						     "pixbuf", PRODUCT_ICON,
+						     NULL);
+	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Product"), ren,
+						     "text", PRODUCT_NAME,
+						     NULL);
+
+	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Description"), ren,
+						     "text", PRODUCT_DESC,
+						     NULL);
+	
+
+	druid_data.products_list = model;
+}
+
+static void
+create_components_list (void)
+{
+	GtkListStore *model;
+	GtkTreeView *view;
+	GtkCellRenderer *ren;
+
+	view = GTK_TREE_VIEW (GET_WIDGET ("component-list"));
+
+	model = gtk_list_store_new (COMPONENT_COLS, G_TYPE_STRING, 
+				    G_TYPE_STRING, G_TYPE_POINTER);
+	
+	g_object_set (G_OBJECT (view), "model", model, NULL);
+
+	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Component"), ren,
+						     "text", COMPONENT_NAME,
+						     NULL);
+
+	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Description"), ren,
+						     "text", COMPONENT_DESC,
+						     NULL);
+
+	druid_data.components_list = model;
+}
+
+
 void
 load_bugzillas (void)
 {
@@ -608,6 +672,10 @@ load_bugzillas (void)
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		exit (0);
 	}
+
+	create_products_list ();
+
+	create_components_list ();
 
 	druid_data.all_products = g_new0 (BugzillaBTS, 1);
 	druid_data.all_products->name = _("All");
@@ -663,47 +731,44 @@ load_bugzillas (void)
 static void
 add_product (BugzillaProduct *p, GtkCList *w)
 {
-	char *entry[3] = { NULL };
-	gint row;
+	GtkTreeIter iter;
 
-	entry[0] = p->name;
-	entry[1] = p->description;
-
-	row = gtk_clist_append (w, entry);
-	if (p->bts->pixmap)
-		gtk_clist_set_pixtext (w, row, 0, p->name, GNOME_PAD_SMALL, 
-				       p->bts->pixmap, p->bts->mask);
-
-	gtk_clist_set_row_data (w, row, p);
+	gtk_list_store_append (druid_data.products_list, &iter);
+	gtk_list_store_set (druid_data.products_list, &iter,
+			    PRODUCT_ICON, p->bts->pixbuf,
+			    PRODUCT_NAME, p->name,
+			    PRODUCT_DESC, p->description,
+			    PRODUCT_DATA, p,
+			    -1);
 }
 
 void
 bugzilla_bts_add_products_to_clist (BugzillaBTS *bts)
 {
-	GtkCList *w;
+	GtkTreeView *w;
 
-	w = GTK_CLIST (GET_WIDGET ("product_list"));
-	gtk_clist_freeze (w);
-	gtk_clist_clear (w);
+	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
+	gtk_tree_view_set_headers_visible (w, TRUE);
+
+	gtk_list_store_clear (druid_data.products_list);
+#if FIXME
 	on_product_list_unselect_row (GTK_WIDGET (w), 0, 0, NULL);
-
+#endif
 	g_slist_foreach (bts->products, (GFunc)add_product, w);
-	gtk_clist_columns_autosize (w);
-
-	gtk_clist_thaw (w);
+	gtk_tree_view_columns_autosize (w);
 }
 
 static void
 add_component (BugzillaComponent *comp, GtkCList *w)
 {
-	char *entry[3] = { NULL };
-	gint row;
+	GtkTreeIter iter;
 
-	entry[0] = comp->name;
-	entry[1] = comp->description;
-
-	row = gtk_clist_append (w, entry);
-	gtk_clist_set_row_data (w, row, comp);
+	gtk_list_store_append (druid_data.components_list, &iter);
+	gtk_list_store_set (druid_data.components_list, &iter,
+			    COMPONENT_NAME, comp->name,
+			    COMPONENT_DESC, comp->description,
+			    COMPONENT_DATA, comp,
+			    -1);
 }
 
 static void
@@ -734,20 +799,26 @@ void
 bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 {
 	GtkWidget *m, *c;
-	GtkCList *w;
+	GtkTreeView *w;
 
-	w = GTK_CLIST (GET_WIDGET ("component_list"));
-	gtk_clist_freeze (w);
-	gtk_clist_clear (w);
+	w = GTK_TREE_VIEW (GET_WIDGET ("component-list"));
+	gtk_tree_view_set_headers_visible (w, TRUE);
+
+	gtk_list_store_clear (druid_data.components_list);
+#ifdef FIXME
 	on_component_list_select_row (GTK_WIDGET (w), 0, 0, NULL);
+#endif
 
 	g_slist_foreach (prod->components, (GFunc)add_component, w);
-	gtk_clist_columns_autosize (w);
 
+	gtk_tree_view_columns_autosize (w);
+
+#ifdef FIXME
 	if (w->rows == 1)
 		gtk_clist_select_row (w, 0, 0);
 
 	gtk_clist_thaw (w);
+#endif
 
 	m = gtk_menu_new ();
 	c = GET_WIDGET ("severity-list");
