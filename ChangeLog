@@ -1,3 +1,8 @@
+2002-05-28  Eric Baudais  <baudais@kkpsi.org>
+
+	* docs/C/bug-buddy.xml: Updated the docs for 2.1.6.
+	* docs/C/bug-buddy-C.omf: Updated for 2.1.6.
+
 2002-05-26  Chris Lyttle  <chris@wilddev.net>
 
 	* docs/C/bug-buddy-C.omf: Added rights and version tags
