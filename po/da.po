@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-05-11 11:42+0200\n"
+"POT-Creation-Date: 2002-05-18 12:22+0200\n"
+"PO-Revision-Date: 2002-05-18 12:24+0200\n"
 "Last-Translator: Ole Laursen <olau@hardworking.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -161,6 +161,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Der opstod en fejl under visnings af mellemværtsindstillingerne:\n"
+"\n"
+"%s.\n"
+"\n"
+"Kontrollér at Kontrolcentret er korrekt installeret."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -242,13 +247,13 @@ msgstr "Produkt"
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "Beskrivelse"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -256,14 +261,15 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Fejl-Frede kunne ikke åbne '%s'.\n"
-"Tjek venligst om Fejl-Frede er korrekt installeret."
+"Tjek venligst om Fejl-Frede er korrekt installeret.\n"
+"\n"
+"Fejl-Frede vil nu afslutte."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Alt"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -272,7 +278,9 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Fejl-Frede kunne ikke indlæse programmets brugergrænsefladefil (%s).\n"
-"Tjek venligst om Fejl-Frede er korrekt installeret."
+"Tjek venligst om Fejl-Frede er korrekt installeret.\n"
+"\n"
+"Fejl-Frede vil nu afslutte."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -342,13 +350,12 @@ msgid "There was an error running gdb."
 msgstr "Der opstod en fejl ved kørsel af GDB."
 
 #: src/bug-buddy.glade.h:1
-msgid "*"
-msgstr "*"
+msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "&lt;span size=\"xx-large\"&gt;Fejl-Frede&lt;/span&gt;"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
-msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Fejl-Frede&lt;/span&gt;"
+msgid "*"
+msgstr "*"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
