@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.1\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-10-06 13:39:04+0900\n"
+"Project-Id-Version: bug-buddy 1.2\n"
+"POT-Creation-Date: 2000-12-05 15:08+0000\n"
+"PO-Revision-Date: 2000-12-05 15:09:52+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -169,7 +169,7 @@ msgstr "Αρχείο core από εφαρμογή"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Αρχείο κειμένου προς συμπερίληψη στην αναφορά"
 
 #: src/bug-buddy.c:332
 msgid ""
@@ -678,7 +678,6 @@ msgstr "Σφάλμα στην ανάγνωση..."
 #~ msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
 
 #
-#, fuzzy
 #~ msgid ""
 #~ "Submit bug report\n"
 #~ "Send to your amail address only\n"
