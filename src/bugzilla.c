@@ -466,7 +466,7 @@ start_xfer (gpointer null)
 		    GNOME_VFS_XFER_DEFAULT,
 		    GNOME_VFS_XFER_ERROR_MODE_ABORT,
 		    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
-		    GNOME_VFS_DEFAULT_PRIORITY,
+		    GNOME_VFS_PRIORITY_DEFAULT,
 		    async_update, NULL, NULL, NULL))
 		goto_product_page ();
 

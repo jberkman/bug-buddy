@@ -1,3 +1,8 @@
+2001-10-27  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.c (start_xfer): use GNOME_VFS_PRIORITY_DEFAULT
+	rather than GNOME_VFS_DEFAULT_PRIORITY
+
 2001-10-23  jacob berkman  <jacob@ximian.com>
 
 	* configure.in (GETTEXT_PACKAGE): we don't have to be parallel installable
