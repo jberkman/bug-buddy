@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-05-12 14:54+0200\n"
+"POT-Creation-Date: 2002-05-17 00:40+0200\n"
+"PO-Revision-Date: 2002-05-17 00:42+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -154,6 +154,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Det oppsto en feil under visning av proxy-innstillingene:\n"
+"\n"
+"%s.\n"
+"\n"
+"Vennligst sjekk at GNOME kontrollsenter er riktig installert."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -242,7 +247,7 @@ msgid "Description"
 msgstr "Beskrivelse"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -250,14 +255,15 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Bug Buddy kunne ikke åpne «%s».\n"
-"Vennligst sjekk at Bug Buddy ble riktig installert."
+"Vennligst sjekk at Bug Buddy ble riktig installert.\n"
+"\n"
+"Bug Buddy vil avslutte nå."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Alle"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -266,7 +272,9 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Bug Buddy kunne ikke laste brukergrensesnittfilen (%s).\n"
-"Vennligst sjekk at Bug Buddy ble riktig installert."
+"Vennligst sjekk at Bug Buddy ble riktig installert.\n"
+"\n"
+"Bug Buddy vil avslutte nå."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -790,27 +798,3 @@ msgstr "Bug Buddy"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Rapportering av feil i GNOME"
-
-#~ msgid "Go"
-#~ msgstr "Start"
-
-#~ msgid "HTTP Proxy Settings"
-#~ msgstr "HTTP-proxy innstillinger"
-
-#~ msgid "Location"
-#~ msgstr "Plassering"
-
-#~ msgid "Password"
-#~ msgstr "Passord"
-
-#~ msgid "Port"
-#~ msgstr "Port"
-
-#~ msgid "Proxy requires a username and password"
-#~ msgstr "Proxy krever brukernavn og passord"
-
-#~ msgid "Use HTTP Proxy"
-#~ msgstr "Bruk HTTP-proxy"
-
-#~ msgid "Username"
-#~ msgstr "Brukernavn"
