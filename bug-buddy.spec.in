@@ -1,0 +1,81 @@
+%define name	@PACKAGE@
+%define ver	@VERSION@
+%define RELEASE	1
+%define ver	%{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
+%define rel 1
+%define prefix /usr
+%define sysconfdir /etc
+
+Summary: Utility to ease the reporting of bugs within the GNOME Desktop Environment.
+Name: %name
+Version: %ver
+Release: %rel
+Copyright: GPL
+Group: Applications/System
+Source: ftp://ftp.gnome.org/pub/sources/bug-buddy-%{ver}.tar.gz
+URL: http://www.andrew.cmu.edu/~jberkman/bug-buddy/
+BuildRoot: /var/tmp/bug-buddy-root
+Prereq: /sbin/installinfo
+Docdir: %{prefix}/doc
+
+Requires: gtk+ >= 1.2.1
+Requires: glib >= 1.2.1
+Requires: gnome-libs >= 1.0.53
+Requires: gnome-core >= 1.0.53
+Requires: libglade >= 0.5
+
+%description
+The goal of bug-buddy is to make reporting bugs very simple
+and easy for users, while making the reports themselves more
+useful and informative for developers. 
+
+%changelog
+
+* Wed Nov 10 1999  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+- fixed up for insertion into the CVS
+
+* Fri Nov 05 1999  Ned Rhudy  <nrhudy@pabus.com>
+
+- the first incarnation of the spec file...watch it not work
+
+%prep
+%setup
+
+%build
+
+MYCFLAGS="$RPM_OPT_FLAGS"
+
+if [ ! -f configure ]; then
+  CFLAGS="$MYCFLAGS" ./autogen.sh $MYARCH_FLAGS --prefix=%prefix --sysconfdir=%sysconfdir --localstatedir=/var/lib
+else
+  CFLAGS="$MYCFLAGS" ./configure $MYARCH_FLAGS --prefix=%prefix --sysconfdir=%sysconfdir --localstatedir=/var/lib
+fi
+
+if [ "$SMP" != "" ]; then
+  make -j$SMP "MAKE=make -j$SMP"
+else
+  make
+fi
+
+%install
+rm -fr $RPM_BUILD_ROOT
+
+make prefix=$RPM_BUILD_ROOT%{prefix} install
+
+%clean
+rm -fr $RPM_BUILD_ROOT
+
+%files
+%defattr(-, root, root)
+
+%doc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+%{prefix}/bin/*
+%{prefix}/share/pixmaps
+%{prefix}/share/gnome/*/*
+%{prefix}/share/mime-info
+%{prefix}/share/bug-buddy
+%{prefix}/share/locale/*/*/*
+
+--------------B1126E02FF23B86A2A26D5BE--
+

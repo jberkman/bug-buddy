@@ -30,6 +30,7 @@ AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)
 
 AC_OUTPUT([
+bug-buddy.spec
 Makefile
 intl/Makefile
 po/Makefile.in

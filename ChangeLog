@@ -1,5 +1,8 @@
 1999-11-10  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* configure.in: 
+	* bug-buddy.spec.in: may as well have one
+
 	* configure.in: bump to 0.3
 
 	* src/bug-buddy.glade:
