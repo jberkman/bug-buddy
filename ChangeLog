@@ -1,3 +1,7 @@
+2000-12-24  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* configure.in,po/az.po: Added Azeri language file
+
 2000-11-23  Yukihiro Nakai  <nakai@gnome.gr.jp>
 
 	* configure.in: Add zh_CN.GB2312 to ALL_LINGUAS.

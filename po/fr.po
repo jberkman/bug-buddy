@@ -4,7 +4,6 @@
 # Hervé Dréau <hdreau@cybercable.fr>, 1999.
 # Christophe Merlet (RedFox) <redfox@eikonex.org>, 2000.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
