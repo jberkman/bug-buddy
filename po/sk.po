@@ -1,11 +1,11 @@
 # bug-buddy sk.po
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000.
+# Copyright (C) 2000-2001 Free Software Foundation, Inc.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000-2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-27 09:06+0200\n"
 "PO-Revision-Date: 2001-02-14 13:40CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -147,7 +147,7 @@ msgstr "Naozaj chcete zru¹i» túto aktualizáciu?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Nemô¾em otvori» '%s'.\n"
 "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
@@ -206,9 +206,9 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
-"Nemô¾em nájs» súbor pre príkaz gdb.\n"
+"Nemô¾em nájs» súbor pre príkaz gdb-cmd.\n"
 "Prosím, skúste znovu nain¹talova» Priateµa v núdzi."
 
 #: src/gdb-buddy.c:281 src/util.c:75
@@ -500,19 +500,19 @@ msgstr "Prosím, uveïte platnú e-mailovú adresu."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"Vyzerá to, ¾e `%s' neexistuje.\n"
+"Vyzerá to, ¾e '%s' neexistuje.\n"
 "\n"
 "Nebude mo¾né odosla» správu o chybe,\n"
 "ale bude ju mo¾né ulo¾i» do súboru.\n"
 "\n"
-"Chcete uvies» nové umiestnenie programu sendmail?"
+"Chcete zada» nové umiestnenie programu sendmail?"
 
 #: src/united-states-of-bug-buddy.c:336
 msgid "The specified file does not exist."
@@ -600,6 +600,13 @@ msgstr "Nemô¾em spusti» '%s'."
 msgid "Error on read..."
 msgstr "Chyba pri èítaní..."
 
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Nemô¾em otvori» '%s'.\n"
+#~ "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
+
 #~ msgid "critical"
 #~ msgstr "kritická"
 
@@ -674,13 +681,6 @@ msgstr "Chyba pri èítaní..."
 
 #~ msgid "Refresh"
 #~ msgstr "Obnovi»"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Nemô¾em otvori» '%s'.\n"
-#~ "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
 
 #~ msgid "Distribution"
 #~ msgstr "Distribúcia"
