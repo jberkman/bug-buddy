@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-02-23 12:09-0500\n"
-"PO-Revision-Date: 2000-01-26 04:24+0900\n"
+"Project-Id-Version: bug-buddy CVS-20000318\n"
+"POT-Creation-Date: 2000-03-18 06:10+0900\n"
+"PO-Revision-Date: 2000-03-18 06:19+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -179,7 +179,7 @@ msgstr ""
 msgid "Please enter your name and email address"
 msgstr "あなたの名前と email アドレスを入れてください"
 
-#: src/bug-buddy.c:500
+#: src/bug-buddy.c:501
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -187,7 +187,7 @@ msgstr ""
 "\"終了\"をクリックすると bug-buddy は終了します\n"
 "不具合報告は提出されないでしょう"
 
-#: src/bug-buddy.c:523
+#: src/bug-buddy.c:524
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -196,7 +196,7 @@ msgstr ""
 "'%s' の中に不具合報告を保存しようとしています\n"
 "これは '%s' で不具合を報告するために後で使うことが出来ます"
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:529
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -217,11 +217,11 @@ msgstr ""
 "\n"
 "'終了'をクリックすることで不具合報告を提出します"
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:651
 msgid "Please choose a file to save to."
 msgstr "保存するファイルを選択してください"
 
-#: src/bug-buddy.c:657
+#: src/bug-buddy.c:658
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -230,7 +230,7 @@ msgstr ""
 "ファイル '%s' はすでに存在しています\n"
 "上書きしますか?"
 
-#: src/bug-buddy.c:768
+#: src/bug-buddy.c:769
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -239,7 +239,7 @@ msgstr ""
 "'%s' が開けません\n"
 "bug-buddy が正しくインストールされているか確認してください"
 
-#: src/bug-buddy.c:864
+#: src/bug-buddy.c:865
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -247,7 +247,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME は反対です\n"
 "代わりにコマンドラインオプションの --appname を使ってください"
 
-#: src/bug-buddy.c:877
+#: src/bug-buddy.c:878
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
@@ -255,7 +255,7 @@ msgstr ""
 "$GNOME_CRASHED_PID は反対です\n"
 "代わりにコマンドラインオプションの --pid を使ってください"
 
-#: src/bug-buddy.c:990
+#: src/bug-buddy.c:991
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -295,13 +295,12 @@ msgid ""
 "bug is resolved, or for developers to request more information from you."
 msgstr ""
 "あなたの名前と email アドレスを入力してください. "
-"あなたは不具合が解決されるとき, "
+"あなたは不具合が解決されるとき, \n"
 "もしくは開発者があなたからもっと多くの情報を要求するために通知されるでしょう"
 
 #: src/glade-strings.c:14
-#, fuzzy
 msgid "Bug Tracking System"
-msgstr "Bug Track System"
+msgstr "Bug Tracking System"
 
 #: src/glade-strings.c:15
 msgid ""
@@ -457,11 +456,11 @@ msgstr "Submitting the Report"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr ""
+msgstr "Bug Tracking System へ不具合報告を提出する"
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr ""
+msgstr "作者へ提出する"
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
@@ -482,9 +481,3 @@ msgstr "Summary"
 #: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL は見守っています"
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "サブプロセスはステータス '%d' で終了しています"
-
-#~ msgid "Submit bug report"
-#~ msgstr "不具合報告を提出する"
