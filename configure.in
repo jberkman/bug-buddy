@@ -58,13 +58,15 @@ AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
 AC_OUTPUT([
 bug-buddy.spec
 Makefile
-docs/Makefile
-docs/C/Makefile
-docs/it/Makefile
 pixmaps/Makefile
 po/Makefile.in
 src/Makefile
 ])
+
+dnl docs are totally hosed
+dnl docs/Makefile
+dnl docs/C/Makefile
+dnl docs/it/Makefile
 
 echo "
 

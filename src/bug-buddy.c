@@ -357,7 +357,7 @@ on_progress_start_clicked (GtkWidget *wid, gpointer data)
 void
 on_progress_stop_clicked (GtkWidget *w, gpointer data)
 {
-	end_bugzilla_download (TRUE, FALSE);
+	end_bugzilla_download (END_BUGZILLA_CANCEL);
 	load_bugzilla_xml ();
 }
 
@@ -554,7 +554,26 @@ init_ui (void)
 			  G_CALLBACK (on_list_button_press_event),
 			  NULL);
 
+	{
+		const char **w, *windows[] = { "druid-window", "proxy-window", "progress-window", NULL };
+		for (w = windows; *w; w++)
+			g_signal_connect (GET_WIDGET (*w), "delete-event", 
+					  G_CALLBACK (gtk_widget_hide_on_delete),
+					  NULL);
+	}
+
 	gtk_dialog_set_has_separator (GTK_DIALOG (GET_WIDGET ("proxy-window")), FALSE);
+
+	buddy_set_text ("desc-text",
+			"Description of Problem:\n\n\n"
+			"Steps to reproduce the problem:\n"
+			"1. \n"
+			"2. \n"
+			"3. \n\n"
+			"Actual Results:\n\n\n"
+			"Expected Results:\n\n\n"
+			"How often does this happen?\n\n\n"
+			"Additional Information:\n");
 
 	/* set the cursor at the beginning of the second line */
 	{

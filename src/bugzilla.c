@@ -88,6 +88,8 @@ load_mostfreq_xml (BugzillaBTS *bts, xmlDoc *doc)
 	BugzillaBug *bbug;
 
 	d(g_print ("mostfreq:\n"));
+	/* FIXME: free these */
+	bts->bugs = NULL;
 
 	for (prod = xmlDocGetRootElement (doc)->children; prod; prod = prod->next) {
 		d(g_print ("\t%s\n", prod->name));
@@ -134,6 +136,10 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 
 	d(g_print ("config:\n"));
 
+	/* FIXME: free these */
+	bts->opsys = NULL;
+	bts->severities = NULL;
+
 	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
 		d(g_print ("\t%s\n", node->name));
 		if (!strcmp (node->name, bts->severity_node)) {
@@ -168,6 +174,9 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 	xmlNode *node, *cur;
 
 	d(g_print ("products:\n"));
+
+	/* FIXME: free list */
+	bts->products = NULL;
 
 	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
 		d(g_print ("\t%s\n", node->name));
@@ -239,6 +248,13 @@ static int
 async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpointer data)
 {
 	d(g_print ("%" GNOME_VFS_SIZE_FORMAT_STR "\n", info->bytes_copied));
+
+	if (info->status == GNOME_VFS_XFER_PROGRESS_STATUS_VFSERROR) {
+		end_bugzilla_download (END_BUGZILLA_NOOP);
+		g_message ("there was an error........");
+		return GNOME_VFS_XFER_ERROR_ACTION_ABORT;
+	}
+
 	if (info->source_name) {
 		d(g_print ("source: %s\n", info->source_name));
 		buddy_set_text ("progress-source", info->source_name);
@@ -254,7 +270,7 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 					       (gfloat)info->total_bytes_copied / info->bytes_total);
 
 	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
-		end_bugzilla_download (FALSE, TRUE);
+		end_bugzilla_download (END_BUGZILLA_HIDE_BOX);
 		load_bugzilla_xml ();
 	}
 
@@ -300,7 +316,7 @@ static BugzillaXMLFile *
 get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 {
 	BugzillaXMLFile *xmlfile;
-	char *localdir, *tmppath, *src_uri;
+	char *localdir, *tmppath, *src_uri, *tmp_key;
 
 	src_uri = gnome_config_get_string (key);
 	if (!src_uri) {
@@ -312,10 +328,12 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	xmlfile->xml_func = parse_func;
 
 	tmppath = gnome_util_home_file ("bug-buddy.d");
+	tmp_key = g_strconcat (key, ".tmp", NULL);
 
 	xmlfile->system_path = g_build_filename (BUDDY_DATADIR, "bugzilla", bts->subdir, key, NULL);
 	xmlfile->cache_path  = g_build_filename (tmppath,       "bugzilla", bts->subdir, key, NULL);
-	localdir = g_build_filename (tmppath, "bugzilla", bts->subdir, NULL);
+	xmlfile->tmp_path    = g_build_filename (tmppath,       "bugzilla", bts->subdir, tmp_key, NULL);
+	localdir             = g_build_filename (tmppath,       "bugzilla", bts->subdir, NULL);
 
 	g_free (tmppath);
 	
@@ -335,7 +353,7 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 		return xmlfile;
 	}
 		
-	xmlfile->dest_uri = gnome_vfs_uri_new (xmlfile->cache_path);
+	xmlfile->dest_uri = gnome_vfs_uri_new (xmlfile->tmp_path);
 	if (!xmlfile->dest_uri) {
 		gnome_vfs_uri_unref (xmlfile->source_uri);
 		xmlfile->source_uri = NULL;
@@ -344,7 +362,7 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	}
 
 	druid_data.dlsources = g_list_prepend (druid_data.dlsources, xmlfile->source_uri);
-	druid_data.dldests = g_list_prepend (druid_data.dldests, xmlfile->dest_uri);
+	druid_data.dldests   = g_list_prepend (druid_data.dldests,   xmlfile->dest_uri);
 
 	xmlfile->download = xmlfile->read_from_cache = TRUE;
 	return xmlfile;
@@ -442,8 +460,15 @@ static xmlDoc *
 load_bugzilla_xml_file (BugzillaXMLFile *xml_file)
 {
 	xmlDoc *doc = NULL;
+	struct stat statbuf;
 
-	doc = xmlParseFile (xml_file->cache_path);
+	if (!stat (xml_file->tmp_path, &statbuf) && statbuf.st_size) {
+		if (!rename (xml_file->tmp_path, xml_file->cache_path)) {
+			doc = xmlParseFile (xml_file->cache_path);
+		}
+	}
+
+
 	if (!doc)
 		doc = xmlParseFile (xml_file->system_path);
 
@@ -471,7 +496,7 @@ load_bugzilla_xml (void)
 		bts = (BugzillaBTS *)item->data;
 		if (bts->products_xml) { // && !bts->products_xml->done) {
 			doc = load_bugzilla_xml_file (bts->products_xml);
-			if (doc) 
+			if (doc)
 				load_products_xml (bts, doc);
 			bts->products_xml->done = TRUE;
 		}
@@ -684,8 +709,11 @@ create_components_list (void)
 }
 
 void
-end_bugzilla_download (gboolean cancel, gboolean hide_box)
+end_bugzilla_download (EndBugzillaFlags flags)
 {
+	gboolean cancel   = flags & END_BUGZILLA_CANCEL;
+	gboolean hide_box = flags & END_BUGZILLA_HIDE_BOX;
+
 	if (druid_data.download_in_progress && cancel)
 		gnome_vfs_async_cancel (druid_data.vfshandle);
 
@@ -703,7 +731,7 @@ end_bugzilla_download (gboolean cancel, gboolean hide_box)
 gboolean
 start_bugzilla_download (void)
 {
-	end_bugzilla_download (TRUE, FALSE);
+	end_bugzilla_download (END_BUGZILLA_CANCEL);
 
 	gtk_widget_show (GET_WIDGET ("progress-box"));
 	gtk_widget_show (GET_WIDGET ("progress-sep"));
@@ -715,7 +743,7 @@ start_bugzilla_download (void)
 		druid_data.dlsources,
 		druid_data.dldests,
 		GNOME_VFS_XFER_DEFAULT,
-		GNOME_VFS_XFER_ERROR_MODE_ABORT,
+		GNOME_VFS_XFER_ERROR_MODE_QUERY,
 		GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
 		GNOME_VFS_PRIORITY_DEFAULT,
 		async_update, NULL, NULL, NULL);

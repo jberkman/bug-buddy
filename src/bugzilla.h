@@ -38,6 +38,7 @@ typedef enum {
 typedef struct {
 	char *system_path;
 	char *cache_path;
+	char *tmp_path;
 
 	GnomeVFSURI *source_uri;
 	GnomeVFSURI *dest_uri;
@@ -139,6 +140,12 @@ gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);
 char *generate_email_text (gboolean include_headers);
 
 gboolean start_bugzilla_download (void);
-void end_bugzilla_download (gboolean cancel, gboolean hide_box);
+
+typedef enum {
+	END_BUGZILLA_NOOP     = 0,
+	END_BUGZILLA_CANCEL   = 1 << 0,
+	END_BUGZILLA_HIDE_BOX = 1 << 1
+} EndBugzillaFlags;
+void end_bugzilla_download (EndBugzillaFlags flags);
 
 #endif /* __BUGZILLA_H__ */

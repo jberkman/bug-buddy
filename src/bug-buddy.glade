@@ -19,6 +19,7 @@
 <widget>
   <class>GtkWindow</class>
   <name>druid-window</name>
+  <visible>False</visible>
   <signal>
     <name>style_set</name>
     <handler>on_druid_window_style_set</handler>
@@ -1230,24 +1231,7 @@ If the bug is already reported, please do not report it again.</label>
 		    <name>desc-text</name>
 		    <can_focus>True</can_focus>
 		    <editable>True</editable>
-		    <text>Description of Problem:
-
-
-Steps to reproduce the problem:
-1. 
-2. 
-3. 
-
-Actual Results:
-
-
-Expected Results:
-
-
-How often does this happen? 
-
-
-Additional Information:</text>
+		    <text></text>
 		  </widget>
 		</widget>
 	      </widget>
@@ -1330,6 +1314,7 @@ will be shared with some other GNOME applications.</label>
 	      <widget>
 		<class>GtkRadioButton</class>
 		<name>email-mailer-radio</name>
+		<visible>False</visible>
 		<can_focus>True</can_focus>
 		<signal>
 		  <name>toggled</name>
@@ -2380,6 +2365,7 @@ will be shared with some other GNOME applications.</label>
 <widget>
   <class>GnomeDialog</class>
   <name>proxy-window</name>
+  <visible>False</visible>
   <title>HTTP Proxy Settings</title>
   <type>GTK_WINDOW_TOPLEVEL</type>
   <position>GTK_WIN_POS_NONE</position>
@@ -2424,6 +2410,13 @@ will be shared with some other GNOME applications.</label>
 	<name>button9</name>
 	<can_default>True</can_default>
 	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>gtk_widget_hide</handler>
+	  <object>proxy-window</object>
+	  <after>True</after>
+	  <last_modification_time>Tue, 22 Jan 2002 01:43:33 GMT</last_modification_time>
+	</signal>
 	<stock_button>GNOME_STOCK_BUTTON_CLOSE</stock_button>
       </widget>
     </widget>
@@ -2760,6 +2753,7 @@ will be shared with some other GNOME applications.</label>
 <widget>
   <class>GtkWindow</class>
   <name>progress-window</name>
+  <visible>False</visible>
   <title>Download Progress</title>
   <type>GTK_WINDOW_TOPLEVEL</type>
   <position>GTK_WIN_POS_NONE</position>

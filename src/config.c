@@ -64,7 +64,7 @@ static ConfigItem configs[] = {
 	{ CONFIG_MAILER, "email-sendmail-gnome-entry", "/bug-buddy/last/mailer",        "email-sendmail-entry" },
 	{ CONFIG_ENTRY,  "email-file-gnome-entry",     "/bug-buddy/last/bugfile",       "email-file-entry" },
 /*	{ CONFIG_TOGGLE, "email-cc-toggle",            "/bug-buddy/last/cc=0" }, */
-	{ CONFIG_TOGGLE, "email-sendmail-radio",       "/bug-buddy/last/use_sendmail=false" },
+	{ CONFIG_TOGGLE, "email-sendmail-radio",       "/bug-buddy/last/use_sendmail=true" },
 	{ CONFIG_TOGGLE, "email-custom-radio",         "/bug-buddy/last/use_custom_mailer=false" },
 	{ CONFIG_ENTRY,  "email-command-gnome-entry",  "/bug-buddy/custom_mailer/command=evolution", "email-command-entry"},
 	{ CONFIG_TOGGLE, "email-terminal-toggle",      "/bug-buddy/custom_mailer/start_in_terminal" },

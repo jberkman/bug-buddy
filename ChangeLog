@@ -1,3 +1,21 @@
+2002-02-01  jacob berkman  <jacob@ximian.com>
+
+	* Makefile.am (SUBDIRS): 
+	* configure.in: don't build docs as they are way busted.
+
+	* src/bug-buddy.c (init_ui): hide windows when they are deleted,
+	and fill in bug report template untranslated. (bugzilla 69460)
+
+	* src/bugzilla.c: download files to a temporary file, then rename
+	them.  also try to do something sensical when downloads fail, but
+	sadly gnome-vfs is kind of broken when your proxy doesn't work and
+	reports success.
+
+	* src/bug-buddy.glade: make toplevels invisible by default, and
+	hide the options for spawning external mailers (bugzilla #70156)
+	
+	* src/config.c: default to using sendmail
+
 2002-01-18  jacob berkman  <jacob@ximian.com>
 
 	* pixmaps/Makefile.am (pixmap_DATA): remove some files that aren't
