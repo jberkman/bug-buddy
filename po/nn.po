@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2002-01-15 03:00+0100\n"
+"POT-Creation-Date: 2002-01-16 00:29+0100\n"
 "PO-Revision-Date: 2002-01-15 02:48+0100\n"
 "Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: nynorsk <nn@li.org>\n"
@@ -167,6 +167,26 @@ msgstr ""
 #: src/bugzilla.c:712
 msgid "All"
 msgstr "Alle"
+
+#: src/config.c:79
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "URI som skal visast når klikka."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Vitja"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Om URIen har vore vitja før."
 
 #: src/gdb-buddy.c:76
 #, c-format
