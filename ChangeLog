@@ -1,3 +1,18 @@
+2002-02-11 John Fleck <jfleck@inkstain.net>
+
+	* added:
+	* xmldocs.make
+	* omf-install/Makefile.am
+	* docs/C/bug-buddy-C.omf
+	
+	* changed:
+	* docs/Makefile.am
+	* docs/C/Makefile.am
+	* docs/C/bug-buddy.xml
+	add new xml versions of the docs and other things needed for the
+	build infrasture - awaiting update to the docs to match GNOME2ness
+	before adding 'em into the build
+	
 2002-02-07  jacob berkman  <jacob@ximian.com>
 
 	* configure.in: add AM_PROG_LIBTOOL (Laszlo PETER

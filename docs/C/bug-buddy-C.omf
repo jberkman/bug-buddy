@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+  <resource>
+    <title>Bug Buddy Manual</title>
+
+    <creator>
+      <person>
+        <firstname>Telsa</firstname>
+        <lastname>Gwynne</lastname>
+        <email>telsa@linuxchix.org</email>
+      </person>
+    </creator>
+
+    <contributor>
+      <person>
+        <firstname>Kevin</firstname>
+        <lastname>Conder</lastname>
+        <email>kevin@kevindumpscore.com</email>
+      </person>
+    </contributor>
+
+    <subject>
+      <category>GNOME|Utilites</category>
+    </subject>
+
+    <type>manual</type>
+
+    <format dtd="DocBook" mime="text/xml"/>
+    <identifier url="bug-buddy.xml"/>
+    <language code="C"/>
+  </resource>
+</omf>

@@ -1,5 +1,8 @@
-figs =
-app = bug-buddy
+figs = 
+docname = bug-buddy
 lang = C
-include $(top_srcdir)/docs/app-docs.make
+omffile = bug-buddy-C.omf
+entities = legal.xml
+include $(top_srcdir)/xmldocs.make
 dist-hook: app-dist-hook
+
