@@ -1414,9 +1414,7 @@ If the bug is already reported, please do not report it again.</property>
 			    <widget class="GtkLabel" id="label153">
 			      <property name="visible">True</property>
 			      <property name="label" translatable="yes">Bug Buddy uses email to submit the bug reports.
-Please choose how you would like Bug Buddy to send email.
-If you choose to use the default GNOME mailer, this setting
-will be shared with some other GNOME applications.</property>
+Please choose how you would like Bug Buddy to send email.</property>
 			      <property name="use_underline">False</property>
 			      <property name="use_markup">False</property>
 			      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -1435,34 +1433,15 @@ will be shared with some other GNOME applications.</property>
 			  </child>
 
 			  <child>
-			    <widget class="GtkRadioButton" id="email-mailer-radio">
-			      <property name="can_focus">True</property>
-			      <property name="label" translatable="yes">Use the default GNOME mailer</property>
-			      <property name="use_underline">True</property>
-			      <property name="relief">GTK_RELIEF_NORMAL</property>
-			      <property name="active">False</property>
-			      <property name="inconsistent">False</property>
-			      <property name="draw_indicator">True</property>
-			      <signal name="toggled" handler="on_email_group_toggled" after="yes"/>
-			    </widget>
-			    <packing>
-			      <property name="padding">0</property>
-			      <property name="expand">False</property>
-			      <property name="fill">False</property>
-			    </packing>
-			  </child>
-
-			  <child>
 			    <widget class="GtkRadioButton" id="email-sendmail-radio">
 			      <property name="visible">True</property>
 			      <property name="can_focus">True</property>
 			      <property name="label" translatable="yes">Use sendmail directly</property>
 			      <property name="use_underline">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
-			      <property name="active">False</property>
+			      <property name="active">True</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
-			      <property name="group">email-mailer-radio</property>
 			      <signal name="toggled" handler="on_email_group_toggled" after="yes"/>
 			    </widget>
 			    <packing>
@@ -1482,7 +1461,7 @@ will be shared with some other GNOME applications.</property>
 			      <property name="active">False</property>
 			      <property name="inconsistent">False</property>
 			      <property name="draw_indicator">True</property>
-			      <property name="group">email-mailer-radio</property>
+			      <property name="group">email-sendmail-radio</property>
 			      <signal name="toggled" handler="on_email_group_toggled" after="yes"/>
 			    </widget>
 			    <packing>
@@ -1493,298 +1472,191 @@ will be shared with some other GNOME applications.</property>
 			  </child>
 
 			  <child>
-			    <widget class="GtkNotebook" id="mail-notebook">
+			    <widget class="GtkFrame" id="email-sendmail-frame">
 			      <property name="visible">True</property>
-			      <property name="can_focus">True</property>
-			      <property name="show_tabs">True</property>
-			      <property name="show_border">True</property>
-			      <property name="tab_pos">GTK_POS_BOTTOM</property>
-			      <property name="scrollable">False</property>
-			      <property name="tab_hborder">2</property>
-			      <property name="tab_vborder">2</property>
-			      <property name="enable_popup">False</property>
+			      <property name="label_xalign">0</property>
+			      <property name="label_yalign">0.5</property>
+			      <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
 
 			      <child>
-				<widget class="GtkVBox" id="vbox30">
+				<widget class="GtkTable" id="table4">
+				  <property name="border_width">4</property>
 				  <property name="visible">True</property>
+				  <property name="n_rows">3</property>
+				  <property name="n_columns">2</property>
 				  <property name="homogeneous">False</property>
-				  <property name="spacing">0</property>
+				  <property name="row_spacing">4</property>
+				  <property name="column_spacing">4</property>
 
 				  <child>
-				    <widget class="GtkFrame" id="frame21">
+				    <widget class="GtkLabel" id="email-name-label">
 				      <property name="visible">True</property>
-				      <property name="label_xalign">0</property>
-				      <property name="label_yalign">0.5</property>
-				      <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+				      <property name="label" translatable="yes">Name</property>
+				      <property name="use_underline">False</property>
+				      <property name="use_markup">False</property>
+				      <property name="justify">GTK_JUSTIFY_CENTER</property>
+				      <property name="wrap">False</property>
+				      <property name="selectable">False</property>
+				      <property name="xalign">0</property>
+				      <property name="yalign">0.5</property>
+				      <property name="xpad">0</property>
+				      <property name="ypad">0</property>
+				    </widget>
+				    <packing>
+				      <property name="left_attach">0</property>
+				      <property name="right_attach">1</property>
+				      <property name="top_attach">0</property>
+				      <property name="bottom_attach">1</property>
+				      <property name="x_options">fill</property>
+				      <property name="y_options"></property>
+				    </packing>
+				  </child>
 
-				      <child>
-					<widget class="GtkTable" id="table8">
-					  <property name="border_width">4</property>
+				  <child>
+				    <widget class="GnomeEntry" id="email-name-gnome-entry">
+				      <property name="visible">True</property>
+				      <property name="history_id">email-name-gnome-entry</property>
+				      <property name="max_saved">10</property>
+
+				      <child internal-child="entry">
+					<widget class="GtkEntry" id="email-name-entry">
 					  <property name="visible">True</property>
-					  <property name="n_rows">5</property>
-					  <property name="n_columns">3</property>
-					  <property name="homogeneous">False</property>
-					  <property name="row_spacing">4</property>
-					  <property name="column_spacing">4</property>
-
-					  <child>
-					    <widget class="GtkRadioButton" id="email-default-radio">
-					      <property name="visible">True</property>
-					      <property name="can_focus">True</property>
-					      <property name="label" translatable="yes">Select a mailer</property>
-					      <property name="use_underline">True</property>
-					      <property name="relief">GTK_RELIEF_NORMAL</property>
-					      <property name="active">False</property>
-					      <property name="inconsistent">False</property>
-					      <property name="draw_indicator">True</property>
-					      <signal name="toggled" handler="on_email_default_radio_toggled" after="yes"/>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">1</property>
-					      <property name="top_attach">0</property>
-					      <property name="bottom_attach">1</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkLabel" id="email-command-label">
-					      <property name="visible">True</property>
-					      <property name="sensitive">False</property>
-					      <property name="label" translatable="yes">Command</property>
-					      <property name="use_underline">False</property>
-					      <property name="use_markup">False</property>
-					      <property name="justify">GTK_JUSTIFY_CENTER</property>
-					      <property name="wrap">False</property>
-					      <property name="selectable">False</property>
-					      <property name="xalign">0</property>
-					      <property name="yalign">0.5</property>
-					      <property name="xpad">0</property>
-					      <property name="ypad">0</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">2</property>
-					      <property name="top_attach">2</property>
-					      <property name="bottom_attach">3</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkCombo" id="email-default-combo">
-					      <property name="visible">True</property>
-					      <property name="value_in_list">True</property>
-					      <property name="allow_empty">False</property>
-					      <property name="case_sensitive">False</property>
-					      <property name="enable_arrow_keys">True</property>
-					      <property name="enable_arrows_always">False</property>
-
-					      <child internal-child="entry">
-						<widget class="GtkEntry" id="email-default-entry">
-						  <property name="visible">True</property>
-						  <property name="can_focus">True</property>
-						  <property name="editable">True</property>
-						  <property name="visibility">True</property>
-						  <property name="max_length">0</property>
-						  <property name="text" translatable="yes"></property>
-						  <property name="has_frame">True</property>
-						  <property name="invisible_char" translatable="yes">*</property>
-						  <property name="activates_default">False</property>
-						</widget>
-					      </child>
-
-					      <child internal-child="list">
-						<widget class="GtkList" id="convertwidget15">
-						  <property name="visible">True</property>
-						  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-						  <child>
-						    <widget class="GtkListItem" id="convertwidget16">
-						      <property name="visible">True</property>
-
-						      <child>
-							<widget class="GtkLabel" id="convertwidget17">
-							  <property name="visible">True</property>
-							  <property name="label" translatable="yes"></property>
-							  <property name="use_underline">False</property>
-							  <property name="use_markup">False</property>
-							  <property name="justify">GTK_JUSTIFY_LEFT</property>
-							  <property name="wrap">False</property>
-							  <property name="selectable">False</property>
-							  <property name="xalign">0</property>
-							  <property name="yalign">0.5</property>
-							  <property name="xpad">0</property>
-							  <property name="ypad">0</property>
-							</widget>
-						      </child>
-						    </widget>
-						  </child>
-						</widget>
-					      </child>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">3</property>
-					      <property name="top_attach">0</property>
-					      <property name="bottom_attach">1</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkHSeparator" id="hseparator8">
-					      <property name="visible">True</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">3</property>
-					      <property name="top_attach">1</property>
-					      <property name="bottom_attach">2</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options">fill</property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkCheckButton" id="email-terminal-toggle">
-					      <property name="visible">True</property>
-					      <property name="sensitive">False</property>
-					      <property name="can_focus">True</property>
-					      <property name="label" translatable="yes">Start in terminal</property>
-					      <property name="use_underline">True</property>
-					      <property name="relief">GTK_RELIEF_NORMAL</property>
-					      <property name="active">False</property>
-					      <property name="inconsistent">False</property>
-					      <property name="draw_indicator">True</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">3</property>
-					      <property name="top_attach">3</property>
-					      <property name="bottom_attach">4</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkCheckButton" id="email-remote-toggle">
-					      <property name="visible">True</property>
-					      <property name="sensitive">False</property>
-					      <property name="can_focus">True</property>
-					      <property name="label" translatable="yes">Understands Netscape remote control</property>
-					      <property name="use_underline">True</property>
-					      <property name="relief">GTK_RELIEF_NORMAL</property>
-					      <property name="active">False</property>
-					      <property name="inconsistent">False</property>
-					      <property name="draw_indicator">True</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">3</property>
-					      <property name="top_attach">4</property>
-					      <property name="bottom_attach">5</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkRadioButton" id="email-custom-radio">
-					      <property name="visible">True</property>
-					      <property name="can_focus">True</property>
-					      <property name="label" translatable="yes">Custom mailer</property>
-					      <property name="use_underline">True</property>
-					      <property name="relief">GTK_RELIEF_NORMAL</property>
-					      <property name="active">False</property>
-					      <property name="inconsistent">False</property>
-					      <property name="draw_indicator">True</property>
-					      <property name="group">email-default-radio</property>
-					      <signal name="toggled" handler="on_email_default_radio_toggled" after="yes"/>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">1</property>
-					      <property name="top_attach">2</property>
-					      <property name="bottom_attach">5</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GnomeEntry" id="email-command-gnome-entry">
-					      <property name="visible">True</property>
-					      <property name="max_saved">10</property>
-
-					      <child internal-child="entry">
-						<widget class="GtkEntry" id="email-command-entry">
-						  <property name="visible">True</property>
-						  <property name="can_focus">True</property>
-						  <property name="editable">True</property>
-						  <property name="visibility">True</property>
-						  <property name="max_length">0</property>
-						  <property name="text" translatable="yes"></property>
-						  <property name="has_frame">True</property>
-						  <property name="invisible_char" translatable="yes">*</property>
-						  <property name="activates_default">False</property>
-						</widget>
-					      </child>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">2</property>
-					      <property name="right_attach">3</property>
-					      <property name="top_attach">2</property>
-					      <property name="bottom_attach">3</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
+					  <property name="can_focus">True</property>
+					  <property name="editable">True</property>
+					  <property name="visibility">True</property>
+					  <property name="max_length">0</property>
+					  <property name="text" translatable="yes"></property>
+					  <property name="has_frame">True</property>
+					  <property name="invisible_char" translatable="yes">*</property>
+					  <property name="activates_default">False</property>
 					</widget>
-				      </child>
-
-				      <child>
-					<widget class="GtkLabel" id="label175">
-					  <property name="visible">True</property>
-					  <property name="label" translatable="yes">GNOME Mailer Settings</property>
-					  <property name="use_underline">False</property>
-					  <property name="use_markup">False</property>
-					  <property name="justify">GTK_JUSTIFY_LEFT</property>
-					  <property name="wrap">False</property>
-					  <property name="selectable">False</property>
-					  <property name="xalign">0.5</property>
-					  <property name="yalign">0.5</property>
-					  <property name="xpad">0</property>
-					  <property name="ypad">0</property>
-					</widget>
-					<packing>
-					  <property name="type">label_item</property>
-					</packing>
 				      </child>
 				    </widget>
 				    <packing>
-				      <property name="padding">0</property>
-				      <property name="expand">False</property>
-				      <property name="fill">True</property>
+				      <property name="left_attach">1</property>
+				      <property name="right_attach">2</property>
+				      <property name="top_attach">0</property>
+				      <property name="bottom_attach">1</property>
+				      <property name="y_options"></property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GtkLabel" id="email-sendmail-label">
+				      <property name="visible">True</property>
+				      <property name="label" translatable="yes">Path of sendmail</property>
+				      <property name="use_underline">False</property>
+				      <property name="use_markup">False</property>
+				      <property name="justify">GTK_JUSTIFY_CENTER</property>
+				      <property name="wrap">False</property>
+				      <property name="selectable">False</property>
+				      <property name="xalign">0</property>
+				      <property name="yalign">0.5</property>
+				      <property name="xpad">0</property>
+				      <property name="ypad">0</property>
+				    </widget>
+				    <packing>
+				      <property name="left_attach">0</property>
+				      <property name="right_attach">1</property>
+				      <property name="top_attach">2</property>
+				      <property name="bottom_attach">3</property>
+				      <property name="x_options">fill</property>
+				      <property name="y_options"></property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GnomeFileEntry" id="email-sendmail-gnome-entry">
+				      <property name="visible">True</property>
+				      <property name="max_saved">10</property>
+				      <property name="directory_entry">False</property>
+				      <property name="modal">False</property>
+
+				      <child internal-child="entry">
+					<widget class="GtkEntry" id="email-sendmail-entry">
+					  <property name="visible">True</property>
+					  <property name="can_focus">True</property>
+					  <property name="editable">True</property>
+					  <property name="visibility">True</property>
+					  <property name="max_length">0</property>
+					  <property name="text" translatable="yes"></property>
+					  <property name="has_frame">True</property>
+					  <property name="invisible_char" translatable="yes">*</property>
+					  <property name="activates_default">False</property>
+					</widget>
+				      </child>
+				    </widget>
+				    <packing>
+				      <property name="left_attach">1</property>
+				      <property name="right_attach">2</property>
+				      <property name="top_attach">2</property>
+				      <property name="bottom_attach">3</property>
+				      <property name="y_options"></property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GnomeEntry" id="email-email-gnome-entry">
+				      <property name="visible">True</property>
+				      <property name="history_id">email-email-gnome-entry</property>
+				      <property name="max_saved">10</property>
+
+				      <child internal-child="entry">
+					<widget class="GtkEntry" id="email-email-entry">
+					  <property name="visible">True</property>
+					  <property name="can_focus">True</property>
+					  <property name="editable">True</property>
+					  <property name="visibility">True</property>
+					  <property name="max_length">0</property>
+					  <property name="text" translatable="yes"></property>
+					  <property name="has_frame">True</property>
+					  <property name="invisible_char" translatable="yes">*</property>
+					  <property name="activates_default">False</property>
+					</widget>
+				      </child>
+				    </widget>
+				    <packing>
+				      <property name="left_attach">1</property>
+				      <property name="right_attach">2</property>
+				      <property name="top_attach">1</property>
+				      <property name="bottom_attach">2</property>
+				      <property name="y_options"></property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GtkLabel" id="email-email-label">
+				      <property name="visible">True</property>
+				      <property name="label" translatable="yes">Email</property>
+				      <property name="use_underline">False</property>
+				      <property name="use_markup">False</property>
+				      <property name="justify">GTK_JUSTIFY_CENTER</property>
+				      <property name="wrap">False</property>
+				      <property name="selectable">False</property>
+				      <property name="xalign">0</property>
+				      <property name="yalign">0.5</property>
+				      <property name="xpad">0</property>
+				      <property name="ypad">0</property>
+				    </widget>
+				    <packing>
+				      <property name="left_attach">0</property>
+				      <property name="right_attach">1</property>
+				      <property name="top_attach">1</property>
+				      <property name="bottom_attach">2</property>
+				      <property name="x_options">fill</property>
+				      <property name="y_options"></property>
 				    </packing>
 				  </child>
 				</widget>
-				<packing>
-				  <property name="tab_expand">False</property>
-				  <property name="tab_fill">True</property>
-				</packing>
 			      </child>
 
 			      <child>
-				<widget class="GtkLabel" id="label154">
+				<widget class="GtkLabel" id="label176">
 				  <property name="visible">True</property>
-				  <property name="label" translatable="yes">gnome</property>
+				  <property name="label" translatable="yes">Sendmail Settings</property>
 				  <property name="use_underline">False</property>
 				  <property name="use_markup">False</property>
-				  <property name="justify">GTK_JUSTIFY_CENTER</property>
+				  <property name="justify">GTK_JUSTIFY_LEFT</property>
 				  <property name="wrap">False</property>
 				  <property name="selectable">False</property>
 				  <property name="xalign">0.5</property>
@@ -1793,243 +1665,7 @@ will be shared with some other GNOME applications.</property>
 				  <property name="ypad">0</property>
 				</widget>
 				<packing>
-				  <property name="type">tab</property>
-				</packing>
-			      </child>
-
-			      <child>
-				<widget class="GtkVBox" id="vbox31">
-				  <property name="visible">True</property>
-				  <property name="homogeneous">False</property>
-				  <property name="spacing">0</property>
-
-				  <child>
-				    <widget class="GtkFrame" id="frame22">
-				      <property name="visible">True</property>
-				      <property name="label_xalign">0</property>
-				      <property name="label_yalign">0.5</property>
-				      <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
-
-				      <child>
-					<widget class="GtkTable" id="table4">
-					  <property name="border_width">4</property>
-					  <property name="visible">True</property>
-					  <property name="n_rows">3</property>
-					  <property name="n_columns">2</property>
-					  <property name="homogeneous">False</property>
-					  <property name="row_spacing">4</property>
-					  <property name="column_spacing">4</property>
-
-					  <child>
-					    <widget class="GtkLabel" id="email-name-label">
-					      <property name="visible">True</property>
-					      <property name="label" translatable="yes">Name</property>
-					      <property name="use_underline">False</property>
-					      <property name="use_markup">False</property>
-					      <property name="justify">GTK_JUSTIFY_CENTER</property>
-					      <property name="wrap">False</property>
-					      <property name="selectable">False</property>
-					      <property name="xalign">0</property>
-					      <property name="yalign">0.5</property>
-					      <property name="xpad">0</property>
-					      <property name="ypad">0</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">1</property>
-					      <property name="top_attach">0</property>
-					      <property name="bottom_attach">1</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GnomeEntry" id="email-name-gnome-entry">
-					      <property name="visible">True</property>
-					      <property name="history_id">email-name-gnome-entry</property>
-					      <property name="max_saved">10</property>
-
-					      <child internal-child="entry">
-						<widget class="GtkEntry" id="email-name-entry">
-						  <property name="visible">True</property>
-						  <property name="can_focus">True</property>
-						  <property name="editable">True</property>
-						  <property name="visibility">True</property>
-						  <property name="max_length">0</property>
-						  <property name="text" translatable="yes"></property>
-						  <property name="has_frame">True</property>
-						  <property name="invisible_char" translatable="yes">*</property>
-						  <property name="activates_default">False</property>
-						</widget>
-					      </child>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">2</property>
-					      <property name="top_attach">0</property>
-					      <property name="bottom_attach">1</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkLabel" id="email-sendmail-label">
-					      <property name="visible">True</property>
-					      <property name="label" translatable="yes">Path of sendmail</property>
-					      <property name="use_underline">False</property>
-					      <property name="use_markup">False</property>
-					      <property name="justify">GTK_JUSTIFY_CENTER</property>
-					      <property name="wrap">False</property>
-					      <property name="selectable">False</property>
-					      <property name="xalign">0</property>
-					      <property name="yalign">0.5</property>
-					      <property name="xpad">0</property>
-					      <property name="ypad">0</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">1</property>
-					      <property name="top_attach">2</property>
-					      <property name="bottom_attach">3</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GnomeFileEntry" id="email-sendmail-gnome-entry">
-					      <property name="visible">True</property>
-					      <property name="max_saved">10</property>
-					      <property name="directory_entry">False</property>
-					      <property name="modal">False</property>
-
-					      <child internal-child="entry">
-						<widget class="GtkEntry" id="email-sendmail-entry">
-						  <property name="visible">True</property>
-						  <property name="can_focus">True</property>
-						  <property name="editable">True</property>
-						  <property name="visibility">True</property>
-						  <property name="max_length">0</property>
-						  <property name="text" translatable="yes"></property>
-						  <property name="has_frame">True</property>
-						  <property name="invisible_char" translatable="yes">*</property>
-						  <property name="activates_default">False</property>
-						</widget>
-					      </child>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">2</property>
-					      <property name="top_attach">2</property>
-					      <property name="bottom_attach">3</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GnomeEntry" id="email-email-gnome-entry">
-					      <property name="visible">True</property>
-					      <property name="history_id">email-email-gnome-entry</property>
-					      <property name="max_saved">10</property>
-
-					      <child internal-child="entry">
-						<widget class="GtkEntry" id="email-email-entry">
-						  <property name="visible">True</property>
-						  <property name="can_focus">True</property>
-						  <property name="editable">True</property>
-						  <property name="visibility">True</property>
-						  <property name="max_length">0</property>
-						  <property name="text" translatable="yes"></property>
-						  <property name="has_frame">True</property>
-						  <property name="invisible_char" translatable="yes">*</property>
-						  <property name="activates_default">False</property>
-						</widget>
-					      </child>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">1</property>
-					      <property name="right_attach">2</property>
-					      <property name="top_attach">1</property>
-					      <property name="bottom_attach">2</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-
-					  <child>
-					    <widget class="GtkLabel" id="email-email-label">
-					      <property name="visible">True</property>
-					      <property name="label" translatable="yes">Email</property>
-					      <property name="use_underline">False</property>
-					      <property name="use_markup">False</property>
-					      <property name="justify">GTK_JUSTIFY_CENTER</property>
-					      <property name="wrap">False</property>
-					      <property name="selectable">False</property>
-					      <property name="xalign">0</property>
-					      <property name="yalign">0.5</property>
-					      <property name="xpad">0</property>
-					      <property name="ypad">0</property>
-					    </widget>
-					    <packing>
-					      <property name="left_attach">0</property>
-					      <property name="right_attach">1</property>
-					      <property name="top_attach">1</property>
-					      <property name="bottom_attach">2</property>
-					      <property name="x_options">fill</property>
-					      <property name="y_options"></property>
-					    </packing>
-					  </child>
-					</widget>
-				      </child>
-
-				      <child>
-					<widget class="GtkLabel" id="label176">
-					  <property name="visible">True</property>
-					  <property name="label" translatable="yes">Sendmail Settings</property>
-					  <property name="use_underline">False</property>
-					  <property name="use_markup">False</property>
-					  <property name="justify">GTK_JUSTIFY_LEFT</property>
-					  <property name="wrap">False</property>
-					  <property name="selectable">False</property>
-					  <property name="xalign">0.5</property>
-					  <property name="yalign">0.5</property>
-					  <property name="xpad">0</property>
-					  <property name="ypad">0</property>
-					</widget>
-					<packing>
-					  <property name="type">label_item</property>
-					</packing>
-				      </child>
-				    </widget>
-				    <packing>
-				      <property name="padding">0</property>
-				      <property name="expand">False</property>
-				      <property name="fill">True</property>
-				    </packing>
-				  </child>
-				</widget>
-				<packing>
-				  <property name="tab_expand">False</property>
-				  <property name="tab_fill">True</property>
-				</packing>
-			      </child>
-
-			      <child>
-				<widget class="GtkLabel" id="label155">
-				  <property name="visible">True</property>
-				  <property name="label" translatable="yes">sendmail</property>
-				  <property name="use_underline">False</property>
-				  <property name="use_markup">False</property>
-				  <property name="justify">GTK_JUSTIFY_CENTER</property>
-				  <property name="wrap">False</property>
-				  <property name="selectable">False</property>
-				  <property name="xalign">0.5</property>
-				  <property name="yalign">0.5</property>
-				  <property name="xpad">0</property>
-				  <property name="ypad">0</property>
-				</widget>
-				<packing>
-				  <property name="type">tab</property>
+				  <property name="type">label_item</property>
 				</packing>
 			      </child>
 			    </widget>

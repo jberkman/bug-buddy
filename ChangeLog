@@ -1,3 +1,18 @@
+2002-08-13  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: bump to 2.2.99
+
+	* src/united-states-of-bug-buddy.c: use new saving code
+
+	* src/save-buddy.c (bb_write_buffer_to_fd): use an io channel to
+	write to a file, and pop up a dialog if it takes more than 1.1
+	seconds which allows the user to cancel the action
+
+	* src/*.[ch]: nuke some #if 0'd code and fix some compile warnings
+	
+	* src/Makefile.am:
+	* src/signal-buddy.[ch]: steal unix signal/glib mainloop code from gdm
+
 2002-08-12  jacob berkman  <jacob@ximian.com>
 
 	* NEWS (2.2.1): updates, but need to fix the other part of 84914

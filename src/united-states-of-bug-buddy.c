@@ -23,12 +23,17 @@
 #include "bug-buddy.h"
 
 #include "libglade-buddy.h"
+#include "save-buddy.h"
 
 #include <gnome.h>
 #include <string.h>
 
 #include <libgnomevfs/gnome-vfs-mime-utils.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
+
+#include <sys/types.h>
+#include <sysexits.h>
+#include <sys/wait.h>
 
 #if 0
 static char *help_pages[] = {
@@ -105,11 +110,14 @@ on_druid_about_clicked (GtkWidget *button, gpointer data)
 			  &about);
 
 #if 0
-	href = gnome_href_new ("http://bug-buddy.org/",
-			       _("The lame Bug Buddy web page"));
-	gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (about)->vbox),
-			    href, FALSE, FALSE, 0);
-	gtk_widget_show (href);
+	{
+		GtkWidget *href;
+		href = gnome_href_new ("http://bug-buddy.org/",
+				       _("The lame Bug Buddy web page"));
+		gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (about)->vbox),
+				    href, FALSE, FALSE, 0);
+		gtk_widget_show (href);
+	}
 #endif
 	gtk_window_set_transient_for (GTK_WINDOW (about),
 				      GTK_WINDOW (GET_WIDGET ("druid-window")));
@@ -153,25 +161,8 @@ druid_set_state (BuddyState state)
 	case STATE_GDB:
 		break;
 	case STATE_PRODUCT:
-#if 0
-		if (!druid_data.package_name)
-			determine_our_package ();
-		buddy_set_text ("bts-package-entry".
-				druid_data.package_name);
-#endif
-#if 0
-		load_bugzilla_xml ();
-#endif
-#if 0
-		if (!druid_data.product)
-			druid_set_sensitive (TRUE, FALSE,  TRUE);
-#endif
 		break;
 	case STATE_COMPONENT:
-#if 0
-		if (!druid_data.component)
-			druid_set_sensitive (TRUE, FALSE,  TRUE);
-#endif
 		break;
 	case STATE_MOSTFREQ:
 		/* nothing to do */
@@ -179,14 +170,6 @@ druid_set_state (BuddyState state)
 	case STATE_DESC:
 		/* nothing to do */
 		break;
-#if 0
-	case STATE_SYSTEM:
-		/* start the process of version checking if we haven't
-		 * run anything or the list of thingies has changed */
-		do_dependency_stuff ();
-		druid_set_state (state - 1);
-		break;
-#endif
 	case STATE_EMAIL_CONFIG:
 		/* FIXME: change next icon */
 		on_email_group_toggled (NULL, NULL);
@@ -485,9 +468,12 @@ desc_page_ok (void)
 static gboolean
 submit_ok (void)
 {
-	gchar *to, *s, *file=NULL, *command;
-	GtkWidget *w;
-	FILE *fp;
+	char *to=NULL, *s, *file=NULL;
+	char *name, *from;
+	GtkWidget *w = NULL;
+	GString *buf=NULL;
+	gboolean retval = FALSE;
+	GError *error = NULL;
 
 	enum {
 		RESPONSE_SUBMIT,
@@ -505,96 +491,92 @@ submit_ok (void)
 					_("_Submit"), RESPONSE_SUBMIT,
 					NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (w),
-						 GTK_RESPONSE_YES);
-		if (RESPONSE_SUBMIT != gtk_dialog_run (GTK_DIALOG (w))) {
-			gtk_widget_destroy (w);
-			return FALSE;
-		}
+						 RESPONSE_SUBMIT);
+		if (RESPONSE_SUBMIT != gtk_dialog_run (GTK_DIALOG (w)))
+			goto submit_ok_out;
+
 		gtk_widget_destroy (w);
+		w = NULL;
 	}
 
+	buf = g_string_new (NULL);
+
+	name = buddy_get_text ("email-name-entry");
+	from = buddy_get_text ("email-email-entry");
+
+	g_string_append_printf (buf, "From: %s <%s>\n", name, from);
+
+	g_free (from);
+	g_free (name);
+
 	to = buddy_get_text ("email-to-entry");
+	g_string_append_printf (buf, "To: %s\n", to);
+	
+	s = buddy_get_text ("email-cc-entry");
+	if (*s) g_string_append_printf (buf, "Cc: %s\n", s);
+	g_free (s);
+
+	g_string_append_printf (buf, "X-Mailer: %s %s\n", PACKAGE, VERSION);
+
+	s = buddy_get_text ("email-text");
+	g_string_append (buf, s);
+	g_free (s);
 
 	if (druid_data.submit_type == SUBMIT_FILE) {
 		file = buddy_get_text ("email-file-entry");
-		fp = fopen (file, "w");
-		if (!fp) {
+		if (!bb_write_buffer_to_file (GTK_WINDOW (GET_WIDGET ("druid-window")), file, buf->str, buf->len, &error)) {
+			if (error) {
+				w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+							    0,
+							    GTK_MESSAGE_ERROR,
+							    GTK_BUTTONS_OK,
+							    _("The bug report was not saved in %s:\n\n"
+							      "%s\n\n"
+							      "Please try again, maybe with a different file name."),
+							    file, error->message);
+				gtk_dialog_run (GTK_DIALOG (w));
+			}
+			goto submit_ok_out;
+		}
+
+		s = g_strdup_printf (_("Your bug report was saved in %s"), file);
+		g_free (file);
+	} else {
+		char *argv[] = { "", "-i", "-t", NULL };
+		int fd;
+		int pid, exit_status;
+
+		argv[0] = buddy_get_text ("email-sendmail-entry");
+
+		if (!bb_write_buffer_to_command (GTK_WINDOW (GET_WIDGET ("druid-window")), argv, buf->str, buf->len, &error)) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
 						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
-						    _("Unable to open file '%s':\n%s"), 
-						    file, g_strerror (errno));
-			g_free (file);
-			g_free (to);
-			gtk_dialog_set_default_response (GTK_DIALOG (w),
-							 GTK_RESPONSE_OK);
+						    _("There was an error submitting the bug report:\n\n"
+						      "%s"),
+						    error->message);
 			gtk_dialog_run (GTK_DIALOG (w));
-			gtk_widget_destroy (w);
-			return FALSE;
+			goto submit_ok_out;
 		}
-	} else {
-		s = buddy_get_text ("email-sendmail-entry");
-		command = g_strdup_printf ("%s -i -t", s);
 
-		d(g_message (_("about to run '%s'"), command));
-		fp =  popen (command, "w");
-		g_free (command);
-		if (!fp) {
-			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    0,
-						    GTK_MESSAGE_ERROR,
-						    GTK_BUTTONS_OK,
-						    _("Unable to start mail program '%s':\n%s"), 
-						    s, g_strerror (errno));
-			gtk_dialog_set_default_response (GTK_DIALOG (w),
-							 GTK_RESPONSE_OK);
-			gtk_dialog_run (GTK_DIALOG (w));
-			gtk_widget_destroy (w);
-			g_free (s);
-			g_free (to);
-			return FALSE;
-		}
-		g_free (s);
-	}
-
-	{
-		char *name, *from;
-		
-		name = buddy_get_text ("email-name-entry");
-		from = buddy_get_text ("email-email-entry");
-
-		fprintf (fp, "From: %s <%s>\n", name, from);
-		g_free (from);
-		g_free (name);
-	}
-
-	fprintf (fp, "To: %s\n", to);
-	
-	s = buddy_get_text ("email-cc-entry");
-	if (*s) fprintf (fp, "Cc: %s\n", s);
-	g_free (s);
-
-	fprintf (fp, "X-Mailer: %s %s\n", PACKAGE, VERSION);
-
-	s = buddy_get_text ("email-text");
-	fprintf (fp, "%s", s);
-	g_free (s);
-
-	if (druid_data.submit_type == SUBMIT_FILE) {
-		fclose (fp);
-		s = g_strdup_printf (_("Your bug report was saved in '%s'"), file);
-	} else {
-		pclose (fp);
 		s = g_strdup_printf (_("Your bug report has been submitted to:\n\n        <%s>\n\nThanks!"), to);
 	}
-	g_free (to);
 
 	buddy_set_text ("finished-label", s);
-	g_free (file);
 	g_free (s);
+	retval = TRUE;
 
-	return TRUE;
+ submit_ok_out:
+	g_free (to);
+	if (w)
+		gtk_widget_destroy (w);
+	if (buf)
+		g_string_free (buf, TRUE);
+	if (error) 
+		g_error_free (error);
+
+	return retval;
 }
 
 static gpointer
@@ -725,66 +707,6 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 	case STATE_EMAIL_CONFIG:
 		if (!mail_config_page_ok ())
 			return;
-
-		if (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-mailer-radio"))->active) {
-			MailerItem *mailer;
-			char *orig_body, *uri_body, *to, *orig_subject, *uri_subject;
-			int argc;
-			char **argv;
-
-			if (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-custom-radio"))->active) {
-				mailer = &druid_data.custom_mailer;
-			} else {
-				char *s;
-				s = buddy_get_text ("email-default-entry");
-				mailer = g_hash_table_lookup (druid_data.mailer_hash, s);
-				g_free (s);
-			}
-
-			/* FIXME: validate mailer */
-
-			g_shell_parse_argv (mailer->command, &argc, &argv, NULL);
-			argv = g_realloc (argv, ++argc);
-
-			/* escape from la */
-			orig_body  = generate_email_text (FALSE);
-			uri_body   = gnome_vfs_escape_string (orig_body);
-
-			orig_subject = buddy_get_text ("desc-subject");
-			uri_subject  = gnome_vfs_escape_string (orig_subject);
-
-			if (druid_data.product)
-				to = gnome_vfs_escape_string (druid_data.product->bts->email);
-			else
-				to = g_strdup ("");
-
-			argv[argc-1] = g_strdup_printf ("mailto:%s?subject=%s&body=%s", to, uri_subject, uri_body);
-			argv[argc]   = NULL;
-
-			{
-				char **s;
-				for (s = argv; *s; s++)
-					g_print ("%s\n", *s);
-			}
-
-			/* FIXME: check for errors */
-			g_spawn_async (NULL, argv, NULL,
-				       G_SPAWN_SEARCH_PATH,
-				       NULL, NULL, NULL, NULL);
-
-			g_strfreev (argv);
-			g_free (orig_body);
-			g_free (uri_body);
-			g_free (orig_subject);
-			g_free (uri_subject);
-			g_free (to);
-
-			newstate = STATE_FINISHED;
-
-			buddy_set_text ("finished-label", 
-					_("Your email program has been launched.  Please look it over and send it.\n\n"
-					  "Thank you for submitting this bug report."));
-		}
 		break;
 	case STATE_EMAIL:
 		/* validate included file.

@@ -43,7 +43,7 @@
 #include <libxml/xmlmemory.h>
 
 /* define to x for some debugging output */
-#define d(x) x
+#define d(x)
 
 static int
 prod_cmp (BugzillaProduct *a, BugzillaProduct *b)
@@ -237,15 +237,6 @@ static void
 print_item (gpointer data, gpointer user_data)
 {
 	g_print ("\t%s\n", (char *)data);
-}
-#endif
-
-#if 0
-static void
-goto_product_page (void)
-{
-	druid_set_sensitive (TRUE, TRUE, TRUE);
-	druid_set_state (STATE_PRODUCT);
 }
 #endif
 
@@ -823,8 +814,7 @@ load_bugzillas (void)
 					      "where to submit bugs.\n\n"
 					      "Please make sure Bug Buddy was "
 					      "installed correctly.\n\n"
-					      "Bug Buddy will now quit."),
-					    BUDDY_DATADIR "/bugzilla/");
+					      "Bug Buddy will now quit."));
 		gtk_dialog_set_default_response (GTK_DIALOG (w),
 						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));

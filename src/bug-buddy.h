@@ -58,13 +58,6 @@ typedef enum {
 } BuddyState;
 
 typedef struct {
-	const char *name;
-	const char *command;
-	gboolean    start_in_terminal;
-	gboolean    use_moz_remote;
-} MailerItem;
-
-typedef struct {
 	/* contact page */
 	gchar *name;
 	gchar *email;
@@ -104,9 +97,6 @@ typedef struct {
 
 	gboolean already_run;
 
-#if 0
-	Distribution      *distro;
-#endif
 	char              *bts_file;
 
 	CrashType  crash_type;
@@ -126,11 +116,6 @@ typedef struct {
 
 	/* Debian BTS stuff */
 	SubmitType    submit_type;
-#if 0
-	BugType       bug_type; 
-	SeverityType  severity;
-	BugClassType  bug_class;
-#endif
 	GSList       *packages;
 
 	GSList       *bugs;
@@ -152,10 +137,6 @@ typedef struct {
 	gboolean           showing_hand;
 
 	const char *gnome_version;
-
-	GHashTable *mailer_hash;
-	MailerItem *mailer;
-	MailerItem  custom_mailer;
 
 	guint dl_timeout;
 } DruidData;

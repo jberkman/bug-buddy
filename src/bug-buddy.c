@@ -108,9 +108,6 @@ buddy_set_text_widget (GtkWidget *w, const char *s)
 
 	if (!s) s = "";
 
-#if 0
-	g_object_set (G_OBJECT (w), "text", s, NULL);
-#else
 	if (GTK_IS_ENTRY (w)) {
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 	} else if (GTK_IS_TEXT_VIEW (w)) {
@@ -120,7 +117,6 @@ buddy_set_text_widget (GtkWidget *w, const char *s)
 	} else if (GTK_IS_LABEL (w)) {
 		gtk_label_set_text (GTK_LABEL (w), s);
 	}
-#endif
 }
 
 char *
@@ -130,9 +126,7 @@ buddy_get_text_widget (GtkWidget *w)
 	g_return_val_if_fail (GTK_IS_ENTRY (w) || 
 			      GTK_IS_TEXT_VIEW (w) ||
 			      GTK_IS_LABEL (w), NULL);
-#if 0
-	g_object_get (G_OBJECT (w), "text", &s, NULL);
-#else
+
 	if (GTK_IS_ENTRY (w)) {
 		s = g_strdup (gtk_entry_get_text (GTK_ENTRY (w)));
 	} else if (GTK_IS_TEXT_VIEW (w)) {
@@ -145,7 +139,6 @@ buddy_get_text_widget (GtkWidget *w)
 	} else if (GTK_IS_LABEL (w)) {
 		s = g_strdup (gtk_label_get_text (GTK_LABEL (w)));
 	}
-#endif
 	return s;
 }
 
@@ -257,20 +250,22 @@ on_gdb_save_clicked (GtkWidget *w, gpointer data)
 
 		file = gtk_file_selection_get_filename (GTK_FILE_SELECTION (filesel));
 		text = buddy_get_text ("gdb-text");
-		if (!bb_save_file (GTK_WINDOW (filesel), file, text, &gerr)) {
-			GtkWidget *d;
-
-			d = gtk_message_dialog_new (GTK_WINDOW (filesel),
-						    0,
-						    GTK_MESSAGE_ERROR,
-						    GTK_BUTTONS_OK,
-						    _("The stack trace was not saved in %s:\n\n"
-						      "%s\n\n"
-						      "Please choose another file and try again."),
-						    file, gerr->message);
-			gtk_dialog_run (GTK_DIALOG (d));
-			gtk_widget_destroy (d);
-			g_error_free (gerr);
+		if (!bb_write_buffer_to_file (GTK_WINDOW (filesel), file, text, -1, &gerr)) {
+			if (gerr) {
+				GtkWidget *d;
+				
+				d = gtk_message_dialog_new (GTK_WINDOW (filesel),
+							    0,
+							    GTK_MESSAGE_ERROR,
+							    GTK_BUTTONS_OK,
+							    _("The stack trace was not saved in %s:\n\n"
+							      "%s\n\n"
+							      "Please try again, maybe with a different file name."),
+							    file, gerr->message);
+				gtk_dialog_run (GTK_DIALOG (d));
+				gtk_widget_destroy (d);
+				g_error_free (gerr);
+			}
 			g_free (text);
 			goto run_save_dialog;
 		}
@@ -328,30 +323,20 @@ stock_pixmap_buddy (gchar *w, char *n, char *a, int b, int c)
 void
 on_email_group_toggled (GtkWidget *w, gpointer data)
 {
-	const char *widgets[] = { "email-mailer-radio", "email-sendmail-radio", "email-file-radio" };
 	const char *label = GTK_STOCK_GO_FORWARD;
+	gboolean using_sendmail;
 
-	/* this utilizes the pigeon hole principle */
-	for (druid_data.submit_type = SUBMIT_GNOME_MAILER;
-	     druid_data.submit_type < SUBMIT_FILE;
-	     druid_data.submit_type++)
-		if (GTK_TOGGLE_BUTTON (GET_WIDGET (widgets[druid_data.submit_type]))->active)
-			break;
+	using_sendmail = GTK_TOGGLE_BUTTON (GET_WIDGET ("email-sendmail-radio"))->active;
 
+	gtk_widget_set_sensitive (GET_WIDGET ("email-sendmail-frame"), using_sendmail);
+	druid_data.submit_type = using_sendmail ? SUBMIT_SENDMAIL : SUBMIT_FILE;
 
 	if (druid_data.submit_type == SUBMIT_FILE) {
-		gtk_widget_hide (GET_WIDGET ("mail-notebook"));
 		gtk_widget_hide (GET_WIDGET ("email-to-table"));
 		gtk_widget_show (GET_WIDGET ("email-save-in-box"));
 	} else {
-		GtkWidget *nb = GET_WIDGET ("mail-notebook");
-
-		gtk_widget_show (nb);
 		gtk_widget_show (GET_WIDGET ("email-to-table"));
 		gtk_widget_hide (GET_WIDGET ("email-save-in-box"));
-
-		gtk_notebook_set_current_page (GTK_NOTEBOOK (nb),
-					       druid_data.submit_type);
 	}
 
 	switch (druid_data.state) {
@@ -470,13 +455,6 @@ on_email_default_radio_toggled (GtkWidget *w, gpointer data)
 }
 
 static void
-build_custom_mailers (gpointer key, gpointer value, gpointer data)
-{
-	GList **list = data;
-	*list = g_list_append (*list, key);
-}
-
-static void
 fixup_notebook (const char *name)
 {
 	GtkNotebook *nb = GTK_NOTEBOOK (GET_WIDGET (name));
@@ -493,7 +471,7 @@ init_ui (void)
 	char *s;
 	const char **sp;
 	int i;
-	const char *nbs[] = { "druid-notebook", "gdb-notebook", "mail-notebook", NULL };
+	const char *nbs[] = { "druid-notebook", "gdb-notebook", NULL };
 	
 	glade_xml_signal_autoconnect (druid_data.xml);
 
@@ -577,20 +555,6 @@ init_ui (void)
 
 	gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid-window")));
 
-#if 0
-	g_object_set (G_OBJECT (GET_WIDGET ("druid-about")),
-		      "label", GNOME_STOCK_ABOUT,
-		      "use_stock", TRUE,
-		      "use_underline", TRUE,
-		      NULL);
-
-	g_object_set (G_OBJECT (GET_WIDGET ("gdb-stop")),
-		      "label", GTK_STOCK_STOP,
-		      "use_stock", TRUE,
-		      "use_underline", TRUE,
-		      NULL);
-#endif
-
 	{
 		GtkButtonBox *bbox;
 		
@@ -603,16 +567,6 @@ init_ui (void)
 		
 	gtk_misc_set_alignment (GTK_MISC (GET_WIDGET ("druid-logo")),
 				1.0, 0.5);
-
-	buddy_set_text ("email-default-entry", _(druid_data.mailer->name));
-
-	{
-		GList *mailers = NULL;
-		g_hash_table_foreach (druid_data.mailer_hash, build_custom_mailers, &mailers);
-		gtk_combo_set_popdown_strings (GTK_COMBO (GET_WIDGET ("email-default-combo")),
-					       mailers);
-		g_list_free (mailers);
-	}
 
 	w = GET_WIDGET ("druid-next");
 	gtk_widget_set_direction (GTK_BIN (GTK_BIN (w)->child)->child,

@@ -6,6 +6,10 @@
 #define BB_SAVE_ERROR (bb_save_error_quark ())
 GQuark bb_save_error_quark (void);
 
-gboolean bb_save_file (GtkWindow *parent, const char *filename, const char *utf8data, GError **err);
+#if 0
+gboolean bb_write_buffer_to_fd      (GtkWindow *parent, int fd, int pid, const char *buffer, gssize buflen, GError **error);
+#endif
+gboolean bb_write_buffer_to_file    (GtkWindow *parent, const char *filename, const char *buffer, gssize buflen, GError **error);
+gboolean bb_write_buffer_to_command (GtkWindow *parent, char **argv, const char *buffer, gssize buflen, GError **error);
 
 #endif /* SAVE_BUDDY_H */
