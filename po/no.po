@@ -1,12 +1,12 @@
 # Norwegian translation of bug-buddy (bokmål dialect).
-# Copyright (C) 1999,2000 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1999,2000.
+# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# Kjartan Maraas <kmaraas@gnome.org>, 1999-2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-03-28 11:37-0500\n"
-"PO-Revision-Date: 2001-03-27 22:02-05:00\n"
+"Project-Id-Version: bug-buddy 2.0.1\n"
+"POT-Creation-Date: 2001-05-22 10:35+0200\n"
+"PO-Revision-Date: 2001-05-22 10:36+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -569,7 +569,7 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:481
 msgid "You must specify a product for your bug report."
-msgstr "Du må spesifisére et produkt i din feilrapport."
+msgstr "Du må spesifisere et produkt i din feilrapport."
 
 #: src/united-states-of-bug-buddy.c:490
 msgid "You must specify a component for your bug report."
