@@ -5,9 +5,9 @@
 # Traducció per Softcatalà <info@softcatala.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2000-06-27 15:55+0200\n"
-"PO-Revision-Date: 2000-06-25 14:00+0200\n"
+"Project-Id-Version: bug-buddy 0.10\n"
+"POT-Creation-Date: 2000-06-30 13:34+0200\n"
+"PO-Revision-Date: 2000-06-29 14:00+0200\n"
 "Last-Translator: Quico Llach <quico@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,6 +147,10 @@ msgid ""
 "\n"
 "Do you want to continue anyway?"
 msgstr ""
+"És molt més útil si especifiqueu\n"
+"un paquet més específic que no pas 'general'.\n"
+"\n"
+"Voleu continuar igualment?"
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
@@ -232,12 +236,15 @@ msgid "Your bug report was saved in '%s'"
 msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
 #: src/bug-buddy.c:694
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
-msgstr "S'ha enviat el vostre informe d'errors a <%s>"
+msgstr ""
+"S'ha enviat el vostre informe d'errors a:\n"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
@@ -262,19 +269,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "Quant a"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Atura"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Refresca"
 
 #: src/bug-buddy.c:949
 #, c-format
@@ -457,6 +464,7 @@ msgstr "Descripció"
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
 msgstr ""
+"Si us plau, si és possible, redacteu el vostre informe d'errors en anglès."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
