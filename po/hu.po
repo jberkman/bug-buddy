@@ -1,12 +1,12 @@
 # bug-buddy hu.po.
 # Copyright (C) 2000 Free Software Foundation, Inc.
-# Gegely Nagy <greg@gnome.hu>, 2000.
+# Gergely Nagy <greg@gnome.hu>, 2000.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-05-27 17:33+0100\n"
+"POT-Creation-Date: 2000-11-12 02:32+0100\n"
+"PO-Revision-Date: 2000-12-20 14:33+0100\n"
 "Last-Translator: Gergely Nagy <greg@gnome.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/bts.c:100
 msgid "Distribution"
-msgstr "Disztibúció"
+msgstr "Disztribúció"
 
 #: src/bts.c:108
 msgid "System"
@@ -87,9 +87,8 @@ msgstr "További információ hozzáfûzése egy létezõ hibajelentéshez"
 
 #: src/bug-buddy.c:121
 msgid "Name of contact"
-msgstr "Kapcsolat beve"
+msgstr "Kapcsolat neve"
 
-# fuzzy
 #: src/bug-buddy.c:121
 msgid "NAME"
 msgstr "NÉV"
@@ -98,7 +97,6 @@ msgstr "NÉV"
 msgid "Email address of contact"
 msgstr "Kapcsolat e-mail címe"
 
-# fuzzy
 #: src/bug-buddy.c:122
 msgid "EMAIL"
 msgstr "E-MAIL"
@@ -123,7 +121,7 @@ msgstr "VERZIÓ"
 msgid "File name of crashed program"
 msgstr "A hibás program neve"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
+#: src/bug-buddy.c:125 src/bug-buddy.c:127
 msgid "FILE"
 msgstr "FÁJL"
 
@@ -133,39 +131,39 @@ msgstr "A hibás program PID-je"
 
 #: src/bug-buddy.c:126
 msgid "PID"
-msgstr ""
+msgstr "PID"
 
 #: src/bug-buddy.c:127
 msgid "Core file from program"
 msgstr "A program core fájlja"
 
-#: src/bug-buddy.c:128
-msgid "Text file to include in the report"
-msgstr ""
-
-#: src/bug-buddy.c:332
+#: src/bug-buddy.c:328
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
 "Please specify a package."
 msgstr ""
+"Megkönnyíted a dolgunk, ha megadsz egy\n"
+"csomagnevet 'general' helyett.\n"
+"\n"
+"Adj meg egy csomagnevet."
 
-#: src/bug-buddy.c:374
+#: src/bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "A megadott file nem létezik."
 
-#: src/bug-buddy.c:379
+#: src/bug-buddy.c:375
 #, c-format
 msgid "File is of type: %s"
 msgstr "A fájl típusa: %s"
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:378
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' nem tûnik szöveges fájlnak."
 
-#: src/bug-buddy.c:396
+#: src/bug-buddy.c:392
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -173,7 +171,7 @@ msgstr ""
 "A hibajelentéshez meg kell adni a levél\n"
 "tárgyát és a leírást."
 
-#: src/bug-buddy.c:439
+#: src/bug-buddy.c:435
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -181,30 +179,27 @@ msgstr ""
 "gdb még nem fejezte be a degug információ gyûjtését.\n"
 "Megszakítsam a gdb processzt (a stack trace nem lesz teljes)?"
 
-#: src/bug-buddy.c:447 src/gdb-buddy.c:83
+#: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
 msgstr "gdb már kilépett"
 
-#: src/bug-buddy.c:490
-#, fuzzy
+#: src/bug-buddy.c:486
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "A GNOME grafikus hibabejelentõ eszköz"
+msgstr "A GNOME grafikus hibabejelentõ eszköze"
 
-#: src/bug-buddy.c:500
+#: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "A vagesz bug-buddy honlap"
 
-#: src/bug-buddy.c:607
-#, fuzzy
+#: src/bug-buddy.c:603
 msgid "Please enter your name."
-msgstr "Írd be neved, és e-mail címed"
+msgstr "Add meg a neved"
 
-#: src/bug-buddy.c:613
-#, fuzzy
+#: src/bug-buddy.c:609
 msgid "Please enter a valid email address."
-msgstr "Írd be neved, és e-mail címed"
+msgstr "Írd be az e-mail címed"
 
-#: src/bug-buddy.c:624
+#: src/bug-buddy.c:620
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -212,77 +207,78 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s' nem létezik. Nem lehet a hibajelentést elküldeni,\n"
+"'s' nem létezik. Nem lehet a hibajelentést elküldeni,\n"
 "fájlba viszont még kimenthetõ.\n"
 "\n"
 "Megadsz új elérési útvonalat a sendmail-hez?"
 
-#: src/bug-buddy.c:675
+#: src/bug-buddy.c:671
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nem lehet '%s'-t megyitni"
 
-#: src/bug-buddy.c:689
+#: src/bug-buddy.c:685
 #, c-format
 msgid "about to run '%s'"
 msgstr "most fog '%s' lefutni"
 
-#: src/bug-buddy.c:693
+#: src/bug-buddy.c:689
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nem lehet a '%s' levelezõprogramot elindítani"
 
-#: src/bug-buddy.c:722
+#: src/bug-buddy.c:718
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "A hibabejelentés ide lett mentve: '%s'"
 
-#: src/bug-buddy.c:725
-#, fuzzy, c-format
+#: src/bug-buddy.c:721
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
 msgstr ""
 "A hibabejelentés ide lett elküldve:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 
-#: src/bug-buddy.c:855
+#: src/bug-buddy.c:851
 msgid "You must specify a recipient email address"
 msgstr "Meg kell adni a címzett e-mail címét"
 
-#: src/bug-buddy.c:861
+#: src/bug-buddy.c:857
 msgid "Submit this bug report now?"
 msgstr "Most küldjem el a hibajelentést?"
 
-#: src/bug-buddy.c:871
+#: src/bug-buddy.c:867
 msgid "Please choose a file to save to."
 msgstr "Kérlek adj meg egy fájlnevet a mentéshez."
 
-#: src/bug-buddy.c:878
+#: src/bug-buddy.c:874
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr "'%s' már létezik. Felülírjam?"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:926
 msgid "About"
-msgstr ""
+msgstr "Névjegy"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:926
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:926
 msgid "Stop"
-msgstr ""
+msgstr "Állj"
 
-#: src/bug-buddy.c:930
+#: src/bug-buddy.c:926
 msgid "Refresh"
-msgstr ""
+msgstr "Frissítés"
 
-#: src/bug-buddy.c:971
+#: src/bug-buddy.c:967
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -291,7 +287,7 @@ msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
-#: src/bug-buddy.c:1076
+#: src/bug-buddy.c:1072
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -299,7 +295,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME már elavult\n"
 "Kérlek használd helyette a --appname parancssori argumentumot."
 
-#: src/bug-buddy.c:1089
+#: src/bug-buddy.c:1085
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -307,7 +303,7 @@ msgstr ""
 "$GNOME_CRASHED_PID már elavult\n"
 "Kérlek használd helyette a --pid parancssori argumentumot."
 
-#: src/bug-buddy.c:1221
+#: src/bug-buddy.c:1217
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -362,7 +358,7 @@ msgstr "Hiba történt fork()-olásnál."
 #.
 #: src/glade-strings.c:7
 msgid "bug-buddy"
-msgstr ""
+msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
@@ -385,7 +381,6 @@ msgstr ""
 msgid "Contact Information"
 msgstr "Kapcsolat információ"
 
-# fuzzy
 #: src/glade-strings.c:15
 msgid "Choose which sendmail to use"
 msgstr "Melyik sendmailt használjam?"
@@ -525,7 +520,7 @@ msgstr "Installált verzió"
 
 #: src/glade-strings.c:54
 msgid "%P %%"
-msgstr ""
+msgstr "%P %%"
 
 #: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
