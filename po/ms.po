@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug-buddy gnome2\n"
-"POT-Creation-Date: 2002-03-18 12:11-0500\n"
+"POT-Creation-Date: 2002-04-06 00:55+0800\n"
 "PO-Revision-Date: 2002-01-20 03:01+0800\n"
 "Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.net>\n"
@@ -128,15 +128,15 @@ msgstr "_Pilih pengemel"
 msgid "_Send Report"
 msgstr "_Kirim Laporan"
 
-#: src/bug-buddy.c:377
+#: src/bug-buddy.c:379
 msgid "Hide Debugging Options"
 msgstr "sembunyi Opsyen Nyahpepijatan"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:380
 msgid "Show Debugging Options"
 msgstr "Maklumat nyahpepijatan"
 
-#: src/bug-buddy.c:442
+#: src/bug-buddy.c:444
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -144,7 +144,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME tidak boleh diterima.\n"
 "Sila guna arahan hujahbaris --appname."
 
-#: src/bug-buddy.c:452
+#: src/bug-buddy.c:454
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -152,7 +152,7 @@ msgstr ""
 "$GNOME_CRASHED_PID tidak boleh diterima.\n"
 "Sila guna arahan hujahbaris --pid."
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
@@ -160,7 +160,7 @@ msgstr ""
 "Selamat datang ke Bug Buddy, Radas melapor pepijat untuk GNOME.\n"
 "Ia akan memimpin anda bagi memproses penghantaran laporan pepijat."
 
-#: src/bug-buddy.c:471
+#: src/bug-buddy.c:473
 msgid ""
 "\n"
 "\n"
@@ -170,7 +170,7 @@ msgstr ""
 "\n"
 "Anda melihat ini kerana aplikasi lain telah jahanam."
 
-#: src/bug-buddy.c:474
+#: src/bug-buddy.c:476
 msgid ""
 "\n"
 "\n"
@@ -183,12 +183,12 @@ msgstr ""
 "nyahpepijatdaripada aplikasi. Ini membenarkan Bug Buddy membekalkan laporan "
 "pepijat yang lebih berguna."
 
-#: src/bug-buddy.c:613
+#: src/bug-buddy.c:617
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Tidak menjumpai pixmap:%s (%d)\n"
 
-#: src/bug-buddy.c:680
+#: src/bug-buddy.c:684
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -201,15 +201,15 @@ msgstr ""
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:44 src/bugzilla.c:625 src/bugzilla.c:660
+#: src/bugzilla.c:625 src/bugzilla.c:660
 msgid "Product"
 msgstr "Produk"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:631 src/bugzilla.c:700
+#: src/bugzilla.c:631 src/bugzilla.c:700
 msgid "Component"
 msgstr "Komponen"
 
-#: src/bug-buddy.glade.h:22 src/bugzilla.c:637 src/bugzilla.c:678
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:637 src/bugzilla.c:678
 #: src/bugzilla.c:706
 msgid "Description"
 msgstr "Huraian"
@@ -294,32 +294,31 @@ msgstr ""
 msgid "There was an error running gdb."
 msgstr "Terdapat ralat melaksanakan gdb."
 
+#: src/bug-buddy.glade.h:1
+msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+
 #: src/bug-buddy.glade.h:2
-#, no-c-format
-msgid "%P %%"
-msgstr "%P %%"
+msgid "*"
+msgstr "*"
 
 #: src/bug-buddy.glade.h:3
-msgid "About"
-msgstr "Perihal"
-
-#: src/bug-buddy.glade.h:4
 msgid "Advanced"
 msgstr "Lanjutan"
 
-#: src/bug-buddy.glade.h:5
+#: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
 msgstr "Fenomena Assbarn"
 
-#: src/bug-buddy.glade.h:6
-msgid "Binary file"
-msgstr "Fail Binari"
+#: src/bug-buddy.glade.h:5
+msgid "Binary file:"
+msgstr "Fail binari:"
 
-#: src/bug-buddy.glade.h:7 src/united-states-of-bug-buddy.c:99
+#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:99
 msgid "Bug Buddy"
 msgstr "Bug Buddy"
 
-#: src/bug-buddy.glade.h:8
+#: src/bug-buddy.glade.h:7
 msgid ""
 "Bug Buddy can send debugging information with your bug report.\n"
 "The correct options should have been selected for you automatically.\n"
@@ -329,7 +328,7 @@ msgstr ""
 "Opsyen yang betul patut dipilih untuk anda secara automatik.\n"
 "Untuk maklumat lanjut, Sila klik butang bantuan dibawah."
 
-#: src/bug-buddy.glade.h:11
+#: src/bug-buddy.glade.h:10
 msgid ""
 "Bug Buddy uses email to submit the bug reports.\n"
 "Please choose how you would like Bug Buddy to send email.\n"
@@ -341,92 +340,92 @@ msgstr ""
 "untuk menggunakan pengemel default GNOME,\n"
 "Tetapan ini akan dikongsi dengan aplikais GNOME lain."
 
-#: src/bug-buddy.glade.h:15
+#: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
 msgstr "Sistem penjejakan Pepijat"
 
-#: src/bug-buddy.glade.h:16
+#: src/bug-buddy.glade.h:15
 msgid "Cc"
 msgstr "Cc"
 
-#: src/bug-buddy.glade.h:17
+#: src/bug-buddy.glade.h:16
 msgid "Command"
 msgstr "Arahan"
 
-#: src/bug-buddy.glade.h:19
+#: src/bug-buddy.glade.h:17
 msgid "Core file"
 msgstr "Fail core"
 
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:18
 msgid "Custom mailer"
 msgstr "Pengemel sendiri"
 
-#: src/bug-buddy.glade.h:21
+#: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Nyahpepijat"
 
-#: src/bug-buddy.glade.h:23
+#: src/bug-buddy.glade.h:21
 msgid "Download Progress"
 msgstr "Progres Pemuaturunan"
 
-#: src/bug-buddy.glade.h:24
+#: src/bug-buddy.glade.h:22
 msgid "Email"
 msgstr "Emel"
 
-#: src/bug-buddy.glade.h:25
+#: src/bug-buddy.glade.h:23
 msgid "GNOME Mailer Settings"
 msgstr "tetapan Pengemel GNOME"
 
-#: src/bug-buddy.glade.h:26
+#: src/bug-buddy.glade.h:24
 msgid "Go"
 msgstr "Pergi"
 
-#: src/bug-buddy.glade.h:27
+#: src/bug-buddy.glade.h:25
 msgid "HTTP Proxy Settings"
 msgstr "Tetapan Proksi HTTP"
 
-#: src/bug-buddy.glade.h:28
+#: src/bug-buddy.glade.h:26
 msgid "Include a text file"
 msgstr "Sisip fail teks"
 
-#: src/bug-buddy.glade.h:29
+#: src/bug-buddy.glade.h:27
 msgid "Just save to a file so I can submit a bug report manually"
 msgstr ""
 "Hanya simpan ke fail supaya boleh menghantar laporan peijat secara manual"
 
-#: src/bug-buddy.glade.h:30
+#: src/bug-buddy.glade.h:28
 msgid "Location"
 msgstr "Lokasi"
 
-#: src/bug-buddy.glade.h:31
+#: src/bug-buddy.glade.h:29
 msgid "Name"
 msgstr "Nama"
 
-#: src/bug-buddy.glade.h:32
+#: src/bug-buddy.glade.h:30
 msgid "Password"
 msgstr "Katalaluan"
 
-#: src/bug-buddy.glade.h:33
+#: src/bug-buddy.glade.h:31
 msgid "Path of sendmail"
 msgstr "Path bagi Sendmail"
 
-#: src/bug-buddy.glade.h:34
+#: src/bug-buddy.glade.h:32
 msgid "Please choose a component, version, and severity level."
 msgstr "Sila Pilih komponen, versi dan aras severity."
 
-#: src/bug-buddy.glade.h:35
+#: src/bug-buddy.glade.h:33
 msgid "Please make any final corrections to the bug report."
 msgstr "Sila buat pembetulan akhir pada laporan pepijat ini."
 
-#: src/bug-buddy.glade.h:36
+#: src/bug-buddy.glade.h:34
 msgid "Please make your bug report in English, if possible."
 msgstr "Sila buat laporan pepijat dalam Bahasa Inggeris. jika boleh"
 
-#: src/bug-buddy.glade.h:37
+#: src/bug-buddy.glade.h:35
 msgid "Please select the product for the bug you wish to report."
 msgstr "Pilih Produk untuk pepijat yang hendak dilapor."
 
-#: src/bug-buddy.glade.h:38
+#: src/bug-buddy.glade.h:36
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
 "reported bugs.\n"
@@ -436,7 +435,7 @@ msgstr ""
 "pepijat yang paling kerap dilaporkan.\n"
 "Jika pepijat ini sudah dilaporkan, sila jangan laporkannya lagi."
 
-#: src/bug-buddy.glade.h:40
+#: src/bug-buddy.glade.h:38
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -444,155 +443,155 @@ msgstr ""
 "Sila tunggu sementara Bug Buddy mengemaskini senarai\n"
 "produk-produk untuk sistem penjejakan pepijat"
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:40
 msgid "Port"
 msgstr "Liang"
 
-#: src/bug-buddy.glade.h:43
-msgid "Process ID"
-msgstr "ID proses"
+#: src/bug-buddy.glade.h:41
+msgid "Process ID:"
+msgstr "ID proses:"
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:42
 msgid "Proxy Settings..."
 msgstr "Tetapan Proksi..."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:43
 msgid "Proxy requires a username and password"
 msgstr "Proksi memerlukan namapengguna dan katalaluan"
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:44
 msgid "Save in"
 msgstr "Simpan pada"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:45
 msgid "Save the report to..."
 msgstr "Simpan laporan ke..."
 
-#: src/bug-buddy.glade.h:49
+#: src/bug-buddy.glade.h:46
 msgid "Saving:"
 msgstr "Menyimpan:"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:47
 msgid "Select a mailer"
 msgstr "Pilih pengemel"
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:48
 msgid "Sendmail Settings"
 msgstr "Tetapan Sendmail"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:49
 msgid "Severity"
 msgstr "Keparahan"
 
-#: src/bug-buddy.glade.h:53
-msgid "Show Debugging Details"
-msgstr "Papar Huraian Terperinci Nyahpepijat"
+#: src/bug-buddy.glade.h:50
+msgid "Show _Debugging Details"
+msgstr "Papar Perincian _Nyahpepijat"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:51
 msgid "Show most frequent bugs in:"
 msgstr "Papar pepijat paling kerap di:"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:52
 msgid "Simple"
 msgstr "Mudah"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:53
 msgid "Start"
 msgstr "Mula"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:54
 msgid "Start in terminal"
 msgstr "Dimulakan di terminal"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:55
 msgid "Stop"
 msgstr "Henti"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:56
 msgid "Submit another bug"
 msgstr "Hantar pelijat lain"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:57
 msgid "Summary"
 msgstr "Ringkasan"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:58
 msgid "The product is not listed above."
 msgstr "Produk tidak tersenarai di atas"
 
-#: src/bug-buddy.glade.h:62
+#: src/bug-buddy.glade.h:59
 msgid "To"
 msgstr "Kepada"
 
-#: src/bug-buddy.glade.h:63
+#: src/bug-buddy.glade.h:60
 msgid "To:"
 msgstr "To:"
 
-#: src/bug-buddy.glade.h:64
+#: src/bug-buddy.glade.h:61
 msgid "Understands Netscape remote control"
 msgstr "Memahami kawalan remote netscape"
 
-#: src/bug-buddy.glade.h:65
+#: src/bug-buddy.glade.h:62
 msgid "Updating products list:"
 msgstr "Mengemaskini senarai produk:"
 
-#: src/bug-buddy.glade.h:66
+#: src/bug-buddy.glade.h:63
 msgid "Use HTTP Proxy"
 msgstr "Guna Proksi HTTP"
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:64
 msgid "Use sendmail directly"
 msgstr "Guna sendmail secara terus"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:65
 msgid "Use the default GNOME mailer"
 msgstr "Guna pengemel default GNOME"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:66
 msgid "Username"
 msgstr "Namapengguna"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:67
 msgid "Version"
 msgstr "Versi"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:68
 msgid "component"
 msgstr "komponen"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:69
 msgid "desc"
 msgstr "huraian"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:70
 msgid "email info"
 msgstr "maklumat emel"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:71
 msgid "finished"
 msgstr "selesai"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:72
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:73
 msgid "gnome"
 msgstr "gnome"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:74
 msgid "mail config"
 msgstr "konfigurasi emel"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:75
 msgid "mostfreq"
 msgstr "palingkerap"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:76
 msgid "product"
 msgstr "produk"
 
-#: src/bug-buddy.glade.h:80
+#: src/bug-buddy.glade.h:77
 msgid "sendmail"
 msgstr "sendmail"
 
@@ -779,42 +778,3 @@ msgstr "Radas Pelaporan Pepijat"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Lapor pepijat pada GNOME"
-
-#~ msgid ""
-#~ "Description of Problem:\n"
-#~ "\n"
-#~ "\n"
-#~ "Steps to reproduce the problem:\n"
-#~ "1. \n"
-#~ "2. \n"
-#~ "3. \n"
-#~ "\n"
-#~ "Actual Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "Expected Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "How often does this happen? \n"
-#~ "\n"
-#~ "\n"
-#~ "Additional Information:"
-#~ msgstr ""
-#~ "Description of Problem:\n"
-#~ "\n"
-#~ "\n"
-#~ "Steps to reproduce the problem:\n"
-#~ "1. \n"
-#~ "2. \n"
-#~ "3. \n"
-#~ "\n"
-#~ "Actual Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "Expected Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "How often does this happen? \n"
-#~ "\n"
-#~ "\n"
-#~ "Additional Information:"
