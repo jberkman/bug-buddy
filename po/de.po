@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-12 20:34+0100\n"
-"PO-Revision-Date: 2001-02-12 21:22+01:00\n"
+"POT-Creation-Date: 2001-02-12 21:40+0100\n"
+"PO-Revision-Date: 2001-02-12 21:41+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -286,15 +286,15 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Neu anzeigen"
 
-#: src/bug-buddy.c:896 src/bugzilla.c:556
+#: src/bug-buddy.c:896
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "'%s' kann nicht geöffnet werden.\n"
 "\n"
-"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
+"Bitte überprüfen Sie, ob Bug Buddy richtig\n"
 "installiert wurde."
 
 #: src/bug-buddy.c:1144
@@ -321,7 +321,7 @@ msgstr ""
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "'%s' kann nicht geöffnet werden.\n"
 "\n"
@@ -332,6 +332,17 @@ msgstr ""
 msgid "Are you sure you want to cancel this update?"
 msgstr "Wollen Sie die Aktualisierung wirklich abbrechen?"
 
+#: src/bugzilla.c:556
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"'%s' kann nicht geöffnet werden.\n"
+"\n"
+"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
+"installiert wurde."
+
 #: src/bugzilla.c:567
 msgid "All"
 msgstr "Alle"
@@ -341,7 +352,7 @@ msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
 "\n"
-"Should Bug Buddy try and update these files now?"
+"Should Bug Buddy try to update these files now?"
 msgstr ""
 "Bug Buddy hat festgestellt, dass einige Informationen zu den\n"
 "verschiedenen Fehlermeldestellen (Bug Tracking Systems)\n"
@@ -389,11 +400,11 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Die Datei gdb-cmd konnte nicht gefunden werden.\n"
 "\n"
-"Bitte versuchen Sie, »bug-buddy« noch einmal zu\n"
+"Bitte versuchen Sie, Bug Buddy noch einmal zu\n"
 "installieren."
 
 #: src/gdb-buddy.c:281 src/util.c:75
@@ -563,7 +574,8 @@ msgstr "Produkt"
 
 #: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
-msgstr "Bitte wählen Sie die Komponente, die Version und den Level der Schwere."
+msgstr ""
+"Bitte wählen Sie die Komponente, die Version und den Level der Schwere."
 
 #: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 msgid "Component"
@@ -583,7 +595,7 @@ msgstr "Komponente"
 
 #: src/glade-strings.c:53
 msgid ""
-"Please wait while bug-buddy determines some information about your system."
+"Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "Bitte warten Sie, während Bug Buddy versucht, einige\n"
 "Information zu Ihrem System herauszufinden."
@@ -681,7 +693,7 @@ msgid "The graphical bug reporting tool for GNOME."
 msgstr "Das graphische Werkzeug zur Fehlermeldung für GNOME."
 
 #: src/united-states-of-bug-buddy.c:95
-msgid "The lame bug-buddy web page"
+msgid "The lame Bug Buddy web page"
 msgstr "Die \"armselige\" Webseite von Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:273
