@@ -27,5 +27,13 @@ buddy_DATA = \
 	bug-buddy.glade	\
 	gdb-cmd
 
+utilsdir = $(datadir)/gnome/apps/Utilities
+utils_DATA = bug-buddy.desktop
+
 EXTRA_DIST = \
-	glade-strings.c
+	glade-strings.c	\
+	bug-buddy.desktop
+
+
+
+
