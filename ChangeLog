@@ -1,3 +1,7 @@
+2001-02-05  Fatih Demir	<kabalak@gmx.net>
+
+	* src/gnome.appmap: Added gtranslator.
+
 2001-01-23  Gregory Leblanc  <gleblanc@cu-portland.edu>
 
 	* docs/C/bug-buddy.sgml: Updated for/tested in Nautilus
