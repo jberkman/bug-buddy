@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-10-08 17:51+04:00\n"
+"POT-Creation-Date: 2000-11-17 17:30+0300\n"
+"PO-Revision-Date: 2000-11-17 17:31+03:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,7 @@ msgstr "core-файл программы"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Текстовый файл вставляемый в отчет"
 
 #: src/bug-buddy.c:332
 msgid ""
