@@ -63,7 +63,7 @@ msgstr "sesut program"
 
 #: src/bug-buddy.c:77
 msgid "core file"
-msgstr "datoteka z ispisom pomnilnika (core)"
+msgstr "datoteka z izpisom pomnilnika (core)"
 
 #: src/bug-buddy.c:78
 msgid "nothing"
@@ -196,9 +196,9 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 "Izgleda, da '%s' ne obstaja.  Ne boste mogli oddati \n"
-"poroèila o hor¹èu, lahko pa ga boste shranili v datoteko.\n"
+"poroèila o hro¹èu, lahko pa ga boste shranili v datoteko.\n"
 "\n"
-"Boste navedli kje se program sendmail nahaja?"
+"Boste navedli novo mesto, kjer se program sendmail nahaja?"
 
 #: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
@@ -455,7 +455,7 @@ msgstr "ID Procesa"
 
 #: src/glade-strings.c:28
 msgid "Core file"
-msgstr "Datoteka core"
+msgstr "Datoteka z izpisom pomnilnika (core)"
 
 #: src/glade-strings.c:29
 msgid "Automatically continue to next step when debugging is complete"
@@ -659,10 +659,10 @@ msgid ""
 msgstr ""
 "Izgleda, da '%s' ne obstaja.\n"
 "\n"
-"Ne boste mogli oddati poroèila o hor¹èu, lahko pa ga boste shranili v "
+"Ne boste mogli oddati poroèila o hro¹èu, lahko pa ga boste shranili v "
 "datoteko.\n"
 "\n"
-"Boste navedli novo mesto kjer se program sendmail nahaja?"
+"Boste navedli novo mesto, kjer se program sendmail nahaja?"
 
 #: src/united-states-of-bug-buddy.c:351
 msgid "You must include a comprehensible subject line in your bug report."
