@@ -301,7 +301,6 @@ msgstr ""
 "необх╕дною додаткова ╕нформац╕я в╕д вас."
 
 #: src/glade-strings.c:14
-#, fuzzy
 msgid "Bug Tracking System"
 msgstr "Система в╕дсл╕дковування помилок"
 
@@ -455,15 +454,15 @@ msgstr ""
 
 #: src/glade-strings.c:54
 msgid "Submitting the Report"
-msgstr "П╕дсилання звиту"
+msgstr "В╕дсилання зв╕ту"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr ""
+msgstr "В╕д╕слати зв╕т у систему в╕дсл╕дковування помилок"
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr ""
+msgstr "В╕д╕слати автору"
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
