@@ -1,5 +1,14 @@
 1999-11-11  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/Makefile.am (buddy_DATA): add prog.bugmap (stolen
+	from the crashed app web page).  added bug-buddy and rp3
+	do it first
+
+	* src/bug-buddy.c (init_ui): figure out which package the
+	app is from, and which version.  We are smart now.
+
+	also fixed some tyops.
+	
 	* NEWS: update for 0.3
 
 	* src/bug-buddy.c (on_action_page_next): ask the

@@ -670,6 +670,56 @@ make_anim (gchar *widget_name, gchar *string1,
 	return druid_data.gdb_anim;
 }
 
+static gboolean
+clean_hash (gpointer key, gpointer value, gpointer data)
+{
+	g_free (key);
+	g_free (value);
+	return TRUE;
+}
+
+static gchar *
+get_package_from_appname (const char *appname)
+{
+	FILE *fp;
+	gchar *package;
+	char buf[1024];
+	GHashTable *table;
+
+	fp = fopen (BUDDY_DATADIR "/prog.bugmap", "r");
+	if (!fp) {
+		g_warning ("Could not open bugfile '"
+			   BUDDY_DATADIR
+			   "/prog.bugmap' for reading.");
+		return NULL;
+	}
+
+	table = g_hash_table_new (g_str_hash, g_str_equal);
+	g_hash_table_freeze (table);
+
+	while (fgets (buf, 1024, fp)) {
+		package = strchr (buf, ' ');
+		if (!package)
+			continue;
+		*package = '\0';
+
+		g_hash_table_insert (table, 
+				     g_strdup (buf), 
+				     g_strdup (g_strstrip (package+1)));
+	}
+
+	fclose (fp);
+
+	g_hash_table_thaw (table);
+	package = g_strdup (g_hash_table_lookup (table,
+						 g_filename_pointer (appname)));
+	
+	g_hash_table_foreach_remove (table, clean_hash, NULL);
+	g_hash_table_destroy (table);
+
+	return package;
+}
+
 static void
 init_ui (GladeXML *xml)
 {
@@ -724,14 +774,25 @@ init_ui (GladeXML *xml)
 	else {
 		s = getenv ("GNOME_CRASHED_APPNAME");
 		if (s)
-			g_warning ("$GNOME_CRASHED_APPNAME is deprectated,"
-				   "Please use the --appname command line"
-				   "argument instead.\n");
+			g_warning (_("$GNOME_CRASHED_APPNAME is deprecated.\n"
+				     "Please use the --appname command line"
+				     "argument instead."));
 	}
 
-	if (s) {
+	if (s) {		
+		char *package;
+		GtkWidget *pw;
+
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 		druid_data.crash_type = CRASH_DIALOG;
+
+		package = get_package_from_appname (s);
+		if (package) {
+			pw = glade_xml_get_widget (druid_data.xml, 
+						   "package_entry");
+			gtk_entry_set_text (GTK_ENTRY (pw), package);
+			g_free (package);
+		}
 	}
 	druid_data.app_file = w;
 
@@ -741,9 +802,9 @@ init_ui (GladeXML *xml)
 	else {
 		s = getenv ("GNOME_CRASHED_PID");
 		if (s)
-			g_warning ("$GNOME_CRASHED_PID is deprectated,"
-				   "Please use the --pid command line"
-				   "argument instead.\n");
+			g_warning (_("$GNOME_CRASHED_PID is deprecated.\n "
+				     "Please use the --pid command line"
+				     "argument instead."));
 	}
 
 	if (s) {
@@ -760,6 +821,11 @@ init_ui (GladeXML *xml)
 	}
 	druid_data.core_file = w;
 
+	/* package version */
+	if (popt_data.package_ver) {
+		w = glade_xml_get_widget (xml, "version_entry");
+		gtk_entry_set_text (GTK_ENTRY (w), popt_data.package_ver);
+	}
 
 	/* init radio buttons */
 	w = glade_xml_get_widget (xml, "dialog_radio");

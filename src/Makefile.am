@@ -40,6 +40,7 @@ mime_DATA = \
 
 buddy_DATA = \
 	bug-buddy.glade	\
+	prog.bugmap	\
 	gdb-cmd
 
 utilsdir = $(datadir)/gnome/apps/Utilities
