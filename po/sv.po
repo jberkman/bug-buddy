@@ -325,7 +325,7 @@ msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
 msgstr ""
-"Kunde inte hitta gdb-cmd filen.\n"
+"Kunde inte hitta filen gdb-cmd.\n"
 "Var vänlig och installera bug-buddy igen."
 
 #: src/gdb-buddy.c:214 src/util.c:75
