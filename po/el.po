@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.6\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2001-03-26 19:15:45+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -242,126 +242,13 @@ msgstr ""
 "Αδύνατη η φόρτωση του '%s'.\n"
 "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
-#
-#: src/bugzilla.c:616
-#, fuzzy
-msgid "ID"
-msgstr "ΑΡΙΘΜ.ΔΙΕΡΓΑΣΙΑΣ"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Εργαλείο Αναφοράς Σφαλμάτων"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Προϊόν"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Συστατικό"
-
-#
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Περιγραφή"
-
-#
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Αδύνατο το άνοιγμα του '%s'.\n"
-"Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Όλα"
-
-#
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Αδύνατη η φόρτωση του '%s'.\n"
-"Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr ""
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr ""
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr ""
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Λήψη ακολουθίας στοίβας... (%d)"
-
-#
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Η επεξεργασία του αρχείου core μέσω του gdb είναι αδύνατη:\n"
-"'%s'"
-
-#
-#: src/gdb-buddy.c:196
-#, fuzzy, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"Ο προσδιορισμός του δυαδικού αρχείου που δημιουργήθηκε είναι αδύνατος\n"
-"'%s'"
-
-#
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Σφάλμα στην ανάγνωση... ματαίωση"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"Η εφαρμογή GDB δε βρέθηκε στο σύστημά σας.\n"
-"Δε θα ληφθούν πληροφορίες εκσφαλμάτωσεις."
-
-#
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Δε βρέθηκε το αρχείο gdb-cmd.\n"
-"Παρακαλώ εγκαταστήστε ξανά το Βοηθό Σφαλμάτων."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr ""
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Αναφορά σφαλμάτων του GNOME"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -436,6 +323,12 @@ msgstr ""
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Εκσφαλμάτωση"
+
+#
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Περιγραφή"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -649,6 +542,121 @@ msgid "sendmail"
 msgstr "Sendmail"
 
 #
+#: src/bugzilla.c:616
+#, fuzzy
+msgid "ID"
+msgstr "ΑΡΙΘΜ.ΔΙΕΡΓΑΣΙΑΣ"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Προϊόν"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Συστατικό"
+
+#
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Αδύνατο το άνοιγμα του '%s'.\n"
+"Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Όλα"
+
+#
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Αδύνατη η φόρτωση του '%s'.\n"
+"Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr ""
+
+#
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Λήψη ακολουθίας στοίβας... (%d)"
+
+#
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Η επεξεργασία του αρχείου core μέσω του gdb είναι αδύνατη:\n"
+"'%s'"
+
+#
+#: src/gdb-buddy.c:196
+#, fuzzy, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Ο προσδιορισμός του δυαδικού αρχείου που δημιουργήθηκε είναι αδύνατος\n"
+"'%s'"
+
+#
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Σφάλμα στην ανάγνωση... ματαίωση"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"Η εφαρμογή GDB δε βρέθηκε στο σύστημά σας.\n"
+"Δε θα ληφθούν πληροφορίες εκσφαλμάτωσεις."
+
+#
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Δε βρέθηκε το αρχείο gdb-cmd.\n"
+"Παρακαλώ εγκαταστήστε ξανά το Βοηθό Σφαλμάτων."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
+#
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Καλώς ήλθατε στο Βοηθό Σφαλμάτων"
@@ -834,14 +842,6 @@ msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr "Είστε σίγουρος ότι θέλετε να ακυρώσετε αυτήν την αναφορά σφάλματος;"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Εργαλείο Αναφοράς Σφαλμάτων"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Αναφορά σφαλμάτων του GNOME"
 
 #
 #~ msgid "%P %%"

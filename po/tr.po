@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-02-08 07:58-0500\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -216,116 +216,13 @@ msgstr ""
 "Bug Buddy kullanýcý arayüz dosyasýný (%s) açamadý.\n"
 "Lütfen Bug Buddy'nin düzgün kurulduðuna emin olun."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Hata Raporlama Aracý"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Ürün"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Ýçerik"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Anlatým"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy, '%s' dosyasýný açýlamadý.\n"
-"Lütfen Bug Buddy'nin düzgün kurulduðuna emin olun."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Tümü"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy kullanýcý arayüz dosyasýný (%s) açamadý.\n"
-"Lütfen Bug Buddy'nin düzgün kurulduðuna emin olun."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "Týklanýnca gösterilecek URI."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Ziyaret edilen"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "Bu URI daha önce ziyaret edilmiþse."
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Yýðýn izi alýnýyor... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"gdb ile core dosyasý taranamadý:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDB, aþaðýdaki dosyanýn hangi uygulama tarafýndan oluþturulduðunu "
-"anlayamadý.'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Okurken hata oluþtu... çýkýlýyor"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"GDB sisteminizde bulunamadý.\n"
-"Hatayý ayýklama için gerekli bilgiler toplanamadý."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"gdb-cmd dosyasý bulanamadý.\n"
-"Lütfen bug-buddy'yi yeniden yükleyin."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "Gdb çalýþtýrýlýrken bir hata oluþtu."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "GNOME'da oluþan hatayý raporla"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -394,6 +291,11 @@ msgstr "Özel postalayýcý"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Ayýkla"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Anlatým"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -592,6 +494,112 @@ msgstr "ürün"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Ürün"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Ýçerik"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy, '%s' dosyasýný açýlamadý.\n"
+"Lütfen Bug Buddy'nin düzgün kurulduðuna emin olun."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Tümü"
+
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy kullanýcý arayüz dosyasýný (%s) açamadý.\n"
+"Lütfen Bug Buddy'nin düzgün kurulduðuna emin olun."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "Týklanýnca gösterilecek URI."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Ziyaret edilen"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Bu URI daha önce ziyaret edilmiþse."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Yýðýn izi alýnýyor... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"gdb ile core dosyasý taranamadý:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDB, aþaðýdaki dosyanýn hangi uygulama tarafýndan oluþturulduðunu "
+"anlayamadý.'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Okurken hata oluþtu... çýkýlýyor"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDB sisteminizde bulunamadý.\n"
+"Hatayý ayýklama için gerekli bilgiler toplanamadý."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"gdb-cmd dosyasý bulanamadý.\n"
+"Lütfen bug-buddy'yi yeniden yükleyin."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "Gdb çalýþtýrýlýrken bir hata oluþtu."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Bug Buddy 'ye hoþgeldiniz"
@@ -771,14 +779,6 @@ msgid ""
 msgstr ""
 "Bu hata raporunu göndermeyi\n"
 "iptal etmek istediginizden eminmisiniz?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Hata Raporlama Aracý"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "GNOME'da oluþan hatayý raporla"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

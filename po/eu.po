@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2001-05-25 13:35+0200\n"
 "Last-Translator: Unmaintained\n"
 "Language-Team: Euskara\n"
@@ -211,116 +211,13 @@ msgstr ""
 "Ezin izan da '%s' kargatu.\n"
 "Ziurtatu Bug Buddy zuzen instalatuta dagoela."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Programa-erroreen berri emateko tresna"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Produktua"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Osagaia"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Azalpena"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Ezin izan da '%s' ireki.\n"
-"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Dena"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Ezin izan da '%s' kargatu.\n"
-"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr ""
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr ""
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr ""
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Pila-aztarna eskuratzen... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Ezin da nukleo-fitxategia gdb-rekin prozesatu:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, fuzzy, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"Ezin da zehaztu zein bitarrek sortu duen\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Errorea irakurtzean... abortatzen"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"Ezin izan da GDB aurkitu zure sisteman.\n"
-"Ez da arazketa-informaziorik eskuratuko."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Ezin izan da gdb-cmd fitxategia aurkitu.\n"
-"Saiatu Bug Buddy berriro instalatzen."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr ""
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Eman GNOMEren programa-errore baten berri"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -388,6 +285,11 @@ msgstr ""
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Araztu"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Azalpena"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -593,6 +495,112 @@ msgstr "produktua"
 msgid "sendmail"
 msgstr "Sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Produktua"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Osagaia"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Ezin izan da '%s' ireki.\n"
+"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Dena"
+
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Ezin izan da '%s' kargatu.\n"
+"Ziurtatu Bug Buddy zuzen instalatuta dagoela."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr ""
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Pila-aztarna eskuratzen... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Ezin da nukleo-fitxategia gdb-rekin prozesatu:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, fuzzy, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Ezin da zehaztu zein bitarrek sortu duen\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Errorea irakurtzean... abortatzen"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"Ezin izan da GDB aurkitu zure sisteman.\n"
+"Ez da arazketa-informaziorik eskuratuko."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Ezin izan da gdb-cmd fitxategia aurkitu.\n"
+"Saiatu Bug Buddy berriro instalatzen."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Ongi etorri Bug Buddy-ra"
@@ -764,14 +772,6 @@ msgid ""
 msgstr ""
 "Ziur zaude programa-erroreen berri-emate hau\n"
 "bertan behera utzi nahi duzula?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Programa-erroreen berri emateko tresna"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Eman GNOMEren programa-errore baten berri"
 
 #~ msgid "Are you sure you want to cancel this update?"
 #~ msgstr "Ziur zaude eguneratze hau bertan behera utzi nahi duzula?"

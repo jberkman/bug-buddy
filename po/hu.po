@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2002-05-14 22:13+0200\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-05-14 22:33+0200\n"
 "Last-Translator: András Tímár <timar@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
@@ -211,128 +211,22 @@ msgstr ""
 "A Bug Buddy felhasználói felületének fájlja (%s) nem található.\n"
 "Ellenőrizd, hogy a Bug Buddy megfelelően volt-e telepítve."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "Azonosító"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Hibabejelentő eszköz"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Termék"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Komponens"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Leírás"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Nem lehet '%s'-t megnyitni.\n"
-"Ellenőrizd, hogy a Bug Buddy megfelelően volt-e telepítve.\n"
-"\n"
-"A Bug Buddy most kilép."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Minden"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"A Bug Buddy nem tudja, hova kell a hibajelentéseket elküldeni.\n"
-"\n"
-"Ellenőrizd, hogy bug-buddy megfelelően volt-e telepítve.\n"
-"\n"
-"A Bug Buddy most kilép."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Látogatott"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Verem információ (stack trace) lekérdezése... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Nem sikerült a core fájlt gdb-vel feldolgozni:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"A GBD nem tudta megállapítani, hogy melyik bináris\n"
-"hozta létre '%s'-t."
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Hiba történt olvasás közben... kilépés"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"A GDB nem található a rendszereden.\n"
-"A hibakeresési adatok gyűjtése elmarad."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"A gdb-cmd file nem található\n"
-"Próbáld orvosolni a Bug Buddy újratelepítésével."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "Hiba történt a gdb futtatása közben."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "A GNOME grafikus hibabejelentő eszköze"
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-
-#: src/bug-buddy.glade.h:2
 msgid "*"
 msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+#, fuzzy
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -392,6 +286,11 @@ msgstr "Egyéni levélküldő"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Debug"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Leírás"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -591,6 +490,116 @@ msgstr "termék"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "Azonosító"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Termék"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Komponens"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Nem lehet '%s'-t megnyitni.\n"
+"Ellenőrizd, hogy a Bug Buddy megfelelően volt-e telepítve.\n"
+"\n"
+"A Bug Buddy most kilép."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Minden"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"A Bug Buddy nem tudja, hova kell a hibajelentéseket elküldeni.\n"
+"\n"
+"Ellenőrizd, hogy bug-buddy megfelelően volt-e telepítve.\n"
+"\n"
+"A Bug Buddy most kilép."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Látogatott"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Verem információ (stack trace) lekérdezése... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Nem sikerült a core fájlt gdb-vel feldolgozni:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"A GBD nem tudta megállapítani, hogy melyik bináris\n"
+"hozta létre '%s'-t."
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Hiba történt olvasás közben... kilépés"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"A GDB nem található a rendszereden.\n"
+"A hibakeresési adatok gyűjtése elmarad."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"A gdb-cmd file nem található\n"
+"Próbáld orvosolni a Bug Buddy újratelepítésével."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "Hiba történt a gdb futtatása közben."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Üdvözöl a Bug Buddy"
@@ -759,14 +768,6 @@ msgid ""
 msgstr ""
 "Biztos hogy nem folytatod\n"
 "a hibajelentést?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Hibabejelentő eszköz"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "A GNOME grafikus hibabejelentő eszköze"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2001-08-19 02:48+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
@@ -218,117 +218,13 @@ msgstr ""
 "Non foi posible abrir '%s'.\n"
 "Comprobe que o Bug Buddy está instalado correctamente."
 
-#: src/bugzilla.c:616
-#, fuzzy
-msgid "ID"
-msgstr "PID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "bug-buddy"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Producto"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Compoñente"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Descrición"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Non foi posible abrir '%s'.\n"
-"Comprobe que o Bug Buddy foi instalado correctamente."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Todo"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Non foi posible abrir '%s'.\n"
-"Comprobe que o Bug Buddy está instalado correctamente."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr ""
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr ""
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr ""
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Obtendo a traza da pila... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Non se pode procesar o ficheiro core co gdb:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, fuzzy, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"Non se pode determinar o binario creado\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Erro ao ler... abortando"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"Non se atopou o GDB no seu sistema.\n"
-"Non se obterá a información de depuración."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Non se atopou o ficheiro gdb-cmd.\n"
-"Probe a reinstalar o Bug Buddy."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr ""
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Informe dun erro de GNOME"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -396,6 +292,11 @@ msgstr ""
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Depuración"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Descrición"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -600,6 +501,113 @@ msgstr "producto"
 msgid "sendmail"
 msgstr "Sendmail"
 
+#: src/bugzilla.c:616
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Producto"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Compoñente"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Non foi posible abrir '%s'.\n"
+"Comprobe que o Bug Buddy foi instalado correctamente."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Todo"
+
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Non foi posible abrir '%s'.\n"
+"Comprobe que o Bug Buddy está instalado correctamente."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr ""
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Obtendo a traza da pila... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Non se pode procesar o ficheiro core co gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, fuzzy, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Non se pode determinar o binario creado\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Erro ao ler... abortando"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"Non se atopou o GDB no seu sistema.\n"
+"Non se obterá a información de depuración."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Non se atopou o ficheiro gdb-cmd.\n"
+"Probe a reinstalar o Bug Buddy."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Benvido ao Bug Buddy"
@@ -768,14 +776,6 @@ msgid ""
 msgstr ""
 "¿Está seguro de que quere cancelar\n"
 "este informe de erro?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "bug-buddy"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Informe dun erro de GNOME"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2000-03-10 23:03+0000\n"
 "Last-Translator: Alastair McKinstry <mckinstry@computer.org>\n"
 "Language-Team: Irish <ga@li.org>\n"
@@ -202,103 +202,12 @@ msgid ""
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 
-#: src/bugzilla.c:616
-#, fuzzy
-msgid "ID"
-msgstr "PID"
-
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
 msgstr ""
 
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr ""
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr ""
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr ""
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr ""
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr ""
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr ""
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr ""
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr ""
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
 msgstr ""
 
 #: src/bug-buddy.glade.h:1
@@ -364,6 +273,11 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
+msgstr ""
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
 msgstr ""
 
 #: src/bug-buddy.glade.h:21
@@ -561,6 +475,100 @@ msgstr ""
 msgid "sendmail"
 msgstr ""
 
+#: src/bugzilla.c:616
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr ""
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr ""
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr ""
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr ""
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr ""
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr ""
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr ""
@@ -720,14 +728,6 @@ msgstr ""
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
-msgstr ""
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr ""
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
 msgstr ""
 
 #~ msgid "%P %%"

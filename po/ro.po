@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2001-02-16 00:19+0200\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <gnome-ro@pelican.level7.ro>\n"
@@ -211,117 +211,12 @@ msgstr ""
 "Nu am putut încãrca '%s'\n"
 "Vã rog sã vã asiguraþi cã Bug Buddy este instalat corect."
 
-#: src/bugzilla.c:616
-#, fuzzy
-msgid "ID"
-msgstr "PID"
-
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Produs"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Componentã"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Descriere"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Nu am putut deschide '%s'.\n"
-"Vã rog sã vã asiguraþi cã Bug Buddy a fost instalat corect."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Toate"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Nu am putut încãrca '%s'\n"
-"Vã rog sã vã asiguraþi cã Bug Buddy este instalat corect."
-
-#: src/config.c:75
-msgid "Evolution"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
 msgstr ""
 
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr ""
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr ""
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr ""
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr ""
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Obþin stack trace-ul... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Nu pot procesa fiºierul core cu gdb:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, fuzzy, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"Nu pot determina ce binar a creat\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Eroare la citire... renunþ"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"GDB nu a putut fi gãsit pe sistemul dvs.\n"
-"Informaþiile de depanare nu vor fi obþinute."
-
-#: src/gdb-buddy.c:308
-#, fuzzy
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Nu am putut gãsu fiºierul gdb-cmd.\n"
-"Vã rog sã încercaþi sã reinstalaþi bug-buddy."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
 msgstr ""
 
 #: src/bug-buddy.glade.h:1
@@ -392,6 +287,11 @@ msgstr ""
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Depanare"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Descriere"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -597,6 +497,114 @@ msgstr "produs"
 msgid "sendmail"
 msgstr "Sendmail"
 
+#: src/bugzilla.c:616
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Produs"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Componentã"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Nu am putut deschide '%s'.\n"
+"Vã rog sã vã asiguraþi cã Bug Buddy a fost instalat corect."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Toate"
+
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Nu am putut încãrca '%s'\n"
+"Vã rog sã vã asiguraþi cã Bug Buddy este instalat corect."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr ""
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr ""
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr ""
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr ""
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr ""
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Obþin stack trace-ul... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Nu pot procesa fiºierul core cu gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, fuzzy, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Nu pot determina ce binar a creat\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Eroare la citire... renunþ"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDB nu a putut fi gãsit pe sistemul dvs.\n"
+"Informaþiile de depanare nu vor fi obþinute."
+
+#: src/gdb-buddy.c:308
+#, fuzzy
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Nu am putut gãsu fiºierul gdb-cmd.\n"
+"Vã rog sã încercaþi sã reinstalaþi bug-buddy."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr ""
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Bine aþi venit la Bug Buddy"
@@ -766,14 +774,6 @@ msgid ""
 msgstr ""
 "Sigur doriþi sã renunþaþi\n"
 "la acest raport de probleme?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr ""
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr ""
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

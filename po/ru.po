@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-06-12 22:32+0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-06-13 00:02+04:00\n"
 "Last-Translator: Dmitry G. Mastrukov <dmitry@taurussoft.org>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -229,120 +229,13 @@ msgstr ""
 "Не удалось загрузить файл интерфейса пользователя (%s).\n"
 "Убедитесь, что программа Bug Buddy правильно установлена."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Инструмент сообщений об ошибках"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Программа"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Компонент"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "Описание"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Не удалось открыть \"%s\".\n"
-"Убедитесь, что программа Bug Buddy правильно установлена.\n"
-"\n"
-"Программа Bug Buddy сейчас завершится."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Все"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Не удалось найти никакой информации о том, куда сообщеть об ошибке.\n"
-"\n"
-"Убедитесь, что программа Bug Buddy правильно установлена.\n"
-"\n"
-"Программа Bug Buddy сейчас завершится."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "URI, показываемый при щелчке."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Посещённые"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "Если URI был посещён ранее."
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Получение состояния стека... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Не удалось обработать gdb файл core:\n"
-"\"%s\""
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"Отладчику GDB не удалось определить, какой двоичный файл создан\n"
-"\"%s\""
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Ошибка при чтении... прерывание"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"Отладчик GDB не был найден в вашей системе.\n"
-"Отладочная информация не будет собрана."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Не удалось найти файл gdb-cmd.\n"
-"Пожалуйста, попытайтесь переустановить bug-buddy."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "При запуске gdb возникла ошибка."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Сообщает об ошибке в среде GNOME"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -374,8 +267,8 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Программа Bug Buddy может отправить в вашем сообщении об ошибке "
-"отладочную информацию.\n"
+"Программа Bug Buddy может отправить в вашем сообщении об ошибке отладочную "
+"информацию.\n"
 "Допустимые параметры должны быть выбраны для вас автоматически.\n"
 "Для дополнительной информации нажмите пожалуйста кнопку \"Справка\"."
 
@@ -386,10 +279,10 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
-"Для отправки сообщений об ошибках программа Bug Buddy использует "
-"электронную почту.\n"
-"Выберите способ, которым программа Bug Buddy будет пользоваться "
-"для отправки почты.\n"
+"Для отправки сообщений об ошибках программа Bug Buddy использует электронную "
+"почту.\n"
+"Выберите способ, которым программа Bug Buddy будет пользоваться для отправки "
+"почты.\n"
 "Если вы выберете почтовую программу среды GNOME, используемую по умолчанию,\n"
 "то этот выбор будет разделён с некоторыми другими приложениями среды GNOME."
 
@@ -416,6 +309,11 @@ msgstr "Другая почтовая программа"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Отладка"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Описание"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -617,6 +515,116 @@ msgstr "программа"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Программа"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Компонент"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Не удалось открыть \"%s\".\n"
+"Убедитесь, что программа Bug Buddy правильно установлена.\n"
+"\n"
+"Программа Bug Buddy сейчас завершится."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Все"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Не удалось найти никакой информации о том, куда сообщеть об ошибке.\n"
+"\n"
+"Убедитесь, что программа Bug Buddy правильно установлена.\n"
+"\n"
+"Программа Bug Buddy сейчас завершится."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "URI, показываемый при щелчке."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Посещённые"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Если URI был посещён ранее."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Получение состояния стека... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Не удалось обработать gdb файл core:\n"
+"\"%s\""
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Отладчику GDB не удалось определить, какой двоичный файл создан\n"
+"\"%s\""
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Ошибка при чтении... прерывание"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"Отладчик GDB не был найден в вашей системе.\n"
+"Отладочная информация не будет собрана."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Не удалось найти файл gdb-cmd.\n"
+"Пожалуйста, попытайтесь переустановить bug-buddy."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "При запуске gdb возникла ошибка."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Добро пожаловать в программу Bug Buddy"
@@ -796,14 +804,6 @@ msgid ""
 msgstr ""
 "Вы уверены, что хотите отменить\n"
 "это сообщение об ошибке?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Инструмент сообщений об ошибках"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Сообщает об ошибке в среде GNOME"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2002-05-18 13:25+0300\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-05-18 13:13+0300\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -231,120 +231,13 @@ msgstr ""
 "Ei pystynyt lataamaan käyttöliittymätiedostoa (%s).\n"
 "Varmista, että Bug Buddy on oikein asennettu."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Vikailmoitustyökalu"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Tuote"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Komponentti"
-
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
-msgid "Description"
-msgstr "Kuvaus"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy ei pystynyt avaamaan tiedostoa '%s'.\n"
-"Varmista, että Bug Buddy on oikein asennettu.\n"
-"\n"
-"Bud Buddy lopettaa nyt."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Kaikki"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy ei pystynyt selvittämään minne lähettää vikailmoitukset.\n"
-"\n"
-"Varmista, että Bug Buddy on oikein asennettu.\n"
-"\n"
-"Bug Buddy lopettaa nyt."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "Näytettävä URI napautettaessa."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Vierailtu"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "Jos URI:ssa on vierailtu aikaisemmin."
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Hakee jäljitystietoja pinosta... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Ei pysty käsittelemään core-tiedostoa gdb:llä:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDB ei pysty määrittelemään mikä binääritiedosto luotiin\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "Virhe luettaessa...keskeyttää"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"GDB:tä ei löytynyt järjestelmästäsi.\n"
-"Viankorjaustietoja ei haeta."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"Ei löytänyt gdb-cmd -tiedostoa.\n"
-"Asenna Bug Buddy uudelleen."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "Virhe ajettaessa gdb:tä."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Ilmoita Gnomen viasta"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -415,6 +308,11 @@ msgstr "Oma postiohjelma"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Viankorjaus"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Kuvaus"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -613,6 +511,116 @@ msgstr "tuote"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Tuote"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Komponentti"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy ei pystynyt avaamaan tiedostoa '%s'.\n"
+"Varmista, että Bug Buddy on oikein asennettu.\n"
+"\n"
+"Bud Buddy lopettaa nyt."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Kaikki"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy ei pystynyt selvittämään minne lähettää vikailmoitukset.\n"
+"\n"
+"Varmista, että Bug Buddy on oikein asennettu.\n"
+"\n"
+"Bug Buddy lopettaa nyt."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "Näytettävä URI napautettaessa."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Vierailtu"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Jos URI:ssa on vierailtu aikaisemmin."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Hakee jäljitystietoja pinosta... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Ei pysty käsittelemään core-tiedostoa gdb:llä:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDB ei pysty määrittelemään mikä binääritiedosto luotiin\n"
+"'%s'"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Virhe luettaessa...keskeyttää"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDB:tä ei löytynyt järjestelmästäsi.\n"
+"Viankorjaustietoja ei haeta."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Ei löytänyt gdb-cmd -tiedostoa.\n"
+"Asenna Bug Buddy uudelleen."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "Virhe ajettaessa gdb:tä."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Tervetuloa Bug Buddyyn"
@@ -793,14 +801,6 @@ msgid ""
 msgstr ""
 "Oletko varma, että haluat perua\n"
 "tämän vikailmoituksen?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Vikailmoitustyökalu"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Ilmoita Gnomen viasta"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

@@ -1,3 +1,16 @@
+2.2.0:
+
+  * Fixes:
+
+	- mime handling for core files should work now (Alex Graveley)
+
+  * Improvements:
+
+	- Docs updated for GNOME 2 version (Eric Baudais, Chris
+	Lyttle)
+
+	- Man page from Debian (David LaBissoniere)
+
 2.1.6:
 
   * Fixes:

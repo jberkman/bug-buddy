@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-31 17:26+0200\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-05-31 21:16+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -234,122 +234,13 @@ msgstr ""
 "Bug Buddy kon zijn gebruikersinterface bestand (%s)\n"
 "niet laden. Controleer of Bug Buddy correct geïnstalleerd is."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "Bug Rapporteer Hulpmiddel"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "Product"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "Component"
-
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
-msgid "Description"
-msgstr "Korte omschrijving"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy kon '%s' niet openen.\n"
-"Controleer of Bug Buddy correct is geïnstalleerd.\n"
-"\n"
-"Bug Buddy zal nu worden beëindigd."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "Alles"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy kon er niet achter komen waar het bugrapport naar toe moest worden "
-"gestuurd.\n"
-"\n"
-"Controleer of Bug Buddy correct geïnstalleerd is.\n"
-"\n"
-"Bug Buddy zal nu worden beëindigd."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "Weer te geven URI bij aanklikken."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "Bezocht"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "Als de URI al eerder is bezocht."
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "Stack-trace wordt opgezocht...(%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
-"'%s' "
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDB kon niet bepalen welk uitvoerbaar bestand\n"
-"'%s' heeft gemaakt"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr ""
-"Er is een fout opgetreden tijdens het lezen. De operatie wordt afgebroken"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"GDB is niet gevonden op dit systeem.\n"
-"Debuginformatie kan niet verkregen worden."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"De gdb-cmd file kan niet gevonden worden.\n"
-"U kunt BugBuddy het beste opnieuw installeren."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "Er is een fout opgetreden bij het uitvoeren van gdb."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Rapporteer een bug in GNOME"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -420,6 +311,11 @@ msgstr "Eigen e-mailprogramma"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "Debug"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "Korte omschrijving"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -622,6 +518,118 @@ msgstr "product"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Product"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Component"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy kon '%s' niet openen.\n"
+"Controleer of Bug Buddy correct is geïnstalleerd.\n"
+"\n"
+"Bug Buddy zal nu worden beëindigd."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "Alles"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy kon er niet achter komen waar het bugrapport naar toe moest worden "
+"gestuurd.\n"
+"\n"
+"Controleer of Bug Buddy correct geïnstalleerd is.\n"
+"\n"
+"Bug Buddy zal nu worden beëindigd."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "Weer te geven URI bij aanklikken."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Bezocht"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Als de URI al eerder is bezocht."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "Stack-trace wordt opgezocht...(%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
+"'%s' "
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDB kon niet bepalen welk uitvoerbaar bestand\n"
+"'%s' heeft gemaakt"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr ""
+"Er is een fout opgetreden tijdens het lezen. De operatie wordt afgebroken"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDB is niet gevonden op dit systeem.\n"
+"Debuginformatie kan niet verkregen worden."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"De gdb-cmd file kan niet gevonden worden.\n"
+"U kunt BugBuddy het beste opnieuw installeren."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "Er is een fout opgetreden bij het uitvoeren van gdb."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Welkom bij Bug Buddy"
@@ -805,11 +813,3 @@ msgid ""
 msgstr ""
 "Weet u zeker dat u het rapporteren\n"
 "van deze bug wilt afbreken?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "Bug Rapporteer Hulpmiddel"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "Rapporteer een bug in GNOME"

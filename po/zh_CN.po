@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-03-16 21:05+0800\n"
 "Last-Translator: Wang Jian <lark@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -218,116 +218,13 @@ msgstr ""
 "Bug Buddy 无法载入用户界面文件(%s)。\n"
 "请确定 Bug Buddy 安装正确。"
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "错误报告工具"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "产品"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "部件"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "描述"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy 无法打开“%s”。\n"
-"请确定 Bug Buddy 安装正确。"
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "全部"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy 无法载入用户界面文件(%s)。\n"
-"请确定 Bug Buddy 安装正确。"
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "链接"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "点击时显示的链接。"
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "访问过"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "如果以前访问过该链接。"
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "正在获取堆栈跟踪... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"无法用 gdb 处理核心文件：\n"
-"“%s”"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDB 无法确定那个程序生成的\n"
-"“%s”"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "读取错误... 正在中止"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"无法在您的系统上找到 GDB。\n"
-"无法获取调试信息。"
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"无法找到 gdb-cmd 文件。\n"
-"请重新安装 Bug Buddy。"
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "运行 gdb 时发生错误。"
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "报告 GNOME 中的错误"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -399,6 +296,11 @@ msgstr "定制邮件程序"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "调试"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "描述"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -599,6 +501,112 @@ msgstr "产品"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "产品"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "部件"
+
+#: src/bugzilla.c:774
+#, fuzzy, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy 无法打开“%s”。\n"
+"请确定 Bug Buddy 安装正确。"
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "全部"
+
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy 无法载入用户界面文件(%s)。\n"
+"请确定 Bug Buddy 安装正确。"
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "链接"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "点击时显示的链接。"
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "访问过"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "如果以前访问过该链接。"
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "正在获取堆栈跟踪... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"无法用 gdb 处理核心文件：\n"
+"“%s”"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDB 无法确定那个程序生成的\n"
+"“%s”"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "读取错误... 正在中止"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"无法在您的系统上找到 GDB。\n"
+"无法获取调试信息。"
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"无法找到 gdb-cmd 文件。\n"
+"请重新安装 Bug Buddy。"
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "运行 gdb 时发生错误。"
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "欢迎使用 Bug Buddy"
@@ -774,14 +782,6 @@ msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr "您确定要取消这个错误报告吗？"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "错误报告工具"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "报告 GNOME 中的错误"
 
 #~ msgid "%P %%"
 #~ msgstr "%P %%"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.5\n"
-"POT-Creation-Date: 2002-05-22 14:28+0900\n"
+"POT-Creation-Date: 2002-06-19 15:19-0400\n"
 "PO-Revision-Date: 2002-05-22 14:29+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
@@ -229,120 +229,13 @@ msgstr ""
 "버그버디에서 사용자 인터페이스 파일을 (%s) 읽어 들일 수 없습니다.\n"
 "버그버디가 제대로 설치되었는 지 확인하십시오."
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "버그 보고 도구"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "제품명"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "컴포넌트"
-
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
-msgid "Description"
-msgstr "설명"
-
-#: src/bugzilla.c:774
-#, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"버그버디에서 '%s'을(를) 열 수 없습니다.\n"
-"버그버디가 제대로 설치되었는지 확인하십시오.\n"
-"\n"
-"버그버디는 지금 종료합니다."
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "전부"
-
-#: src/bugzilla.c:822
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"버그버디에서 버그를 어디에 제출할 지에 관한 정보를 읽지 못했습니다.\n"
-"\n"
-"버그버디가 제대로 설치되었는 지 확인하십시오.\n"
-"\n"
-"버그버디는 지금 종료합니다."
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "에볼루션"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "클릭했을 때 보여줄 URI."
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "방문했음"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "이 URI를 이전에 방문한 적이 있는 지"
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "stack trace를 얻는 중... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"gdb로 코아 파일을 읽어들일수가 없습니다:\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"gDB에서 어떤 실행 파일이 '%s'을(를) 만들었는 지\n"
-"알 수가 없습니다"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "읽는 도중에 에러 발생.. 중단합니다"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"시스템에서 GDB를 발견할 수가 없습니다.\n"
-"디버깅 정보를 얻을 수가 없을겁니다."
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"gdb-cmd 파일을 발견할 수가 없습니다.\n"
-"버그버디를 다시 설치하십시오."
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "gdb를 실행하는 데 오류가 발생했습니다."
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "그놈 버그 보고"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
@@ -413,6 +306,11 @@ msgstr "사용자 메일 프로그램"
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "디버깅"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "설명"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -612,6 +510,116 @@ msgstr "제품"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "제품명"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "컴포넌트"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"버그버디에서 '%s'을(를) 열 수 없습니다.\n"
+"버그버디가 제대로 설치되었는지 확인하십시오.\n"
+"\n"
+"버그버디는 지금 종료합니다."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "전부"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"버그버디에서 버그를 어디에 제출할 지에 관한 정보를 읽지 못했습니다.\n"
+"\n"
+"버그버디가 제대로 설치되었는 지 확인하십시오.\n"
+"\n"
+"버그버디는 지금 종료합니다."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "클릭했을 때 보여줄 URI."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "방문했음"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "이 URI를 이전에 방문한 적이 있는 지"
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "에볼루션"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "stack trace를 얻는 중... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"gdb로 코아 파일을 읽어들일수가 없습니다:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"gDB에서 어떤 실행 파일이 '%s'을(를) 만들었는 지\n"
+"알 수가 없습니다"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "읽는 도중에 에러 발생.. 중단합니다"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"시스템에서 GDB를 발견할 수가 없습니다.\n"
+"디버깅 정보를 얻을 수가 없을겁니다."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"gdb-cmd 파일을 발견할 수가 없습니다.\n"
+"버그버디를 다시 설치하십시오."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "gdb를 실행하는 데 오류가 발생했습니다."
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "버그버디입니다"
@@ -792,11 +800,3 @@ msgid ""
 msgstr ""
 "이 버그 보고를 정말로\n"
 "취소하시겠습니까?"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "버그 보고 도구"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "그놈 버그 보고"
