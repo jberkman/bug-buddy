@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-18 18:55+0100\n"
-"PO-Revision-Date: 2001-02-13 07:47+01:00\n"
+"POT-Creation-Date: 2001-02-19 20:27+0100\n"
+"PO-Revision-Date: 2001-02-19 20:29+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -638,7 +638,7 @@ msgstr "E-Mail-Info"
 
 #: src/glade-strings.c:66
 msgid "Assbarn Phenomenon"
-msgstr ""
+msgstr "Assbarn Phenomenon"
 
 #: src/glade-strings.c:67
 msgid "Submit another bug"
