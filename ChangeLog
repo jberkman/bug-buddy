@@ -1,5 +1,7 @@
 1999-11-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.glade: spelling mistake
+	
 	* src/bug-buddy.c (on_complete_page_prepare): add a \n
 
 	* src/Makefile.am (EXTRA_DIST): make it distcheck

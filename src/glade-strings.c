@@ -32,7 +32,7 @@ gchar *s = N_("Application crash with core file");
 gchar *s = N_("No crash");
 gchar *s = N_("Crashed Application");
 gchar *s = N_("Please enter the filename and pid of\n"
-              "the aplication that crashed.");
+              "the application that crashed.");
 gchar *s = N_("File");
 gchar *s = N_("Process ID");
 gchar *s = N_("Application Core Dump");

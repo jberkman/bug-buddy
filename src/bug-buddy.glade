@@ -850,7 +850,7 @@ bug you are reporting</label>
 	  <class>GtkLabel</class>
 	  <name>label28</name>
 	  <label>Please enter the filename and pid of
-the aplication that crashed.</label>
+the application that crashed.</label>
 	  <justify>GTK_JUSTIFY_CENTER</justify>
 	  <wrap>False</wrap>
 	  <xalign>0.5</xalign>
