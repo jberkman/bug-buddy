@@ -1,3 +1,8 @@
+2000-06-02  Szabolcs BAN <shooby@gnome.hu>
+
+	* po/hu.po: added po of Greg Nagy <greg@gnome.hu>
+	Hungarian Translation Team rulez
+
 2000-05-21  Jacob Berkman  <jacob@helixcode.com>
 
 	* src/bug-buddy.c (on_debian_page_next): bother the user a bit if
