@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2002-04-30 12:20+0200\n"
+"POT-Creation-Date: 2002-05-07 12:35+0200\n"
 "PO-Revision-Date: 2002-04-23 12:01+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
