@@ -196,7 +196,7 @@ msgstr "Gnomes grafiske fejlrapporteringsværktøj"
 
 #: src/bug-buddy.c:503
 msgid "The lame bug-buddy web page"
-msgstr "Den kedelige fejl-hjælper hjemmeside"
+msgstr "Den kedelige Fejl-hjælper hjemmeside"
 
 #: src/bug-buddy.c:591
 #, c-format
@@ -289,7 +289,7 @@ msgid ""
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "Kunne ikke åbne '%s'.\n"
-"Tjek venligst om fejl-hjælper er korrekt installeret."
+"Tjek venligst om Fejl-hjælper er korrekt installeret."
 
 #: src/bug-buddy.c:1054
 msgid ""
@@ -314,7 +314,7 @@ msgid ""
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "Kunne ikke finde '%s'.\n"
-"Sørg venligst for at fejl-hjælperen er korrekt installeret."
+"Sørg venligst for at Fejl-hjælperen er korrekt installeret."
 
 #: src/gdb-buddy.c:41
 #, c-format
@@ -362,7 +362,7 @@ msgstr "Fejl ved fork()."
 #.
 #: src/glade-strings.c:7
 msgid "bug-buddy"
-msgstr "fejl-hjælper"
+msgstr "Fejl-hjælper"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
