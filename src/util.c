@@ -86,18 +86,31 @@ start_commandv (const char *args[], int *rfd)
 	return pid;
 }
 
+pid_t
+start_command (const char *command, int *fd)
+{
+	char *args[] = { "sh", "-c", NULL, NULL };
+	args[2] = command;
+	return start_commandv (args, fd);
+}
+
 char *
 get_line_from_fd (int fd)
 {
 	char buf[1024];
-	int len;
+	int pos;
 
-	len = read (fd, buf, 1023);
-	if (len == 0)
+	buf[0] = '\0';
+	for (pos = 0; pos < 1023; pos++)
+		if (read (fd, buf+pos, 1) < 1 ||
+		    buf[pos] == '\n')
+			break;
+	
+	if (pos == 0 && buf[0] == '\0')
 		return NULL;
 
-	buf[len] = '\0';
-	return g_strdup (g_strchomp (buf));
+	buf[pos] = '\0';
+	return g_strdup (buf);
 }
 
 char *

@@ -1,3 +1,9 @@
+1999-11-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/util.[ch]: actually read a line at a time
+	
+	* src/distro-debian.c: it works now
+
 1999-11-29  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/util.[ch]:

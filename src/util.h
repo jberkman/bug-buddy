@@ -28,6 +28,7 @@
 void destroy_hash_table (GHashTable *table, gboolean free_data);
 
 pid_t start_commandv (const char *args[], int *fd);
+pid_t start_command (const char *command, int *fd);
 
 char *get_line_from_fd (int fd);
 char *get_line_from_file (const char *filename);

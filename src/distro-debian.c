@@ -63,7 +63,7 @@ get_package_versions (Package packages[])
 {
 	pid_t pid;
 	int argc, fd, status, cur;
-	char **argv, *line;
+	char **argv, *command, *line;
 	Package *package;
 	GHashTable *table;
 	GtkWidget *d;
@@ -76,17 +76,15 @@ get_package_versions (Package packages[])
 			argc++;
 	}
 
-	if (argc == 3)
+	if (argc == 0)
 		return;
 	
-	argv = g_new (char *, argc);
-	argv[0] = "/usr/bin/dpkg";
-	argv[1] = "-l";
+	argv = g_new (char *, argc+1);
 
 	table = g_hash_table_new (g_str_hash, g_str_equal);
 	g_hash_table_freeze (table);
 		
-	for (cur = 0; packages[cur].name; cur++) {
+	for (argc = cur = 0; packages[cur].name; cur++) {
 		if (packages[cur].version ||
 		    !packages[cur].deb)
 			continue;
@@ -99,9 +97,14 @@ get_package_versions (Package packages[])
 	
 	g_hash_table_thaw (table);
 	argv[argc] = NULL;
-
-	pid = start_commandv (argv, &fd);
-
+	line = g_strjoinv (" ", argv);
+	g_free (argv);
+	command = g_strdup_printf ("dpkg -l %s | tail +6 | "
+				   "awk '{ print $2\" \"$3 }'",
+				   line);
+	g_free (line);
+	pid = start_command (command, &fd);
+	g_free (command);
 /* what we are looking at:
 
 Desired=Unknown/Install/Remove/Purge
@@ -111,25 +114,20 @@ Desired=Unknown/Install/Remove/Purge
 ii  gnome-core      1.0.54-1.99.sl Common files for Gnome core apps
 
 */
-	for (cur = 0; cur < 4; cur++) {
-		line = get_line_from_fd (fd);
-		if (!line)
-			return;
-	}
-
 	while ( (line = get_line_from_fd (fd)) ) {
-		argv = g_strsplit (line, " \t", 4);
-		if (!argv[0] || !argv[1] || !argv[2])
+		argv = g_strsplit (line, " ", 2);
+		if (!argv[0] || !argv[1])
 			goto end_while;
-		package = g_hash_table_lookup (table, argv[1]);
+		package = g_hash_table_lookup (table, argv[0]);
 		if (!package)
 			goto end_while;
-		package->version = g_strdup (argv[2]);
+		package->version = g_strdup_printf ("%s %s", 
+						    package->name, argv[1]);
 	end_while:
 		g_strfreev (argv);
 	}
 
-	destroy_hash_table (table, FALSE);
+	g_hash_table_destroy (table);
 	close (fd);
 	kill (pid, SIGTERM);
 	waitpid (pid, &status, 0);
