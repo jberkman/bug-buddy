@@ -66,27 +66,16 @@ set_scroll_size (GtkWidget *w, GtkAllocation *alloc, gpointer data)
 }
 
 static int
-on_ctree_select_row (GtkCTree *ctree, int row /*GList *node*/, int col,
-		     GdkEventButton *evt, gpointer data)
+on_ctree_select_row (GtkCTree *ctree, GList *node, int col, gpointer data)
 {
 	CTreeCombo *combo = data;
 	char *text = NULL;
 
-	g_message ("col: %d, node: %d", col, row);
-
-	gtk_clist_get_text (GTK_CLIST (ctree), row, 0, &text);
-	g_message ("text: %s", text);
-
-	gtk_clist_get_text (GTK_CLIST (ctree), row, 1, &text);
-	g_message ("text: %s", text);
-
-	gtk_clist_get_text (GTK_CLIST (ctree), row, 2, &text);
-	g_message ("text: %s", text);
-
-	gtk_clist_get_text (GTK_CLIST (ctree), row, 3, &text);
-	g_message ("text: %s", text);
-
-	gtk_entry_set_text (GTK_ENTRY (combo->entry), text);
+	gtk_ctree_get_node_info (GTK_CTREE (ctree), GTK_CTREE_NODE (node), 
+				 &text,
+				 NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+				 
+	if (text) gtk_entry_set_text (GTK_ENTRY (combo->entry), text);		
 	gtk_combo_box_popup_hide (GTK_COMBO_BOX (combo));
 	return FALSE;
 }
@@ -116,9 +105,8 @@ ctree_combo_construct (CTreeCombo *cc, gint columns,
 	cc->ctree = gtk_ctree_new_with_titles (columns, tree_column, titles);
 	gtk_clist_set_selection_mode (GTK_CLIST (cc->ctree),
 				      GTK_SELECTION_SINGLE);
-	gtk_signal_connect_after (GTK_OBJECT (cc->ctree), "select-row",
-				  GTK_SIGNAL_FUNC (on_ctree_select_row),
-				  cc);
+	gtk_signal_connect_after (GTK_OBJECT (cc->ctree), "tree-select-row",
+				  GTK_SIGNAL_FUNC (on_ctree_select_row), cc);
 	gtk_widget_show (cc->ctree);
 
 	gtk_scrolled_window_add_with_viewport (
