@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-03-03 15:24+0800\n"
-"PO-Revision-Date: 2002-03-03 15:46+0800\n"
+"POT-Creation-Date: 2002-03-16 21:03+0800\n"
+"PO-Revision-Date: 2002-03-16 21:05+0800\n"
 "Last-Translator: Wang Jian <lark@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
@@ -177,8 +177,8 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Bug Buddy 正在从程序中获取调试信息，请耐心等待一会儿。使用调试信息，"
-"Bug Buddy 能够提供一个更有用的错误报告。"
+"Bug Buddy 正在从程序中获取调试信息，请耐心等待一会儿。使用调试信息，Bug "
+"Buddy 能够提供一个更有用的错误报告。"
 
 #: src/bug-buddy.c:613
 #, c-format
@@ -441,7 +441,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:42
 msgid "Port"
-msgstr ""
+msgstr "端口"
 
 #: src/bug-buddy.glade.h:43
 msgid "Process ID"
@@ -695,12 +695,12 @@ msgstr ""
 "无法打开文件“%s”：\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "将要运行“%s”"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -709,12 +709,12 @@ msgstr ""
 "无法启动邮件程序“%s”：\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "您的错误报告被保存在“%s”"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -729,27 +729,25 @@ msgstr ""
 "\n"
 "非常感谢！"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
-msgstr ""
-"由于 Bug Buddy 不知道您要提交错误报告的产品，您必须"
-"手工生成错误报告。"
+msgstr "由于 Bug Buddy 不知道您要提交错误报告的产品，您必须手工生成错误报告。"
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "您必须为错误报告指定一个产品。"
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "您必须为错误报告指定一个部件。"
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "您必须为错误报告指定一个版本。"
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -759,7 +757,7 @@ msgstr ""
 "\n"
 "感谢您发送此错误报告。"
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
