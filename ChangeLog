@@ -1,5 +1,7 @@
 1999-10-28  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.c: mark more strings for translation
+
 	* src/Makefile.am: install the new .desktop
 
 	* pixmaps/Makefile.am (pixmap_DATA): add bug-buddy.png

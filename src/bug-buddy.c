@@ -114,19 +114,19 @@ struct {
 } druid_data;
 
 static ListData list_data[] = {
-	{ "Operating System", { "uname -a" } },
-	{ "Distribution",  
+	{ N_("Operating System"), { "uname -a" } },
+	{ N_("Distribution"),  
 	  { "( [ -f /etc/debian_version ] && cat /etc/debian_version) ||"
 	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) ||"
 	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
 	    "echo \"\"" } },
-	{ "C library", { "rpm -q glibc",  "rpm -q libc" } },
-	{ "C Compiler", { "gcc --version", "cc -V" } },
-	{ "glib", { "glib-config --version", "rpm -q glib" } },
-	{ "GTK+", { "gtk-config --version", "rpm -q gtk+" } },
-	{ "ORBit", { "orbit-config --version", "rpm -q ORBit" } },
-	{ "gnome-libs", { "gnome-config --version", "rpm -q gnome-libs" } },
-	{ "gnome-core", { "gnome-config --modversion applets", "rpm -q gnome-core" } },
+	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc" } },
+	{ N_("C Compiler"), { "gcc --version", "cc -V" } },
+	{ N_("glib"), { "glib-config --version", "rpm -q glib" } },
+	{ N_("GTK+"), { "gtk-config --version", "rpm -q gtk+" } },
+	{ N_("ORBit"), { "orbit-config --version", "rpm -q ORBit" } },
+	{ N_("gnome-libs"), { "gnome-config --version", "rpm -q gnome-libs" } },
+	{ N_("gnome-core"), { "gnome-config --modversion applets", "rpm -q gnome-core" } },
 	{ NULL }
 };
 
@@ -411,7 +411,7 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 	gtk_clist_get_text (list, row, 1, &s);
 	gtk_entry_set_text (GTK_ENTRY (druid_data.version_edit), s);
 	gtk_clist_get_text (list, row, 0, &s);
-	gtk_label_set_text (GTK_LABEL (druid_data.version_label), s);
+	gtk_label_set_text (GTK_LABEL (druid_data.version_label), _(s));
 }
 
 static void
@@ -552,7 +552,7 @@ init_ui (GladeXML *xml)
 			data->row = -1;
 			continue;
 		}
-		row[0] = data->label;
+		row[0] = _(data->label);
 		data->row = gtk_clist_append (GTK_CLIST (w), row);
 		gtk_clist_set_row_data (GTK_CLIST (w), data->row, data);
 		row[1] = NULL;
