@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=Bug Report Tool
+_Comment=Report a bug in GNOME
+Exec=bug-buddy
+Icon=bug-buddy.png
+Terminal=0
+Type=Application

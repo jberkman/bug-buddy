@@ -788,3 +788,11 @@ msgstr "Σφάλμα στην ανάγνωση..."
 
 #~ msgid "Finish"
 #~ msgstr "Τερματισμός"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Εργαλείο Αναφοράς Σφαλμάτων"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Αναφορά σφαλμάτων του GNOME"

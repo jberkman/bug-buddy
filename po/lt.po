@@ -695,3 +695,11 @@ msgstr "Klaida skaitant..."
 
 #~ msgid "Show products for"
 #~ msgstr "Rodyti produktus ið"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "bug-buddy"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Klaidø praneðimo árankis"

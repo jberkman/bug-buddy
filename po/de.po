@@ -736,3 +736,11 @@ msgstr "Fehler beim Lesen...."
 
 #~ msgid "Summary"
 #~ msgstr "Zusammenfassung"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Fehlermelder"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Einen Fehler bei GNOME melden"

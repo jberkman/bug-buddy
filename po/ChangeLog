@@ -1,3 +1,13 @@
+2001-05-30  Karl Eichwalder  <ke@suse.de>
+
+	* POTFILES.in: Add src/bug-buddy.glade.
+
+	* xml-i18n-toolization using xml-i18n-prepare (0.8.4):
+	* da.po, de.po, el.po, es.po, fi.po, fr.po, gl.po, it.po, ja.po,
+	lt.po, no.po, pt_BR.po, sk.po, sl.po, sv.po, tr.po: Reuse
+	translations from old src/bug-buddy.desktop file.
+	* POTFILES.in: Add src/bug-buddy.desktop.in.
+
 2001-05-24  Carlos Perelló Marín <carlos@gnome-db.org>
 
 	* es.po: Updated Spanish translation.

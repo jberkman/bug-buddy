@@ -695,3 +695,11 @@ msgstr "Error ao ler..."
 
 #~ msgid "Bug Number"
 #~ msgstr "Número do Erro"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Ferramenta de Relatório de Erros"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Informar erro no GNOME"

@@ -771,3 +771,11 @@ msgstr "Fejl ved læsning..."
 
 #~ msgid "The GEGL is watching."
 #~ msgstr "GeGL er altseende."
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Fejl-Frede"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Indberet en fejl i Gnome"

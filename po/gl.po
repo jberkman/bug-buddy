@@ -606,3 +606,11 @@ msgstr "Non foi posible executar '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Erro ó ler..."
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "bug-buddy"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Informe dun erro de GNOME"

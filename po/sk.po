@@ -690,3 +690,11 @@ msgstr "Chyba pri èítaní..."
 
 #~ msgid "Finish"
 #~ msgstr "Dokonèi»"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Nástroj pre oznamovanie chýb"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Nástroj GNOME pre oznamovanie chýb"

@@ -689,3 +689,11 @@ msgstr "読み込みでエラー..."
 
 #~ msgid "Finish"
 #~ msgstr "完了"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "不具合報告ツール"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "GNOMEの不具合報告ツール"

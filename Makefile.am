@@ -12,4 +12,7 @@ bugzilla_DATA = \
 EXTRA_DIST = \
 	bug-buddy.spec.in	\
 	bug-buddy.spec		\
+	xml-i18n-extract.in	\
+	xml-i18n-merge.in	\
+	xml-i18n-update.in	\
 	$(bugzilla_DATA)

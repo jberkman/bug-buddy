@@ -70,7 +70,9 @@ buddy_DATA = \
 	helix-packages
 
 utilsdir = $(datadir)/gnome/apps/Utilities
-utils_DATA = bug-buddy.desktop
+utils_in_files = bug-buddy.desktop.in
+utils_DATA = $(utils_in_files:.desktop.in=.desktop)
+@XML_I18N_MERGE_DESKTOP_RULE@
 
 xmldir = $(datadir)/bug-buddy/xml
 xml_DATA = \

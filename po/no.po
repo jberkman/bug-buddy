@@ -599,3 +599,11 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:114
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Bug Buddy"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Rapportering av feil i GNOME"

@@ -779,3 +779,11 @@ msgstr "Napaka pri branju..."
 
 #~ msgid "Copyright (C) 1999 Jacob Berkman"
 #~ msgstr "Avtorske pravice pridr¾ane (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Orodje za sporoèanje hro¹èev"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Sporoèanje hro¹èev v GNOME-u"

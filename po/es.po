@@ -683,3 +683,11 @@ msgstr "Error al leer..."
 
 #~ msgid "Refresh"
 #~ msgstr "Refrescar"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Herramienta de informe de errores"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Informe de un error en GNOME"

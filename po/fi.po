@@ -611,3 +611,11 @@ msgstr "Ei voinut ajaa '%s'"
 #: src/util.c:114
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "bug-buddy"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Gnome:n graafinen ohjelmavirheiden raportointityökalu"

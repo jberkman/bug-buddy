@@ -689,3 +689,11 @@ msgstr "Okurken hata oldu..."
 
 #~ msgid "Refresh"
 #~ msgstr "Tazele"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Hata rapolayýcýsý"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "GNOME'da hata bulunca bu uygulamayla rapolayabilirsin"

@@ -897,3 +897,11 @@ msgstr "Erreur en lecture..."
 
 #~ msgid "Subprocess exited with status %d"
 #~ msgstr "Fin du processus fils avec la valeur de retour %d"
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Bug Buddy"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Crée un rapport d'anomalies pour GNOME"

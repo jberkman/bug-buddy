@@ -786,3 +786,11 @@ msgstr "Fel vid läsning..."
 
 #~ msgid "The GEGL is watching."
 #~ msgstr "GEGL:en ser oss."
+
+#: src/bug-buddy.desktop.in:3
+msgid "Bug Report Tool"
+msgstr "Felrapporteringsverktyg"
+
+#: src/bug-buddy.desktop.in:4
+msgid "Report a bug in GNOME"
+msgstr "Rapportera ett fel i GNOME"

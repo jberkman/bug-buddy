@@ -1,3 +1,20 @@
+2001-05-30  Karl Eichwalder  <ke@suse.de>
+
+	* Makefile.am (EXTRA_DIST): Add xml-i18n-extract.in
+	xml-i18n-merge.in xml-i18n-update.in.
+	* xml-i18n-extract.in: Add from xml-i18n-tools 0.8.4.
+	* xml-i18n-update.in: Ditto.
+	* xml-i18n-merge.in: Ditto.
+
+	* configure.in: Add AM_PROG_XML_I18N_TOOLS.
+
+	* Start to apply xml-i18n-toolization running xml-i18n-prepare
+	(0.8.4):
+	* src/Makefile.am (utils_in_files): Fix bug-buddy.desktop entry.
+	* src/.cvsignore: Add bug-buddy.desktop.
+	* src/bug-buddy.desktop: Remove file.
+	* src/bug-buddy.desktop.in: New file.
+
 2001-03-28  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.c (delete_me): save the config here
