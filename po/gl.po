@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-08-06 17:14-0400\n"
-"PO-Revision-Date: 2001-04-28 18:29+0200\n"
+"POT-Creation-Date: 2001-08-19 02:47+0200\n"
+"PO-Revision-Date: 2001-08-19 02:48+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -199,9 +199,9 @@ msgstr ""
 
 #: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
-msgstr "Erro ó ler... abortando"
+msgstr "Erro ao ler... abortando"
 
-#: src/gdb-buddy.c:249
+#: src/gdb-buddy.c:248
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -209,7 +209,7 @@ msgstr ""
 "Non se atopou o GDB no seu sistema.\n"
 "Non se obterá a información de depuración."
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:273
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -217,9 +217,9 @@ msgstr ""
 "Non se atopou o ficheiro gdb-cmd.\n"
 "Probe a reinstalar o Bug Buddy."
 
-#: src/gdb-buddy.c:283 src/util.c:76
+#: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
-msgstr "Erro ó facer fork()."
+msgstr "Erro ao facer fork()."
 
 #: src/bug-buddy.glade.h:2
 #, no-c-format
@@ -236,7 +236,7 @@ msgstr "Fenómeno Assbarn"
 
 #: src/bug-buddy.glade.h:5
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Continuar automaticamente co seguinte paso ó rematar a depuración"
+msgstr "Continuar automaticamente co seguinte paso ao rematar a depuración"
 
 #: src/bug-buddy.glade.h:6
 msgid "Automatically go to next page when complete"
@@ -459,7 +459,7 @@ msgstr "sistema"
 
 #: src/united-states-of-bug-buddy.c:42
 msgid "Welcome to Bug Buddy"
-msgstr "Benvido ó Bug Buddy"
+msgstr "Benvido ao Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:43
 msgid "Debugging Information"
@@ -541,9 +541,8 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "Ten que incluír unha descrición comprensible no informe."
 
 #: src/united-states-of-bug-buddy.c:392
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Enviar informe de erro"
+msgstr "¿Enviar agora este informe de erro?"
 
 #: src/united-states-of-bug-buddy.c:406
 #, c-format
@@ -566,7 +565,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "O informe de erro foi gardado en '%s'"
 
 #: src/united-states-of-bug-buddy.c:474
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -575,7 +574,10 @@ msgid ""
 "Thanks!"
 msgstr ""
 "O informe de erro foi enviado a:\n"
+"\n"
 "        <%s>"
+"\n"
+"¡Graciñas!"
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
@@ -608,7 +610,7 @@ msgstr "Non foi posible executar '%s'."
 
 #: src/util.c:114
 msgid "Error on read..."
-msgstr "Erro ó ler..."
+msgstr "Erro ao ler..."
 
 #: src/bug-buddy.desktop.in.h:1
 msgid "Bug Report Tool"
