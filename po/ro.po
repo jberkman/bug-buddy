@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2002-02-04 14:29-0500\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2001-02-16 00:19+0200\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <gnome-ro@pelican.level7.ro>\n"
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Eroare la citire... renunþ"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -273,7 +273,7 @@ msgstr ""
 "GDB nu a putut fi gãsit pe sistemul dvs.\n"
 "Informaþiile de depanare nu vor fi obþinute."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 #, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
@@ -282,7 +282,7 @@ msgstr ""
 "Nu am putut gãsu fiºierul gdb-cmd.\n"
 "Vã rog sã încercaþi sã reinstalaþi bug-buddy."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr ""
 
@@ -692,24 +692,24 @@ msgid ""
 "%s"
 msgstr "Nu pot deschide fiºierul: '%s'"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "pe cale sã rulez '%s'"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, fuzzy, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
 msgstr "Nu pot porni programul de email: '%s'"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Raportul dvs. de probleme a fost salvat în '%s'"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -722,32 +722,32 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "Trebuie sã specificaþi un produs pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "Trebuie sã specificaþi o componentã pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "Trebuie sã specificaþi o versiune pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

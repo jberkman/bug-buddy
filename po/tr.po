@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2002-02-08 07:58-0500\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-02-08 07:58-0500\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -157,7 +157,8 @@ msgid ""
 "It will step you through the process of submitting a bug report."
 msgstr ""
 "GNOME hata raporlama aracý Bug Buddy'ye hoþgeldiniz.\n"
-"Bu program, hata rapor sunmanýzý kolaylaþtýrmak için size rehberlik yapacaktýr."
+"Bu program, hata rapor sunmanýzý kolaylaþtýrmak için size rehberlik "
+"yapacaktýr."
 
 #: src/bug-buddy.c:471
 msgid ""
@@ -183,6 +184,7 @@ msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Resim bulunamadý: %s (%d)\n"
 
 #: src/bug-buddy.c:680
+#, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -194,20 +196,21 @@ msgstr ""
 msgid "ID"
 msgstr "ID"
 
-#: src/bugzilla.c:625 src/bugzilla.c:660 src/bug-buddy.glade.h:44
+#: src/bug-buddy.glade.h:44 src/bugzilla.c:625 src/bugzilla.c:660
 msgid "Product"
 msgstr "Ürün"
 
-#: src/bugzilla.c:631 src/bugzilla.c:700 src/bug-buddy.glade.h:18
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:631 src/bugzilla.c:700
 msgid "Component"
 msgstr "Ýçerik"
 
-#: src/bugzilla.c:637 src/bugzilla.c:678 src/bugzilla.c:706
-#: src/bug-buddy.glade.h:22
+#: src/bug-buddy.glade.h:22 src/bugzilla.c:637 src/bugzilla.c:678
+#: src/bugzilla.c:706
 msgid "Description"
 msgstr "Anlatým"
 
 #: src/bugzilla.c:769
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -254,18 +257,19 @@ msgstr ""
 "'%s'"
 
 #: src/gdb-buddy.c:194
+#, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
-msgstr 
-"GDB, aþaðýdaki dosyanýn hangi uygulama tarafýndan oluþturulduðunu anlayamadý."
-"'%s'"
+msgstr ""
+"GDB, aþaðýdaki dosyanýn hangi uygulama tarafýndan oluþturulduðunu "
+"anlayamadý.'%s'"
 
 #: src/gdb-buddy.c:226
 msgid "Error on read... aborting"
 msgstr "Okurken hata oluþtu... çýkýlýyor"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -273,7 +277,7 @@ msgstr ""
 "GDB sisteminizde bulunamadý.\n"
 "Hatayý ayýklama için gerekli bilgiler toplanamadý."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -281,7 +285,7 @@ msgstr ""
 "gdb-cmd dosyasý bulanamadý.\n"
 "Lütfen bug-buddy'yi yeniden yükleyin."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "Gdb çalýþtýrýlýrken bir hata oluþtu."
 
@@ -676,30 +680,34 @@ msgid "Submit this bug report now?"
 msgstr "Hata raporunu göndermek istiyor musunuz?"
 
 #: src/united-states-of-bug-buddy.c:512
+#, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
-msgstr "'%s' dosyasý açýlamadý:\n"
+msgstr ""
+"'%s' dosyasý açýlamadý:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "'%s' çalýþtýrýlýyor"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
+#, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
-msgstr "E-posta uygulamasý '%s' çalýþtýrýlamadý:\n"
+msgstr ""
+"E-posta uygulamasý '%s' çalýþtýrýlamadý:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Hata raporu `%s''de kadedildi"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -714,7 +722,7 @@ msgstr ""
 "\n"
 "Teþekkürler!"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
@@ -722,19 +730,19 @@ msgstr ""
 "Bug Buddy, sizin hangi ürün için bir hata raporu gönderdiðinizi "
 "bilmediðinden dolayý, hata raporlamasýný elle yapacaksýnýz."
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "Hata raporunuz için bir ürün seçmelisiniz."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "Hata raporunuz için bir içerik seçmelisiniz."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "Hara raporunuz için bir sürüm seçmelisiniz."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -744,7 +752,7 @@ msgstr ""
 "\n"
 "Bu hata mesajýný ilettiðiniz için teþekkürler."
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2002-02-04 14:29-0500\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-01-22 12:40CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -272,7 +272,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Chyba pri čítaní...končím"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -280,7 +280,7 @@ msgstr ""
 "GDB nie je možné nájsť.\n"
 "Ladiace informácie nebude možné získať."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -288,7 +288,7 @@ msgstr ""
 "Nemôžem nájsť súbor pre príkaz gdb-cmd.\n"
 "Prosím, skúste znovu nainštalovať Priateľa v núdzi."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "Nastala chyba počas spustenia gdb."
 
@@ -697,12 +697,12 @@ msgstr ""
 "Nepodarilo sa otvoriť súbor: '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "spúšťam '%s'"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -711,12 +711,12 @@ msgstr ""
 "Nepodarilo sa spustiť poštový program: '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Vaša správa o chybe bola uložená do '%s'"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -731,7 +731,7 @@ msgstr ""
 "\n"
 "Vďaka!"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
@@ -739,19 +739,19 @@ msgstr ""
 "Pretože Priateľ v núdzi nepozná váš produkt, o ktorom chcete poslať správu o "
 "chybe, musíte zadať adresu, kam správu poslať, ručne."
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť produkt."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť komponent."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "Vo vašej správe o chybe musíte uviesť verziu."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -761,7 +761,7 @@ msgstr ""
 "\n"
 "Ďakujeme, že posielate túto správu."
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-03-16 21:03+0800\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-03-16 21:05+0800\n"
 "Last-Translator: Wang Jian <lark@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -271,7 +271,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "读取错误... 正在中止"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -279,7 +279,7 @@ msgstr ""
 "无法在您的系统上找到 GDB。\n"
 "无法获取调试信息。"
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -287,7 +287,7 @@ msgstr ""
 "无法找到 gdb-cmd 文件。\n"
 "请重新安装 Bug Buddy。"
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "运行 gdb 时发生错误。"
 

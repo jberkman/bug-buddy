@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2002-02-04 14:29-0500\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2001-11-19 00:47-0200\n"
 "Last-Translator: Juan Carlos Castro y Castro <jcastro@vialink.com.br>\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -268,7 +268,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Erro de leitura... abortando"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -276,7 +276,7 @@ msgstr ""
 "Não foi encontrado o depurador GDB no seu sistema.\n"
 "Não serão recolhidas informações de depuração."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -284,7 +284,7 @@ msgstr ""
 "Impossível encontrar arquivo gdb-cmd.\n"
 "Por favor, tente reinstalar o Bug Buddy."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "Ocorreu um erro na execução do gdb."
 
@@ -695,12 +695,12 @@ msgstr ""
 "Impossível abrir arquivo '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "prestes a executar '%s'"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -709,12 +709,12 @@ msgstr ""
 "Impossível executar programa de correio '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Seu relatório de erro foi gravado em '%s'"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -729,32 +729,32 @@ msgstr ""
 "\n"
 "Obrigado!"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "Você deve especificar um produto no seu relatório de erro."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "Você deve especificar um componente no seu relatório de erro."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "Você deve especificar uma versão no seu relatório de erro."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

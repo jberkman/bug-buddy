@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2002-03-03 21:58+0100\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-03-04 10:13+0100\n"
 "Last-Translator: Héctor García Álvarez <hector@scouts-es.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -158,8 +158,7 @@ msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
-"Bienvenido a Bug Buddy, una herramienta para informar de fallos "
-"en GNOME.\n"
+"Bienvenido a Bug Buddy, una herramienta para informar de fallos en GNOME.\n"
 "Te guiará a traves del proceso necesario para informar de un fallo."
 
 #: src/bug-buddy.c:471
@@ -276,7 +275,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Error al leer... abortando"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -284,7 +283,7 @@ msgstr ""
 "No se ha podido encontrar GDB en su sistema.\n"
 "No se obtendrá información de depuración."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -292,7 +291,7 @@ msgstr ""
 "No se pudo encontrar el archivo gdb-cmd.\n"
 "Pruebe a reinstalar Bug Buddy."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "Hubo un error ejecutando gdb."
 
@@ -338,8 +337,7 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
-"Bug Buddy usa el correo electrónico para enviar un informe de "
-"fallos.\n"
+"Bug Buddy usa el correo electrónico para enviar un informe de fallos.\n"
 "Por favor elija como le gustaría que Bug Buddy envie el correo.\n"
 "Si elije usar el cliente de correo por defecto de GNOME, esta\n"
 "configuración será compartida con otras aplicaciones de GNOME."
@@ -394,8 +392,7 @@ msgstr "Incluir un archivo de texto"
 
 #: src/bug-buddy.glade.h:29
 msgid "Just save to a file so I can submit a bug report manually"
-msgstr ""
-"Guardalo en un archivo para que pueda enviar el informe manualmente"
+msgstr "Guardalo en un archivo para que pueda enviar el informe manualmente"
 
 #: src/bug-buddy.glade.h:30
 msgid "Location"
@@ -703,12 +700,12 @@ msgstr ""
 "No se puede abrir el archivo '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "apunto de ejecutar '%s'"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -717,12 +714,12 @@ msgstr ""
 "No se puede ejecutar el programa de correo '%s'\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -737,27 +734,27 @@ msgstr ""
 "\n"
 "¡Gracias!"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
-"Dado que Bug Buddy no conoce el producto sobre el que quiere informar de "
-"un error, tendrá que ocuparse del informe de error manualmente."
+"Dado que Bug Buddy no conoce el producto sobre el que quiere informar de un "
+"error, tendrá que ocuparse del informe de error manualmente."
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "Tiene que especificar un producto para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "Tiene que especificar un componente para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "Tiene que especificar una versión para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -768,7 +765,7 @@ msgstr ""
 "\n"
 "Gracias por enviar informes de fallos."
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

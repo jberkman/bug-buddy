@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2002-03-16 09:44+0200\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-03-16 09:44+0200\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -274,7 +274,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Virhe luettaessa...keskeyttää"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -282,7 +282,7 @@ msgstr ""
 "GDB:tä ei löytynyt järjestelmästäsi.\n"
 "Viankorjaustietoja ei haeta."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -290,7 +290,7 @@ msgstr ""
 "Ei löytänyt gdb-cmd -tiedostoa.\n"
 "Asenna Bug Buddy uudelleen."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "Virhe ajettaessa gdb:tä."
 

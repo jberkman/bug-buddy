@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-02-04 14:29-0500\n"
+"POT-Creation-Date: 2002-03-18 12:11-0500\n"
 "PO-Revision-Date: 2002-03-12 19:51+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
@@ -164,7 +164,10 @@ msgid ""
 "\n"
 "\n"
 "You are seeing this because another application has crashed."
-msgstr "\n\n다른 응용프로그램이 비정상 종료했기 때문에 이 프로그램이 실행중입니다."
+msgstr ""
+"\n"
+"\n"
+"다른 응용프로그램이 비정상 종료했기 때문에 이 프로그램이 실행중입니다."
 
 #: src/bug-buddy.c:474
 msgid ""
@@ -172,7 +175,11 @@ msgid ""
 "\n"
 "Please wait a few moments while Bug Buddy obtains debugging information from "
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
-msgstr "\n\n버그버디에서 응용프로그램의 디버깅 정보를 얻어 오는 몇 분간 기다려 주십시오.  이 디버깅 정보가 있으면 더욱 유용한 버그 보고서를 제출할 수 있습니다."
+msgstr ""
+"\n"
+"\n"
+"버그버디에서 응용프로그램의 디버깅 정보를 얻어 오는 몇 분간 기다려 주십시"
+"오.  이 디버깅 정보가 있으면 더욱 유용한 버그 보고서를 제출할 수 있습니다."
 
 #: src/bug-buddy.c:613
 #, c-format
@@ -265,7 +272,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "읽는 도중에 에러 발생.. 중단합니다"
 
-#: src/gdb-buddy.c:271
+#: src/gdb-buddy.c:272
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -273,7 +280,7 @@ msgstr ""
 "시스템에서 GDB를 발견할 수가 없습니다.\n"
 "디버깅 정보를 얻을 수가 없을겁니다."
 
-#: src/gdb-buddy.c:305
+#: src/gdb-buddy.c:306
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -281,7 +288,7 @@ msgstr ""
 "gdb-cmd 파일을 발견할 수가 없습니다.\n"
 "버그버디를 다시 설치하십시오."
 
-#: src/gdb-buddy.c:325
+#: src/gdb-buddy.c:326
 msgid "There was an error running gdb."
 msgstr "gdb를 실행하는 데 오류가 발생했습니다."
 
@@ -422,7 +429,8 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
-"보고하려는 버그가 가장 자주 보고되는 버그 중에 들어 있다면 잠시 기다려 주십시오.\n"
+"보고하려는 버그가 가장 자주 보고되는 버그 중에 들어 있다면 잠시 기다려 주십시"
+"오.\n"
 "버그가 이미 보고되어 있다면, 또 보고하지는 말아 주십시오."
 
 #: src/bug-buddy.glade.h:40
@@ -689,12 +697,12 @@ msgstr ""
 "'%s' 파일을 열수가 없습니다:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid "about to run '%s'"
 msgstr "'%s'을 실행할려고 함"
 
-#: src/united-states-of-bug-buddy.c:535
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -703,12 +711,12 @@ msgstr ""
 "메일 프로그램('%s')을 시작할 수가 없습니다:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:572
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "버그 보고가 '%s'에 저장되었습니다"
 
-#: src/united-states-of-bug-buddy.c:574
+#: src/united-states-of-bug-buddy.c:575
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -723,35 +731,38 @@ msgstr ""
 "\n"
 "고맙습니다!"
 
-#: src/united-states-of-bug-buddy.c:628
+#: src/united-states-of-bug-buddy.c:630
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
-msgstr "버그를 보고하려는 제품을 버그버디에서 모르기 때문에, 직접 손으로 버그 레포트를 써야 할 것입니다."
+msgstr ""
+"버그를 보고하려는 제품을 버그버디에서 모르기 때문에, 직접 손으로 버그 레포트"
+"를 써야 할 것입니다."
 
-#: src/united-states-of-bug-buddy.c:649
+#: src/united-states-of-bug-buddy.c:651
 msgid "You must specify a product for your bug report."
 msgstr "버그 보고에는 제품이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:672
+#: src/united-states-of-bug-buddy.c:674
 msgid "You must specify a component for your bug report."
 msgstr "버그 보고에는 컴포넌트 이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:686
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a version for your bug report."
 msgstr "버그 보고에는 버전을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:767
+#: src/united-states-of-bug-buddy.c:769
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
-"전자우편 프로그램을 실행했습니다.  전자우편 프로그램으로 이동해 편지를 보내십시오.\n"
+"전자우편 프로그램을 실행했습니다.  전자우편 프로그램으로 이동해 편지를 보내십"
+"시오.\n"
 "\n"
 "이 버그를 보고해 주셔서 고맙습니다."
 
-#: src/united-states-of-bug-buddy.c:794
+#: src/united-states-of-bug-buddy.c:796
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -25,6 +25,7 @@ EXTRA_DIST = \
 	intltool-merge.in	\
 	intltool-update.in	\
 	COPYING.ximian-logos	\
+	xmldocs.make		\
 	$(bugzilla_DATA)
 
 # this should probably be run at dist time or something
