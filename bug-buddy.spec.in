@@ -14,7 +14,6 @@ Group: Applications/System
 Source: ftp://ftp.gnome.org/pub/sources/bug-buddy-%{ver}.tar.gz
 URL: http://www.andrew.cmu.edu/~jberkman/bug-buddy/
 BuildRoot: /var/tmp/bug-buddy-root
-Prereq: /sbin/installinfo
 Docdir: %{prefix}/doc
 
 Requires: gtk+ >= 1.2.1
