@@ -1,0 +1,461 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy\n"
+"POT-Creation-Date: 2000-01-15 21:56+0100\n"
+"PO-Revision-Date: 2000-01-15 21:56+0100\n"
+"Last-Translator: GNOME PL Team\n"
+"Language-Team: Polish <gnomepl@pandora.info.bielsko.pl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/gdb-buddy.c:41
+msgid "obtaining stack trace..."
+msgstr ""
+
+#: src/bug-buddy.c:298 src/gdb-buddy.c:82
+msgid "gdb has already exited"
+msgstr "gdb zosta³ ju¿ zakoñczony"
+
+#: src/gdb-buddy.c:91
+#, c-format
+msgid "Subprocess exited with status %d"
+msgstr "Proces potomny zakoñczy³ siê zwracaj±c stan %d"
+
+#: src/gdb-buddy.c:119
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Nie mo¿na przetworzyæ pliku core za pomoc± gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:144
+#, c-format
+msgid "Child process exited with status %d"
+msgstr "Proces potomny zakoñczy³ siê zwracaj±c stan %d"
+
+#: src/gdb-buddy.c:147
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+
+#: src/gdb-buddy.c:178
+msgid "Error on read... aborting"
+msgstr "B³±d  przy odczycie... rezygnacja"
+
+#: src/gdb-buddy.c:210
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"Nie mo¿na odnale¼æ pliku gdb-cmd.\n"
+"Spróbuj przeinstalowaæ bug-buddy."
+
+#: src/gdb-buddy.c:218
+msgid "Error on fork()."
+msgstr "B³±d przy wywo³aniu fork()."
+
+#: src/bug-buddy.c:70
+msgid "critical"
+msgstr "krytyczny"
+
+#: src/bug-buddy.c:71
+msgid "grave"
+msgstr "powa¿ny"
+
+#: src/bug-buddy.c:72
+msgid "normal"
+msgstr "zwyk³y"
+
+#: src/bug-buddy.c:73
+msgid "wishlist"
+msgstr "¿yczenie"
+
+#: src/bug-buddy.c:77
+msgid "software bug"
+msgstr "b³±d w programie"
+
+#: src/bug-buddy.c:78
+msgid "documentation bug"
+msgstr "b³±d w dokumentacji"
+
+#: src/bug-buddy.c:79
+msgid "change request"
+msgstr "pro¶ba o zmianê"
+
+#: src/bug-buddy.c:80
+msgid "support"
+msgstr "wsparcie"
+
+#: src/bug-buddy.c:88
+msgid "Contact's name"
+msgstr "Nazwa kontaktu"
+
+#: src/bug-buddy.c:88
+msgid "NAME"
+msgstr "NAZWA"
+
+#: src/bug-buddy.c:89
+msgid "Contact's email address"
+msgstr "Adres e-mail kontaktu"
+
+#: src/bug-buddy.c:89
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:90
+msgid "Package of the program"
+msgstr "Pakiet zawieraj±cy program"
+
+#: src/bug-buddy.c:90
+msgid "PACKAGE"
+msgstr "PAKIET"
+
+#: src/bug-buddy.c:91
+msgid "Version of the package"
+msgstr "Wersja pakietu"
+
+#: src/bug-buddy.c:91
+msgid "VERSION"
+msgstr "WERSJA"
+
+#: src/bug-buddy.c:92
+msgid "Crashed file name"
+msgstr ""
+
+#: src/bug-buddy.c:92 src/bug-buddy.c:94
+msgid "FILE"
+msgstr "PLIK"
+
+#: src/bug-buddy.c:93
+msgid "PID of crashed app"
+msgstr "PID b³êdnej aplikacji"
+
+#: src/bug-buddy.c:93
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:94
+msgid "core file from app"
+msgstr "plik core aplikacji"
+
+#: src/bug-buddy.c:290
+msgid ""
+"gdb has not finished getting thedebugging information.\n"
+"Kill the gdb process (the stack tracewill be incomplete)?"
+msgstr ""
+
+#: src/bug-buddy.c:341
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Copyright (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:343
+msgid "The GNOME graphical bug reporting tool"
+msgstr ""
+
+#: src/bug-buddy.c:350
+msgid "The lame bug-buddy web page"
+msgstr ""
+
+#: src/bug-buddy.c:422
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a but report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+
+#: src/bug-buddy.c:459
+msgid "Please enter your name and email address"
+msgstr "Wprowad¼ swoje imiê i nazwisko oraz adres e-mail"
+
+#: src/bug-buddy.c:499
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+"Kliknij \"Zakoñcz\" aby zakoñczyæ bug-buddy.\n"
+"Powiadomienie o b³êdzie nie zostanie wys³ane."
+
+#: src/bug-buddy.c:522
+#, c-format
+msgid ""
+"You are about to save a bug report in '%s'.\n"
+"This can later be used to report a bug in '%s'."
+msgstr ""
+
+#: src/bug-buddy.c:527
+#, c-format
+msgid ""
+"You are about to report a bug in '%s'.\n"
+"\n"
+"This will be submitted via email:\n"
+"To: %s\n"
+"From: %s <%s>\n"
+"Subject: %s\n"
+"\n"
+"Clicking on 'Finish' will submit the bug report."
+msgstr ""
+
+#: src/bug-buddy.c:639
+msgid "Please choose a file to save to."
+msgstr ""
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Plik '%s' istnieje.\n"
+"Nadpisaæ go?"
+
+#: src/bug-buddy.c:759
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Nie mo¿na otworzyæ '%s'.\n"
+"Upewnij siê, ¿e bug-buddy zosta³ zainstalowany poprawnie."
+
+#: src/bug-buddy.c:855
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:868
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+" Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:974
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Nie mo¿na odnale¼æ '%s'.\n"
+"Upewnij siê, ¿e bug-buddy zosta³ zainstalowany poprawnie."
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "all will be revealed."
+msgstr ""
+
+#: src/glade-strings.c:9
+msgid "Contact Information"
+msgstr "Informacje kontaktowe"
+
+#: src/glade-strings.c:10
+msgid "Email Address"
+msgstr "Adres e-mail"
+
+#: src/glade-strings.c:11
+msgid "Your Name"
+msgstr "Twoje imiê i nazwisko"
+
+#: src/glade-strings.c:12
+msgid ""
+"Enter your name and email address, so you will be notified when the\n"
+"bug is resolved, or for developers to request more information from you."
+msgstr ""
+"Wprowad¼ swoje imiê i nazwisko oraz adres e-mail, aby mo¿liwe by³o\n"
+"powiadomienie ciê o poprawieniu b³êdu, lub gdy twórcy aplikacji bêd±\n"
+"potrzebowali od ciebie wiêcej informacji."
+
+#: src/glade-strings.c:14
+msgid "Bug Track System"
+msgstr "System ¶ledzenia b³êdów"
+
+#: src/glade-strings.c:15
+msgid ""
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+
+#: src/glade-strings.c:18
+msgid "Choose which sendmail to use"
+msgstr "Wybór wykorzystywanego sendmaila"
+
+#: src/glade-strings.c:19
+msgid "Full path of sendmail"
+msgstr "Pe³na ¶cie¿ka sendmaila"
+
+#: src/glade-strings.c:20
+msgid "System Configuration"
+msgstr "Konfiguracja systemu"
+
+#: src/glade-strings.c:21
+msgid "Please verify that this information is correct"
+msgstr "Zweryfikuj poprawno¶æ poni¿szych informacji"
+
+#: src/glade-strings.c:22 src/glade-strings.c:32
+msgid "Package"
+msgstr "Pakiet"
+
+#: src/glade-strings.c:23
+msgid "Version installed"
+msgstr "Zainstalowana wersja"
+
+#: src/glade-strings.c:24
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:25
+msgid "Automatically go to next page when complete"
+msgstr "Automatyczne przej¶cie na nastêpn± stronê po zakoñczeniu"
+
+#: src/glade-strings.c:26
+msgid "Report Information"
+msgstr "Informacje o zg³oszeniu"
+
+#: src/glade-strings.c:27 src/glade-strings.c:55
+msgid "Action"
+msgstr "Akcja"
+
+#: src/glade-strings.c:28
+msgid "File a new bug report"
+msgstr "Wype³nienie nowego zg³oszenia b³êdu"
+
+#: src/glade-strings.c:29
+msgid "Add information to an existing bug report"
+msgstr "Dodanie informacji do istniej±cego zg³oszenia"
+
+#: src/glade-strings.c:30
+msgid "Version"
+msgstr "Wersja"
+
+#: src/glade-strings.c:31
+msgid "Class"
+msgstr "Klasa"
+
+#: src/glade-strings.c:33
+msgid "Severity"
+msgstr "Powaga"
+
+#: src/glade-strings.c:34
+msgid "Bug Number"
+msgstr "Numer b³êdu"
+
+#: src/glade-strings.c:35
+msgid "Description"
+msgstr "Opis"
+
+#: src/glade-strings.c:36
+msgid "Short subject for the bug report"
+msgstr "Krótki temat zg³oszenia b³êdu"
+
+#: src/glade-strings.c:37
+msgid "Full description of the bug"
+msgstr "Pe³ny opis b³êdu"
+
+#: src/glade-strings.c:38
+msgid "More Information"
+msgstr "Wiêcej informacji"
+
+#: src/glade-strings.c:39
+msgid "Detailed instructions on how to reproduce the bug"
+msgstr "Szczegó³owe instrukcje pozwalaj±ce powtórzyæ b³±d"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "W³±czony plik tekstowy"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Informacje o b³êdzie"
+
+#: src/glade-strings.c:42
+msgid "How to collect debugging information"
+msgstr "Sposób zebrania informacji o b³êdzie"
+
+#: src/glade-strings.c:43
+msgid "Attach to a crashed application"
+msgstr "Przy³±czenie do b³êdnej aplikacji"
+
+#: src/glade-strings.c:44
+msgid "Read from a core file"
+msgstr "Odczyt z pliku core"
+
+#: src/glade-strings.c:45
+msgid "Skip this step"
+msgstr "Pominiêcie tego kroku"
+
+#: src/glade-strings.c:46
+msgid "Binary"
+msgstr "Plik z kodem binarnym"
+
+#: src/glade-strings.c:47
+msgid "Process ID"
+msgstr "ID procesu"
+
+#: src/glade-strings.c:48
+msgid "Select the crashed application's binary"
+msgstr "Wybór pliku z kodem binarnym b³êdnej aplikacji"
+
+#: src/glade-strings.c:49
+msgid "Core file"
+msgstr "Plik core"
+
+#: src/glade-strings.c:50
+msgid "Select a core file"
+msgstr "Wybór pliku core"
+
+#: src/glade-strings.c:51
+msgid "Collecting Debugging Information"
+msgstr "Zbieranie informacji o b³êdzie"
+
+#: src/glade-strings.c:52
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Proszê poczekaæ na zebranie\n"
+"informacji o b³êdzie..."
+
+#: src/glade-strings.c:54
+msgid "Submitting the Report"
+msgstr "Wysy³anie zg³oszenia"
+
+#: src/glade-strings.c:56
+msgid "Submit bug report"
+msgstr "Wys³anie zg³oszenia b³êdu"
+
+#: src/glade-strings.c:57
+msgid "Send report to your email address only"
+msgstr "Wys³anie zg³oszenia tylko pod w³asny adres e-mail"
+
+#: src/glade-strings.c:58
+msgid "Save the report to a file"
+msgstr "Zapis zg³oszenia do pliku"
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr "Zapis zg³oszenia do pliku"
+
+#: src/glade-strings.c:60
+msgid "Summary"
+msgstr "Podsumowanie"
+
+#: src/glade-strings.c:61
+msgid "The GEGL is watching."
+msgstr ""
