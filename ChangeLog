@@ -1,3 +1,8 @@
+2002-01-16  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: add et translation from Ilmar Kerm
+	<ilmar.kerm@riigikontroll.ee>
+
 2002-01-14  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.c (init_ui): reverse the text direction of the
