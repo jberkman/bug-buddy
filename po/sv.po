@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-02-12 11:52+0100\n"
-"PO-Revision-Date: 2001-02-12 12:18+0100\n"
+"POT-Creation-Date: 2001-02-12 22:03+0100\n"
+"PO-Revision-Date: 2001-02-12 22:08+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -265,7 +265,7 @@ msgstr ""
 "Filen \"%s\" finns redan.\n"
 "Vill du skriva över filen?"
 
-#: src/bug-buddy.c:847 src/glade-strings.c:70
+#: src/bug-buddy.c:847 src/glade-strings.c:69
 msgid "About"
 msgstr "Om"
 
@@ -281,14 +281,14 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Uppdatera"
 
-#: src/bug-buddy.c:896 src/bugzilla.c:556
+#: src/bug-buddy.c:896
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunde inte öppna \"%s\".\n"
-"Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
+"Var vänlig och försäkra dig om att Bug Buddy installerats korrekt."
 
 #: src/bug-buddy.c:1144
 msgid ""
@@ -310,14 +310,23 @@ msgstr ""
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunde inte läsa in \"%s\".\n"
-"Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
+"Var vänlig och försäkra dig om att Bug Buddy installerats korrekt."
 
 #: src/bugzilla.c:441
 msgid "Are you sure you want to cancel this update?"
 msgstr "Är du säker på att du vill avbryta denna uppdatering?"
+
+#: src/bugzilla.c:556
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Kunde inte öppna \"%s\".\n"
+"Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
 
 #: src/bugzilla.c:567
 msgid "All"
@@ -328,7 +337,7 @@ msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
 "\n"
-"Should Bug Buddy try and update these files now?"
+"Should Bug Buddy try to update these files now?"
 msgstr ""
 "Bug Buddy har kommit fram till att en del av dess information\n"
 "om de olika felsökningssystemen kanske behöver uppdateras.\n"
@@ -504,7 +513,7 @@ msgstr "Sparar:"
 msgid "To:"
 msgstr "Till:"
 
-#: src/glade-strings.c:40 src/glade-strings.c:57
+#: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
 msgstr "%P %%"
 
@@ -521,105 +530,101 @@ msgstr ""
 msgid "Product"
 msgstr "Produkt"
 
-#: src/glade-strings.c:44 src/glade-strings.c:50
+#: src/glade-strings.c:44 src/glade-strings.c:49
 msgid "Description"
 msgstr "Beskrivning"
 
 #: src/glade-strings.c:45
-msgid "Show products for"
-msgstr "Visa produkter för"
+msgid "Bug tracking system"
+msgstr "Felsökningssystem"
 
 #: src/glade-strings.c:46
-msgid "bug tracking systems."
-msgstr "felsökningssystem."
-
-#: src/glade-strings.c:47
 msgid "product"
 msgstr "produkt"
 
-#: src/glade-strings.c:48
+#: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
 msgstr "Var vänlig och välj en komponent, version och allvarlighetsgrad."
 
-#: src/glade-strings.c:49 src/united-states-of-bug-buddy.c:46
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 msgid "Component"
 msgstr "Komponent"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:50
 msgid "Version"
 msgstr "Version"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:51
 msgid "Severity"
 msgstr "Allvarlighetsgrad"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:52
 msgid "component"
 msgstr "komponent"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:53
 msgid ""
-"Please wait while bug-buddy determines some information about your system."
+"Please wait while Bug Buddy determines some information about your system."
 msgstr ""
-"Var vänlig och vänta medan bug-buddy samlar in information om ditt system."
+"Var vänlig och vänta medan Bug Buddy samlar in information om ditt system."
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:54
 msgid "Package"
 msgstr "Programpaket"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "Installerad version"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "Gå automatiskt till den följande sidan när aktuell sida är klar"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:58
 msgid "system"
 msgstr "system"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:59
 msgid "Select an action"
 msgstr "Välj en åtgärd"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:60
 msgid "Cc"
 msgstr "Kopia"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:61
 msgid "To"
 msgstr "Till"
 
-#: src/glade-strings.c:63
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "Skicka en kopia till dig själv"
 
-#: src/glade-strings.c:64
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "Spara rapporten till..."
 
-#: src/glade-strings.c:65
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "Innehåll"
 
-#: src/glade-strings.c:66
+#: src/glade-strings.c:65
 msgid "email info"
 msgstr "e-postinformation"
 
-#: src/glade-strings.c:67
+#: src/glade-strings.c:66
 msgid "Assbarn Phenomeon"
 msgstr "Assbarn-fenomenet"
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:67
 msgid "Submit another bug"
 msgstr "Skicka ytterligare en bugg"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:68
 msgid "finished"
 msgstr "slutförd"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:70
 msgid "Finish"
 msgstr "Slutför"
 
@@ -656,8 +661,8 @@ msgid "The graphical bug reporting tool for GNOME."
 msgstr "GNOME:s grafiska verktyg för felrapportering."
 
 #: src/united-states-of-bug-buddy.c:95
-msgid "The lame bug-buddy web page"
-msgstr "Bug-buddys lama hemsida"
+msgid "The lame Bug Buddy web page"
+msgstr "Bug Buddys lama hemsida"
 
 #: src/united-states-of-bug-buddy.c:273
 #, c-format
@@ -716,6 +721,9 @@ msgstr "Kunde inte köra \"%s\"."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Fel vid läsning..."
+
+#~ msgid "Show products for"
+#~ msgstr "Visa produkter för"
 
 #~ msgid "Collect debugging information from a crashed application"
 #~ msgstr "Sammanställ felsökningsinformation från en kraschad applikation"
