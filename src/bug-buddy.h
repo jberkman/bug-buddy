@@ -25,6 +25,7 @@
 #include <glade/glade.h>
 #include <sys/types.h>
 #include "distro.h"
+#include "bts.h"
 
 #define SUBMIT_ADDRESS "@bugs.gnome.org"
 
@@ -49,26 +50,8 @@ typedef enum {
 typedef struct {
 	GtkWidget *the_druid;
 
-	GtkWidget *action;
-	GtkWidget *attach;
-	GtkWidget *core;
-	GtkWidget *less;
-	GtkWidget *nature;
-
-	GtkWidget *gdb_text;
-	GtkWidget *gdb_anim;
-	GtkWidget *app_file;
-	GtkWidget *pid;
-	GtkWidget *core_file;
-
-	GtkWidget *version_edit;
-	GtkWidget *version_label;
-	GtkWidget *version_list;
 	int selected_row;
 	Distribution *distro;
-
-	GtkWidget *stop_button;
-	GtkWidget *refresh_button;
 
 	CrashType crash_type;
 	SubmitType submit_type;
@@ -85,10 +68,17 @@ typedef struct {
 	GIOChannel *ioc;
 	int fd;
 
+	char *project;
+	BugTrackingSystem *bts;
+
+	GSList *projects;
+	GSList *packages;
 	gboolean explicit_dirty;
 } DruidData;
 
 extern DruidData druid_data;
+extern const gchar *severity[];
+extern const gchar *bug_class[][2];
 
 void get_trace_from_core (const gchar *core_file);
 void get_trace_from_pair (const gchar *app, const gchar *extra);

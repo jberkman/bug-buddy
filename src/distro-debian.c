@@ -26,11 +26,11 @@
 #include <signal.h>
 
 #include <gnome.h>
-#include "distro-debian.h"
+#include "distro.h"
 #include "util.h"
 
 static char *get_debian_version (Distribution *distro);
-static void get_package_versions (Package packages[]);
+static void get_package_versions (GSList *packages);
 
 Phylum debian_phy = { 
 	get_debian_version,
@@ -59,19 +59,22 @@ get_debian_version (Distribution *distro)
 }
 
 static void
-get_package_versions (Package packages[])
+get_package_versions (GSList *packages)
 {
 	pid_t pid;
 	int argc, fd, status, cur;
 	char **argv, *command, *line;
 	Package *package;
 	GHashTable *table;
+	GSList *list;
 
 	g_return_if_fail (packages);
 	
-	for (argc = cur = 0; packages[cur].name; cur++) {
-		if (!packages[cur].version &&
-		    packages[cur].deb)
+	argc = 0;
+	for (list = packages; list; list = g_slist_next (list)) {
+		package = list->data;
+		if (!package->version &&
+		    package->deb)
 			argc++;
 	}
 
@@ -83,14 +86,16 @@ get_package_versions (Package packages[])
 	table = g_hash_table_new (g_str_hash, g_str_equal);
 	g_hash_table_freeze (table);
 		
-	for (argc = cur = 0; packages[cur].name; cur++) {
-		if (packages[cur].version ||
-		    !packages[cur].deb)
+	argc = 0;
+	for (list = packages; list; list = g_slist_next (list)) {
+		package = list->data;
+		if (package->version ||
+		    !package->deb)
 			continue;
-		argv[argc] = packages[cur].deb;
+		argv[argc] = package->deb;
 		g_hash_table_insert (table, 
-				     g_strdup (packages[cur].deb),
-				     &packages[cur]);
+				     package->deb,
+				     package);
 		argc++;
 	}
 	

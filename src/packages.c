@@ -18,6 +18,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  */
+#include <stdio.h>
+main() {
 const char *packages[] = { "audiofile",
 			   "balsa",
 			   "bonobo",
@@ -82,3 +84,7 @@ const char *packages[] = { "audiofile",
 			   "www.gnome.org",
 	                   "xchat",
 			   0 };
+ int i;
+ for (i=0; packages[i]; i++)
+	 puts (packages[i]);
+}

@@ -11,15 +11,15 @@ INCLUDES = \
 bin_PROGRAMS = bug-buddy
 
 bug_buddy_SOURCES = \
+	bts.c		\
+	bts.h		\
+	bts-debian.c	\
 	bug-buddy.c	\
 	bug-buddy.h	\
 	distro.h	\
 	distro-debian.c	\
-	distro-debian.h	\
 	distro-redhat.c	\
-	distro-redhat.h	\
 	gdb-buddy.c	\
-	packages.c	\
 	util.c		\
 	util.h
 
@@ -45,13 +45,28 @@ mime_DATA = \
 	bug-buddy.keys	\
 	bug-buddy.mime
 
+debian-packages: Makefile.am
+	grep -h ^Package $(DEBIAN_ROOT)/var/state/apt/lists/*_Packages | \
+	sort -r | awk '{ print $$2 }' > debian-packages
+
+gnome-packages: Makefile.am $(top_srcdir)/debbugs/Maintainers
+	sort -r $(top_srcdir)/debbugs/Maintainers | \
+	awk '{ print $$1 }' > gnome-packages
+
 buddy_DATA = \
 	bug-buddy.glade	\
 	prog.bugmap	\
-	gdb-cmd
+	gdb-cmd		\
+	gnome-packages	\
+	debian-packages
 
 utilsdir = $(datadir)/gnome/apps/Utilities
 utils_DATA = bug-buddy.desktop
+
+xmldir = $(datadir)/bug-buddy/xml
+xml_DATA = \
+	GNOME.bts	\
+	Debian.bts
 
 EXTRA_DIST = \
 	glade-strings.c	\
@@ -59,6 +74,3 @@ EXTRA_DIST = \
 	$(utils_DATA)	\
 	bug-buddy.mime	\
 	bug-buddy.keys.in
-
-
-

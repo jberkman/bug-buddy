@@ -5,3 +5,5 @@ Makefile
 bug-buddy
 gnome-crash
 bug-buddy.keys
+debian-packages
+gnome-packages

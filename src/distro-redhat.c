@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#include "distro-redhat.h"
+#include "distro.h"
 #include "util.h"
 
 static char *get_redhat_version (Distribution *distro);
-static void get_package_versions (Package packages[]);
+static void get_package_versions (GSList *packages);
 
 Phylum redhat_phy = { 
 	get_redhat_version,
@@ -40,20 +40,28 @@ get_redhat_version (Distribution *distro)
 }
 
 static void
-get_package_versions (Package packages[])
+get_version_from_rpm (gpointer data, gpointer udata)
+{
+	const char **args = udata;
+	Package *package = data;
+
+	if (package->version ||
+	    !package->rpm)
+		return;
+
+	args[2] = package->rpm;
+	package->version = get_line_from_commandv (args);
+}
+
+static void
+get_package_versions (GSList *packages)
 {
 	int i;
 	const char *args[] = { "rpm", "-q", NULL, NULL };
 
 	g_return_if_fail (packages);
 
-	for (i = 0; packages[i].name; i++) {
-		if (packages[i].version ||
-		    !packages[i].rpm)
-			continue;
-		args[2] = packages[i].rpm;
-		packages[i].version = get_line_from_commandv (args);
-	}
+	g_slist_foreach (packages, get_version_from_rpm, args);
 }
 
 

@@ -159,4 +159,38 @@ get_line_from_file (const char *filename)
 	return retval;
 }
 
+#define LINE_WIDTH 72
+static void
+write_line_width (FILE *fp, char *s)
+{
+	gchar *sp;
+	if (!s) return;
 
+	if (strlen (s) < LINE_WIDTH) {
+		fprintf (fp, "%s\n", s);
+		return;
+	}
+
+	for (sp = s+LINE_WIDTH; sp > s && !isspace (*sp); sp--)
+		;
+
+	if (s == sp) sp = strpbrk (s+LINE_WIDTH, "\t\n ");
+       
+	if (sp)	*sp = '\0';
+
+	fprintf (fp, "%s\n", s);
+
+	if (sp) write_line_width (fp, sp+1);
+}
+
+void
+write_line_widthv (FILE *fp, const char *s)
+{
+	int i;
+	gchar **sv = g_strsplit (s, "\n", 0);
+	
+	for (i = 0; sv[i]; i++)
+		write_line_width (fp, sv[i]);
+	
+	g_strfreev (sv);
+}

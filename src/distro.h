@@ -22,12 +22,14 @@
 #ifndef __DISTRO_H__
 #define __DISTRO_H__
 
+#include <glib.h>
+
 typedef struct _Package      Package;
 typedef struct _Phylum       Phylum;
 typedef struct _Distribution Distribution;
 
 typedef char *(*DistroVersionFunc) (Distribution *distro);
-typedef void (*PackageVersionsFunc) (Package packages[]);
+typedef void (*PackageVersionsFunc) (GSList *packages);
 
 struct _Package {
 	char *name;
@@ -50,5 +52,8 @@ struct _Distribution {
 	char *version_file;
 	Phylum *phylum;
 };
+
+extern Phylum debian_phy;
+extern Phylum redhat_phy;
 
 #endif /* __DISTRO_H__ */

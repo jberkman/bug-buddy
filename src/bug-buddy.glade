@@ -289,7 +289,8 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <name>bts_menu</name>
 	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
-	    <items>GNOME
+	    <items>
+
 </items>
 	    <initial_choice>0</initial_choice>
 	    <child>
@@ -341,7 +342,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
 	      <text_max_length>0</text_max_length>
-	      <text>/home/jberkman/</text>
+	      <text></text>
 	    </widget>
 	  </widget>
 
@@ -600,7 +601,7 @@ bug is resolved, or for developers to request more information from you.</label>
 
     <widget>
       <class>GnomeDruidPageStandard</class>
-      <name>package_page</name>
+      <name>debian_page</name>
       <cxx_use_heap>True</cxx_use_heap>
       <title>Report Information</title>
       <title_color>255,255,255</title_color>
@@ -705,7 +706,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <name>newbug_table</name>
 	    <cxx_use_heap>True</cxx_use_heap>
 	    <rows>4</rows>
-	    <columns>2</columns>
+	    <columns>3</columns>
 	    <homogeneous>False</homogeneous>
 	    <row_spacing>5</row_spacing>
 	    <column_spacing>5</column_spacing>
@@ -770,31 +771,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    </widget>
 
 	    <widget>
-	      <class>GtkEntry</class>
-	      <name>version_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
-	      <can_focus>True</can_focus>
-	      <editable>True</editable>
-	      <text_visible>True</text_visible>
-	      <text_max_length>0</text_max_length>
-	      <text></text>
-	      <child>
-		<left_attach>1</left_attach>
-		<right_attach>2</right_attach>
-		<top_attach>1</top_attach>
-		<bottom_attach>2</bottom_attach>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-		<xexpand>True</xexpand>
-		<yexpand>False</yexpand>
-		<xshrink>False</xshrink>
-		<yshrink>False</yshrink>
-		<xfill>True</xfill>
-		<yfill>False</yfill>
-	      </child>
-	    </widget>
-
-	    <widget>
 	      <class>GtkLabel</class>
 	      <name>label61</name>
 	      <cxx_use_heap>True</cxx_use_heap>
@@ -819,39 +795,6 @@ bug is resolved, or for developers to request more information from you.</label>
 		<xfill>False</xfill>
 		<yfill>False</yfill>
 	      </child>
-	    </widget>
-
-	    <widget>
-	      <class>GnomeEntry</class>
-	      <name>package_entry2</name>
-	      <cxx_use_heap>True</cxx_use_heap>
-	      <max_saved>10</max_saved>
-	      <child>
-		<left_attach>1</left_attach>
-		<right_attach>2</right_attach>
-		<top_attach>0</top_attach>
-		<bottom_attach>1</bottom_attach>
-		<xpad>0</xpad>
-		<ypad>0</ypad>
-		<xexpand>True</xexpand>
-		<yexpand>False</yexpand>
-		<xshrink>False</xshrink>
-		<yshrink>False</yshrink>
-		<xfill>True</xfill>
-		<yfill>False</yfill>
-	      </child>
-
-	      <widget>
-		<class>GtkEntry</class>
-		<child_name>GnomeEntry:entry</child_name>
-		<name>package_entry</name>
-		<cxx_use_heap>True</cxx_use_heap>
-		<can_focus>True</can_focus>
-		<editable>True</editable>
-		<text_visible>True</text_visible>
-		<text_max_length>0</text_max_length>
-		<text></text>
-	      </widget>
 	    </widget>
 
 	    <widget>
@@ -882,6 +825,31 @@ bug is resolved, or for developers to request more information from you.</label>
 	    </widget>
 
 	    <widget>
+	      <class>GtkEntry</class>
+	      <name>version_entry</name>
+	      <cxx_use_heap>True</cxx_use_heap>
+	      <can_focus>True</can_focus>
+	      <editable>True</editable>
+	      <text_visible>True</text_visible>
+	      <text_max_length>0</text_max_length>
+	      <text></text>
+	      <child>
+		<left_attach>1</left_attach>
+		<right_attach>3</right_attach>
+		<top_attach>1</top_attach>
+		<bottom_attach>2</bottom_attach>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+		<xexpand>True</xexpand>
+		<yexpand>False</yexpand>
+		<xshrink>False</xshrink>
+		<yshrink>False</yshrink>
+		<xfill>True</xfill>
+		<yfill>False</yfill>
+	      </child>
+	    </widget>
+
+	    <widget>
 	      <class>GtkOptionMenu</class>
 	      <name>class_option</name>
 	      <cxx_use_heap>True</cxx_use_heap>
@@ -890,7 +858,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <initial_choice>0</initial_choice>
 	      <child>
 		<left_attach>1</left_attach>
-		<right_attach>2</right_attach>
+		<right_attach>3</right_attach>
 		<top_attach>3</top_attach>
 		<bottom_attach>4</bottom_attach>
 		<xpad>0</xpad>
@@ -905,14 +873,15 @@ bug is resolved, or for developers to request more information from you.</label>
 	    </widget>
 
 	    <widget>
-	      <class>GtkHBox</class>
-	      <name>hbox13</name>
+	      <class>GnomeHRef</class>
+	      <name>desc_href</name>
 	      <cxx_use_heap>True</cxx_use_heap>
-	      <homogeneous>False</homogeneous>
-	      <spacing>5</spacing>
+	      <can_focus>True</can_focus>
+	      <url>http://bugs.gnome.org/Developer.html#severities</url>
+	      <label>(descriptions)</label>
 	      <child>
-		<left_attach>1</left_attach>
-		<right_attach>2</right_attach>
+		<left_attach>2</left_attach>
+		<right_attach>3</right_attach>
 		<top_attach>2</top_attach>
 		<bottom_attach>3</bottom_attach>
 		<xpad>0</xpad>
@@ -921,36 +890,92 @@ bug is resolved, or for developers to request more information from you.</label>
 		<yexpand>False</yexpand>
 		<xshrink>False</xshrink>
 		<yshrink>False</yshrink>
+		<xfill>False</xfill>
+		<yfill>False</yfill>
+	      </child>
+	    </widget>
+
+	    <widget>
+	      <class>GtkOptionMenu</class>
+	      <name>severity_option</name>
+	      <cxx_use_heap>True</cxx_use_heap>
+	      <can_focus>True</can_focus>
+	      <items></items>
+	      <initial_choice>0</initial_choice>
+	      <child>
+		<left_attach>1</left_attach>
+		<right_attach>2</right_attach>
+		<top_attach>2</top_attach>
+		<bottom_attach>3</bottom_attach>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+		<xexpand>True</xexpand>
+		<yexpand>False</yexpand>
+		<xshrink>False</xshrink>
+		<yshrink>False</yshrink>
 		<xfill>True</xfill>
-		<yfill>True</yfill>
+		<yfill>False</yfill>
+	      </child>
+	    </widget>
+
+	    <widget>
+	      <class>GnomeHRef</class>
+	      <name>packages_href</name>
+	      <cxx_use_heap>True</cxx_use_heap>
+	      <can_focus>True</can_focus>
+	      <url>http://bugs.gnome.org/db/ix/packages.html</url>
+	      <label>(packages)</label>
+	      <child>
+		<left_attach>2</left_attach>
+		<right_attach>3</right_attach>
+		<top_attach>0</top_attach>
+		<bottom_attach>1</bottom_attach>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+		<xexpand>False</xexpand>
+		<yexpand>False</yexpand>
+		<xshrink>False</xshrink>
+		<yshrink>False</yshrink>
+		<xfill>False</xfill>
+		<yfill>False</yfill>
+	      </child>
+	    </widget>
+
+	    <widget>
+	      <class>GtkCombo</class>
+	      <name>package_entry2</name>
+	      <cxx_use_heap>True</cxx_use_heap>
+	      <value_in_list>False</value_in_list>
+	      <ok_if_empty>True</ok_if_empty>
+	      <case_sensitive>False</case_sensitive>
+	      <use_arrows>True</use_arrows>
+	      <use_arrows_always>False</use_arrows_always>
+	      <items></items>
+	      <child>
+		<left_attach>1</left_attach>
+		<right_attach>2</right_attach>
+		<top_attach>0</top_attach>
+		<bottom_attach>1</bottom_attach>
+		<xpad>0</xpad>
+		<ypad>0</ypad>
+		<xexpand>True</xexpand>
+		<yexpand>False</yexpand>
+		<xshrink>False</xshrink>
+		<yshrink>False</yshrink>
+		<xfill>True</xfill>
+		<yfill>False</yfill>
 	      </child>
 
 	      <widget>
-		<class>GtkOptionMenu</class>
-		<name>severity_option</name>
+		<class>GtkEntry</class>
+		<child_name>GtkCombo:entry</child_name>
+		<name>package_entry</name>
 		<cxx_use_heap>True</cxx_use_heap>
 		<can_focus>True</can_focus>
-		<items></items>
-		<initial_choice>0</initial_choice>
-		<child>
-		  <padding>0</padding>
-		  <expand>True</expand>
-		  <fill>True</fill>
-		</child>
-	      </widget>
-
-	      <widget>
-		<class>GnomeHRef</class>
-		<name>href5</name>
-		<cxx_use_heap>True</cxx_use_heap>
-		<can_focus>True</can_focus>
-		<url>http://bugs.gnome.org/Developer.html#severities</url>
-		<label>(descriptions)</label>
-		<child>
-		  <padding>0</padding>
-		  <expand>False</expand>
-		  <fill>False</fill>
-		</child>
+		<editable>True</editable>
+		<text_visible>True</text_visible>
+		<text_max_length>0</text_max_length>
+		<text></text>
 	      </widget>
 	    </widget>
 	  </widget>
@@ -1012,7 +1037,7 @@ bug is resolved, or for developers to request more information from you.</label>
 
 	    <widget>
 	      <class>GnomeHRef</class>
-	      <name>href4</name>
+	      <name>existing_href</name>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <url>http://bugs.gnome.org/db/ix/psummary.html</url>

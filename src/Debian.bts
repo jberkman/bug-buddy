@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<project name="Debian">
+        <bts name="debian">
+		<email>@bugs.debian.org</email>
+		<web>http://www.debian.org/Bugs</web>
+		<packages-list>debian-packages</packages-list>
+		<appmap></appmap>
+	</bts>
+</project>
+
+

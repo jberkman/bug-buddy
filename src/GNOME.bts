@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<project name="GNOME">
+        <bts name="debian">
+		<email>@bugs.gnome.org</email>
+		<web>http://bugs.gnome.org</web>
+		<packages-list>gnome-packages</packages-list>
+		<appmap>gnome-bugmap</appmap>
+	</bts>
+	<version-stuff>
+		<package name="C library">
+			<rpm>glibc</rpm>
+			<deb>libc6</deb>
+		</package>
+		<package name="C compiler">
+			<try>gcc --version</try>
+			<last>cc -V</last>
+		</package>
+		<package name="glib">
+			<try>glib-config --version</try>
+			<rpm>glib</rpm>
+			<deb>libglib1.2</deb>
+		</package>
+		<package name="GTK+">
+			<try>gtk-config --version</try>
+			<rpm>gtk+</rpm>
+			<deb>libgtk1.2</deb>
+			<last></last>
+		</package>
+		<package name="ORBit">
+			<try>orbit-config --version</try>
+			<rpm>ORBit</rpm>
+			<deb>liborbit0</deb>
+			<last></last>
+		</package>
+		<package name="gnome-libs">
+			<try>gnome-config --version</try>
+			<rpm>gnome-libs</rpm>
+			<deb>gnome-libs-data</deb>
+			<last></last>
+		</package>
+		<package name="gnome-core">
+			<try>gnome-config --modversion applets | grep -v gnome-libs | sed -e 's^applets-^gnome-core ^g'</try>
+			<rpm>gnome-core</rpm>
+			<deb>gnome-core</deb>
+			<last></last>
+		</package>
+	</version-stuff>
+</project>
+

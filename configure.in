@@ -25,6 +25,15 @@ AM_PATH_LIBGLADE(,,gnome)
 ALL_LINGUAS="da fr nl no"
 AM_GNOME_GETTEXT
 
+AC_MSG_CHECKING(whether this is boc's machine)
+if test -d /debian/var/state/apt/lists; then
+    DEBIAN_ROOT="/debian"
+    AC_SUBST(DEBIAN_ROOT)
+    AC_MSG_RESULT(maybe)
+else
+    AC_MSG_RESULT(no)
+fi
+
 AC_SUBST(CFLAGS)
 AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)

@@ -22,6 +22,10 @@
 #ifndef __UTIL_H__
 #define __UTIL_H__
 
+#include <config.h>
+
+#include <stdio.h>
+#include <ctype.h>
 #include <sys/types.h>
 #include <glib.h>
 
@@ -34,5 +38,7 @@ char *get_line_from_fd (int fd);
 char *get_line_from_file (const char *filename);
 char *get_line_from_command (const char *command);
 char *get_line_from_commandv (const char *argv[]);
+
+void write_line_widthv (FILE *fp, const char *s);
 
 #endif /* __UTIL_H__ */

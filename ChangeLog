@@ -1,3 +1,9 @@
+1999-12-04  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* configure.in: find debian root dir
+	* src/*: Initial support for supporting multiple BTS's
+	Currently Debian and GNOME are supported.
+
 1999-12-02  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* configure.in (ALL_LINGUAS): added nl.po, from

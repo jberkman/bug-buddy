@@ -27,6 +27,7 @@
 
 #include "bug-buddy.h"
 #include "util.h"
+#include "glade-druid.h"
 
 void
 start_gdb ()
@@ -41,8 +42,8 @@ start_gdb ()
 	
 	switch (druid_data.crash_type) {
 	case CRASH_DIALOG:
-		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
-		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.pid));
+		app = gtk_entry_get_text (GTK_ENTRY (APP_FILE));
+		extra = gtk_entry_get_text (GTK_ENTRY (CRASHED_PID));
 		druid_data.app_pid = atoi (extra);
 		if (druid_data.explicit_dirty ||
 		    (old_type != CRASH_DIALOG) ||
@@ -52,7 +53,7 @@ start_gdb ()
 		}
 		break;
 	case CRASH_CORE:
-		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.core_file));
+		extra = gtk_entry_get_text (GTK_ENTRY (CORE_FILE));
 		if (druid_data.explicit_dirty ||
 		    (old_type != CRASH_CORE) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
@@ -91,11 +92,11 @@ stop_gdb ()
 #endif
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   TRUE, TRUE, TRUE);
-	gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
+	gnome_animator_stop (GNOME_ANIMATOR (GDB_ANIM));
 	druid_data.fd = 0;
 	druid_data.ioc = NULL;
-	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), FALSE);
-	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
+	gtk_widget_set_sensitive (GTK_WIDGET (STOP_BUTTON), FALSE);
+	gtk_widget_set_sensitive (GTK_WIDGET (REFRESH_BUTTON),
 				  TRUE);
 	return;
 }
@@ -158,6 +159,7 @@ get_trace_from_core (const gchar *core_file)
 static gboolean
 handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 {	
+	GtkWidget *w;
 	gchar buf[1024];
 	guint len;
 	
@@ -177,9 +179,10 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 		return FALSE;
 	}
 
-	gtk_text_set_point (GTK_TEXT (druid_data.gdb_text),
-			    gtk_text_get_length (GTK_TEXT (druid_data.gdb_text)));
-	gtk_text_insert (GTK_TEXT (druid_data.gdb_text), 
+	w = GDB_TEXT;
+	gtk_text_set_point (GTK_TEXT (w),
+			    gtk_text_get_length (GTK_TEXT (w)));
+	gtk_text_insert (GTK_TEXT (w), 
 			 NULL, NULL, NULL, buf, len);
 
 	return TRUE;
@@ -221,12 +224,12 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP, 
 			handle_gdb_input, NULL);
 	g_io_channel_unref (druid_data.ioc);
-	gtk_editable_delete_text (GTK_EDITABLE (druid_data.gdb_text), 0, -1);
-	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
+	gtk_editable_delete_text (GTK_EDITABLE (GDB_TEXT), 0, -1);
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (THE_DRUID),
 					   FALSE, FALSE, TRUE);
-	gnome_animator_start (GNOME_ANIMATOR (druid_data.gdb_anim));
-	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), TRUE);
-	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
+	gnome_animator_start (GNOME_ANIMATOR (GDB_ANIM));
+	gtk_widget_set_sensitive (GTK_WIDGET (STOP_BUTTON), TRUE);
+	gtk_widget_set_sensitive (GTK_WIDGET (REFRESH_BUTTON),
 				  FALSE);
 
 	druid_data.explicit_dirty = FALSE;

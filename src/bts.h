@@ -19,13 +19,22 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#ifndef __DISTRO_REDHAT_H__
-#define __DISTRO_REDHAT_H__
+#ifndef __BTS_H__
+#define __BTS_H__
 
-#include "distro.h"
+#include <gnome-xml/parser.h>
+#include <gnome-xml/tree.h>
 
-extern Phylum redhat_phy;
+typedef struct _BugTrackingSystem BugTrackingSystem;
+struct _BugTrackingSystem {
+	gint (*init) (xmlNodePtr node);
+	void (*denit) (void);
 
-#endif /* __DISTRO_REDHAT_H__ */
+	gint (*doit) (void);
+};
 
+extern BugTrackingSystem debian_bts;
 
+gboolean load_bts_xml (void);
+
+#endif /* __BTS_H__ */

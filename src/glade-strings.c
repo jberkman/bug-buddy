@@ -13,10 +13,10 @@ gchar *s = N_("Your Name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
 gchar *s = N_("Bug tracking system to use");
-gchar *s = N_("GNOME\n"
+gchar *s = N_("\n"
+              "\n"
               "");
 gchar *s = N_("Choose which sendmail to use");
-gchar *s = N_("/home/jberkman/");
 gchar *s = N_("Full path of sendmail");
 gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
@@ -31,6 +31,7 @@ gchar *s = N_("Version");
 gchar *s = N_("Package");
 gchar *s = N_("Bug class");
 gchar *s = N_("(descriptions)");
+gchar *s = N_("(packages)");
 gchar *s = N_("Bug number ");
 gchar *s = N_("(Existing bugs)");
 gchar *s = N_("Short description");
