@@ -5,26 +5,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-30 23:12-0500\n"
-"PO-Revision-Date: 1999-11-16 04:56+01:00\n"
-"Last-Translator: Kenneth Christiánsen <kenneth@ripen.dk>\n"
+"POT-Creation-Date: 1999-12-01 16:13+0100\n"
+"PO-Revision-Date: 1999-12-03 03:45+01:00\n"
+"Last-Translator: Birger Langkjer <birger.langkjer@image.dk>\n"
 "Language-Team: Dansk/Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/gdb-buddy.c:40
 msgid "obtaining stack trace..."
-msgstr "henter stakopfølgning..."
+msgstr "henter stak-trace..."
 
 #: src/bug-buddy.c:295 src/gdb-buddy.c:81
 msgid "gdb has already exited"
-msgstr ""
+msgstr "gdb er allerede afsluttet"
 
 #: src/bug-buddy.c:650 src/gdb-buddy.c:90
 #, c-format
 msgid "Subprocess exited with status %d"
-msgstr ""
+msgstr "Underproces afsluttede med status %d"
 
 #: src/gdb-buddy.c:118
 #, c-format
@@ -32,13 +32,13 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Kunne ikke håndtere core-filen med gdb:\n"
+"Kunne ikke behandle core-filen med gdb:\n"
 "'%s'"
 
 #: src/gdb-buddy.c:143
 #, c-format
 msgid "Child process exited with status %d"
-msgstr ""
+msgstr "\"Barne\"-proces afsluttede med status %d"
 
 #: src/gdb-buddy.c:146
 #, c-format
@@ -46,12 +46,12 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"Kunne ikke bestemme hvilken kørbar fil som\n"
-"oprettede '%s'"
+"Kunne ikke afgøre hvilken binær fil der lavede\n"
+"'%s'"
 
 #: src/gdb-buddy.c:175
 msgid "Error on read... aborting"
-msgstr ""
+msgstr "fejl ved læsning... afbryder"
 
 #: src/gdb-buddy.c:206
 msgid ""
@@ -59,11 +59,11 @@ msgid ""
 "Please try reinstalling bug-buddy."
 msgstr ""
 "Kunne ikke finde gdb-cmd filen.\n"
-"Installér venligst fejl-partner på ny."
+"Installér venligst fejlhjælperen på ny."
 
 #: src/gdb-buddy.c:214
 msgid "Error on fork()."
-msgstr ""
+msgstr "Fejl ved fork()."
 
 #: src/bug-buddy.c:67
 msgid "critical"
@@ -83,30 +83,29 @@ msgstr "ønskeliste"
 
 #: src/bug-buddy.c:74
 msgid "software bug"
-msgstr ""
+msgstr "software bug"
 
 #: src/bug-buddy.c:75
 msgid "documentation bug"
-msgstr ""
+msgstr "dokumentationsbug"
 
 #: src/bug-buddy.c:76
 msgid "change request"
-msgstr ""
+msgstr "ændringsforeslag"
 
 #: src/bug-buddy.c:77
 msgid "support"
-msgstr ""
+msgstr "support"
 
 #: src/bug-buddy.c:109
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: src/bug-buddy.c:110
 msgid "C library"
 msgstr "C-bibliotek"
 
 #: src/bug-buddy.c:111
-#, fuzzy
 msgid "C compiler"
 msgstr "C-kompiler"
 
@@ -140,7 +139,7 @@ msgstr "NAME"
 
 #: src/bug-buddy.c:125
 msgid "Contact's email address"
-msgstr "Kontaktens e-post adresse"
+msgstr "Kontaktens e-postadresse"
 
 #: src/bug-buddy.c:125
 msgid "EMAIL"
@@ -164,7 +163,7 @@ msgstr "VERSION"
 
 #: src/bug-buddy.c:128
 msgid "Crashed file name"
-msgstr "Navn på filen som krasjede"
+msgstr "Navn på filen som gik ned"
 
 #: src/bug-buddy.c:128 src/bug-buddy.c:130
 msgid "FILE"
@@ -172,7 +171,7 @@ msgstr "FILE"
 
 #: src/bug-buddy.c:129
 msgid "PID of crashed app"
-msgstr "PID på programmet som krasjede"
+msgstr "PID på programmet som gik ned"
 
 #: src/bug-buddy.c:129
 msgid "PID"
@@ -180,7 +179,7 @@ msgstr "PID"
 
 #: src/bug-buddy.c:130
 msgid "core file from app"
-msgstr "core fil fra programmet"
+msgstr "core-fil fra programmet"
 
 #: src/bug-buddy.c:287
 msgid ""
@@ -190,7 +189,7 @@ msgstr ""
 
 #: src/bug-buddy.c:332
 msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr ""
+msgstr "Ophavsret (C) 1999 Jacob Berkman"
 
 #: src/bug-buddy.c:334
 msgid "The GNOME graphical bug reporting tool"
@@ -198,7 +197,7 @@ msgstr ""
 
 #: src/bug-buddy.c:341
 msgid "The lame bug-buddy web page"
-msgstr ""
+msgstr "Den lamme fejlhjælper webside"
 
 #: src/bug-buddy.c:380
 #, c-format
@@ -211,13 +210,15 @@ msgstr ""
 
 #: src/bug-buddy.c:410
 msgid "Please enter your name and email address"
-msgstr "Indtast venligst navn og e-postadresse"
+msgstr "Indtast venligst dit navn og e-postadresse"
 
 #: src/bug-buddy.c:449
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
 msgstr ""
+"Klik \"Færdig\" for at forlade fejlhjælper.\n"
+"Ingen fejlrapport vil blive sendt."
 
 #: src/bug-buddy.c:469
 #, c-format
@@ -242,7 +243,7 @@ msgstr ""
 #: src/bug-buddy.c:554
 #, c-format
 msgid "about to run '%s'"
-msgstr "vil udføre '%s'"
+msgstr "vil nu køre '%s'"
 
 #: src/bug-buddy.c:557
 #, c-format
@@ -250,7 +251,7 @@ msgid ""
 "Unable to start mail program:\n"
 "'%s'"
 msgstr ""
-"Kunne ikke starte e-post programmet:\n"
+"Kunne ikke starte e-postprogrammet:\n"
 "'%s'"
 
 #: src/bug-buddy.c:572
@@ -310,11 +311,11 @@ msgstr "XML-filen '%s' kunne ikke indlæses"
 #.
 #: src/glade-strings.c:7
 msgid "bug-buddy"
-msgstr "fejl-hjælper"
+msgstr "fejlhjælper"
 
 #: src/glade-strings.c:8
 msgid "GNOME bug-buddy"
-msgstr "GNOME fejl-hjælper"
+msgstr "GNOME Fejlhjælper"
 
 #: src/glade-strings.c:9
 msgid "This will guide you through submitting a bug report."
@@ -337,9 +338,8 @@ msgid ""
 "Enter your name and email address, so you will be notified when the\n"
 "bug is resolved, or for developers to request more information from you."
 msgstr ""
-"Indtast dit navn og e-post addresse, så du kan få at vide når fejlen er "
-"blevet\n"
-"rettet, eller så udviklerne kan bede om mere information fra dig."
+"Indtast dit navn og e-postaddresse, så du kan få at vide når fejlen er\n"
+"blevet rettet, eller så udviklerne kan bede om mere information fra dig."
 
 #: src/glade-strings.c:15
 msgid "Bug tracking system to use"
@@ -359,7 +359,7 @@ msgstr ""
 
 #: src/glade-strings.c:20
 msgid "Full path of sendmail"
-msgstr ""
+msgstr "Fulde sti til sendmail"
 
 #: src/glade-strings.c:21
 msgid "System Configuration"
@@ -378,22 +378,20 @@ msgid "Version installed"
 msgstr "Version installeret"
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Report Information"
-msgstr "Kontaktinformation"
+msgstr "Rapportér information"
 
 #: src/glade-strings.c:26 src/glade-strings.c:53
 msgid "Action"
 msgstr "Handling"
 
 #: src/glade-strings.c:27
-#, fuzzy
 msgid "File a new bug report"
-msgstr "Send fejlrapport"
+msgstr "Send en ny fejlrapport"
 
 #: src/glade-strings.c:28
 msgid "Add information to an existing bug report"
-msgstr ""
+msgstr "Tilføj information til eksisterende fejlrapport"
 
 #: src/glade-strings.c:29
 msgid "Bug severity"
@@ -405,26 +403,23 @@ msgstr "Version"
 
 #: src/glade-strings.c:32
 msgid "Bug class"
-msgstr ""
+msgstr "Fejlklasse"
 
 #: src/glade-strings.c:33
 msgid "(descriptions)"
-msgstr ""
+msgstr "(beskrivelser)"
 
 #: src/glade-strings.c:34
 msgid "Bug number "
-msgstr ""
+msgstr "Fejlnummer "
 
 #: src/glade-strings.c:35
 msgid "(Existing bugs)"
-msgstr ""
+msgstr "(Eksisterende fejl)"
 
 #: src/glade-strings.c:36
-#, fuzzy
 msgid "Short description"
-msgstr ""
-"Kort beskrivelse\n"
-"af problemet"
+msgstr "Kort beskrivelse"
 
 #: src/glade-strings.c:37
 msgid "Extra Information"
@@ -432,63 +427,59 @@ msgstr "Ekstra information"
 
 #: src/glade-strings.c:38
 msgid "Full description of the bug:"
-msgstr "Fuld beskrivelse af problemet:"
+msgstr "Fuld beskrivelse af problemet (engelsk):"
 
 #: src/glade-strings.c:39
 msgid "How to repeat the bug:"
-msgstr "Hvordan fejlen kan reproduceres:"
+msgstr "Hvordan fejlen kan gentages:"
 
 #: src/glade-strings.c:40 src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Aflusningsinformation"
 
 #: src/glade-strings.c:42
-#, fuzzy
 msgid "Attach to a crashed application"
-msgstr "Krasjet applikation"
+msgstr "Vedhæft til program der gik ned"
 
 #: src/glade-strings.c:43
 msgid "Obtain from a core file"
-msgstr ""
+msgstr "Skaf fra en core-fil"
 
 #: src/glade-strings.c:44
-#, fuzzy
 msgid "No debugging information"
-msgstr "Aflusningsinformation"
+msgstr "Ingen aflusningsinformation"
 
 #: src/glade-strings.c:45
 msgid "Binary"
-msgstr ""
+msgstr "Binær"
 
 #: src/glade-strings.c:46
 msgid "Process ID"
-msgstr "Proces ID"
+msgstr "Proces-ID"
 
 #: src/glade-strings.c:47
 msgid "Select the crashed application's binary"
-msgstr ""
+msgstr "Vælg udførbar fil på program der gik ned"
 
 #: src/glade-strings.c:48
-#, fuzzy
 msgid "Core file"
-msgstr "Navn på filen som krasjede"
+msgstr "Core-fil"
 
 #: src/glade-strings.c:49
-#, fuzzy
 msgid "Select a core file"
-msgstr "Applikationskrasj med core-fil"
+msgstr "Vælg en core-fil"
 
 #: src/glade-strings.c:50
-#, fuzzy
 msgid "Collecting Debugging Information"
-msgstr "Aflusningsinformation"
+msgstr "Indsamler aflusningsinformation"
 
 #: src/glade-strings.c:51
-#, fuzzy
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
-msgstr "Undersøg venligst om informationen er korrekt"
+msgstr ""
+"Vent venligst mens aflusnings-\n"
+"informationen indsamles..."
 
 #: src/glade-strings.c:54
 msgid "Choose the action you wish to take"
@@ -500,7 +491,7 @@ msgstr "Send fejlrapport"
 
 #: src/glade-strings.c:56
 msgid "Send report to your email address *only*"
-msgstr "Send rapport *kun* til din e-post adresse"
+msgstr "Send *kun* rapport til din e-postadresse"
 
 #: src/glade-strings.c:57
 msgid "Do not send bug report anywhere"
@@ -508,11 +499,11 @@ msgstr "Send ikke fejlrapport"
 
 #: src/glade-strings.c:58
 msgid "Save the report to a file"
-msgstr ""
+msgstr "Gem rapporten som en fil"
 
 #: src/glade-strings.c:59
 msgid "Save the report to..."
-msgstr ""
+msgstr "Gem rapporten som..."
 
 #: src/glade-strings.c:60
 msgid "Summary"
@@ -520,7 +511,7 @@ msgstr "Resumé"
 
 #: src/glade-strings.c:61
 msgid "The GEGL is watching."
-msgstr ""
+msgstr "GEGL overvåger dig."
 
 #~ msgid "Unable to open pipe"
 #~ msgstr "Kunne ikke åbne pibe"
