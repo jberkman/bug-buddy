@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
 "POT-Creation-Date: 2000-11-12 02:32+0100\n"
-"PO-Revision-Date: 2000-12-20 14:33+0100\n"
+"PO-Revision-Date: 2001-01-24 15:15+0100\n"
 "Last-Translator: Gergely Nagy <greg@gnome.hu>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"Language-Team: Hungarian <hu@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
 "Content-Transfer-Encoding: iso-8859-2\n"
@@ -177,7 +177,7 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 "gdb még nem fejezte be a degug információ gyûjtését.\n"
-"Megszakítsam a gdb processzt (a stack trace nem lesz teljes)?"
+"Megszakítsam a gdb folyamatot (a stack trace nem lesz teljes)?"
 
 #: src/bug-buddy.c:443 src/gdb-buddy.c:83
 msgid "gdb has already exited"
@@ -443,7 +443,7 @@ msgid ""
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
 "Kérlek ellenõrizd, hogy a hiba amit találtál, már be van-ejelentve, es ha "
-"igen használd a \"Már létezõ bejelentés kiegészítése\" opciót."
+"igen használd a \"Már létezõ bejelentés kiegészítése\" lehetõséget."
 
 #: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
@@ -484,7 +484,7 @@ msgstr "Bináris"
 
 #: src/glade-strings.c:44
 msgid "Process ID"
-msgstr "Processz sorszám"
+msgstr "Folyamatazonosító"
 
 #: src/glade-strings.c:45
 msgid "Core file"
@@ -568,4 +568,4 @@ msgid "Error on read..."
 msgstr "Hiba olvasás közben..."
 
 #~ msgid "Child process exited with status %d"
-#~ msgstr "A gyermek processz kilépési értéke: %d"
+#~ msgstr "A gyermekfolyamat kilépési értéke: %d"
