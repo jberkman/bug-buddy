@@ -1,4 +1,4 @@
-# -------------------------------------------------------
+ # -------------------------------------------------------
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Fatih Demir <kabalak@gmx.net>, 2000.
 #
@@ -104,10 +104,6 @@ msgstr "EMAIL"
 #: src/bug-buddy.c:116
 msgid "Package containing the program"
 msgstr "Uygulamanýn pakajý"
-
-#: src/bug-buddy.c:116
-msgid "bug-buddy"
-msgstr "bug-buddy"
 
 #: src/bug-buddy.c:117
 msgid "Version of the package"
@@ -573,5 +569,3 @@ msgstr "`%s''yi çalýþtýrýmýyyorum."
 msgid "Error on read..."
 msgstr "Okurken hata oldu ..."
 
-#~ msgid "1.0"
-#~ msgstr "NESIL"
