@@ -1,0 +1,584 @@
+# Slovenian translation file for Bug-buddy.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Andraz Tori <andraz.tori1@guest.arnes.si> 2000
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy\n"
+"POT-Creation-Date: 2000-06-25 01:16+0200\n"
+"PO-Revision-Date: 2000-06-25 01:16+0200\n"
+"Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/bts.c:99
+msgid "Distribution"
+msgstr "Distribucija"
+
+#: src/bts.c:107
+msgid "System"
+msgstr "Sistem"
+
+#: src/bug-buddy.c:74
+msgid "critical"
+msgstr "kritièna"
+
+#: src/bug-buddy.c:75
+msgid "grave"
+msgstr "mrtva¹ka"
+
+#: src/bug-buddy.c:76
+msgid "normal"
+msgstr "obièajna"
+
+#: src/bug-buddy.c:77
+msgid "wishlist"
+msgstr "seznam ¾elja"
+
+#: src/bug-buddy.c:82
+msgid "software bug"
+msgstr "programski hro¹è"
+
+#: src/bug-buddy.c:83
+msgid "documentation bug"
+msgstr "dokumentacijski hro¹è"
+
+#: src/bug-buddy.c:84
+msgid "change request"
+msgstr "zahtevek po spremembi"
+
+#: src/bug-buddy.c:85
+msgid "support"
+msgstr "podpora"
+
+#: src/bug-buddy.c:90
+msgid "Submit bug report"
+msgstr "Oddaj poroèilo o hro¹èu"
+
+#: src/bug-buddy.c:91
+msgid "Only send report to yourself"
+msgstr "Po¹lji poroèilo le sebi"
+
+#: src/bug-buddy.c:92
+msgid "Save report to file"
+msgstr "Shrani poroèilo v datoteko"
+
+#: src/bug-buddy.c:97
+msgid "Collect debugging information from a crashed application"
+msgstr "Zberi razhro¹èevalne podatke iz sesutega programa"
+
+#: src/bug-buddy.c:98
+msgid "Collect debugging information from a core file"
+msgstr "Zberi razhro¹èevalne podatke iz datoteke core"
+
+#: src/bug-buddy.c:99
+msgid "Skip this step"
+msgstr "Preskoèi ta korak"
+
+#: src/bug-buddy.c:104
+msgid "Create a new bug report"
+msgstr "Ustvari novo poroèilo o hro¹èu"
+
+#: src/bug-buddy.c:105
+msgid "Add more information to existing report"
+msgstr "Dodaj podatke k obstojeèem poroèilu"
+
+#: src/bug-buddy.c:114
+msgid "Name of contact"
+msgstr "Ime stika"
+
+#: src/bug-buddy.c:114
+msgid "NAME"
+msgstr "IME"
+
+#: src/bug-buddy.c:115
+msgid "Email address of contact"
+msgstr "E-po¹tni naslov stika"
+
+#: src/bug-buddy.c:115
+msgid "EMAIL"
+msgstr "E-PO©TA"
+
+#: src/bug-buddy.c:116
+msgid "Package containing the program"
+msgstr "Paket, ki vsebuje program"
+
+#: src/bug-buddy.c:116
+msgid "PACKAGE"
+msgstr "PAKET"
+
+#: src/bug-buddy.c:117
+msgid "Version of the package"
+msgstr "Razlièica paketa"
+
+#: src/bug-buddy.c:117
+msgid "VERSION"
+msgstr "RAZLIÈICA"
+
+#: src/bug-buddy.c:118
+msgid "File name of crashed program"
+msgstr "Ime datoteke sesutega programa"
+
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
+msgid "FILE"
+msgstr "DATOTEKA"
+
+#: src/bug-buddy.c:119
+msgid "PID of crashed program"
+msgstr "PID sesutega programa"
+
+#: src/bug-buddy.c:119
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:120
+msgid "Core file from program"
+msgstr "Core datoteka programa"
+
+#: src/bug-buddy.c:335
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Do you want to continue anyway?"
+msgstr ""
+"Zelo pomaga, èe doloèite\n"
+"paket bolj natanèno kot 'splo¹en'.\n"
+"\n"
+"®elite vseeno nadaljevati?"
+
+#: src/bug-buddy.c:378
+msgid "The specified file does not exist."
+msgstr "Navedena datoteka ne obstaja."
+
+#: src/bug-buddy.c:383
+#, c-format
+msgid "File is of type: %s"
+msgstr "Datoteka je tipa: %s"
+
+#: src/bug-buddy.c:386
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr "'%s' ne izgleda kot datoteka z besedilom"
+
+#: src/bug-buddy.c:400
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+"V poroèilo o hro¹èu morate vkljuèiti\n"
+"zadevo in opis."
+
+#: src/bug-buddy.c:443
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb ni konèal z zbiranjem razhro¹èevalnih podatkov.\n"
+"Ubijem gdb proces (sled sklada bo nepopolna)?"
+
+#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "gdb je ¾e konèal z izvajanjem"
+
+#: src/bug-buddy.c:494
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Avtorske pravice pridr¾ane (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:496
+msgid "The GNOME graphical bug reporting tool"
+msgstr "GNOME grafièno orodje za poroèanje o hro¹èih"
+
+#: src/bug-buddy.c:503
+msgid "The lame bug-buddy web page"
+msgstr "Leva bug-buddy spletna stran"
+
+#: src/bug-buddy.c:591
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"Izgleda, da '%s' ne obstaja.  Ne boste mogli oddati \n"
+"poroèila o hor¹èu, lahko pa ga boste shranili v datoteko.\n"
+"\n"
+"Boste navedli kje se program sendmail nahaja?"
+
+#: src/bug-buddy.c:627
+msgid "Please enter your name and email address"
+msgstr "Prosim vpi¹ite ime in e-po¹tni naslov"
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid "Unable to open file: '%s'"
+msgstr "Ne morem odpreti datoteke: '%s'"
+
+#: src/bug-buddy.c:659
+#, c-format
+msgid "about to run '%s'"
+msgstr "pognal bom '%s'"
+
+#: src/bug-buddy.c:663
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr "Ne morem pognati programa za po¹to: '%s'"
+
+#: src/bug-buddy.c:691
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "Va¹e poroèilo o hro¹èu je bilo shranjeno v '%s'"
+
+#: src/bug-buddy.c:694
+#, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>"
+msgstr ""
+"Va¹e poroèilo o hro¹èu je bilo poslano na:\n"
+"\n"
+"        <%s>"
+
+#: src/bug-buddy.c:824
+msgid "You must specify a recipient email address"
+msgstr "Navesti morate e-po¹tni naslov prejemnika"
+
+#: src/bug-buddy.c:830
+msgid "Submit this bug report now?"
+msgstr "Oddaj to poroèilo o hro¹èu sedaj?"
+
+#: src/bug-buddy.c:840
+msgid "Please choose a file to save to."
+msgstr "Prosim izberite datoteko, kamor naj se shrani."
+
+#: src/bug-buddy.c:847
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Datoteka '%s' ¾e obstaja.\n"
+"Prepi¹i datoteko?"
+
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr "O"
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr "Pomoè"
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr "Ustavi"
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr "Osve¾i"
+
+#: src/bug-buddy.c:949
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Ne morem odpreti '%s'.\n"
+"Prosim preverite, da je bil bug-buddy pravilno name¹èen."
+
+#: src/bug-buddy.c:1054
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME je zastarel.\n"
+"Prosim raje uporabite --appname argument ukazne vrstice."
+
+#: src/bug-buddy.c:1067
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID je zastarel.\n"
+"Prosim raje uporabite --pid argument ukazne vrstice."
+
+#: src/bug-buddy.c:1199
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Nisem mogel najti '%s'.\n"
+"Prosim preverite, da je bil bug-buddy pravilno name¹èen."
+
+#: src/gdb-buddy.c:41
+#, c-format
+msgid "obtaining stack trace... (%d)"
+msgstr "pridobivam sled sklada... (%d)"
+
+#: src/gdb-buddy.c:115
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Ne morem obdelati core datoteke z gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:141
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Ne morem ugotoviti kater program je povzroèil\n"
+"'%s'"
+
+#: src/gdb-buddy.c:172
+msgid "Error on read... aborting"
+msgstr "Napaka pri branju... razveljavljam"
+
+#: src/gdb-buddy.c:204
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"Nisem na¹el datoteke gdb-cmd.\n"
+"Poskusite znova namestiti bug-buddy-a."
+
+#: src/gdb-buddy.c:212 src/util.c:75
+msgid "Error on fork()."
+msgstr "Napaka pri vejanju (fork())"
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "Welcome to the Wonderful World of bug-buddy"
+msgstr "Dobrodo¹èi v Èudoviti Svet bug-buddy-a"
+
+#: src/glade-strings.c:9
+msgid ""
+"bug-buddy will walk you through the process\n"
+"of submitting a bug report.  If this is your first time \n"
+"using bug-buddy, you will be prompted for your\n"
+"email address so that the bug report can be\n"
+"submitted."
+msgstr ""
+"bug-buddy vas bo vodil po postopku\n"
+"oddaje poroèila o hro¹èu.  Èe prviè uporabljate \n"
+"bug-buddy-a boste vpra¹ani za va¹ e-po¹tni naslov\n"
+"tako, da bo poroèilo lahko\n"
+"oddano."
+
+#: src/glade-strings.c:14
+msgid "Contact Information"
+msgstr "Kontaktne informacije"
+
+#: src/glade-strings.c:15
+msgid "Choose which sendmail to use"
+msgstr "Izberite kateri sendmail naj se uporabi"
+
+#: src/glade-strings.c:16
+msgid "Email Address"
+msgstr "E-Po¹tni Naslov"
+
+#: src/glade-strings.c:17
+msgid "Full path of sendmail"
+msgstr "Polna pot programa sendmail"
+
+#: src/glade-strings.c:18
+msgid "Your Name"
+msgstr "Va¹e ime"
+
+#: src/glade-strings.c:19
+msgid ""
+"bug-buddy will walk you through the process of\n"
+"submitting a bug report.  You can click the help\n"
+"button for a more in-depth explanation of the process."
+msgstr ""
+"bug-buddy vas bo vodil po postopku\n"
+"oddaje poroèila o hro¹èu.  Lahko kliknete gumb za \n"
+"pomoè za podrobnej¹o razlago postopka."
+
+#: src/glade-strings.c:22
+msgid "Report Information"
+msgstr "Poroèaj Podatke"
+
+#: src/glade-strings.c:23
+msgid ""
+"Select a bug tracking system to use, and then fill out\n"
+"the remaining information."
+msgstr ""
+"Izberite kateri sistem za sledenje hro¹èem naj se uporabi\n"
+"in nato izpolnite preostale podatke"
+
+#: src/glade-strings.c:25
+msgid "Bug Tracking System "
+msgstr "Sistem Sledenja Hro¹èem "
+
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
+msgid "Package"
+msgstr "Paket"
+
+#: src/glade-strings.c:27
+msgid "Severity"
+msgstr "Resnost"
+
+#: src/glade-strings.c:28
+msgid "Class"
+msgstr "Razred"
+
+#: src/glade-strings.c:29 src/glade-strings.c:31
+msgid "Version"
+msgstr "Razlièica"
+
+#: src/glade-strings.c:32
+msgid ""
+"Please check to see if your bug has already been submitted,\n"
+"and if so, use \"Add information to existing report\" above."
+msgstr ""
+"Prosim preverite ali je bil va¹ hro¹è ¾e sporoèen,\n"
+"in èe je bil uporabite \"Dodaj podatke k obstojeèem poroèilu\"."
+
+#: src/glade-strings.c:34 src/glade-strings.c:35
+msgid "Bug Number"
+msgstr "©tevilka Hro¹èa"
+
+#: src/glade-strings.c:36
+msgid "Description"
+msgstr "Opis"
+
+#: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr "Prosim poroèilo napi¹ite v Angle¹èini, èe je mo¾no."
+
+#: src/glade-strings.c:38
+msgid "Short subject for the bug report"
+msgstr "Kratek naslov poroèila o hro¹èu"
+
+#: src/glade-strings.c:39
+msgid "Full description of the bug, including how to reproduce it"
+msgstr "Celosten opis hro¹èa, vkljuèujoè podatke o tem kako se pojav ponovi"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "Vkljuèi datoteko z besedilom"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Razhro¹èevalni Podatki"
+
+#: src/glade-strings.c:42
+msgid "Select the crashed application's binary"
+msgstr "Izberite izvr¹ilno datoteko sesutega programa"
+
+#: src/glade-strings.c:43
+msgid "Binary"
+msgstr "Izvr¹ilna datoteka"
+
+#: src/glade-strings.c:44
+msgid "Process ID"
+msgstr "ID Procesa"
+
+#: src/glade-strings.c:45
+msgid "Core file"
+msgstr "Datoteka core"
+
+#: src/glade-strings.c:46
+msgid "Select a core file"
+msgstr "Izberite datoteko core"
+
+#: src/glade-strings.c:47
+msgid "Collecting Debugging Information"
+msgstr "Zbiram Razhro¹èevalne Podatke"
+
+#: src/glade-strings.c:48
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Prosim poèakajte, medtem, ko se\n"
+"zbirajo razhro¹èevalni podatki..."
+
+#: src/glade-strings.c:50
+msgid "System Configuration"
+msgstr "Nastavitev Sistema"
+
+#: src/glade-strings.c:51
+msgid "Please verify that this information is correct"
+msgstr "Prosim preverite, da so ti podatki pravilni"
+
+#: src/glade-strings.c:53
+msgid "Version installed"
+msgstr "Name¹èena razlièica"
+
+#: src/glade-strings.c:54
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:55
+msgid "Automatically go to next page when complete"
+msgstr "Ko je opravljeno, samodejno pojdi na naslednjo stran"
+
+#: src/glade-strings.c:56
+msgid "Submitting the Report"
+msgstr "Oddajam Poroèilo"
+
+#: src/glade-strings.c:57
+msgid "To"
+msgstr "Za"
+
+#: src/glade-strings.c:58
+msgid "Send copy to yourself"
+msgstr "Po¹lji kopijo sebi"
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr "Shrani poroèilo v..."
+
+#: src/glade-strings.c:60
+msgid "Content"
+msgstr "Vsebina"
+
+#: src/glade-strings.c:61
+msgid "Summary"
+msgstr "Povzetek"
+
+#: src/glade-strings.c:62
+msgid "The GEGL is watching."
+msgstr "GEGL gleda."
+
+#: src/util.c:60
+msgid "Unable to open pipe"
+msgstr "Ne morem odpreti cevi"
+
+#: src/util.c:72
+#, c-format
+msgid "Could not run '%s'."
+msgstr "Ne morem pognati '%s'"
+
+#: src/util.c:112
+msgid "Error on read..."
+msgstr "Napaka pri branju..."
+
+
+# Smart report:
+# Total untranslated messages in file: 112 
+# Translations made:
+# full: 29
+# smart: 0
+# cond: 23
+# total: 52 ; distinct: 32
+
+
