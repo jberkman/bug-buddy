@@ -1,3 +1,8 @@
+2000-04-18  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* configure.in (ALL_LINGUAS): added Catalan (also put it in sync
+	  with po/ directory, that is added en_AU, en_GB and pl)
+
 2000-04-18  Jacob Berkman  <jacob@helixcode.com>
 
 	* src/bug-buddy.glade: remove the menus from some option

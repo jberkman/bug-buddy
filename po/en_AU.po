@@ -234,10 +234,10 @@ msgstr ""
 
 #: src/bug-buddy.c:990
 #, c-format
-msgid ""m
+msgid ""
 "Could not find '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
-sgstr ""
+msgstr ""
 "Could not find '%s'.\n"
 "Please make sure bug-mate was installed correctly."
 
