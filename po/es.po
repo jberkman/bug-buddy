@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-05-21 23:36+0200\n"
+"POT-Creation-Date: 2000-05-22 19:04+0200\n"
+"PO-Revision-Date: 2000-05-22 19:05+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -267,19 +267,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Ayuda"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Parar"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Refrescar"
 
 #: src/bug-buddy.c:949
 #, c-format
