@@ -482,6 +482,17 @@ init_ui (void)
 		      "use_underline", TRUE,
 		      NULL);
 
+	{
+		GtkButtonBox *bbox;
+		
+		bbox = GTK_BUTTON_BOX (GET_WIDGET ("druid-bbox"));
+		gtk_button_box_set_child_secondary (
+			bbox, GET_WIDGET ("druid-help"), TRUE);
+		gtk_button_box_set_child_secondary (
+			bbox, GET_WIDGET ("druid-about"), TRUE);
+	}
+		
+
 #if 0
 	/* set the cursor at the beginning of the second line */
 	{
@@ -489,7 +500,7 @@ init_ui (void)
 		GtkTextIter iter;
 
 		buffy = gtk_text_view_get_buffer (GTK_TEXT_VIEW (GET_WIDGET ("desc-text")));
-		gtk_text_buffer_get_iter_at_line (buffer, &iter, 2);
+		gtk_text_buffer_get_iter_at_line (buffy, &iter, 2);
 	}
 #endif
 }

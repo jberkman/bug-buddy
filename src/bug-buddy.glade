@@ -1919,10 +1919,15 @@ Additional Information:</text>
     </widget>
 
     <widget>
-      <class>GtkHBox</class>
-      <name>hbox19</name>
-      <homogeneous>False</homogeneous>
-      <spacing>0</spacing>
+      <class>GtkHButtonBox</class>
+      <name>druid-bbox</name>
+      <border_width>4</border_width>
+      <layout_style>GTK_BUTTONBOX_END</layout_style>
+      <spacing>8</spacing>
+      <child_min_width>0</child_min_width>
+      <child_min_height>0</child_min_height>
+      <child_ipad_x>0</child_ipad_x>
+      <child_ipad_y>0</child_ipad_y>
       <child>
 	<padding>0</padding>
 	<expand>False</expand>
@@ -1930,129 +1935,95 @@ Additional Information:</text>
       </child>
 
       <widget>
-	<class>GtkHButtonBox</class>
-	<name>hbuttonbox2</name>
-	<border_width>4</border_width>
-	<layout_style>GTK_BUTTONBOX_DEFAULT_STYLE</layout_style>
-	<spacing>8</spacing>
-	<child_min_width>0</child_min_width>
-	<child_min_height>0</child_min_height>
-	<child_ipad_x>0</child_ipad_x>
-	<child_ipad_y>0</child_ipad_y>
-	<child>
-	  <padding>0</padding>
-	  <expand>False</expand>
-	  <fill>False</fill>
-	</child>
-
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-help</name>
-	  <sensitive>False</sensitive>
-	  <can_default>True</can_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>on_druid_help_clicked</handler>
-	    <last_modification_time>Fri, 13 Oct 2000 06:14:14 GMT</last_modification_time>
-	  </signal>
-	  <stock_button>GNOME_STOCK_BUTTON_HELP</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
-
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-about</name>
-	  <can_default>True</can_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>on_druid_about_clicked</handler>
-	    <last_modification_time>Fri, 13 Oct 2000 06:14:38 GMT</last_modification_time>
-	  </signal>
-	  <label>About</label>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
+	<class>GtkButton</class>
+	<name>druid-help</name>
+	<sensitive>False</sensitive>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_druid_help_clicked</handler>
+	  <last_modification_time>Fri, 13 Oct 2000 06:14:14 GMT</last_modification_time>
+	</signal>
+	<stock_button>GNOME_STOCK_BUTTON_HELP</stock_button>
+	<relief>GTK_RELIEF_NORMAL</relief>
       </widget>
 
       <widget>
-	<class>GtkHButtonBox</class>
-	<name>hbuttonbox1</name>
-	<border_width>4</border_width>
-	<layout_style>GTK_BUTTONBOX_END</layout_style>
-	<spacing>8</spacing>
-	<child_min_width>0</child_min_width>
-	<child_min_height>0</child_min_height>
-	<child_ipad_x>0</child_ipad_x>
-	<child_ipad_y>0</child_ipad_y>
-	<child>
-	  <padding>0</padding>
-	  <expand>True</expand>
-	  <fill>True</fill>
-	</child>
+	<class>GtkButton</class>
+	<name>druid-about</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_druid_about_clicked</handler>
+	  <last_modification_time>Fri, 13 Oct 2000 06:14:38 GMT</last_modification_time>
+	</signal>
+	<label>About</label>
+	<relief>GTK_RELIEF_NORMAL</relief>
+      </widget>
 
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-prev</name>
-	  <can_default>True</can_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>on_druid_prev_clicked</handler>
-	    <last_modification_time>Wed, 11 Oct 2000 08:03:01 GMT</last_modification_time>
-	  </signal>
-	  <stock_button>GNOME_STOCK_BUTTON_PREV</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
+      <widget>
+	<class>GtkButton</class>
+	<name>druid-prev</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_druid_prev_clicked</handler>
+	  <last_modification_time>Wed, 11 Oct 2000 08:03:01 GMT</last_modification_time>
+	</signal>
+	<stock_button>GNOME_STOCK_BUTTON_PREV</stock_button>
+	<relief>GTK_RELIEF_NORMAL</relief>
+      </widget>
 
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-next</name>
-	  <can_default>True</can_default>
-	  <has_default>True</has_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>on_druid_next_clicked</handler>
-	    <last_modification_time>Wed, 11 Oct 2000 08:03:10 GMT</last_modification_time>
-	  </signal>
-	  <stock_button>GNOME_STOCK_BUTTON_NEXT</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
+      <widget>
+	<class>GtkButton</class>
+	<name>druid-next</name>
+	<can_default>True</can_default>
+	<has_default>True</has_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_druid_next_clicked</handler>
+	  <last_modification_time>Wed, 11 Oct 2000 08:03:10 GMT</last_modification_time>
+	</signal>
+	<stock_button>GNOME_STOCK_BUTTON_NEXT</stock_button>
+	<relief>GTK_RELIEF_NORMAL</relief>
+      </widget>
 
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-finish</name>
-	  <visible>False</visible>
-	  <can_default>True</can_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>gtk_main_quit</handler>
-	    <last_modification_time>Fri, 09 Feb 2001 11:23:38 GMT</last_modification_time>
-	  </signal>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>save_config</handler>
-	    <last_modification_time>Thu, 15 Feb 2001 09:36:06 GMT</last_modification_time>
-	  </signal>
-	  <stock_button>GNOME_STOCK_BUTTON_CLOSE</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
+      <widget>
+	<class>GtkButton</class>
+	<name>druid-finish</name>
+	<visible>False</visible>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>gtk_main_quit</handler>
+	  <last_modification_time>Fri, 09 Feb 2001 11:23:38 GMT</last_modification_time>
+	</signal>
+	<signal>
+	  <name>clicked</name>
+	  <handler>save_config</handler>
+	  <last_modification_time>Thu, 15 Feb 2001 09:36:06 GMT</last_modification_time>
+	</signal>
+	<stock_button>GNOME_STOCK_BUTTON_CLOSE</stock_button>
+	<relief>GTK_RELIEF_NORMAL</relief>
+      </widget>
 
-	<widget>
-	  <class>GtkButton</class>
-	  <name>druid-cancel</name>
-	  <can_default>True</can_default>
-	  <can_focus>True</can_focus>
-	  <signal>
-	    <name>clicked</name>
-	    <handler>on_druid_cancel_clicked</handler>
-	    <last_modification_time>Fri, 09 Feb 2001 11:23:28 GMT</last_modification_time>
-	  </signal>
-	  <stock_button>GNOME_STOCK_BUTTON_CANCEL</stock_button>
-	  <relief>GTK_RELIEF_NORMAL</relief>
-	</widget>
+      <widget>
+	<class>GtkButton</class>
+	<name>druid-cancel</name>
+	<can_default>True</can_default>
+	<can_focus>True</can_focus>
+	<signal>
+	  <name>clicked</name>
+	  <handler>on_druid_cancel_clicked</handler>
+	  <last_modification_time>Fri, 09 Feb 2001 11:23:28 GMT</last_modification_time>
+	</signal>
+	<stock_button>GNOME_STOCK_BUTTON_CANCEL</stock_button>
+	<relief>GTK_RELIEF_NORMAL</relief>
       </widget>
     </widget>
   </widget>

@@ -69,10 +69,11 @@ bugzilla_product_insert_component (BugzillaProduct *prod, BugzillaComponent *com
 	prod->components = g_slist_insert_sorted (prod->components, comp, (gpointer)comp_cmp);
 }
 
+/* i think the bugzilla files are ISO8859-1 */
 static char *
 gify (char *x)
 {
-	char *g = g_strdup (x);
+	char *g = g_convert (x, strlen (x), "UTF-8", "ISO8859-1", NULL, NULL, NULL);
 	xmlFree (x);
 	return g;
 }
