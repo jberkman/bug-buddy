@@ -78,7 +78,7 @@ bug-buddy.glade2: bug-buddy.glade $(LIBGLADE_CONVERT)
 	$(LIBGLADE_CONVERT) $(srcdir)/bug-buddy.glade > bug-buddy.glade.tmp \
 	&& mv bug-buddy.glade.tmp bug-buddy.glade2
 
-utilsdir = $(datadir)/gnome/apps/Utilities
+utilsdir = $(datadir)/applications
 utils_in_files = bug-buddy.desktop.in
 utils_DATA = $(utils_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@

@@ -1,3 +1,11 @@
+2002-02-21  Seth Nickell  <snickell@stanford.edu>
+
+	* src/Makefile.am:
+	* src/bug-buddy.desktop.in:
+
+	Install into $(datadir)/applications and add a
+	Categories field for GNOME2.
+
 2002-03-18  jacob berkman  <jacob@ximian.com>
 
 	* src/gdb-buddy.c (get_trace_from_pair): change wording

@@ -5,3 +5,4 @@ Exec=bug-buddy
 Icon=bug-buddy.png
 Terminal=0
 Type=Application
+Categories=Application;Development
