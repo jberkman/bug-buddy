@@ -2,6 +2,7 @@
 
 	* src/bug-buddy.c (on_debian_page_next): bother the user a bit if
 	they specify 'general'
+	(make_pixmap_button): try an ugly hack
 
 	* src/bts-debian.c (debian_bts_init): give the miggie combo text
 	some intelligence
