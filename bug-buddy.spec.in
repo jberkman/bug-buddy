@@ -76,6 +76,3 @@ rm -fr $RPM_BUILD_ROOT
 %{prefix}/share/mime-info
 %{prefix}/share/bug-buddy
 %{prefix}/share/locale/*/*/*
-
---------------B1126E02FF23B86A2A26D5BE--
-
