@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-02-04 14:29-0500\n"
-"PO-Revision-Date: 2001-11-12 00:52+0800\n"
+"POT-Creation-Date: 2002-03-03 15:24+0800\n"
+"PO-Revision-Date: 2002-03-03 15:46+0800\n"
 "Last-Translator: Wang Jian <lark@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "要包含在报告中的文本文件"
 #: src/bug-buddy.c:96
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr ""
+msgstr "无法在 %2$s 找到名为 %1$s 的部件"
 
 #: src/bug-buddy.c:208
 msgid ""
@@ -120,21 +120,19 @@ msgstr "GDB 已经退出"
 
 #: src/bug-buddy.c:306
 msgid "_Start Mailer"
-msgstr ""
+msgstr "启动邮件程序(_S)"
 
 #: src/bug-buddy.c:310
 msgid "_Send Report"
-msgstr ""
+msgstr "发送报告(_S)"
 
 #: src/bug-buddy.c:377
-#, fuzzy
 msgid "Hide Debugging Options"
-msgstr "调试信息"
+msgstr "隐藏调试选项"
 
 #: src/bug-buddy.c:378
-#, fuzzy
 msgid "Show Debugging Options"
-msgstr "调试信息"
+msgstr "显示调试选项"
 
 #: src/bug-buddy.c:442
 msgid ""
@@ -157,6 +155,8 @@ msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
+"欢迎使用 Bug Buddy，GNOME 错误报告工具。\n"
+"它将帮助您通过提交错误报告的几个步骤。"
 
 #: src/bug-buddy.c:471
 msgid ""
@@ -164,6 +164,9 @@ msgid ""
 "\n"
 "You are seeing this because another application has crashed."
 msgstr ""
+"\n"
+"\n"
+"因为另外一个程序崩溃了，您才看到此程序。"
 
 #: src/bug-buddy.c:474
 msgid ""
@@ -172,11 +175,15 @@ msgid ""
 "Please wait a few moments while Bug Buddy obtains debugging information from "
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
 msgstr ""
+"\n"
+"\n"
+"Bug Buddy 正在从程序中获取调试信息，请耐心等待一会儿。使用调试信息，"
+"Bug Buddy 能够提供一个更有用的错误报告。"
 
 #: src/bug-buddy.c:613
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
-msgstr ""
+msgstr "无法找到图片：%s (%d)\n"
 
 #: src/bug-buddy.c:680
 #, c-format
@@ -188,9 +195,8 @@ msgstr ""
 "请确定 Bug Buddy 安装正确。"
 
 #: src/bugzilla.c:611
-#, fuzzy
 msgid "ID"
-msgstr "PID"
+msgstr "ID"
 
 #: src/bug-buddy.glade.h:44 src/bugzilla.c:625 src/bugzilla.c:660
 msgid "Product"
@@ -220,23 +226,23 @@ msgstr "全部"
 
 #: src/config.c:86
 msgid "Evolution"
-msgstr ""
+msgstr "Evolution"
 
 #: src/cell-renderer-uri.c:145
 msgid "URI"
-msgstr ""
+msgstr "链接"
 
 #: src/cell-renderer-uri.c:146
 msgid "URI to show when clicked."
-msgstr ""
+msgstr "点击时显示的链接。"
 
 #: src/cell-renderer-uri.c:153
 msgid "Visited"
-msgstr ""
+msgstr "访问过"
 
 #: src/cell-renderer-uri.c:154
 msgid "If the URI has been visited before."
-msgstr ""
+msgstr "如果以前访问过该链接。"
 
 #: src/gdb-buddy.c:80
 #, c-format
@@ -296,7 +302,7 @@ msgstr "关于"
 
 #: src/bug-buddy.glade.h:4
 msgid "Advanced"
-msgstr ""
+msgstr "高级"
 
 #: src/bug-buddy.glade.h:5
 msgid "Assbarn Phenomenon"
@@ -327,6 +333,10 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
+"Bug Buddy 使用电子邮件提交错误报告。\n"
+"请选择您如何让 Bug Buddy 发送邮件。\n"
+"如果您选择使用默认的 GNOME 邮件程序，该设置也会用在\n"
+"其它的 GNOME 程序中。"
 
 #: src/bug-buddy.glade.h:15
 msgid "Bug tracking system"
@@ -338,7 +348,7 @@ msgstr "抄送"
 
 #: src/bug-buddy.glade.h:17
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: src/bug-buddy.glade.h:19
 msgid "Core file"
@@ -346,7 +356,7 @@ msgstr "核心文件"
 
 #: src/bug-buddy.glade.h:20
 msgid "Custom mailer"
-msgstr ""
+msgstr "定制邮件程序"
 
 #: src/bug-buddy.glade.h:21
 msgid "Debug"
@@ -354,7 +364,7 @@ msgstr "调试"
 
 #: src/bug-buddy.glade.h:23
 msgid "Download Progress"
-msgstr ""
+msgstr "下载进度"
 
 #: src/bug-buddy.glade.h:24
 msgid "Email"
@@ -362,7 +372,7 @@ msgstr "电子邮件"
 
 #: src/bug-buddy.glade.h:25
 msgid "GNOME Mailer Settings"
-msgstr ""
+msgstr "GNOME邮件程序设置"
 
 #: src/bug-buddy.glade.h:26
 msgid "Go"
@@ -370,7 +380,7 @@ msgstr "继续"
 
 #: src/bug-buddy.glade.h:27
 msgid "HTTP Proxy Settings"
-msgstr ""
+msgstr "HTTP代理服务器设置"
 
 #: src/bug-buddy.glade.h:28
 msgid "Include a text file"
@@ -378,11 +388,11 @@ msgstr "包含文本文件"
 
 #: src/bug-buddy.glade.h:29
 msgid "Just save to a file so I can submit a bug report manually"
-msgstr ""
+msgstr "仅保存到文件中，我可以手工报告错误"
 
 #: src/bug-buddy.glade.h:30
 msgid "Location"
-msgstr ""
+msgstr "位置"
 
 #: src/bug-buddy.glade.h:31
 msgid "Name"
@@ -390,11 +400,11 @@ msgstr "名字"
 
 #: src/bug-buddy.glade.h:32
 msgid "Password"
-msgstr ""
+msgstr "口令"
 
 #: src/bug-buddy.glade.h:33
 msgid "Path of sendmail"
-msgstr ""
+msgstr "Sendmail的路径"
 
 #: src/bug-buddy.glade.h:34
 msgid "Please choose a component, version, and severity level."
@@ -402,7 +412,7 @@ msgstr "请选择部件、版本和严重程度。"
 
 #: src/bug-buddy.glade.h:35
 msgid "Please make any final corrections to the bug report."
-msgstr ""
+msgstr "请对错误报告进行最后的改正。"
 
 #: src/bug-buddy.glade.h:36
 msgid "Please make your bug report in English, if possible."
@@ -418,6 +428,8 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
+"请花几分钟看看您报告的错误是不是最常见的错误。\n"
+"如果错误已经被报告，请不要再报告它。"
 
 #: src/bug-buddy.glade.h:40
 msgid ""
@@ -437,16 +449,15 @@ msgstr "进程号"
 
 #: src/bug-buddy.glade.h:45
 msgid "Proxy Settings..."
-msgstr ""
+msgstr "代理服务器设置..."
 
 #: src/bug-buddy.glade.h:46
 msgid "Proxy requires a username and password"
-msgstr ""
+msgstr "代理服务器需要用户名和口令"
 
 #: src/bug-buddy.glade.h:47
-#, fuzzy
 msgid "Save in"
-msgstr "正在保存："
+msgstr "保存在"
 
 #: src/bug-buddy.glade.h:48
 msgid "Save the report to..."
@@ -457,14 +468,12 @@ msgid "Saving:"
 msgstr "正在保存："
 
 #: src/bug-buddy.glade.h:50
-#, fuzzy
 msgid "Select a mailer"
-msgstr "选择动作"
+msgstr "选择邮件程序"
 
 #: src/bug-buddy.glade.h:51
-#, fuzzy
 msgid "Sendmail Settings"
-msgstr "Sendmail"
+msgstr "Sendmail 设置"
 
 #: src/bug-buddy.glade.h:52
 msgid "Severity"
@@ -472,23 +481,23 @@ msgstr "严重程度"
 
 #: src/bug-buddy.glade.h:53
 msgid "Show Debugging Details"
-msgstr ""
+msgstr "显示调试信息详情"
 
 #: src/bug-buddy.glade.h:54
 msgid "Show most frequent bugs in:"
-msgstr ""
+msgstr "显示最常见的错误："
 
 #: src/bug-buddy.glade.h:55
 msgid "Simple"
-msgstr ""
+msgstr "简单"
 
 #: src/bug-buddy.glade.h:56
 msgid "Start"
-msgstr ""
+msgstr "启动"
 
 #: src/bug-buddy.glade.h:57
 msgid "Start in terminal"
-msgstr ""
+msgstr "在终端中启动"
 
 #: src/bug-buddy.glade.h:58
 msgid "Stop"
@@ -504,7 +513,7 @@ msgstr "摘要"
 
 #: src/bug-buddy.glade.h:61
 msgid "The product is not listed above."
-msgstr ""
+msgstr "产品没有列在上面。"
 
 #: src/bug-buddy.glade.h:62
 msgid "To"
@@ -516,28 +525,27 @@ msgstr "收件人："
 
 #: src/bug-buddy.glade.h:64
 msgid "Understands Netscape remote control"
-msgstr ""
+msgstr "理解 Netscape 远程控制"
 
 #: src/bug-buddy.glade.h:65
-#, fuzzy
 msgid "Updating products list:"
-msgstr "正在更新产品清单"
+msgstr "正在更新产品清单："
 
 #: src/bug-buddy.glade.h:66
 msgid "Use HTTP Proxy"
-msgstr ""
+msgstr "使用 HTTP 代理"
 
 #: src/bug-buddy.glade.h:67
 msgid "Use sendmail directly"
-msgstr ""
+msgstr "直接使用 sendmail"
 
 #: src/bug-buddy.glade.h:68
 msgid "Use the default GNOME mailer"
-msgstr ""
+msgstr "使用默认的 GNOME 邮件程序"
 
 #: src/bug-buddy.glade.h:69
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 #: src/bug-buddy.glade.h:70
 msgid "Version"
@@ -565,57 +573,51 @@ msgstr "gdb"
 
 #: src/bug-buddy.glade.h:76
 msgid "gnome"
-msgstr ""
+msgstr "gnome"
 
 #: src/bug-buddy.glade.h:77
-#, fuzzy
 msgid "mail config"
-msgstr "电子邮件信息"
+msgstr "邮件配置"
 
 #: src/bug-buddy.glade.h:78
 msgid "mostfreq"
-msgstr ""
+msgstr "mostfreq"
 
 #: src/bug-buddy.glade.h:79
 msgid "product"
 msgstr "产品"
 
 #: src/bug-buddy.glade.h:80
-#, fuzzy
 msgid "sendmail"
-msgstr "Sendmail"
+msgstr "sendmail"
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "欢迎使用 Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:50
-#, fuzzy
 msgid "Select a Product"
-msgstr "选择动作"
+msgstr "选择一个产品"
 
 #: src/united-states-of-bug-buddy.c:51
-#, fuzzy
 msgid "Select a Component"
-msgstr "部件"
+msgstr "选择一个部件"
 
 #: src/united-states-of-bug-buddy.c:52
 msgid "Frequently Reported Bugs"
-msgstr ""
+msgstr "经常报告的错误"
 
 #: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "错误描述"
 
 #: src/united-states-of-bug-buddy.c:54
-#, fuzzy
 msgid "Mail Configuration"
-msgstr "系统配置"
+msgstr "邮件配置"
 
 #: src/united-states-of-bug-buddy.c:55
-#, fuzzy
 msgid "Confirmation"
-msgstr "系统配置"
+msgstr "确认"
 
 #: src/united-states-of-bug-buddy.c:56
 msgid "Finished!"
@@ -644,11 +646,13 @@ msgid ""
 "\n"
 "Please check the path to sendmail again."
 msgstr ""
+"“%s”不存在。\n"
+"\n"
+"请再次检查 sendmail 的路径。"
 
 #: src/united-states-of-bug-buddy.c:352
-#, fuzzy
 msgid "Please enter a valid email command."
-msgstr "请输入您的有效的电子邮件地址。"
+msgstr "请输入一个有效的电子邮件命令。"
 
 #: src/united-states-of-bug-buddy.c:416
 msgid "The specified file does not exist."
@@ -730,6 +734,8 @@ msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
+"由于 Bug Buddy 不知道您要提交错误报告的产品，您必须"
+"手工生成错误报告。"
 
 #: src/united-states-of-bug-buddy.c:649
 msgid "You must specify a product for your bug report."
@@ -749,6 +755,9 @@ msgid ""
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
+"您的邮件程序已经被启动。请查看并发送错误报告。\n"
+"\n"
+"感谢您发送此错误报告。"
 
 #: src/united-states-of-bug-buddy.c:794
 msgid ""
