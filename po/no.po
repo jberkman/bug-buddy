@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-06 17:08-0500\n"
+"POT-Creation-Date: 1999-11-07 01:26+0100\n"
 "PO-Revision-Date: 1999-11-06 11:55+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -165,6 +165,8 @@ msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
 msgstr ""
+"Klikk \"Fullfør\" for å avslutte bug-buddy.\n"
+"Ingen feilrapport vil bli sendt inn."
 
 #: src/bug-buddy.c:403
 #, c-format
