@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
 "POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-05-22 01:29+02:00\n"
+"PO-Revision-Date: 2000-11-17 16:17+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -139,10 +139,9 @@ msgstr "Core fil fra programmet"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Tekstfil som skal inkluderes i rapporten"
 
 #: src/bug-buddy.c:332
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -152,7 +151,7 @@ msgstr ""
 "Det er mye mer nyttig hvis du spesifiserer\n"
 "noe mer spesifikt enn 'generell'.\n"
 "\n"
-"Vil du fortsette likevel?"
+"Vennligst spesifiser en pakke."
 
 #: src/bug-buddy.c:374
 msgid "The specified file does not exist."
@@ -189,23 +188,20 @@ msgid "gdb has already exited"
 msgstr "gdb har allerede avsluttet"
 
 #: src/bug-buddy.c:490
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "GNOME grafisk verktøy for feilrapportering"
+msgstr "Grafisk verktøy for feilrapportering for GNOME."
 
 #: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "Den lamme bug-buddy hjemmesiden"
 
 #: src/bug-buddy.c:607
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Vennligst skriv inn navn og e-post adresse"
+msgstr "Vennligst skriv inn ditt navn."
 
 #: src/bug-buddy.c:613
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Vennligst skriv inn navn og e-post adresse"
+msgstr "Vennligst oppgi en gyldig e-post adresse."
 
 #: src/bug-buddy.c:624
 #, c-format
@@ -579,6 +575,3 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
-
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Copyright (C) 1999 Jacob Berkman"
