@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2001-03-28 11:37-0500\n"
-"PO-Revision-Date: 2001-02-17 20:54+02:00\n"
+"POT-Creation-Date: 2001-04-07 00:29+0300\n"
+"PO-Revision-Date: 2001-04-07 00:32+03:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -206,7 +206,6 @@ msgstr ""
 "Virheenkorjaustietoja ei haeta."
 
 #: src/gdb-buddy.c:274
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -511,7 +510,7 @@ msgid "Please enter a valid email address."
 msgstr "Anna sähköpostiosoitteesi tähän."
 
 #: src/united-states-of-bug-buddy.c:288
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -612,85 +611,3 @@ msgstr "Ei voinut ajaa '%s'"
 #: src/util.c:114
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Ei pystynyt avaamaan tiedostoa '%s'\n"
-#~ "Varmista, että Bug Buddy on oikein asennettu."
-
-#~ msgid "critical"
-#~ msgstr "kriittinen"
-
-#~ msgid "grave"
-#~ msgstr "vakava"
-
-#~ msgid "normal"
-#~ msgstr "normaali"
-
-#~ msgid "wishlist"
-#~ msgstr "toivomuslista"
-
-#~ msgid "software bug"
-#~ msgstr "ohjelmistovirhe"
-
-#~ msgid "documentation bug"
-#~ msgstr "dokumentointivirhe"
-
-#~ msgid "change request"
-#~ msgstr "muutostoivomus"
-
-#~ msgid "support"
-#~ msgstr "tukipyyntö"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "On suositeltavaa, että valitset tietyn\n"
-#~ "paketin 'general':n sijaan.\n"
-#~ "\n"
-#~ "Tarkenna paketti."
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Virheraportin tulee sisältää otsikkotiedot ja\n"
-#~ "selitysosan."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "'%s' ei näy olevan olemassa. Et voi lähettää virheraporttia,\n"
-#~ "mutta voit tallettaa sen halutessasi tiedostoon.\n"
-#~ "\n"
-#~ "Haluatko määritellä uuden kohteen sendmailille?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "Määrittele vastaanottajan sähköpostiosoite"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Lähetätkö tämän virheraportin nyt?"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Valitse talletettavan tiedoston nimi."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "Tiedosto '%s' on jo olemassa.\n"
-#~ "Kirjoitetaanko tämän tiedoston päälle?"
-
-#~ msgid "Help"
-#~ msgstr "Ohje"
-
-#~ msgid "Refresh"
-#~ msgstr "Päivitä"
