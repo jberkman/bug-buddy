@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-14 23:38-0500\n"
-"PO-Revision-Date: 1999-11-08 18:44+01:00\n"
+"POT-Creation-Date: 1999-11-16 04:53+0100\n"
+"PO-Revision-Date: 1999-11-16 04:56+01:00\n"
 "Last-Translator: Kenneth Christiánsen <kenneth@ripen.dk>\n"
 "Language-Team: Dansk/Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/gdb-buddy.c:40
 msgid "obtaining stack trace..."
-msgstr "henter stak opfølgning..."
+msgstr "henter stakopfølgning..."
 
 #: src/bug-buddy.c:287 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -32,7 +32,7 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Kunne ikke håndtere core filen med gdb:\n"
+"Kunne ikke håndtere core-filen med gdb:\n"
 "'%s'"
 
 #: src/gdb-buddy.c:143
@@ -62,11 +62,8 @@ msgstr ""
 "Installér venligst fejl-partner på ny."
 
 #: src/gdb-buddy.c:214
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr ""
-"Kunne ikke åbne filen:\n"
-"'%s'"
+msgstr "Kunne ikke åbne pibe"
 
 #: src/gdb-buddy.c:226
 msgid "Could not run gdb.  Time to panic."
@@ -234,9 +231,9 @@ msgstr ""
 
 #. s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
 #: src/bug-buddy.c:441
-#, fuzzy, c-format
+#, c-format
 msgid "about to run '%s'"
-msgstr "Kunne ikke starte '%s'.\n"
+msgstr "vil udføre '%s'"
 
 #: src/bug-buddy.c:444
 #, c-format
@@ -294,13 +291,13 @@ msgid "Could not find a mail program.\n"
 msgstr "Kunne ikke finde et e-post program.\n"
 
 #: src/bug-buddy.c:952
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not find our glade file '%s'\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Kunne ikke finde bug-buddy.glade filen.\n"
-"Forsikre dig venligst at fejl-partner er blevet korrekt installeret."
+"Kunne ikke finde vores glade file '%s'.\n"
+"Tjek venligst at fejl-partner er korrekt installeret."
 
 #: src/bug-buddy.c:962
 #, c-format
@@ -343,10 +340,9 @@ msgid ""
 "Enter your name and email address, so you will be notified when the\n"
 "bug is resolved, or for developers to request more information from you."
 msgstr ""
-"Indtast dit navn og e-post addresse, så vil du blive notificeret når fejlen "
-"er\n"
-"blevet rettet, eller så vil udviklerne kunne rekvidere mere information fra "
-"dig."
+"Indtast dit navn og e-post addresse, så du kan få at vide når fejlen er "
+"blevet\n"
+"rettet, eller så udviklerne kan bede om mere information fra dig."
 
 #: src/glade-strings.c:16
 msgid "Bug tracking system to use"
@@ -362,7 +358,7 @@ msgstr "Systemkonfiguration"
 
 #: src/glade-strings.c:20
 msgid "Please verify that this information is correct"
-msgstr "Undersøg venligst om informationen er rigtig"
+msgstr "Undersøg venligst om informationen er korrekt"
 
 #: src/glade-strings.c:21 src/glade-strings.c:28
 msgid "Package"
@@ -413,11 +409,8 @@ msgid "Extra Information"
 msgstr "Ekstra information"
 
 #: src/glade-strings.c:34
-#, fuzzy
 msgid "Full description of the bug:"
-msgstr ""
-"Kort beskrivelse\n"
-"af problemet"
+msgstr "Fuld beskrivelse af problemet:"
 
 #: src/glade-strings.c:35
 msgid "How to repeat the bug:"
@@ -445,7 +438,7 @@ msgstr "Ingen krasj"
 
 #: src/glade-strings.c:41
 msgid "Crashed Application"
-msgstr ""
+msgstr "Krasjet applikation"
 
 #: src/glade-strings.c:42
 msgid ""
@@ -469,7 +462,7 @@ msgstr "Applikationskrasj med core fil"
 
 #: src/glade-strings.c:47
 msgid "Enter the filename of the core dump"
-msgstr "Indtast filnavnet for core dumpning"
+msgstr "Indtast filnavn på core dump"
 
 #: src/glade-strings.c:48
 msgid "Debugging Information"
