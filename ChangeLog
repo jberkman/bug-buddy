@@ -1,3 +1,66 @@
+2002-01-18  jacob berkman  <jacob@ximian.com>
+
+	* pixmaps/Makefile.am (pixmap_DATA): remove some files that aren't
+	used any more
+
+	* src/united-states-of-bug-buddy.c (on_druid_about_clicked): set
+	ourselves as transient for the toplevel
+	(druid_set_state): call druid_set_sensitive() rather than hacking
+	around that
+	(druid_set_state): fixup for new state order
+	(on_druid_prev_clicked): skip pages when we aren't reporting to
+	bugzilla
+	(email_is_valid): don't allow mails from root@ (fixes #57490
+	luis@ximian.com)
+	(mail_config_page_gnome_ok): quick and error prone check that they
+	filled in the mail command
+	(mail_config_page_ok): clean up
+	(on_druid_next_clicked): fixup for new state order
+
+	* src/gdb-buddy.c (animate): pulse a progress bar
+	(start_animation): 
+	(stop_animation): un-comment in
+
+	* src/config.c (configs): comment out removed widgets
+	(load_config): 
+	(save_config): clean up the mess i made the other day.
+
+	* src/bugzilla.c (goto_product_page): comment out unused function
+	(async_update): if the download is done then update the ui and
+	load the xml
+	(on_progress_cancel_clicked): comment out unused func
+	(load_bugzilla_xml_file): try to load from cache, fallback to
+	system
+	(load_bugzilla_xml): simplify a little
+	(create_products_list): put the icon and product name in the same
+	column (thanks anders)
+	(end_bugzilla_download): hide some widgets and cancel the vfs xfer
+	if applicable
+	(start_bugzilla_download): move code here so we can start the
+	download from multiple places
+	(load_bugzillas): don't try to download
+	(generate_email_text): handle when we aren't submitting to
+	bugzilla, and wrap gdb text
+
+	* src/bug-buddy.c (get_widget): be a bit more verbose when we
+	can't find a widget
+	(on_list_button_press_event): go fwd when double clicked (fixes
+	#57036 by ettore)
+	(on_email_group_toggled): fixup for there being 3 types now, and
+	set the fwd button to some appropriate text if applicable
+	(queue_download_restart): start a download of the xml after a
+	delay
+	(on_proxy_settings_clicked): show the proxy settings dialog
+	(on_progress_start_clicked): kick off a download
+	(on_progress_stop_clicked): kill a download
+	(on_debugging_options_button_clicked): show / hide debugging
+	options
+	(fixup_notebook): make a notebook clean
+	(init_ui): make a better initial message, and fix a bunch of stuff
+	(make_image): handle loading stock icons (unused now though)
+	(main): don't skip pages initially any more, and kick off a
+	download
+
 2002-01-16  jacob berkman  <jacob@ximian.com>
 
 	* configure.in: add et translation from Ilmar Kerm

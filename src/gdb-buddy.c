@@ -36,14 +36,17 @@
 
 #define d(x)
 
-#if 0
 static gint
 animate (gpointer data)
 {
+#if 0
 	double affine[6];
 
 	art_affine_rotate (affine, -36);
 	gnome_canvas_item_affine_relative (druid_data.throbber, affine);
+#endif
+
+	gtk_progress_bar_pulse (GTK_PROGRESS_BAR (GET_WIDGET ("gdb-progress")));
 	return TRUE;
 }
 
@@ -53,6 +56,7 @@ start_animation (void)
 	g_return_if_fail (druid_data.throbber_id == 0);
 
 	druid_data.throbber_id = gtk_timeout_add (150, animate, NULL);
+	gtk_widget_show (GET_WIDGET ("gdb-progress"));
 }
 
 static void
@@ -62,8 +66,8 @@ stop_animation (void)
 
 	gtk_timeout_remove (druid_data.throbber_id);
 	druid_data.throbber_id = 0;
+	gtk_widget_hide (GET_WIDGET ("gdb-progress"));
 }
-#endif
 
 void
 start_gdb (void)
@@ -125,16 +129,14 @@ stop_gdb (void)
 	
 	druid_data.gdb_pid = 0;
 
-	druid_set_sensitive (TRUE, TRUE, TRUE);
-	/*stop_animation ();*/
+	druid_set_sensitive (FALSE, TRUE, TRUE);
+	stop_animation ();
 
 	druid_data.fd = 0;
 	druid_data.ioc = NULL;
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-stop")), FALSE);
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-go")), TRUE);
 
-	if (GTK_TOGGLE_BUTTON (GET_WIDGET ("gdb-continue-toggle"))->active)
-		druid_set_state (STATE_PRODUCT);
 	return;
 }
 
@@ -336,7 +338,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	buddy_set_text ("gdb-text", NULL);
 
 	druid_set_sensitive (FALSE, FALSE, TRUE);
-	/*start_animation ();*/
+	start_animation ();
 
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-stop")), TRUE);
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-go")), FALSE);

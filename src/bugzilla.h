@@ -138,4 +138,7 @@ gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);
 
 char *generate_email_text (gboolean include_headers);
 
+gboolean start_bugzilla_download (void);
+void end_bugzilla_download (gboolean cancel, gboolean hide_box);
+
 #endif /* __BUGZILLA_H__ */

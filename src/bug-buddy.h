@@ -30,7 +30,6 @@
 #include <gtk/gtkliststore.h>
 #include <gtk/gtktreeviewcolumn.h>
 #include <libgnomevfs/gnome-vfs-async-ops.h>
-
 #include <sys/types.h>
 
 typedef enum {
@@ -39,27 +38,20 @@ typedef enum {
 	CRASH_NONE
 } CrashType;
 
+/* keep in sync with mail config page */
 typedef enum {
-	SUBMIT_REPORT,
-	SUBMIT_TO_SELF,
+	SUBMIT_GNOME_MAILER,
+	SUBMIT_SENDMAIL,
 	SUBMIT_FILE
 } SubmitType;
 
 typedef enum {
-	BUG_NEW,
-	BUG_EXISTING
-} BugType;
-
-typedef enum {
-	STATE_INTRO,
-	STATE_PROXY_CONFIG,
-	STATE_EMAIL_CONFIG,
 	STATE_GDB,
 	STATE_PRODUCT,
 	STATE_COMPONENT,
 	STATE_MOSTFREQ,
 	STATE_DESC,
-	STATE_SYSTEM,
+	STATE_EMAIL_CONFIG,
 	STATE_EMAIL,
 	STATE_FINISHED,
 	STATE_LAST
@@ -151,6 +143,8 @@ typedef struct {
 	GList *dlsources;
 	GList *dldests;
 
+	gboolean download_in_progress;
+
 	GnomeVFSAsyncHandle *vfshandle;
 	gboolean need_to_download;
 
@@ -160,10 +154,10 @@ typedef struct {
 	const char *gnome_version;
 
 	GHashTable *mailer_hash;
-	gboolean    use_gnome_mailer;
-	gboolean    use_custom_mailer;
 	MailerItem *mailer;
 	MailerItem  custom_mailer;
+
+	guint dl_timeout;
 } DruidData;
 
 extern DruidData druid_data;
@@ -186,7 +180,9 @@ void append_packages (void);
 void load_config (void);
 void save_config (void);
 
-#define GET_WIDGET(name) (glade_xml_get_widget (druid_data.xml, (name)))
+#define GET_WIDGET(name) (get_widget ((name), (G_STRLOC)))
+
+GtkWidget *get_widget (const char *s, const char *loc);
 
 /* GTK's text widgets have sucky apis */
 char *buddy_get_text_widget (GtkWidget *w);

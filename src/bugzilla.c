@@ -226,12 +226,14 @@ print_item (gpointer data, gpointer user_data)
 }
 #endif
 
+#if 0
 static void
 goto_product_page (void)
 {
 	druid_set_sensitive (TRUE, TRUE, TRUE);
 	druid_set_state (STATE_PRODUCT);
 }
+#endif
 
 static int
 async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpointer data)
@@ -251,7 +253,12 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (GET_WIDGET ("progress-progress")), 
 					       (gfloat)info->total_bytes_copied / info->bytes_total);
 
-	return info->phase != GNOME_VFS_XFER_PHASE_COMPLETED;
+	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
+		end_bugzilla_download (FALSE, TRUE);
+		load_bugzilla_xml ();
+	}
+
+	return druid_data.download_in_progress;
 }
 
 /**
@@ -413,6 +420,7 @@ load_bugzilla (const char *filename)
 	return bts;
 }
 
+#if 0
 void
 on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 {
@@ -422,11 +430,24 @@ on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 	goto_product_page ();
 	d(g_print ("scooby dooby doo!\n"));
 }
+#endif
 
 static void
 show_products (GtkWidget *w, gpointer data)
 {
 	bugzilla_bts_add_products_to_clist ((BugzillaBTS *)data);
+}
+
+static xmlDoc *
+load_bugzilla_xml_file (BugzillaXMLFile *xml_file)
+{
+	xmlDoc *doc = NULL;
+
+	doc = xmlParseFile (xml_file->cache_path);
+	if (!doc)
+		doc = xmlParseFile (xml_file->system_path);
+
+	return doc;
 }
 
 void
@@ -448,42 +469,22 @@ load_bugzilla_xml (void)
 
 	for (item = druid_data.bugzillas; item; item = item->next) {
 		bts = (BugzillaBTS *)item->data;
-		if (bts->products_xml && !bts->products_xml->done) {
-			doc = NULL;
-
-			if (bts->products_xml->read_from_cache)
-				doc = xmlParseFile (bts->products_xml->cache_path);
-
-			if (!doc)
-				doc = xmlParseFile (bts->products_xml->system_path);
-
+		if (bts->products_xml) { // && !bts->products_xml->done) {
+			doc = load_bugzilla_xml_file (bts->products_xml);
 			if (doc) 
 				load_products_xml (bts, doc);
 			bts->products_xml->done = TRUE;
 		}
 
-		if (bts->config_xml && !bts->config_xml->done) {
-			doc = NULL;
-
-			doc = xmlParseFile (bts->config_xml->cache_path);
-
-			if (!doc)
-				doc = xmlParseFile (bts->config_xml->system_path);
-
+		if (bts->config_xml) { // && !bts->config_xml->done) {
+			doc = load_bugzilla_xml_file (bts->config_xml);
 			if (doc) 
 				load_config_xml (bts, doc);
 			bts->config_xml->done = TRUE;
 		}
 
-		if (bts->mostfreq_xml && !bts->mostfreq_xml->done) {
-			doc = NULL;
-
-			if (bts->mostfreq_xml->read_from_cache)
-				doc = xmlParseFile (bts->mostfreq_xml->cache_path);
-
-			if (!doc)
-				doc = xmlParseFile (bts->mostfreq_xml->system_path);
-
+		if (bts->mostfreq_xml) { // && !bts->mostfreq_xml->done) {
+			doc = load_bugzilla_xml_file (bts->mostfreq_xml);
 			if (doc)
 				load_mostfreq_xml (bts, doc);
 			bts->mostfreq_xml->done = TRUE;
@@ -619,6 +620,7 @@ create_products_list (void)
 	GtkListStore *model;
 	GtkTreeView *view;
 	GtkCellRenderer *ren;
+	GtkTreeViewColumn *col;
 
 	view = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
 
@@ -629,18 +631,24 @@ create_products_list (void)
 	g_object_set (G_OBJECT (view), "model", model, NULL);
 	g_object_unref (G_OBJECT (model));
 	
+	col = g_object_new (GTK_TYPE_TREE_VIEW_COLUMN,
+			    "title", _("Product"),
+			    NULL);
+	gtk_tree_view_append_column (view, col);
 	ren = gtk_cell_renderer_pixbuf_new ();
-	gtk_tree_view_insert_column_with_attributes (view, -1,
-						     "", ren,
-						     "pixbuf", PRODUCT_ICON,
-						     NULL);
-	ren = gtk_cell_renderer_text_new ();
-	gtk_tree_view_insert_column_with_attributes (view, -1,
-						     _("Product"), ren,
-						     "text", PRODUCT_NAME,
-						     NULL);
+	gtk_tree_view_column_pack_start (col, ren, FALSE);
+
+
+	gtk_tree_view_column_set_attributes (col, ren,
+					     "pixbuf", PRODUCT_ICON,
+					     NULL);
 
 	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_column_pack_start (col, ren, TRUE);
+	gtk_tree_view_column_set_attributes (col, ren,
+					     "text", PRODUCT_NAME,
+					     NULL);
+
 	gtk_tree_view_insert_column_with_attributes (view, -1,
 						     _("Description"), ren,
 						     "text", PRODUCT_DESC,
@@ -675,6 +683,45 @@ create_components_list (void)
 						     NULL);
 }
 
+void
+end_bugzilla_download (gboolean cancel, gboolean hide_box)
+{
+	if (druid_data.download_in_progress && cancel)
+		gnome_vfs_async_cancel (druid_data.vfshandle);
+
+	if (hide_box) {
+		gtk_widget_hide (GET_WIDGET ("progress-box"));
+		gtk_widget_hide (GET_WIDGET ("progress-sep"));
+	} else {
+		gtk_widget_set_sensitive (GET_WIDGET ("progress-start"), TRUE);
+		gtk_widget_set_sensitive (GET_WIDGET ("progress-stop"),  FALSE);
+	}
+
+	druid_data.download_in_progress = FALSE;
+}
+
+gboolean
+start_bugzilla_download (void)
+{
+	end_bugzilla_download (TRUE, FALSE);
+
+	gtk_widget_show (GET_WIDGET ("progress-box"));
+	gtk_widget_show (GET_WIDGET ("progress-sep"));
+	gtk_widget_set_sensitive (GET_WIDGET ("progress-start"), FALSE);
+	gtk_widget_set_sensitive (GET_WIDGET ("progress-stop"), TRUE);
+	druid_data.download_in_progress = TRUE;
+	gnome_vfs_async_xfer (	    
+		&druid_data.vfshandle,
+		druid_data.dlsources,
+		druid_data.dldests,
+		GNOME_VFS_XFER_DEFAULT,
+		GNOME_VFS_XFER_ERROR_MODE_ABORT,
+		GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
+		GNOME_VFS_PRIORITY_DEFAULT,
+		async_update, NULL, NULL, NULL);
+	druid_data.dl_timeout = 0;
+	return FALSE;
+}
 
 void
 load_bugzillas (void)
@@ -737,16 +784,6 @@ load_bugzillas (void)
 	d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));
 	d(g_print ("to:\n"));
 	d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
-
-	gnome_vfs_async_xfer (	    
-		&druid_data.vfshandle,
-		druid_data.dlsources,
-		druid_data.dldests,
-		GNOME_VFS_XFER_DEFAULT,
-		GNOME_VFS_XFER_ERROR_MODE_ABORT,
-		GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
-		GNOME_VFS_PRIORITY_DEFAULT,
-		async_update, NULL, NULL, NULL);
 }
 
 static void
@@ -834,13 +871,6 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	g_slist_foreach (prod->components, (GFunc)add_component, store);
 
 	gtk_tree_view_columns_autosize (w);
-
-#ifdef FIXME
-	if (w->rows == 1)
-		gtk_clist_select_row (w, 0, 0);
-
-	gtk_clist_thaw (w);
-#endif
 
 	m = gtk_menu_new ();
 	c = GET_WIDGET ("severity-list");
@@ -960,25 +990,41 @@ generate_email_text (gboolean include_headers)
 	char *text_file, *sysinfo;
 #endif
 
+	gboolean is_bugzilla = !GTK_TOGGLE_BUTTON (GET_WIDGET ("no-product-toggle"))->active;
+
 	subject    = buddy_get_text ("desc-subject");
-	product    = druid_data.product->name;
-	component  = druid_data.component->name;
-	version    = buddy_get_text ("the-version-entry");
+	if (is_bugzilla) {
+		product    = druid_data.product->name;
+		component  = druid_data.component->name;
+		version    = buddy_get_text ("the-version-entry");
+	} else {
+		product = component = version = NULL;
+	}
 	opsys      = "Linux";
 	platform   = "Debian";
 	severity   = druid_data.severity ? druid_data.severity : "Normal";
 	/* sysinfo    = generate_sysinfo (); */
-	tmp_body   = buddy_get_text ("desc-text");
 	gnome_version = druid_data.gnome_version
 		? g_strdup_printf ("BugBuddy-GnomeVersion: %s\n", druid_data.gnome_version)
 		: "";
-		
+
+	tmp_body   = buddy_get_text ("desc-text");		
 	body = format_for_width (tmp_body);
 	g_free (tmp_body);
 
-	debug_info = buddy_get_text ("gdb-text");
+	tmp_body = buddy_get_text ("gdb-text");
+	debug_info = format_for_width (tmp_body);
+	g_free (tmp_body);
 
-	if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_FREITAG) {
+	if (!is_bugzilla) {
+		if (include_headers)
+			email1 = g_strdup_printf ("Subject: %s\n\n", subject);
+		email2 = g_strdup_printf (
+			"(This bug report was generated by Bug Buddy " VERSION ")\n"
+			"%s\n"
+			"\n",
+			body);
+	} else if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_FREITAG) {
 		if (include_headers)
 			email1 = g_strdup_printf ("Subject: %s\n\n", subject);
 				

@@ -26,6 +26,8 @@
 #include <gnome.h>
 #include <gconf/gconf-client.h>
 
+#define BUG_BUDDY_ALREADY_RUN_SERIAL 2
+
 #define d(x)
 
 #define INT(s) (strtol ((s), NULL, 0))
@@ -47,21 +49,26 @@ typedef struct {
 } ConfigItem;
 
 static ConfigItem configs[] = {
-	{ CONFIG_TOGGLE, "intro-skip-toggle",          "/bug-buddy/last/skip-intro=1" },
+/*	{ CONFIG_TOGGLE, "intro-skip-toggle",          "/bug-buddy/last/skip-intro=1" }, */
 	{ CONFIG_ENTRY,  "gdb-binary-gnome-entry" },
 	{ CONFIG_ENTRY,  "gdb-core-gnome-entry" },
-	{ CONFIG_TOGGLE, "gdb-continue-toggle",        "/bug-buddy/last/gdb-continue=1" },
+/*	{ CONFIG_TOGGLE, "gdb-continue-toggle",        "/bug-buddy/last/gdb-continue=1" },*/
 	{ CONFIG_ENTRY,  "desc-file-gnome-entry" },
 /*	{ CONFIG_ENTRY,  "bts-package-gnome-entry" },*/
 /*	{ CONFIG_ENTRY,  "bts-module-gnome-entry" }, */
-	{ CONFIG_TOGGLE, "version-toggle",             "/bug-buddy/last/skip_conf=1" },
+/*	{ CONFIG_TOGGLE, "version-toggle",             "/bug-buddy/last/skip_conf=1" }, */
 	{ CONFIG_USER,   "email-name-gnome-entry",     "/bug-buddy/last/name",          "email-name-entry" },
 	{ CONFIG_ENTRY,  "email-email-gnome-entry",    "/bug-buddy/last/email_address", "email-email-entry" },
 	{ CONFIG_ENTRY,  "email-to-gnome-entry" },
 	{ CONFIG_ENTRY,  "email-cc-gnome-entry" },
 	{ CONFIG_MAILER, "email-sendmail-gnome-entry", "/bug-buddy/last/mailer",        "email-sendmail-entry" },
 	{ CONFIG_ENTRY,  "email-file-gnome-entry",     "/bug-buddy/last/bugfile",       "email-file-entry" },
-	{ CONFIG_TOGGLE, "email-cc-toggle",            "/bug-buddy/last/cc=0" },
+/*	{ CONFIG_TOGGLE, "email-cc-toggle",            "/bug-buddy/last/cc=0" }, */
+	{ CONFIG_TOGGLE, "email-sendmail-radio",       "/bug-buddy/last/use_sendmail=false" },
+	{ CONFIG_TOGGLE, "email-custom-radio",         "/bug-buddy/last/use_custom_mailer=false" },
+	{ CONFIG_ENTRY,  "email-command-gnome-entry",  "/bug-buddy/custom_mailer/command=evolution", "email-command-entry"},
+	{ CONFIG_TOGGLE, "email-terminal-toggle",      "/bug-buddy/custom_mailer/start_in_terminal" },
+	{ CONFIG_TOGGLE, "email-remote-toggle",        "/bug-buddy/custom_mailer/use_moz_remote" },
 	{ CONFIG_DONE }
 };
 
@@ -222,25 +229,13 @@ save_config (void)
 	gnome_config_set_int ("/bug-buddy/last/submittype", 
 			      druid_data.submit_type);
 
-	gnome_config_set_bool ("/bug-buddy/last/already_run", 1);
-
-	gnome_config_set_bool ("/bug-buddy/last/use_gnome_mailer",
-			       druid_data.use_gnome_mailer);
-
-	gnome_config_set_bool ("/bug-buddy/last/use_custom_mailer",
-			       druid_data.use_custom_mailer);
+	gnome_config_set_int ("/bug-buddy/last/already_run", BUG_BUDDY_ALREADY_RUN_SERIAL);
 
 	gnome_config_set_string ("/bug-buddy/last/gnome_mailer",
 				 _(druid_data.mailer->name));
 
-	gnome_config_set_string ("/bug-buddy/custom_mailer/command",
-				 druid_data.custom_mailer.command);
-
-	gnome_config_set_bool ("/bug-buddy/custom_mailer/start_in_terminal",
-			       druid_data.custom_mailer.start_in_terminal);
-
-	gnome_config_set_bool("/bug-buddy/custom_mailer/use_moz_remote",
-			      druid_data.custom_mailer.use_moz_remote);
+	gnome_config_set_bool ("/bug-buddy/last/show_debugging", 
+			       gtk_notebook_get_current_page (GTK_NOTEBOOK (GET_WIDGET ("gdb-notebook"))));
 			       
 	gnome_config_sync ();
 }
@@ -321,14 +316,8 @@ load_config (void)
 	for (mailer = default_mailers; mailer->name; mailer++)
 		g_hash_table_insert (druid_data.mailer_hash, _(mailer->name), mailer);
 
-	druid_data.use_gnome_mailer =
-		gnome_config_get_bool ("/bug-buddy/last/use_gnome_mailer=true");
-
-	druid_data.use_custom_mailer =
-		gnome_config_get_bool ("/bug-buddy/last/use_custom_mailer");
-
 	{
-		char *s = g_strconcat ("/bug-buddy/last/gnome_mailer=", _(default_mailers[0].name));
+		char *s = g_strconcat ("/bug-buddy/last/gnome_mailer=", _(default_mailers[0].name), NULL);
 		char *mailer = gnome_config_get_string (s);
 		g_free (s);
 		druid_data.mailer = g_hash_table_lookup (druid_data.mailer_hash, mailer);
@@ -337,18 +326,14 @@ load_config (void)
 			druid_data.mailer = &default_mailers[0];
 	}
 
-	druid_data.custom_mailer.command =
-		gnome_config_get_string ("/bug-buddy/custom_mailer/command=evolution");
-	druid_data.custom_mailer.start_in_terminal = 
-		gnome_config_get_bool ("/bug-buddy/custom_mailer/start_in_terminal");
-	druid_data.custom_mailer.use_moz_remote =
-		gnome_config_get_bool ("/bug-buddy/custom_mailer/use_moz_remote");
-
 	druid_data.submit_type =
 		gnome_config_get_int ("/bug-buddy/last/submittype");
 
 	druid_data.already_run =
-		gnome_config_get_bool ("/bug-buddy/last/already_run=0");
+		(gnome_config_get_int ("/bug-buddy/last/already_run=0") >= BUG_BUDDY_ALREADY_RUN_SERIAL);
 
 	druid_data.state = 0;
+
+	if (gnome_config_get_bool ("/bug-buddy/last/show_debugging=0"))
+		gtk_button_clicked (GTK_BUTTON (GET_WIDGET ("debugging-options-button")));
 }
