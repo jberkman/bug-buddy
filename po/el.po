@@ -1,12 +1,14 @@
 # bug-buddy Greek PO file
-# Copyright (C) 1999, 2000 Free Software Foundation, Inc.
-# Simos Xenitellis <simos@hellug.gr>, 1999, 2000.
+# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# Simos Xenitellis <simos@hellug.gr>, 1999-2001.
+#
+# simos: 121 messages, 11Feb2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2001-02-11 14:13-0500\n"
-"PO-Revision-Date: 2000-12-05 15:09:52+0900\n"
+"Project-Id-Version: bug-buddy 1.89cvs\n"
+"POT-Creation-Date: 2001-02-11 21:28+0000\n"
+"PO-Revision-Date: 2001-02-11 21:48:38+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -80,19 +82,17 @@ msgstr "Αποθήκευση της αναφοράς σε αρχείο"
 
 #
 #: src/bug-buddy.c:76
-#, fuzzy
 msgid "crashed application"
-msgstr "Προσκόλληση στην εφαρμογή που κατέρρευσε"
+msgstr "εφαρμογή που κατέρρευσε"
 
 #
 #: src/bug-buddy.c:77
-#, fuzzy
 msgid "core file"
-msgstr "Αρχείο core"
+msgstr "αρχείο core"
 
 #: src/bug-buddy.c:78
 msgid "nothing"
-msgstr ""
+msgstr "τίποτα"
 
 #
 #: src/bug-buddy.c:83
@@ -325,7 +325,7 @@ msgid ""
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "Το άνοιγμα του '%s' είναι αδύνατο.\n"
-"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
+"Παρακαλώ ελέγξτε ότι ο βοηθός-σφαλμάτων έχει εγκατασταθεί σωστά."
 
 #
 #: src/bug-buddy.c:1144
@@ -347,19 +347,19 @@ msgstr ""
 
 #
 #: src/bug-buddy.c:1251
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Το άνοιγμα του '%s' είναι αδύνατο.\n"
-"Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
+"Αδύνατη η φόρτωση του '%s'.\n"
+"Παρακαλώ ελέγξτε ότι ο βοηθός-σφαλμάτων έχει εγκατασταθεί σωστά."
 
 #
 #: src/gdb-buddy.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "λήψη ακολουθίας στοίβας... (%d)"
+msgstr "Λήψη ακολουθίας στοίβας... (%d)"
 
 #
 #: src/gdb-buddy.c:153
@@ -391,6 +391,8 @@ msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
+"Η εφαρμογή GDB δε βρέθηκε στο σύστημά σας.\n"
+"Δε θα ληφθούν πληροφορίες εκσφαλμάτωσεις."
 
 #
 #: src/gdb-buddy.c:272
@@ -399,7 +401,7 @@ msgid ""
 "Please try reinstalling bug-buddy."
 msgstr ""
 "Δε βρέθηκε το αρχείο gdb-cmd.\n"
-"Παρακαλώ εγκαταστήστε ξανά το bug-buddy."
+"Παρακαλώ εγκαταστήστε ξανά το βοηθό-σφαλμάτων."
 
 #
 #: src/gdb-buddy.c:281 src/util.c:75
@@ -413,9 +415,8 @@ msgstr "Σφάλμα στην κλήση συστήματος fork()."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-#, fuzzy
 msgid "Bug Buddy"
-msgstr "βοηθός-σφαλμάτων"
+msgstr "Βοηθός Σφαλμάτων"
 
 #: src/glade-strings.c:8
 msgid ""
@@ -427,30 +428,35 @@ msgid ""
 "contacted if furthur information is requred, or\n"
 "when a fixed version is available."
 msgstr ""
+"Αυτό το πρόγραμμα θα σας καθοδηγήσει στη διαδικασία\n"
+"αποστολής αναφοράς σφάλματος για έργα όπως το GNOME.\n"
+"\n"
+"Αυτές οι αναφορές σφαλμάτων αποστέλονται μέσω του ηλεκτρονικού\n"
+"ταχυδρομείου, οπότε παρακαλώ δώστε την ηλεκτρονική σας διεύθυνση\n"
+"για παραιτέρω επικοινωνία αν απαιτούνται περισσότερες πληροφορίες\n"
+"ή για να ειδοποιηθείτε όταν η διορθωμένη έκδοση είναι διαθέσιμη."
 
 #
 #: src/glade-strings.c:15
-#, fuzzy
 msgid "Skip this step in the future"
-msgstr "Παράκαμψη αυτού του βήματος"
+msgstr "Παράκαμψη αυτού του βήματος στο μέλλον"
 
 #
 #: src/glade-strings.c:16
-#, fuzzy
 msgid "Name"
-msgstr "Το Όνομά σας"
+msgstr "Όνομα"
 
 #: src/glade-strings.c:17
 msgid "Sendmail"
-msgstr ""
+msgstr "Sendmail"
 
 #: src/glade-strings.c:18
 msgid "Email"
-msgstr ""
+msgstr "Ηλεκ. διεύθυνση"
 
 #: src/glade-strings.c:19
 msgid "intro"
-msgstr ""
+msgstr "εισαγωγή"
 
 #: src/glade-strings.c:20
 msgid ""
@@ -458,20 +464,24 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
+"Ο Βοηθός Σφαλμάτων μπορεί να αποστείλει πληροφορίες εκσφαλμάτωσεις μαζί με την\n"
+"αναφορά σφάλματος. Οι σωστές επιλογές πρέπει να έχουν επιλεγεί για σας\n"
+"αυτόματα.\n"
+"Για περισσότερες πληροφορίες, παρακαλώ κάντε κλικ στο κουμπί Βοηθείας "
+"παρακάτω."
 
 #: src/glade-strings.c:23
 msgid "Debug"
-msgstr ""
+msgstr "Εκσφαλμάτωση"
 
 #: src/glade-strings.c:24
 msgid "Go"
-msgstr ""
+msgstr "Πήγαινε"
 
 #
 #: src/glade-strings.c:26
-#, fuzzy
 msgid "Binary file"
-msgstr "Δυαδικό"
+msgstr "Δυαδικό αρχείο"
 
 #
 #: src/glade-strings.c:27
@@ -485,13 +495,13 @@ msgstr "Αρχείο core"
 
 #
 #: src/glade-strings.c:29
-#, fuzzy
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Αυτόματη μετάβαση στην επόμενη σελίδα μετά την ολοκλήρωση"
+msgstr ""
+"Αυτόματη μετάβαση στο επόμενο βήμα μετά την ολοκλήρωση της εκσφαλμάτωσεις"
 
 #: src/glade-strings.c:30
 msgid "gdb"
-msgstr ""
+msgstr "gdb"
 
 #: src/glade-strings.c:31
 msgid "Please make your bug report in English, if possible."
@@ -514,22 +524,24 @@ msgstr "Συμπερίληψη αρχείου κειμένου"
 
 #: src/glade-strings.c:35
 msgid "desc"
-msgstr ""
+msgstr "περιγραφή"
 
 #: src/glade-strings.c:36
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
+"Παρακαλώ περιμένετε καθώς o Βοηθός Σφαλμάτων ενημερώνει\n"
+"την λίστα των προϊόντων του για τα συστήματα εντοπισμού\n"
+"σφαλμάτων."
 
 #: src/glade-strings.c:38
 msgid "Saving:"
-msgstr ""
+msgstr "Αποθήκευση:"
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "To:"
-msgstr "Προς"
+msgstr "Προς:"
 
 #
 #: src/glade-strings.c:40 src/glade-strings.c:57
@@ -538,15 +550,15 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:41
 msgid "download"
-msgstr ""
+msgstr "μεταφόρτωση"
 
 #: src/glade-strings.c:42
 msgid "Please select the product for the bug you wish to report."
-msgstr ""
+msgstr "Παρακαλώ επιλέξτε το προϊόν για το σφάλμα που επιθυμείτε να αναφέρετε."
 
 #: src/glade-strings.c:43
 msgid "Product"
-msgstr ""
+msgstr "Προϊόν"
 
 #
 #: src/glade-strings.c:44 src/glade-strings.c:50
@@ -555,26 +567,24 @@ msgstr "Περιγραφή"
 
 #: src/glade-strings.c:45
 msgid "Show products for"
-msgstr ""
+msgstr "Εμφάνιση προϊόντων για"
 
 #
 #: src/glade-strings.c:46
-#, fuzzy
 msgid "bug tracking systems."
-msgstr "Σύστημα Εντοπισμού Σφαλμάτων"
+msgstr "συστήματα εντοπισμού σφαλμάτων."
 
 #: src/glade-strings.c:47
 msgid "product"
-msgstr ""
+msgstr "προϊόν"
 
 #: src/glade-strings.c:48
 msgid "Please choose a component, version, and severity level."
-msgstr ""
+msgstr "Παρακαλώ επιλέξτε συστατικό, έκδοση και επίπεδο σοβαρότητας σφάλματος."
 
 #: src/glade-strings.c:49
-#, fuzzy
 msgid "Component"
-msgstr "Περιεχόμενο"
+msgstr "Συστατικό"
 
 #
 #: src/glade-strings.c:51
@@ -587,18 +597,16 @@ msgid "Severity"
 msgstr "Σοβαρότητα"
 
 #: src/glade-strings.c:53
-#, fuzzy
 msgid "component"
-msgstr "Περιεχόμενο"
+msgstr "συστατικό"
 
 #
 #: src/glade-strings.c:54
-#, fuzzy
 msgid ""
 "Please wait while bug-buddy determines some information about your system."
 msgstr ""
-"Παρακαλώ περιμένετε όσο συλλέγονται\n"
-"οι πληροφορίες εκσφαλμάτωσης..."
+"Παρακαλώ περιμένετε όσο ο βοηθός-σφαλμάτων συλλέγει πληροφορίες για το "
+"σύστημά σας."
 
 #
 #: src/glade-strings.c:55
@@ -616,19 +624,17 @@ msgid "Automatically go to next page when complete"
 msgstr "Αυτόματη μετάβαση στην επόμενη σελίδα μετά την ολοκλήρωση"
 
 #: src/glade-strings.c:59
-#, fuzzy
 msgid "system"
-msgstr "Σύστημα"
+msgstr "σύστημα"
 
 #
 #: src/glade-strings.c:60
-#, fuzzy
 msgid "Select an action"
-msgstr "Επιλογή του αρχείου core"
+msgstr "Επιλέξτε ενέργεια"
 
 #: src/glade-strings.c:61
 msgid "Cc"
-msgstr ""
+msgstr "Ομοίως"
 
 #: src/glade-strings.c:62
 msgid "To"
@@ -649,23 +655,23 @@ msgstr "Περιεχόμενο"
 
 #: src/glade-strings.c:66
 msgid "email info"
-msgstr ""
+msgstr "πληροφορίες ηλεκ. διεύθ."
 
 #: src/glade-strings.c:67
 msgid "Assbarn Phenomeon"
-msgstr ""
+msgstr "Φαινόμενο Assbarn"
 
 #: src/glade-strings.c:68
 msgid "Submit another bug"
-msgstr ""
+msgstr "Αναφορά και άλλου σφάλματος"
 
 #: src/glade-strings.c:69
 msgid "finished"
-msgstr ""
+msgstr "ολοκληρώθηκε"
 
 #: src/glade-strings.c:71
 msgid "Finish"
-msgstr ""
+msgstr "Τερματισμός"
 
 #
 #: src/util.c:60
@@ -682,248 +688,3 @@ msgstr "Αδύνατη η εκτέλεση του '%s'."
 msgid "Error on read..."
 msgstr "Σφάλμα στην ανάγνωση..."
 
-#
-#~ msgid "Collect debugging information from a crashed application"
-#~ msgstr "Συλλογή πληροφοριών εκσφαλμάτωσης από την τερματισμένη εφαρμογή"
-
-#
-#~ msgid "Collect debugging information from a core file"
-#~ msgstr "Συλλογή πληροφοριών εκσφαλμάτωσης από αρχείο αποτύπωσης μνήνης core"
-
-#
-#~ msgid "The graphical bug reporting tool for GNOME."
-#~ msgstr "Το γραφικό εργαλείο αναφοράς σφαλμάτων του GNOME."
-
-#
-#~ msgid "The lame bug-buddy web page"
-#~ msgstr "Η σελίδα WWW του bug-buddy"
-
-#
-#~ msgid ""
-#~ "Could not find '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Η εύρεση του '%s' ήταν αδύνατη.\n"
-#~ "Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
-
-#~ msgid "Welcome to the Wonderful World of bug-buddy"
-#~ msgstr "Καλώς ήλθατε στον Εκπληκτικό Κόσμο του bug-buddy"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process\n"
-#~ "of submitting a bug report.  If this is your first time \n"
-#~ "using bug-buddy, you will be prompted for your\n"
-#~ "email address so that the bug report can be\n"
-#~ "submitted."
-#~ msgstr ""
-#~ "Το bug-buddy θα σας οδηγήσει στη διαδικασία αποστολής\n"
-#~ "αναφοράς σφάλματος. Αν αυτή είναι η πρώτη φορά που κάνετε\n"
-#~ "χρήση το bug-buddy, θα σας ζητηθεί η ηλεκ. διεύθυνσή σας\n"
-#~ "ούτως ώστε να μπορεί να σταλθεί η αναφορά σφάλματος."
-
-#
-#~ msgid "Contact Information"
-#~ msgstr "Πληροφορίες Επαφής"
-
-#
-#~ msgid "Choose which sendmail to use"
-#~ msgstr "Επιλέξτε ποιο sendmail θα χρησιμοποιήσετε"
-
-#
-#~ msgid "Email Address"
-#~ msgstr "Ηλεκτρονική Διεύθυνση"
-
-#
-#~ msgid "Full path of sendmail"
-#~ msgstr "Πλήρης διαδρομή του sendmail"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process of\n"
-#~ "submitting a bug report.  You can click the help\n"
-#~ "button for a more in-depth explanation of the process."
-#~ msgstr ""
-#~ "Το bug-buddy θα σας οδηγήσει στη διαδικασία αποστολής\n"
-#~ "αναφοράς σφάλματος. Μπορείτε να πατήσετε το κουμπί\n"
-#~ "βοηθείας για μια πιο εκ βαθέων εξήγηση της διαδικασίας."
-
-#
-#~ msgid "Report Information"
-#~ msgstr "Πληροφορίες Αναφοράς"
-
-#~ msgid ""
-#~ "Select a bug tracking system to use, and then fill out\n"
-#~ "the remaining information."
-#~ msgstr ""
-#~ "Επιλέξτε το σύστημα εντοπισμού σφάλματος προς χρήση και\n"
-#~ "συμπληρώστε τα υπόλοιπα στοιχεία."
-
-#
-#~ msgid "Class"
-#~ msgstr "Τάξη"
-
-#~ msgid ""
-#~ "Please check to see if your bug has already been submitted,\n"
-#~ "and if so, use \"Add information to existing report\" above."
-#~ msgstr ""
-#~ "Παρακαλώ ελέγξτε αν το σφάλμα έχει ήδη αναφερθεί, οπότε\n"
-#~ "στην περίπτωση αυτή χρησιμοποιήστε το \"Add information\n"
-#~ "to existing report\" που βρίσκετε παραπάνω."
-
-#
-#~ msgid "Bug Number"
-#~ msgstr "Αριθμός Σφάλματος"
-
-#
-#~ msgid "Debugging Information"
-#~ msgstr "Πληροφορίες Εκσφαλμάτωσης"
-
-#
-#~ msgid "Select the crashed application's binary"
-#~ msgstr "Επιλογή του δυαδικού αρχείου της εφαρμογής που κατέρρευσε"
-
-#
-#~ msgid "Collecting Debugging Information"
-#~ msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
-
-#
-#~ msgid "System Configuration"
-#~ msgstr "Διαμόρφωση Συστήματος"
-
-#
-#~ msgid "Please verify that this information is correct"
-#~ msgstr "Παρακαλώ επιβεβεώστε ότι αυτές οι πληροφορίες είναι σωστές"
-
-#
-#~ msgid "Submitting the Report"
-#~ msgstr "Αποστολή της Αναφοράς"
-
-#
-#~ msgid "Summary"
-#~ msgstr "Περίληψη"
-
-#
-#~ msgid "The GEGL is watching."
-#~ msgstr "Το GEGL παρατηρεί."
-
-#
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Πνευματικό Δικαιώματα (C) 1999 Ιάκωβος Μπέρκμαν"
-
-#
-#~ msgid "Child process exited with status %d"
-#~ msgstr "Η θυγατρική διεργασία τερματίστηκε με κατάσταση %d"
-
-#
-#~ msgid ""
-#~ "Submit new report\n"
-#~ "Add information to an existing report\n"
-#~ msgstr "Προσθήκη πληροφοριών σε υπάρχουσα αναφορά σφάλματος"
-
-#
-#~ msgid ""
-#~ "Submit bug report\n"
-#~ "Send to your amail address only\n"
-#~ "Save report to file\n"
-#~ msgstr "Αποστολή αναφοράς στη δική σας ηλεκ.διεύθυνση μόνο"
-
-#
-#~ msgid "Contact's name"
-#~ msgstr "Όνομα επαφής"
-
-#
-#~ msgid "Contact's email address"
-#~ msgstr "Ηλεκτρονική διεύθυνση επαφής"
-
-#
-#~ msgid "Crashed file name"
-#~ msgstr "Όνομα αρχείου που κατέρρευσε"
-
-#
-#~ msgid ""
-#~ "Click \"Finish\" to exit bug-buddy.\n"
-#~ "No bug report will be submitted."
-#~ msgstr ""
-#~ "Πατήστε \"Τερματισμός\" για να βγήτε από το bug-buddy.\n"
-#~ "Δε θα σταλθεί αναφορά σφάλματος."
-
-#
-#~ msgid ""
-#~ "You are about to save a bug report in '%s'.\n"
-#~ "This can later be used to report a bug in '%s'."
-#~ msgstr ""
-#~ "Πρόκειτε να αποθηκεύσετε μια αναφορά σφάλματος στο '%s'.\n"
-#~ "Αυτό μπορεί χρησιμοποιηθεί αργότερα για την αναφορά του σφάλματος στο '%s'."
-
-#
-#~ msgid ""
-#~ "You are about to report a bug in '%s'.\n"
-#~ "\n"
-#~ "This will be submitted via email:\n"
-#~ "To: %s\n"
-#~ "From: %s <%s>\n"
-#~ "Subject: %s\n"
-#~ "\n"
-#~ "Clicking on 'Finish' will submit the bug report."
-#~ msgstr ""
-#~ "Πρόκειτε να αναφέρετε ένα σφάλμα στο '%s'.\n"
-#~ "\n"
-#~ "Θα σταλθεί μέσω ηλεκτρονικού ταχυδρομείου:\n"
-#~ "Σε: %s\n"
-#~ "Από: %s <%s>\n"
-#~ "Θέμα: %s\n"
-#~ "\n"
-#~ "Πατώντας στο 'Τερματισμός' θα αποστείλετε την αναφορά σφάλματος."
-
-#
-#~ msgid "all will be revealed."
-#~ msgstr "θα φανερωθούν όλα."
-
-#
-#~ msgid ""
-#~ "Enter your name and email address, so you will be notified when the\n"
-#~ "bug is resolved, or for developers to request more information from you."
-#~ msgstr ""
-#~ "Εισάγετε το όνομά και την ηλεκτρονική διεύθυνσης σας, ούτως ώστε να\n"
-#~ "γνωστοποιηθείτε όταν το σφάλμα διορθωθεί ή για την περίπτωση που που\n"
-#~ "προγραμματιστές θελήσουν περισσότερες πληροφορίες από εσάς."
-
-#
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-
-#
-#~ msgid "Action"
-#~ msgstr "Ενέργεια"
-
-#
-#~ msgid "More Information"
-#~ msgstr "Περισσότερες Πληροφορίες"
-
-#
-#~ msgid "Detailed instructions on how to reproduce the bug"
-#~ msgstr "Λεπτομερείς οδηγίες για την αναπαραγωγή του σφάλματος"
-
-#
-#~ msgid "How to collect debugging information"
-#~ msgstr "Πως να συλλεχθούν πληροφορίες εκσφαλμάτωσης"
-
-#
-#~ msgid "Read from a core file"
-#~ msgstr "Ανάγνωση από το αρχείο core"
-
-#
-#~ msgid "Submit bug report to bug tracking system"
-#~ msgstr "Αποστολή αναφοράς σφάλματος στο σύστημα παρακολούθησης σφαλμάτων"
-
-#
-#~ msgid "Submit to individual author"
-#~ msgstr "Αποστολή στο συγκεκριμένο προγραμματιστή"
-
-#
-#
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "Η υποδιεργασία έχει τερματίσει με κατάσταση %d"
