@@ -1,9 +1,11 @@
-<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 <!ENTITY version "1.90"> 
 ]>
 
 <article id="index">
- <artheader> 
+ <articleinfo>
   <title>Bug Buddy Manual</title>
   <copyright>
    <year>2001</year>
@@ -41,7 +43,7 @@
     Manual version 0.3: added licence of program (GPL): rewrote docs
     substantially because the program has changed a great deal.
   </releaseinfo>
- </artheader>
+ </articleinfo>
 
  <sect1 id="intro">
   <title>Introduction</title> 
@@ -360,7 +362,7 @@
     A dialogue box telling you <application>Bug Buddy</application> wants   
     to update its list of information will appear and gives you the option
     to proceed or to say no. It will save this information by default into
-    your <filename class=directory>.gnome/Bug Buddy.d/</filename> directory.
+    your <filename class="directory">.gnome/Bug Buddy.d/</filename> directory.
     To get this information, it needs to talk to bugzilla, so your net
     connection will have to be up. 
   </para>
