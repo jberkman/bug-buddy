@@ -301,7 +301,6 @@ msgstr ""
 "information från dig."
 
 #: src/glade-strings.c:14
-#, fuzzy
 msgid "Bug Tracking System"
 msgstr "Feluppföljningssystem"
 
@@ -459,11 +458,11 @@ msgstr "Skicka felrapporten"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr ""
+msgstr "Skicka rapporten till feluppföljningssystemet"
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr ""
+msgstr "Skicka till individuell programmerare"
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
@@ -484,9 +483,3 @@ msgstr "Sammanfattning"
 #: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL:en ser oss."
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "Underprocess avslutad med status %d"
-
-#~ msgid "Submit bug report"
-#~ msgstr "Skicka felrapport"
