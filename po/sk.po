@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sk\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-05-11 15:00+0200\n"
-"Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
+"POT-Creation-Date: 2002-05-16 14:25+0200\n"
+"PO-Revision-Date: 2002-05-16 14:27+0200\n"
+"Last-Translator: Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0beta1\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: src/bug-buddy.c:55
 msgid "Submit bug report"
@@ -156,6 +156,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Nastala chyba pri zobrazovaní nastavenia proxy:\n"
+"\n"
+"%s.\n"
+"\n"
+"Prosím, overte, že máte správne nainštalované Ovládacie centrum GNOME."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -243,7 +248,7 @@ msgid "Description"
 msgstr "Popis"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -251,14 +256,15 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Priateľ v núdzi nemohol otvoriť '%s'.\n"
-"Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
+"Prosím, overte, že je Priateľ v núdzi správne nainštalovaný.\n"
+"\n"
+"Priateľ v núdzi bude ukončený."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Všetko"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -266,8 +272,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"Priateľ v núdzi nemohol používateľské rozhranie (%s).\n"
-"Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
+"Priateľ v núdzi nemohol nájsť informáciu, kam posielať správy o chybách.\n"
+"\n"
+"Prosím, overte, že je Priateľ v núdzi správne nainštalovaný.\n"
+"\n"
+"Priateľ v núdzi bude ukončený."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -337,13 +346,12 @@ msgid "There was an error running gdb."
 msgstr "Nastala chyba počas spustenia gdb."
 
 #: src/bug-buddy.glade.h:1
-msgid "*"
-msgstr "*"
+msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "&lt;span size=\"xx-large\"&gt;Priateľ v núdzi&lt;/span&gt;"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
-msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Priateľ v núdzi&lt;/span&gt;"
+msgid "*"
+msgstr "*"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -861,3 +869,4 @@ msgstr "Nástroj GNOME pre oznamovanie chýb"
 #~ "\n"
 #~ "\n"
 #~ "Ďalšie informácie:"
+
