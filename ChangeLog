@@ -1,3 +1,16 @@
+1999-11-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.keys.in:
+	* src/bug-buddy.mime: mime type foo for launching bug-buddy
+	on a core file
+
+	* src/Makefile.am (mime_DATA): generate/install mime type foo
+
+	* src/bug-buddy.glade:
+	* src/bug-buddy.c: do some not-so-clever determination (?)
+	of what is going on wrt stack obtaination;  remember how
+	the bug was submitted from last time
+
 1999-11-04  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.glade:

@@ -23,6 +23,16 @@ gnome_crash_LDADD = \
 	$(GNOME_LIBDIR) \
 	$(GNOMEUI_LIBS)
 
+# taken from gnumeric/Makefile.am
+bug-buddy.keys: bug-buddy.keys.in Makefile
+	sed -e 's^\@icondir\@^$(appicondir)^g' < $(srcdir)/bug-buddy.keys.in > bug-buddy.keys.tmp \
+	&& mv bug-buddy.keys.tmp bug-buddy.keys 
+
+mimedir = $(datadir)/mime-info
+mime_DATA = \
+	bug-buddy.keys	\
+	bug-buddy.mime
+
 buddydir = $(datadir)/bug-buddy
 buddy_DATA = \
 	bug-buddy.glade	\
@@ -34,7 +44,8 @@ utils_DATA = bug-buddy.desktop
 EXTRA_DIST = \
 	glade-strings.c	\
 	$(buddy_DATA)	\
-	$(utils_DATA)
+	$(utils_DATA)	\
+	$(mime_DATA)
 
 
 

@@ -775,7 +775,7 @@ bug you are reporting</label>
 	    <name>dialog_radio</name>
 	    <can_focus>True</can_focus>
 	    <label>Application crash with crash dialog</label>
-	    <active>True</active>
+	    <active>False</active>
 	    <draw_indicator>True</draw_indicator>
 	    <group>dialog_radio</group>
 	    <child>
@@ -805,7 +805,7 @@ bug you are reporting</label>
 	    <name>no_crash_radio</name>
 	    <can_focus>True</can_focus>
 	    <label>No crash</label>
-	    <active>False</active>
+	    <active>True</active>
 	    <draw_indicator>True</draw_indicator>
 	    <group>dialog_radio</group>
 	    <child>
