@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-04-26 22:05+0200\n"
-"PO-Revision-Date: 2000-04-26 22:07+02:00\n"
+"Project-Id-Version: bug-buddy 0.8\n"
+"POT-Creation-Date: 2000-04-28 09:24+0200\n"
+"PO-Revision-Date: 2000-04-28 09:25+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,123 +21,137 @@ msgstr "Distribusjon"
 msgid "System"
 msgstr "System"
 
-#: src/bug-buddy.c:73
+#: src/bug-buddy.c:74
 msgid "critical"
 msgstr "kritisk"
 
-#: src/bug-buddy.c:74
+#: src/bug-buddy.c:75
 msgid "grave"
 msgstr "alvorlig"
 
-#: src/bug-buddy.c:75
+#: src/bug-buddy.c:76
 msgid "normal"
 msgstr "normal"
 
-#: src/bug-buddy.c:76
+#: src/bug-buddy.c:77
 msgid "wishlist"
 msgstr "ønskeliste"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:82
 msgid "software bug"
 msgstr "programfeil"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:83
 msgid "documentation bug"
 msgstr "dokumentasjonsfeil"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:84
 msgid "change request"
 msgstr "endre forespørsel"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:85
 msgid "support"
 msgstr "støtte"
 
-#: src/bug-buddy.c:89
+#: src/bug-buddy.c:90
 msgid "Submit bug report"
 msgstr "Send feilrapport"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:91
 msgid "Only send report to yourself"
 msgstr "Send rapport kun til deg selv"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:92
 msgid "Save report to file"
 msgstr "Lagre rapporten til en fil"
 
-#: src/bug-buddy.c:96
+#: src/bug-buddy.c:97
 msgid "Collect debugging information from a crashed application"
 msgstr "Samler debugginginformasjon fra applikasjonen som krasjet"
 
-#: src/bug-buddy.c:97
+#: src/bug-buddy.c:98
 msgid "Collect debugging information from a core file"
 msgstr "Samler debugginginformasjon fra en core-fil"
 
-#: src/bug-buddy.c:98
+#: src/bug-buddy.c:99
 msgid "Skip this step"
 msgstr "Hopp over dette steget"
 
-#: src/bug-buddy.c:103
+#: src/bug-buddy.c:104
 msgid "Create a new bug report"
 msgstr "Lag en ny feilrapport"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:105
 msgid "Add more information to existing report"
 msgstr "Legg til informasjon i en eksisterende feilrapport"
 
-#: src/bug-buddy.c:113
+#: src/bug-buddy.c:114
 msgid "Name of contact"
 msgstr "Navn på kontakt"
 
-#: src/bug-buddy.c:113
+#: src/bug-buddy.c:114
 msgid "NAME"
 msgstr "NAVN"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:115
 msgid "Email address of contact"
 msgstr "E-post adresse for kontakt"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:115
 msgid "EMAIL"
 msgstr "E-POST"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:116
 msgid "Package containing the program"
 msgstr "Pakken programmet tilhører"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:116
 msgid "PACKAGE"
 msgstr "PAKKE"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:117
 msgid "Version of the package"
 msgstr "Versjon av pakken"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:117
 msgid "VERSION"
 msgstr "VERSJON"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:118
 msgid "File name of crashed program"
 msgstr "Filnavnet til applikasjonen som krasjet"
 
-#: src/bug-buddy.c:117 src/bug-buddy.c:119
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
 msgid "FILE"
 msgstr "FIL"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:119
 msgid "PID of crashed program"
 msgstr "PID på programmet som krasjet"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:119
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:120
 msgid "Core file from program"
 msgstr "Core fil fra programmet"
 
-#: src/bug-buddy.c:359
+#: src/bug-buddy.c:365
+msgid "The specified file does not exist."
+msgstr "Den spesifiserte filen eksisterer ikke."
+
+#: src/bug-buddy.c:370
+#, c-format
+msgid "File is of type: %s"
+msgstr "Filen er av type: %s"
+
+#: src/bug-buddy.c:373
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr "'%s' ser ikke ut som en tekstfil."
+
+#: src/bug-buddy.c:387
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
@@ -145,7 +159,7 @@ msgstr ""
 "Du må inkludere et emne og en beskrivelse\n"
 "i din feilrapport."
 
-#: src/bug-buddy.c:402
+#: src/bug-buddy.c:430
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -153,23 +167,23 @@ msgstr ""
 "gdb er ikke ferdig med å innhente debugginginformasjonen.\n"
 "Drep gdb prosessen (stack trace vil ikke være komplett)?"
 
-#: src/bug-buddy.c:410 src/gdb-buddy.c:81
+#: src/bug-buddy.c:438 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "gdb har allerede avsluttet"
 
-#: src/bug-buddy.c:453
+#: src/bug-buddy.c:481
 msgid "Copyright (C) 1999 Jacob Berkman"
 msgstr "Copyright (C) 1999 Jacob Berkman"
 
-#: src/bug-buddy.c:455
+#: src/bug-buddy.c:483
 msgid "The GNOME graphical bug reporting tool"
 msgstr "GNOME grafisk verktøy for feilrapportering"
 
-#: src/bug-buddy.c:462
+#: src/bug-buddy.c:490
 msgid "The lame bug-buddy web page"
 msgstr "Den lamme bug-buddy hjemmesiden"
 
-#: src/bug-buddy.c:550
+#: src/bug-buddy.c:578
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -182,48 +196,48 @@ msgstr ""
 "\n"
 "Spesifiser ny plassering for sendmail?"
 
-#: src/bug-buddy.c:586
+#: src/bug-buddy.c:614
 msgid "Please enter your name and email address"
 msgstr "Vennligst skriv inn navn og e-post adresse"
 
-#: src/bug-buddy.c:605
+#: src/bug-buddy.c:633
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kunne ikke åpne filen: '%s'"
 
-#: src/bug-buddy.c:618
+#: src/bug-buddy.c:646
 #, c-format
 msgid "about to run '%s'"
 msgstr "i ferd med å kjøre '%s'"
 
-#: src/bug-buddy.c:622
+#: src/bug-buddy.c:650
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kunne ikke starte e-postprogram: '%s'"
 
-#: src/bug-buddy.c:653
+#: src/bug-buddy.c:681
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
-#: src/bug-buddy.c:656
+#: src/bug-buddy.c:684
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
 msgstr "Din feilrapport ble sendt til <%s>"
 
-#: src/bug-buddy.c:786
+#: src/bug-buddy.c:814
 msgid "You must specify a recipient email address"
 msgstr "Du må spesifisere en e-post adresse for mottaker"
 
-#: src/bug-buddy.c:792
+#: src/bug-buddy.c:820
 msgid "Submit this bug report now?"
 msgstr "Send denne feilrapporten nå?"
 
-#: src/bug-buddy.c:802
+#: src/bug-buddy.c:830
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:809
+#: src/bug-buddy.c:837
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -232,7 +246,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:906
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -241,7 +255,7 @@ msgstr ""
 "Kunne ikke åpne '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble riktig installert."
 
-#: src/bug-buddy.c:1010
+#: src/bug-buddy.c:1041
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -249,7 +263,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:1023
+#: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -257,7 +271,7 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:1151
+#: src/bug-buddy.c:1181
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
