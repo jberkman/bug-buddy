@@ -3,15 +3,15 @@
 # Richard Hult <rhult@hem.passagen.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001.
-# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000-2001.
+# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000, 2001.
 #
 # $Id$
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2001-06-19 20:41+0200\n"
+"POT-Creation-Date: 2001-07-11 22:06+0200\n"
+"PO-Revision-Date: 2001-07-11 22:17+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,7 @@ msgid ""
 "Should Bug Buddy try to update these files now?"
 msgstr ""
 "Bug Buddy har kommit fram till att en del av dess information\n"
-"om de olika felsökningssystemen kanske behöver uppdateras.\n"
+"om de olika felrapporteringssystemen kanske behöver uppdateras.\n"
 "\n"
 "Ska Bug Buddy försöka att uppdatera dessa filer nu?"
 
@@ -260,7 +260,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:12
 msgid "Bug tracking system"
-msgstr "Felsökningssystem"
+msgstr "Felrapporteringssystem"
 
 #: src/bug-buddy.glade.h:13
 msgid "Cc"
@@ -316,7 +316,7 @@ msgstr "Välj en komponent, version och allvarlighetsgrad."
 
 #: src/bug-buddy.glade.h:26
 msgid "Please make your bug report in English, if possible."
-msgstr "Var vänlig och skriv din felrapport på engelska, om möjligt."
+msgstr "Skriv din felrapport på engelska, om möjligt."
 
 #: src/bug-buddy.glade.h:27
 msgid "Please select the product for the bug you wish to report."
@@ -334,7 +334,7 @@ msgid ""
 "of products for the bug tracking systems."
 msgstr ""
 "Var vänlig och vänta medan Bug Buddy uppdaterar\n"
-"listan med produkter i felsökningssystemen."
+"listan med produkter i felrapporteringssystemen."
 
 #: src/bug-buddy.glade.h:31
 msgid "Process ID"
