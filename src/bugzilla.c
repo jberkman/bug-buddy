@@ -773,7 +773,8 @@ load_bugzillas (void)
 					    GTK_BUTTONS_OK,
 					    _("Bug Buddy could not open '%s'.\n"
 					      "Please make sure Bug Buddy was "
-					      "installed correctly."),
+					      "installed correctly.\n\n"
+					      "Bug Buddy will now quit."),
 					    BUDDY_DATADIR "/bugzilla/");
 		gtk_dialog_set_default_response (GTK_DIALOG (w),
 						 GTK_RESPONSE_OK);
@@ -812,6 +813,24 @@ load_bugzillas (void)
 	}
 
 	closedir (dir);
+
+	if (!druid_data.dlsources) {
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    0,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Bug Buddy could not find any information on "
+					      "where to submit bugs.\n\n"
+					      "Please make sure Bug Buddy was "
+					      "installed correctly.\n\n"
+					      "Bug Buddy will now quit."),
+					    BUDDY_DATADIR "/bugzilla/");
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
+		exit (0);
+	}
 
 	d(g_print ("downloading:\n"));
 	d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));

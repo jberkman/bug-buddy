@@ -1,3 +1,24 @@
+2.1.6:
+
+  * Fixes:
+
+	- Fixed to not totally break with automake 1.[56] (bug #74390)
+
+	- Don't allow selections of the mostfreq list (Wayne Schuller,
+	bug #77277)
+
+	- Don't go to the mostfreq page when it is empty (bug #76405)
+
+	- Comply with UI guidelines for some dialogs (Archit Baweja,
+	bug #74816)
+
+  * Improvements:
+
+	- See if removing AM_PROG_LIBTOOL breaks anything
+
+	- Use the new network properties thing instead of our own
+	dialog
+
 2.1.5:
 
   * Fixes:

@@ -11,6 +11,16 @@
         <url>http://bugzilla.ximian.com/show_bug.cgi?id=9699</url>
       </bug>
     </component>
+    <component name="Mailer">
+      <bug bugid="17540">
+        <desc>support for receiving in-line pgp</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=17540</url>
+      </bug>
+      <bug bugid="10945">
+        <desc>starting evolution for the first time crashes it</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=10945</url>
+      </bug>
+    </component>
     <component name="Gnome-pilot &amp; pilot-link">
       <bug bugid="10427">
         <desc>gpilotd crash when syncing EToDo</desc>
@@ -29,30 +39,6 @@
       <bug bugid="19604">
         <desc>Trying to print mail - evolution-mail process dies</desc>
         <url>http://bugzilla.ximian.com/show_bug.cgi?id=19604</url>
-      </bug>
-    </component>
-  </product>
-  <product name="Red Carpet">
-    <component name="Installer">
-      <bug bugid="15869">
-        <desc>Downloading is a serious problem</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
-      </bug>
-    </component>
-  </product>
-  <product name="Ximian Packages">
-    <component name="installer">
-      <bug bugid="15869">
-        <desc>Downloading is a serious problem</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
-      </bug>
-    </component>
-  </product>
-  <product name="Ximian Desktop">
-    <component name="installer">
-      <bug bugid="15869">
-        <desc>Downloading is a serious problem</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
       </bug>
     </component>
   </product>

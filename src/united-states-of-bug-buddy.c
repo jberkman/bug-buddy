@@ -215,11 +215,20 @@ druid_set_state (BuddyState state)
 void
 on_druid_prev_clicked (GtkWidget *w, gpointer data)
 {
-	if (druid_data.state == STATE_DESC && 
-	    GTK_TOGGLE_BUTTON (GET_WIDGET ("no-product-toggle"))->active)
-		druid_set_state (STATE_PRODUCT);
-	else
-		druid_set_state (druid_data.state - 1);
+	BuddyState newstate = druid_data.state - 1;
+
+	switch (druid_data.state) {
+	case STATE_DESC:
+		if (GTK_TOGGLE_BUTTON (GET_WIDGET ("no-product-toggle"))->active)
+			newstate = STATE_PRODUCT;
+		else if (!druid_data.product->bts->bugs)
+			newstate = STATE_COMPONENT;
+		break;
+	default:
+		break;
+	}
+
+	druid_set_state (newstate);
 }
 
 
@@ -702,6 +711,8 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 			druid_data.component = component;
 			bugzilla_add_mostfreq (druid_data.product->bts);
 		}
+		if (!druid_data.product->bts->bugs)
+			newstate++;
 		break;
 	}
 	case STATE_MOSTFREQ:

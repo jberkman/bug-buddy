@@ -25,7 +25,7 @@
   <product votestoconfirm="0" description="Integrated groupware solution." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Evolution">
     <component initialowner="330" description="The Evolution Calendar." initialqacontact="3661" value="Calendar" />
     <component initialowner="1069" description="The Evolution Contact Manager" initialqacontact="3661" value="Contacts [was: Addressbook]" />
-    <component initialowner="329" description="The Evolution Mailer." initialqacontact="3661" value="Mailer" />
+    <component initialowner="329" description="General Mailer - bugs editing html mail should be filed against the GtkHtml project" initialqacontact="3661" value="Mailer" />
     <component initialowner="3" description="The Evolution Shell." initialqacontact="3661" value="Shell" />
     <component initialowner="41" description="Pilot conduits" initialqacontact="3661" value="Conduits" />
     <component initialowner="3" description="misc stuff" initialqacontact="3661" value="Miscellaneous" />
@@ -65,6 +65,10 @@
     <version value="1.1.0.99" />
     <version value="1.0.1" />
     <version value="1.0.3" />
+    <version value="1.0.4" />
+    <version value="1.0.4.99" />
+    <version value="1.0.5" />
+    <version value="1.0.5.99" />
   </product>
   <product votestoconfirm="0" description="GNOME's lightweight engine for the rendering, printing and editing of HTML." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GtkHtml">
     <component initialowner="450" description="The GtkHTML C API." initialqacontact="3661" value="API" />
@@ -275,6 +279,7 @@
     <component initialowner="170" description="spelling checker" initialqacontact="3545" value="aspell" />
     <component initialowner="170" description="spellchecking library" initialqacontact="3545" value="pspell" />
     <component initialowner="170" description="This is only for problems with the Ximian packages, and specifically for problems related to our packaging.  Feature requests etc. that are best handled by Sun should be reported to Sun." initialqacontact="3545" value="StarOffice" />
+    <component initialowner="170" description="GNOME documentation for users." initialqacontact="3545" value="gnome-user-docs" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="bonobo component for spell checking" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gnome-spell">
@@ -300,16 +305,16 @@
   </product>
   <product votestoconfirm="0" description="NOT for bugzilla.ximian.com bugs! Bugs relating to bugzilla.ximian.com should be filed against &quot;Ximian BTS.&quot;
   
-  Use Ximian Website for reporting a problem with www.ximian.com, store.ximian.com, or support.ximian.com." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Website">
-    <component initialowner="529" description="For problems with the support section of the website" initialqacontact="1038" value="support" />
-    <component initialowner="4554" description="content in the purchase section of the site" initialqacontact="1038" value="purchase" />
-    <component initialowner="529" description="content for the about section of the website" initialqacontact="1038" value="about" />
-    <component initialowner="529" description="content for the developer site" initialqacontact="1038" value="developer" />
-    <component initialowner="529" description="content for the products portion of the website" initialqacontact="1038" value="products" />
-    <component initialowner="529" description="Things that don't fit elsewhere or apply to everything." initialqacontact="1038" value="general/misc" />
-    <component initialowner="529" description="php, scripts, other such" initialqacontact="1038" value="technical" />
-    <component initialowner="529" description="Problems with file download links and such (NOT Red Carpet, please!)" initialqacontact="1038" value="download" />
-    <version value="unspecified" />
+  Use Ximian Web Site for reporting a problem with www.ximian.com, store.ximian.com, support.ximian.com, or developer.ximian.com" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Web Site">
+    <component initialowner="529" description="For problems with the support section of the website, support.ximian.com" initialqacontact="27" value="Support" />
+    <component initialowner="4554" description="content or technical bugs in store.ximian.com (under purchase tab) - for problems with an order you have placed, please call our order number (see store.ximian.com or www.ximian.com)" initialqacontact="27" value="Store" />
+    <component initialowner="529" description="content for the about section of the website" initialqacontact="27" value="About" />
+    <component initialowner="529" description="developer site" initialqacontact="27" value="Developer" />
+    <component initialowner="529" description="everything under the products tab -except- download/install instructions" initialqacontact="27" value="Products" />
+    <component initialowner="529" description="Things that don't fit elsewhere or apply to everything." initialqacontact="27" value="General/Misc" />
+    <component initialowner="529" description="technical errors with the website, php issues, down servers, missing files, etc" initialqacontact="27" value="Technical" />
+    <component initialowner="529" description="Problems with file download links and install instructions on www.ximian.com (NOT Red Carpet, please!)" initialqacontact="27" value="Download" />
+    <version value="N/A" />
   </product>
   <product votestoconfirm="0" description="Lightweight SOAP implementation for C" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Soup">
     <component initialowner="374" description="the API" initialqacontact="1038" value="API" />
@@ -476,6 +481,9 @@
     <version value="done" />
   </product>
   <product votestoconfirm="0" description="Task management for the Mono project." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono Tasks">
+    <component initialowner="14" description="This is for the C# compiler" initialqacontact="14" value="C# Compiler" />
+    <component initialowner="1190" description="This is the component for the runtime" initialqacontact="14" value="Runtime" />
+    <component initialowner="4934" description="The ASP.NET support infrastructure" initialqacontact="4934" value="ASP.NET support" />
     <version value="0%" />
     <version value="10%" />
     <version value="20%" />

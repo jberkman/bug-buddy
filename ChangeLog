@@ -1,6 +1,35 @@
+2002-05-13  jacob berkman  <jacob@ximian.com>
+
+	* NEWS:
+	* configure.in: release 2.1.6
+
+	* bugzilla/*: update
+
+	* src/united-states-of-bug-buddy.c (on_druid_next_clicked): 
+	(on_druid_prev_clicked): if there are no mostfreq bugs, skip that
+	page (fixes bug #76405)
+
+	* configure.in:
+	* Makefile.am:
+	* bugzilla/Makefile.am:
+	* bugzilla/gnome/Makefile.am:
+	* bugzilla/ximian/Makefile.am: finally give in to automake 1.5
+	breaking backwards compat behaviour and waste cpu by not using my
+	cool automake hack (also fixes #74390)
+	
+	* src/bug-buddy.glade:
+	* src/bug-buddy.c (on_proxy_settings_clicked): 
+	* src/config.c: remove proxy config dialog, just run
+	gnome-network-properties
+
+	* src/bugzilla.c (load_bugzillas): don't crash if no bugzillas
+	were found.  put up a dialog and bail instead.  fixes bug #74390
+
 2002-05-10  Wayne Schuller  <k_wayne@linuxpower.org>
 
-	* src/bugzilla.c: (bugzilla_add_mostfreq): The most frequent list is for display only, so don't let anything get selected. http://bugzilla.gnome.org/show_bug.cgi?id=77277
+	* src/bugzilla.c: (bugzilla_add_mostfreq): The most frequent list
+	is for display only, so don't let anything get
+	selected. http://bugzilla.gnome.org/show_bug.cgi?id=77277
 
 2002-05-08  Pablo Saratxaga <pablo@mandrakesoft.com>
 

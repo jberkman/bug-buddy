@@ -1,22 +1,4 @@
-SUBDIRS = po pixmaps src docs omf-install
-
-agnomedir = $(datadir)/bug-buddy/bugzilla/gnome
-agnome_DATA =
-
-aximiandir = $(datadir)/bug-buddy/bugzilla/ximian
-aximian_DATA =
-
-bugzilladir = $(datadir)/bug-buddy
-bugzilla_DATA = \
-	bugzilla/gnome.bugzilla	\
-	bugzilla/gnome/config	\
-	bugzilla/gnome/products	\
-	bugzilla/gnome/mostfreq	\
-	\
-	bugzilla/ximian.bugzilla	\
-	bugzilla/ximian/config		\
-	bugzilla/ximian/products	\
-	bugzilla/ximian/mostfreq
+SUBDIRS = po pixmaps src bugzilla docs omf-install
 
 EXTRA_DIST = \
 	bug-buddy.spec.in	\
@@ -25,8 +7,7 @@ EXTRA_DIST = \
 	intltool-merge.in	\
 	intltool-update.in	\
 	COPYING.ximian-logos	\
-	xmldocs.make		\
-	$(bugzilla_DATA)
+	xmldocs.make
 
 # this should probably be run at dist time or something
 update-bugzilla:

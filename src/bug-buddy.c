@@ -253,7 +253,7 @@ save_cb (GIOChannel *source, GIOCondition condition, gpointer data)
 {
 	SaveData *save_data = data;
 	GIOStatus status;
-	gsize new_written;
+	gsize new_written = 0;
 	
  do_save_write:
 	status = g_io_channel_write_chars (source, save_data->buffer + save_data->written, save_data->to_write, &new_written, NULL);
@@ -265,6 +265,7 @@ save_cb (GIOChannel *source, GIOCondition condition, gpointer data)
 	default:
 		save_data->written += new_written;
 		save_data->to_write -= new_written;
+		g_print ("wrote %d bytes, (total: %d\tleft: %d)\n", new_written, save_data->written, save_data->to_write);
 		if (save_data->to_write)
 			return TRUE;
 		break;
@@ -429,10 +430,26 @@ queue_download_restart (GtkWidget *w, gpointer data)
 void
 on_proxy_settings_clicked (GtkWidget *w, gpointer data)
 {
-	GtkWindow *win = GTK_WINDOW (GET_WIDGET ("proxy-window"));
-	gtk_window_set_transient_for (win,
-				      GTK_WINDOW (GET_WIDGET ("druid-window")));
-	gtk_window_present (win);
+	GError *err = NULL;
+	GtkWidget *dialog;
+
+	if (g_spawn_command_line_async ("gnome-network-preferences", &err))
+		return;
+
+	dialog = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					 0,
+					 GTK_MESSAGE_ERROR,
+					 GTK_BUTTONS_OK,
+					 _("There was an error showing the proxy settings:\n\n"
+					   "%s.\n\n"
+					   "Please make sure the GNOME Control Center is properly installed."),
+					 err->message);
+	g_error_free (err);
+
+	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+	g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
+
+	gtk_widget_show_all (dialog);
 }
 
 void
@@ -654,14 +671,12 @@ init_ui (void)
 			  NULL);
 
 	{
-		const char **w, *windows[] = { "druid-window", "proxy-window", "progress-window", NULL };
+		const char **w, *windows[] = { "druid-window", "progress-window", NULL };
 		for (w = windows; *w; w++)
 			g_signal_connect (GET_WIDGET (*w), "delete-event", 
 					  G_CALLBACK (gtk_widget_hide_on_delete),
 					  NULL);
 	}
-
-	gtk_dialog_set_has_separator (GTK_DIALOG (GET_WIDGET ("proxy-window")), FALSE);
 
 	buddy_set_text ("desc-text",
 			"Description of Problem:\n\n\n"
@@ -796,7 +811,6 @@ main (int argc, char *argv[])
 
 	if (getenv ("BUG_ME_HARDER")) {
 		gtk_widget_show (GET_WIDGET ("progress-window"));
-		gtk_widget_show (GET_WIDGET ("proxy-window"));
 	}
 	
 	load_bugzillas ();
