@@ -1,3 +1,8 @@
+2002-04-02  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: fix stupid tyop in previous commit (noticed by
+	Jeong-Hee Kang)
+
 2002-04-01  jacob berkman  <jacob@ximian.com>
 
 	* src/Makefile.am (bug_buddy_LDFLAGS): 
