@@ -33,6 +33,9 @@
     <opsys>Debian Woody</opsys>
     <opsys>GNU/Linux [Other]</opsys>
     <opsys>HP-UX</opsys>
+    <opsys>HP-UX 11.0</opsys>
+    <opsys>HP-UX 11.11</opsys>
+    <opsys>HP-UX 11.22</opsys>
     <opsys>LinuxPPC 2000</opsys>
     <opsys>Mandrake 7.0</opsys>
     <opsys>Mandrake 7.1</opsys>

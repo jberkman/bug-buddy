@@ -82,6 +82,8 @@
     assocatiated classes." initialqacontact="0" value="GtkTextView" />
     <component initialowner="44" description="the GTK+ File selection widget" initialqacontact="0" value="GtkFileSel" />
     <component initialowner="44" description="Bugs about the GTK+ stock icon images." initialqacontact="0" value="stock-icons" />
+    <component initialowner="168" description="Bugs about multiscreen and multidisplay support in the 
+    gtk-multihead branch." initialqacontact="0" value="multihead" />
     <version value="unspecified" />
     <version value="1.2.x" />
     <version value="1.3.x" />
@@ -235,6 +237,8 @@
     <version value="1.3.0-Devel" />
     <version value="1.3.1-Devel" />
     <version value="1.3.2-Devel" />
+    <version value="1.2.3" />
+    <version value="1.3.3-Devel" />
   </product>
   <product votestoconfirm="0" description="A collection of GNOME media components" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-media">
     <component initialowner="325" description="A GNOME cd player and its text-based friend, tcd." initialqacontact="0" value="gtcd" />
@@ -361,7 +365,7 @@
     <component initialowner="50" description="gtk widget loaders for libglade" initialqacontact="0" value="gtk" />
     <component initialowner="50" description="gnome widget loaders for libglade" initialqacontact="0" value="gnome" />
     <component initialowner="50" description="bonobo control loader for libglade" initialqacontact="0" value="bonobo" />
-    <component initialowner="185" description="Script to convert glade 1 files to glade 2." initialqacontact="0" value="libglade-convert" />
+    <component initialowner="185" description="Script to convert glade 1 files to glade 2." initialqacontact="50" value="libglade-convert" />
     <version value="unspecified" />
     <version value="0.x" />
     <version value="1.99.x" />
@@ -1006,8 +1010,8 @@
     <version value="unspecified" />
     <version value="2.3.x" />
   </product>
-  <product votestoconfirm="0" description="Here you can place your bugs about Spanish translations / Aqui puede situar sus fallos sobre traducciones al Español" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="l10n-es">
-    <component initialowner="2080" description="If you don't find the module you search / Si no encuentras el módulo que estás buscando" initialqacontact="0" value="general" />
+  <product votestoconfirm="0" description="Here you can place your bugs about Spanish translations / Aqui puede situar sus fallos sobre traducciones al Espan~ol." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="l10n-es">
+    <component initialowner="2080" description="If you don't find the module you search / Si no encuentras el modulo que estas buscando" initialqacontact="0" value="general" />
     <component initialowner="142" description="GNOME 1.4/2.0 glade" initialqacontact="0" value="glade" />
     <component initialowner="1944" description="GNOME 1.4 Bonobo" initialqacontact="142" value="bonobo" />
     <component initialowner="142" description="GNOME 1.4 Bug Buddy" initialqacontact="0" value="bug-buddy" />
@@ -1347,5 +1351,44 @@
     <component initialowner="104" description="Documentation for the GNOME Canvas." initialqacontact="0" value="documentation" />
     <version value="unspecified" />
     <version value="1.110.0" />
+  </product>
+  <product votestoconfirm="0" description="The Gnome 2.x panel, the panel applet library and some core  utility applets (window list, workspace switcher, inbox monitor, clock and wanda the fish)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-panel">
+    <component initialowner="4570" description="The GNOME 2.x panel" initialqacontact="0" value="Panel" />
+    <component initialowner="1779" description="The panel applet library" initialqacontact="0" value="libpanel-applet" />
+    <component initialowner="4570" description="The Clock applet" initialqacontact="0" value="clock applet" />
+    <component initialowner="61" description="The Inbox Monitor Applet" initialqacontact="0" value="Inbox Monitor Applet" />
+    <component initialowner="4570" description="The Window List Applet" initialqacontact="0" value="Window List Applet" />
+    <component initialowner="4570" description="The Workspace Switcher Applet" initialqacontact="0" value="Workspace Switcher Applet" />
+    <component initialowner="4570" description="Wanda the Fish" initialqacontact="0" value="Fish Applet" />
+    <component initialowner="4570" description="Build problems etc." initialqacontact="0" value="general" />
+    <version value="unspecified" />
+    <version value="1.5.x" />
+  </product>
+  <product votestoconfirm="0" description="The libgnome-desktop library, some core docs, .desktop files and graphics files/icons." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-desktop">
+    <component initialowner="4572" description="The libgnome-desktop library - contains APIs that really belong in libgnome/libgnomeui but have not seen enough testing or development to be considered stable" initialqacontact="0" value="libgnome-desktop" />
+    <component initialowner="4572" description="Build problems, docs, icons etc." initialqacontact="0" value="general" />
+    <component initialowner="4572" description="The Gnome About program which display all the wonderful people who have worked on GNOME." initialqacontact="0" value="gnome-about" />
+    <version value="unspecified" />
+    <version value="1.5.x" />
+  </product>
+  <product votestoconfirm="0" description="The GNOME 2.x session manager and session manager proxy" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-session">
+    <component initialowner="4571" description="The session manager" initialqacontact="0" value="gnome-session" />
+    <component initialowner="4571" description="Session manager proxy" initialqacontact="0" value="smproxy" />
+    <component initialowner="4571" description="Build problems etc." initialqacontact="0" value="general" />
+    <version value="unspecified" />
+    <version value="1.5.x" />
+  </product>
+  <product votestoconfirm="0" description="The GNOME 2.x terminal (a.k.a profterm)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-terminal">
+    <component initialowner="8" description="All bugs go here ..." initialqacontact="8" value="general" />
+    <version value="unspecified" />
+    <version value="1.9.x" />
+  </product>
+  <product votestoconfirm="0" description="Extra modules not distributed as part of gnome-vfs proper. These are used in nautilus, and include the SMB samba-based network browser. Typically these modules are GPL'd (gnome-vfs proper is LGPL'd). If you can make this description more friendly, please do." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-vfs-extras">
+    <component initialowner="63" description="Currently everything in gnome-vfs-extras not specifically listed in other components." initialqacontact="0" value="general" />
+    <component initialowner="63" description="documentation of gnome-vfs-extras" initialqacontact="0" value="docs" />
+    <component initialowner="63" description="For browsing SMB 'shares' through Nautilus." initialqacontact="0" value="smb" />
+    <component initialowner="1072" description="For accessing the Rio 500 device (that thing for mp3s :))" initialqacontact="0" value="rio-500" />
+    <version value="unspecified" />
+    <version value="0.1.2" />
   </product>
 </products>

@@ -11,6 +11,7 @@ bugzilla_DATA = \
 	bugzilla/gnome.bugzilla	\
 	bugzilla/gnome/config	\
 	bugzilla/gnome/products	\
+	bugzilla/gnome/mostfreq	\
 	\
 	bugzilla/ximian.bugzilla	\
 	bugzilla/ximian/config		\
@@ -35,7 +36,7 @@ update-bugzilla:
 		&& rm -f $$file.tmp; \
 	done
 	cd $(top_srcdir)/bugzilla/gnome/ \
-	&& for file in products config; do \
+	&& for file in products config mostfreq; do \
 		wget "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-$$file.xml" -O $$file.tmp \
 		&& (cmp -s $$file.tmp $$file || cp -v $$file.tmp $$file) \
 		&& rm -f $$file.tmp; \

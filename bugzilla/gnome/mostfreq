@@ -1,0 +1,25 @@
+<!DOCTYPE products SYSTEM "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-gnome-org.dtd">
+<products>
+  <product name="gnome-core">
+    <component name="gnome-about">
+      <bug bugid="8562">
+        <desc>gnome-about</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=8562</url>
+      </bug>
+    </component>
+    <component name="panel">
+      <bug bugid="70295">
+        <desc>no longer Xinerama compatible</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=70295</url>
+      </bug>
+    </component>
+  </product>
+  <product name="gnome-utils">
+    <component name="gdict">
+      <bug bugid="70274">
+        <desc>Crash after clicking on settings</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=70274</url>
+      </bug>
+    </component>
+  </product>
+</products>
