@@ -1,5 +1,5 @@
 <!DOCTYPE Article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.0//EN"[
-<!ENTITY version "0.8"> 
+<!ENTITY version "0.9"> 
 ]>
 
 <article id="index">
@@ -599,7 +599,7 @@
     <term>Save report to file</term>
     <listitem>
      <para>
-       Selecting thing will produce a box for you to give the
+       Selecting this will produce a box for you to give the
        name of a file to save the bug report to. If the file already
        exists, it will ask you whether to overwrite the file or not.
      </para>
