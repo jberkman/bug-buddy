@@ -42,6 +42,8 @@ void on_version_list_select_row (GtkCList *list, gint row, gint col,
 				 GdkEventButton *event, gpointer udata);
 void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
 void on_version_apply_clicked (GtkButton *button, gpointer udata);
+void on_file_radio_toggled (GtkWidget *radio, gpointer data);
+gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
 
 extern const char *packages[];
 
@@ -62,7 +64,8 @@ typedef enum {
 typedef enum {
 	SUBMIT_REPORT,
 	SUBMIT_TO_SELF,
-	SUBMIT_NONE
+	SUBMIT_NONE,
+	SUBMIT_FILE
 } SubmitType;	
 
 struct {
@@ -89,6 +92,8 @@ typedef struct {
 } ListData;
 
 struct {
+	GtkWidget *the_druid;
+
 	GtkWidget *nature;
 	GtkWidget *attach;
 	GtkWidget *core;
@@ -321,32 +326,44 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	FILE *fp = stdout;
 	ListData *data;	
 
+	s2 = "submit@bugs.gnome.org";
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 
 	switch (druid_data.submit_type) {
-	case SUBMIT_REPORT:
-		s2 = "submit@bugs.gnome.org";
-		break;
 	case SUBMIT_TO_SELF:
 		s2 = s;
+		/* fall through */
+	case SUBMIT_REPORT:
+		s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
+		g_message ("about to run '%s'", s3);
+		fp = popen (s3, "w");
+		if (!fp) {
+			gchar *s = g_strdup_printf (_("Unable to start mail program:"
+						      "'%s'"), druid_data.mail_cmd);
+			GtkWidget *d = gnome_error_dialog (s);
+			g_free (s);
+			gnome_dialog_run_and_close (GNOME_DIALOG (d));
+			return FALSE;
+		}
+		break;
+	case SUBMIT_FILE:
+		w = glade_xml_get_widget (druid_data.xml, "file_entry");
+		s3 = gtk_entry_get_text (GTK_ENTRY (w));
+		fp = fopen (s3, "w");
+		if (!fp) {
+			gchar *s4 = g_strdup_printf (_("Unable to open file:\n"
+						      "'%s'"), s3);
+			GtkWidget *d = gnome_error_dialog (s4);
+			g_free (s4);
+			gnome_dialog_run_and_close (GNOME_DIALOG (d));
+			return FALSE;
+		}
 		break;
 	case SUBMIT_NONE:
 		return FALSE;
 	default:
 		g_assert_not_reached ();
-		return FALSE;
-	}
-
-	s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
-	g_message ("about to run '%s'", s3);
-	fp = popen (s3, "w");
-	if (!fp) {
-		gchar *s = g_strdup_printf (_("Unable to start mail program:"
-					      "'%s'"), druid_data.mail_cmd);
-		GtkWidget *d = gnome_error_dialog (s);
-		g_free (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return FALSE;
 	}
 
@@ -403,6 +420,14 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	gnome_config_set_string ("/bug-buddy/contact/email", s);
 
+	w = glade_xml_get_widget (druid_data.xml, "file_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/defaults/bugfile", s);
+
+	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
+	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
+	gnome_entry_save_history (GNOME_ENTRY (w));
+
 	gnome_config_sync ();
 
 	gtk_main_quit ();
@@ -445,6 +470,42 @@ on_version_apply_clicked (GtkButton *button, gpointer udata)
 	update_selected_row ();
 }
 
+void
+on_file_radio_toggled (GtkWidget *radio, gpointer data)
+{
+	static GtkWidget *entry2 = NULL;
+	int on = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radio));
+	if (!entry2)
+		entry2 = glade_xml_get_widget (druid_data.xml,
+					       "file_entry2");
+	
+	gtk_widget_set_sensitive (GTK_WIDGET (entry2), on);
+	/*s = gtk_entry_get_text (GTK_ENTRY (entry));
+	gnome_druid_set_buttons_sensitive (druid_data.the_druid,
+					   TRUE, !on || (s && strlen(s)), 
+					   TRUE);*/
+}
+
+gboolean
+on_action_page_next (GtkWidget *page, GtkWidget *druid)
+{
+	GtkWidget *entry;
+	char *s;
+
+	if (druid_data.submit_type != SUBMIT_FILE)
+		return FALSE;
+
+	entry = glade_xml_get_widget (druid_data.xml,
+				      "file_entry");
+	
+	s = gtk_entry_get_text (GTK_ENTRY (entry));
+
+	if (s && strlen (s))
+		return FALSE;
+
+	gnome_error_dialog (_("Please choose a file to save to."));
+	return TRUE;
+}
 
 static gchar *
 get_data_from_command (const gchar *cmd)
@@ -488,6 +549,9 @@ init_ui (GladeXML *xml)
 	int i;
 
 	glade_xml_signal_autoconnect(xml);
+
+	w = glade_xml_get_widget (xml, "the_druid");
+	druid_data.the_druid = w;
 
 	w = glade_xml_get_widget (xml, "package_entry2");
 	for (i = 0; packages[i]; i++)
@@ -536,6 +600,11 @@ init_ui (GladeXML *xml)
 			    GTK_SIGNAL_FUNC (update_submit_type),
 			    GINT_TO_POINTER (SUBMIT_NONE));
 	
+	w = glade_xml_get_widget (xml, "file_radio");
+	gtk_signal_connect (GTK_OBJECT (w), "toggled",
+			    GTK_SIGNAL_FUNC (update_submit_type),
+			    GINT_TO_POINTER (SUBMIT_FILE));	
+
 	w = glade_xml_get_widget (xml, "name_entry");
 	s = gnome_config_get_string ("/bug-buddy/contact/name");
 	if (s)
@@ -547,6 +616,16 @@ init_ui (GladeXML *xml)
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 	g_free (s);
+
+	w = glade_xml_get_widget (xml, "file_entry");
+	s = gnome_config_get_string ("/bug-buddy/defaults/bugfile");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
+
+	w = glade_xml_get_widget (xml, "file_entry2");
+	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
+	gnome_entry_load_history (GNOME_ENTRY (w));
 
 	/* system config page */
 	druid_data.version_edit = glade_xml_get_widget (xml, "version_edit");

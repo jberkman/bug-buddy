@@ -1221,6 +1221,11 @@ bug-buddy has obtained:</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>action_page</name>
+      <signal>
+	<name>next</name>
+	<handler>on_action_page_next</handler>
+	<last_modification_time>Thu, 04 Nov 1999 16:36:35 GMT</last_modification_time>
+      </signal>
       <title>Action</title>
       <title>Action</title>
       <title_color>255,255,255</title_color>
@@ -1301,6 +1306,52 @@ bug-buddy has obtained:</label>
 	    <expand>False</expand>
 	    <fill>False</fill>
 	  </child>
+	</widget>
+
+	<widget>
+	  <class>GtkRadioButton</class>
+	  <name>file_radio</name>
+	  <can_focus>True</can_focus>
+	  <signal>
+	    <name>toggled</name>
+	    <handler>on_file_radio_toggled</handler>
+	    <last_modification_time>Thu, 04 Nov 1999 16:18:05 GMT</last_modification_time>
+	  </signal>
+	  <label>Save the report to a file</label>
+	  <active>False</active>
+	  <draw_indicator>True</draw_indicator>
+	  <group>submit_radio</group>
+	  <child>
+	    <padding>0</padding>
+	    <expand>False</expand>
+	    <fill>False</fill>
+	  </child>
+	</widget>
+
+	<widget>
+	  <class>GnomeFileEntry</class>
+	  <name>file_entry2</name>
+	  <sensitive>False</sensitive>
+	  <history_id>files</history_id>
+	  <max_saved>10</max_saved>
+	  <directory>False</directory>
+	  <modal>True</modal>
+	  <child>
+	    <padding>0</padding>
+	    <expand>False</expand>
+	    <fill>False</fill>
+	  </child>
+
+	  <widget>
+	    <class>GtkEntry</class>
+	    <child_name>GnomeEntry:entry</child_name>
+	    <name>file_entry</name>
+	    <can_focus>True</can_focus>
+	    <editable>True</editable>
+	    <text_visible>True</text_visible>
+	    <text_max_length>0</text_max_length>
+	    <text></text>
+	  </widget>
 	</widget>
       </widget>
     </widget>
