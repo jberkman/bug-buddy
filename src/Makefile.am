@@ -3,7 +3,7 @@ buddydir = $(datadir)/bug-buddy
 INCLUDES = \
 	-I$(top_srcdir)/intl -I$(top_builddir)/intl	\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-I$(includedir) $(EXTRA_GNOME_CFLAGS)		\
+	$(EXTRA_GNOME_CFLAGS) -I$(includedir)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"	\
 	-DCLIST_HEIGHT=20				\

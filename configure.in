@@ -24,8 +24,8 @@ GNOME_COMPILE_WARNINGS
 dnl Check for new enough gnome-libs
 CFLAGS_save=$CFLAGS
 LIBS_save=$LIBS
-CFLAGS=`gnome-config --cflags gnomeui`
-LIBS=`gnome-config --libs gnomeui`
+CFLAGS=`gnome-config --cflags xml gnomeui`
+LIBS=`gnome-config --libs xml gnomeui`
 
 AC_CHECK_LIB(gnomeui, gnome_window_icon_set_default_from_file, ,[
 AC_MSG_ERROR(gnome-libs 1.0.60 or higher is required.)])
@@ -47,8 +47,8 @@ dnl else
 dnl    AC_MSG_RESULT(no)
 dnl fi
 
-EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
-EXTRA_GNOME_LIBS=`gnome-config   --libs   gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
+EXTRA_GNOME_CFLAGS=`gnome-config --cflags xml gnomeui libglade gdk_pixbuf gnomecanvaspixbuf vfs`
+EXTRA_GNOME_LIBS=`gnome-config   --libs   xml gnomeui libglade gdk_pixbuf gnomecanvaspixbuf vfs`
 AC_SUBST(EXTRA_GNOME_CFLAGS)
 AC_SUBST(EXTRA_GNOME_LIBS)
 

@@ -1,3 +1,9 @@
+Tue Jul 10 12:34:00 2001  Jonathan Blandford  <jrb@redhat.com>
+
+	* configure.in: change order of xml in gnome-config command to fix
+	broken include path.
+	(src/Makefile.am): ditto.
+
 2001-06-21  jacob berkman  <jacob@ximian.com>
 
 	* NEWS: 
