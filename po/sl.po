@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-03-25 03:59+0200\n"
+"POT-Creation-Date: 2001-03-25 14:59+0200\n"
 "PO-Revision-Date: 2000-06-25 01:16+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -203,13 +203,12 @@ msgstr ""
 "Podatkov o razhro¹èevanju ni mogoèe pridobiti."
 
 #: src/gdb-buddy.c:272
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "Nisem na¹el datoteke gdb-cmd.\n"
-"Poskusite znova namestiti bug-buddy-a."
+"Poskusite znova namestiti Bug Buddy-a."
 
 #: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
@@ -501,7 +500,6 @@ msgid "Please enter a valid email address."
 msgstr "Prosim vpi¹ite veljaven e-po¹tni naslov."
 
 #: src/united-states-of-bug-buddy.c:286
-#, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -515,7 +513,7 @@ msgstr ""
 "Ne boste mogli oddati poroèila o hro¹èu, lahko pa ga boste shranili v "
 "datoteko.\n"
 "\n"
-"Boste navedli novo mesto, kjer se program sendmail nahaja?"
+"Boste navedli novo mesto, kjer se nahaja program sendmail?"
 
 #: src/united-states-of-bug-buddy.c:336
 msgid "The specified file does not exist."
