@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20010213\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2001-02-13 22:19-0500\n"
+"Project-Id-Version: bug-buddy CVS-20010708\n"
+"POT-Creation-Date: 2001-07-08 01:07+0900\n"
+"PO-Revision-Date: 2001-07-08 01:13+0900\n"
 "Last-Translator: Akira TAGOH <tagoh@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -202,13 +202,12 @@ msgstr ""
 "デバッグ情報は取得出来ないでしょう"
 
 #: src/gdb-buddy.c:274
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
-"gdb-cmd ファイルを見つけることが出来ません\n"
-"bug-buddy を再インストールしてください"
+"gdb-cmd ファイルを見つけることが出来ませんでした\n"
+"Bug Buddy を再インストールしてください"
 
 #: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
@@ -224,9 +223,8 @@ msgid "About"
 msgstr "bug-buddy について"
 
 #: src/bug-buddy.glade.h:4
-#, fuzzy
 msgid "Assbarn Phenomenon"
-msgstr "Assbarn Phenomeon"
+msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
 msgid "Automatically continue to next step when debugging is complete"
@@ -495,7 +493,7 @@ msgid "Please enter a valid email address."
 msgstr "有効な email アドレスを入れてください"
 
 #: src/united-states-of-bug-buddy.c:288
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
@@ -506,8 +504,8 @@ msgid ""
 msgstr ""
 "`%s' は存在しないようです\n"
 "\n"
-"実際に不具合報告を提出することが出来ないでしょう. しかし, それを\n"
-"ファイルに保存することは出来ます\n"
+"実際に不具合報告を提出することが出来ないかもしれません. しかし, \n"
+"それをファイルへ保存することは出来ます\n"
 "\n"
 "sendmail のために新しい位置を指定しますか?"
 
@@ -558,7 +556,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "あなたの不具合報告は '%s' に保存されました"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -566,9 +564,11 @@ msgid ""
 "\n"
 "Thanks!"
 msgstr ""
-"あなたの不具合報告は提出されました:\n"
+"あなたの不具合報告は以下へ提出されました:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"ありがとうございます!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
@@ -610,89 +610,3 @@ msgstr "不具合報告ツール"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "GNOMEの不具合報告ツール"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "'%s' が開けません\n"
-#~ "bug-buddy が正しくインストールされているか確認してください"
-
-#~ msgid "Distribution"
-#~ msgstr "Distribution"
-
-#~ msgid "System"
-#~ msgstr "System"
-
-#~ msgid "critical"
-#~ msgstr "重大"
-
-#~ msgid "grave"
-#~ msgstr "深刻"
-
-#~ msgid "normal"
-#~ msgstr "普通"
-
-#~ msgid "wishlist"
-#~ msgstr "願望"
-
-#~ msgid "software bug"
-#~ msgstr "ソフトウェアの不具合"
-
-#~ msgid "documentation bug"
-#~ msgstr "ドキュメントの不具合"
-
-#~ msgid "change request"
-#~ msgstr "変更要求"
-
-#~ msgid "support"
-#~ msgstr "サポート"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "'general' より特定のパッケージを指定するなら\n"
-#~ "それははるかに役立っています\n"
-#~ "\n"
-#~ "パッケージを指定してください"
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr "不具合報告に表題と説明を含めなければなりません"
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "'%s' が存在しているとは思えません。あなたは不具合報告を提出することは\n"
-#~ "出来ないでしょう。でも，これをファイルに保存することは出来るでしょう\n"
-#~ "\n"
-#~ "sendmail のために新しい位置を指定しますか?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "受取人の email アドレスを指定しなければなりません"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "保存するファイルを選択してください"
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "ファイル '%s' はすでに存在しています\n"
-#~ "上書きしますか?"
-
-#~ msgid "Help"
-#~ msgstr "ヘルプ"
-
-#~ msgid "Refresh"
-#~ msgstr "リフレッシュ"
-
-#~ msgid "Finish"
-#~ msgstr "完了"
