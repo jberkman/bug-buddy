@@ -1,3 +1,8 @@
+2001-06-12  Christian Rose  <menthos@menthos.com>
+
+	* POTFILES.in: Removed src/bts.c.
+	* POTFILES.ignore: Added this file, with src/bts.c.
+
 2001-06-12  Matthias Warkus  <mawarkus@gnome.org>
 
 	* de.po: Update translation for release.
