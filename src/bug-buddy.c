@@ -895,7 +895,7 @@ GtkWidget *
 make_pixmap_button (gchar *widget_name, gchar *text, 
 		    gchar *s2, int type, int i2)
 {
-	char *this_is_an_ugly_hack_for_kmaraas_and_the_rest_of_the_gnome_i18n_team =
+	char *this_is_an_ugly_hack_for_kmaraas_and_the_rest_of_the_gnome_i18n_team[] =
 	{ N_("About"), N_("Help"), N_("Stop"), N_("Refresh") };
 	GtkWidget *p, *w;
 
