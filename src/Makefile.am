@@ -6,6 +6,7 @@ INCLUDES = \
 	-I$(includedir) $(EXTRA_GNOME_CFLAGS)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"	\
+	-DCLIST_HEIGHT=20				\
 	-D_GNU_SOURCE
 
 
@@ -62,29 +63,31 @@ gnome-packages: Makefile.am
 
 buddy_DATA = \
 	bug-buddy.glade	\
-	gnome.appmap	\
-	gdb-cmd		\
-	gnome-packages	\
-	debian-packages	\
-	kde-packages	\
-	helix-packages
+	gdb-cmd
+
+#	gnome.appmap	\
+#	gnome-packages	\
+#	debian-packages	\
+#	kde-packages	\
+#	helix-packages
 
 utilsdir = $(datadir)/gnome/apps/Utilities
 utils_in_files = bug-buddy.desktop.in
 utils_DATA = $(utils_in_files:.desktop.in=.desktop)
 @XML_I18N_MERGE_DESKTOP_RULE@
 
-xmldir = $(datadir)/bug-buddy/xml
-xml_DATA = \
-	GNOME.bts	\
-	Debian.bts	\
-	KDE.bts		\
-	Helix_Code.bts	\
-	Independent_Project.bts
+#xmldir = $(datadir)/bug-buddy/xml
+#xml_DATA = \
+#	GNOME.bts	\
+#	Debian.bts	\
+#	KDE.bts		\
+#	Helix_Code.bts	\
+#	Independent_Project.bts
 
 EXTRA_DIST = \
 	$(buddy_DATA)	\
 	$(utils_DATA)	\
-	$(xml_DATA)	\
 	bug-buddy.mime	\
 	bug-buddy.keys.in
+
+#	$(xml_DATA)	\

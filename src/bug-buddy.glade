@@ -10,7 +10,9 @@
   <language>C</language>
   <gnome_support>True</gnome_support>
   <gettext_support>True</gettext_support>
-  <output_translatable_strings>True</output_translatable_strings>
+  <output_main_file>False</output_main_file>
+  <output_support_files>False</output_support_files>
+  <output_build_files>False</output_build_files>
   <translatable_strings_file>glade-strings.c</translatable_strings_file>
 </project>
 
@@ -2057,6 +2059,7 @@ of products for the bug tracking systems.</label>
 	  <widget>
 	    <class>GtkCheckButton</class>
 	    <name>checkbutton2</name>
+	    <visible>False</visible>
 	    <can_focus>True</can_focus>
 	    <label>Submit another bug</label>
 	    <active>False</active>

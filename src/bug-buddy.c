@@ -534,6 +534,9 @@ init_ui (void)
 	update_submit_type (NULL, GINT_TO_POINTER (druid_data.submit_type));
 
 	gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid-window")));
+
+	w = GET_WIDGET ("product_list");
+	gtk_clist_set_row_height (GTK_CLIST (w), CLIST_HEIGHT);
 }
 
 gint

@@ -1,3 +1,14 @@
+2001-06-12  jacob berkman  <jacob@ximian.com>
+
+	* various makefiles: fixes and ximian bugzilla support
+	
+	* src/bug-buddy.c (init_ui): set the row height to 20
+
+	* src/bugzilla.c (load_bugzilla): make icons 16 pixels
+	(load_bugzilla): fix a tyop
+	(generate_email_text): comment out some fields
+	(add_severity): also default to unknown
+
 2001-06-03  Karl Eichwalder  <ke@suse.de>
 
 	* src/Makefile.am (EXTRA_DIST): Remove 

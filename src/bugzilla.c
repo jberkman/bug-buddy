@@ -366,7 +366,7 @@ load_bugzilla (const char *filename)
 
 	pixmap = gnome_config_get_string_with_default ("icon="BUDDY_ICONDIR"/bug-buddy.png", &def);
 
-	if (pixmap[0] != '/')
+	if (pixmap[0] == '/')
 		bts->icon = g_strdup (pixmap);
 	else
 		bts->icon = g_concat_dir_and_file (BUDDY_DATADIR, pixmap);
@@ -378,12 +378,14 @@ load_bugzilla (const char *filename)
 	else if (!strcasecmp (s, "debian"))
 		bts->submit_type = BUGZILLA_SUBMIT_DEBIAN;
 	g_free (s);
+	
+	d(g_print ("icon: %s\n", bts->icon));
 
 	bts->email = gnome_config_get_string ("email");
 
 	pb = gdk_pixbuf_new_from_file (bts->icon);
 	if (pb) {
-		GdkPixbuf *pb2 = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_BILINEAR);
+		GdkPixbuf *pb2 = gdk_pixbuf_scale_simple (pb, CLIST_HEIGHT, CLIST_HEIGHT, GDK_INTERP_BILINEAR);
 		gdk_pixbuf_render_pixmap_and_mask (pb2, &bts->pixmap, &bts->mask, 127);
 		gdk_pixbuf_unref (pb);
 		gdk_pixbuf_unref (pb2);
@@ -658,7 +660,7 @@ add_severity (char *s, GtkMenu *m)
 			    s);
 	gtk_widget_show (w);
 	gtk_menu_append (m, w);
-	if (!strcasecmp (s, "normal")) {
+	if (!strcasecmp (s, "normal") || !strcasecmp (s, "unknown")) {
 		gtk_menu_item_activate (GTK_MENU_ITEM (w));
 		gtk_option_menu_set_history (GTK_OPTION_MENU (GET_WIDGET ("severity-list")), 
 					     g_slist_index (druid_data.product->bts->severities, s));
@@ -738,8 +740,10 @@ generate_email_text (void)
 			"@product = %s\n"
 			"@component = %s\n"
 			"@version = %s\n"
-			"@opsys = %s\n"
-			"@platform = %s\n"
+#if 0
+			"@op_sys = %s\n"
+			"@rep_platform = %s\n"
+#endif
 			"@severity = %s\n"
 			"\n"
 			"%s\n"
@@ -748,8 +752,10 @@ generate_email_text (void)
 			product,
 			component,
 			version,
+#if 0
 			opsys,
 			platform,
+#endif
 			severity,
 			body);
 	} else if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_DEBIAN) {

@@ -1,9 +1,11 @@
 pixmapdir = $(datadir)/bug-buddy
 pixmap_DATA = \
+	bug-buddy.png	\
 	bug-core.png	\
 	bug-flower.png	\
 	bug-anim.png	\
-	gnome.png
+	gnome.png	\
+	ximian.png
 
 icondir = $(datadir)/pixmaps
 icon_DATA = \
@@ -11,5 +13,4 @@ icon_DATA = \
 
 
 EXTRA_DIST = \
-	$(icon_DATA)	\
 	$(pixmap_DATA)
