@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-04-01 12:37+0900\n"
-"PO-Revision-Date: 2002-04-01 12:49+0900\n"
+"POT-Creation-Date: 2002-04-15 00:10+0900\n"
+"PO-Revision-Date: 2002-04-15 00:12+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -115,27 +115,46 @@ msgstr ""
 "gdb가 디버깅 정보를 얻어내지를 못했습니다.\n"
 "gdb를 끝낼까요(stack trace는 완전하지 못할겁니다)?"
 
-#: src/bug-buddy.c:219 src/gdb-buddy.c:123
+#: src/bug-buddy.c:219 src/gdb-buddy.c:125
 msgid "gdb has already exited"
 msgstr "gdb가 이미 끝났습니다."
 
-#: src/bug-buddy.c:306
+#: src/bug-buddy.c:285
+msgid "Save Backtrace"
+msgstr "backtrace 저장"
+
+#: src/bug-buddy.c:304
+#, c-format
+msgid ""
+"There was an error trying to save %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Please choose another file and try again."
+msgstr ""
+"%s을(를) 저장하는 데 오류가 발생했습니다:\n"
+"\n"
+"%s\n"
+"\n"
+"다른 파일을 선택하고 다시 시도하십시오."
+
+#: src/bug-buddy.c:401
 msgid "_Start Mailer"
 msgstr "전자우편 시작(_S)"
 
-#: src/bug-buddy.c:310
+#: src/bug-buddy.c:405
 msgid "_Send Report"
 msgstr "보고서 보내기(_S)"
 
-#: src/bug-buddy.c:379
+#: src/bug-buddy.c:474
 msgid "Hide Debugging Options"
 msgstr "디버깅 옵션 숨기기"
 
-#: src/bug-buddy.c:380
+#: src/bug-buddy.c:475
 msgid "Show Debugging Options"
 msgstr "디버깅 옵션 보이기"
 
-#: src/bug-buddy.c:444
+#: src/bug-buddy.c:539
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -143,7 +162,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME을 지정하여 사용하는 것보다는\n"
 "--appname 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:454
+#: src/bug-buddy.c:549
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -151,7 +170,7 @@ msgstr ""
 "$GNOME_CRASHED_PID를 사용하시는 것보다는\n"
 "--pid 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:470
+#: src/bug-buddy.c:565
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
@@ -159,7 +178,7 @@ msgstr ""
 "그놈의 버그 보고 도구, 버그버디입니다.\n"
 "버그버디의 각 단계를 따라 버그 보고서를 제출해 주십시오."
 
-#: src/bug-buddy.c:473
+#: src/bug-buddy.c:568
 msgid ""
 "\n"
 "\n"
@@ -169,7 +188,7 @@ msgstr ""
 "\n"
 "다른 응용프로그램이 비정상 종료했기 때문에 이 프로그램이 실행중입니다."
 
-#: src/bug-buddy.c:476
+#: src/bug-buddy.c:571
 msgid ""
 "\n"
 "\n"
@@ -181,12 +200,12 @@ msgstr ""
 "버그버디에서 응용프로그램의 디버깅 정보를 얻어 오는 몇 분간 기다려 주십시"
 "오.  이 디버깅 정보가 있으면 더욱 유용한 버그 보고서를 제출할 수 있습니다."
 
-#: src/bug-buddy.c:617
+#: src/bug-buddy.c:712
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "픽스맵을 찾을 수 없습니다: %s (%d)\n"
 
-#: src/bug-buddy.c:684
+#: src/bug-buddy.c:779
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -195,24 +214,24 @@ msgstr ""
 "버그버디에서 사용자 인터페이스 파일을 (%s) 읽어 들일 수 없습니다.\n"
 "버그버디가 제대로 설치되었는 지 확인하십시오."
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:616
 msgid "ID"
 msgstr "ID"
 
-#: src/bugzilla.c:625 src/bugzilla.c:660
+#: src/bugzilla.c:630 src/bugzilla.c:665
 msgid "Product"
 msgstr "제품명"
 
-#: src/bugzilla.c:631 src/bugzilla.c:700
+#: src/bugzilla.c:636 src/bugzilla.c:705
 msgid "Component"
 msgstr "컴포넌트"
 
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:637 src/bugzilla.c:678
-#: src/bugzilla.c:706
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "설명"
 
-#: src/bugzilla.c:769
+#: src/bugzilla.c:774
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -221,7 +240,7 @@ msgstr ""
 "버그버디에서 '%s'을(를) 열 수 없습니다.\n"
 "버그버디가 제대로 설치되었는 지 확인하십시오."
 
-#: src/bugzilla.c:787
+#: src/bugzilla.c:792
 msgid "All"
 msgstr "전부"
 
@@ -245,12 +264,12 @@ msgstr "방문했음"
 msgid "If the URI has been visited before."
 msgstr "이 URI를 이전에 방문한 적이 있는 지"
 
-#: src/gdb-buddy.c:80
+#: src/gdb-buddy.c:82
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "stack trace를 얻는 중... (%d)"
 
-#: src/gdb-buddy.c:163
+#: src/gdb-buddy.c:165
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -259,7 +278,7 @@ msgstr ""
 "gdb로 코아 파일을 읽어들일수가 없습니다:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:194
+#: src/gdb-buddy.c:196
 #, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
@@ -268,11 +287,11 @@ msgstr ""
 "gDB에서 어떤 실행 파일이 '%s'을(를) 만들었는 지\n"
 "알 수가 없습니다"
 
-#: src/gdb-buddy.c:226
+#: src/gdb-buddy.c:228
 msgid "Error on read... aborting"
 msgstr "읽는 도중에 에러 발생.. 중단합니다"
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -280,7 +299,7 @@ msgstr ""
 "시스템에서 GDB를 발견할 수가 없습니다.\n"
 "디버깅 정보를 얻을 수가 없을겁니다."
 
-#: src/gdb-buddy.c:306
+#: src/gdb-buddy.c:308
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -288,7 +307,7 @@ msgstr ""
 "gdb-cmd 파일을 발견할 수가 없습니다.\n"
 "버그버디를 다시 설치하십시오."
 
-#: src/gdb-buddy.c:326
+#: src/gdb-buddy.c:328
 msgid "There was an error running gdb."
 msgstr "gdb를 실행하는 데 오류가 발생했습니다."
 
@@ -312,7 +331,7 @@ msgstr "assbarn 현상"
 msgid "Binary file:"
 msgstr "이진 파일:"
 
-#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:99
+#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:95
 msgid "Bug Buddy"
 msgstr "버그버디"
 
@@ -624,23 +643,23 @@ msgstr "확인"
 msgid "Finished!"
 msgstr "완료되었습니다!"
 
-#: src/united-states-of-bug-buddy.c:102
+#: src/united-states-of-bug-buddy.c:98
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "그놈용 GUI 버그 레포팅 툴"
 
-#: src/united-states-of-bug-buddy.c:113
+#: src/united-states-of-bug-buddy.c:109
 msgid "The lame Bug Buddy web page"
 msgstr "버그버디 웹 페이지"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:284
 msgid "Please enter your name."
 msgstr "당신의 이름을 기입하세요"
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:300
 msgid "Please enter a valid email address."
 msgstr "당신의 전자우편 주소를 기입하세요"
 
-#: src/united-states-of-bug-buddy.c:320
+#: src/united-states-of-bug-buddy.c:316
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -651,20 +670,20 @@ msgstr ""
 "\n"
 "sendmail의 경로를 다시 확인하십시오."
 
-#: src/united-states-of-bug-buddy.c:352
+#: src/united-states-of-bug-buddy.c:348
 msgid "Please enter a valid email command."
 msgstr "전자우편 주소를 입력하십시오."
 
-#: src/united-states-of-bug-buddy.c:416
+#: src/united-states-of-bug-buddy.c:412
 msgid "The specified file does not exist."
 msgstr "지정한 파일이 존재하지 않습니다."
 
-#: src/united-states-of-bug-buddy.c:426
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "File is of type: %s"
 msgstr "파일 타입: %s"
 
-#: src/united-states-of-bug-buddy.c:433
+#: src/united-states-of-bug-buddy.c:429
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -675,19 +694,19 @@ msgstr ""
 "\n"
 "버그버디는 일반 텍스트 (text/*) 파일만을 제출할 수 있습니다."
 
-#: src/united-states-of-bug-buddy.c:453
+#: src/united-states-of-bug-buddy.c:449
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "버그 보고에는 제목을 포함하여야합니다."
 
-#: src/united-states-of-bug-buddy.c:469
+#: src/united-states-of-bug-buddy.c:465
 msgid "You must include a comprehensible description in your bug report."
 msgstr "버그 보고에는 설명을 포함하여야합니다."
 
-#: src/united-states-of-bug-buddy.c:492
+#: src/united-states-of-bug-buddy.c:488
 msgid "Submit this bug report now?"
 msgstr "버그 보고를 지금 보낼까요?"
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:508
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -696,12 +715,12 @@ msgstr ""
 "'%s' 파일을 열수가 없습니다:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:526
+#: src/united-states-of-bug-buddy.c:522
 #, c-format
 msgid "about to run '%s'"
 msgstr "'%s'을 실행할려고 함"
 
-#: src/united-states-of-bug-buddy.c:534
+#: src/united-states-of-bug-buddy.c:530
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -710,12 +729,12 @@ msgstr ""
 "메일 프로그램('%s')을 시작할 수가 없습니다:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:572
+#: src/united-states-of-bug-buddy.c:568
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "버그 보고가 '%s'에 저장되었습니다"
 
-#: src/united-states-of-bug-buddy.c:575
+#: src/united-states-of-bug-buddy.c:571
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -730,7 +749,7 @@ msgstr ""
 "\n"
 "고맙습니다!"
 
-#: src/united-states-of-bug-buddy.c:630
+#: src/united-states-of-bug-buddy.c:626
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
@@ -738,19 +757,19 @@ msgstr ""
 "버그를 보고하려는 제품을 버그버디에서 모르기 때문에, 직접 손으로 버그 레포트"
 "를 써야 할 것입니다."
 
-#: src/united-states-of-bug-buddy.c:651
+#: src/united-states-of-bug-buddy.c:647
 msgid "You must specify a product for your bug report."
 msgstr "버그 보고에는 제품이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:674
+#: src/united-states-of-bug-buddy.c:670
 msgid "You must specify a component for your bug report."
 msgstr "버그 보고에는 컴포넌트 이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:688
+#: src/united-states-of-bug-buddy.c:684
 msgid "You must specify a version for your bug report."
 msgstr "버그 보고에는 버전을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:769
+#: src/united-states-of-bug-buddy.c:765
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -761,7 +780,7 @@ msgstr ""
 "\n"
 "이 버그를 보고해 주셔서 고맙습니다."
 
-#: src/united-states-of-bug-buddy.c:796
+#: src/united-states-of-bug-buddy.c:792
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
