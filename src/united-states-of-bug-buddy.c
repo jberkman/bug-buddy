@@ -25,16 +25,17 @@
 
 #include "libglade-buddy.h"
 
-static char *help_pages[STATE_LAST] = {
-	"contact-info.html",
+static char *help_pages[] = {
+	"index.html",
 	"debug-info.html",
 	"description.html",
-	"",
-	"",
-	"",
+	"updating.html",
+	"product.html",
+	"component.html",
 	"system-config.html",
 	"submit-report.html",
-	"summary.html"
+	"summary.html",
+	NULL
 };
 
 static char *state_title[] = {
@@ -166,12 +167,16 @@ druid_set_state (BuddyState state)
 				    : "");
 #endif
 		load_bugzilla_xml ();
+#if 0
 		if (!druid_data.product)
 			druid_set_sensitive (TRUE, FALSE,  TRUE);
+#endif
 		break;
 	case STATE_COMPONENT:
+#if 0
 		if (!druid_data.component)
 			druid_set_sensitive (TRUE, FALSE,  TRUE);
+#endif
 		break;
 	case STATE_SYSTEM:
 #if 0
@@ -521,6 +526,6 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 		  "this bug report?"), NULL, NULL);
 	if (gnome_dialog_run_and_close (GNOME_DIALOG (d)))
 		return;
-	save_config ();
+
 	gtk_main_quit ();
 }

@@ -168,15 +168,6 @@ print_item (gpointer data, gpointer user_data)
 }
 #endif
 
-#if 0
-static int
-xfer_update (GnomeVFSXferProgressInfo *info, gpointer data)
-{
-
-	return TRUE;
-}
-#endif
-
 static void
 goto_product_page (void)
 {
@@ -459,15 +450,6 @@ on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 	g_print ("scooby dooby doo!\n");
 }
 
-#if 0
-gint
-on_progress_dialog_delete_event (GtkWidget *w, GdkEventAny *event, gpointer data)
-{
-	g_print ("delte!!\n");
-	return check_yoself ();
-}
-#endif
-
 static void
 download_stuff (void)
 {
@@ -692,6 +674,9 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 
 	g_slist_foreach (prod->components, (GFunc)add_component, w);
 	gtk_clist_columns_autosize (w);
+
+	if (w->rows == 1)
+		gtk_clist_select_row (w, 0, 0);
 
 	gtk_clist_thaw (w);
 
