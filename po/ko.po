@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.95\n"
-"POT-Creation-Date: 2001-03-04 20:07+0900\n"
+"POT-Creation-Date: 2001-02-26 11:17-0500\n"
 "PO-Revision-Date: 2001-03-04 22:22+0900\n"
 "Last-Translator: Chideok Hwang <hwang@mizi.co.kr>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -598,5 +598,3 @@ msgstr "'%s'를 실행할 수가 없습니다."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "읽는 도중 에러가 발생했습니다"
-
-

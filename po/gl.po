@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-02-28 11:26+0100\n"
+"POT-Creation-Date: 2001-02-26 11:17-0500\n"
 "PO-Revision-Date: 2001-03-08 21:08+0100\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
@@ -545,6 +545,7 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "Ten que incluír unha descrición comprensible no informe."
 
 #: src/united-states-of-bug-buddy.c:388
+#, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Non é posible abrir o ficheiro: '%s'"
 
