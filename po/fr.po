@@ -1,14 +1,14 @@
 # bug-buddy fr.po
-# Copyright (C) 1999,2000 Free Software Foundation, Inc.
-# Vincent Renardias <vincent@ldsol.com>, 1999, 2000.
+# Copyright (C) 1999-2001 Free Software Foundation, Inc.
+# Vincent Renardias <vincent@ldsol.com>, 1999-2000.
 # Hervé Dréau <hdreau@cybercable.fr>, 1999.
-# Christophe Merlet (RedFox) <redfox@eikonex.org>, 2000.
+# Christophe Merlet (RedFox) <redfox@eikonex.org>, 2000-2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2000-12-13 17:45+0100\n"
-"PO-Revision-Date: 2000-12-13 17:44+0200\n"
+"POT-Creation-Date: 2001-02-05 11:49+0100\n"
+"PO-Revision-Date: 2001-02-05 11:42+0100\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -105,15 +105,15 @@ msgstr "EMAIL"
 
 #: src/bug-buddy.c:123
 msgid "Package containing the program"
-msgstr "Paquetage contenant le programme"
+msgstr "Paquet contenant le programme"
 
 #: src/bug-buddy.c:123
 msgid "PACKAGE"
-msgstr "PAQUETAGE"
+msgstr "PAQUET"
 
 #: src/bug-buddy.c:124
 msgid "Version of the package"
-msgstr "Version du paquetage"
+msgstr "Version du paquet"
 
 #: src/bug-buddy.c:124
 msgid "VERSION"
@@ -151,9 +151,9 @@ msgid ""
 "Please specify a package."
 msgstr ""
 "Il est beaucoup plus utile de spécifier\n"
-"un paquetage plus précis que 'general'.\n"
+"un paquet plus précis que « general ».\n"
 "\n"
-"Veuillez spécifier un paquetage."
+"Veuillez spécifier un paquet."
 
 #: src/bug-buddy.c:374
 msgid "The specified file does not exist."
@@ -199,11 +199,11 @@ msgstr "La page web de bug-buddy"
 
 #: src/bug-buddy.c:607
 msgid "Please enter your name."
-msgstr "Veuillez entrer votre nom."
+msgstr "Veuillez saisir votre nom."
 
 #: src/bug-buddy.c:613
 msgid "Please enter a valid email address."
-msgstr "Veuillez entrer une adresse électronique valide."
+msgstr "Veuillez saisir une adresse électronique valide."
 
 #: src/bug-buddy.c:624
 #, c-format
@@ -221,22 +221,22 @@ msgstr ""
 #: src/bug-buddy.c:675
 #, c-format
 msgid "Unable to open file: '%s'"
-msgstr "Incapable d'ouvrir le fichier : '%s'"
+msgstr "Incapable d'ouvrir le fichier : « %s »"
 
 #: src/bug-buddy.c:689
 #, c-format
 msgid "about to run '%s'"
-msgstr "prêt à exécuter '%s'"
+msgstr "prêt à exécuter « %s »"
 
 #: src/bug-buddy.c:693
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr "Incapable de lancer le programme de messagerie : '%s'"
+msgstr "Incapable de lancer le programme de messagerie : « %s »"
 
 #: src/bug-buddy.c:722
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr "Votre rapport d'anomalies a été enregistré dans '%s'"
+msgstr "Votre rapport d'anomalies a été enregistré dans « %s »"
 
 #: src/bug-buddy.c:725
 #, c-format
@@ -267,7 +267,7 @@ msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
-"Le fichier '%s' existe déjà.\n"
+"Le fichier « %s » existe déjà.\n"
 "Écraser ce fichier ?"
 
 #: src/bug-buddy.c:930
@@ -292,7 +292,7 @@ msgid ""
 "Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Ne peut ouvrir '%s'.\n"
+"Ne peut ouvrir « %s ».\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
 #: src/bug-buddy.c:1076
@@ -317,7 +317,7 @@ msgid ""
 "Could not find '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Ne peut trouver '%s'.\n"
+"Ne peut trouver « %s ».\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
 #: src/gdb-buddy.c:43
@@ -332,7 +332,7 @@ msgid ""
 "'%s'"
 msgstr ""
 "Incapable de procéder à l'examen du fichier core avec gdb :\n"
-"'%s'"
+"« %s »"
 
 #: src/gdb-buddy.c:143
 #, c-format
@@ -341,7 +341,7 @@ msgid ""
 "'%s'"
 msgstr ""
 "Incapable de déterminer quel exécutable a créé\n"
-"'%s'"
+"« %s »"
 
 #: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
@@ -414,7 +414,7 @@ msgid ""
 msgstr ""
 "bug-buddy vous guidera à travers le processus\n"
 "de transmission d'un rapport d'anomalies. Vous\n"
-"pouvez cliquer sur le bouton `Aide' pour une\n"
+"pouvez cliquer sur le bouton « Aide » pour une\n"
 "explication plus complète du processus."
 
 #: src/glade-strings.c:22
@@ -435,7 +435,7 @@ msgstr "Système de suivi d'anomalies"
 
 #: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
-msgstr "Paquetage"
+msgstr "Paquet"
 
 #: src/glade-strings.c:27
 msgid "Severity"
@@ -455,8 +455,8 @@ msgid ""
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
 "Veuillez vérifiez que votre anomalie n'a pas déjà été soumise,\n"
-"et, si c'est le cas, utilisez \"Ajouter plus d'informations\n"
-"à un rapport d'anomalies existant\" ci-dessus."
+"et, si c'est le cas, utilisez « Ajouter plus d'informations\n"
+"à un rapport d'anomalies existant » ci-dessus."
 
 #: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
@@ -574,7 +574,7 @@ msgstr "Incapable d'ouvrir le tube"
 #: src/util.c:72
 #, c-format
 msgid "Could not run '%s'."
-msgstr "Ne peut exécuter '%s'."
+msgstr "Ne peut exécuter « %s »."
 
 #: src/util.c:113
 msgid "Error on read..."
@@ -648,8 +648,9 @@ msgstr "Erreur en lecture..."
 #~ "Enter your name and email address, so you will be notified when the\n"
 #~ "bug is resolved, or for developers to request more information from you."
 #~ msgstr ""
-#~ "Entrer votre nom et votre addresse électronique, ainsi vous serez prévenus\n"
-#~ "quand le bug sera résolu, ou si les développeurs veulent vous \n"
+#~ "Saisissez votre nom et votre adresse électronique, ainsi vous serez "
+#~ "prévenus\n"
+#~ "quand l'anomalie sera résolue, ou si les développeurs veulent vous \n"
 #~ "demander plus d'informations."
 
 #~ msgid ""
