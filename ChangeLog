@@ -2,6 +2,8 @@
 
 	* src/bug-buddy.c (main): show the window before gtk_main()
 	(list_data): add slackware detection
+	(on_complete_page_finish): if no version info available, don't
+	print the version of the last thing we visited
 
 	# src/bug-buddy.glade: make the main window not visible by default
 	(so we can do the init before the gui shows)
