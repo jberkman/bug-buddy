@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
 "POT-Creation-Date: 2000-12-24 12:14+0100\n"
-"PO-Revision-Date: 2000-12-23 11:10+0200\n"
+"PO-Revision-Date: 2001-01-06 11:10+0200\n"
 "Last-Translator: Vasif İSmailoglu MD <azerb_linux@hotmail.com>\n"
 "Language-Team: Azerbaijani Turkish \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "vacib"
 
 #: src/bug-buddy.c:82
 msgid "grave"
-msgstr "a=F0=FDr"
+msgstr "aǧır"
 
 #: src/bug-buddy.c:83
 msgid "normal"
