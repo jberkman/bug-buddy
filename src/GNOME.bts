@@ -3,16 +3,14 @@
         <bts name="debian">
 		<email>@bugs.gnome.org</email>
 		<web>http://bugs.gnome.org</web>
-		<packages-list>gnome-packages</packages-list>
-		<appmap>gnome-bugmap</appmap>
+		<packages-list appmap="gnome.appmap">gnome-packages</packages-list>
 	</bts>
 	<version-stuff>
 		<package name="C library"
 		         rpm="glibc" 
 			 deb="libc6"/>
 		<package name="C compiler" 
-		         pre="gcc --version"
-			 post="cc -V"/>
+		         pre="gcc --version || cc -V"/>
 		<package name="glib"
 			 pre="glib-config --version"
 			 rpm="glib"

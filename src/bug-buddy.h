@@ -38,7 +38,9 @@ typedef enum {
 typedef enum {
 	SUBMIT_REPORT,
 	SUBMIT_TO_SELF,
-	SUBMIT_NONE,
+#if 0
+	SUBMIT_DONE,
+#endif
 	SUBMIT_FILE
 } SubmitType;
 
@@ -47,36 +49,67 @@ typedef enum {
 	BUG_EXISTING
 } BugType;
 
+typedef enum {
+	SEVERITY_CRITICAL,
+	SEVERITY_GRAVE,
+	SEVERITY_NORMAL,
+	SEVERITY_WISHLIST,
+} SeverityType;
+
+typedef enum {
+	BUG_CLASS_SW,
+	BUG_CLASS_DOC,
+	BUG_CLASS_CHANGE,
+	BUG_CLASS_SUPPORT
+} BugClassType;
+
+typedef struct {
+	/* contact page */
+	gchar *name;
+	gchar *email;
+	
+	/* package page */
+	gchar *package;
+	gchar *package_ver;
+	
+	/* dialog page */
+	gchar *app_file;
+	gchar *pid;
+	
+	/* core page */
+	gchar *core_file;
+} PoptData;
+extern PoptData popt_data;
+
 typedef struct {
 	GtkWidget *the_druid;
+	GladeXML  *xml;
+
+	Distribution      *distro;
+	BugTrackingSystem *bts;
+	char              *bts_file;
+
+	CrashType  crash_type;
 
 	int selected_row;
-	Distribution *distro;
+	int progress_timeout;
 
-	CrashType crash_type;
-	SubmitType submit_type;
-	BugType bug_type;
-
-	int severity;
-	int bug_class;
-
-	GladeXML *xml;
-
-	pid_t app_pid;
-
-	pid_t gdb_pid;
+	/* gdb stuff */
+	pid_t       app_pid;
+	pid_t       gdb_pid;
 	GIOChannel *ioc;
-	int fd;
+	int         fd;
+	gboolean    explicit_dirty;
 
-	char *project;
-	BugTrackingSystem *bts;
-
-	GSList *projects;
-	GSList *packages;
-	gboolean explicit_dirty;
+	/* Debian BTS stuff */
+	SubmitType    submit_type;
+	BugType       bug_type; 
+	SeverityType  severity;
+	BugClassType  bug_class;
+	GSList       *packages;
 } DruidData;
-
 extern DruidData druid_data;
+
 extern const gchar *severity[];
 extern const gchar *bug_class[][2];
 
@@ -85,6 +118,7 @@ void get_trace_from_pair (const gchar *app, const gchar *extra);
 void stop_gdb (void);
 void start_gdb (void);
 
+void append_packages (void);
 #endif /* __bug_buddy_h__ */
 
 

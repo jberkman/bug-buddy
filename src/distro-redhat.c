@@ -19,6 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
  */
 
+#include "config.h"
+#include "bug-buddy.h"
 #include "distro.h"
 #include "util.h"
 
@@ -55,15 +57,10 @@ get_version_from_rpm (gpointer data, gpointer udata)
 static void
 get_package_versions (GSList *packages)
 {
-	int i;
 	const char *args[] = { "rpm", "-q", NULL, NULL };
 
 	g_return_if_fail (packages);
 
 	g_slist_foreach (packages, get_version_from_rpm, args);
+	append_packages ();
 }
-
-
-
-
-

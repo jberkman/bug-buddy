@@ -26,8 +26,10 @@
 #include <signal.h>
 
 #include <gnome.h>
+#include "bug-buddy.h"
 #include "distro.h"
 #include "util.h"
+#include "glade-druid.h"
 
 static char *get_debian_version (Distribution *distro);
 static void get_package_versions (GSList *packages);
@@ -59,14 +61,58 @@ get_debian_version (Distribution *distro)
 }
 
 static void
+ioc_destroy (gpointer data)
+{
+	GHashTable *table = data;
+	g_hash_table_destroy (table);
+
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
+					   TRUE, TRUE, TRUE);
+
+	append_packages ();
+}
+
+
+static gboolean
+handle_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
+{
+	GHashTable *table = data;
+	char **argv;
+	char *line;
+
+	Package *package;
+
+	if (condition == G_IO_HUP)
+		return FALSE;
+
+	line = get_line_from_ioc (ioc);
+	if (!line) 
+		return FALSE;
+
+	argv = g_strsplit (line, " ", 2);
+	if (!argv[0] || !argv[1])
+		goto end_while;
+	package = g_hash_table_lookup (table, argv[0]);
+	if (!package)
+		goto end_while;
+	package->version = g_strdup_printf ("%s %s", package->name, argv[1]);
+
+ end_while:
+	g_strfreev (argv);
+	
+	return TRUE;
+}
+
+static void
 get_package_versions (GSList *packages)
 {
 	pid_t pid;
-	int argc, fd, status, cur;
+	int argc, fd;
 	char **argv, *command, *line;
 	Package *package;
 	GHashTable *table;
 	GSList *list;
+	GIOChannel *ioc;
 
 	g_return_if_fail (packages);
 	
@@ -109,30 +155,11 @@ get_package_versions (GSList *packages)
 	g_free (line);
 	pid = start_command (command, &fd);
 	g_free (command);
-/* what we are looking at:
 
-Desired=Unknown/Install/Remove/Purge
-| Status=Not/Installed/Config-files/Unpacked/Failed-config/Half-installed
-||/ Name            Version        Description
-+++-===============-==============-============================================
-ii  gnome-core      1.0.54-1.99.sl Common files for Gnome core apps
-
-*/
-	while ( (line = get_line_from_fd (fd)) ) {
-		argv = g_strsplit (line, " ", 2);
-		if (!argv[0] || !argv[1])
-			goto end_while;
-		package = g_hash_table_lookup (table, argv[0]);
-		if (!package)
-			goto end_while;
-		package->version = g_strdup_printf ("%s %s", 
-						    package->name, argv[1]);
-	end_while:
-		g_strfreev (argv);
-	}
-
-	g_hash_table_destroy (table);
-	close (fd);
-	kill (pid, SIGTERM);
-	waitpid (pid, &status, 0);
+	ioc = g_io_channel_unix_new (fd);
+	g_io_add_watch_full (ioc, 0, G_IO_IN | G_IO_HUP, handle_input,
+			     table, ioc_destroy);
+	g_io_channel_unref (ioc);
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
+					   FALSE, FALSE, TRUE);
 }

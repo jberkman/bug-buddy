@@ -68,7 +68,7 @@ start_commandv (const char *args[], int *rfd)
 		close (fd[0]);
 		dup (fd[1]);
 
-		execvp (args[0], args);
+		execvp (args[0], (char **)args);
 		g_warning (_("Could not run '%s'."), args[0]);
 		_exit (1);
 	} else if (pid == -1) {
@@ -91,6 +91,35 @@ start_command (const char *command, int *fd)
 	const char *args[] = { "sh", "-c", NULL, NULL };
 	args[2] = command;
 	return start_commandv (args, fd);
+}
+
+char *
+get_line_from_ioc (GIOChannel *ioc)
+{
+	char buf[1024];
+	int pos, len;
+
+	buf[0] = '\0';
+
+	for (pos = 0; pos < 1023; pos++) {		
+	try_read:
+		switch (g_io_channel_read (ioc, buf+pos, 1, &len)) {		
+		case G_IO_ERROR_NONE:
+			break;
+		case G_IO_ERROR_AGAIN:
+			goto try_read;
+		default:
+			g_warning (_("Error on read..."));
+			return NULL;
+		}
+		if (buf[pos] == '\n')
+			break;
+	}
+	if (pos == 0 && buf[0] == '\0')
+		return NULL;
+
+	buf[pos] = '\0';
+	return g_strdup (buf);
 }
 
 char *

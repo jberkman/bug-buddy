@@ -5,14 +5,13 @@
  */
 
 gchar *s = N_("bug-buddy");
-gchar *s = N_("GNOME bug-buddy");
-gchar *s = N_("This will guide you through submitting a bug report.");
+gchar *s = N_("all will be revealed.");
 gchar *s = N_("Contact Information");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
-gchar *s = N_("Bug tracking system to use");
+gchar *s = N_("Bug Track System");
 gchar *s = N_("\n"
               "\n"
               "");
@@ -22,27 +21,28 @@ gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
+gchar *s = N_("%P %%");
+gchar *s = N_("Automatically go to next page when complete");
 gchar *s = N_("Report Information");
 gchar *s = N_("Action");
 gchar *s = N_("File a new bug report");
 gchar *s = N_("Add information to an existing bug report");
-gchar *s = N_("Bug severity");
 gchar *s = N_("Version");
+gchar *s = N_("Class");
 gchar *s = N_("Package");
-gchar *s = N_("Bug class");
-gchar *s = N_("(descriptions)");
-gchar *s = N_("(packages)");
-gchar *s = N_("Bug number ");
-gchar *s = N_("(Existing bugs)");
-gchar *s = N_("Short description");
-gchar *s = N_("Extra Information");
-gchar *s = N_("Full description of the bug:");
-gchar *s = N_("How to repeat the bug:");
+gchar *s = N_("Severity");
+gchar *s = N_("Bug Number");
+gchar *s = N_("Description");
+gchar *s = N_("Short subject for the bug report");
+gchar *s = N_("Full description of the bug");
+gchar *s = N_("More Information");
+gchar *s = N_("Detailed instructions on how to reproduce the bug");
+gchar *s = N_("Include a text file");
 gchar *s = N_("Debugging Information");
-gchar *s = N_("Debugging Information");
+gchar *s = N_("How to collect debugging information");
 gchar *s = N_("Attach to a crashed application");
-gchar *s = N_("Obtain from a core file");
-gchar *s = N_("No debugging information");
+gchar *s = N_("Read from a core file");
+gchar *s = N_("Skip this step");
 gchar *s = N_("Binary");
 gchar *s = N_("Process ID");
 gchar *s = N_("Select the crashed application's binary");
@@ -51,11 +51,10 @@ gchar *s = N_("Select a core file");
 gchar *s = N_("Collecting Debugging Information");
 gchar *s = N_("Please wait while debugging\n"
               "information is collected...");
+gchar *s = N_("Submitting the Report");
 gchar *s = N_("Action");
-gchar *s = N_("Choose the action you wish to take");
 gchar *s = N_("Submit bug report");
-gchar *s = N_("Send report to your email address *only*");
-gchar *s = N_("Do not send bug report anywhere");
+gchar *s = N_("Send report to your email address only");
 gchar *s = N_("Save the report to a file");
 gchar *s = N_("Save the report to...");
 gchar *s = N_("Summary");

@@ -1,8 +1,57 @@
+1999-12-09  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* NEWS:
+	* configure.in: version 0.6
+
+	* src/*.c: use GET_WIDGET ()
+
+	* src/GNOME.bts: reformatting
+
+	* src/bts-debian.c: moved some debian specific functions here;
+	parse the xml a little better; support including a file
+
+	* src/bts.c: removed some functions; remove the gtk timeout
+	for the progress bar
+
+	* src/bug-buddy.c: don't declare PoptData here; save more state;
+	hide the save-to-file file entry when we aren't saving to a file;
+	druid path reorganization; support for the progress bar;
+	support function for async package version getting; load up
+	xml files when we init the UI
+
+	* src/bug-buddy.glade: some reorg, change padding to 4/8
+
+	* src/bug-buddy.h: define some debian specific stuff here, this
+	should be moved soon;  get rid of a lot of stuff in DruidData
+
+	* src/ctree-combo.c: lots of stuff
+
+	* src/distro-debian: get version stuff asyncly
+
+	* src/distro-redhat.c: append_packages ()
+
+	* src/distro.h: no more post_command
+
+	* src/gdb-buddy.c: on _ERROR_AGAIN try again
+
+	* src/glade-druid.h: defing a couple more widgets
+
+	* src/gtk-combo-box.c: block toggled signal in _hide_popdown()
+
+	* src/util.[ch]: added get_line_from_ioc ()
+
 1999-12-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/ctree-combo.c (on_ctree_select_row): only _popup_hide()
+	on leaves
+
+	* src/bts-debian.c (debian_bts_init): add a max of 20
+	leavs per subtree
 
 	* src/ctree-combo.c (on_ctree_select_row): This seems
 	to work.  I wonder why.
-	
+	(ctree_combo_construct): 
+
 	* src/ctree-combo.c: maybe getting closer to working
 
 	* src/bts-debian: use the new ctree combo box

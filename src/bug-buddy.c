@@ -35,9 +35,10 @@
 #include "distro.h"
 #include "glade-druid.h"
 #include "bts.h"
+#include "ctree-combo.h"
 
 /* libglade callbacks */
-gboolean on_nature_page_next  (GtkWidget *, GtkWidget *);
+gboolean on_nature_page_next  (GtkWidget *, GnomeDruid *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_less_page_next    (GtkWidget *, GtkWidget *);
 gboolean on_misc_page_back    (GtkWidget *, GtkWidget *);
@@ -49,17 +50,21 @@ gboolean on_gnome_page_prepare    (GtkWidget *, GtkWidget *);
 gboolean on_contact_page_next     (GtkWidget *, GtkWidget *);
 void on_version_list_select_row   (GtkCList *list, gint row, gint col,
 				   GdkEventButton *event, gpointer udata);
+
 void update_selected_row      (GtkWidget *widget, gpointer data);
 void on_version_apply_clicked (GtkButton *button, gpointer data);
 void on_file_radio_toggled    (GtkWidget *radio, gpointer data);
 gboolean on_action_page_next  (GtkWidget *page, GtkWidget *druid);
-gboolean on_action_page_back  (GtkWidget *page, GtkWidget *druid);
+gboolean on_action_page_back  (GtkWidget *page, GnomeDruid *druid);
 GtkWidget *make_anim (gchar *widget_name, gchar *string1, 
 		      gchar *string2, gint int1, gint int2);
 GtkWidget *make_pixmap_button (gchar *widget_name, gchar *string1, 
 			       gchar *string2, gint int1, gint int2);
 void on_newreport_radio_toggled (GtkWidget *w, gpointer data);
 void on_existing_radio_toggled (GtkWidget *w, gpointer data);
+gboolean on_more_page_next (GnomeDruidPage *page, GnomeDruid *druid);
+gboolean on_contact_page_prepare (GnomeDruidPage *page, GnomeDruid *druid);
+gboolean on_version_page_prepare (GnomeDruidPage *page, GnomeDruid *druid);
 
 const gchar *severity[] = { 
 	N_("critical"),
@@ -75,22 +80,7 @@ const gchar *bug_class[][2] = {
 	{ N_("support"),           "support" },
 	{ NULL, NULL } };
 
-struct {
-	/* contact page */
-	gchar *name;
-	gchar *email;
-	
-	/* package page */
-	gchar *package;
-	gchar *package_ver;
-	
-	/* dialog page */
-	gchar *app_file;
-	gchar *pid;
-	
-	/* core page */
-	gchar *core_file;
-} popt_data;
+PoptData popt_data;
 
 DruidData druid_data;
 
@@ -111,10 +101,10 @@ save_entry (const char *name, const char *name2, const char *save_path)
 	GtkWidget *w;
 	gchar *s;
 
-	w = glade_xml_get_widget (druid_data.xml, name);
+	w = GET_WIDGET (name);
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	gnome_config_set_string (save_path, s);
-	w = glade_xml_get_widget (druid_data.xml, name2);
+	w = GET_WIDGET (name2);
 	if (GNOME_IS_FILE_ENTRY (w))
 		w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
 	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
@@ -124,12 +114,20 @@ save_entry (const char *name, const char *name2, const char *save_path)
 static void
 save_config ()
 {
+	GtkWidget *w;
+	gboolean b;
 
 	save_entry ("name_entry",   "name_entry2",   "/bug-buddy/last/name");
 	save_entry ("email_entry",  "email_entry2",  "/bug-buddy/last/email");
 	save_entry ("file_entry",   "file_entry2",   "/bug-buddy/last/bugfile");
 	save_entry ("mailer_entry", "mailer_entry2", "/bug-buddy/last/mailer");
-	
+
+	w = gnome_file_entry_gnome_entry (
+		GNOME_FILE_ENTRY (GET_WIDGET ("include_entry2")));
+	gnome_entry_save_history (GNOME_ENTRY (w));
+
+	b = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (SKIP_CONF));
+	gnome_config_set_bool ("/bug-buddy/last/skip_conf", b);
 	gnome_config_set_int ("/bug-buddy/last/submittype", 
 			      druid_data.submit_type);
 
@@ -159,7 +157,9 @@ load_entry (const char *name, const char *name2,
 static void
 load_config ()
 {
+	GtkWidget *w;
 	char *sendmail;
+	gboolean b;
 
 	load_entry ("name_entry", "name_entry2",
 		    "/bug-buddy/last/name", g_get_real_name ());
@@ -169,6 +169,10 @@ load_config ()
 
 	load_entry ("file_entry", "file_entry2",
 		    "/bug-buddy/last/bugfile", NULL);
+
+	w = gnome_file_entry_gnome_entry (
+		GNOME_FILE_ENTRY (GET_WIDGET ("include_entry2")));
+	gnome_entry_load_history (GNOME_ENTRY (w));
 
 	sendmail = gnome_is_program_in_path ("sendmail");
 	if (!sendmail) {
@@ -181,6 +185,8 @@ load_config ()
 		    "/bug-buddy/last/mailer", sendmail);
 	g_free (sendmail);
 
+	b = gnome_config_get_bool ("/bug-buddy/last/skip_conf=0");
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (SKIP_CONF), b);
 	druid_data.submit_type = 
 		gnome_config_get_int ("/bug-buddy/last/submittype");
 }
@@ -220,20 +226,36 @@ update_submit_type (GtkWidget *w, gpointer data)
 {
 	CrashType new_type = GPOINTER_TO_INT (data);
 	
-	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
-		druid_data.submit_type = new_type;
+	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
+		return FALSE;
+
+	druid_data.submit_type = new_type;
+
+	if (new_type == SUBMIT_FILE)
+		gtk_widget_show (GET_WIDGET ("file_entry2"));
+	else
+		gtk_widget_hide (GET_WIDGET ("file_entry2"));
 	
 	return FALSE;
 }
 
 gboolean
-on_nature_page_next (GtkWidget *page, GtkWidget *druid)
+on_nature_page_next (GtkWidget *page, GnomeDruid *druid)
 {
 	if (druid_data.crash_type != CRASH_NONE)
 		return FALSE;
 
-	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (ACTION_PAGE));
+	gnome_druid_set_page (druid, GNOME_DRUID_PAGE (ACTION_PAGE));
+	return TRUE;
+}
+
+gboolean
+on_more_page_next (GnomeDruidPage *page, GnomeDruid *druid)
+{
+	if (druid_data.severity != SEVERITY_WISHLIST)
+		return FALSE;
+
+	gnome_druid_set_page (druid, GNOME_DRUID_PAGE (ACTION_PAGE));
 	return TRUE;
 }
 
@@ -248,6 +270,13 @@ gboolean
 on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 {
 	start_gdb ();
+	return FALSE;
+}
+
+gboolean
+on_contact_page_prepare (GnomeDruidPage *page, GnomeDruid *druid)
+{
+	gnome_druid_set_buttons_sensitive (druid, FALSE, TRUE, TRUE);	
 	return FALSE;
 }
 
@@ -277,13 +306,19 @@ on_stop_button_clicked (GtkWidget *button, gpointer data)
 }
 
 gboolean
-on_action_page_back (GtkWidget *page, GtkWidget *druid)
+on_action_page_back (GtkWidget *page, GnomeDruid *druid)
 {
-	if (druid_data.crash_type != CRASH_NONE)
+	GnomeDruidPage *newpage;
+	if (druid_data.crash_type != CRASH_NONE &&
+	    druid_data.severity != SEVERITY_WISHLIST)
 		return FALSE;
 
-	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (NATURE_PAGE));
+	if (druid_data.crash_type == SEVERITY_WISHLIST)
+		newpage = GNOME_DRUID_PAGE (MORE_PAGE);
+	else
+		newpage = GNOME_DRUID_PAGE (NATURE_PAGE);
+
+	gnome_druid_set_page (druid, newpage);
 	return TRUE;
 }
 
@@ -325,6 +360,39 @@ on_the_druid_cancel (GtkWidget *w)
 {
 	save_config ();
 	gtk_main_quit ();
+	return FALSE;
+}
+
+static gboolean
+on_timer (GtkProgress *progress)
+{
+	static int orient = 0;	
+	gfloat val = gtk_progress_get_value (progress);
+	if (val >= 100.0) {
+		gtk_progress_bar_set_orientation (GTK_PROGRESS_BAR (progress),
+						  (orient+1)%2);
+		val = -5.0;
+	}
+	gtk_progress_set_value (progress, val+5.0);
+	return TRUE;
+}
+
+gboolean
+on_version_page_prepare (GnomeDruidPage *page, GnomeDruid *druid)
+{
+	GtkWidget *w;
+
+	gtk_entry_set_text (GTK_ENTRY (VERSION_EDIT), "");
+
+	w = GET_WIDGET ("config_progress");
+	gtk_progress_bar_set_activity_step (GTK_PROGRESS_BAR (w), 5.0);
+	gtk_progress_set_activity_mode (GTK_PROGRESS (w), TRUE);
+
+	druid_data.progress_timeout = gtk_timeout_add (150, 
+						       (GtkFunction) on_timer,
+						       (gpointer) w);
+	load_bts_xml ();
+
 	return FALSE;
 }
 
@@ -376,9 +444,14 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 		w = glade_xml_get_widget (druid_data.xml, "email_radio");
 		gtk_widget_show (w);
 	}
-
+#if 0
 	if (load_bts_xml ())
 		return TRUE;
+
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid), 
+					   TRUE, TRUE, TRUE);
+#endif
+
 
 	return FALSE;
 
@@ -397,7 +470,7 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 	int bugnum;
 	to = SUBMIT_ADDRESS;
 
-	w = glade_xml_get_widget (druid_data.xml, "email_entry");
+	w = GET_WIDGET ("email_entry");
 	from = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 
 	to = NULL;
@@ -412,31 +485,35 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 			break;
 		}
 
-		w = glade_xml_get_widget (druid_data.xml, "bug_number");
+		w = GET_WIDGET ("bug_number");
 		bugnum = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (w));
 		to = g_strdup_printf ("%d" SUBMIT_ADDRESS, bugnum);
 		break;
 	case SUBMIT_FILE:
-		w = glade_xml_get_widget (druid_data.xml, "file_entry");
+		w = GET_WIDGET ("file_entry");
 		to = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 		break;
+#ifdef SUBMIT_NONE
 	case SUBMIT_NONE:
 		gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page),
 						  _("Click \"Finish\" to exit bug-buddy.\n"
 						    "No bug report will be submitted."));
+		g_free (from);
 		return FALSE;
+#endif
 	default:
 		g_assert_not_reached ();
 		return FALSE;
 	}
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	w = GET_WIDGET ("name_entry");
 	name = gtk_entry_get_text (GTK_ENTRY (w));
 
-	w = glade_xml_get_widget (druid_data.xml, "desc_entry");
+	w = GET_WIDGET ("desc_entry");
 	subject = gtk_entry_get_text (GTK_ENTRY (w));
 
-	w = glade_xml_get_widget (druid_data.xml, "package_entry");
+	w = GET_WIDGET ("miggie_combo");
+	w = CTREE_COMBO (w)->entry;
 	package = gtk_entry_get_text (GTK_ENTRY (w));
 	if (!strlen(package))
 		package = "general";
@@ -456,7 +533,9 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 					package, to, name, from, subject);
 
 	gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page), text);
+	g_free (to);
 	g_free (text);
+	g_free (from);
 	return FALSE;
 }
 
@@ -486,6 +565,38 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 	gtk_label_set_text (GTK_LABEL (VERSION_LABEL), _(s));
 }
 
+static void
+add_to_clist (gpointer data, gpointer udata)
+{
+	char *row[3] = { NULL };
+	Package *package = data;
+	GtkWidget *clist = udata;
+
+	row[0] = _(package->name);
+	row[1] = package->version;
+
+	gtk_clist_append (GTK_CLIST (clist), row);
+}
+
+void
+append_packages ()
+{
+	GtkWidget *w;
+	w = VERSION_LIST;
+
+	gtk_clist_freeze (GTK_CLIST (w));
+	g_slist_foreach (druid_data.packages, add_to_clist, w);
+	gtk_clist_thaw (GTK_CLIST (w));
+
+	gtk_timeout_remove (druid_data.progress_timeout);
+
+	w = GET_WIDGET ("skip_conf");
+	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
+		return;
+
+	gnome_druid_set_page (GNOME_DRUID (druid_data.the_druid),
+			      GNOME_DRUID_PAGE (GET_WIDGET ("debian_page")));
+}
 void
 update_selected_row (GtkWidget *w, gpointer data)
 {
@@ -589,8 +700,7 @@ set_bug_class (GtkWidget *w, gpointer data)
 static gboolean
 set_project (GtkWidget *w, gpointer data)
 {
-	druid_data.project = data;
-	g_message ("set_project(): %s", druid_data.project);
+	druid_data.bts_file = data;
 	return FALSE;
 }
 
@@ -623,48 +733,6 @@ make_anim (gchar *widget_name, gchar *imgname,
 	return w;
 }
 
-/* ugly stupid dumb stuff stolen from the bug reporting web page */
-static gchar *
-get_package_from_appname (const char *appname)
-{
-	FILE *fp;
-	gchar *package;
-	char buf[1024];
-	GHashTable *table;
-
-	fp = fopen (BUDDY_DATADIR "/prog.bugmap", "r");
-	if (!fp) {
-		g_warning ("Could not open bugfile '"
-			   BUDDY_DATADIR
-			   "/prog.bugmap' for reading.");
-		return NULL;
-	}
-
-	table = g_hash_table_new (g_str_hash, g_str_equal);
-	g_hash_table_freeze (table);
-
-	while (fgets (buf, 1024, fp)) {
-		package = strchr (buf, ' ');
-		if (!package)
-			continue;
-		*package = '\0';
-
-		g_hash_table_insert (table, 
-				     g_strdup (buf), 
-				     g_strdup (g_strstrip (package+1)));
-	}
-
-	fclose (fp);
-
-	g_hash_table_thaw (table);
-	package = g_strdup (g_hash_table_lookup (table,
-						 g_filename_pointer (appname)));
-	
-	destroy_hash_table (table, TRUE);
-
-	return package;
-}
-
 static void 
 init_toggle (const char *name, int test, int data, GtkSignalFunc func)
 {
@@ -678,37 +746,67 @@ init_toggle (const char *name, int test, int data, GtkSignalFunc func)
 }
 
 static void
-add_bts (gpointer data, gpointer udata)
+init_bts_menu (void)
 {
-	char c;
-	char *bts = data, *p;
-	GtkWidget *menu = udata, *w;
+	GtkWidget *w, *m;
+	DIR *dir;
+	gchar *s = NULL, *p;
+	struct dirent *dent;
+	int idx=0, def=0;
 
-	p = strrchr (bts, '.');
-	if (!p) {
-		g_free (bts);
-		return;
+	dir = opendir (BUDDY_DATADIR "/xml/");
+	if (!dir) {
+		s = g_strdup_printf (_("Could not open '%s'.\n"
+				       "Please make sure bug-buddy was "
+				       "installed correctly."),
+				     BUDDY_DATADIR "/xml/");
+		w = gnome_error_dialog (s);
+		g_free (s);
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		exit (0);
 	}
 
-	c = *p;
-	*p = '\0';
+	m = gtk_menu_new ();
+	while ((dent = readdir (dir))) {
+		if (dent->d_name[0] == '.')
+			continue;
 
-	w = gtk_menu_item_new_with_label (bts);
-	gtk_signal_connect (GTK_OBJECT (w), "activate",
-			    GTK_SIGNAL_FUNC (set_project),
-			    bts);
-	gtk_widget_show (w);
-	gtk_menu_append (GTK_MENU (menu), w);
+		p = strrchr (dent->d_name, '.');
+		if (!p || strcmp (p, ".bts")) 
+			continue;
+		
+		/* memleak */
+		s = g_strdup (dent->d_name);
+		*p = '\0';
+		if (!druid_data.bts_file)
+			druid_data.bts_file = s;
 
-	*p = c;
+		w = gtk_menu_item_new_with_label (dent->d_name);
+		gtk_signal_connect (GTK_OBJECT (w), "activate",
+				    GTK_SIGNAL_FUNC (set_project), s);
+				    
+		gtk_widget_show (w);
+		gtk_menu_append (GTK_MENU (m), w);
+		if (!strcmp (s, "GNOME.bts")) {
+			druid_data.bts_file = s;
+			def = idx;
+		}
+		idx++;
+	}
+	closedir (dir);
+
+	w = GET_WIDGET ("bts_menu");
+	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
+	gtk_option_menu_set_history (GTK_OPTION_MENU (w), def);
+	/* evil hack */
+	/*if (d) GTK_OPTION_MENU (w)->menu_item = d;*/
 }
-	
 
 static void
 init_ui ()
 {
 	GtkWidget *w, *m, *segv, *core;
-	gchar *s, *p = NULL;
+	gchar *s;
 	int i;
 
 	glade_xml_signal_autoconnect (druid_data.xml);
@@ -718,17 +816,7 @@ init_ui ()
 	w = glade_xml_get_widget (druid_data.xml, "the_druid");
 	druid_data.the_druid = w;
 
-	m = gtk_menu_new ();
-	g_slist_foreach (druid_data.projects, add_bts, m);
-
-	w = GET_WIDGET ("bts_menu");
-	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
-#if 0
-	w = glade_xml_get_widget (druid_data.xml, "package_entry2");
-	for (i = 0; packages[i]; i++)
-		gnome_entry_prepend_history (GNOME_ENTRY (w), FALSE,
-					     packages[i]);
-#endif
+	init_bts_menu ();
 
 	m = gtk_menu_new ();
 	for (i = 0; severity[i]; i++) {
@@ -772,18 +860,6 @@ init_ui ()
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 
-	p = g_strdup (popt_data.package);
-	if (!p && s)
-		p = get_package_from_appname (s);
-
-	if (!p)
-		p = g_strdup ("general");
-#if 0
-	w = glade_xml_get_widget (druid_data.xml, 
-				  "package_entry");
-	gtk_entry_set_text (GTK_ENTRY (w), p);
-	g_free (p);
-#endif
 	w = CRASHED_PID;
 	s = popt_data.pid;
 	if (!s) {
@@ -828,8 +904,10 @@ init_ui ()
 	init_toggle ("email_radio", druid_data.submit_type, SUBMIT_TO_SELF,
 		     GTK_SIGNAL_FUNC (update_submit_type));
 
+#ifdef SUBMIT_NONE
 	init_toggle ("noaction_radio", druid_data.submit_type, SUBMIT_NONE,
 		     GTK_SIGNAL_FUNC (update_submit_type));
+#endif
 
 	init_toggle ("file_radio", druid_data.submit_type, SUBMIT_FILE,
 		     GTK_SIGNAL_FUNC (update_submit_type));
@@ -868,14 +946,17 @@ init_ui ()
 	gtk_signal_connect (GTK_OBJECT (w), "clicked",
 			    GTK_SIGNAL_FUNC (on_refresh_button_clicked),
 			    NULL);
+
+	w = GET_WIDGET ("contact_page");
+	gnome_druid_set_page (GNOME_DRUID (druid_data.the_druid), 
+			      GNOME_DRUID_PAGE (w));
 }
 
 int
 main (int argc, char *argv[])
 {
 	GtkWidget *w;
-	DIR *dir;
-	struct dirent *dent;
+	char *s;
 
 	memset (&druid_data, 0, sizeof (druid_data));
 	memset (&popt_data,  0, sizeof (popt_data));
@@ -890,32 +971,15 @@ main (int argc, char *argv[])
 	druid_data.xml = glade_xml_new (BUDDY_DATADIR "/bug-buddy.glade", 
 					"druid_window");
 	if (!druid_data.xml) {
-		w = gnome_error_dialog (_("Could not find '" BUDDY_DATADIR
-					  "/bug-buddy.glade'.\n"
-					  "Please make sure bug-buddy was "
-					  "installed correctly."));
+		s = g_strdup_printf (_("Could not find '%s'.\n"
+				       "Please make sure bug-buddy was "
+				       "installed correctly."),
+				     BUDDY_DATADIR "/bug-buddy.glade");
+		w = gnome_error_dialog (s);
 		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return 0;
 	}
 
-	dir = opendir (BUDDY_DATADIR "/xml");
-	if (!dir) {
-		w = gnome_error_dialog (_("Could not open '" BUDDY_DATADIR
-					  "/xml/'.\n"
-					  "Please make sure bug-buddy was "
-					  "installed correctly."));
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
-		return 0;
-	}
-
-	while ((dent = readdir (dir))) {
-		if (dent->d_name[0] == '.')
-			continue;
-		druid_data.projects = g_slist_prepend (druid_data.projects,
-						       g_strdup (dent->d_name));
-	}
-	closedir (dir);
-	druid_data.project = druid_data.projects->data;
 	init_ui ();
 
 	w = glade_xml_get_widget (druid_data.xml, "druid_window");

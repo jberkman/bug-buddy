@@ -36,7 +36,6 @@ struct _Package {
 	char *pre_command;
 	char *rpm;
 	char *deb;
-	char *post_command;
 	char *version;     /* this is filled in by the 
 			      PackageVersionsFunc, so 
 			      should be NULL at define time */

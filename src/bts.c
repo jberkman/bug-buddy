@@ -52,7 +52,6 @@ free_package_from_node (gpointer data, gpointer udata)
 	xmlFree (package->pre_command);
 	xmlFree (package->rpm);
 	xmlFree (package->deb);
-	xmlFree (package->post_command);
 
 	g_free (package->version);
 	g_free (package);
@@ -67,7 +66,6 @@ make_package_from_node (xmlNodePtr node)
 	package->pre_command = xmlGetProp (node, "pre");
 	package->rpm = xmlGetProp  (node, "rpm");
 	package->deb = xmlGetProp (node, "deb");
-	package->post_command = xmlGetProp (node, "post");
 
 	return package;
 }
@@ -79,28 +77,6 @@ get_version_from_pre (gpointer data, gpointer udata)
 	if (package->version || !package->pre_command)
 		return;
 	package->version = get_line_from_command (package->pre_command);
-}
-
-static void
-get_version_from_post (gpointer data, gpointer udata)
-{
-	Package *package = data;
-	if (package->version || !package->post_command)		
-		return;
-	package->version = get_line_from_command (package->post_command);
-}
-
-static void
-add_to_clist (gpointer data, gpointer udata)
-{
-	char *row[3] = { NULL };
-	Package *package = data;
-	GtkWidget *clist = udata;
-
-	row[0] = _(package->name);
-	row[1] = package->version;
-
-	gtk_clist_append (GTK_CLIST (clist), row);
 }
 
 static void
@@ -127,20 +103,25 @@ update_das_clist ()
 	}
 
 	row[0] = N_("System");
-	row[1] = get_line_from_command ("uname -a");
+	row[1] = get_line_from_command ("uname -rpms");
 	gtk_clist_append (GTK_CLIST (w), row);
 	g_free (row[1]);
 
-	if (!druid_data.packages)
+	if (!druid_data.packages) {
+		gtk_timeout_remove (druid_data.progress_timeout);
 		return;
+	}
 
 	g_slist_foreach (druid_data.packages, get_version_from_pre, NULL);
 
 	if (druid_data.distro)
 		druid_data.distro->phylum->packager (druid_data.packages);
-
+	else
+		append_packages ();
+#if 0
 	g_slist_foreach (druid_data.packages, get_version_from_post, NULL);
 	g_slist_foreach (druid_data.packages, add_to_clist, w);
+#endif
 }
 
 gboolean
@@ -151,9 +132,10 @@ load_bts_xml ()
 	xmlNodePtr cur, cur2;
 	char *s, *file;
 
-	g_return_val_if_fail (druid_data.project, TRUE);
-	if (last_file && !strcmp (last_file, druid_data.project)) {
+	g_return_val_if_fail (druid_data.bts_file, TRUE);
+	if (last_file && !strcmp (last_file, druid_data.bts_file)) {
 		g_message ("not reloading everything...");
+		gtk_timeout_remove (druid_data.progress_timeout);
 		return FALSE;
 	}
 	
@@ -171,13 +153,14 @@ load_bts_xml ()
 	}
 
 	g_free (last_file);
-	last_file = g_strdup (druid_data.project);
+	last_file = g_strdup (druid_data.bts_file);
 
-	file = g_strconcat (BUDDY_DATADIR "/xml/", druid_data.project, NULL);
+	file = g_strconcat (BUDDY_DATADIR "/xml/", druid_data.bts_file, NULL);
 	doc = xmlParseFile (file);
 	if (!doc || !doc->root || !doc->root->childs) {
 		g_warning ("'%s' not found", file);
 		g_free (file);
+		gtk_timeout_remove (druid_data.progress_timeout);
 		return TRUE;
 	}
 	g_free (file);

@@ -168,11 +168,12 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 		return FALSE;
 	}
 
+ gdb_try_read:
 	switch (g_io_channel_read (ioc, buf, 1024, &len)) {
-	case G_IO_ERROR_AGAIN:
-		return TRUE;
 	case G_IO_ERROR_NONE:
 		break;
+	case G_IO_ERROR_AGAIN:
+		goto gdb_try_read;
 	default:
 		g_warning (_("Error on read... aborting"));
 		stop_gdb ();

@@ -10,8 +10,7 @@
 		         rpm="glibc" 
 			 deb="libc6"/>
 		<package name="C compiler" 
-		         pre="gcc --version"
-			 post="cc -V"/>
+		         pre="gcc --version || cc-V"/>
 		<package name="qt"
 			 rpm="qt1x"
 			 deb="qt1g"/>

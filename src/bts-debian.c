@@ -70,48 +70,119 @@ GtkWidget *
 make_miggie_combo (gchar *widget_name, gchar *s1,
 		   gchar *s2, gint i1, gint i2)
 {
-	return ctree_combo_new (1, 0);
+	return ctree_combo_new (i1, i2);
+}
+
+/* ugly stupid dumb stuff stolen from the bug reporting web page */
+static gchar *
+get_package_from_appname (const char *appmap, const char *appname)
+{
+	FILE *fp;
+	gchar *package, *file;
+	char buf[1024];
+	GHashTable *table;
+
+	if (appmap[0] == '/')
+		file = g_strdup (appmap);
+	else
+		file = g_strconcat (BUDDY_DATADIR "/", appmap, NULL);
+	fp = fopen (file, "r");
+	if (!fp) {
+		g_warning ("Could not open bugfile '%s'", file);
+		g_free (file);
+		return NULL;
+	}
+	g_free (file);
+	table = g_hash_table_new (g_str_hash, g_str_equal);
+	g_hash_table_freeze (table);
+
+	while (fgets (buf, 1024, fp)) {
+		package = strchr (buf, ' ');
+		if (!package)
+			continue;
+		*package = '\0';
+
+		g_hash_table_insert (table, 
+				     g_strdup (buf), 
+				     g_strdup (g_strstrip (package+1)));
+	}
+
+	fclose (fp);
+
+	g_hash_table_thaw (table);
+	package = g_strdup (g_hash_table_lookup (table,
+						 g_filename_pointer (appname)));
+	
+	destroy_hash_table (table, TRUE);
+
+	return package;
 }
 
 static gint
 debian_bts_init (xmlNodePtr node)
 {
 	xmlNodePtr cur;
-	GtkWidget *w;
-	char *line, *file, *row[2] = { NULL };
+	GtkWidget *w, *combo;
+	char *s, *p, *line, *appmap, *file, *row[2] = { NULL };
 	char last_letter='\0';
-	int fd;
-	GtkCTreeNode *last_leaf = NULL, *last_root = NULL;
+	int fd, count=0;
+	GtkCTreeNode *last_root = NULL;
 	w = GET_WIDGET ("package_entry2");
 	cur = node->childs;
 	while (cur) {
-		if (!strcmp (cur->name, "email"))
-			debian_data.email = 
-				xmlNodeGetContent (cur);
-		else if (!strcmp (cur->name, "web"))
-			debian_data.web = 
-				xmlNodeGetContent (cur);
-		else if (!strcmp (cur->name, "packages-list")) {
+		switch (cur->name[0]) {
+		case 'e':
+			if (strcmp (cur->name, "email")) break;
+			debian_data.email = xmlNodeGetContent (cur);
+			break;
+		case 'w':
+			if (strcmp (cur->name, "web")) break;
+			debian_data.web = xmlNodeGetContent (cur);
+			break;
+		case 'p':
+			if (strcmp (cur->name, "packages-list")) break;
 			file = xmlNodeGetContent (cur);
 			line = g_strconcat (BUDDY_DATADIR "/", file, NULL);
 			xmlFree (file);
 			fd = open (line, O_RDONLY);
 			g_free (line);
 			if (fd == -1) break;
-			w = GET_WIDGET ("miggie_combo");
-			w = CTREE_COMBO (w)->ctree;
+
+			combo = GET_WIDGET ("miggie_combo");
+
+			w = APP_FILE;
+			s = gtk_entry_get_text (GTK_ENTRY (w));
+			p = g_strdup (popt_data.package);
+			appmap = xmlGetProp (cur, "appmap");
+
+			if (!p && strlen (s) && appmap)
+				p = get_package_from_appname (appmap, s);
+
+			xmlFree (appmap);
+			if (!p)
+				p = g_strdup ("general");
+
+			w = CTREE_COMBO (combo)->entry;
+			gtk_entry_set_text (GTK_ENTRY (w), p);
+			g_free (p);
+
+			w = CTREE_COMBO (combo)->ctree;
 			gtk_clist_clear (GTK_CLIST (w));
 			gtk_clist_freeze (GTK_CLIST (w));
 			while ((row[0] = get_line_from_fd (fd))) {
-				if (row[0][0] != last_letter) {
+				if (row[0][0] != last_letter ||
+				    count > 20) {
 					last_root = MAKE_ROOT(w, row);
 					last_letter = row[0][0];
-				} else
-					MAKE_LEAF (w, last_root, row);
+					count = 0;
+				}
+				MAKE_LEAF (w, last_root, row);
+				++count;
 				g_free (row[0]);
 			}
 			gtk_clist_thaw (GTK_CLIST (w));
-		} else {
+			break;
+		default:
 			g_warning ("unknown node: %s", cur->name);
 		}
 		cur = cur->next;
@@ -138,12 +209,6 @@ debian_bts_init (xmlNodePtr node)
 	return 0;
 }
 
-static void
-free_string (gpointer data, gpointer udata)
-{
-	g_free (data);
-}
-
 static void 
 debian_bts_denit ()
 {
@@ -153,11 +218,9 @@ debian_bts_denit ()
 	xmlFree (debian_data.web);
 	debian_data.web = NULL;
 
-	g_list_foreach (debian_data.packages, free_string, NULL);
+	g_list_foreach (debian_data.packages, (GFunc)g_free, NULL);
 	g_list_free (debian_data.packages);
 	debian_data.packages = NULL;
-
-	
 }
 
 static gboolean
@@ -220,10 +283,12 @@ debian_bts_doit ()
 			return TRUE;
 		}
 		break;
+#ifdef SUBMIT_NONE
 	case SUBMIT_NONE:
 		g_free (s);
 		g_free (s2);
 		return FALSE;
+#endif
 	default:
 		g_assert_not_reached ();
 		return FALSE;
@@ -232,17 +297,18 @@ debian_bts_doit ()
 	fprintf (fp, "To: %s\n", s2);
 	g_free (s2);
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	w = GET_WIDGET ("name_entry");
 	s2 = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 	fprintf (fp, "From: %s <%s>\n", s2, s);
 	g_free (s);
 	g_free (s2);
 
-	w = glade_xml_get_widget (druid_data.xml, "desc_entry");
+	w = GET_WIDGET ("desc_entry");
 	subject = s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 	fprintf (fp, "Subject: %s\nX-Mailer: %s %s\n", s, PACKAGE, VERSION);
 
-	w = glade_xml_get_widget (druid_data.xml, "package_entry");
+	w = GET_WIDGET ("miggie_combo");
+	w = CTREE_COMBO (w)->entry;
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 	if (!strlen(s)) {
 		g_free (s);
@@ -295,6 +361,22 @@ debian_bts_doit ()
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 	if (s && strlen(s))
 		fprintf (fp, "\n\nDebugging information:\n%s\n", s);
+	g_free (s);
+
+	w = GET_WIDGET ("include_entry");
+	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	if (s && g_file_exists (s)) {
+		char line[1024];
+		FILE *fp2 = fopen (s, "r");
+		if (fp2) {
+			fprintf (fp, "\n\n--- Included file '%s' ---\n\n", s);
+			while (fgets (line, 1023, fp2)) {
+				fprintf (fp, "%s", line);
+			}
+			fprintf (fp, "\n\n--- End of file ---\n\n");
+			fclose (fp2);
+		}
+	}
 	g_free (s);
 
 	if (druid_data.submit_type == SUBMIT_FILE)

@@ -1,3 +1,17 @@
+0.6:
+
+* Fixes: 
+
+	- I don't think there needed to be any :)
+
+* Improvements:
+
+	- Support for Debian and KDE's bug tracking system
+
+	- UI tweaks
+
+	- including text files in the report is now possible
+
 0.5:
 
 * Fixes:

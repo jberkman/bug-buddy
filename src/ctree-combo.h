@@ -40,6 +40,7 @@ typedef struct {
 
 	GtkWidget *entry;
 	GtkWidget *ctree;
+	GtkWidget *scroller;
 } CTreeCombo;
 
 typedef struct {

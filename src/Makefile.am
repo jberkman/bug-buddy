@@ -1,5 +1,7 @@
 buddydir = $(datadir)/bug-buddy
 
+#CFLAGS+=-Werror
+
 INCLUDES = \
 	-I$(top_srcdir)/intl -I$(top_builddir)/intl	\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
@@ -60,7 +62,7 @@ gnome-packages: Makefile.am
 
 buddy_DATA = \
 	bug-buddy.glade	\
-	prog.bugmap	\
+	gnome.appmap	\
 	gdb-cmd		\
 	gnome-packages	\
 	debian-packages	\

@@ -22,6 +22,8 @@
 #ifndef __GLADE_DRUID_H__
 #define __GLADE_DRUID_H__
 
+#include <glade/glade.h>
+
 #define GET_WIDGET(name) (glade_xml_get_widget (druid_data.xml, (name)))
 
 #define THE_DRUID      GET_WIDGET ("the_druid")
@@ -30,6 +32,7 @@
 #define COMPLETE_PAGE  GET_WIDGET ("complete_page")
 #define NATURE_PAGE    GET_WIDGET ("nature_page")
 #define LESS_PAGE      GET_WIDGET ("less_page")
+#define MORE_PAGE      GET_WIDGET ("more_page")
 
 #define VERSION_LIST   GET_WIDGET ("version_list")
 #define VERSION_EDIT   GET_WIDGET ("version_edit")
@@ -41,5 +44,6 @@
 #define STOP_BUTTON    GET_WIDGET ("stop_button")
 #define REFRESH_BUTTON GET_WIDGET ("refresh_button")
 #define GDB_TEXT       GET_WIDGET ("gdb_text")
+#define SKIP_CONF      GET_WIDGET ("skip_conf")
 
 #endif /* __GLADE_DRUID_H__ */
