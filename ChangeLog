@@ -1,3 +1,7 @@
+2002-05-10  Wayne Schuller  <k_wayne@linuxpower.org>
+
+	* src/bugzilla.c: (bugzilla_add_mostfreq): The most frequent list is for display only, so don't let anything get selected. http://bugzilla.gnome.org/show_bug.cgi?id=77277
+
 2002-05-08  Pablo Saratxaga <pablo@mandrakesoft.com>
 
 	* configure.in: Added Vietnamese (eu) to ALL_LINGUAS

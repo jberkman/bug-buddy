@@ -932,6 +932,7 @@ bugzilla_add_mostfreq (BugzillaBTS *bts)
 	/* GtkWidget *m, *c; */
 	GtkTreeView *w;
 	GtkListStore *store;
+	GtkTreeSelection *selection;
 	
 	w = GTK_TREE_VIEW (GET_WIDGET ("mostfreq-list"));
 	g_object_get (G_OBJECT (w), "model", &store, NULL);;
@@ -941,6 +942,9 @@ bugzilla_add_mostfreq (BugzillaBTS *bts)
 	g_slist_foreach (bts->bugs, (GFunc)add_mostfreq, store);
 
 	gtk_tree_view_columns_autosize (w);
+
+	selection = gtk_tree_view_get_selection (w);
+	gtk_tree_selection_set_mode (selection, GTK_SELECTION_NONE);
 
 	return bts->bugs == NULL;
 }
