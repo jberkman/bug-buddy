@@ -26,7 +26,6 @@
 
 #include <sys/wait.h>
 #include <unistd.h>
-#include <fcntl.h>
 
 void
 start_gdb ()
@@ -234,7 +233,6 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	
 	close (fd[1]);
 	druid_data.fd = fd[0];
-	fcntl (fd[0], F_SETFL, O_NONBLOCK);
 	druid_data.ioc = g_io_channel_unix_new (fd[0]);
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP, 
 			handle_gdb_input, NULL);

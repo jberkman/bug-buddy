@@ -1,0 +1,9 @@
+bug-buddy (0.5.0-pre1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Jacob Berkman <jberkman@andrew.cmu.edu>  Tue, 23 Nov 1999 11:39:32 -0500
+
+Local variables:
+mode: debian-changelog
+End:

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 1999-11-15 13:16+0100\n"
+"POT-Creation-Date: 1999-11-23 11:36-0500\n"
 "PO-Revision-Date: 1999-11-19 19:30+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "obtaining stack trace..."
 msgstr "henter stack trace..."
 
-#: src/bug-buddy.c:287 src/gdb-buddy.c:81
+#: src/bug-buddy.c:280 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "gdb har allerede avsluttet"
 
-#: src/bug-buddy.c:527 src/bug-buddy.c:626 src/gdb-buddy.c:90
+#: src/bug-buddy.c:522 src/bug-buddy.c:621 src/gdb-buddy.c:90
 #, c-format
 msgid "Subprocess exited with status %d"
 msgstr "Underprosess avsluttet med status %d"
@@ -141,59 +141,59 @@ msgstr "gnome-libs"
 msgid "gnome-core"
 msgstr "gnome-core"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:116
 msgid "Contact's name"
 msgstr "Kontaktens navn"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:116
 msgid "NAME"
 msgstr "NAVN"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:117
 msgid "Contact's email address"
 msgstr "Kontaktens e-post adresse"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:117
 msgid "EMAIL"
 msgstr "E-POST"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:118
 msgid "Package of the program"
 msgstr "Pakken programmet tilhører"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:118
 msgid "PACKAGE"
 msgstr "PAKKE"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:119
 msgid "Version of the package"
 msgstr "Versjon av pakken"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:119
 msgid "VERSION"
 msgstr "VERSJON"
 
-#: src/bug-buddy.c:125
+#: src/bug-buddy.c:120
 msgid "Crashed file name"
 msgstr "Navn på filen som krasjet"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:129
+#: src/bug-buddy.c:120 src/bug-buddy.c:122
 msgid "FILE"
 msgstr "FIL"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:121
 msgid "PID of crashed app"
 msgstr "PID på programmet som krasjet"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:121
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:129
+#: src/bug-buddy.c:122
 msgid "core file from app"
 msgstr "core fil fra programmet"
 
-#: src/bug-buddy.c:279
+#: src/bug-buddy.c:272
 msgid ""
 "gdb has not finished getting thedebugging information.\n"
 "Kill the gdb process (the stack tracewill be incomplete)?"
@@ -201,11 +201,11 @@ msgstr ""
 "gdb er ikke ferdig med å innhente debugginginformasjonen.\n"
 "Drep gdb prosessen (stack trace vil ikke være komplett)?"
 
-#: src/bug-buddy.c:354
+#: src/bug-buddy.c:347
 msgid "Please enter your name and email address"
 msgstr "Vennligst skriv inn navn og e-post adresse"
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:376
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -213,7 +213,7 @@ msgstr ""
 "Klikk \"Fullfør\" for å avslutte bug-buddy.\n"
 "Ingen feilrapport vil bli sendt inn."
 
-#: src/bug-buddy.c:403
+#: src/bug-buddy.c:396
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -222,7 +222,7 @@ msgstr ""
 "Du er i ferd med å lagre en feilrapport i '%s'.\n"
 "Denne kan senere brukes til å rapportere en feil i '%s'."
 
-#: src/bug-buddy.c:408
+#: src/bug-buddy.c:401
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -244,12 +244,12 @@ msgstr ""
 "Rapporten sendes ved å klikke på fullfør."
 
 #. s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
-#: src/bug-buddy.c:441
+#: src/bug-buddy.c:434
 #, c-format
 msgid "about to run '%s'"
 msgstr "i ferd med å kjøre '%s'"
 
-#: src/bug-buddy.c:444
+#: src/bug-buddy.c:437
 #, c-format
 msgid ""
 "Unable to start mail program:\n"
@@ -258,7 +258,7 @@ msgstr ""
 "Kunne ikke starte e-post programmet:\n"
 "'%s'"
 
-#: src/bug-buddy.c:457
+#: src/bug-buddy.c:450
 #, c-format
 msgid ""
 "Unable to open file:\n"
@@ -267,11 +267,11 @@ msgstr ""
 "Kunne ikke åpne filen:\n"
 "'%s'"
 
-#: src/bug-buddy.c:589
+#: src/bug-buddy.c:584
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:596
+#: src/bug-buddy.c:591
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -280,17 +280,17 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:615
+#: src/bug-buddy.c:610
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Kunne ikke kjøre kommandoen '%s'"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:615
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Feil under lesing av inndata fra '%s'"
 
-#: src/bug-buddy.c:796
+#: src/bug-buddy.c:791
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -298,7 +298,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:822
+#: src/bug-buddy.c:817
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
@@ -306,11 +306,11 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:944
+#: src/bug-buddy.c:939
 msgid "Could not find a mail program.\n"
 msgstr "Kunne ikke finne et e-post program.\n"
 
-#: src/bug-buddy.c:952
+#: src/bug-buddy.c:947
 #, c-format
 msgid ""
 "Could not find our glade file '%s'\n"
@@ -319,7 +319,7 @@ msgstr ""
 "Kunne ikke finne vår glade fil, '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble korrekt installert."
 
-#: src/bug-buddy.c:962
+#: src/bug-buddy.c:957
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "XML-filen '%s' kunne ikke lastes"

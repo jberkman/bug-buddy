@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-14 23:38-0500\n"
+"POT-Creation-Date: 1999-11-23 11:36-0500\n"
 "PO-Revision-Date: 1999-10-30 00:33+02:00\n"
 "Last-Translator: Hervé Dréau <hdreau@cybercable.fr>\n"
 "Language-Team:GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 msgid "obtaining stack trace..."
 msgstr "obtention de l'état de la pile ..."
 
-#: src/bug-buddy.c:287 src/gdb-buddy.c:81
+#: src/bug-buddy.c:280 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr ""
 
-#: src/bug-buddy.c:527 src/bug-buddy.c:626 src/gdb-buddy.c:90
+#: src/bug-buddy.c:522 src/bug-buddy.c:621 src/gdb-buddy.c:90
 #, c-format
 msgid "Subprocess exited with status %d"
 msgstr ""
@@ -145,82 +145,82 @@ msgstr "gnome-libs"
 msgid "gnome-core"
 msgstr "gnome-core"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:116
 msgid "Contact's name"
 msgstr "Nom"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:116
 msgid "NAME"
 msgstr "NOM"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:117
 msgid "Contact's email address"
 msgstr "Adresse électronique"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:117
 msgid "EMAIL"
 msgstr "ADDRESSE ELECTRONIQUE"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:118
 msgid "Package of the program"
 msgstr "Package du programme"
 
-#: src/bug-buddy.c:121
+#: src/bug-buddy.c:118
 msgid "PACKAGE"
 msgstr "\"PACKAGE"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:119
 msgid "Version of the package"
 msgstr "Version du package"
 
-#: src/bug-buddy.c:123
+#: src/bug-buddy.c:119
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:125
+#: src/bug-buddy.c:120
 msgid "Crashed file name"
 msgstr "Nom du fichier planté"
 
-#: src/bug-buddy.c:125 src/bug-buddy.c:129
+#: src/bug-buddy.c:120 src/bug-buddy.c:122
 msgid "FILE"
 msgstr "FICHIER"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:121
 msgid "PID of crashed app"
 msgstr "PID de l'application qui a planté"
 
-#: src/bug-buddy.c:127
+#: src/bug-buddy.c:121
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:129
+#: src/bug-buddy.c:122
 msgid "core file from app"
 msgstr "fichier core de l'application"
 
-#: src/bug-buddy.c:279
+#: src/bug-buddy.c:272
 msgid ""
 "gdb has not finished getting thedebugging information.\n"
 "Kill the gdb process (the stack tracewill be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:354
+#: src/bug-buddy.c:347
 msgid "Please enter your name and email address"
 msgstr ""
 
-#: src/bug-buddy.c:383
+#: src/bug-buddy.c:376
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
 msgstr ""
 
-#: src/bug-buddy.c:403
+#: src/bug-buddy.c:396
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
 "This can later be used to report a bug in '%s'."
 msgstr ""
 
-#: src/bug-buddy.c:408
+#: src/bug-buddy.c:401
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -234,19 +234,19 @@ msgid ""
 msgstr ""
 
 #. s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
-#: src/bug-buddy.c:441
+#: src/bug-buddy.c:434
 #, fuzzy, c-format
 msgid "about to run '%s'"
 msgstr "Impossible de démarrer le programme de méssagerie: '%s'"
 
-#: src/bug-buddy.c:444
+#: src/bug-buddy.c:437
 #, fuzzy, c-format
 msgid ""
 "Unable to start mail program:\n"
 "'%s'"
 msgstr "Impossible de démarrer le programme de méssagerie: '%s'"
 
-#: src/bug-buddy.c:457
+#: src/bug-buddy.c:450
 #, fuzzy, c-format
 msgid ""
 "Unable to open file:\n"
@@ -255,44 +255,44 @@ msgstr ""
 "Impossible de procéder à l'examen du fichier core avec gdb :\n"
 "'%s' "
 
-#: src/bug-buddy.c:589
+#: src/bug-buddy.c:584
 msgid "Please choose a file to save to."
 msgstr ""
 
-#: src/bug-buddy.c:596
+#: src/bug-buddy.c:591
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
 
-#: src/bug-buddy.c:615
+#: src/bug-buddy.c:610
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Impossible d'éxécuter le commande '%s'"
 
-#: src/bug-buddy.c:620
+#: src/bug-buddy.c:615
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Erreur en lisant l'entrée de '%s'"
 
-#: src/bug-buddy.c:796
+#: src/bug-buddy.c:791
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:822
+#: src/bug-buddy.c:817
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:944
+#: src/bug-buddy.c:939
 msgid "Could not find a mail program.\n"
 msgstr "Imposible de trouver un prgramme de messagerie.\n"
 
-#: src/bug-buddy.c:952
+#: src/bug-buddy.c:947
 #, fuzzy, c-format
 msgid ""
 "Could not find our glade file '%s'\n"
@@ -301,7 +301,7 @@ msgstr ""
 "Impossible de trouver le fichier bug-budd.glade\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
-#: src/bug-buddy.c:962
+#: src/bug-buddy.c:957
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "Le fichier XML '%s' ne peut pas être chargé"

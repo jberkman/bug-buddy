@@ -25,6 +25,7 @@
 #include <glade/glade.h>
 
 #include <signal.h>
+#include <ctype.h>
 
 #include "bug-buddy.h"
 
@@ -53,6 +54,12 @@ GtkWidget * make_anim (gchar *widget_name, gchar *string1,
 		       gchar *string2, gint int1, gint int2);
 GtkWidget * make_pixmap_button (gchar *widget_name, gchar *string1, 
 				gchar *string2, gint int1, gint int2);
+void on_newreport_radio_toggled (GtkWidget *w, gpointer data);
+void on_existing_radio_toggled (GtkWidget *w, gpointer data);
+
+
+
+#define LINE_WIDTH 72
 
 extern const char *packages[];
 
@@ -94,7 +101,7 @@ static ListData list_data[] = {
 	{ N_("Distribution"),
 	  { "( [ -f /etc/slackware-version ] && "
 	    "  echo -n \"Slackware \" && cat /etc/slackware-version) || "
-	    "( [ -f /etc/slackware-version ] && "
+	    "( [ -f /etc/debian_version ] && "
 	    "  echo -n \"Debian \" && cat /etc/debian_version) || "
 	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) || "
 	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
@@ -113,20 +120,13 @@ static ListData list_data[] = {
 };
 
 static const struct poptOption options[] = {
-	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        
-	  0, N_("Contact's name"),          N_("NAME") },
-	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       
-	  0, N_("Contact's email address"), N_("EMAIL") },
-	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     
-	  0, N_("Package of the program"),  N_("PACKAGE") },
-	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 
-	  0, N_("Version of the package"),  N_("VERSION") },
-	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    
-	  0, N_("Crashed file name"),       N_("FILE") },
-	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         
-	  0, N_("PID of crashed app"),      N_("PID") },
-	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   
-	  0, N_("core file from app"),      N_("FILE") },
+	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        0, N_("Contact's name"),          N_("NAME") },
+	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       0, N_("Contact's email address"), N_("EMAIL") },
+	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     0, N_("Package of the program"),  N_("PACKAGE") },
+	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 0, N_("Version of the package"),  N_("VERSION") },
+	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    0, N_("Crashed file name"),       N_("FILE") },
+	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         0, N_("PID of crashed app"),      N_("PID") },
+	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("core file from app"),      N_("FILE") },
 	{ NULL } 
 };
 
@@ -362,21 +362,31 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 	gchar *name, *from, *to, *package, *subject;
 	gchar *text;
 	GtkWidget *w;
-
+	int bugnum;
 	to = SUBMIT_ADDRESS;
 
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
-	from = gtk_entry_get_text (GTK_ENTRY (w));
+	from = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+
+	to = NULL;
 
 	switch (druid_data.submit_type) {
 	case SUBMIT_TO_SELF:
-		to = from;
+		to = g_strdup (from);
 		break;
 	case SUBMIT_REPORT:
+		if (druid_data.bug_type == BUG_NEW) {
+			to = g_strdup ("submit" SUBMIT_ADDRESS);
+			break;
+		}
+
+		w = glade_xml_get_widget (druid_data.xml, "bug_number");
+		bugnum = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (w));
+		to = g_strdup_printf ("%d" SUBMIT_ADDRESS, bugnum);
 		break;
 	case SUBMIT_FILE:
 		w = glade_xml_get_widget (druid_data.xml, "file_entry");
-		to = gtk_entry_get_text (GTK_ENTRY (w));
+		to = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 		break;
 	case SUBMIT_NONE:
 		gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page),
@@ -418,6 +428,45 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 	return FALSE;
 }
 
+static void
+write_line_width (FILE *fp, char *s)
+{
+	gchar *sp;
+	if (!s)
+		return;
+
+	if (strlen (s) < LINE_WIDTH) {
+		fprintf (fp, "%s\n", s);
+		return;
+	}
+
+	for (sp = s+LINE_WIDTH; sp > s && !isspace (*sp); sp--)
+		;
+
+	if (s == sp)
+		sp = strpbrk (s+LINE_WIDTH, "\t\n ");
+       
+	if (sp)
+		*sp = '\0';
+
+	fprintf (fp, "%s\n", s);
+
+	if (sp)
+		write_line_width (fp, sp+1);
+}
+
+static void
+write_line_widthv (FILE *fp, const char *s)
+{
+	int i;
+	gchar **sv = g_strsplit (s, "\n", 0);
+	
+	for (i = 0; sv[i]; i++)
+		write_line_width (fp, sv[i]);
+	
+	g_strfreev (sv);
+}
+
 gboolean
 on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 {
@@ -425,10 +474,16 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	gchar *s, *s2, *s3, *subject;
 	FILE *fp = stdout;
 	ListData *data;	
-	int status;
-	
-	s2 = SUBMIT_ADDRESS;
+	int status, bugnum;
 
+	if (druid_data.bug_type == BUG_NEW) {
+		s2 = g_strdup ("submit" SUBMIT_ADDRESS);
+	} else {	
+		w = glade_xml_get_widget (druid_data.xml, "bug_number");
+		bugnum = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (w));
+		s2 = g_strdup_printf ("%d" SUBMIT_ADDRESS, bugnum);
+	}
+		
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 
@@ -506,20 +561,24 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 
 	w = glade_xml_get_widget (druid_data.xml, "desc_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	if (s && strlen (s))
-		fprintf (fp, "\n>Description:\n%s\n", s);
+	if (s && strlen (s)) {
+		fprintf (fp, "\n\n>Description:\n");
+		write_line_widthv (fp, s);
+	}
 	g_free (s);
 
 	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	if (s && strlen(s))
-		fprintf (fp, "\n>How-To-Repeat:\n%s\n", s);
+	if (s && strlen(s)) {
+		fprintf (fp, "\n\n>How-To-Repeat:\n");
+		write_line_widthv (fp, s);
+	}
 	g_free (s);
 
 	w = glade_xml_get_widget (druid_data.xml, "gdb_text");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 	if (s && strlen(s))
-		fprintf (fp, "\nDebugging information:\n%s\n", s);
+		fprintf (fp, "\n\nDebugging information:\n%s\n", s);
 	g_free (s);
 
 	status = pclose (fp);
@@ -600,6 +659,37 @@ on_action_page_next (GtkWidget *page, GtkWidget *druid)
 	g_free (title);
 
 	return (GNOME_NO == gnome_dialog_run_and_close (GNOME_DIALOG (d)));
+}
+
+void
+on_newreport_radio_toggled (GtkWidget *w, gpointer data)
+{
+	GtkWidget *w2;
+	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
+		return;
+
+	w2 = glade_xml_get_widget (druid_data.xml, "newbug_table");
+	gtk_widget_show (w2);
+
+	w2 = glade_xml_get_widget (druid_data.xml, "existing_box");
+	gtk_widget_hide (w2);
+
+	druid_data.bug_type = BUG_NEW;
+}
+void
+on_existing_radio_toggled (GtkWidget *w, gpointer data)
+{
+	GtkWidget *w2;
+	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
+		return;
+
+	w2 = glade_xml_get_widget (druid_data.xml, "newbug_table");
+	gtk_widget_hide (w2);
+
+	w2 = glade_xml_get_widget (druid_data.xml, "existing_box");
+	gtk_widget_show (w2);
+
+	druid_data.bug_type = BUG_EXISTING;
 }
 
 static gchar *
@@ -864,14 +954,14 @@ init_ui ()
 
 	init_toggle ("file_radio", druid_data.submit_type, SUBMIT_FILE,
 		     GTK_SIGNAL_FUNC (update_submit_type));
-
+#if 0
 	/* text areas */
 	w = glade_xml_get_widget (druid_data.xml, "desc_area");
 	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
 
 	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
 	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
-
+#endif
 	/* system config page */
 	druid_data.version_edit =
 		glade_xml_get_widget (druid_data.xml, "version_edit");
@@ -909,12 +999,12 @@ init_ui ()
 						    "nature_page");
 	druid_data.attach   = glade_xml_get_widget (druid_data.xml,
 						    "attach_page");
-	druid_data.core   = glade_xml_get_widget (druid_data.xml,
-						  "core_page");
-	druid_data.less   = glade_xml_get_widget (druid_data.xml, 
-						  "less_page");
-	druid_data.action = glade_xml_get_widget (druid_data.xml, 
-						  "action_page");
+	druid_data.core     = glade_xml_get_widget (druid_data.xml,
+						    "core_page");
+	druid_data.less     = glade_xml_get_widget (druid_data.xml, 
+						    "less_page");
+	druid_data.action   = glade_xml_get_widget (druid_data.xml, 
+						    "action_page");
 }
 
 int

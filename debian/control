@@ -1,0 +1,13 @@
+Source: bug-buddy
+Section: x11
+Priority: optional
+Maintainer: Jacob Berkman <jberkman@andrew.cmu.edu>
+Standards-Version: 3.0.1
+
+Package: bug-buddy
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A graphical bug reporting tool for GNOME
+ The goal of bug-buddy is to make reporting bugs very
+ simple and easy for the user, while making the reports
+ themselves more useful and informative for the developer.

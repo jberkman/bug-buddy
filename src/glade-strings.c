@@ -20,16 +20,18 @@ gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
-gchar *s = N_("Package Information");
-gchar *s = N_("Short description\n"
-              "of the problem");
+gchar *s = N_("Report Information");
+gchar *s = N_("This is for a...");
+gchar *s = N_("New report");
+gchar *s = N_("Existing report");
 gchar *s = N_("Bug severity");
 gchar *s = N_("Version");
 gchar *s = N_("Package");
-gchar *s = N_("Enter the information about the\n"
-              "bug you are reporting");
 gchar *s = N_("Bug class");
 gchar *s = N_("(descriptions)");
+gchar *s = N_("Bug number ");
+gchar *s = N_("(Existing bugs)");
+gchar *s = N_("Short description");
 gchar *s = N_("Extra Information");
 gchar *s = N_("Full description of the bug:");
 gchar *s = N_("How to repeat the bug:");

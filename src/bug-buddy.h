@@ -25,7 +25,7 @@
 #include <glade/glade.h>
 #include <sys/types.h>
 
-#define SUBMIT_ADDRESS "submit@bugs.gnome.org";
+#define SUBMIT_ADDRESS "@bugs.gnome.org"
 #define COMMAND_SIZE 5
 
 typedef struct {
@@ -46,6 +46,11 @@ typedef enum {
 	SUBMIT_NONE,
 	SUBMIT_FILE
 } SubmitType;
+
+typedef enum {
+	BUG_NEW,
+	BUG_EXISTING
+} BugType;
 
 typedef struct {
 	GtkWidget *the_druid;
@@ -71,8 +76,11 @@ typedef struct {
 	GtkWidget *refresh_button;
 
 	gchar *mail_cmd;
+
 	CrashType crash_type;
 	SubmitType submit_type;
+	BugType bug_type;
+
 	int severity;
 	int bug_class;
 
