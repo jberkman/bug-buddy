@@ -1,5 +1,8 @@
 1999-11-14  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.c (load_entry, save_entry): work with
+	GnomeFileEntries right
+
 	* src/gdb-buddy.c: 
 	* src/bug-buddy.glade:
 	* src/bug-buddy.[ch]: add stop/refresh button to the

@@ -138,6 +138,8 @@ save_entry (const char *name, const char *name2, const char *save_path)
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	gnome_config_set_string (save_path, s);
 	w = glade_xml_get_widget (druid_data.xml, name2);
+	if (GNOME_IS_FILE_ENTRY (w))
+		w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
 	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
 	gnome_entry_save_history (GNOME_ENTRY (w));
 }
@@ -171,6 +173,8 @@ load_entry (const char *name, const char *name2,
 		gtk_entry_set_text (GTK_ENTRY (w), def);
 	g_free (s);
 	w = glade_xml_get_widget (druid_data.xml, name2);
+	if (GNOME_IS_FILE_ENTRY (w))
+		w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
 	gnome_entry_load_history (GNOME_ENTRY (w));
 }
 
