@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20000510\n"
-"POT-Creation-Date: 2000-05-10 01:33-0400\n"
-"PO-Revision-Date: 2000-05-10 21:43+0900\n"
+"Project-Id-Version: bug-buddy CVS-20000516\n"
+"POT-Creation-Date: 2000-05-16 23:50+0900\n"
+"PO-Revision-Date: 2000-05-16 23:51+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -222,10 +222,12 @@ msgstr "あなたの不具合報告は '%s' に保存されました"
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 msgstr ""
 "あなたの不具合報告は提出されました:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
