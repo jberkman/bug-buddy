@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-18 17:05+0200\n"
-"PO-Revision-Date: 2002-05-18 17:05+0200\n"
+"POT-Creation-Date: 2002-05-20 13:50+0200\n"
+"PO-Revision-Date: 2002-05-20 13:50+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -351,12 +351,12 @@ msgid "There was an error running gdb."
 msgstr "Det uppstod ett fel vid körning av gdb."
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-
-#: src/bug-buddy.glade.h:2
 msgid "*"
 msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
