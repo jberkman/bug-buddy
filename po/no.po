@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
 "POT-Creation-Date: 1999-10-23 10:49-0400\n"
-"PO-Revision-Date: 1999-10-23 11:07-04:00\n"
+"PO-Revision-Date: 1999-10-23 11:29-04:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -151,6 +151,10 @@ msgid ""
 "bug is resolved, or for developers to\n"
 "request more information from you."
 msgstr ""
+"Skriv inn ditt navn og e-post addresse,\n"
+"slik at du vil få beskjed når feilen\n"
+"er rettet opp, eller utviklerene kan\n"
+"forespørre mer informasjon fra deg."
 
 #: src/glade-strings.c:12
 msgid "Email Address"
@@ -165,6 +169,8 @@ msgid ""
 "Please check that this\n"
 "information is correct"
 msgstr ""
+"Vennlist sjekk at denne\n"
+"informasjonen er riktig"
 
 #: src/glade-strings.c:16
 msgid "Operating System"
@@ -187,6 +193,8 @@ msgid ""
 "Please check that this\n"
 "information is correct."
 msgstr ""
+"Vennlist sjekk at denne\n"
+"informasjonen er riktig."
 
 #: src/glade-strings.c:22
 msgid "glib"
@@ -213,6 +221,8 @@ msgid ""
 "Enter the information about the\n"
 "bug you are reporting"
 msgstr ""
+"Skriv inn informasjon om feilen\n"
+"du rapporterer"
 
 #: src/glade-strings.c:29
 msgid "Package"
@@ -224,7 +234,7 @@ msgstr "Versjon"
 
 #: src/glade-strings.c:31
 msgid "Bug severity"
-msgstr ""
+msgstr "Feilens viktighet"
 
 #: src/glade-strings.c:32
 msgid ""
@@ -236,43 +246,47 @@ msgstr ""
 
 #: src/glade-strings.c:34
 msgid "What type of bug are you reporting?"
-msgstr ""
+msgstr "Hvilken type feil skal du rapportere?"
 
 #: src/glade-strings.c:35
 msgid "Application crash with crash dialog"
-msgstr ""
+msgstr "Applikasjonskrasj med krasjdialog"
 
 #: src/glade-strings.c:36
 msgid "Application crash with core file"
-msgstr ""
+msgstr "Applikasjonskrasj med core fil"
 
 #: src/glade-strings.c:37
 msgid "No crash"
-msgstr ""
+msgstr "Ingen krasj"
 
 #: src/glade-strings.c:38
 msgid ""
 "Please enter the filename and pid of\n"
 "the aplication that crashed."
 msgstr ""
+"Vennligst skriv inn filnavnet og pid for\n"
+"applikasjonen som krasjet."
 
 #: src/glade-strings.c:40
 msgid "File"
-msgstr ""
+msgstr "Fil"
 
 #: src/glade-strings.c:41
 msgid "Process ID"
-msgstr ""
+msgstr "Prosess ID"
 
 #: src/glade-strings.c:42
 msgid "Enter the filename of the core dump"
-msgstr ""
+msgstr "Skriv inn filnavnet for core dump"
 
 #: src/glade-strings.c:43
 msgid ""
 "This is the debugging information\n"
 "bug-buddy has obtained:"
 msgstr ""
+"Dette er debugging-informasjonen\n"
+"som bug-buddy har innhentet:"
 
 #: src/glade-strings.c:45
 msgid ""
@@ -280,19 +294,22 @@ msgid ""
 "the bug, such as how to reproduce it,\n"
 "patches, or suggested fixes."
 msgstr ""
+"Vennligst skriv inn ekstra informasjon om\n"
+"feilen, slik som hvordan den kan reproduseres,\n"
+"patcher, eller forslag til retting."
 
 #: src/glade-strings.c:48
 msgid "Choose the action you wish to take"
-msgstr ""
+msgstr "Velg handligen du vil utføre"
 
 #: src/glade-strings.c:49
 msgid "Submit bug report"
-msgstr ""
+msgstr "Send feilrapport"
 
 #: src/glade-strings.c:50
 msgid "Send report to your email address *only*"
-msgstr ""
+msgstr "Send rapport *kun* til din e-post adresse"
 
 #: src/glade-strings.c:51
 msgid "Do not send bug report anywhere"
-msgstr ""
+msgstr "Ikke send feilrapport"
