@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
 "POT-Creation-Date: 2001-08-21 04:49+0200\n"
-"PO-Revision-Date: 2001-08-21 05:13GMT\n"
+"PO-Revision-Date: 2001-08-22 03:24GMT\n"
 "Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: nynorsk <nn@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -161,6 +161,10 @@ msgid ""
 "\n"
 "Should Bug Buddy try to update these files now?"
 msgstr ""
+"Bug Buddy har funne ut at noke av dataane den har treng \n"
+"oppdatering.\n"
+"\n"
+"Skal Bug Buddy forsøke å oppdatere desse dataane no?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -202,6 +206,8 @@ msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
+"Kunne ikkje finne gdb-cmd fila.\n"
+"Vennligst prø å reinstallere Bug Buddy."
 
 #: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
@@ -222,7 +228,7 @@ msgstr "Assbarn fenomenet"
 
 #: src/bug-buddy.glade.h:5
 msgid "Automatically continue to next step when debugging is complete"
-msgstr ""
+msgstr "Automatisk forsetje til neste steg når avlusinga er ferdig"
 
 #: src/bug-buddy.glade.h:6
 msgid "Automatically go to next page when complete"
@@ -242,6 +248,9 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
+"Bug Buddy kan sende avlusingsinformasjon saman med feilrapporten.\n"
+"Dei korrekte vala bør verte vald for deg automatisk.\n"
+"For meir informasjon, vennlegast kill på Hjelp knappen under."
 
 #: src/bug-buddy.glade.h:12
 msgid "Bug tracking system"
@@ -277,7 +286,7 @@ msgstr "E-post"
 
 #: src/bug-buddy.glade.h:20
 msgid "Full description of the bug, including how to reproduce it"
-msgstr ""
+msgstr "Full skildring av lusa, inkludert korleis ein skal gå fram for å reprodusere den"
 
 #: src/bug-buddy.glade.h:21
 msgid "Go"
@@ -297,11 +306,11 @@ msgstr "Pakke"
 
 #: src/bug-buddy.glade.h:25
 msgid "Please choose a component, version, and severity level."
-msgstr ""
+msgstr "Vennligst vel component, versjon og alvorlegheit nivå."
 
 #: src/bug-buddy.glade.h:26
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Vennlegast send inn feilrapporten din på engelsk, dersom mogleg"
 
 #: src/bug-buddy.glade.h:27
 msgid "Please select the product for the bug you wish to report."
@@ -309,13 +318,15 @@ msgstr "Vennligst vel produktet som lusa tilhøyrer for feilmelding."
 
 #: src/bug-buddy.glade.h:28
 msgid "Please wait while Bug Buddy determines some information about your system."
-msgstr ""
+msgstr "Vent medan Bug Buddy samlar informasjon om systemet ditt."
 
 #: src/bug-buddy.glade.h:29
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
+"Vent medan oppdaterar lista si over produkt i \n"
+"feilsøkingssystemet."
 
 #: src/bug-buddy.glade.h:31
 msgid "Process ID"
@@ -375,6 +386,13 @@ msgid ""
 "contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
+"Dette programmet vil saman med deg gå i gjennom stega \n"
+"som skal til for å sende inn ein feilrapport for prosjekt slik som GNOME.\n"
+"\n"
+"Desse feilrapportane blir sende via e-epost, så det er viktig\n"
+"at e-post adressa di er korrekt utfylt slik me kan kome i \n"
+"kontakt med deg, dersom det trengs meir informasjon, \n"
+"eller når ein feilretta versjon er tilgjengeleg."
 
 #: src/bug-buddy.glade.h:50
 msgid "To"
@@ -458,11 +476,11 @@ msgstr "Ferdig!"
 
 #: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
-msgstr ""
+msgstr "Det grafiske feilrapporteringssystemet for GNOME."
 
 #: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
-msgstr ""
+msgstr "Den kjedelege Bug Buggy nettsida"
 
 #: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
@@ -482,6 +500,12 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
+"'%s' ser ikkje ut til å eksistere.\n"
+"\n"
+"Du vil ikkje vere i stand til å sende inn ein feilrapport, men du vil\n"
+"vere i stand til å lagre den til ei fil.\n"
+"\n"
+"Spesifiser ei ny plassering for sendmail?"
 
 #: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
@@ -499,11 +523,11 @@ msgstr "'%s' ser ikkje ut til å vere ei tekstfil."
 
 #: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
-msgstr ""
+msgstr "Du må inkludere ei utfyllande temalinje i feilrapporten."
 
 #: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
-msgstr ""
+msgstr "Du må inkludere ein utfyllande feilmelding i feilrapporten din."
 
 #: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
@@ -527,7 +551,7 @@ msgstr "Klarte ikkje å starte e-post program: '%s'"
 #: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "Feilrapporten din var lagra i '%s'"
 
 #: src/united-states-of-bug-buddy.c:474
 #, c-format
@@ -538,6 +562,11 @@ msgid ""
 "\n"
 "Thanks!"
 msgstr ""
+"Din feilrapport har vorte send inn til:\n"
+"\n"
+"        <%s>\n"
+"\n"
+"Takk!"
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
@@ -578,5 +607,5 @@ msgstr "Feilmeldingsverkty"
 
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
-msgstr ""
+msgstr "Rapporter ei lus i GNOME"
 
