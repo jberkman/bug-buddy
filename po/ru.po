@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-12-15 19:36+0300\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-12-15 19:39+03:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb уже закрыт"
 
-#: src/bug-buddy.c:413
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -120,7 +120,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --appname."
 
-#: src/bug-buddy.c:423
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -128,7 +128,7 @@ msgstr ""
 "$GNOME_CRASHED_PID больше не используется.\n"
 "Используйте пожалуйста вместо этого аргумент командной строки --pid."
 
-#: src/bug-buddy.c:544
+#: src/bug-buddy.c:557
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -137,26 +137,26 @@ msgstr ""
 "Не удалось загрузить файл интерфейса пользователя (%s).\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bugzilla.c:584
+#: src/bugzilla.c:585
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:51 src/bugzilla.c:598 src/bugzilla.c:638
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
 #: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Программа"
 
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:604 src/bugzilla.c:666
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
 #: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Компонент"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:610 src/bugzilla.c:644
-#: src/bugzilla.c:672
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
 msgid "Description"
 msgstr "Описание"
 
-#: src/bugzilla.c:693
+#: src/bugzilla.c:694
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -165,7 +165,7 @@ msgstr ""
 "Не удалось открыть \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bugzilla.c:711
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "Все"
 
@@ -356,7 +356,8 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
-"Пожалуйста, потратьте минуту на то чтобы проверить, что о вашей ошибке не сообщил кто-то ещё.\n"
+"Пожалуйста, потратьте минуту на то чтобы проверить, что о вашей ошибке не "
+"сообщил кто-то ещё.\n"
 "Если об ошибке уже сообщено, не сообщайте о ней ещё раз."
 
 #: src/bug-buddy.glade.h:47
@@ -482,22 +483,14 @@ msgid "intro"
 msgstr "вступление"
 
 #: src/bug-buddy.glade.h:80
-msgid "label143"
-msgstr "label143"
-
-#: src/bug-buddy.glade.h:81
-msgid "label144"
-msgstr "label143"
-
-#: src/bug-buddy.glade.h:82
 msgid "mostfreq"
 msgstr "наиболее частые"
 
-#: src/bug-buddy.glade.h:83
+#: src/bug-buddy.glade.h:81
 msgid "product"
 msgstr "программа"
 
-#: src/bug-buddy.glade.h:84
+#: src/bug-buddy.glade.h:82
 msgid "system"
 msgstr "система"
 
@@ -664,3 +657,9 @@ msgstr "Инструмент сообщений об ошибках"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Сообщение об ошибке в GNOME"
+
+#~ msgid "label143"
+#~ msgstr "label143"
+
+#~ msgid "label144"
+#~ msgstr "label143"

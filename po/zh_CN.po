@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-12-06 16:39-0500\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-11-12 00:52+0800\n"
 "Last-Translator: Wang Jian <lark@linux.net.cn>\n"
 "Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "GDB 已经退出"
 
-#: src/bug-buddy.c:424
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -121,7 +121,7 @@ msgstr ""
 "不赞成使用 $GNOME_CRASHED_APPNAME。\n"
 "请使用 --appname 命令行参数。"
 
-#: src/bug-buddy.c:434
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -129,7 +129,7 @@ msgstr ""
 "不赞成使用 $GNOME_CRASHED_PID。\n"
 "请使用 --pid 命令行参数。"
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:557
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -138,21 +138,27 @@ msgstr ""
 "Bug Buddy 无法载入用户界面文件(%s)。\n"
 "请确定 Bug Buddy 安装正确。"
 
-#: src/bug-buddy.glade.h:49 src/bugzilla.c:562
-#: src/united-states-of-bug-buddy.c:52
+#: src/bugzilla.c:585
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
+#: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "产品"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:568 src/bugzilla.c:596
-msgid "Description"
-msgstr "描述"
-
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:590
-#: src/united-states-of-bug-buddy.c:53
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
+#: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "部件"
 
-#: src/bugzilla.c:617
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
+msgid "Description"
+msgstr "描述"
+
+#: src/bugzilla.c:694
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -161,20 +167,9 @@ msgstr ""
 "Bug Buddy 无法打开“%s”。\n"
 "请确定 Bug Buddy 安装正确。"
 
-#: src/bugzilla.c:633
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "全部"
-
-#: src/bugzilla.c:662
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug Buddy 断定它的关于各种错误跟踪系统的信息需要更新。\n"
-"\n"
-"Bug Buddy 应该现在更新这些文件吗？"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -237,7 +232,8 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
-msgid "Automatically continue to next step when debugging is complete"
+#, fuzzy
+msgid "Automatically continue to the next step when debugging is complete"
 msgstr "当调试完成后自动进入下一步"
 
 #: src/bug-buddy.glade.h:6
@@ -356,10 +352,17 @@ msgstr "请选择您要报告错误的产品。"
 
 #: src/bug-buddy.glade.h:45
 msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+
+#: src/bug-buddy.glade.h:47
+msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr "在 Bug Buddy 确定您的系统信息时，请耐心等待。"
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:48
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -367,51 +370,55 @@ msgstr ""
 "在 Bug Buddy 更新它错误跟踪系统的产品列表时，\n"
 "请耐心等待。"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:50
 msgid "Process ID"
 msgstr "进程号"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:52
 msgid "Save the report to..."
 msgstr "保存报告到..."
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:53
 msgid "Saving:"
 msgstr "正在保存："
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:54
 msgid "Select an action"
 msgstr "选择动作"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:55
 msgid "Send copy to yourself"
 msgstr "发送复件给您自己"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:56
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:57
 msgid "Severity"
 msgstr "严重程度"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:58
+msgid "Show most frequent bugs in:"
+msgstr ""
+
+#: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
 msgstr "以后跳过这一步"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:60
 msgid "Stop"
 msgstr "停止"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:61
 msgid "Submit another bug"
 msgstr "提交另外一个错误报告"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:62
 msgid "Summary"
 msgstr "摘要"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:63
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
@@ -428,55 +435,55 @@ msgstr ""
 "地址，当需要更多的信息或程序的修补版本可用时，会\n"
 "通过电子邮件联系您。"
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:70
 msgid "To"
 msgstr "收件人"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:71
 msgid "To:"
 msgstr "收件人："
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:72
 msgid "Version"
 msgstr "版本"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:73
 msgid "Version installed"
 msgstr "安装的版本"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:74
 msgid "component"
 msgstr "部件"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:75
 msgid "desc"
 msgstr "描述"
 
-#: src/bug-buddy.glade.h:73
-msgid "download"
-msgstr "下载"
-
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:76
 msgid "email info"
 msgstr "电子邮件信息"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:77
 msgid "finished"
 msgstr "完成"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:78
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:79
 msgid "intro"
 msgstr "介绍"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:80
+msgid "mostfreq"
+msgstr ""
+
+#: src/bug-buddy.glade.h:81
 msgid "product"
 msgstr "产品"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:82
 msgid "system"
 msgstr "系统"
 
@@ -488,13 +495,13 @@ msgstr "欢迎使用 Bug Buddy"
 msgid "Debugging Information"
 msgstr "调试信息"
 
-#: src/united-states-of-bug-buddy.c:50
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "错误描述"
-
-#: src/united-states-of-bug-buddy.c:51
-msgid "Updating Product Listing"
-msgstr "正在更新产品清单"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
@@ -516,15 +523,15 @@ msgstr "GNOME 的图形化错误报告工具。"
 msgid "The lame Bug Buddy web page"
 msgstr "简单的 Bug Buddy 主页"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:277
 msgid "Please enter your name."
 msgstr "请输入您的名字。"
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter a valid email address."
 msgstr "请输入您的有效的电子邮件地址。"
 
-#: src/united-states-of-bug-buddy.c:321
+#: src/united-states-of-bug-buddy.c:310
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -540,16 +547,16 @@ msgstr ""
 "\n"
 "您要指定 sendmail 的位置吗？"
 
-#: src/united-states-of-bug-buddy.c:381
+#: src/united-states-of-bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "指定的文件不存在。"
 
-#: src/united-states-of-bug-buddy.c:391
+#: src/united-states-of-bug-buddy.c:380
 #, c-format
 msgid "File is of type: %s"
 msgstr "文件的类型是：%s"
 
-#: src/united-states-of-bug-buddy.c:398
+#: src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -560,19 +567,19 @@ msgstr ""
 "\n"
 "Bug Buddy 只能提交纯文本(text/*)文件。"
 
-#: src/united-states-of-bug-buddy.c:418
+#: src/united-states-of-bug-buddy.c:407
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "您必须为错误报告指定一个容易理解的标题。"
 
-#: src/united-states-of-bug-buddy.c:434
+#: src/united-states-of-bug-buddy.c:423
 msgid "You must include a comprehensible description in your bug report."
 msgstr "您必须为错误报告加上一个容易理解的描述。"
 
-#: src/united-states-of-bug-buddy.c:457
+#: src/united-states-of-bug-buddy.c:446
 msgid "Submit this bug report now?"
 msgstr "现在提交错误报告？"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:468
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -581,12 +588,12 @@ msgstr ""
 "无法打开文件“%s”：\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:494
+#: src/united-states-of-bug-buddy.c:483
 #, c-format
 msgid "about to run '%s'"
 msgstr "将要运行“%s”"
 
-#: src/united-states-of-bug-buddy.c:502
+#: src/united-states-of-bug-buddy.c:491
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -595,12 +602,12 @@ msgstr ""
 "无法启动邮件程序“%s”：\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:545
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "您的错误报告被保存在“%s”"
 
-#: src/united-states-of-bug-buddy.c:548
+#: src/united-states-of-bug-buddy.c:537
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -615,19 +622,19 @@ msgstr ""
 "\n"
 "非常感谢！"
 
-#: src/united-states-of-bug-buddy.c:609
+#: src/united-states-of-bug-buddy.c:593
 msgid "You must specify a product for your bug report."
 msgstr "您必须为错误报告指定一个产品。"
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:610
 msgid "You must specify a component for your bug report."
 msgstr "您必须为错误报告指定一个部件。"
 
-#: src/united-states-of-bug-buddy.c:640
+#: src/united-states-of-bug-buddy.c:624
 msgid "You must specify a version for your bug report."
 msgstr "您必须为错误报告指定一个版本。"
 
-#: src/united-states-of-bug-buddy.c:676
+#: src/united-states-of-bug-buddy.c:670
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -640,3 +647,19 @@ msgstr "错误报告工具"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "报告 GNOME 中的错误"
+
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug Buddy 断定它的关于各种错误跟踪系统的信息需要更新。\n"
+#~ "\n"
+#~ "Bug Buddy 应该现在更新这些文件吗？"
+
+#~ msgid "download"
+#~ msgstr "下载"
+
+#~ msgid "Updating Product Listing"
+#~ msgstr "正在更新产品清单"

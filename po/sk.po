@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2001-12-13 13:44+0100\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-12-13 13:46CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -114,7 +114,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb už skončil"
 
-#: src/bug-buddy.c:413
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -122,7 +122,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME už nie je podporované.\n"
 "Prosím, namiesto toho použite voľbu príkazového riadku --appname."
 
-#: src/bug-buddy.c:423
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -130,7 +130,7 @@ msgstr ""
 "$GNOME_CRASHED_PID už nie je podporované.\n"
 "Prosím, namiesto toho použite voľbu príkazového riadku --pid."
 
-#: src/bug-buddy.c:544
+#: src/bug-buddy.c:557
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -139,26 +139,26 @@ msgstr ""
 "Priateľ v núdzi nemohol používateľské rozhranie (%s).\n"
 "Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
 
-#: src/bugzilla.c:584
+#: src/bugzilla.c:585
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:51 src/bugzilla.c:598 src/bugzilla.c:638
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
 #: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Produkt"
 
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:604 src/bugzilla.c:666
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
 #: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:610 src/bugzilla.c:644
-#: src/bugzilla.c:672
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
 msgid "Description"
 msgstr "Popis"
 
-#: src/bugzilla.c:693
+#: src/bugzilla.c:694
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -167,7 +167,7 @@ msgstr ""
 "Priateľ v núdzi nemohol otvoriť '%s'.\n"
 "Prosím, overte, že je Priateľ v núdzi správne nainštalovaný."
 
-#: src/bugzilla.c:711
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "Všetko"
 
@@ -355,12 +355,13 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
-"Prosím, nájdite si chvíľu času a pozrite sa, či vaša chyba "
-"nie je v zozname najčastejšie hlásených chýb.\n"
+"Prosím, nájdite si chvíľu času a pozrite sa, či vaša chyba nie je v zozname "
+"najčastejšie hlásených chýb.\n"
 "Ak už túto chybu niekto ohlásil, prosíme, neposielajte ju znovu."
 
 #: src/bug-buddy.glade.h:47
-msgid "Please wait while Bug Buddy determines some information about your system."
+msgid ""
+"Please wait while Bug Buddy determines some information about your system."
 msgstr "Prosím, počkajte pokým budú získané informácie o vašom systéme."
 
 #: src/bug-buddy.glade.h:48
@@ -652,4 +653,3 @@ msgstr "Nástroj pre oznamovanie chýb"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Nástroj GNOME pre oznamovanie chýb"
-

@@ -27,6 +27,12 @@
     </component>
   </product>
   <product name="Red Carpet">
+    <component name="Red Carpet">
+      <bug bugid="17584">
+        <desc>red-carpet doesn't work if user's home is nfs mounted</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=17584</url>
+      </bug>
+    </component>
     <component name="Installer">
       <bug bugid="15869">
         <desc>Downloading is a serious problem</desc>
@@ -34,7 +40,15 @@
       </bug>
     </component>
   </product>
-  <product name="Ximian GNOME">
+  <product name="Ximian Packages">
+    <component name="installer">
+      <bug bugid="15869">
+        <desc>Downloading is a serious problem</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
+      </bug>
+    </component>
+  </product>
+  <product name="Ximian Desktop">
     <component name="installer">
       <bug bugid="15869">
         <desc>Downloading is a serious problem</desc>

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-12-06 16:39-0500\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-02-12 03:10+0200\n"
 "Last-Translator: Gediminas Paulauskas <menesis@delfi.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb jau baigë darbà"
 
-#: src/bug-buddy.c:424
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -121,7 +121,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME yra nebenaudotinas.\n"
 "Naudok --appname komandinës eilutës parinktá vietoj to."
 
-#: src/bug-buddy.c:434
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -129,7 +129,7 @@ msgstr ""
 "$GNOME_CRASHED_PID yra nebenaudotinas.\n"
 "Naudok --pid komandinës eilutës parinktá vietoj to."
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:557
 #, fuzzy, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -138,21 +138,27 @@ msgstr ""
 "Negalëjau ákelti ¥%s´.\n"
 "Praðau, ásitikink, ar bug-buddy buvo teisingai ádiegta."
 
-#: src/bug-buddy.glade.h:49 src/bugzilla.c:562
-#: src/united-states-of-bug-buddy.c:52
+#: src/bugzilla.c:585
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
+#: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Produktas"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:568 src/bugzilla.c:596
-msgid "Description"
-msgstr "Apraðymas"
-
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:590
-#: src/united-states-of-bug-buddy.c:53
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
+#: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Komponentas"
 
-#: src/bugzilla.c:617
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
+msgid "Description"
+msgstr "Apraðymas"
+
+#: src/bugzilla.c:694
 #, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -161,22 +167,9 @@ msgstr ""
 "Negalëjau atidaryti ¥%s´.\n"
 "Praðau, ásitikink, ar bug-buddy buvo teisingai ádiegta."
 
-#: src/bugzilla.c:633
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "Visø"
-
-#: src/bugzilla.c:662
-#, fuzzy
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug Buddy aptiko, kad jo þinomà informacijà apie kai\n"
-"kurias klaidø sekimo sistemas galbût reikia atnaujinti.\n"
-"\n"
-"Ar Bug Buddy turëtø bandyti atnaujinti tas bylas dabar?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -236,7 +229,8 @@ msgid "Assbarn Phenomenon"
 msgstr ""
 
 #: src/bug-buddy.glade.h:5
-msgid "Automatically continue to next step when debugging is complete"
+#, fuzzy
+msgid "Automatically continue to the next step when debugging is complete"
 msgstr "Automatiðkai pereiti prie kito þingsnio, kai derinimas bus baigtas"
 
 #: src/bug-buddy.glade.h:6
@@ -337,6 +331,13 @@ msgid "Please select the product for the bug you wish to report."
 msgstr "Praðau pasirinkti produktà, apie kurio klaidà nori praneðti."
 
 #: src/bug-buddy.glade.h:45
+msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+
+#: src/bug-buddy.glade.h:47
 #, fuzzy
 msgid ""
 "Please wait while Bug Buddy determines some information about your system."
@@ -344,7 +345,7 @@ msgstr ""
 "Praðom palaukti, kol bug-buddy surinks kai kurià informacijà apie tavo "
 "sistemà."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:48
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -352,51 +353,55 @@ msgstr ""
 "Praðau palaukti, kol Bug Buddy atnaujins savo\n"
 "produktø sàraðà klaidø sekimo sistemose."
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:50
 msgid "Process ID"
 msgstr "Proceso ID"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:52
 msgid "Save the report to..."
 msgstr "Iðsaugoti praneðimà á..."
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:53
 msgid "Saving:"
 msgstr "Saugau:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:54
 msgid "Select an action"
 msgstr "Pasirink veiksmà"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:55
 msgid "Send copy to yourself"
 msgstr "Siøsti kopijà sau"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:56
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:57
 msgid "Severity"
 msgstr "Grieþtumas"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:58
+msgid "Show most frequent bugs in:"
+msgstr ""
+
+#: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
 msgstr "Praleisti ðá þingsná ateityje"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:60
 msgid "Stop"
 msgstr "Sustabdyti"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:61
 msgid "Submit another bug"
 msgstr "Praneðti apie kità klaidà"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:62
 msgid "Summary"
 msgstr ""
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:63
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
@@ -414,55 +419,55 @@ msgstr ""
 "galima tave pasiekti, jei reikës papildomos\n"
 "informacijos, arba kai klaida bus iðtaisyta."
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:70
 msgid "To"
 msgstr "Kam"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:71
 msgid "To:"
 msgstr "Kam:"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:72
 msgid "Version"
 msgstr "Versija"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:73
 msgid "Version installed"
 msgstr "Ádiegta versija"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:74
 msgid "component"
 msgstr "component"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:75
 msgid "desc"
 msgstr "desc"
 
-#: src/bug-buddy.glade.h:73
-msgid "download"
-msgstr "download"
-
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:76
 msgid "email info"
 msgstr "email info"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:77
 msgid "finished"
 msgstr "finished"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:78
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:79
 msgid "intro"
 msgstr "intro"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:80
+msgid "mostfreq"
+msgstr ""
+
+#: src/bug-buddy.glade.h:81
 msgid "product"
 msgstr "product"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:82
 msgid "system"
 msgstr "system"
 
@@ -474,13 +479,13 @@ msgstr "Sveiki atvykæ á Bug Buddy"
 msgid "Debugging Information"
 msgstr "Derinimo informacija"
 
-#: src/united-states-of-bug-buddy.c:50
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "Klaidos apraðymas"
-
-#: src/united-states-of-bug-buddy.c:51
-msgid "Updating Product Listing"
-msgstr "Atnaujinamas produktø sàraðas"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
@@ -503,15 +508,15 @@ msgstr "Grafinis klaidø praneðimo árankis, skirtas GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Kreivas bug-buddy tinklapis"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:277
 msgid "Please enter your name."
 msgstr "Praðau, ávesk savo vardà."
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter a valid email address."
 msgstr "Praðau, ávesk veikiantá el. paðto adresà."
 
-#: src/united-states-of-bug-buddy.c:321
+#: src/united-states-of-bug-buddy.c:310
 #, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -528,16 +533,16 @@ msgstr ""
 "\n"
 "Ar nori nurodyti naujà sendmail vietà?"
 
-#: src/united-states-of-bug-buddy.c:381
+#: src/united-states-of-bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "Nurodyta byla neegzistuoja."
 
-#: src/united-states-of-bug-buddy.c:391
+#: src/united-states-of-bug-buddy.c:380
 #, c-format
 msgid "File is of type: %s"
 msgstr "Bylos tipas yra: %s"
 
-#: src/united-states-of-bug-buddy.c:398
+#: src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -545,43 +550,43 @@ msgid ""
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:418
+#: src/united-states-of-bug-buddy.c:407
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Tu turi áraðyti suvokiamà klaidos praneðimo temà."
 
-#: src/united-states-of-bug-buddy.c:434
+#: src/united-states-of-bug-buddy.c:423
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Tu turi áraðyti suvokiamà klaidos praneðimo apraðymà."
 
-#: src/united-states-of-bug-buddy.c:457
+#: src/united-states-of-bug-buddy.c:446
 msgid "Submit this bug report now?"
 msgstr "Iðsiøsti ðá klaidos praneðimà dabar?"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:468
 #, fuzzy, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
 msgstr "Negaliu atidaryti bylos: ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:494
+#: src/united-states-of-bug-buddy.c:483
 #, c-format
 msgid "about to run '%s'"
 msgstr "ruoðiuosi paleisti ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:502
+#: src/united-states-of-bug-buddy.c:491
 #, fuzzy, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
 msgstr "Negaliu paleisti paðto programos: ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:545
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Tavo klaidos praneðimas buvo iðsaugotas á ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:548
+#: src/united-states-of-bug-buddy.c:537
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -594,19 +599,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:609
+#: src/united-states-of-bug-buddy.c:593
 msgid "You must specify a product for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti produktà."
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:610
 msgid "You must specify a component for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti komponentà."
 
-#: src/united-states-of-bug-buddy.c:640
+#: src/united-states-of-bug-buddy.c:624
 msgid "You must specify a version for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti versijà."
 
-#: src/united-states-of-bug-buddy.c:676
+#: src/united-states-of-bug-buddy.c:670
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -621,6 +626,24 @@ msgstr "bug-buddy"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Klaidø praneðimo árankis"
+
+#, fuzzy
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug Buddy aptiko, kad jo þinomà informacijà apie kai\n"
+#~ "kurias klaidø sekimo sistemas galbût reikia atnaujinti.\n"
+#~ "\n"
+#~ "Ar Bug Buddy turëtø bandyti atnaujinti tas bylas dabar?"
+
+#~ msgid "download"
+#~ msgstr "download"
+
+#~ msgid "Updating Product Listing"
+#~ msgstr "Atnaujinamas produktø sàraðas"
 
 #~ msgid "Are you sure you want to cancel this update?"
 #~ msgstr "Ar tikrai nori nutraukti ðá atnaujimà?"

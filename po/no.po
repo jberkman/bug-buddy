@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2001-12-13 22:57+0100\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-12-17 16:48+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb har allerede avsluttet"
 
-#: src/bug-buddy.c:413
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -121,7 +121,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:423
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -129,7 +129,7 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:544
+#: src/bug-buddy.c:557
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -138,26 +138,26 @@ msgstr ""
 "Bug Buddy kunne ikke laste brukergrensesnittfilen (%s).\n"
 "Vennligst sjekk at Bug Buddy ble riktig installert."
 
-#: src/bugzilla.c:584
+#: src/bugzilla.c:585
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:51 src/bugzilla.c:598 src/bugzilla.c:638
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
 #: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Produkt"
 
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:604 src/bugzilla.c:666
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
 #: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:610 src/bugzilla.c:644
-#: src/bugzilla.c:672
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: src/bugzilla.c:693
+#: src/bugzilla.c:694
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -166,7 +166,7 @@ msgstr ""
 "Bug Buddy kunne ikke åpne «%s».\n"
 "Vennligst sjekk at Bug Buddy ble riktig installert."
 
-#: src/bugzilla.c:711
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "Alle"
 
@@ -353,7 +353,8 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
-"Vennligst bruk et minutt for å finne ut om din feil er av dem som rapporteres oftest.\n"
+"Vennligst bruk et minutt for å finne ut om din feil er av dem som "
+"rapporteres oftest.\n"
 "Vennligst ikke fortsett hvis feilen allerede er rapportert."
 
 #: src/bug-buddy.glade.h:47

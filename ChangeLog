@@ -1,3 +1,16 @@
+2002-01-10  jacob berkman  <jacob@ximian.com>
+
+	* NEWS: 
+	* configure.in: 2.1.2
+
+	* bugzilla/*: updates
+	
+	* src/united-states-of-bug-buddy.c (get_selected_row): clean up a
+	little
+
+	* src/bug-buddy.glade: use new button layout (cancel to the left
+	of prev/next)
+
 2001-12-28  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.h: gnome-vfs-types.h is deprecated

@@ -18,13 +18,13 @@ bb_built_sources = \
 	bb-marshal.c	\
 	bb-marshal.h
 
-bb-marshal.h: bb-marshal.list
-	$(GLIB_GENMARSHAL) --prefix=_bb_marshal bb-marshal.list --header >> xgen-bmh \
+bb-marshal.h: $(srcdir)/bb-marshal.list
+	$(GLIB_GENMARSHAL) --prefix=_bb_marshal $(srcdir)/bb-marshal.list --header >> xgen-bmh \
 	&& (cmp -s xgen-bmh bb-marshal.h || cp xgen-bmh bb-marshal.h) \
 	&& rm -f xgen-bmh
 
-bb-marshal.c: bb-marshal.list
-	$(GLIB_GENMARSHAL) --prefix=_bb_marshal bb-marshal.list --body >> xgen-bmc \
+bb-marshal.c: $(srcdir)/bb-marshal.list
+	$(GLIB_GENMARSHAL) --prefix=_bb_marshal $(srcdir)/bb-marshal.list --body >> xgen-bmc \
 	&& (cmp -s xgen-bmc bb-marshal.c || cp xgen-bmc bb-marshal.c) \
 	&& rm -f xgen-bmc
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2001-12-22 02:05+0000\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-12-22 02:30+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <none@none.org>\n"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb já terminou"
 
-#: src/bug-buddy.c:413
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -121,7 +121,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME já não é utilizado.\n"
 "Utilize em vez disso o argumento de linha de comando --appname."
 
-#: src/bug-buddy.c:423
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -129,13 +129,14 @@ msgstr ""
 "$GNOME_CRASHED_PID já não é utilizado.\n"
 "Utilize em vez disso o argumento de linha de comando --pid."
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:557
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"O Bug Buddy foi incapaz de carregar o seu ficheiro de interface de utilizador (%s).\n"
+"O Bug Buddy foi incapaz de carregar o seu ficheiro de interface de "
+"utilizador (%s).\n"
 "Certifique-se de que o Bug Buddy foi correctamente instalado."
 
 #: src/bugzilla.c:585

@@ -301,6 +301,8 @@
     <version value="1.0" />
     <version value="1.0.1" />
     <version value="1.1" />
+    <version value="1.0.2" />
+    <version value="1.1.1" />
   </product>
   <product votestoconfirm="0" description="The GNOME Personal Information Manager package (the GNOME Address Book and GNOME Calendar)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-pim">
     <component initialowner="147" description="The GNOME Calendar" initialqacontact="0" value="gnomecal" />
@@ -444,6 +446,9 @@
     <version value="0.73-0.74" />
     <version value="0.75" />
     <version value="0.76" />
+    <version value="0.99.0" />
+    <version value="0.99.1" />
+    <version value="1.0.x" />
   </product>
   <product votestoconfirm="0" description="An IDE program in development" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="anjuta2">
     <component initialowner="27" description="The shell which binds the various components together" initialqacontact="0" value="shell" />
@@ -471,23 +476,23 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="libgda is a CORBA-based architecture intended to allow a uniform access to several different, unrelated database systems" maxvotesperbug="10000" milestoneurl="http://www.gnome-db.org" votesperuser="10" disallownew="0" name="libgda">
-    <component initialowner="178" description="The C++ bindings" initialqacontact="178" value="c++ bindings" />
+    <component initialowner="178" description="The C++ bindings" initialqacontact="143" value="c++ bindings" />
     <component initialowner="149" description="The Pascal bindings" initialqacontact="149" value="Pascal bindings" />
     <component initialowner="149" description="The Perl bindings" initialqacontact="149" value="Perl bindings" />
-    <component initialowner="180" description="The Python bindings" initialqacontact="180" value="Python bindings" />
+    <component initialowner="180" description="The Python bindings" initialqacontact="143" value="Python bindings" />
     <component initialowner="149" description="The InterBase provider" initialqacontact="149" value="gda-interbase-server" />
     <component initialowner="149" description="The LDAP provider" initialqacontact="149" value="gda-ldap-server" />
     <component initialowner="149" description="The Mail provider" initialqacontact="149" value="gda-mail-server" />
     <component initialowner="149" description="The Microsoft Access (MDB) provider" initialqacontact="149" value="gda-mdb-server" />
     <component initialowner="143" description="The MySQL provider" initialqacontact="143" value="gda-mysql-server" />
-    <component initialowner="177" description="The ODBC provider" initialqacontact="177" value="gda-odbc-server" />
+    <component initialowner="177" description="The ODBC provider" initialqacontact="143" value="gda-odbc-server" />
     <component initialowner="143" description="The Oracle provider" initialqacontact="143" value="gda-oracle-server" />
-    <component initialowner="172" description="The PostgreSQL provider" initialqacontact="172" value="gda-postgres-server" />
-    <component initialowner="174" description="The Primebase provider" initialqacontact="174" value="gda-primebase-server" />
-    <component initialowner="174" description="The Sybase provider" initialqacontact="174" value="gda-sybase-server" />
-    <component initialowner="174" description="The TDS provider" initialqacontact="174" value="gda-tds-server" />
-    <component initialowner="142" description="The Report Engine system" initialqacontact="142" value="Report Engine" />
-    <component initialowner="173" description="The Debian packages" initialqacontact="173" value="Debian packages" />
+    <component initialowner="172" description="The PostgreSQL provider" initialqacontact="143" value="gda-postgres-server" />
+    <component initialowner="174" description="The Primebase provider" initialqacontact="143" value="gda-primebase-server" />
+    <component initialowner="174" description="The Sybase provider" initialqacontact="143" value="gda-sybase-server" />
+    <component initialowner="174" description="The TDS provider" initialqacontact="143" value="gda-tds-server" />
+    <component initialowner="142" description="The Report Engine system" initialqacontact="143" value="Report Engine" />
+    <component initialowner="173" description="The Debian packages" initialqacontact="143" value="Debian packages" />
     <component initialowner="149" description="The RedHat Packages" initialqacontact="149" value="Red Hat packages" />
     <component initialowner="149" description="The test suite (gda-test)" initialqacontact="149" value="Test suite" />
     <component initialowner="143" description="The GDA client library, used by GDA clients" initialqacontact="143" value="Client library" />
@@ -508,7 +513,6 @@
     <component initialowner="143" description="A simple front end to gnome-db" initialqacontact="143" value="frontend" />
     <component initialowner="143" description="The component to configure data base connections" initialqacontact="143" value="manager" />
     <component initialowner="1499" description="The gnome-db's home page located at www.gnome-db.org" initialqacontact="1499" value="web" />
-    <component initialowner="179" description="Unspecified" initialqacontact="179" value="rolodex" />
     <component initialowner="143" description="Component for accesing the data sources" initialqacontact="143" value="database" />
     <component initialowner="143" description="The database designer component" initialqacontact="143" value="designer" />
     <component initialowner="143" description="Log viewer component" initialqacontact="143" value="log-viewer" />
@@ -644,6 +648,9 @@
     <version value="2.2.4.3" />
     <version value="2.2.5.1" />
     <version value="2.2.5.2" />
+    <version value="2.2.5.3" />
+    <version value="2.2.5.4" />
+    <version value="2.3.90.0" />
   </product>
   <product votestoconfirm="0" description="A powerful and easy to use newsreader for GNOME." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Pan">
     <component initialowner="457" description="General, unclassified bugs" initialqacontact="0" value="general" />
@@ -665,6 +672,8 @@
     <version value="0.11.0.90" />
     <version value="0.11.0.92" />
     <version value="0.11.1" />
+    <version value="0.11.1.90" />
+    <version value="0.11.1.91" />
   </product>
   <product votestoconfirm="0" description="Launcher feeback system" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="xalf">
     <component initialowner="363" description="Capplet for xalf" initialqacontact="0" value="xalf-capplet" />
@@ -741,13 +750,13 @@
   files for PalmOS-based pocket computers." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Guikachu">
     <component initialowner="80" description="general" initialqacontact="0" value="general" />
     <version value="unspecified" />
-    <version value="Before 0.12" />
+    <version value="1.1.x" />
     <version value="0.12" />
     <version value="0.13" />
     <version value="0.99.0" />
     <version value="0.99.1" />
     <version value="0.99.2" />
-    <version value="1.0.0" />
+    <version value="1.0.x" />
   </product>
   <product votestoconfirm="0" description="GnomeICU is a mature ICQ client for Linux.  It includes all of the useful features of ICQ, and integrates well with your Gnome desktop." maxvotesperbug="10000" milestoneurl="http://gnomeicu.sourceforge.net/index.php" votesperuser="0" defaultmilestone="0.96.1" name="GnomeICU" disallownew="0">
     <component initialowner="477" description="The main GnomeICU dialog box." initialqacontact="477" value="Main Window" />
@@ -791,6 +800,10 @@
     <version value="0.27" />
     <version value="0.28" />
     <version value="0.29" />
+    <version value="0.31" />
+    <version value="0.32" />
+    <version value="0.33" />
+    <version value="0.34" />
   </product>
   <product votestoconfirm="0" description="GNOME Midnight Commander file manager." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gmc">
     <component initialowner="37" description="General, unclassified bugs" initialqacontact="0" value="general" />
@@ -824,6 +837,8 @@
     <version value="0.4.2" />
     <version value="0.4.4" />
     <version value="cvs" />
+    <version value="unspecified" />
+    <version value="0.4.99.10" />
   </product>
   <product votestoconfirm="0" description="stocks portfolio manager for Yahoo" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-pm">
     <component initialowner="1081" description="all bugs for gnome-pm" initialqacontact="0" value="general" />
@@ -983,6 +998,7 @@
     <component initialowner="78" description="You need one component." initialqacontact="0" value="general" />
     <version value="unspecified" />
     <version value="1.0.1" />
+    <version value="1.0.2" />
   </product>
   <product votestoconfirm="0" description="data file internationalization tools" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="intltool">
     <component initialowner="2275" description="All sorts of bugs" initialqacontact="0" value="general" />
@@ -1104,6 +1120,7 @@
     <version value="0.4.0" />
     <version value="0.4.3" />
     <version value="0.5.0" />
+    <version value="0.5.2" />
   </product>
   <product votestoconfirm="0" description="libelysium is a utility library for the Elysium GNU/Linux projects. It includes EncompassURI, a URI parsing library based on code from GtkHTML." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="libelysium">
     <component initialowner="1648" description="Default component." initialqacontact="0" value="general" />
@@ -1111,6 +1128,7 @@
     <version value="unspecified" />
     <version value="0.2.4" />
     <version value="0.2.5" />
+    <version value="0.2.6" />
   </product>
   <product votestoconfirm="0" description="EtherTerm is a tabbed terminal for GNOME based on the gnome-terminal code." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="etherterm">
     <component initialowner="1648" description="Default component." initialqacontact="0" value="general" />
@@ -1179,5 +1197,17 @@
   <product votestoconfirm="0" description="A fax sender/manager for GNOME, part of GNOME Office" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gfax">
     <component initialowner="3602" description="For general bugs about gfax" initialqacontact="0" value="general" />
     <version value="0.3" />
+  </product>
+  <product votestoconfirm="0" description="Bindings for making the GNOME platform inside Guile." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-guile">
+    <component initialowner="3936" description="guile-gnome" initialqacontact="3936" value="guile-gnome" />
+    <component initialowner="3936" description="guile-gtk" initialqacontact="3936" value="guile-gtk" />
+    <component initialowner="3936" description="bonobo" initialqacontact="3936" value="bonobo" />
+    <component initialowner="3936" description="oaf" initialqacontact="3936" value="oaf" />
+    <component initialowner="3936" description="gal" initialqacontact="3936" value="gal" />
+    <component initialowner="3936" description="gtkhtml" initialqacontact="3936" value="gtkhtml" />
+    <component initialowner="3936" description="gdkpixbuf" initialqacontact="3936" value="gdkpixbuf" />
+    <version value="0.20" />
+    <version value="unspecified" />
+    <version value="0.21pre" />
   </product>
 </products>

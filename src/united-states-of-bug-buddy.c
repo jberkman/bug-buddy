@@ -550,16 +550,16 @@ get_selected_row (const char *w, int col)
 	GtkTreeView *view;
 	GtkTreeSelection *selection;
 	GtkTreeIter iter;
+	GtkTreeModel *model;
 	gpointer retval;
 
 	view = GTK_TREE_VIEW (GET_WIDGET (w));
 	selection = gtk_tree_view_get_selection (view);
 	
-	if (!gtk_tree_selection_get_selected (selection, NULL, &iter))
+	if (!gtk_tree_selection_get_selected (selection, &model, &iter))
 		return NULL;
 
-	gtk_tree_model_get (gtk_tree_view_get_model (view),
-			    &iter, col, &retval, -1);
+	gtk_tree_model_get (model, &iter, col, &retval, -1);			    
 	
 	return retval;
 }

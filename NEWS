@@ -1,4 +1,21 @@
-2.1.0:
+2.1.2:
+
+  * Fixes:
+
+	- convert xml to UTF-8 so that non-ascii characters display
+	  correctly
+
+  * Improvements:
+
+	- display frequently reported bugs
+
+	- build with less deprecated functiosn
+
+	- use new GTK 2.0 button layout
+
+	- add a tag to the bugzilla email if a gnome 2 app crashed
+
+2.1.1:
 
   * Fixes:
 

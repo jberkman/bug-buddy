@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2001-12-06 16:39-0500\n"
+"POT-Creation-Date: 2002-01-10 16:32-0500\n"
 "PO-Revision-Date: 2001-08-22 03:24GMT\n"
 "Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: nynorsk <nn@li.org>\n"
@@ -114,7 +114,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb har allereide avslutta"
 
-#: src/bug-buddy.c:424
+#: src/bug-buddy.c:415
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -122,13 +122,13 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utdatert.\n"
 "Bruk ---appname kommandolinje argumentet istaden."
 
-#: src/bug-buddy.c:434
+#: src/bug-buddy.c:425
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr "Bruk --pid kommandolinjeargumentet i staden."
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:557
 #, fuzzy, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -137,21 +137,27 @@ msgstr ""
 "Kunne ikkje laste '%s'.\n"
 "Ver sikker på at Bug Buddy er innstallert skikkeleg."
 
-#: src/bug-buddy.glade.h:49 src/bugzilla.c:562
-#: src/united-states-of-bug-buddy.c:52
+#: src/bugzilla.c:585
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
+#: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Produkt"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:568 src/bugzilla.c:596
-msgid "Description"
-msgstr "Skildring"
-
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:590
-#: src/united-states-of-bug-buddy.c:53
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
+#: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bugzilla.c:617
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bugzilla.c:673
+msgid "Description"
+msgstr "Skildring"
+
+#: src/bugzilla.c:694
 #, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -160,21 +166,9 @@ msgstr ""
 "Kunne ikkje opne '%s'.\n"
 "Ver sikker på at Bug Buddy er innstalert skikkeleg."
 
-#: src/bugzilla.c:633
+#: src/bugzilla.c:712
 msgid "All"
 msgstr "Alle"
-
-#: src/bugzilla.c:662
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug Buddy har funne ut at noke av dataane den har treng \n"
-"oppdatering.\n"
-"\n"
-"Skal Bug Buddy forsøke å oppdatere desse dataane no?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -237,7 +231,8 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn fenomenet"
 
 #: src/bug-buddy.glade.h:5
-msgid "Automatically continue to next step when debugging is complete"
+#, fuzzy
+msgid "Automatically continue to the next step when debugging is complete"
 msgstr "Automatisk forsetje til neste steg når avlusinga er ferdig"
 
 #: src/bug-buddy.glade.h:6
@@ -338,10 +333,17 @@ msgstr "Vennligst vel produktet som lusa tilhøyrer for feilmelding."
 
 #: src/bug-buddy.glade.h:45
 msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+
+#: src/bug-buddy.glade.h:47
+msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr "Vent medan Bug Buddy samlar informasjon om systemet ditt."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:48
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -349,51 +351,55 @@ msgstr ""
 "Vent medan oppdaterar lista si over produkt i \n"
 "feilsøkingssystemet."
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:50
 msgid "Process ID"
 msgstr "Prosess-ID"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:52
 msgid "Save the report to..."
 msgstr "Lagra rapport til..."
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:53
 msgid "Saving:"
 msgstr "Lagrar:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:54
 msgid "Select an action"
 msgstr "Vel ei handling"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:55
 msgid "Send copy to yourself"
 msgstr "Send kopi til deg sjølv"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:56
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:57
 msgid "Severity"
 msgstr "Kor alvorleg?"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:58
+msgid "Show most frequent bugs in:"
+msgstr ""
+
+#: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
 msgstr "Hopp over dette steget i framtida"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:60
 msgid "Stop"
 msgstr "Stopp"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:61
 msgid "Submit another bug"
 msgstr "Send inn ein annan feilrapport"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:62
 msgid "Summary"
 msgstr ""
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:63
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
@@ -411,55 +417,55 @@ msgstr ""
 "kontakt med deg, dersom det trengs meir informasjon, \n"
 "eller når ein feilretta versjon er tilgjengeleg."
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:70
 msgid "To"
 msgstr "Til"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:71
 msgid "To:"
 msgstr "Til:"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:72
 msgid "Version"
 msgstr "Versjon"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:73
 msgid "Version installed"
 msgstr "Versjon innstallert"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:74
 msgid "component"
 msgstr "komponent"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:75
 msgid "desc"
 msgstr "desc"
 
-#: src/bug-buddy.glade.h:73
-msgid "download"
-msgstr "lasta ned"
-
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:76
 msgid "email info"
 msgstr "e-post informasjon"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:77
 msgid "finished"
 msgstr "ferdig"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:78
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:79
 msgid "intro"
 msgstr "introduksjon"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:80
+msgid "mostfreq"
+msgstr ""
+
+#: src/bug-buddy.glade.h:81
 msgid "product"
 msgstr "produkt"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:82
 msgid "system"
 msgstr "system"
 
@@ -471,13 +477,13 @@ msgstr "Velkomen til Bug Buddy"
 msgid "Debugging Information"
 msgstr "Avlusingsinformasjon"
 
-#: src/united-states-of-bug-buddy.c:50
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "Feilskildring:"
-
-#: src/united-states-of-bug-buddy.c:51
-msgid "Updating Product Listing"
-msgstr "Oppdaterer produkliste"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
@@ -499,15 +505,15 @@ msgstr "Det grafiske feilrapporteringssystemet for GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Den kjedelege Bug Buggy nettsida"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:277
 msgid "Please enter your name."
 msgstr "Skriv inn namnet ditt:"
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter a valid email address."
 msgstr "Oppgi ei gyldig e-postadresse."
 
-#: src/united-states-of-bug-buddy.c:321
+#: src/united-states-of-bug-buddy.c:310
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -524,16 +530,16 @@ msgstr ""
 "\n"
 "Spesifiser ei ny plassering for sendmail?"
 
-#: src/united-states-of-bug-buddy.c:381
+#: src/united-states-of-bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "Den oppgjevne fila finst ikkje."
 
-#: src/united-states-of-bug-buddy.c:391
+#: src/united-states-of-bug-buddy.c:380
 #, c-format
 msgid "File is of type: %s"
 msgstr "Fila er av type: %s"
 
-#: src/united-states-of-bug-buddy.c:398
+#: src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -541,43 +547,43 @@ msgid ""
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:418
+#: src/united-states-of-bug-buddy.c:407
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Du må inkludere ei utfyllande temalinje i feilrapporten."
 
-#: src/united-states-of-bug-buddy.c:434
+#: src/united-states-of-bug-buddy.c:423
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Du må inkludere ein utfyllande feilmelding i feilrapporten din."
 
-#: src/united-states-of-bug-buddy.c:457
+#: src/united-states-of-bug-buddy.c:446
 msgid "Submit this bug report now?"
 msgstr "Send inn feilrapporten no?"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:468
 #, fuzzy, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
 msgstr "Ikkje i stand til å opne fil: '%s'"
 
-#: src/united-states-of-bug-buddy.c:494
+#: src/united-states-of-bug-buddy.c:483
 #, c-format
 msgid "about to run '%s'"
 msgstr "klar til å køyre '%s'"
 
-#: src/united-states-of-bug-buddy.c:502
+#: src/united-states-of-bug-buddy.c:491
 #, fuzzy, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
 msgstr "Klarte ikkje å starte e-post program: '%s'"
 
-#: src/united-states-of-bug-buddy.c:545
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Feilrapporten din var lagra i '%s'"
 
-#: src/united-states-of-bug-buddy.c:548
+#: src/united-states-of-bug-buddy.c:537
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -592,19 +598,19 @@ msgstr ""
 "\n"
 "Takk!"
 
-#: src/united-states-of-bug-buddy.c:609
+#: src/united-states-of-bug-buddy.c:593
 msgid "You must specify a product for your bug report."
 msgstr "Du må oppgi eit produkt for feilrapporten din."
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:610
 msgid "You must specify a component for your bug report."
 msgstr "Du må oppgi ein komponent for feilrapporten din."
 
-#: src/united-states-of-bug-buddy.c:640
+#: src/united-states-of-bug-buddy.c:624
 msgid "You must specify a version for your bug report."
 msgstr "Du må spesifisere ein versjon for lus rapporten."
 
-#: src/united-states-of-bug-buddy.c:676
+#: src/united-states-of-bug-buddy.c:670
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -619,6 +625,23 @@ msgstr "Feilmeldingsverkty"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Rapporter ei lus i GNOME"
+
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug Buddy har funne ut at noke av dataane den har treng \n"
+#~ "oppdatering.\n"
+#~ "\n"
+#~ "Skal Bug Buddy forsøke å oppdatere desse dataane no?"
+
+#~ msgid "download"
+#~ msgstr "lasta ned"
+
+#~ msgid "Updating Product Listing"
+#~ msgstr "Oppdaterer produkliste"
 
 #~ msgid "Are you sure you want to cancel this update?"
 #~ msgstr "Er du sikker på at du vil avbryte denne oppdateringa?"
