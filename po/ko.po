@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2002-03-18 12:11-0500\n"
-"PO-Revision-Date: 2002-03-12 19:51+0900\n"
+"POT-Creation-Date: 2002-04-01 12:37+0900\n"
+"PO-Revision-Date: 2002-04-01 12:49+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr "버그 보고를 보냄"
 
 #: src/bug-buddy.c:56
 msgid "Only send report to yourself"
-msgstr "당신에게만 보고를 보내기"
+msgstr "자신에게만 보고를 보내기"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
@@ -127,15 +127,15 @@ msgstr "전자우편 시작(_S)"
 msgid "_Send Report"
 msgstr "보고서 보내기(_S)"
 
-#: src/bug-buddy.c:377
+#: src/bug-buddy.c:379
 msgid "Hide Debugging Options"
 msgstr "디버깅 옵션 숨기기"
 
-#: src/bug-buddy.c:378
+#: src/bug-buddy.c:380
 msgid "Show Debugging Options"
 msgstr "디버깅 옵션 보이기"
 
-#: src/bug-buddy.c:442
+#: src/bug-buddy.c:444
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -143,7 +143,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME을 지정하여 사용하는 것보다는\n"
 "--appname 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:452
+#: src/bug-buddy.c:454
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -151,7 +151,7 @@ msgstr ""
 "$GNOME_CRASHED_PID를 사용하시는 것보다는\n"
 "--pid 명령행 옵션을 사용하시는 것을 권합니다."
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
@@ -159,7 +159,7 @@ msgstr ""
 "그놈의 버그 보고 도구, 버그버디입니다.\n"
 "버그버디의 각 단계를 따라 버그 보고서를 제출해 주십시오."
 
-#: src/bug-buddy.c:471
+#: src/bug-buddy.c:473
 msgid ""
 "\n"
 "\n"
@@ -169,7 +169,7 @@ msgstr ""
 "\n"
 "다른 응용프로그램이 비정상 종료했기 때문에 이 프로그램이 실행중입니다."
 
-#: src/bug-buddy.c:474
+#: src/bug-buddy.c:476
 msgid ""
 "\n"
 "\n"
@@ -181,12 +181,12 @@ msgstr ""
 "버그버디에서 응용프로그램의 디버깅 정보를 얻어 오는 몇 분간 기다려 주십시"
 "오.  이 디버깅 정보가 있으면 더욱 유용한 버그 보고서를 제출할 수 있습니다."
 
-#: src/bug-buddy.c:613
+#: src/bug-buddy.c:617
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "픽스맵을 찾을 수 없습니다: %s (%d)\n"
 
-#: src/bug-buddy.c:680
+#: src/bug-buddy.c:684
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -199,15 +199,15 @@ msgstr ""
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:44 src/bugzilla.c:625 src/bugzilla.c:660
+#: src/bugzilla.c:625 src/bugzilla.c:660
 msgid "Product"
 msgstr "제품명"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:631 src/bugzilla.c:700
+#: src/bugzilla.c:631 src/bugzilla.c:700
 msgid "Component"
 msgstr "컴포넌트"
 
-#: src/bug-buddy.glade.h:22 src/bugzilla.c:637 src/bugzilla.c:678
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:637 src/bugzilla.c:678
 #: src/bugzilla.c:706
 msgid "Description"
 msgstr "설명"
@@ -292,32 +292,31 @@ msgstr ""
 msgid "There was an error running gdb."
 msgstr "gdb를 실행하는 데 오류가 발생했습니다."
 
+#: src/bug-buddy.glade.h:1
+msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "&lt;span size=\"xx-large\"&gt;버그버디&lt;/span&gt;"
+
 #: src/bug-buddy.glade.h:2
-#, no-c-format
-msgid "%P %%"
-msgstr "%P %%"
+msgid "*"
+msgstr "*"
 
 #: src/bug-buddy.glade.h:3
-msgid "About"
-msgstr "버그 버디란?"
-
-#: src/bug-buddy.glade.h:4
 msgid "Advanced"
 msgstr "고급"
 
-#: src/bug-buddy.glade.h:5
+#: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
 msgstr "assbarn 현상"
 
-#: src/bug-buddy.glade.h:6
-msgid "Binary file"
-msgstr "실행파일"
+#: src/bug-buddy.glade.h:5
+msgid "Binary file:"
+msgstr "이진 파일:"
 
-#: src/bug-buddy.glade.h:7 src/united-states-of-bug-buddy.c:99
+#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:99
 msgid "Bug Buddy"
 msgstr "버그버디"
 
-#: src/bug-buddy.glade.h:8
+#: src/bug-buddy.glade.h:7
 msgid ""
 "Bug Buddy can send debugging information with your bug report.\n"
 "The correct options should have been selected for you automatically.\n"
@@ -327,7 +326,7 @@ msgstr ""
 "필요한 옵션들이 자동적으로 선택될것입니다.\n"
 "더 자세한 정보를 원하시면 아래쪽에 있는 도움말 버튼을 누르세요."
 
-#: src/bug-buddy.glade.h:11
+#: src/bug-buddy.glade.h:10
 msgid ""
 "Bug Buddy uses email to submit the bug reports.\n"
 "Please choose how you would like Bug Buddy to send email.\n"
@@ -339,91 +338,91 @@ msgstr ""
 "기본 그놈 메일 프로그램을 사용하면, 이 설정 사항은\n"
 "다른 그놈 응용프로그램에게도 쓰입니다."
 
-#: src/bug-buddy.glade.h:15
+#: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
 msgstr "버그 추적 시스템"
 
-#: src/bug-buddy.glade.h:16
+#: src/bug-buddy.glade.h:15
 msgid "Cc"
 msgstr "참조"
 
-#: src/bug-buddy.glade.h:17
+#: src/bug-buddy.glade.h:16
 msgid "Command"
 msgstr "명령어"
 
-#: src/bug-buddy.glade.h:19
+#: src/bug-buddy.glade.h:17
 msgid "Core file"
 msgstr "코아 파일"
 
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:18
 msgid "Custom mailer"
 msgstr "사용자 메일 프로그램"
 
-#: src/bug-buddy.glade.h:21
+#: src/bug-buddy.glade.h:19
 msgid "Debug"
 msgstr "디버깅"
 
-#: src/bug-buddy.glade.h:23
+#: src/bug-buddy.glade.h:21
 msgid "Download Progress"
 msgstr "내려받기 진행률"
 
-#: src/bug-buddy.glade.h:24
+#: src/bug-buddy.glade.h:22
 msgid "Email"
 msgstr "전자우편"
 
-#: src/bug-buddy.glade.h:25
+#: src/bug-buddy.glade.h:23
 msgid "GNOME Mailer Settings"
 msgstr "그놈 메일 프로그램 설정"
 
-#: src/bug-buddy.glade.h:26
+#: src/bug-buddy.glade.h:24
 msgid "Go"
 msgstr "진행"
 
-#: src/bug-buddy.glade.h:27
+#: src/bug-buddy.glade.h:25
 msgid "HTTP Proxy Settings"
 msgstr "HTTP 프록시 설정"
 
-#: src/bug-buddy.glade.h:28
+#: src/bug-buddy.glade.h:26
 msgid "Include a text file"
 msgstr "포함시킬 텍스트 파일"
 
-#: src/bug-buddy.glade.h:29
+#: src/bug-buddy.glade.h:27
 msgid "Just save to a file so I can submit a bug report manually"
 msgstr "버그 보고서를 파일로 저장, 수동으로 보낼 수 있도록"
 
-#: src/bug-buddy.glade.h:30
+#: src/bug-buddy.glade.h:28
 msgid "Location"
 msgstr "위치"
 
-#: src/bug-buddy.glade.h:31
+#: src/bug-buddy.glade.h:29
 msgid "Name"
 msgstr "이름"
 
-#: src/bug-buddy.glade.h:32
+#: src/bug-buddy.glade.h:30
 msgid "Password"
 msgstr "비밀번호"
 
-#: src/bug-buddy.glade.h:33
+#: src/bug-buddy.glade.h:31
 msgid "Path of sendmail"
 msgstr "sendmail의 경로"
 
-#: src/bug-buddy.glade.h:34
+#: src/bug-buddy.glade.h:32
 msgid "Please choose a component, version, and severity level."
 msgstr "컴포넌트, 버전, 심각성을 선택하세요."
 
-#: src/bug-buddy.glade.h:35
+#: src/bug-buddy.glade.h:33
 msgid "Please make any final corrections to the bug report."
 msgstr "마지막으로 버그 보고서에서 고칠 점이 있으면 고쳐 주십시오."
 
-#: src/bug-buddy.glade.h:36
+#: src/bug-buddy.glade.h:34
 msgid "Please make your bug report in English, if possible."
 msgstr "한글이 아닌 영어로 보고서를 꼭 작성하십시오."
 
-#: src/bug-buddy.glade.h:37
+#: src/bug-buddy.glade.h:35
 msgid "Please select the product for the bug you wish to report."
 msgstr "버그를 알릴 제품이름을 선택하세요."
 
-#: src/bug-buddy.glade.h:38
+#: src/bug-buddy.glade.h:36
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
 "reported bugs.\n"
@@ -433,7 +432,7 @@ msgstr ""
 "오.\n"
 "버그가 이미 보고되어 있다면, 또 보고하지는 말아 주십시오."
 
-#: src/bug-buddy.glade.h:40
+#: src/bug-buddy.glade.h:38
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -441,155 +440,155 @@ msgstr ""
 "버그버디가 제품 목록을 갱신하는 동안\n"
 "기다려 주십시오."
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:40
 msgid "Port"
 msgstr "포트"
 
-#: src/bug-buddy.glade.h:43
-msgid "Process ID"
-msgstr "프로세스 ID"
+#: src/bug-buddy.glade.h:41
+msgid "Process ID:"
+msgstr "프로세스 ID:"
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:42
 msgid "Proxy Settings..."
 msgstr "프록시 설정..."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:43
 msgid "Proxy requires a username and password"
 msgstr "프록시에 사용자 이름과 비밀번호가 필요합니다"
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:44
 msgid "Save in"
 msgstr "저장할 파일"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:45
 msgid "Save the report to..."
 msgstr "보고를 새 이름으로 저장하기..."
 
-#: src/bug-buddy.glade.h:49
+#: src/bug-buddy.glade.h:46
 msgid "Saving:"
 msgstr "저장:"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:47
 msgid "Select a mailer"
 msgstr "메일 프로그램을 선택하십시오"
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:48
 msgid "Sendmail Settings"
 msgstr "sendmail 설정"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:49
 msgid "Severity"
 msgstr "심각성"
 
-#: src/bug-buddy.glade.h:53
-msgid "Show Debugging Details"
-msgstr "디버깅 정보 보여주기"
+#: src/bug-buddy.glade.h:50
+msgid "Show _Debugging Details"
+msgstr "디버깅 정보 보여주기(_D)"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:51
 msgid "Show most frequent bugs in:"
 msgstr "다음의 가장 많이 보고되는 버그 보여주기:"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:52
 msgid "Simple"
 msgstr "간단히"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:53
 msgid "Start"
 msgstr "시작"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:54
 msgid "Start in terminal"
 msgstr "터미널에서 시작"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:55
 msgid "Stop"
 msgstr "그만"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:56
 msgid "Submit another bug"
 msgstr "또다른 버그를 보내기"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:57
 msgid "Summary"
 msgstr "요약"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:58
 msgid "The product is not listed above."
 msgstr "제품이 위 목록에 없음."
 
-#: src/bug-buddy.glade.h:62
+#: src/bug-buddy.glade.h:59
 msgid "To"
 msgstr "받는 이"
 
-#: src/bug-buddy.glade.h:63
+#: src/bug-buddy.glade.h:60
 msgid "To:"
 msgstr "받는 이:"
 
-#: src/bug-buddy.glade.h:64
+#: src/bug-buddy.glade.h:61
 msgid "Understands Netscape remote control"
 msgstr "넷스케이프 원격 조종할 수 있음"
 
-#: src/bug-buddy.glade.h:65
+#: src/bug-buddy.glade.h:62
 msgid "Updating products list:"
 msgstr "제품 목록 업데이트중:"
 
-#: src/bug-buddy.glade.h:66
+#: src/bug-buddy.glade.h:63
 msgid "Use HTTP Proxy"
 msgstr "HTTP 프록시 사용"
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:64
 msgid "Use sendmail directly"
 msgstr "sendmail 직접 사용"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:65
 msgid "Use the default GNOME mailer"
 msgstr "기본 그놈 메일 프로그램 사용"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:66
 msgid "Username"
 msgstr "사용자 이름"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:67
 msgid "Version"
 msgstr "버전"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:68
 msgid "component"
 msgstr "컴포넌트"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:69
 msgid "desc"
 msgstr "설명"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:70
 msgid "email info"
 msgstr "전자우편 정보"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:71
 msgid "finished"
 msgstr "완료됨"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:72
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:73
 msgid "gnome"
 msgstr "그놈"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:74
 msgid "mail config"
 msgstr "전자우편 설정"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:75
 msgid "mostfreq"
 msgstr "가장 자주"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:76
 msgid "product"
 msgstr "제품"
 
-#: src/bug-buddy.glade.h:80
+#: src/bug-buddy.glade.h:77
 msgid "sendmail"
 msgstr "sendmail"
 
