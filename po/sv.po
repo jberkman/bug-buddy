@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
-"PO-Revision-Date: 2001-06-12 18:36+0200\n"
+"POT-Creation-Date: 2001-06-19 20:40+0200\n"
+"PO-Revision-Date: 2001-06-19 20:41+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -563,7 +563,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Din felrapport har sparats i \"%s\""
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -573,7 +573,9 @@ msgid ""
 msgstr ""
 "Din felrapport har skickats till:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Tack!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
