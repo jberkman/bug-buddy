@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
-"PO-Revision-Date: 2000-09-09 18:40+02:00\n"
-"Last-Translator: Karl Eichwalder <ke@suse.de>\n"
+"POT-Creation-Date: 2000-10-04 23:34+0200\n"
+"PO-Revision-Date: 2000-10-04 23:36+0200\n"
+"Last-Translator: Christian Meyer <cm@ggtt.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -143,7 +143,6 @@ msgid "Core file from program"
 msgstr "Core-Datei von dem Programm"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -153,7 +152,7 @@ msgstr ""
 "Es ist viel hilfreicher, wenn Sie anstelle von\n"
 "'general' ein spezielles Paket angeben.\n"
 "\n"
-"Wollen Sie trotzdem weitermachen?"
+"Bitte geben Sie ein Paket an."
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -191,18 +190,16 @@ msgid "gdb has already exited"
 msgstr "gdb ist bereits beendet"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "GNOMEs grafischer Fehlermelder"
+msgstr "Das graphische Werkzeug zur Fehlermeldung für GNOME."
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "Die \"armselige\" Webseite von bug-buddy"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse an."
+msgstr "Bitte geben Sie Ihren Namen an."
 
 #: src/bug-buddy.c:609
 #, fuzzy
@@ -599,5 +596,3 @@ msgstr "Kann '%s' nicht starten."
 msgid "Error on read..."
 msgstr "Fehler beim Lesen...."
 
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Copyright (C) 1999 Jacob Berkman"
