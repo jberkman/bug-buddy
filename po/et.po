@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-04-21 20:42-0400\n"
+"POT-Creation-Date: 2002-05-13 16:25-0400\n"
 "PO-Revision-Date: 2002-04-22 15:45+0200\n"
 "Last-Translator: Ilmar Kerm <ikerm@hot.ee>\n"
 "Language-Team: Estonian <gnome-et@linux.ee>\n"
@@ -119,11 +119,11 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb juba lõpetas"
 
-#: src/bug-buddy.c:285
+#: src/bug-buddy.c:286
 msgid "Save Backtrace"
 msgstr ""
 
-#: src/bug-buddy.c:304
+#: src/bug-buddy.c:305
 #, c-format
 msgid ""
 "There was an error trying to save %s:\n"
@@ -138,23 +138,33 @@ msgstr ""
 "\n"
 "Palun proovi teise faili nimega uuesti."
 
-#: src/bug-buddy.c:401
+#: src/bug-buddy.c:402
 msgid "_Start Mailer"
 msgstr "_Käivita meilier"
 
-#: src/bug-buddy.c:405
+#: src/bug-buddy.c:406
 msgid "_Send Report"
 msgstr "_Saada raport"
 
-#: src/bug-buddy.c:474
+#: src/bug-buddy.c:443
+#, c-format
+msgid ""
+"There was an error showing the proxy settings:\n"
+"\n"
+"%s.\n"
+"\n"
+"Please make sure the GNOME Control Center is properly installed."
+msgstr ""
+
+#: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
 msgstr "Peida debugimise info"
 
-#: src/bug-buddy.c:475
+#: src/bug-buddy.c:492
 msgid "Show Debugging Options"
 msgstr "Näita debugimise infot"
 
-#: src/bug-buddy.c:539
+#: src/bug-buddy.c:556
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -162,7 +172,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME on aegunud.\n"
 "Palun kasuta käsurea parameetrit --appname."
 
-#: src/bug-buddy.c:549
+#: src/bug-buddy.c:566
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -170,13 +180,13 @@ msgstr ""
 "$GNOME_CRASHED_PID on aegunud.\n"
 "Palun kasuta käsurea parameetrit --pid."
 
-#: src/bug-buddy.c:565
+#: src/bug-buddy.c:582
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
 
-#: src/bug-buddy.c:568
+#: src/bug-buddy.c:585
 msgid ""
 "\n"
 "\n"
@@ -186,7 +196,7 @@ msgstr ""
 "\n"
 "Sa näed seda teadet, kuna teine rakendus krahhis."
 
-#: src/bug-buddy.c:571
+#: src/bug-buddy.c:588
 msgid ""
 "\n"
 "\n"
@@ -194,12 +204,12 @@ msgid ""
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
 msgstr ""
 
-#: src/bug-buddy.c:712
+#: src/bug-buddy.c:727
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Ei leidnud pilti: %s (%d)\n"
 
-#: src/bug-buddy.c:779
+#: src/bug-buddy.c:794
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -220,25 +230,39 @@ msgstr "Toode"
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
+#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
+#: src/bug-buddy.glade.h:20
 msgid "Description"
 msgstr "Kirjeldus"
 
 #: src/bugzilla.c:774
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
 msgstr ""
 "Bug Buddy ei suuda avada '%s'.\n"
 "Palun kontrolli, et Bug Buddy oleks korralikult installitud."
 
-#: src/bugzilla.c:792
+#: src/bugzilla.c:793
 msgid "All"
 msgstr "Kõik"
 
-#: src/config.c:86
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy ei suuda laadida oma kasutajaliidesefaili ('%s').\n"
+"Palun kontrolli, et Bug Buddy oleks korralikult installitud."
+
+#: src/config.c:75
 msgid "Evolution"
 msgstr "Evolution"
 
@@ -306,12 +330,13 @@ msgid "There was an error running gdb."
 msgstr "GDB töös tekkis viga."
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-
-#: src/bug-buddy.glade.h:2
 msgid "*"
 msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+#, fuzzy
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -384,54 +409,38 @@ msgid "GNOME Mailer Settings"
 msgstr "GNOME meileri sätted"
 
 #: src/bug-buddy.glade.h:24
-msgid "Go"
-msgstr "Alusta"
-
-#: src/bug-buddy.glade.h:25
-msgid "HTTP Proxy Settings"
-msgstr "HTTP proksi sätted"
-
-#: src/bug-buddy.glade.h:26
 msgid "Include a text file"
 msgstr "Lisa tekstifail"
 
-#: src/bug-buddy.glade.h:27
+#: src/bug-buddy.glade.h:25
 msgid "Just save to a file so I can submit a bug report manually"
 msgstr "Salvesta lihtsalt faili, et ma saaksin selle ise ära saata"
 
-#: src/bug-buddy.glade.h:28
-msgid "Location"
-msgstr "Asukoht"
-
-#: src/bug-buddy.glade.h:29
+#: src/bug-buddy.glade.h:26
 msgid "Name"
 msgstr "Nimi"
 
-#: src/bug-buddy.glade.h:30
-msgid "Password"
-msgstr "Parool"
-
-#: src/bug-buddy.glade.h:31
+#: src/bug-buddy.glade.h:27
 msgid "Path of sendmail"
 msgstr "Sendmaili otsingutee"
 
-#: src/bug-buddy.glade.h:32
+#: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
 msgstr "Palun vali komponent, versioon ja tõsidusaste"
 
-#: src/bug-buddy.glade.h:33
+#: src/bug-buddy.glade.h:29
 msgid "Please make any final corrections to the bug report."
 msgstr "Palun tee raportisse oma viimased parandused."
 
-#: src/bug-buddy.glade.h:34
+#: src/bug-buddy.glade.h:30
 msgid "Please make your bug report in English, if possible."
 msgstr "Võimalusel kirjuta veateade palun inglise keelses"
 
-#: src/bug-buddy.glade.h:35
+#: src/bug-buddy.glade.h:31
 msgid "Please select the product for the bug you wish to report."
 msgstr "Palun vali toode, mille kohta sa soovid veateate saata."
 
-#: src/bug-buddy.glade.h:36
+#: src/bug-buddy.glade.h:32
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
 "reported bugs.\n"
@@ -441,7 +450,7 @@ msgstr ""
 "tuntud vigade hulgas.\n"
 "Kui on, siis palun ära sellest veast uuesti teata."
 
-#: src/bug-buddy.glade.h:38
+#: src/bug-buddy.glade.h:34
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -449,155 +458,139 @@ msgstr ""
 "Palun oota, kuni Bug Buddy uuendab oma \n"
 "toodete ja veajälgimissüsteemide nimekirja."
 
-#: src/bug-buddy.glade.h:40
-msgid "Port"
-msgstr "Port"
-
-#: src/bug-buddy.glade.h:41
+#: src/bug-buddy.glade.h:36
 msgid "Process ID:"
 msgstr "Protsessi ID:"
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:37
 msgid "Proxy Settings..."
 msgstr "Proksi sätted..."
 
-#: src/bug-buddy.glade.h:43
-msgid "Proxy requires a username and password"
-msgstr "Proksi vajab kasutajanime ja parooli"
-
-#: src/bug-buddy.glade.h:44
+#: src/bug-buddy.glade.h:38
 msgid "Save in"
 msgstr "Salvestamise koht"
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:39
 msgid "Save the report to..."
 msgstr "Salvesta veateade..."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:40
 msgid "Saving:"
 msgstr "Salvestan:"
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:41
 msgid "Select a mailer"
 msgstr "Vali meiler"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:42
 msgid "Sendmail Settings"
 msgstr "Sendmaili sätted"
 
-#: src/bug-buddy.glade.h:49
+#: src/bug-buddy.glade.h:43
 msgid "Severity"
 msgstr "Tõsidus"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:44
 msgid "Show _Debugging Details"
 msgstr "Näita _debugimise infot"
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
 msgstr "Näita kõige tihemini teatatavaid vigu tootes:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:46
 msgid "Simple"
 msgstr "Lihtne"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:47
 msgid "Start"
 msgstr "Käivita"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:48
 msgid "Start in terminal"
 msgstr "Käivita terminalis"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:49
 msgid "Stop"
 msgstr "Peata"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:50
 msgid "Submit another bug"
 msgstr "Sisesta veel üks veateade"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:51
 msgid "Summary"
 msgstr "Kokkuvõte"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:52
 msgid "The product is not listed above."
 msgstr "Toode ei ole märgitud üleval asuvas nimekirjas."
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:53
 msgid "To"
 msgstr "Kellele"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:54
 msgid "To:"
 msgstr "Kuhu:"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:55
 msgid "Understands Netscape remote control"
 msgstr "Saab aru Netscape kaugjuhtimisest"
 
-#: src/bug-buddy.glade.h:62
+#: src/bug-buddy.glade.h:56
 msgid "Updating products list:"
 msgstr "Uuendan toodete nimekirja:"
 
-#: src/bug-buddy.glade.h:63
-msgid "Use HTTP Proxy"
-msgstr "Kasuta HTTP proksit"
-
-#: src/bug-buddy.glade.h:64
+#: src/bug-buddy.glade.h:57
 msgid "Use sendmail directly"
 msgstr "Kasuta sendmaili otse"
 
-#: src/bug-buddy.glade.h:65
+#: src/bug-buddy.glade.h:58
 msgid "Use the default GNOME mailer"
 msgstr "Kasuta vaikimisi GNOME meilerit"
 
-#: src/bug-buddy.glade.h:66
-msgid "Username"
-msgstr "Kasutajanimi"
-
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:59
 msgid "Version"
 msgstr "Versioon"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:60
 msgid "component"
 msgstr "komponent"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:61
 msgid "desc"
 msgstr "kirjeldus"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:62
 msgid "email info"
 msgstr "meili info"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:63
 msgid "finished"
 msgstr "lõpetatud"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:64
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:65
 msgid "gnome"
 msgstr "gnome"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:66
 msgid "mail config"
 msgstr "meili konfiguratsioon"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:67
 msgid "mostfreq"
 msgstr "mostfreq"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:68
 msgid "product"
 msgstr "toode"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:69
 msgid "sendmail"
 msgstr "sendmail"
 
@@ -641,15 +634,15 @@ msgstr "GNOME graafiline vigade teatamise süsteem."
 msgid "The lame Bug Buddy web page"
 msgstr "Bug Buddy nõme veebileht"
 
-#: src/united-states-of-bug-buddy.c:284
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter your name."
 msgstr "Palun sisesta oma nimi."
 
-#: src/united-states-of-bug-buddy.c:300
+#: src/united-states-of-bug-buddy.c:309
 msgid "Please enter a valid email address."
 msgstr "Palun sisesta kehtiv e-posti aadress."
 
-#: src/united-states-of-bug-buddy.c:316
+#: src/united-states-of-bug-buddy.c:325
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -660,20 +653,20 @@ msgstr ""
 "\n"
 "Palun kontrolli sendmaili otsinguteed."
 
-#: src/united-states-of-bug-buddy.c:348
+#: src/united-states-of-bug-buddy.c:357
 msgid "Please enter a valid email command."
 msgstr "Palun sisesta kehtiv meilikäsk."
 
-#: src/united-states-of-bug-buddy.c:412
+#: src/united-states-of-bug-buddy.c:421
 msgid "The specified file does not exist."
 msgstr "Seda faili ei leitud."
 
-#: src/united-states-of-bug-buddy.c:422
+#: src/united-states-of-bug-buddy.c:431
 #, c-format
 msgid "File is of type: %s"
 msgstr "Faili tüüp: %s"
 
-#: src/united-states-of-bug-buddy.c:429
+#: src/united-states-of-bug-buddy.c:438
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -684,19 +677,23 @@ msgstr ""
 "\n"
 "Bug Buddy saab saata ainult lihttekstifaile (text/*)."
 
-#: src/united-states-of-bug-buddy.c:449
+#: src/united-states-of-bug-buddy.c:458
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Sa pead oma veateatele lisama arusaadava teema."
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Sa pead oma veateatele lisama arusaadava kirjelduse."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:502
 msgid "Submit this bug report now?"
 msgstr "Kas sa soovid veateate kohe saata?"
 
-#: src/united-states-of-bug-buddy.c:508
+#: src/united-states-of-bug-buddy.c:505
+msgid "_Submit"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:526
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -705,12 +702,12 @@ msgstr ""
 "Ei saa avada faili '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:522
+#: src/united-states-of-bug-buddy.c:540
 #, c-format
 msgid "about to run '%s'"
 msgstr "kohe käivitan '%s'"
 
-#: src/united-states-of-bug-buddy.c:530
+#: src/united-states-of-bug-buddy.c:548
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -719,12 +716,12 @@ msgstr ""
 "Ei saa käivitada meiliprogrammi '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:568
+#: src/united-states-of-bug-buddy.c:586
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Sinu veateade salvestati '%s'"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:589
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -739,25 +736,25 @@ msgstr ""
 "\n"
 "Täname!"
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:644
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:647
+#: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
 msgstr "Sa pead veateate jaoks toote määrama."
 
-#: src/united-states-of-bug-buddy.c:670
+#: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a component for your bug report."
 msgstr "Sa pead veateate jaoks komponendi määrama."
 
-#: src/united-states-of-bug-buddy.c:684
+#: src/united-states-of-bug-buddy.c:702
 msgid "You must specify a version for your bug report."
 msgstr "Sa pead veateate jaoks versiooni määrama."
 
-#: src/united-states-of-bug-buddy.c:765
+#: src/united-states-of-bug-buddy.c:785
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -767,7 +764,7 @@ msgstr ""
 "\n"
 "Täname teid veateate saatmise eest."
 
-#: src/united-states-of-bug-buddy.c:792
+#: src/united-states-of-bug-buddy.c:812
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -783,3 +780,26 @@ msgstr "Vea teatamise programm"
 msgid "Report a bug in GNOME"
 msgstr "Teata GNOME veast"
 
+#~ msgid "Go"
+#~ msgstr "Alusta"
+
+#~ msgid "HTTP Proxy Settings"
+#~ msgstr "HTTP proksi sätted"
+
+#~ msgid "Location"
+#~ msgstr "Asukoht"
+
+#~ msgid "Password"
+#~ msgstr "Parool"
+
+#~ msgid "Port"
+#~ msgstr "Port"
+
+#~ msgid "Proxy requires a username and password"
+#~ msgstr "Proksi vajab kasutajanime ja parooli"
+
+#~ msgid "Use HTTP Proxy"
+#~ msgstr "Kasuta HTTP proksit"
+
+#~ msgid "Username"
+#~ msgstr "Kasutajanimi"
