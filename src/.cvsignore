@@ -4,3 +4,4 @@ Makefile
 .libs
 bug-buddy
 gnome-crash
+bug-buddy.keys
