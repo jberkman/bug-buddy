@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2001-03-25 03:59+0200\n"
-"PO-Revision-Date: 2001-02-17 17:42+0100\n"
+"POT-Creation-Date: 2001-03-25 15:10+0100\n"
+"PO-Revision-Date: 2001-03-25 15:12+01:00\n"
 "Last-Translator: Gergely Nagy <greg@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -204,13 +204,12 @@ msgstr ""
 "Debug információ gyûjtése ki lesz hagyva."
 
 #: src/gdb-buddy.c:272
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "A gdb-cmd file nem található\n"
-"Próbáld orvosolni a bug-buddy újratelepítésével."
+"Próbáld orvosolni a Bug Buddy újratelepítésével."
 
 #: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
@@ -503,7 +502,7 @@ msgid "Please enter a valid email address."
 msgstr "Írd be az e-mail címed!"
 
 #: src/united-states-of-bug-buddy.c:286
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
