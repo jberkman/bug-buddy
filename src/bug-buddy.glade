@@ -1146,20 +1146,48 @@ the application that crashed.</label>
 	</child>
 
 	<widget>
-	  <class>GtkLabel</class>
-	  <name>label37</name>
-	  <label>Please wait while bug-buddy collects debugging info...</label>
-	  <justify>GTK_JUSTIFY_CENTER</justify>
-	  <wrap>False</wrap>
-	  <xalign>0.5</xalign>
-	  <yalign>0.5</yalign>
-	  <xpad>0</xpad>
-	  <ypad>0</ypad>
+	  <class>GtkHBox</class>
+	  <name>hbox4</name>
+	  <homogeneous>False</homogeneous>
+	  <spacing>0</spacing>
 	  <child>
 	    <padding>0</padding>
 	    <expand>False</expand>
 	    <fill>False</fill>
 	  </child>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <name>label37</name>
+	    <label>Please wait while bug-buddy collects debugging info...</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	    <child>
+	      <padding>0</padding>
+	      <expand>True</expand>
+	      <fill>False</fill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>Custom</class>
+	    <name>bug_animator</name>
+	    <width>48</width>
+	    <height>48</height>
+	    <creation_function>make_anim</creation_function>
+	    <int1>0</int1>
+	    <int2>0</int2>
+	    <last_modification_time>Sat, 06 Nov 1999 21:17:53 GMT</last_modification_time>
+	    <child>
+	      <padding>0</padding>
+	      <expand>False</expand>
+	      <fill>False</fill>
+	    </child>
+	  </widget>
 	</widget>
 
 	<widget>

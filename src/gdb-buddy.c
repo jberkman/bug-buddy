@@ -88,6 +88,7 @@ handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 		gdk_input_remove (input);
 		gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 						   TRUE, TRUE, TRUE);
+		gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
 		return;
 	}
 
@@ -138,7 +139,13 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	gtk_editable_delete_text (GTK_EDITABLE (druid_data.gdb_text), 0, -1);
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   FALSE, FALSE, TRUE);
-
+	gnome_animator_start (GNOME_ANIMATOR (druid_data.gdb_anim));
 	input = gdk_input_add (fileno (fp), GDK_INPUT_READ,
 			       handle_gdb_input, fp);
 }
+
+
+
+
+
+

@@ -1,7 +1,8 @@
 pixmapdir = $(datadir)/bug-buddy
 pixmap_DATA = \
 	bug-core.png	\
-	bug-flower.png
+	bug-flower.png	\
+	bug-anim.png
 
 icondir = $(datadir)/pixmaps
 icon_DATA = \

@@ -56,6 +56,7 @@ typedef struct {
 	GtkWidget *misc;
 
 	GtkWidget *gdb_text;
+	GtkWidget *gdb_anim;
 	GtkWidget *app_file;
 	GtkWidget *pid;
 	GtkWidget *core_file;

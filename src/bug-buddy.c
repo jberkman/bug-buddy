@@ -45,6 +45,8 @@ void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
 void on_version_apply_clicked (GtkButton *button, gpointer udata);
 void on_file_radio_toggled (GtkWidget *radio, gpointer data);
 gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
+GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
+		       gchar *string2, gint int1, gint int2);
 
 extern const char *packages[];
 
@@ -496,23 +498,24 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 
 	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	fprintf (fp, "\nHow to repeat:\n\n%s\n", s);
+	if (s)
+		fprintf (fp, "\nHow to repeat:\n\n%s\n", s);
 	g_free (s);
 
 	w = glade_xml_get_widget (druid_data.xml, "extra_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	fprintf (fp, "\nExtra information:\n\n%s\n", s);
+	if (s)
+		fprintf (fp, "\nExtra information:\n\n%s\n", s);
 	g_free (s);
 
-	w = glade_xml_get_widget (druid_data.xml, "gdb_less");      
-	fprintf (fp, "\nDebugging information:\n\n");
-	fflush (fp);
-	gnome_less_write_fd (GNOME_LESS (w), fileno (fp));
+	w = glade_xml_get_widget (druid_data.xml, "gdb_text");
+	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	if (s)
+		fprintf (fp, "\nDebugging information:\n\n%s\n", s);
+	g_free (s);
 
 	fclose (fp);
-
 	save_config ();
-
 	gtk_main_quit ();
 
 	return FALSE;
@@ -614,6 +617,21 @@ set_severity (GtkWidget *w, gpointer data)
 {
 	druid_data.severity = GPOINTER_TO_INT (data);
 	return FALSE;
+}
+
+GtkWidget *
+make_anim (gchar *widget_name, gchar *string1, 
+	   gchar *string2, gint int1, gint int2)
+{
+	gchar *pixmap;
+	druid_data.gdb_anim = gnome_animator_new_with_size (48, 48);
+	gnome_animator_set_loop_type (GNOME_ANIMATOR (druid_data.gdb_anim),
+				      GNOME_ANIMATOR_LOOP_RESTART);
+	pixmap = gnome_datadir_file ("bug-buddy/bug-anim.png");
+	gnome_animator_append_frames_from_file (GNOME_ANIMATOR (druid_data.gdb_anim),
+						pixmap, 0, 0, 250, 48);
+	g_free (pixmap);
+	return druid_data.gdb_anim;
 }
 
 static void

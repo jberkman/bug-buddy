@@ -1,5 +1,17 @@
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* pixmaps/bug-anim.png: new file
+	
+	* pixmaps/Makefile.am (pixmap_DATA): add bug-anim.png
+
+	* src/gdb-buddy.c (get_trace_from_pair): start the animator
+	(handle_gdb_input): stop the animator
+
+	* src/bug-buddy.c (make_anim): create a GnomeAnimator for glade
+
+	* src/bug-buddy.glade: add a custom widget until glade supports
+	GnomeAnimators
+	
 	* src/bug-buddy.c (on_complete_page_prepare): mark another
 	string for i18n (sorry kmarass)
 
