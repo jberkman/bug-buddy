@@ -1,3 +1,7 @@
+2001-12-13  jacob berkman  <jacob@ximian.com>
+
+	* gentool/gentool.m4: some games
+
 2001-12-12  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.c (load_mostfreq_xml): add each bug, not just one
