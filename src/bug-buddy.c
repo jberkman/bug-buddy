@@ -463,6 +463,53 @@ fixup_notebook (const char *name)
 	gtk_notebook_set_show_tabs   (GTK_NOTEBOOK (nb), FALSE);
 }
 
+static void
+init_gnome_version_stuff (void)
+{
+	xmlDoc *doc;
+	char *xml_file;
+	xmlNode *node;
+	char *platform, *minor, *micro, *vendor;
+
+
+	druid_data.gnome_version = g_getenv ("BUG_BUDDY_GNOME_VERSION");
+
+	xml_file = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_DATADIR,
+					      "gnome-about/gnome-version.xml",
+					      TRUE, NULL);
+	if (!xml_file)
+		return;
+	doc = xmlParseFile (xml_file);
+	if (!doc)
+		return;
+
+	platform = minor = micro = vendor = NULL;
+	
+	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
+		if (!strcmp (node->name, "platform"))
+			platform = xmlNodeGetContent (node);
+		else if (!strcmp (node->name, "minor"))
+			minor = xmlNodeGetContent (node);
+		else if (!strcmp (node->name, "micro"))
+			micro = xmlNodeGetContent (node);
+		else if (!strcmp (node->name, "vendor"))
+			vendor = xmlNodeGetContent (node);
+	}
+	
+	if (platform && minor && micro)
+		druid_data.gnome_platform_version = g_strdup_printf ("GNOME%s.%s.%s", platform, minor, micro);
+  
+	if (vendor && *vendor)
+		druid_data.gnome_vendor = g_strdup (vendor);
+	
+	xmlFree (platform);
+	xmlFree (minor);
+	xmlFree (micro);
+	xmlFree (vendor);
+	
+	xmlFreeDoc (doc);
+}
+
 /* there should be no setting of default values here, I think */
 static void
 init_ui (void)
@@ -481,8 +528,6 @@ init_ui (void)
 
 	for (sp = nbs; *sp; sp++)
 		fixup_notebook (*sp);
-
-	druid_data.gnome_version = g_getenv ("BUG_BUDDY_GNOME_VERSION");
 
 	/* dialog crash page */
 	s = popt_data.app_file;
@@ -717,6 +762,7 @@ main (int argc, char *argv[])
 
 	druid_set_state (STATE_GDB);
 
+	init_gnome_version_stuff ();
 	init_ui ();
 
 	gtk_widget_show (GET_WIDGET ("druid-window"));

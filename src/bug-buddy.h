@@ -138,6 +138,9 @@ typedef struct {
 
 	const char *gnome_version;
 
+	char *gnome_platform_version;
+	char *gnome_vendor;
+
 	guint dl_timeout;
 } DruidData;
 
