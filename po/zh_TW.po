@@ -1,13 +1,18 @@
 # traditional chinese translation of bug-buddy
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Copyright (C) 2000-2002 Free Software Foundation, Inc.
+#
+# Gnome 1.x
 # Jing-Jong SHYUE <shyue@sonoma.com.tw>, 2000
+# Joe Man <trmetal@yahoo.com.hk>, 2001
+#
+# Gnome 2.x
 # Joe Man <trmetal@yahoo.com.hk>, 2001-2002
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.1.0\n"
+"Project-Id-Version: bug-buddy 2.1.4\n"
 "POT-Creation-Date: 2002-04-23 17:41+0800\n"
-"PO-Revision-Date: 2002-04-23 17:11+0800\n"
+"PO-Revision-Date: 2002-04-26 17:46+0800\n"
 "Last-Translator: Joe Man <trmetal@yahoo.com.hk>\n"
 "Language-Team: Traditonal Chinese <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
@@ -105,7 +110,7 @@ msgstr "附加於錯誤報告內的文字檔"
 #: src/bug-buddy.c:96
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr "無法在 %2$s 找到具有這名稱 %1$s 的元件"
+msgstr "無法找到具有名稱 %s 的元件 (在 %s 中)"
 
 #: src/bug-buddy.c:208
 msgid ""
@@ -401,9 +406,8 @@ msgid "Include a text file"
 msgstr "附加文字檔"
 
 #: src/bug-buddy.glade.h:27
-#, fuzzy
 msgid "Just save to a file so I can submit a bug report manually"
-msgstr "只需要將資料儲存到檔案，自己安排傳送錯誤報告。"
+msgstr "只需要將資料儲存到檔案，我會自己安排傳送錯誤報告。"
 
 #: src/bug-buddy.glade.h:28
 msgid "Location"
