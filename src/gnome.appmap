@@ -7,7 +7,7 @@ gemvt gnome-core
 gnome-find gnome-utils
 life_applet gnome-applets
 asclock_applet gnome-applets
-gnomecal gnomecal
+gnomecal gnome-pim
 gnome-login-check gnome-core
 printer_applet gnome-applets
 gnomepager_applet gnome-applets
