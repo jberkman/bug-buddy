@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-12-06 16:39-0500\n"
-"PO-Revision-Date: 2001-11-18 20:08+0100\n"
+"POT-Creation-Date: 2001-12-15 14:52+0100\n"
+"PO-Revision-Date: 2001-12-15 14:52+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "gdb has already exited"
 msgstr "gdb har redan avslutats"
 
-#: src/bug-buddy.c:424
+#: src/bug-buddy.c:413
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -126,7 +126,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME är föråldrat.\n"
 "Använd kommandoradsflaggan --appname istället."
 
-#: src/bug-buddy.c:434
+#: src/bug-buddy.c:423
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -134,7 +134,7 @@ msgstr ""
 "$GNOME_CRASHED_PID är föråldrat.\n"
 "Använd kommandoradsflaggan --pid istället."
 
-#: src/bug-buddy.c:555
+#: src/bug-buddy.c:544
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -143,21 +143,26 @@ msgstr ""
 "Bug Buddy kunde inte läsa in dess användargränssnittsfil (%s).\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bug-buddy.glade.h:49 src/bugzilla.c:562
-#: src/united-states-of-bug-buddy.c:52
+#: src/bugzilla.c:584
+msgid "ID"
+msgstr "ID"
+
+#: src/bug-buddy.glade.h:51 src/bugzilla.c:598 src/bugzilla.c:638
+#: src/united-states-of-bug-buddy.c:50
 msgid "Product"
 msgstr "Produkt"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:568 src/bugzilla.c:596
-msgid "Description"
-msgstr "Beskrivning"
-
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:590
-#: src/united-states-of-bug-buddy.c:53
+#: src/bug-buddy.glade.h:14 src/bugzilla.c:604 src/bugzilla.c:666
+#: src/united-states-of-bug-buddy.c:51
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bugzilla.c:617
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:610 src/bugzilla.c:644
+#: src/bugzilla.c:672
+msgid "Description"
+msgstr "Beskrivning"
+
+#: src/bugzilla.c:693
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -166,21 +171,9 @@ msgstr ""
 "Bug Buddy kunde inte öppna \"%s\".\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bugzilla.c:633
+#: src/bugzilla.c:711
 msgid "All"
 msgstr "Alla"
-
-#: src/bugzilla.c:662
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug Buddy har kommit fram till att en del av dess information\n"
-"om de olika felrapporteringssystemen kanske behöver uppdateras.\n"
-"\n"
-"Ska Bug Buddy prova att uppdatera dessa filer nu?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -243,7 +236,7 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn-fenomenet"
 
 #: src/bug-buddy.glade.h:5
-msgid "Automatically continue to next step when debugging is complete"
+msgid "Automatically continue to the next step when debugging is complete"
 msgstr "Fortsätt automatiskt till nästa steg när felsökning är klar"
 
 #: src/bug-buddy.glade.h:6
@@ -362,11 +355,21 @@ msgstr "Välj den produkt som du vill rapportera ett programfel i."
 
 #: src/bug-buddy.glade.h:45
 msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+"Avsätt gärna en minut av din tid för att undersöka om det fel du vill "
+"rapportera är ett bland de oftast rapporterade.\n"
+"Rapportera inte felet igen om det redan är rapporterat."
+
+#: src/bug-buddy.glade.h:47
+msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "Var vänlig och vänta medan Bug Buddy samlar in information om ditt system."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:48
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -374,51 +377,55 @@ msgstr ""
 "Var vänlig och vänta medan Bug Buddy uppdaterar\n"
 "listan med produkter i felrapporteringssystemen."
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:50
 msgid "Process ID"
 msgstr "Process-ID"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:52
 msgid "Save the report to..."
 msgstr "Spara rapporten till..."
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:53
 msgid "Saving:"
 msgstr "Sparar:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:54
 msgid "Select an action"
 msgstr "Välj en åtgärd"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:55
 msgid "Send copy to yourself"
 msgstr "Skicka en kopia till dig själv"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:56
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:57
 msgid "Severity"
 msgstr "Allvarlighetsgrad"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:58
+msgid "Show most frequent bugs in:"
+msgstr "Visa de oftast rapporterade felen i:"
+
+#: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
 msgstr "Hoppa över detta steg i framtiden"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:60
 msgid "Stop"
 msgstr "Stopp"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:61
 msgid "Submit another bug"
 msgstr "Skicka ytterligare en felrapport"
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:62
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:63
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
@@ -437,55 +444,55 @@ msgstr ""
 "kontaktas om det behövs ytterligare information,\n"
 "eller när en korrigerad version är tillgänglig."
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:70
 msgid "To"
 msgstr "Till"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:71
 msgid "To:"
 msgstr "Till:"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:72
 msgid "Version"
 msgstr "Version"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:73
 msgid "Version installed"
 msgstr "Installerad version"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:74
 msgid "component"
 msgstr "komponent"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:75
 msgid "desc"
 msgstr "beskr"
 
-#: src/bug-buddy.glade.h:73
-msgid "download"
-msgstr "hämta"
-
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:76
 msgid "email info"
 msgstr "e-postinformation"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:77
 msgid "finished"
 msgstr "slutförd"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:78
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:79
 msgid "intro"
 msgstr "intro"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:80
+msgid "mostfreq"
+msgstr "oftastrapporterade"
+
+#: src/bug-buddy.glade.h:81
 msgid "product"
 msgstr "produkt"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:82
 msgid "system"
 msgstr "system"
 
@@ -497,13 +504,13 @@ msgstr "Välkommen till Bug Buddy"
 msgid "Debugging Information"
 msgstr "Felsökningsinformation"
 
-#: src/united-states-of-bug-buddy.c:50
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr "Oftast rapporterade fel"
+
+#: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
 msgstr "Felbeskrivning"
-
-#: src/united-states-of-bug-buddy.c:51
-msgid "Updating Product Listing"
-msgstr "Uppdaterar produktlista"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
@@ -525,15 +532,15 @@ msgstr "GNOME:s grafiska verktyg för felrapportering."
 msgid "The lame Bug Buddy web page"
 msgstr "Bug Buddys lama hemsida"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:277
 msgid "Please enter your name."
 msgstr "Ange ditt namn."
 
-#: src/united-states-of-bug-buddy.c:304
+#: src/united-states-of-bug-buddy.c:293
 msgid "Please enter a valid email address."
 msgstr "Ange en giltig e-postadress."
 
-#: src/united-states-of-bug-buddy.c:321
+#: src/united-states-of-bug-buddy.c:310
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -550,16 +557,16 @@ msgstr ""
 "\n"
 "Ange en ny sökväg till sendmail?"
 
-#: src/united-states-of-bug-buddy.c:381
+#: src/united-states-of-bug-buddy.c:370
 msgid "The specified file does not exist."
 msgstr "Den angivna filen finns inte."
 
-#: src/united-states-of-bug-buddy.c:391
+#: src/united-states-of-bug-buddy.c:380
 #, c-format
 msgid "File is of type: %s"
 msgstr "Filen är av typ: %s"
 
-#: src/united-states-of-bug-buddy.c:398
+#: src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -570,19 +577,19 @@ msgstr ""
 "\n"
 "Bug Buddy kan endast skicka vanliga textfiler (text/*)."
 
-#: src/united-states-of-bug-buddy.c:418
+#: src/united-states-of-bug-buddy.c:407
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Du måste inkludera en förståelig ämnesrad i din felrapport."
 
-#: src/united-states-of-bug-buddy.c:434
+#: src/united-states-of-bug-buddy.c:423
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Du måste inkludera en förståelig beskrivning i din felrapport."
 
-#: src/united-states-of-bug-buddy.c:457
+#: src/united-states-of-bug-buddy.c:446
 msgid "Submit this bug report now?"
 msgstr "Skicka felrapporten nu?"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:468
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -591,12 +598,12 @@ msgstr ""
 "Kunde inte öppna filen \"%s\":\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:494
+#: src/united-states-of-bug-buddy.c:483
 #, c-format
 msgid "about to run '%s'"
 msgstr "kommer att köra \"%s\""
 
-#: src/united-states-of-bug-buddy.c:502
+#: src/united-states-of-bug-buddy.c:491
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -605,12 +612,12 @@ msgstr ""
 "Kunde inte starta e-postprogrammet \"%s\":\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:545
+#: src/united-states-of-bug-buddy.c:534
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din felrapport har sparats i \"%s\""
 
-#: src/united-states-of-bug-buddy.c:548
+#: src/united-states-of-bug-buddy.c:537
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -625,19 +632,19 @@ msgstr ""
 "\n"
 "Tack!"
 
-#: src/united-states-of-bug-buddy.c:609
+#: src/united-states-of-bug-buddy.c:593
 msgid "You must specify a product for your bug report."
 msgstr "Du måste ange en produkt för din felrapport."
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:610
 msgid "You must specify a component for your bug report."
 msgstr "Du måste ange en komponent för din felrapport."
 
-#: src/united-states-of-bug-buddy.c:640
+#: src/united-states-of-bug-buddy.c:624
 msgid "You must specify a version for your bug report."
 msgstr "Du måste ange ett versionsnummer för din buggrapport."
 
-#: src/united-states-of-bug-buddy.c:676
+#: src/united-states-of-bug-buddy.c:670
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -652,6 +659,23 @@ msgstr "Felrapporteringsverktyg"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Rapportera ett fel i GNOME"
+
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug Buddy har kommit fram till att en del av dess information\n"
+#~ "om de olika felrapporteringssystemen kanske behöver uppdateras.\n"
+#~ "\n"
+#~ "Ska Bug Buddy prova att uppdatera dessa filer nu?"
+
+#~ msgid "download"
+#~ msgstr "hämta"
+
+#~ msgid "Updating Product Listing"
+#~ msgstr "Uppdaterar produktlista"
 
 #~ msgid "Are you sure you want to cancel this update?"
 #~ msgstr "Är du säker på att du vill avbryta denna uppdatering?"
