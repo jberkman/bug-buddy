@@ -50,6 +50,9 @@
       <class>GnomeDruidPageStart</class>
       <name>druidpagestart1</name>
       <title>GNOME bug-buddy</title>
+      <title>GNOME bug-buddy</title>
+      <text>This will guide you through the 
+GNOME bug submission process</text>
       <text>This will guide you through the 
 GNOME bug submission process</text>
       <title_color>255,255,255</title_color>
@@ -69,6 +72,7 @@ GNOME bug submission process</text>
 	<handler>on_contact_page_next</handler>
 	<last_modification_time>Fri, 15 Oct 1999 18:21:08 GMT</last_modification_time>
       </signal>
+      <title>Contact Information</title>
       <title>Contact Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
@@ -236,6 +240,7 @@ bug is resolved, or for developers to request more information from you.</label>
       <class>GnomeDruidPageStandard</class>
       <name>version_page</name>
       <title>System Configuration</title>
+      <title>System Configuration</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,0</background_color>
       <logo_background_color>0,0,0</logo_background_color>
@@ -398,6 +403,7 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>package_page</name>
+      <title>Package Information</title>
       <title>Package Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
@@ -701,6 +707,7 @@ bug you are reporting</label>
 	<last_modification_time>Mon, 11 Oct 1999 21:29:38 GMT</last_modification_time>
       </signal>
       <title>Nature of the Bug</title>
+      <title>Nature of the Bug</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -803,6 +810,7 @@ bug you are reporting</label>
 	<handler>on_attach_page_next</handler>
 	<last_modification_time>Mon, 11 Oct 1999 21:50:50 GMT</last_modification_time>
       </signal>
+      <title>Crashed Application</title>
       <title>Crashed Application</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
@@ -976,6 +984,7 @@ the aplication that crashed.</label>
 	<last_modification_time>Mon, 11 Oct 1999 21:55:54 GMT</last_modification_time>
       </signal>
       <title>Application Core Dump</title>
+      <title>Application Core Dump</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -1052,6 +1061,7 @@ the aplication that crashed.</label>
 	<last_modification_time>Mon, 11 Oct 1999 22:01:39 GMT</last_modification_time>
       </signal>
       <title>Debugging Information</title>
+      <title>Debugging Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -1108,6 +1118,7 @@ bug-buddy has obtained:</label>
 	<handler>on_misc_page_back</handler>
 	<last_modification_time>Mon, 11 Oct 1999 22:01:45 GMT</last_modification_time>
       </signal>
+      <title>Extra Information</title>
       <title>Extra Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
@@ -1211,6 +1222,7 @@ bug-buddy has obtained:</label>
       <class>GnomeDruidPageStandard</class>
       <name>action_page</name>
       <title>Action</title>
+      <title>Action</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -1302,6 +1314,8 @@ bug-buddy has obtained:</label>
 	<last_modification_time>Fri, 15 Oct 1999 07:02:12 GMT</last_modification_time>
       </signal>
       <title>Bug submission complete</title>
+      <title>Bug submission complete</title>
+      <text></text>
       <text></text>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>

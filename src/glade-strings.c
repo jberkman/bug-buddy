@@ -5,13 +5,19 @@
  */
 
 gchar *s = N_("bug-buddy");
+gchar *s = N_("GNOME bug-buddy");
+gchar *s = N_("This will guide you through the \n"
+              "GNOME bug submission process");
+gchar *s = N_("Contact Information");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
+gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
+gchar *s = N_("Package Information");
 gchar *s = N_("Short description\n"
               "of the problem");
 gchar *s = N_("Bug severity");
@@ -19,20 +25,27 @@ gchar *s = N_("Version");
 gchar *s = N_("Package");
 gchar *s = N_("Enter the information about the\n"
               "bug you are reporting");
+gchar *s = N_("Nature of the Bug");
 gchar *s = N_("What type of bug are you reporting?");
 gchar *s = N_("Application crash with crash dialog");
 gchar *s = N_("Application crash with core file");
 gchar *s = N_("No crash");
+gchar *s = N_("Crashed Application");
 gchar *s = N_("Please enter the filename and pid of\n"
               "the aplication that crashed.");
 gchar *s = N_("File");
 gchar *s = N_("Process ID");
+gchar *s = N_("Application Core Dump");
 gchar *s = N_("Enter the filename of the core dump");
+gchar *s = N_("Debugging Information");
 gchar *s = N_("This is the debugging information\n"
               "bug-buddy has obtained:");
+gchar *s = N_("Extra Information");
 gchar *s = N_("How to repeat the bug:");
 gchar *s = N_("Extra information (patches, special configuration, etc)");
+gchar *s = N_("Action");
 gchar *s = N_("Choose the action you wish to take");
 gchar *s = N_("Submit bug report");
 gchar *s = N_("Send report to your email address *only*");
 gchar *s = N_("Do not send bug report anywhere");
+gchar *s = N_("Bug submission complete");
