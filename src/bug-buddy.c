@@ -139,29 +139,35 @@ static gboolean
 update_crash_type (GtkWidget *w, gpointer data)
 {
 	CrashType new_type = GPOINTER_TO_INT (data);
-	GtkWidget *table, *box, *scrolled;
+	GtkWidget *table, *box, *scrolled, *go;
+
+	stop_gdb ();
 
 	druid_data.crash_type = new_type;
 	
 	table = GET_WIDGET ("gdb-binary-table");
 	box = GET_WIDGET ("gdb-core-box");
 	scrolled = GET_WIDGET ("gdb-text-scrolled");
+	go = GET_WIDGET ("gdb-go");
 
 	switch (new_type) {
 	case CRASH_DIALOG:
 		gtk_widget_hide (box);
 		gtk_widget_show (table);
 		gtk_widget_set_sensitive (scrolled, TRUE);
+		gtk_widget_set_sensitive (go, TRUE);
 		break;
 	case CRASH_CORE:
 		gtk_widget_hide (table);
 		gtk_widget_show (box);
 		gtk_widget_set_sensitive (scrolled, TRUE);
+		gtk_widget_set_sensitive (go, TRUE);
 		break;
 	case CRASH_NONE:
 		gtk_widget_hide (table);
 		gtk_widget_hide (box);
 		gtk_widget_set_sensitive (scrolled, FALSE);
+		gtk_widget_set_sensitive (go, FALSE);
 		break;
 	}
 
@@ -222,6 +228,9 @@ on_gdb_stop_clicked (GtkWidget *button, gpointer data)
 				      "debugging information.\n"
 				      "Kill the gdb process (the stack trace "
 				      "will be incomplete)?"));
+
+	gtk_dialog_set_default_response (GTK_DIALOG (w),
+					 GTK_RESPONSE_YES);
 
 	if (GTK_RESPONSE_YES == gtk_dialog_run (GTK_DIALOG (w))) {
 		gtk_widget_destroy (w);
@@ -543,9 +552,12 @@ main (int argc, char *argv[])
 					    GTK_DIALOG_NO_SEPARATOR,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
-					    _("Could not load '%s'.\n"
-					      "Please make sure Bug Buddy was "
-					      "installed correctly."), s);
+					    _("Bug Buddy could not load its user interface file (%s).\n"
+					      "Please make sure Bug Buddy was installed correctly."), 
+					    s);
+					      
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		return 0;

@@ -286,6 +286,8 @@ intro_page_ok (void)
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Please enter your name."));
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		return FALSE;
@@ -300,6 +302,8 @@ intro_page_ok (void)
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Please enter a valid email address."));
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		return FALSE;
@@ -319,8 +323,10 @@ intro_page_ok (void)
 						      "submit a bug report, but you will\n"
 						      "be able to save it to a file.\n\n"
 						      "Specify a new location for sendmail?"),
-						    s);	
-			if (GTK_RESPONSE_YES == gtk_dialog_run (GTK_DIALOG (w))) {
+						    s);
+			gtk_dialog_set_default_response (GTK_DIALOG (w),
+							 GTK_RESPONSE_YES);
+			if (GTK_RESPONSE_NO != gtk_dialog_run (GTK_DIALOG (w))) {
 				g_free (s);
 				gtk_widget_destroy (w);
 				return FALSE;
@@ -373,6 +379,8 @@ desc_page_ok (void)
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("The specified file does not exist."));
+			gtk_dialog_set_default_response (GTK_DIALOG (w),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (w));
 			gtk_widget_destroy (w);
 			g_free (s);
@@ -390,6 +398,8 @@ desc_page_ok (void)
 						    _("'%s' is a %s file.\n\n"
 						      "Bug Buddy can only submit plaintext (text/*) files."),
 						    s, mime_type);
+			gtk_dialog_set_default_response (GTK_DIALOG (w),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (w));
 			gtk_widget_destroy (w);
 			g_free (s);
@@ -406,6 +416,8 @@ desc_page_ok (void)
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("You must include a comprehensible subject line in your bug report."));
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		return FALSE;
@@ -420,6 +432,8 @@ desc_page_ok (void)
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("You must include a comprehensible description in your bug report."));
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		return FALSE;
@@ -441,6 +455,8 @@ submit_ok (void)
 					    GTK_MESSAGE_QUESTION,
 					    GTK_BUTTONS_YES_NO,
 					    _("Submit this bug report now?"));
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_YES);
 		if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (w))) {
 			gtk_widget_destroy (w);
 			return FALSE;
@@ -464,6 +480,8 @@ submit_ok (void)
 						    file, g_strerror (errno));
 			g_free (file);
 			g_free (to);
+			gtk_dialog_set_default_response (GTK_DIALOG (w),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (w));
 			gtk_widget_destroy (w);
 			return FALSE;
@@ -483,6 +501,8 @@ submit_ok (void)
 						    GTK_BUTTONS_OK,
 						    _("Unable to start mail program '%s':\n%s"), 
 						    s, g_strerror (errno));
+			gtk_dialog_set_default_response (GTK_DIALOG (w),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (w));
 			gtk_widget_destroy (w);
 			return FALSE;
@@ -587,6 +607,8 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a product for your bug report."));
+			gtk_dialog_set_default_response (GTK_DIALOG (d),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (d));
 			gtk_widget_destroy (d);
 			return;
@@ -602,6 +624,8 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a component for your bug report."));
+			gtk_dialog_set_default_response (GTK_DIALOG (d),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (d));
 			gtk_widget_destroy (d);
 			return;
@@ -614,6 +638,8 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a version for your bug report."));
+			gtk_dialog_set_default_response (GTK_DIALOG (d),
+							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (d));
 			gtk_widget_destroy (d);
 			return;
@@ -649,6 +675,8 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 				    GTK_BUTTONS_YES_NO,
 				    _("Are you sure you want to cancel\n"
 				      "this bug report?"));
+	gtk_dialog_set_default_response (GTK_DIALOG (d),
+					 GTK_RESPONSE_YES);
 	if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (d))) {
 		gtk_widget_destroy (d);
 		return;

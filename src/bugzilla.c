@@ -614,10 +614,12 @@ load_bugzillas (void)
 					    GTK_DIALOG_NO_SEPARATOR,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
-					    _("Could not open '%s'.\n"
+					    _("Bug Buddy could not open '%s'.\n"
 					      "Please make sure Bug Buddy was "
 					      "installed correctly."),
 					    BUDDY_DATADIR "/bugzilla/");
+		gtk_dialog_set_default_response (GTK_DIALOG (w),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (w));
 		gtk_widget_destroy (w);
 		exit (0);
@@ -668,7 +670,7 @@ load_bugzillas (void)
 		d(g_print ("to:\n"));
 		d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
 
-		if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (w))) {
+		if (GTK_RESPONSE_YES == gtk_dialog_run (GTK_DIALOG (w))) {
 			if (GNOME_VFS_OK == gnome_vfs_async_xfer (	    
 				    &druid_data.vfshandle,
 				    druid_data.dlsources,

@@ -158,6 +158,7 @@ get_trace_from_core (const gchar *core_file)
 					    GTK_BUTTONS_OK,
 					    _("Unable to process core file with gdb:\n"
 					      "'%s'"), core_file);
+		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (d));
 		gtk_widget_destroy (d);
 		return;
@@ -188,6 +189,7 @@ get_trace_from_core (const gchar *core_file)
 					    GTK_BUTTONS_OK,
 					    _("GDB was unable to determine which binary created\n"
 					      "'%s'"), core_file);
+		gtk_dialog_set_default_response (GTK_DIALOG (d), GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (d));
 		gtk_widget_destroy (d);
 		return;
@@ -265,6 +267,8 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 					    _("GDB could not be found on your system.\n"
 					      "Debugging information will not be obtained."));
 		d(g_message ("Path: %s", getenv ("PATH")));
+		gtk_dialog_set_default_response (GTK_DIALOG (d),
+						 GTK_RESPONSE_OK);
 		gtk_dialog_run (GTK_DIALOG (d));
 		gtk_widget_destroy (d);
 		return;
@@ -297,6 +301,8 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 					    _("Could not find the gdb-cmd file.\n"
 					      "Please try reinstalling Bug Buddy."));
 		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_dialog_set_default_response (GTK_DIALOG (d),
+						 GTK_RESPONSE_OK);
 		gtk_widget_destroy (d);
 		g_free (app2);
 		return;
@@ -314,6 +320,8 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 					    GTK_BUTTONS_OK,
 					    _("There was an error running gdb."));
 		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_dialog_set_default_response (GTK_DIALOG (d),
+						 GTK_RESPONSE_OK);
 		gtk_widget_destroy (d);
 		g_free (app2);
 		return;
