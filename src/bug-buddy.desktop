@@ -1,12 +1,14 @@
 [Desktop Entry]
 Name=Bug Report Tool
 Name[da]=Fejl-hjælper
+Name[de]=bug-buddy
 Name[es]=bug-buddy
 Name[gl]=bug-buddy
 Name[ja]=bug-buddy
 Name[no]=feil-kompis
 Comment=Report a bug in GNOME
 Comment[da]=Indberet en fejl i GNOME
+Comment[de]=Einen Fehler bei GNOME melden
 Comment[es]=Informe de un error de GNOME
 Comment[gl]=Informe dun erro de GNOME
 Comment[ja]=ÉÔ¶ñ¹çÊó¹ð¥Ä¡¼¥ë
