@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 1999-12-29 12:52+0100\n"
+"POT-Creation-Date: 2000-02-23 12:09-0500\n"
 "PO-Revision-Date: 2000-01-06 15:53+0100\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
@@ -22,16 +22,11 @@ msgstr ""
 msgid "obtaining stack trace..."
 msgstr "obtendo a traza da pila..."
 
-#: src/bug-buddy.c:298 src/gdb-buddy.c:82
+#: src/bug-buddy.c:298 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "o gdb xa saiu"
 
-#: src/gdb-buddy.c:91
-#, c-format
-msgid "Subprocess exited with status %d"
-msgstr "O subproceso saiu co estado %d"
-
-#: src/gdb-buddy.c:119
+#: src/gdb-buddy.c:115
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -40,12 +35,12 @@ msgstr ""
 "Non se pode procesa-lo ficheiro core co gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:144
+#: src/gdb-buddy.c:140
 #, c-format
 msgid "Child process exited with status %d"
 msgstr "O proceso fillo saiu co estado %d"
 
-#: src/gdb-buddy.c:147
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -54,11 +49,11 @@ msgstr ""
 "Non se pode determinar o binario que creou\n"
 "'%s'"
 
-#: src/gdb-buddy.c:178
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr "Erro ó ler... abortando"
 
-#: src/gdb-buddy.c:210
+#: src/gdb-buddy.c:206
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -66,7 +61,7 @@ msgstr ""
 "Non se puido atopa-lo ficheiro gdb-cmd.\n"
 "Por favor, probe a reinstala-lo bug-buddy."
 
-#: src/gdb-buddy.c:218
+#: src/gdb-buddy.c:214
 msgid "Error on fork()."
 msgstr "Erro ó facer fork()."
 
@@ -174,7 +169,7 @@ msgstr "Utilidade gráfica de GNOME de informe de erros"
 msgid "The lame bug-buddy web page"
 msgstr "A páxina web do bug-buddy"
 
-#: src/bug-buddy.c:422
+#: src/bug-buddy.c:423
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -187,11 +182,11 @@ msgstr ""
 "\n"
 "¿Especificar un novo lugar para o sendmail?"
 
-#: src/bug-buddy.c:459
+#: src/bug-buddy.c:460
 msgid "Please enter your name and email address"
 msgstr "Por favor, introduza o seu nome e o seu enderezo de correo electrónico"
 
-#: src/bug-buddy.c:499
+#: src/bug-buddy.c:500
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -199,7 +194,7 @@ msgstr ""
 "Prema en \"Rematar\" para saír de bug-buddy.\n"
 "Non se enviará ningún informe de erro."
 
-#: src/bug-buddy.c:522
+#: src/bug-buddy.c:523
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -208,7 +203,7 @@ msgstr ""
 "Vostede vai gardar un informe de erro en '%s'.\n"
 "Isto pode usarse máis tarde para informar dun erro en '%s'."
 
-#: src/bug-buddy.c:527
+#: src/bug-buddy.c:528
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -229,11 +224,11 @@ msgstr ""
 "\n"
 "Premendo en 'Finish', enviarase o informe de erro."
 
-#: src/bug-buddy.c:639
+#: src/bug-buddy.c:650
 msgid "Please choose a file to save to."
 msgstr "Por favor, escolla un ficheiro no que grabar."
 
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:657
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -242,7 +237,7 @@ msgstr ""
 "O ficheiro '%s' xa existe.\n"
 "¿Sobrescribilo?"
 
-#: src/bug-buddy.c:759
+#: src/bug-buddy.c:768
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -253,7 +248,7 @@ msgstr ""
 
 # Xa sei que 'obsoleto' non é o mesmo que "deprecated", pero non
 # atopo outra traducción, e 'deprecado' non ten nada que ver
-#: src/bug-buddy.c:855
+#: src/bug-buddy.c:864
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -261,7 +256,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --appname no seu lugar."
 
-#: src/bug-buddy.c:868
+#: src/bug-buddy.c:877
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
@@ -269,7 +264,7 @@ msgstr ""
 "$GNOME_CRASHED_PID é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --pid no seu lugar."
 
-#: src/bug-buddy.c:974
+#: src/bug-buddy.c:990
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -313,7 +308,8 @@ msgstr ""
 "desenroladores poidan pedirlle máis información."
 
 #: src/glade-strings.c:14
-msgid "Bug Track System"
+#, fuzzy
+msgid "Bug Tracking System"
 msgstr "Sistema de Seguimento de Erros"
 
 #: src/glade-strings.c:15
@@ -470,25 +466,35 @@ msgid "Submitting the Report"
 msgstr "Enviando o Informe"
 
 #: src/glade-strings.c:56
-msgid "Submit bug report"
-msgstr "Enviar un informe de erro"
+msgid "Submit bug report to bug tracking system"
+msgstr ""
 
 #: src/glade-strings.c:57
+msgid "Submit to individual author"
+msgstr ""
+
+#: src/glade-strings.c:58
 msgid "Send report to your email address only"
 msgstr "Envia-lo informe só ó seu enderezo de correo electrónico"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to a file"
 msgstr "Garda-lo informe nun ficheiro"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Save the report to..."
 msgstr "Garda-lo informe en..."
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Resume"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "O GEGL está a mirar."
+
+#~ msgid "Subprocess exited with status %d"
+#~ msgstr "O subproceso saiu co estado %d"
+
+#~ msgid "Submit bug report"
+#~ msgstr "Enviar un informe de erro"

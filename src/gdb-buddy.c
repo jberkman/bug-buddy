@@ -77,19 +77,15 @@ start_gdb ()
 void
 stop_gdb ()
 {
-	int status;
 	if (!druid_data.ioc) {
 		g_message (_("gdb has already exited"));
 		return;
 	}
 	
 	g_io_channel_close (druid_data.ioc);
-	waitpid (druid_data.gdb_pid, &status, 0);
+	waitpid (druid_data.gdb_pid, NULL, 0);
 	
 	druid_data.gdb_pid = 0;
-#if 0
-	g_message (_("Subprocess exited with status %d"), status);
-#endif
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   TRUE, TRUE, TRUE);
 	gnome_animator_stop (GNOME_ANIMATOR (GDB_ANIM));

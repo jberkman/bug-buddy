@@ -38,6 +38,7 @@
 #include "ctree-combo.h"
 
 /* libglade callbacks */
+gboolean delete_me (GtkWidget *, GdkEventAny *, gpointer data);
 gboolean on_nature_page_next  (GtkWidget *, GnomeDruid *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_less_page_next    (GtkWidget *, GtkWidget *);
@@ -45,7 +46,6 @@ gboolean on_misc_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_the_druid_cancel  (GtkWidget *);
 gboolean on_complete_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_complete_page_finish  (GtkWidget *, GtkWidget *);
-gboolean on_system_page_prepare   (GtkWidget *, GtkWidget *);
 gboolean on_gnome_page_prepare    (GtkWidget *, GtkWidget *);
 gboolean on_contact_page_next     (GtkWidget *, GtkWidget *);
 void on_version_list_select_row   (GtkCList *list, gint row, gint col,
@@ -385,6 +385,7 @@ on_version_page_prepare (GnomeDruidPage *page, GnomeDruid *druid)
 	gtk_entry_set_text (GTK_ENTRY (VERSION_EDIT), "");
 
 	w = GET_WIDGET ("config_progress");
+	gtk_widget_show (w);
 	gtk_progress_bar_set_activity_step (GTK_PROGRESS_BAR (w), 5.0);
 	gtk_progress_set_activity_mode (GTK_PROGRESS (w), TRUE);
 
@@ -579,6 +580,16 @@ add_to_clist (gpointer data, gpointer udata)
 }
 
 void
+stop_progress ()
+{
+	if (!druid_data.progress_timeout)
+		return;
+
+	gtk_timeout_remove (druid_data.progress_timeout);
+	gtk_widget_hide (GET_WIDGET ("config_progress"));
+}
+
+void
 append_packages ()
 {
 	GtkWidget *w;
@@ -588,7 +599,7 @@ append_packages ()
 	g_slist_foreach (druid_data.packages, add_to_clist, w);
 	gtk_clist_thaw (GTK_CLIST (w));
 
-	gtk_timeout_remove (druid_data.progress_timeout);
+	stop_progress ();
 
 	w = GET_WIDGET ("skip_conf");
 	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
@@ -712,7 +723,7 @@ make_pixmap_button (gchar *widget_name, gchar *text,
 
 	/* this is slightly bad but should be ok */
 	p = gnome_stock_pixmap_widget (NULL, text);
-	w = gnome_pixmap_button (p, text);
+	w = gnome_pixmap_button (p, _(text));
 	GTK_WIDGET_SET_FLAGS (w, GTK_CAN_DEFAULT);
 	gtk_container_set_border_width (GTK_CONTAINER (w), GNOME_PAD_SMALL);
 	return w;
@@ -738,11 +749,9 @@ init_toggle (const char *name, int test, int data, GtkSignalFunc func)
 {
 	GtkWidget *w;
 	w = glade_xml_get_widget (druid_data.xml, name);
-	if (test == data)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
 	gtk_signal_connect (GTK_OBJECT (w), "toggled", func,
 			    GINT_TO_POINTER (data));
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w), test == data);
 }
 
 static void
@@ -952,6 +961,13 @@ init_ui ()
 			      GNOME_DRUID_PAGE (w));
 }
 
+gint
+delete_me (GtkWidget *w, GdkEventAny *evt, gpointer data)
+{
+	gtk_main_quit ();
+	return FALSE;
+}
+
 int
 main (int argc, char *argv[])
 {
@@ -981,9 +997,7 @@ main (int argc, char *argv[])
 	}
 
 	init_ui ();
-
-	w = glade_xml_get_widget (druid_data.xml, "druid_window");
-	gtk_widget_show (w);
+	gtk_widget_show (GET_WIDGET ("druid_window"));
 
 	gtk_main ();
 

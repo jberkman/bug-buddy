@@ -108,7 +108,7 @@ update_das_clist ()
 	g_free (row[1]);
 
 	if (!druid_data.packages) {
-		gtk_timeout_remove (druid_data.progress_timeout);
+		stop_progress ();
 		return;
 	}
 
@@ -134,8 +134,7 @@ load_bts_xml ()
 
 	g_return_val_if_fail (druid_data.bts_file, TRUE);
 	if (last_file && !strcmp (last_file, druid_data.bts_file)) {
-		g_message ("not reloading everything...");
-		gtk_timeout_remove (druid_data.progress_timeout);
+		stop_progress ();
 		return FALSE;
 	}
 	
@@ -160,7 +159,7 @@ load_bts_xml ()
 	if (!doc || !doc->root || !doc->root->childs) {
 		g_warning ("'%s' not found", file);
 		g_free (file);
-		gtk_timeout_remove (druid_data.progress_timeout);
+		stop_progress ();
 		return TRUE;
 	}
 	g_free (file);

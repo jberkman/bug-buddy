@@ -145,15 +145,15 @@ char *
 get_line_from_commandv (const char *argv[])
 {
 	char *retval;
-	int fd, status;
+	int fd;
 	pid_t pid;
 
 	pid = start_commandv (argv, &fd);
 	retval = get_line_from_fd (fd);
 	
 	close (fd);
-	kill (pid, SIGTERM);
-	waitpid (pid, &status, 0);
+	kill (pid, SIGTERM);	
+	fd = waitpid (pid, NULL, 0);
 
 	return retval;
 }

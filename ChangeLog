@@ -1,3 +1,28 @@
+2000-02-23  Jacob Berkman  <jacob@helixcode.com>
+
+	* NEWS, configure.in: 0.7 release
+	
+	* src/util.c (get_line_from_commandv): remove unused variables
+
+	* src/gdb-buddy.c (stop_gdb): remove unused variable
+
+	* src/bug-buddy.c (stop_progress): remove the timeout, and
+	hide the progress bar
+	(append_packages): call stop_progress()
+	(on_version_page_prepare): show the progress bar, since we
+	are now hiding it
+	(make_pixmap_button): translate this string
+	(delete_me): exit the app when the dialog is deleted.  Fixes
+	bug #6013
+
+	* src/bts.c (load_bts_xml): 
+	(update_das_clist): call stop_progress()
+
+	* src/bug-buddy.c (init_toggle): connect the signal first
+	so we get the correct initial setting
+
+	* src/bug-buddy.desktop (Name): be a big more descriptive
+
 2000-02-22  Dan Winship  <danw@helixcode.com>
 
 	* src/Makefile.am (bug_buddy_LDFLAGS): Add -export-dynamic so

@@ -118,10 +118,7 @@ void get_trace_from_pair (const gchar *app, const gchar *extra);
 void stop_gdb (void);
 void start_gdb (void);
 
+void stop_progress (void);
+
 void append_packages (void);
 #endif /* __bug_buddy_h__ */
-
-
-
-
-

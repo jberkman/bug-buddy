@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 1999-12-10 21:01+0100\n"
+"POT-Creation-Date: 2000-02-23 12:09-0500\n"
 "PO-Revision-Date: 1999-12-10 21:06+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -17,16 +17,11 @@ msgstr ""
 msgid "obtaining stack trace..."
 msgstr "henter stack trace..."
 
-#: src/bug-buddy.c:298 src/gdb-buddy.c:82
+#: src/bug-buddy.c:298 src/gdb-buddy.c:81
 msgid "gdb has already exited"
 msgstr "gdb har allerede avsluttet"
 
-#: src/gdb-buddy.c:91
-#, c-format
-msgid "Subprocess exited with status %d"
-msgstr "Underprosess avsluttet med status %d"
-
-#: src/gdb-buddy.c:119
+#: src/gdb-buddy.c:115
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -35,12 +30,12 @@ msgstr ""
 "Kunne ikke håndtere core filen med gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:144
+#: src/gdb-buddy.c:140
 #, c-format
 msgid "Child process exited with status %d"
 msgstr "Barnprosess avsluttet med status %d"
 
-#: src/gdb-buddy.c:147
+#: src/gdb-buddy.c:143
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -49,11 +44,11 @@ msgstr ""
 "Kunne ikke bestemme hvilken kjørbar fil som\n"
 "laget '%s'"
 
-#: src/gdb-buddy.c:178
+#: src/gdb-buddy.c:174
 msgid "Error on read... aborting"
 msgstr "Feil ved lesing... avbryter"
 
-#: src/gdb-buddy.c:210
+#: src/gdb-buddy.c:206
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -61,7 +56,7 @@ msgstr ""
 "Kunne ikke finne gdb-cmd filen.\n"
 "Vennligst installer bug-buddy på nytt."
 
-#: src/gdb-buddy.c:218
+#: src/gdb-buddy.c:214
 msgid "Error on fork()."
 msgstr "Feil ved fork()."
 
@@ -169,7 +164,7 @@ msgstr "GNOME grafisk verktøy for feilrapportering"
 msgid "The lame bug-buddy web page"
 msgstr "Den lamme bug-buddy hjemmesiden"
 
-#: src/bug-buddy.c:422
+#: src/bug-buddy.c:423
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
@@ -182,11 +177,11 @@ msgstr ""
 "\n"
 "Spesifiser ny plassering for sendmail?"
 
-#: src/bug-buddy.c:459
+#: src/bug-buddy.c:460
 msgid "Please enter your name and email address"
 msgstr "Vennligst skriv inn navn og e-post adresse"
 
-#: src/bug-buddy.c:499
+#: src/bug-buddy.c:500
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -194,7 +189,7 @@ msgstr ""
 "Klikk \"Fullfør\" for å avslutte bug-buddy.\n"
 "Ingen feilrapport vil bli sendt inn."
 
-#: src/bug-buddy.c:522
+#: src/bug-buddy.c:523
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -203,7 +198,7 @@ msgstr ""
 "Du er i ferd med å lagre en feilrapport i '%s'.\n"
 "Denne kan senere brukes til å rapportere en feil i '%s'."
 
-#: src/bug-buddy.c:527
+#: src/bug-buddy.c:528
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -224,11 +219,11 @@ msgstr ""
 "\n"
 "Rapporten sendes ved å klikke på fullfør."
 
-#: src/bug-buddy.c:639
+#: src/bug-buddy.c:650
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:646
+#: src/bug-buddy.c:657
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -237,7 +232,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:759
+#: src/bug-buddy.c:768
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -246,7 +241,7 @@ msgstr ""
 "Kunne ikke åpne '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble riktig installert."
 
-#: src/bug-buddy.c:855
+#: src/bug-buddy.c:864
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -254,7 +249,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:868
+#: src/bug-buddy.c:877
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
@@ -262,7 +257,7 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:974
+#: src/bug-buddy.c:990
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -306,7 +301,8 @@ msgstr ""
 "informasjon fra deg."
 
 #: src/glade-strings.c:14
-msgid "Bug Track System"
+#, fuzzy
+msgid "Bug Tracking System"
 msgstr "Feiloppfølgingsystem"
 
 #: src/glade-strings.c:15
@@ -462,25 +458,35 @@ msgid "Submitting the Report"
 msgstr "Sending av feilrapporten"
 
 #: src/glade-strings.c:56
-msgid "Submit bug report"
-msgstr "Send feilrapport"
+msgid "Submit bug report to bug tracking system"
+msgstr ""
 
 #: src/glade-strings.c:57
+msgid "Submit to individual author"
+msgstr ""
+
+#: src/glade-strings.c:58
 msgid "Send report to your email address only"
 msgstr "Send rapport kun til din e-post adresse"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to a file"
 msgstr "Lagre rapporten til en fil"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Save the report to..."
 msgstr "Lagre rapporten til..."
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Sammendrag"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGLen overvåker oss."
+
+#~ msgid "Subprocess exited with status %d"
+#~ msgstr "Underprosess avsluttet med status %d"
+
+#~ msgid "Submit bug report"
+#~ msgstr "Send feilrapport"

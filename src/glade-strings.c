@@ -11,7 +11,7 @@ gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
-gchar *s = N_("Bug Track System");
+gchar *s = N_("Bug Tracking System");
 gchar *s = N_("\n"
               "\n"
               "");
@@ -53,7 +53,8 @@ gchar *s = N_("Please wait while debugging\n"
               "information is collected...");
 gchar *s = N_("Submitting the Report");
 gchar *s = N_("Action");
-gchar *s = N_("Submit bug report");
+gchar *s = N_("Submit bug report to bug tracking system");
+gchar *s = N_("Submit to individual author");
 gchar *s = N_("Send report to your email address only");
 gchar *s = N_("Save the report to a file");
 gchar *s = N_("Save the report to...");

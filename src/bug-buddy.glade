@@ -10,17 +10,6 @@
   <language>C</language>
   <gnome_support>True</gnome_support>
   <gettext_support>True</gettext_support>
-  <use_widget_names>False</use_widget_names>
-  <output_main_file>True</output_main_file>
-  <output_support_files>True</output_support_files>
-  <output_build_files>True</output_build_files>
-  <backup_source_files>True</backup_source_files>
-  <main_source_file>interface.c</main_source_file>
-  <main_header_file>interface.h</main_header_file>
-  <handler_source_file>callbacks.c</handler_source_file>
-  <handler_header_file>callbacks.h</handler_header_file>
-  <support_source_file>support.c</support_source_file>
-  <support_header_file>support.h</support_header_file>
   <output_translatable_strings>True</output_translatable_strings>
   <translatable_strings_file>glade-strings.c</translatable_strings_file>
 </project>
@@ -28,8 +17,12 @@
 <widget>
   <class>GtkWindow</class>
   <name>druid_window</name>
-  <cxx_use_heap>True</cxx_use_heap>
   <visible>False</visible>
+  <signal>
+    <name>delete_event</name>
+    <handler>delete_me</handler>
+    <last_modification_time>Wed, 23 Feb 2000 16:33:30 GMT</last_modification_time>
+  </signal>
   <title>bug-buddy</title>
   <type>GTK_WINDOW_TOPLEVEL</type>
   <position>GTK_WIN_POS_NONE</position>
@@ -41,7 +34,6 @@
   <widget>
     <class>GnomeDruid</class>
     <name>the_druid</name>
-    <cxx_use_heap>True</cxx_use_heap>
     <signal>
       <name>cancel</name>
       <handler>on_the_druid_cancel</handler>
@@ -51,7 +43,6 @@
     <widget>
       <class>GnomeDruidPageStart</class>
       <name>druidpagestart1</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <title>all will be revealed.</title>
       <text></text>
       <title_color>127,127,255</title_color>
@@ -64,7 +55,6 @@
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>contact_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>next</name>
 	<handler>on_contact_page_next</handler>
@@ -86,7 +76,6 @@
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox8</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -98,7 +87,6 @@
 	<widget>
 	  <class>GtkTable</class>
 	  <name>table1</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <rows>5</rows>
 	  <columns>2</columns>
 	  <homogeneous>False</homogeneous>
@@ -113,7 +101,6 @@
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label11</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Email Address</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -140,7 +127,6 @@
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>Your name</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Your Name</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -167,7 +153,6 @@
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label30</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Enter your name and email address, so you will be notified when the
 bug is resolved, or for developers to request more information from you.</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
@@ -195,7 +180,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GnomeEntry</class>
 	    <name>name_entry2</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>name</history_id>
 	    <max_saved>10</max_saved>
 	    <child>
@@ -217,7 +201,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>name_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -229,7 +212,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GnomeEntry</class>
 	    <name>email_entry2</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>email</history_id>
 	    <max_saved>10</max_saved>
 	    <child>
@@ -251,7 +233,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>email_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -263,8 +244,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label47</name>
-	    <cxx_use_heap>True</cxx_use_heap>
-	    <label>Bug Track System</label>
+	    <label>Bug Tracking System</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>
@@ -290,7 +270,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkOptionMenu</class>
 	    <name>bts_menu</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <items>
 
@@ -315,7 +294,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GnomeFileEntry</class>
 	    <name>mailer_entry2</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>mailer</history_id>
 	    <max_saved>10</max_saved>
 	    <title>Choose which sendmail to use</title>
@@ -340,7 +318,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>mailer_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -352,7 +329,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label64</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Full path of sendmail</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -380,7 +356,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkHBox</class>
 	  <name>hbox14</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>0</spacing>
 	  <child>
@@ -393,7 +368,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label65</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label></label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -411,7 +385,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>Custom</class>
 	    <name>about_button</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <creation_function>make_pixmap_button</creation_function>
 	    <string1>About</string1>
 	    <int1>0</int1>
@@ -431,7 +404,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>version_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>prepare</name>
 	<handler>on_version_page_prepare</handler>
@@ -448,7 +420,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox19</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -460,7 +431,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkLabel</class>
 	  <name>label39</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Please verify that this information is correct</label>
 	  <justify>GTK_JUSTIFY_CENTER</justify>
 	  <wrap>False</wrap>
@@ -478,7 +448,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkScrolledWindow</class>
 	  <name>scrolledwindow2</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <hscrollbar_policy>GTK_POLICY_AUTOMATIC</hscrollbar_policy>
 	  <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
 	  <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
@@ -492,7 +461,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkCList</class>
 	    <name>version_list</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <signal>
 	      <name>select_row</name>
@@ -509,7 +477,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkLabel</class>
 	      <child_name>CList:title</child_name>
 	      <name>label43</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <label>Package</label>
 	      <justify>GTK_JUSTIFY_CENTER</justify>
 	      <wrap>False</wrap>
@@ -523,7 +490,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkLabel</class>
 	      <child_name>CList:title</child_name>
 	      <name>label41</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <label>Version installed</label>
 	      <justify>GTK_JUSTIFY_CENTER</justify>
 	      <wrap>False</wrap>
@@ -538,7 +504,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkHBox</class>
 	  <name>hbox3</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>4</spacing>
 	  <child>
@@ -550,7 +515,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>version_label</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label></label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -568,7 +532,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkEntry</class>
 	    <name>version_edit</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <signal>
 	      <name>activate</name>
@@ -589,7 +552,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkButton</class>
 	    <name>version_apply</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <signal>
 	      <name>clicked</name>
@@ -608,7 +570,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkHBox</class>
 	  <name>hbox16</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>4</spacing>
 	  <child>
@@ -620,7 +581,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkProgressBar</class>
 	    <name>config_progress</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <value>100</value>
 	    <lower>100</lower>
 	    <upper>100</upper>
@@ -641,7 +601,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkCheckButton</class>
 	    <name>skip_conf</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <label>Automatically go to next page when complete</label>
 	    <active>False</active>
@@ -660,7 +619,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>debian_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <title>Report Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
@@ -672,7 +630,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox11</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -684,7 +641,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkVBox</class>
 	  <name>vbox3</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>4</spacing>
 	  <child>
@@ -696,7 +652,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkFrame</class>
 	    <name>frame6</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Action</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -710,14 +665,12 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkVBox</class>
 	      <name>vbox4</name>
 	      <border_width>5</border_width>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <homogeneous>False</homogeneous>
 	      <spacing>5</spacing>
 
 	      <widget>
 		<class>GtkRadioButton</class>
 		<name>newreport_radio</name>
-		<cxx_use_heap>True</cxx_use_heap>
 		<can_focus>True</can_focus>
 		<signal>
 		  <name>toggled</name>
@@ -738,7 +691,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <widget>
 		<class>GtkRadioButton</class>
 		<name>existing_radio</name>
-		<cxx_use_heap>True</cxx_use_heap>
 		<can_focus>True</can_focus>
 		<signal>
 		  <name>toggled</name>
@@ -761,7 +713,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkTable</class>
 	    <name>newbug_table</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <rows>2</rows>
 	    <columns>4</columns>
 	    <homogeneous>False</homogeneous>
@@ -776,7 +727,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkLabel</class>
 	      <name>label60</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <label>Version</label>
 	      <justify>GTK_JUSTIFY_CENTER</justify>
 	      <wrap>False</wrap>
@@ -803,7 +753,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkLabel</class>
 	      <name>label62</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <label>Class</label>
 	      <justify>GTK_JUSTIFY_CENTER</justify>
 	      <wrap>False</wrap>
@@ -830,7 +779,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkOptionMenu</class>
 	      <name>class_option</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <items></items>
 	      <initial_choice>0</initial_choice>
@@ -853,7 +801,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GnomeHRef</class>
 	      <name>packages_href</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <url>http://bugs.gnome.org/db/ix/packages.html</url>
 	      <label>Package</label>
@@ -876,7 +823,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GnomeHRef</class>
 	      <name>desc_href</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <url>http://bugs.gnome.org/Developer.html#severities</url>
 	      <label>Severity</label>
@@ -899,7 +845,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkEntry</class>
 	      <name>version_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -924,7 +869,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkOptionMenu</class>
 	      <name>severity_option</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <items></items>
 	      <initial_choice>0</initial_choice>
@@ -947,7 +891,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>Custom</class>
 	      <name>miggie_combo</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <creation_function>make_miggie_combo</creation_function>
 	      <int1>1</int1>
 	      <int2>0</int2>
@@ -972,7 +915,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkHBox</class>
 	    <name>existing_box</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <visible>False</visible>
 	    <homogeneous>False</homogeneous>
 	    <spacing>5</spacing>
@@ -985,7 +927,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GnomeHRef</class>
 	      <name>existing_href</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <url>http://bugs.gnome.org/db/ix/psummary.html</url>
 	      <label>Bug Number</label>
@@ -999,7 +940,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkSpinButton</class>
 	      <name>bug_number</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <climb_rate>1</climb_rate>
 	      <digits>0</digits>
@@ -1027,7 +967,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>desc_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <title>Description</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,0</background_color>
@@ -1039,7 +978,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox27</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -1051,7 +989,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame11</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Short subject for the bug report</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1065,14 +1002,12 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkHBox</class>
 	    <name>hbox15</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <homogeneous>False</homogeneous>
 	    <spacing>0</spacing>
 
 	    <widget>
 	      <class>GtkEntry</class>
 	      <name>desc_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -1090,7 +1025,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame10</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Full description of the bug</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1104,7 +1038,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkScrolledWindow</class>
 	    <name>scrolledwindow7</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
 	    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
 	    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
@@ -1113,7 +1046,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkText</class>
 	      <name>desc_area</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text></text>
@@ -1126,7 +1058,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>more_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>next</name>
 	<handler>on_more_page_next</handler>
@@ -1143,7 +1074,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox31</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -1155,7 +1085,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame8</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Detailed instructions on how to reproduce the bug</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1169,7 +1098,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkScrolledWindow</class>
 	    <name>scrolledwindow6</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
 	    <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
 	    <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
@@ -1178,7 +1106,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkText</class>
 	      <name>repeat_area</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text></text>
@@ -1189,7 +1116,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame9</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Include a text file</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1203,7 +1129,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GnomeFileEntry</class>
 	    <name>include_entry2</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>include_file</history_id>
 	    <max_saved>10</max_saved>
 	    <directory>False</directory>
@@ -1213,7 +1138,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>include_entry</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -1228,7 +1152,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>nature_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>next</name>
 	<handler>on_nature_page_next</handler>
@@ -1245,7 +1168,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox12</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -1257,7 +1179,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame7</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>How to collect debugging information</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1271,14 +1192,12 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkVBox</class>
 	    <name>vbox2</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <homogeneous>False</homogeneous>
 	    <spacing>4</spacing>
 
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>dialog_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <label>Attach to a crashed application</label>
 	      <active>False</active>
@@ -1294,7 +1213,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>core_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <label>Read from a core file</label>
 	      <active>False</active>
@@ -1310,7 +1228,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>no_crash_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <label>Skip this step</label>
 	      <active>True</active>
@@ -1328,7 +1245,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkTable</class>
 	  <name>segv_table</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <rows>2</rows>
 	  <columns>2</columns>
 	  <homogeneous>False</homogeneous>
@@ -1343,7 +1259,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label26</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Binary</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -1370,7 +1285,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label27</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Process ID</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -1397,7 +1311,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GnomeFileEntry</class>
 	    <name>fileentry1</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>app_entry</history_id>
 	    <max_saved>10</max_saved>
 	    <title>Select the crashed application's binary</title>
@@ -1422,7 +1335,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>app_file</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -1434,7 +1346,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkEntry</class>
 	    <name>crashed_pid</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <editable>True</editable>
 	    <text_visible>True</text_visible>
@@ -1460,7 +1371,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkHBox</class>
 	  <name>core_box</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>4</spacing>
 	  <child>
@@ -1472,7 +1382,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label63</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Core file</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
@@ -1490,7 +1399,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GnomeFileEntry</class>
 	    <name>fileentry2</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <history_id>core_entry</history_id>
 	    <max_saved>10</max_saved>
 	    <title>Select a core file</title>
@@ -1506,7 +1414,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <class>GtkEntry</class>
 	      <child_name>GnomeEntry:entry</child_name>
 	      <name>core_file</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <editable>True</editable>
 	      <text_visible>True</text_visible>
@@ -1521,7 +1428,6 @@ bug is resolved, or for developers to request more information from you.</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>less_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>prepare</name>
 	<handler>on_less_page_prepare</handler>
@@ -1538,7 +1444,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox16</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -1550,7 +1455,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkHBox</class>
 	  <name>hbox4</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <homogeneous>False</homogeneous>
 	  <spacing>4</spacing>
 	  <child>
@@ -1562,7 +1466,6 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label37</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <label>Please wait while debugging
 information is collected...</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
@@ -1581,7 +1484,6 @@ information is collected...</label>
 	  <widget>
 	    <class>Custom</class>
 	    <name>refresh_button</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <creation_function>make_pixmap_button</creation_function>
 	    <string1>Refresh</string1>
 	    <int1>0</int1>
@@ -1597,7 +1499,6 @@ information is collected...</label>
 	  <widget>
 	    <class>Custom</class>
 	    <name>stop_button</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <creation_function>make_pixmap_button</creation_function>
 	    <string1>Stop</string1>
 	    <int1>1</int1>
@@ -1615,7 +1516,6 @@ information is collected...</label>
 	    <name>bug_animator</name>
 	    <width>48</width>
 	    <height>48</height>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <creation_function>make_anim</creation_function>
 	    <string1>/bug-anim.png</string1>
 	    <int1>48</int1>
@@ -1632,7 +1532,6 @@ information is collected...</label>
 	<widget>
 	  <class>GtkScrolledWindow</class>
 	  <name>scrolledwindow5</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <hscrollbar_policy>GTK_POLICY_NEVER</hscrollbar_policy>
 	  <vscrollbar_policy>GTK_POLICY_ALWAYS</vscrollbar_policy>
 	  <hupdate_policy>GTK_UPDATE_CONTINUOUS</hupdate_policy>
@@ -1646,7 +1545,6 @@ information is collected...</label>
 	  <widget>
 	    <class>GtkText</class>
 	    <name>gdb_text</name>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <can_focus>True</can_focus>
 	    <editable>False</editable>
 	    <text></text>
@@ -1658,7 +1556,6 @@ information is collected...</label>
     <widget>
       <class>GnomeDruidPageStandard</class>
       <name>action_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>next</name>
 	<handler>on_action_page_next</handler>
@@ -1680,7 +1577,6 @@ information is collected...</label>
 	<child_name>GnomeDruidPageStandard:vbox</child_name>
 	<name>druid-vbox17</name>
 	<border_width>8</border_width>
-	<cxx_use_heap>True</cxx_use_heap>
 	<homogeneous>False</homogeneous>
 	<spacing>4</spacing>
 	<child>
@@ -1692,7 +1588,6 @@ information is collected...</label>
 	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame12</name>
-	  <cxx_use_heap>True</cxx_use_heap>
 	  <label>Action</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
@@ -1706,16 +1601,30 @@ information is collected...</label>
 	    <class>GtkVBox</class>
 	    <name>vbox7</name>
 	    <border_width>4</border_width>
-	    <cxx_use_heap>True</cxx_use_heap>
 	    <homogeneous>False</homogeneous>
 	    <spacing>4</spacing>
 
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>submit_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
-	      <label>Submit bug report</label>
+	      <label>Submit bug report to bug tracking system</label>
+	      <active>False</active>
+	      <draw_indicator>True</draw_indicator>
+	      <group>submit_radio</group>
+	      <child>
+		<padding>0</padding>
+		<expand>False</expand>
+		<fill>False</fill>
+	      </child>
+	    </widget>
+
+	    <widget>
+	      <class>GtkRadioButton</class>
+	      <name>external_radio</name>
+	      <visible>False</visible>
+	      <can_focus>True</can_focus>
+	      <label>Submit to individual author</label>
 	      <active>False</active>
 	      <draw_indicator>True</draw_indicator>
 	      <group>submit_radio</group>
@@ -1729,7 +1638,6 @@ information is collected...</label>
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>email_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <label>Send report to your email address only</label>
 	      <active>False</active>
@@ -1745,7 +1653,6 @@ information is collected...</label>
 	    <widget>
 	      <class>GtkRadioButton</class>
 	      <name>file_radio</name>
-	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
 	      <signal>
 		<name>toggled</name>
@@ -1768,7 +1675,7 @@ information is collected...</label>
 	<widget>
 	  <class>GnomeFileEntry</class>
 	  <name>file_entry2</name>
-	  <cxx_use_heap>True</cxx_use_heap>
+	  <visible>False</visible>
 	  <sensitive>False</sensitive>
 	  <history_id>bugfile</history_id>
 	  <max_saved>10</max_saved>
@@ -1785,7 +1692,30 @@ information is collected...</label>
 	    <class>GtkEntry</class>
 	    <child_name>GnomeEntry:entry</child_name>
 	    <name>file_entry</name>
-	    <cxx_use_heap>True</cxx_use_heap>
+	    <can_focus>True</can_focus>
+	    <editable>True</editable>
+	    <text_visible>True</text_visible>
+	    <text_max_length>0</text_max_length>
+	    <text></text>
+	  </widget>
+	</widget>
+
+	<widget>
+	  <class>GnomeEntry</class>
+	  <name>author_entry2</name>
+	  <visible>False</visible>
+	  <history_id>extra_author</history_id>
+	  <max_saved>10</max_saved>
+	  <child>
+	    <padding>0</padding>
+	    <expand>False</expand>
+	    <fill>False</fill>
+	  </child>
+
+	  <widget>
+	    <class>GtkEntry</class>
+	    <child_name>GnomeEntry:entry</child_name>
+	    <name>author_entry</name>
 	    <can_focus>True</can_focus>
 	    <editable>True</editable>
 	    <text_visible>True</text_visible>
@@ -1799,7 +1729,6 @@ information is collected...</label>
     <widget>
       <class>GnomeDruidPageFinish</class>
       <name>complete_page</name>
-      <cxx_use_heap>True</cxx_use_heap>
       <signal>
 	<name>finish</name>
 	<handler>on_complete_page_finish</handler>

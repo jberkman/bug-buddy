@@ -26,6 +26,10 @@ useful and informative for developers.
 
 %changelog
 
+* Wed Feb 23 2000  Jacob Berkman  <jacob@helixcode.com>
+
+- don't say we own the pixmaps/ dir
+
 * Wed Nov 10 1999  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 - fixed up for insertion into the CVS
@@ -66,8 +70,8 @@ rm -fr $RPM_BUILD_ROOT
 
 %doc ABOUT-NLS AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
 %{prefix}/bin/*
-%{prefix}/share/pixmaps
+%{prefix}/share/pixmaps/*
 %{prefix}/share/gnome/*/*
-%{prefix}/share/mime-info
+%{prefix}/share/mime-info/*
 %{prefix}/share/bug-buddy
 %{prefix}/share/locale/*/*/*
