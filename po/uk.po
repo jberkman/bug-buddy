@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-04-10 10:06+0200\n"
+"POT-Creation-Date: 2002-06-01 13:42+0300\n"
+"PO-Revision-Date: 2002-06-01 13:09+0200\n"
 "Last-Translator: Yuriy Syrota <yuri@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -81,7 +81,9 @@ msgstr "ВЕРСІЯ"
 msgid "File name of crashed program"
 msgstr "Назва файлу програми, що зазнали збою"
 
-#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
+#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
+#: src/bug-buddy.c:86
 msgid "FILE"
 msgstr "ФАЙЛ"
 
@@ -104,17 +106,16 @@ msgstr "Текстовий файл, який буде долучено до з�
 #: src/bug-buddy.c:96
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr ""
+msgstr "Не вдалося віднайти віджет %s у %s"
 
 #: src/bug-buddy.c:208
-msgid ""
-"gdb has not finished getting the debugging information.\n"
+msgid "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
-msgstr ""
-"gdb не завершив отримання налагоджувальної інормації.\n"
+msgstr "gdb не завершив отримання налагоджувальної інормації.\n"
 "Знищити процес gdb (траса стеку буде неповною)?"
 
-#: src/bug-buddy.c:219 src/gdb-buddy.c:125
+#: src/bug-buddy.c:219
+#: src/gdb-buddy.c:125
 msgid "gdb has already exited"
 msgstr "gdb вже завершив роботу"
 
@@ -161,24 +162,19 @@ msgid "Show Debugging Options"
 msgstr "Налагоджувальна інформація"
 
 #: src/bug-buddy.c:556
-msgid ""
-"$GNOME_CRASHED_APPNAME is deprecated.\n"
+msgid "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
-msgstr ""
-"Використовуйте аргумент командного рядка --appname\n"
+msgstr "Використовуйте аргумент командного рядка --appname\n"
 "замість $GNOME_CRASHED_APPNAME."
 
 #: src/bug-buddy.c:566
-msgid ""
-"$GNOME_CRASHED_PID is deprecated.\n"
+msgid "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
-msgstr ""
-"Використовуйте аргумент командного рядка --pid\n"
+msgstr "Використовуйте аргумент командного рядка --pid\n"
 "замість $GNOME_CRASHED_PID."
 
 #: src/bug-buddy.c:582
-msgid ""
-"Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
+msgid "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
 
@@ -193,38 +189,39 @@ msgstr ""
 msgid ""
 "\n"
 "\n"
-"Please wait a few moments while Bug Buddy obtains debugging information from "
-"the applications.  This allows Bug Buddy to provide a more useful bug report."
+"Please wait a few moments while Bug Buddy obtains debugging information from the applications.  This allows Bug Buddy to provide a more useful bug report."
 msgstr ""
 
 #: src/bug-buddy.c:727
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
-msgstr ""
+msgstr "Не вдалось віднайти зображення: %s (%d)\n"
 
 #: src/bug-buddy.c:794
 #, fuzzy, c-format
-msgid ""
-"Bug Buddy could not load its user interface file (%s).\n"
+msgid "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
-msgstr ""
-"Не вдалося завантажити \"%s\".\n"
+msgstr "Не вдалося завантажити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/bugzilla.c:616
 msgid "ID"
 msgstr "Ідентифікатор"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
+#: src/bugzilla.c:630
+#: src/bugzilla.c:665
 msgid "Product"
 msgstr "Продукт"
 
-#: src/bugzilla.c:636 src/bugzilla.c:705
+#: src/bugzilla.c:636
+#: src/bugzilla.c:705
 msgid "Component"
 msgstr "Компонент"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
 #: src/bug-buddy.glade.h:20
+#: src/bugzilla.c:642
+#: src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "Опис"
 
@@ -235,8 +232,7 @@ msgid ""
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
-msgstr ""
-"Не вдалося відкрити \"%s\".\n"
+msgstr "Не вдалося відкрити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/bugzilla.c:793
@@ -251,8 +247,7 @@ msgid ""
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
-msgstr ""
-"Не вдалося завантажити \"%s\".\n"
+msgstr "Не вдалося завантажити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/config.c:75
@@ -282,20 +277,16 @@ msgstr "Отримання страси стеку... (%d)"
 
 #: src/gdb-buddy.c:165
 #, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
+msgid "Unable to process core file with gdb:\n"
 "'%s'"
-msgstr ""
-"Не вдалося обробити core-файл gdb:\n"
+msgstr "Не вдалося обробити core-файл gdb:\n"
 "\"%s\""
 
 #: src/gdb-buddy.c:196
 #, fuzzy, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
+msgid "GDB was unable to determine which binary created\n"
 "'%s'"
-msgstr ""
-"Неможливо визначити який двійковий файл створено\n"
+msgstr "Неможливо визначити який двійковий файл створено\n"
 "\"%s\""
 
 #: src/gdb-buddy.c:228
@@ -303,28 +294,24 @@ msgid "Error on read... aborting"
 msgstr "Помилка на зчитуванні... переривання"
 
 #: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
+msgid "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
-msgstr ""
-"GDB не було знайдено у вашій системі.\n"
+msgstr "GDB не було знайдено у вашій системі.\n"
 "Налагоджувальної інформації не буде зібрано."
 
 #: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
+msgid "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
-msgstr ""
-"Не знайдено файл gdb-cmd.\n"
+msgstr "Не знайдено файл gdb-cmd.\n"
 "Будь ласка, спробуйте перевстановити Bug Buddy."
 
 #: src/gdb-buddy.c:328
 msgid "There was an error running gdb."
-msgstr ""
+msgstr "Сталася помилка під час запуску gdb"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: src/bug-buddy.glade.h:2
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
@@ -340,9 +327,10 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:5
 msgid "Binary file:"
-msgstr ""
+msgstr "Двійковий файл:"
 
-#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:95
+#: src/bug-buddy.glade.h:6
+#: src/united-states-of-bug-buddy.c:95
 msgid "Bug Buddy"
 msgstr "Bug Buddy"
 
@@ -371,10 +359,9 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:16
 msgid "Command"
-msgstr ""
+msgstr "Команда"
 
 #: src/bug-buddy.glade.h:17
-#, fuzzy
 msgid "Core file"
 msgstr "Файл core"
 
@@ -388,7 +375,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
-msgstr ""
+msgstr "Поступ звантаження"
 
 #: src/bug-buddy.glade.h:22
 msgid "Email"
@@ -400,7 +387,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:24
 msgid "Include a text file"
-msgstr ""
+msgstr "Включити текстовий файл"
 
 #: src/bug-buddy.glade.h:25
 msgid "Just save to a file so I can submit a bug report manually"
@@ -408,11 +395,11 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:26
 msgid "Name"
-msgstr ""
+msgstr "Назва"
 
 #: src/bug-buddy.glade.h:27
 msgid "Path of sendmail"
-msgstr ""
+msgstr "Шлях до sendmail"
 
 #: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
@@ -431,25 +418,22 @@ msgid "Please select the product for the bug you wish to report."
 msgstr ""
 
 #: src/bug-buddy.glade.h:32
-msgid ""
-"Please take a minute to see if your bug is one of the most frequently "
-"reported bugs.\n"
+msgid "Please take a minute to see if your bug is one of the most frequently reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
 
 #: src/bug-buddy.glade.h:34
-msgid ""
-"Please wait while Bug Buddy updates its list\n"
+msgid "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
 
 #: src/bug-buddy.glade.h:36
 msgid "Process ID:"
-msgstr ""
+msgstr "Ідентифікатор процесу:"
 
 #: src/bug-buddy.glade.h:37
 msgid "Proxy Settings..."
-msgstr ""
+msgstr "Параметри проксі..."
 
 #: src/bug-buddy.glade.h:38
 msgid "Save in"
@@ -471,7 +455,7 @@ msgstr "компонент"
 
 #: src/bug-buddy.glade.h:42
 msgid "Sendmail Settings"
-msgstr ""
+msgstr "Параметри Sendmail"
 
 #: src/bug-buddy.glade.h:43
 msgid "Severity"
@@ -492,15 +476,15 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:47
 msgid "Start"
-msgstr ""
+msgstr "Запустити"
 
 #: src/bug-buddy.glade.h:48
 msgid "Start in terminal"
-msgstr ""
+msgstr "Запустити в терміналі"
 
 #: src/bug-buddy.glade.h:49
 msgid "Stop"
-msgstr ""
+msgstr "Зупинити"
 
 #: src/bug-buddy.glade.h:50
 msgid "Submit another bug"
@@ -508,7 +492,7 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:51
 msgid "Summary"
-msgstr ""
+msgstr "Зведення"
 
 #: src/bug-buddy.glade.h:52
 msgid "The product is not listed above."
@@ -540,12 +524,11 @@ msgstr ""
 
 #: src/bug-buddy.glade.h:59
 msgid "Version"
-msgstr ""
+msgstr "Версія"
 
 #: src/bug-buddy.glade.h:60
-#, fuzzy
 msgid "component"
-msgstr "Компонент"
+msgstr "компонент"
 
 #: src/bug-buddy.glade.h:61
 msgid "desc"
@@ -562,7 +545,7 @@ msgstr "Завершено!"
 
 #: src/bug-buddy.glade.h:64
 msgid "gdb"
-msgstr ""
+msgstr "gdb"
 
 #: src/bug-buddy.glade.h:65
 msgid "gnome"
@@ -584,7 +567,7 @@ msgstr "Продукт"
 
 #: src/bug-buddy.glade.h:69
 msgid "sendmail"
-msgstr ""
+msgstr "sendmail"
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
@@ -684,11 +667,9 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
-msgid ""
-"Unable to open file '%s':\n"
+msgid "Unable to open file '%s':\n"
 "%s"
-msgstr ""
-"Не вдалося відкити файл: \"%s\":\n"
+msgstr "Не вдалося відкити файл: \"%s\":\n"
 "%s"
 
 #: src/united-states-of-bug-buddy.c:540
@@ -698,11 +679,9 @@ msgstr "запуск \"%s\""
 
 #: src/united-states-of-bug-buddy.c:548
 #, c-format
-msgid ""
-"Unable to start mail program '%s':\n"
+msgid "Unable to start mail program '%s':\n"
 "%s"
-msgstr ""
-"Не вдалося запустити програму: \"%s\":\n"
+msgstr "Не вдалося запустити програму: \"%s\":\n"
 "%s"
 
 #: src/united-states-of-bug-buddy.c:586
@@ -726,9 +705,7 @@ msgstr ""
 "Дякужмо!"
 
 #: src/united-states-of-bug-buddy.c:644
-msgid ""
-"Since Bug Buddy doesn't know about the product you wish to submit a bug "
-"report in, you will have to manually address the bug report."
+msgid "Since Bug Buddy doesn't know about the product you wish to submit a bug report in, you will have to manually address the bug report."
 msgstr ""
 
 #: src/united-states-of-bug-buddy.c:665
@@ -751,11 +728,9 @@ msgid ""
 msgstr ""
 
 #: src/united-states-of-bug-buddy.c:812
-msgid ""
-"Are you sure you want to cancel\n"
+msgid "Are you sure you want to cancel\n"
 "this bug report?"
-msgstr ""
-"Ви впевнені, що хочете відмінити\n"
+msgstr "Ви впевнені, що хочете відмінити\n"
 "цей звіт про помилку?"
 
 #: src/bug-buddy.desktop.in.h:1
@@ -765,3 +740,4 @@ msgstr ""
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr ""
+
