@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2002-05-16 00:06+0100\n"
-"PO-Revision-Date: 2002-05-16 01:25+0000\n"
+"POT-Creation-Date: 2002-05-29 02:23+0100\n"
+"PO-Revision-Date: 2002-05-29 02:25+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -274,8 +274,7 @@ msgid ""
 msgstr ""
 "O Bug Buddy não encontrou informação sobre para onde enviar os bugs.\n"
 "\n"
-"Certifique-se de que o Bug Buddy foi correctamente instalado."
-"\n"
+"Certifique-se de que o Bug Buddy foi correctamente instalado.\n"
 "O Bug Buddy irá agora terminar."
 
 #: src/config.c:75
@@ -346,12 +345,12 @@ msgid "There was an error running gdb."
 msgstr "Ocorreu um erro na execução do gdb."
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-
-#: src/bug-buddy.glade.h:2
 msgid "*"
 msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
