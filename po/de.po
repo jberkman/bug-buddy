@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-11 20:54+0100\n"
-"PO-Revision-Date: 2001-02-11 21:14+01:00\n"
+"POT-Creation-Date: 2001-02-12 20:34+0100\n"
+"PO-Revision-Date: 2001-02-12 21:22+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -171,16 +171,16 @@ msgstr ""
 "\n"
 "Bitte geben Sie ein Paket an."
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
 msgid "The specified file does not exist."
 msgstr "Die angegebene Datei existiert nicht."
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
 #, c-format
 msgid "File is of type: %s"
 msgstr "Die Datei ist vom Typ: %s"
 
-#: src/bug-buddy.c:390
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' sieht nicht wie eine Textdatei aus."
@@ -193,11 +193,11 @@ msgstr ""
 "Sie müssen Ihrem Bericht eine Überschrift\n"
 "und eine Beschreibung hinzufügen."
 
-#: src/bug-buddy.c:522
+#: src/bug-buddy.c:522 src/united-states-of-bug-buddy.c:255
 msgid "Please enter your name."
 msgstr "Bitte geben Sie Ihren Namen an."
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
 msgid "Please enter a valid email address."
 msgstr "Bitte geben Sie eine gültige E-Mail-Adresse an."
 
@@ -215,27 +215,27 @@ msgstr ""
 "\n"
 "Einen neuen Ort für »sendmail« angeben?"
 
-#: src/bug-buddy.c:590
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kann Datei nicht öffnen: `%s'"
 
-#: src/bug-buddy.c:604
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid "about to run '%s'"
 msgstr "dabei '%s' zu starten"
 
-#: src/bug-buddy.c:608
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kann das Mail-Programm nicht starten: '%s'"
 
-#: src/bug-buddy.c:637
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ihr Fehlerbericht wurde in '%s' gespeichert."
 
-#: src/bug-buddy.c:640
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -270,7 +270,7 @@ msgstr ""
 "Die Datei `%s' existiert bereits.\n"
 "Diese Datei überschreiben?"
 
-#: src/bug-buddy.c:847 src/glade-strings.c:70
+#: src/bug-buddy.c:847 src/glade-strings.c:69
 msgid "About"
 msgstr "Info"
 
@@ -286,7 +286,7 @@ msgstr "Stopp"
 msgid "Refresh"
 msgstr "Neu anzeigen"
 
-#: src/bug-buddy.c:896
+#: src/bug-buddy.c:896 src/bugzilla.c:556
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -318,18 +318,40 @@ msgstr ""
 "an der Kommandozeile."
 
 #: src/bug-buddy.c:1251
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "'%s' kann nicht geöffnet werden.\n"
 "\n"
-"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
+"Bitte überprüfen Sie, ob Bug Buddy richtig\n"
 "installiert wurde."
 
+#: src/bugzilla.c:441
+msgid "Are you sure you want to cancel this update?"
+msgstr "Wollen Sie die Aktualisierung wirklich abbrechen?"
+
+#: src/bugzilla.c:567
+msgid "All"
+msgstr "Alle"
+
+#: src/bugzilla.c:591
+msgid ""
+"Bug Buddy has determined that some of its information about\n"
+"the various bug tracking systems may need to be updated.\n"
+"\n"
+"Should Bug Buddy try and update these files now?"
+msgstr ""
+"Bug Buddy hat festgestellt, dass einige Informationen zu den\n"
+"verschiedenen Fehlermeldestellen (Bug Tracking Systems)\n"
+"offensichtlich aktualisiert werden müssen.\n"
+"\n"
+"Soll Bug Buddy versuchen, die notwendigen Dateien jetzt zu\n"
+"aktualisieren?"
+
 #: src/gdb-buddy.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Beschaffe Stacktrace... (%d)"
 
@@ -394,9 +416,18 @@ msgid ""
 "\n"
 "These bug reports are submitted via email, so\n"
 "please specify your email address so you can be\n"
-"contacted if furthur information is requred, or\n"
+"contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
+"Dies Programm wird Sie Schritt-für-Schritt führen und so\n"
+"helfen, einen Fehlerbericht zu Projekten wie GNOME\n"
+"einzuschicken.\n"
+"\n"
+"Diese Fehlerberichte werden via E-Mail eingeschickt; geben\n"
+"Sie deshalb bitte an, so dass man Sie erreichen kann, wenn\n"
+"weitere Informationen erfragt werden müssen oder wenn man\n"
+"Sie benachrichtigen möchte, dass eine verbesserte Version\n"
+"verfügbar ist."
 
 #: src/glade-strings.c:15
 msgid "Skip this step in the future"
@@ -424,6 +455,12 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
+"Bug Buddy kann zusammen mit Ihrem Fehlerbericht Debug-Informationen\n"
+"einsenden.\n"
+"Die passenden Optionen sollten für Sie automatisch richtig eingestellt\n"
+"sein.\n"
+"Klicken Sie unten auf den Hilfe-Knopf, um Hintergrund-Informationen zu\n"
+"erhalten."
 
 #: src/glade-strings.c:23
 msgid "Debug"
@@ -448,7 +485,7 @@ msgstr "Core-Datei"
 #: src/glade-strings.c:29
 msgid "Automatically continue to next step when debugging is complete"
 msgstr ""
-"Wenn das Debuggen vollständigist, automatisch mit dem nächsten\n"
+"Wenn das Debuggen vollständigt ist, automatisch mit dem nächsten\n"
 "Schritt fortfahren."
 
 #: src/glade-strings.c:30
@@ -494,7 +531,7 @@ msgstr "Speichern:"
 msgid "To:"
 msgstr "An:"
 
-#: src/glade-strings.c:40 src/glade-strings.c:57
+#: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
 msgstr "%P%%"
 
@@ -508,115 +545,199 @@ msgstr ""
 "Bitte wählen Sie das Produkt, zu dem Sie einen Fehlerbericht\n"
 " einsenden wollen."
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:43 src/united-states-of-bug-buddy.c:45
 msgid "Product"
 msgstr "Produkt"
 
-#: src/glade-strings.c:44 src/glade-strings.c:50
+#: src/glade-strings.c:44 src/glade-strings.c:49
 msgid "Description"
 msgstr "Beschreibung"
 
 #: src/glade-strings.c:45
-msgid "Show products for"
-msgstr ""
+msgid "Bug tracking system"
+msgstr "Fehlermeldestelle"
 
 #: src/glade-strings.c:46
-msgid "bug tracking systems."
-msgstr "Fehlermeldestellen."
-
-#: src/glade-strings.c:47
 msgid "product"
 msgstr "Produkt"
 
-#: src/glade-strings.c:48
+#: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
-msgstr ""
+msgstr "Bitte wählen Sie die Komponente, die Version und den Level der Schwere."
 
-#: src/glade-strings.c:49
-#, fuzzy
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 msgid "Component"
-msgstr "Inhalt"
+msgstr "Komponente"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:50
 msgid "Version"
 msgstr "Version"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:51
 msgid "Severity"
 msgstr "Schwere"
 
-#: src/glade-strings.c:53
-#, fuzzy
+#: src/glade-strings.c:52
 msgid "component"
-msgstr "Inhalt"
+msgstr "Komponente"
 
-#: src/glade-strings.c:54
-#, fuzzy
+#: src/glade-strings.c:53
 msgid ""
 "Please wait while bug-buddy determines some information about your system."
 msgstr ""
-"Bitte warten Sie, während die\n"
-"Information beschafft wird..."
+"Bitte warten Sie, während Bug Buddy versucht, einige\n"
+"Information zu Ihrem System herauszufinden."
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:54
 msgid "Package"
 msgstr "Paket"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "Installierte Version"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "Wenn vollständig, automatisch zur nächsten Seite gehen"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:58
 msgid "system"
 msgstr "System"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:59
 msgid "Select an action"
 msgstr "Eine Aktion auswählen"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:60
 msgid "Cc"
 msgstr "Cc"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:61
 msgid "To"
 msgstr "An"
 
-#: src/glade-strings.c:63
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "Kopie an sich selbst schicken"
 
-#: src/glade-strings.c:64
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "Den Report speichern unter..."
 
-#: src/glade-strings.c:65
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "Inhalt"
 
-#: src/glade-strings.c:66
+#: src/glade-strings.c:65
 msgid "email info"
 msgstr "E-Mail-Info"
 
-#: src/glade-strings.c:67
+#: src/glade-strings.c:66
 msgid "Assbarn Phenomeon"
 msgstr ""
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:67
 msgid "Submit another bug"
-msgstr ""
+msgstr "Einen weiteren Bericht einsenden"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:68
 msgid "finished"
-msgstr ""
+msgstr "fertig"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:70
 msgid "Finish"
 msgstr "Beenden"
+
+#: src/united-states-of-bug-buddy.c:41
+msgid "Welcome to Bug Buddy"
+msgstr "Willkommen bei Bug Buddy"
+
+#: src/united-states-of-bug-buddy.c:42
+msgid "Debugging Information"
+msgstr "Fehlerdiagnose-Information"
+
+#: src/united-states-of-bug-buddy.c:43
+msgid "Bug Description"
+msgstr "Fehler-Beschreibung"
+
+#: src/united-states-of-bug-buddy.c:44
+msgid "Updating Product Listing"
+msgstr "Produkt-Auflistung aktualisieren"
+
+#: src/united-states-of-bug-buddy.c:47
+msgid "System Configuration"
+msgstr "System-Konfiguration"
+
+#: src/united-states-of-bug-buddy.c:48
+msgid "Submitting the Report"
+msgstr "Abschicken des Berichts"
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Finished!"
+msgstr "Fertig!"
+
+#: src/united-states-of-bug-buddy.c:85
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "Das graphische Werkzeug zur Fehlermeldung für GNOME."
+
+#: src/united-states-of-bug-buddy.c:95
+msgid "The lame bug-buddy web page"
+msgstr "Die \"armselige\" Webseite von Bug Buddy"
+
+#: src/united-states-of-bug-buddy.c:273
+#, c-format
+msgid ""
+"`%s' doesn't seem to exist.\n"
+"\n"
+"You won't be able to actually submit a bug report, but you will\n"
+"be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' scheint nicht zu existieren.\n"
+"\n"
+"Sie werden nicht wirklich einen Fehlerbericht abschicken können,\n"
+"aber es wird möglich sein, den Bericht in einer Datei zu speichern.\n"
+"\n"
+"Einen neuen Ort für »sendmail« angeben?"
+
+#: src/united-states-of-bug-buddy.c:343
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr ""
+"Sie müssen Ihrem Bericht einen aussagekräftigen\n"
+"Betreff (Subject) hinzufügen."
+
+#: src/united-states-of-bug-buddy.c:351
+msgid "You must include a comprehensible description in your bug report."
+msgstr ""
+"Sie müssen Ihrem Bericht einen aussagekräftige\n"
+"Beschreibung hinzufügen."
+
+#: src/united-states-of-bug-buddy.c:466
+msgid "You must specify a product for your bug report."
+msgstr ""
+"Sie müssen ein Produkt bei Ihrem\n"
+"Fehlerbericht angeben."
+
+#: src/united-states-of-bug-buddy.c:475
+msgid "You must specify a component for your bug report."
+msgstr ""
+"Sie müssen eine Komponente bei Ihrem\n"
+"Fehlerbericht angeben."
+
+#: src/united-states-of-bug-buddy.c:483
+msgid "You must specify a version for your bug report."
+msgstr ""
+"Sie müssen eine Version bei Ihrem\n"
+"Fehlerbericht angeben."
+
+#: src/united-states-of-bug-buddy.c:512
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
+msgstr ""
+"Sind Sie sicher, dass Sie diesen Bericht\n"
+"abbrechen wollen?"
 
 #: src/util.c:60
 msgid "Unable to open pipe"
@@ -637,12 +758,6 @@ msgstr "Fehler beim Lesen...."
 
 #~ msgid "Collect debugging information from a core file"
 #~ msgstr "Beschaffung von Fehlerdiagnose-Information von einer Core-Datei"
-
-#~ msgid "The graphical bug reporting tool for GNOME."
-#~ msgstr "Das graphische Werkzeug zur Fehlermeldung für GNOME."
-
-#~ msgid "The lame bug-buddy web page"
-#~ msgstr "Die \"armselige\" Webseite von bug-buddy"
 
 #~ msgid ""
 #~ "Could not find '%s'.\n"
@@ -715,20 +830,11 @@ msgstr "Fehler beim Lesen...."
 #~ msgid "Bug Number"
 #~ msgstr "Fehlernummer"
 
-#~ msgid "Debugging Information"
-#~ msgstr "Fehlerdiagnose-Information"
-
 #~ msgid "Collecting Debugging Information"
 #~ msgstr "Beschaffung von Fehlerdiagnose-Information"
 
-#~ msgid "System Configuration"
-#~ msgstr "System-Konfiguration"
-
 #~ msgid "Please verify that this information is correct"
 #~ msgstr "Stellen Sie bitte sicher, dass diese Informationen stimmen."
-
-#~ msgid "Submitting the Report"
-#~ msgstr "Abschicken des Berichts"
 
 #~ msgid "Summary"
 #~ msgstr "Zusammenfassung"
