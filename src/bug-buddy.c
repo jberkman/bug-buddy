@@ -52,7 +52,7 @@ extern const char *packages[];
 
 const gchar *severity[] = { N_("normal"),
 			    N_("critical"),
-			    N_("severe"),
+			    N_("grave"),
 			    N_("wishlist"),
 			    NULL };
 
@@ -95,7 +95,10 @@ static ListData list_data[] = {
 	{ N_("GTK+"), { "gtk-config --version", "rpm -q gtk+" } },
 	{ N_("ORBit"), { "orbit-config --version", "rpm -q ORBit" } },
 	{ N_("gnome-libs"), { "gnome-config --version", "rpm -q gnome-libs" } },
-	{ N_("gnome-core"), { "gnome-config --modversion applets", "rpm -q gnome-core" } },
+	{ N_("gnome-core"), { "gnome-config --modversion applets "
+			      "| grep -v gnome-libs "
+			      "| sed -e 's^applets-^gnome-core ^g'", 
+			      "rpm -q gnome-core" } },
 	{ NULL }
 };
 

@@ -1,3 +1,10 @@
+1999-11-07  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.c: slightly better gnome-core version script;
+	grave, not severe, is the correct severity
+
+	fixes bugs 3388, 3389
+
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/packages.c (packages): add bug-buddy
