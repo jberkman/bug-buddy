@@ -227,7 +227,7 @@ msgid ""
 "Your bug report has been submitted to:\n"
 "\t<%s>"
 msgstr "Uw bugrapport is opgestuurd naar:\n"
-\tr <%s>"
+"\tr <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
