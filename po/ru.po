@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-03-25 03:59+0200\n"
-"PO-Revision-Date: 2001-03-11 17:58+03:00\n"
+"POT-Creation-Date: 2001-03-26 18:17+0400\n"
+"PO-Revision-Date: 2001-03-26 18:18+04:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -202,7 +202,6 @@ msgstr ""
 "Отладочная информация не будет собрана."
 
 #: src/gdb-buddy.c:272
-#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -503,7 +502,7 @@ msgid "Please enter a valid email address."
 msgstr "Пожалуйста, введите ваш электронный адрес."
 
 #: src/united-states-of-bug-buddy.c:286
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
