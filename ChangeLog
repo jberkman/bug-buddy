@@ -1,5 +1,8 @@
 2002-08-14  jacob berkman  <jacob@ximian.com>
 
+	* src/bugzilla.c (BUGZILLA_*): 
+	* src/bug-buddy.desktop.in (X-GNOME-Bugzilla-*): spell it GNOME
+
 	* configure.in: check for gnome-desktop
 
 	* src/united-states-of-bug-buddy.c (druid_set_state): disable next

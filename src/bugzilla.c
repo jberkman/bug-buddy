@@ -803,10 +803,10 @@ load_bugzillas (void)
 
 #define ALL_APPLICATIONS_URI "all-applications:///"
 
-#define BUGZILLA_BUGZILLA  "X-Gnome-Bugzilla-Bugzilla"
-#define BUGZILLA_PRODUCT   "X-Gnome-Bugzilla-Product"
-#define BUGZILLA_COMPONENT "X-Gnome-Bugzilla-Component"
-#define BUGZILLA_EMAIL     "X-Gnome-Bugzilla-Email"
+#define BUGZILLA_BUGZILLA  "X-GNOME-Bugzilla-Bugzilla"
+#define BUGZILLA_PRODUCT   "X-GNOME-Bugzilla-Product"
+#define BUGZILLA_COMPONENT "X-GNOME-Bugzilla-Component"
+#define BUGZILLA_EMAIL     "X-GNOME-Bugzilla-Email"
 
 static gboolean
 visit_cb (const char *rel_path,
