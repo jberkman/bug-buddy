@@ -128,4 +128,15 @@ gnorpm gnorpm
 gedit gedit
 bug-buddy bug-buddy
 rp3-config rp3
-gnomeicu
+gnomeicu gnomeicu
+gpilotd gnome-pilot
+pilot_applet gnome-pilot
+gpilot-install-file gnome-pilot
+gpilotd-control-applet gnome-pilot
+calendar-conduit-control-applet gnome-pilot
+address-conduit-capplet gnome-pilot
+backup-conduit-control-applet gnome-pilot
+email-conduit-control-applet gnome-pilot
+expense-conduit-control-applet gnome-pilot
+file-conduit-control-applet gnome-pilot
+memo_file_capplet gnome-pilot
