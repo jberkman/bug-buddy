@@ -174,8 +174,6 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"Kunne ikke afgøre hvilken binær fil der lavede\n"
-"'%s'"
 
 #: src/gdb-buddy.c:217
 msgid "Error on read... aborting"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2000-04-30 14:05+0800\n"
+"POT-Creation-Date: 2001-05-21 18:06+0200\n"
 "PO-Revision-Date: 2000-04-30 22:00-0500\n"
 "Last-Translator: Jing-Jong SHYUE <shyue@sonoma.com.tw>\n"
 "Language-Team: Chinese <zh@li.org>\n"
@@ -13,153 +13,97 @@ msgstr ""
 "Content-Type: text/plain; charset=big5\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bts.c:99
-msgid "Distribution"
-msgstr "散佈者"
-
-#: src/bts.c:107
-msgid "System"
-msgstr "系統"
-
-#: src/bug-buddy.c:74
-msgid "critical"
-msgstr "嚴重的"
-
-#: src/bug-buddy.c:75
-msgid "grave"
-msgstr "重大的"
-
-#: src/bug-buddy.c:76
-msgid "normal"
-msgstr "一般的"
-
-#: src/bug-buddy.c:77
-msgid "wishlist"
-msgstr "希望列表"
-
-#: src/bug-buddy.c:82
-msgid "software bug"
-msgstr "軟體臭蟲"
-
-#: src/bug-buddy.c:83
-msgid "documentation bug"
-msgstr "文件臭蟲"
-
-#: src/bug-buddy.c:84
-msgid "change request"
-msgstr "變更需求"
-
-#: src/bug-buddy.c:85
-msgid "support"
-msgstr "支援"
-
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr "送出臭蟲報告"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr "只把報告送給您自己"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr "將報告存成檔案"
 
-#: src/bug-buddy.c:97
-msgid "Collect debugging information from a crashed application"
-msgstr "從錯誤的程式中收集除錯資訊"
+#: src/bug-buddy.c:62
+#, fuzzy
+msgid "crashed application"
+msgstr "夾帶發生錯誤的程式"
 
-#: src/bug-buddy.c:98
-msgid "Collect debugging information from a core file"
-msgstr "從 core 檔中收集除錯資訊"
+#: src/bug-buddy.c:63
+#, fuzzy
+msgid "core file"
+msgstr "core 檔"
 
-#: src/bug-buddy.c:99
-msgid "Skip this step"
-msgstr "放棄這個步驟"
+#: src/bug-buddy.c:64
+msgid "nothing"
+msgstr ""
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr "建立新的臭蟲報告"
 
-#: src/bug-buddy.c:105
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr "在現有臭蟲報告中添加新資訊"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr "聯絡者姓名"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr "姓名"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr "聯絡者電子郵件地址"
 
-#: src/bug-buddy.c:115
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr "電子郵件"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr "包含程式的套件"
 
-#: src/bug-buddy.c:116
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr "套件"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr "套件版本"
 
-#: src/bug-buddy.c:117
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr "版本"
 
-#: src/bug-buddy.c:118
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr "發生錯誤的程式名稱"
 
-#: src/bug-buddy.c:118 src/bug-buddy.c:120
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr "檔案"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr "有問題程式的 PID"
 
-#: src/bug-buddy.c:119
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:120
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr "程式產生的 core 檔"
 
-#: src/bug-buddy.c:365
-msgid "The specified file does not exist."
-msgstr "指定的檔案不存在"
-
-#: src/bug-buddy.c:370
-#, c-format
-msgid "File is of type: %s"
-msgstr "檔案類別為: %s"
-
-#: src/bug-buddy.c:373
-#, c-format
-msgid "'%s' does not look like a text file."
-msgstr "'%s' 不像是一個文字檔."
-
-#: src/bug-buddy.c:387
-msgid ""
-"You must include a subject and a description\n"
-"in your bug report."
+#: src/bug-buddy.c:86
+msgid "Text file to include in the report"
 msgstr ""
-"您必須在您的臭蟲報告中\n"
-"包含一個主題與說明."
 
-#: src/bug-buddy.c:430
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -167,95 +111,11 @@ msgstr ""
 "gdb 未完成取得除蟲資料.\n"
 "是否停止 gdb 的執行 (堆疊追蹤是不完整的)?"
 
-#: src/bug-buddy.c:438 src/gdb-buddy.c:81
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr "gdb 已經存在"
 
-#: src/bug-buddy.c:481
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Copyright (C) 1999 Jacob Berkman"
-
-#: src/bug-buddy.c:483
-msgid "The GNOME graphical bug reporting tool"
-msgstr "GNOME 圖形化臭蟲回報工具"
-
-#: src/bug-buddy.c:490
-msgid "The lame bug-buddy web page"
-msgstr "bug-buddy 的網頁"
-
-#: src/bug-buddy.c:578
-#, c-format
-msgid ""
-"'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a bug report, but you will be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"'%s' 似乎不存在. 你將無法送出臭蟲回報.\n"
-"但你可以將資料存在檔案中.\n"
-"\n"
-"你要指定新的 sendmail 位置嗎?"
-
-#: src/bug-buddy.c:614
-msgid "Please enter your name and email address"
-msgstr "請輸入你的姓名與電子郵件位置"
-
-#: src/bug-buddy.c:633
-#, c-format
-msgid "Unable to open file: '%s'"
-msgstr "無法以開啟檔案: '%s'"
-
-#: src/bug-buddy.c:646
-#, c-format
-msgid "about to run '%s'"
-msgstr "無法執行 '%s'"
-
-#: src/bug-buddy.c:650
-#, c-format
-msgid "Unable to start mail program: '%s'"
-msgstr "無法啟動郵件程式: '%s'"
-
-#: src/bug-buddy.c:681
-#, c-format
-msgid "Your bug report was saved in '%s'"
-msgstr "您的臭蟲報告儲存為 '%s'"
-
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
-msgstr "您的臭蟲報告已經被送給 <%s>"
-
-#: src/bug-buddy.c:814
-msgid "You must specify a recipient email address"
-msgstr "您必須指定一個收件人電子郵件位址"
-
-#: src/bug-buddy.c:820
-msgid "Submit this bug report now?"
-msgstr "是否現在送出臭蟲報告?"
-
-#: src/bug-buddy.c:830
-msgid "Please choose a file to save to."
-msgstr "請選擇檔案以供儲存."
-
-#: src/bug-buddy.c:837
-#, c-format
-msgid ""
-"The file '%s' already exists.\n"
-"Overwrite this file?"
-msgstr ""
-"檔案 '%s' 已經存在.\n"
-"您要蓋\寫嗎?"
-
-#: src/bug-buddy.c:934
-#, c-format
-msgid ""
-"Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"無法開啟 '%s'.\n"
-"請確定您的 bug-buddy 已正確安裝."
-
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -263,7 +123,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME 不存在.\n"
 "請使用 --appname 指令列參數."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -271,21 +131,46 @@ msgstr ""
 "$GNOME_CRASHED_PID 不存在.\n"
 "請使用 --pid 指令列參數."
 
-#: src/bug-buddy.c:1181
-#, c-format
+#: src/bug-buddy.c:578
+#, fuzzy, c-format
 msgid ""
-"Could not find '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Could not load '%s'.\n"
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "無法找到 '%s'.\n"
 "請確定您的 bug-buddy 已正確安裝."
 
-#: src/gdb-buddy.c:41
-#, c-format
-msgid "obtaining stack trace... (%d)"
+#: src/bugzilla.c:436
+msgid "Are you sure you want to cancel this update?"
+msgstr ""
+
+#: src/bugzilla.c:542
+#, fuzzy, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"無法開啟 '%s'.\n"
+"請確定您的 bug-buddy 已正確安裝."
+
+#: src/bugzilla.c:553
+msgid "All"
+msgstr ""
+
+#: src/bugzilla.c:577
+msgid ""
+"Bug Buddy has determined that some of its information about\n"
+"the various bug tracking systems may need to be updated.\n"
+"\n"
+"Should Bug Buddy try to update these files now?"
+msgstr ""
+
+#: src/gdb-buddy.c:74
+#, fuzzy, c-format
+msgid "Obtaining stack trace... (%d)"
 msgstr "取得堆疊追蹤資料中... (%d)"
 
-#: src/gdb-buddy.c:115
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -294,12 +179,7 @@ msgstr ""
 "無法以 gdb 處理 core 檔:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "子程序離開傳回 %d"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -308,19 +188,26 @@ msgstr ""
 "無法決定二進位檔的建立\n"
 "'%s'"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr "讀取錯誤... 中斷中"
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:249
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+
+#: src/gdb-buddy.c:274
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "無法找到 gdb 指令檔.\n"
 "請試著重新安裝 bug-buddy."
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr "在 fork() 時發生錯誤."
 
@@ -330,212 +217,529 @@ msgstr "在 fork() 時發生錯誤."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-msgid "bug-buddy"
+#, fuzzy
+msgid "Bug Buddy"
 msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
-msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr "歡迎來到 Bug-Buddy 的美妙世界"
-
-#: src/glade-strings.c:9
 msgid ""
-"bug-buddy will walk you through the process\n"
-"of submitting a bug report.  If this is your first time \n"
-"using bug-buddy, you will be prompted for your\n"
-"email address so that the bug report can be\n"
-"submitted."
+"This program will walk you through the steps for \n"
+"submitting a bug report for projects such as GNOME.\n"
+"\n"
+"These bug reports are submitted via email, so\n"
+"please specify your email address so you can be\n"
+"contacted if further information is required, or\n"
+"when a fixed version is available."
 msgstr ""
-"bug-buddy 將會帶著您完成送出臭蟲報告的程序.\n"
-"如果這是您第一次使用 bud0buddy,\n"
-"您會被提示輸入您的電子郵件位址\n"
-"以用來送出報告.\n"
-" "
-#: src/glade-strings.c:14
-msgid "Contact Information"
-msgstr "聯絡資料"
 
 #: src/glade-strings.c:15
-msgid "Choose which sendmail to use"
-msgstr "選擇您要使用的 sendmail"
+#, fuzzy
+msgid "Skip this step in the future"
+msgstr "放棄這個步驟"
 
 #: src/glade-strings.c:16
-msgid "Email Address"
-msgstr "電子郵件地址"
-
-#: src/glade-strings.c:17
-msgid "Full path of sendmail"
-msgstr "sendmail 的完整路徑"
-
-#: src/glade-strings.c:18
-msgid "Your Name"
+#, fuzzy
+msgid "Name"
 msgstr "您的姓名"
 
-#: src/glade-strings.c:19
-msgid ""
-"bug-buddy will walk you through the process of\n"
-"submitting a bug report.  You can click the help\n"
-"button for a more in-depth explanation of the process."
+#: src/glade-strings.c:17
+msgid "Sendmail"
 msgstr ""
-"bug-buddy 將會帶著您完成送出臭蟲報告的程序.\n"
-"您可以按下說明按鈕以取得更多的程序解釋\n"
-" "
 
-#: src/glade-strings.c:22
-msgid "Report Information"
-msgstr "回報資訊"
+#: src/glade-strings.c:18
+msgid "Email"
+msgstr ""
+
+#: src/glade-strings.c:19
+msgid "intro"
+msgstr ""
+
+#: src/glade-strings.c:20
+msgid ""
+"Bug Buddy can send debugging information with your bug report.\n"
+"The correct options should have been selected for you automatically.\n"
+"For more information, please click the Help button below."
+msgstr ""
 
 #: src/glade-strings.c:23
-msgid ""
-"Select a bug tracking system to use, and then fill out\n"
-"the remaining information."
+msgid "Debug"
 msgstr ""
-"選擇要使用的臭蟲追蹤系統,\n"
-"並填滿剩下的資訊"
+
+#: src/glade-strings.c:24
+msgid "Go"
+msgstr ""
 
 #: src/glade-strings.c:25
-msgid "Bug Tracking System "
-msgstr "臭蟲追蹤系統"
-
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
-msgid "Package"
-msgstr "套件"
-
-#: src/glade-strings.c:27
-msgid "Severity"
-msgstr "安全性"
-
-#: src/glade-strings.c:28
-msgid "Class"
-msgstr "等級"
-
-#: src/glade-strings.c:29 src/glade-strings.c:31
-msgid "Version"
-msgstr "版本"
-
-#: src/glade-strings.c:32
-msgid ""
-"Please check to see if your bug has already been submitted,\n"
-"and if so, use \"Add information to existing report\" above."
+msgid "Stop"
 msgstr ""
-"請檢查您的臭蟲是否已經送出,\n"
-"如果已送出, 使用上面的 \"在現有臭蟲報告中添加新資訊\"."
 
-#: src/glade-strings.c:34 src/glade-strings.c:35
-msgid "Bug Number"
-msgstr "臭蟲編號"
-
-#: src/glade-strings.c:36
-msgid "Description"
-msgstr "簡介"
-
-#: src/glade-strings.c:37
-msgid "Short subject for the bug report"
-msgstr "臭蟲報告的簡短標題"
-
-#: src/glade-strings.c:38
-msgid "Full description of the bug, including how to reproduce it"
-msgstr "臭蟲的完整說明, 包含如何使之發生"
-
-#: src/glade-strings.c:39
-msgid "Include a text file"
-msgstr "引入一個文字檔"
-
-#: src/glade-strings.c:40
-msgid "Debugging Information"
-msgstr "除錯資訊"
-
-#: src/glade-strings.c:41
-msgid "Select the crashed application's binary"
-msgstr "選擇發生錯誤程式的二進位檔"
-
-#: src/glade-strings.c:42
-msgid "Binary"
+#: src/glade-strings.c:26
+#, fuzzy
+msgid "Binary file"
 msgstr "二進位"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:27
 msgid "Process ID"
 msgstr "程序編號"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:28
 msgid "Core file"
 msgstr "core 檔"
 
+#: src/glade-strings.c:29
+#, fuzzy
+msgid "Automatically continue to next step when debugging is complete"
+msgstr "完成後自動到下一頁"
+
+#: src/glade-strings.c:30
+msgid "gdb"
+msgstr ""
+
+#: src/glade-strings.c:31
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:32
+msgid "Short subject for the bug report"
+msgstr "臭蟲報告的簡短標題"
+
+#: src/glade-strings.c:33
+msgid "Full description of the bug, including how to reproduce it"
+msgstr "臭蟲的完整說明, 包含如何使之發生"
+
+#: src/glade-strings.c:34
+msgid "Include a text file"
+msgstr "引入一個文字檔"
+
+#: src/glade-strings.c:35
+msgid "desc"
+msgstr ""
+
+#: src/glade-strings.c:36
+msgid ""
+"Please wait while Bug Buddy updates its list\n"
+"of products for the bug tracking systems."
+msgstr ""
+
+#: src/glade-strings.c:38
+msgid "Saving:"
+msgstr ""
+
+#: src/glade-strings.c:39
+#, fuzzy
+msgid "To:"
+msgstr "到"
+
+#: src/glade-strings.c:40 src/glade-strings.c:56
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:41
+msgid "download"
+msgstr ""
+
+#: src/glade-strings.c:42
+msgid "Please select the product for the bug you wish to report."
+msgstr ""
+
+#: src/glade-strings.c:43 src/united-states-of-bug-buddy.c:46
+msgid "Product"
+msgstr ""
+
+#: src/glade-strings.c:44 src/glade-strings.c:49
+msgid "Description"
+msgstr "簡介"
+
 #: src/glade-strings.c:45
-msgid "Select a core file"
-msgstr "選擇一個 core 檔"
+#, fuzzy
+msgid "Bug tracking system"
+msgstr "臭蟲追蹤系統"
 
 #: src/glade-strings.c:46
-msgid "Collecting Debugging Information"
-msgstr "收集除錯資訊"
+msgid "product"
+msgstr ""
 
 #: src/glade-strings.c:47
+msgid "Please choose a component, version, and severity level."
+msgstr ""
+
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:47
+#, fuzzy
+msgid "Component"
+msgstr "內容"
+
+#: src/glade-strings.c:50
+msgid "Version"
+msgstr "版本"
+
+#: src/glade-strings.c:51
+msgid "Severity"
+msgstr "安全性"
+
+#: src/glade-strings.c:52
+#, fuzzy
+msgid "component"
+msgstr "內容"
+
+#: src/glade-strings.c:53
+#, fuzzy
 msgid ""
-"Please wait while debugging\n"
-"information is collected..."
+"Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "除錯資訊中\n"
 "時請等待...."
 
-#: src/glade-strings.c:49
-msgid "System Configuration"
-msgstr "系統組態"
+#: src/glade-strings.c:54
+msgid "Package"
+msgstr "套件"
 
-#: src/glade-strings.c:50
-msgid "Please verify that this information is correct"
-msgstr "請檢查這些資訊是否正確"
-
-#: src/glade-strings.c:52
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "版本"
 
-#: src/glade-strings.c:53
-msgid "%P %%"
-msgstr "%P %%"
-
-#: src/glade-strings.c:54
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "完成後自動到下一頁"
 
-#: src/glade-strings.c:55
-msgid "Submitting the Report"
-msgstr "送出報告"
+#: src/glade-strings.c:58
+#, fuzzy
+msgid "system"
+msgstr "系統"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:59
+#, fuzzy
+msgid "Select an action"
+msgstr "選擇一個 core 檔"
+
+#: src/glade-strings.c:60
+msgid "Cc"
+msgstr ""
+
+#: src/glade-strings.c:61
 msgid "To"
 msgstr "到"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "遞送副本給您自己"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "將報告存到..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "內容"
 
-#: src/glade-strings.c:60
-msgid "Summary"
-msgstr "摘要"
+#: src/glade-strings.c:65
+msgid "email info"
+msgstr ""
 
-#: src/glade-strings.c:61
-msgid "The GEGL is watching."
-msgstr "GEGL 正在監視中."
+#: src/glade-strings.c:66
+msgid "Assbarn Phenomenon"
+msgstr ""
 
-#: src/util.c:60
+#: src/glade-strings.c:67
+msgid "Submit another bug"
+msgstr ""
+
+#: src/glade-strings.c:68
+msgid "finished"
+msgstr ""
+
+#: src/glade-strings.c:69
+msgid "About"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:42
+msgid "Welcome to Bug Buddy"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:43
+msgid "Debugging Information"
+msgstr "除錯資訊"
+
+#: src/united-states-of-bug-buddy.c:44
+#, fuzzy
+msgid "Bug Description"
+msgstr "簡介"
+
+#: src/united-states-of-bug-buddy.c:45
+msgid "Updating Product Listing"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:48
+msgid "System Configuration"
+msgstr "系統組態"
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Submitting the Report"
+msgstr "送出報告"
+
+#: src/united-states-of-bug-buddy.c:50
+msgid "Finished!"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:88
+#, fuzzy
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "GNOME 圖形化臭蟲回報工具"
+
+#: src/united-states-of-bug-buddy.c:98
+#, fuzzy
+msgid "The lame Bug Buddy web page"
+msgstr "bug-buddy 的網頁"
+
+#: src/united-states-of-bug-buddy.c:262
+#, fuzzy
+msgid "Please enter your name."
+msgstr "請輸入你的姓名與電子郵件位置"
+
+#: src/united-states-of-bug-buddy.c:273
+#, fuzzy
+msgid "Please enter a valid email address."
+msgstr "請輸入你的姓名與電子郵件位置"
+
+#: src/united-states-of-bug-buddy.c:288
+#, fuzzy, c-format
+msgid ""
+"'%s' doesn't seem to exist.\n"
+"\n"
+"You won't be able to actually submit a bug report, but you will\n"
+"be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' 似乎不存在. 你將無法送出臭蟲回報.\n"
+"但你可以將資料存在檔案中.\n"
+"\n"
+"你要指定新的 sendmail 位置嗎?"
+
+#: src/united-states-of-bug-buddy.c:338
+msgid "The specified file does not exist."
+msgstr "指定的檔案不存在"
+
+#: src/united-states-of-bug-buddy.c:344
+#, c-format
+msgid "File is of type: %s"
+msgstr "檔案類別為: %s"
+
+#: src/united-states-of-bug-buddy.c:347
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr "'%s' 不像是一個文字檔."
+
+#: src/united-states-of-bug-buddy.c:358
+#, fuzzy
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr ""
+"您必須在您的臭蟲報告中\n"
+"包含一個主題與說明."
+
+#: src/united-states-of-bug-buddy.c:366
+#, fuzzy
+msgid "You must include a comprehensible description in your bug report."
+msgstr ""
+"您必須在您的臭蟲報告中\n"
+"包含一個主題與說明."
+
+#: src/united-states-of-bug-buddy.c:390
+#, c-format
+msgid "Unable to open file: '%s'"
+msgstr "無法以開啟檔案: '%s'"
+
+#: src/united-states-of-bug-buddy.c:402
+#, c-format
+msgid "about to run '%s'"
+msgstr "無法執行 '%s'"
+
+#: src/united-states-of-bug-buddy.c:406
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr "無法啟動郵件程式: '%s'"
+
+#: src/united-states-of-bug-buddy.c:440
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "您的臭蟲報告儲存為 '%s'"
+
+#: src/united-states-of-bug-buddy.c:443
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>"
+msgstr "您的臭蟲報告已經被送給 <%s>"
+
+#: src/united-states-of-bug-buddy.c:481
+#, fuzzy
+msgid "You must specify a product for your bug report."
+msgstr ""
+"您必須在您的臭蟲報告中\n"
+"包含一個主題與說明."
+
+#: src/united-states-of-bug-buddy.c:490
+#, fuzzy
+msgid "You must specify a component for your bug report."
+msgstr ""
+"您必須在您的臭蟲報告中\n"
+"包含一個主題與說明."
+
+#: src/united-states-of-bug-buddy.c:498
+#, fuzzy
+msgid "You must specify a version for your bug report."
+msgstr ""
+"您必須在您的臭蟲報告中\n"
+"包含一個主題與說明."
+
+#: src/united-states-of-bug-buddy.c:527
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
+msgstr ""
+
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr "無法開啟管線"
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr "無法執行 '%s'."
 
-#: src/util.c:112
+#: src/util.c:114
 msgid "Error on read..."
 msgstr "讀取錯誤..."
+
+#~ msgid "Distribution"
+#~ msgstr "散佈者"
+
+#~ msgid "critical"
+#~ msgstr "嚴重的"
+
+#~ msgid "grave"
+#~ msgstr "重大的"
+
+#~ msgid "normal"
+#~ msgstr "一般的"
+
+#~ msgid "wishlist"
+#~ msgstr "希望列表"
+
+#~ msgid "software bug"
+#~ msgstr "軟體臭蟲"
+
+#~ msgid "documentation bug"
+#~ msgstr "文件臭蟲"
+
+#~ msgid "change request"
+#~ msgstr "變更需求"
+
+#~ msgid "support"
+#~ msgstr "支援"
+
+#~ msgid "Collect debugging information from a crashed application"
+#~ msgstr "從錯誤的程式中收集除錯資訊"
+
+#~ msgid "Collect debugging information from a core file"
+#~ msgstr "從 core 檔中收集除錯資訊"
+
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Copyright (C) 1999 Jacob Berkman"
+
+#~ msgid "You must specify a recipient email address"
+#~ msgstr "您必須指定一個收件人電子郵件位址"
+
+#~ msgid "Submit this bug report now?"
+#~ msgstr "是否現在送出臭蟲報告?"
+
+#~ msgid "Please choose a file to save to."
+#~ msgstr "請選擇檔案以供儲存."
+
+#~ msgid ""
+#~ "The file '%s' already exists.\n"
+#~ "Overwrite this file?"
+#~ msgstr ""
+#~ "檔案 '%s' 已經存在.\n"
+#~ "您要蓋寫嗎?"
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "子程序離開傳回 %d"
+
+#~ msgid "Welcome to the Wonderful World of bug-buddy"
+#~ msgstr "歡迎來到 Bug-Buddy 的美妙世界"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process\n"
+#~ "of submitting a bug report.  If this is your first time \n"
+#~ "using bug-buddy, you will be prompted for your\n"
+#~ "email address so that the bug report can be\n"
+#~ "submitted."
+#~ msgstr ""
+#~ "bug-buddy 將會帶著您完成送出臭蟲報告的程序.\n"
+#~ "如果這是您第一次使用 bud0buddy,\n"
+#~ "您會被提示輸入您的電子郵件位址\n"
+#~ "以用來送出報告.\n"
+#~ " "
+
+#~ msgid "Contact Information"
+#~ msgstr "聯絡資料"
+
+#~ msgid "Choose which sendmail to use"
+#~ msgstr "選擇您要使用的 sendmail"
+
+#~ msgid "Email Address"
+#~ msgstr "電子郵件地址"
+
+#~ msgid "Full path of sendmail"
+#~ msgstr "sendmail 的完整路徑"
+
+#~ msgid ""
+#~ "bug-buddy will walk you through the process of\n"
+#~ "submitting a bug report.  You can click the help\n"
+#~ "button for a more in-depth explanation of the process."
+#~ msgstr ""
+#~ "bug-buddy 將會帶著您完成送出臭蟲報告的程序.\n"
+#~ "您可以按下說明按鈕以取得更多的程序解釋\n"
+#~ " "
+
+#~ msgid "Report Information"
+#~ msgstr "回報資訊"
+
+#~ msgid ""
+#~ "Select a bug tracking system to use, and then fill out\n"
+#~ "the remaining information."
+#~ msgstr ""
+#~ "選擇要使用的臭蟲追蹤系統,\n"
+#~ "並填滿剩下的資訊"
+
+#~ msgid "Class"
+#~ msgstr "等級"
+
+#~ msgid ""
+#~ "Please check to see if your bug has already been submitted,\n"
+#~ "and if so, use \"Add information to existing report\" above."
+#~ msgstr ""
+#~ "請檢查您的臭蟲是否已經送出,\n"
+#~ "如果已送出, 使用上面的 \"在現有臭蟲報告中添加新資訊\"."
+
+#~ msgid "Bug Number"
+#~ msgstr "臭蟲編號"
+
+#~ msgid "Select the crashed application's binary"
+#~ msgstr "選擇發生錯誤程式的二進位檔"
+
+#~ msgid "Collecting Debugging Information"
+#~ msgstr "收集除錯資訊"
+
+#~ msgid "Please verify that this information is correct"
+#~ msgstr "請檢查這些資訊是否正確"
+
+#~ msgid "Summary"
+#~ msgstr "摘要"
+
+#~ msgid "The GEGL is watching."
+#~ msgstr "GEGL 正在監視中."
 
 #~ msgid "Subprocess exited with status %d"
 #~ msgstr "次程序離開傳回 %d"
@@ -607,9 +811,6 @@ msgstr "讀取錯誤..."
 
 #~ msgid "Detailed instructions on how to reproduce the bug"
 #~ msgstr "讓問題出現的詳細程序"
-
-#~ msgid "Attach to a crashed application"
-#~ msgstr "夾帶發生錯誤的程式"
 
 #~ msgid "Read from a core file"
 #~ msgstr "從 core 檔案中讀取"
