@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-23 18:31+0200\n"
-"PO-Revision-Date: 2002-05-20 12:08+02:00\n"
+"POT-Creation-Date: 2002-05-31 17:26+0200\n"
+"PO-Revision-Date: 2002-05-31 21:16+0200\n"
 "Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: src/bug-buddy.c:55
 msgid "Submit bug report"
-msgstr "Een bugrapport opsturen"
+msgstr "Een bugrapport insturen"
 
 #: src/bug-buddy.c:56
 msgid "Only send report to yourself"
-msgstr "Een bugrapport alleen naar uw eigen E-mail adres sturen"
+msgstr "Een bugrapport alleen naar uw eigen e-mail adres sturen"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
@@ -42,7 +42,7 @@ msgstr "niets"
 
 #: src/bug-buddy.c:69
 msgid "Create a new bug report"
-msgstr "Een nieuw bug-report versturen"
+msgstr "Een nieuw bug-rapport versturen"
 
 #: src/bug-buddy.c:70
 msgid "Add more information to existing report"
@@ -114,8 +114,8 @@ msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb is nog niet klaar met het vekrijgen van debug informatie.\n"
-"Kill het gdb proces (de strack-trace zal niet compleet zijn)?"
+"gdb is nog niet klaar met het verkrijgen van debug-informatie.\n"
+"Het gdb-proces vernietigen? (de strack-trace zal niet compleet zijn)"
 
 #: src/bug-buddy.c:219 src/gdb-buddy.c:125
 msgid "gdb has already exited"
@@ -123,7 +123,7 @@ msgstr "De gdb-debugger is reeds beëindigd"
 
 #: src/bug-buddy.c:286
 msgid "Save Backtrace"
-msgstr "Opslaan Backtrace"
+msgstr "Backtrace opslaan"
 
 #: src/bug-buddy.c:305
 #, c-format
@@ -134,19 +134,19 @@ msgid ""
 "\n"
 "Please choose another file and try again."
 msgstr ""
-"Er was een fout bij het opslaan van %s:\n"
+"Er is een fout opgetreden bij het opslaan van %s:\n"
 "\n"
 "%s\n"
 "\n"
-"Kies alsjeblieft een andere bestandsnaam en probeer opnieuw."
+"Kies alstublieft een andere bestandsnaam en probeer opnieuw."
 
 #: src/bug-buddy.c:402
 msgid "_Start Mailer"
-msgstr "_Start Email-proggramma"
+msgstr "_Start Email-programma"
 
 #: src/bug-buddy.c:406
 msgid "_Send Report"
-msgstr "_Stuur Rapport"
+msgstr "Rapport Ver_sturen"
 
 #: src/bug-buddy.c:443
 #, c-format
@@ -157,19 +157,20 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
-"Er trad een fout op bij het tonen van de proxy-instellingen:\n"
+"Er is een fout opgetreden bij het tonen van de proxy-instellingen:\n"
 "\n"
 "%s.\n"
 "\n"
-"Controleer alstublieft of GNOME Control Center goed is geïnstalleerd."
+"Controleer alstublieft of het GNOME ConfiguratieCentrum goed is "
+"geïnstalleerd."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
-msgstr "Debugopties Verbergen"
+msgstr "Debugopties verbergen"
 
 #: src/bug-buddy.c:492
 msgid "Show Debugging Options"
-msgstr "Debugopties Weergeven"
+msgstr "Debugopties weergeven"
 
 #: src/bug-buddy.c:556
 msgid ""
@@ -192,8 +193,8 @@ msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
-"Welkom bij Bug Buddy, een bug-rapporteerhulpmiddel voor GNOME.\n"
-"Het zal u helpen bij het invullen en opsturen van een bugrapport."
+"Welkom bij Bug Buddy, een hulpmiddel voor GNOME bug-rapporten.\n"
+"Het zal u helpen bij het invullen en opsturen van een bug-rapport."
 
 #
 #: src/bug-buddy.c:585
@@ -216,8 +217,8 @@ msgstr ""
 "\n"
 "\n"
 "Gelieve even te wachten terwijl Bug Buddy debuginformatie van de programma's "
-"verzamelt. Dit stelt Bug Buddy in staat om een meer bruikbaar bugrappaort af "
-"te leveren."
+"verzamelt. Dit stelt Bug Buddy in staat om een beter bug-rapport af te "
+"leveren."
 
 #: src/bug-buddy.c:727
 #, c-format
@@ -259,7 +260,7 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Bug Buddy kon '%s' niet openen.\n"
-"Controleer of bug-buddy correct is geïnstalleerd.\n"
+"Controleer of Bug Buddy correct is geïnstalleerd.\n"
 "\n"
 "Bug Buddy zal nu worden beëindigd."
 
@@ -305,7 +306,7 @@ msgstr "Als de URI al eerder is bezocht."
 #: src/gdb-buddy.c:82
 #, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "Bezig met het verkrijgen van de stack trace ...(%d)"
+msgstr "Stack-trace wordt opgezocht...(%d)"
 
 #: src/gdb-buddy.c:165
 #, c-format
@@ -344,19 +345,19 @@ msgid ""
 "Please try reinstalling Bug Buddy."
 msgstr ""
 "De gdb-cmd file kan niet gevonden worden.\n"
-"U kunt Bug Buddy het beste opnieuw installeren."
+"U kunt BugBuddy het beste opnieuw installeren."
 
 #: src/gdb-buddy.c:328
 msgid "There was an error running gdb."
 msgstr "Er is een fout opgetreden bij het uitvoeren van gdb."
 
 #: src/bug-buddy.glade.h:1
-msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
-
-#: src/bug-buddy.glade.h:2
 msgid "*"
 msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -364,7 +365,7 @@ msgstr "Geavanceerd"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
-msgstr "Assbarn Fenomeen"
+msgstr "Assbarn fenomeen"
 
 #: src/bug-buddy.glade.h:5
 msgid "Binary file:"
@@ -391,14 +392,14 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
-"Bug Buddy gebruikt email om bugrapporten te versturen.\n"
+"Bug Buddy gebruikt email om bug-rapporten te versturen.\n"
 "Kies alstublieft hoe u wilt dat Bug Buddy email verstuurt.\n"
-"Als u voor de standaard GNOME emailer kiest, dan zal\n"
-"deze instelling ook bij andere GNOME programma's worden gebruikt."
+"Als u voor het standaard GNOME e-mailprogramma kiest, dan zal\n"
+"deze instelling hetzelfde zijn als andere GNOME programma's."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
-msgstr "Bugtracking systeem "
+msgstr "Bugtracking-systeem "
 
 #: src/bug-buddy.glade.h:15
 msgid "Cc"
@@ -410,11 +411,11 @@ msgstr "Opdracht"
 
 #: src/bug-buddy.glade.h:17
 msgid "Core file"
-msgstr "Plaats van het core-bestand"
+msgstr "Core-bestand"
 
 #: src/bug-buddy.glade.h:18
 msgid "Custom mailer"
-msgstr "Eigen emailer"
+msgstr "Eigen e-mailprogramma"
 
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
@@ -426,15 +427,15 @@ msgstr "Downloadvoortgang"
 
 #: src/bug-buddy.glade.h:22
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 #: src/bug-buddy.glade.h:23
 msgid "GNOME Mailer Settings"
-msgstr "GNOME E-mailer instellingen"
+msgstr "GNOME E-mailprogramma instellingen"
 
 #: src/bug-buddy.glade.h:24
 msgid "Include a text file"
-msgstr "Een tekst-bestand meesturen"
+msgstr "Een tekstbestand meesturen"
 
 #: src/bug-buddy.glade.h:25
 msgid "Just save to a file so I can submit a bug report manually"
@@ -451,7 +452,7 @@ msgstr "Het pad naar sendmail"
 #: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
 msgstr ""
-"Kies alstublieft een component, versie en niveau van ernstigheid van de bug."
+"Kies alstublieft een component, versie en niveau van ernst voor de bug."
 
 #: src/bug-buddy.glade.h:29
 msgid "Please make any final corrections to the bug report."
