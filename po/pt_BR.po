@@ -575,5 +575,5 @@ msgstr "Impossível executar '%s'."
 msgid "Error on read..."
 msgstr "Error ao ler..."
 
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Copyright (C) 1999 Jacob Berkman"
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Copyright (C) 1999 Jacob Berkman"
