@@ -20,6 +20,10 @@
  */
 
 #include <config.h>
+
+/* for GtkText */
+#define GTK_ENABLE_BROKEN
+
 #include <gnome.h>
 
 #include <stdio.h>
@@ -255,7 +259,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	
 	/* FIXME: we should probably be fully expanding the link to
 	   see if it is a directory, but unix sucks and i am lazy */
-	if (g_file_test (app, G_FILE_TEST_ISFILE | G_FILE_TEST_ISLINK))
+	if (g_file_test (app, G_FILE_TEST_IS_REGULAR | G_FILE_TEST_IS_SYMLINK))
 		app2 = g_strdup (app);
 	else
 		app2 = gnome_is_program_in_path (app);

@@ -24,7 +24,7 @@
 #define __BUG_BUDDY_H__
 
 #include <glade/glade.h>
-#include <libgnomeui/gnome-canvas.h>
+#include <libgnomecanvas/gnome-canvas.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include <sys/types.h>

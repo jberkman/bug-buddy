@@ -31,7 +31,7 @@
 #include <libgnomeui/gnome-window-icon.h>
 #include <glade/glade.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gdk-pixbuf/gnome-canvas-pixbuf.h>
+#include <libgnomecanvas/gnome-canvas-pixbuf.h>
 #include <libgnomevfs/gnome-vfs.h>
 
 #include <libxml/tree.h>
@@ -293,10 +293,12 @@ append_packages ()
 void
 update_selected_row (GtkWidget *w, gpointer data)
 {
-	gchar *s;
+	static char *s;
 	gint row;
+
 	if (druid_data.selected_row == -1)
 		return;
+
 	row = druid_data.selected_row;
 	s = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("the-version-entry")));
 	gtk_clist_set_text (GTK_CLIST (GET_WIDGET ("version-clist")), row, 1, s);
@@ -317,7 +319,7 @@ on_file_radio_toggled (GtkWidget *radio, gpointer data)
 GtkWidget *
 stock_pixmap_buddy (gchar *w, char *n, char *a, int b, int c)
 {
-	return gnome_stock_pixmap_widget (NULL, n);
+	return gtk_image_new_from_stock (n, GTK_ICON_SIZE_SMALL_TOOLBAR);
 }
 
 void
@@ -388,7 +390,7 @@ init_canvi (void)
 				       NULL);	
 
 
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-core.png");
+	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-core.png", NULL);
 	druid_data.logo =
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
 				       GNOME_TYPE_CANVAS_PIXBUF,
@@ -404,7 +406,7 @@ init_canvi (void)
 				       "fill_color", "black",
 				       "outline_color", "black", NULL);
 
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-flower.png");
+	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-flower.png", NULL);
 
 	druid_data.side_image =
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
@@ -417,7 +419,7 @@ init_canvi (void)
 	gnome_canvas_set_scroll_region (GNOME_CANVAS (canvas), -12.0, -12.0, 12.0, 12.0);
 	root = GNOME_CANVAS_ITEM (gnome_canvas_root (GNOME_CANVAS (canvas)));
 	
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-buddy.png");
+	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-buddy.png", NULL);
 	druid_data.throbber_pb = gdk_pixbuf_scale_simple (pb, 24, 24, GDK_INTERP_BILINEAR);
 	gdk_pixbuf_unref (pb);
 
@@ -575,7 +577,7 @@ main (int argc, char *argv[])
 	if (!g_file_exists (s))
 		s = BUDDY_DATADIR "/bug-buddy.glade";
 
-	druid_data.xml = glade_xml_new (s, NULL);
+	druid_data.xml = glade_xml_new (s, NULL, GETTEXT_PACKAGE);
 
 	if (!druid_data.xml) {
 		char *s2 = g_strdup_printf (_("Could not load '%s'.\n"

@@ -64,9 +64,11 @@ druid_set_sensitive (gboolean prev, gboolean next, gboolean cancel)
 void
 on_druid_help_clicked (GtkWidget *w, gpointer data)
 {
+#ifdef FIXME
 	GnomeHelpMenuEntry help_entry = { "bug-buddy", NULL };
 	help_entry.path = help_pages[druid_data.state];
 	gnome_help_display (NULL, &help_entry);
+#endif
 }
 
 void
@@ -78,28 +80,37 @@ on_druid_about_clicked (GtkWidget *button, gpointer data)
 		NULL
 	};
 
+	static const char *documentors[] = {
+		"Telsa Gwynne  <hobbit@aloss.ukuu.org.uk>",
+		NULL
+	};
+
 	if (about) {
 		gdk_window_show (about->window);
 		gdk_window_raise (about->window);
 		return;
 	}
 		
-	about = gnome_about_new (_(PACKAGE), VERSION,
+	about = gnome_about_new (_("Bug Buddy"), VERSION,
+				 "Copyright (C) 1999, 2000, 2001 Jacob Berkman\n"
+				 "Copyright 2000, 2001 Ximian, Inc.",
 				 _("The graphical bug reporting tool for GNOME."),
 				 authors,
-				 "Copyright (C) 1999 - 2001 Jacob Berkman\n"
-				 "Copyright 2000, 2001 Ximian, Inc.",
-				 BUDDY_ICONDIR"/bug-buddy.png");
+				 documentors,
+				 NULL, NULL);
+
 	gtk_signal_connect (GTK_OBJECT (about), "destroy",
 			    GTK_SIGNAL_FUNC (gtk_widget_destroyed),
 			    &about);
 
+#if 0
 	href = gnome_href_new ("http://bug-buddy.org/",
 			       _("The lame Bug Buddy web page"));
 	gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (about)->vbox),
 			    href, FALSE, FALSE, 0);
-
 	gtk_widget_show (href);
+#endif
+
 	gtk_widget_show (about);
 }
 
@@ -349,6 +360,7 @@ desc_page_ok (void)
 			return FALSE;
 		}
 
+#ifdef FIXME
 		mime_type = gnome_mime_type_of_file (s);
 		d(g_message (_("File is of type: %s"), mime_type));
 		
@@ -359,6 +371,7 @@ desc_page_ok (void)
 			g_free (msg);
 			return FALSE;
 		}
+#endif
 	}
 	
 	s = gtk_entry_get_text (GTK_ENTRY (GET_WIDGET ("desc-subject")));

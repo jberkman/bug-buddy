@@ -4,7 +4,7 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="bug-buddy"
+PKG_NAME="Bug Buddy"
 
 (test -f $srcdir/configure.in \
   && test -d $srcdir/pixmaps) || {
@@ -13,4 +13,9 @@ PKG_NAME="bug-buddy"
     exit 1
 }
 
-. $srcdir/macros/autogen.sh
+which gnome-autogen.sh || {
+    echo "You need to install gnome-common from the GNOME CVS"
+    exit 1
+}
+USE_GNOME2_MACROS=1 . gnome-autogen.sh
+

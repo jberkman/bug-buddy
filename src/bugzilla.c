@@ -73,9 +73,9 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 	xmlNode *node, *cur;
 	char *s;
 
-	for (node = doc->root->childs; node; node = node->next) {
+	for (node = doc->children; node; node = node->next) {
 		if (!strcmp (node->name, bts->severity_node)) {
-			for (cur = node->childs; cur; cur = cur->next) {
+			for (cur = node->children; cur; cur = cur->next) {
 				if (strcmp (cur->name, bts->severity_item))
 					continue;
 				s = xmlNodeGetContent (cur);
@@ -84,7 +84,7 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 				xmlFree (s);
 			}
 		} else if (!strcmp (node->name, "opsys_list")) {
-			for (cur = node->childs; cur; cur = cur->next) {
+			for (cur = node->children; cur; cur = cur->next) {
 				if (strcmp (cur->name, "opsys"))
 					continue;
 				s = xmlNodeGetContent (cur);
@@ -106,7 +106,7 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 	xmlNode *node, *cur;
 	char *s;
 
-	for (node = doc->root->childs; node; node = node->next) {
+	for (node = doc->children; node; node = node->next) {
 		if (!strcmp (node->name, "product")) {
 			prod = g_new0 (BugzillaProduct, 1);
 			prod->bts = bts;
@@ -122,7 +122,7 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 			bugzilla_bts_insert_product (bts, prod);
 			bugzilla_bts_insert_product (druid_data.all_products, prod);
 
-			for (cur = node->childs; cur; cur = cur->next) {
+			for (cur = node->children; cur; cur = cur->next) {
 				if (strcmp (cur->name, "component"))
 					continue;
 				
@@ -418,7 +418,7 @@ load_bugzilla (const char *filename)
 
 	bts->email = gnome_config_get_string ("email");
 
-	pb = gdk_pixbuf_new_from_file (bts->icon);
+	pb = gdk_pixbuf_new_from_file (bts->icon, NULL);
 	if (pb) {
 		GdkPixbuf *pb2 = gdk_pixbuf_scale_simple (pb, CLIST_HEIGHT, CLIST_HEIGHT, GDK_INTERP_BILINEAR);
 		gdk_pixbuf_render_pixmap_and_mask (pb2, &bts->pixmap, &bts->mask, 127);
@@ -457,6 +457,7 @@ start_xfer (gpointer null)
 		    GNOME_VFS_XFER_DEFAULT,
 		    GNOME_VFS_XFER_ERROR_MODE_ABORT,
 		    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
+		    GNOME_VFS_DEFAULT_PRIORITY,
 		    async_update, NULL, NULL, NULL))
 		goto_product_page ();
 
@@ -644,6 +645,7 @@ load_bugzillas (void)
 				    GNOME_VFS_XFER_DEFAULT,
 				    GNOME_VFS_XFER_ERROR_MODE_ABORT,
 				    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
+				    GNOME_VFS_DEFAULT_PRIORITY,
 				    async_update, NULL, NULL, NULL))
 				return;
 	}

@@ -92,7 +92,9 @@ save_config (void)
 		if (s && *s)
 			gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
 
+#ifdef FIXME
 		gnome_entry_save_history (GNOME_ENTRY (w));
+#endif
 	}
 
 	gnome_config_set_int ("/bug-buddy/last/submittype", 
@@ -155,7 +157,9 @@ load_config (void)
 		if (GNOME_IS_FILE_ENTRY (w))
 			w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
 
+#ifdef FIXME
 		gnome_entry_load_history (GNOME_ENTRY (w));
+#endif
 	}
 
 	druid_data.submit_type =
