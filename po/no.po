@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-15 20:13+01:00\n"
+"POT-Creation-Date: 2001-03-27 22:01-0500\n"
+"PO-Revision-Date: 2001-03-27 22:02-05:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -146,10 +146,10 @@ msgstr "Er du sikker på at du vil avbryte denne oppdateringen?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunne ikke åpne '%s'.\n"
-"Vennligst forsikre deg om at bug-buddy ble riktig installert."
+"Vennligst forsikre deg om at Bug Buddy ble riktig installert."
 
 #: src/bugzilla.c:549
 msgid "All"
@@ -205,10 +205,10 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Kunne ikke finne gdb-cmd filen.\n"
-"Vennligst installer bug-buddy på nytt."
+"Vennligst prøv å installere bug-buddy på nytt."
 
 #: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
@@ -500,19 +500,19 @@ msgstr "Vennligst oppgi en gyldig e-post adresse."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"`%s' ser ikke ut til å eksistere.\n"
+"'%s' ser ikke ut til å eksistere.\n"
 "\n"
-"Du vil ikke kunne sende en feilrapport, men du vil kunne lagre \n"
+"Du vil ikke kunne sende inn en feilrapport, men du vil kunne lagre\n"
 "den til en fil.\n"
 "\n"
-"Spesifiser ny plassering for sendmail?"
+"Oppgi ny plassering for sendmail?"
 
 #: src/united-states-of-bug-buddy.c:336
 msgid "The specified file does not exist."
@@ -599,85 +599,3 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
-
-#~ msgid "critical"
-#~ msgstr "kritisk"
-
-#~ msgid "grave"
-#~ msgstr "alvorlig"
-
-#~ msgid "normal"
-#~ msgstr "normal"
-
-#~ msgid "wishlist"
-#~ msgstr "ønskeliste"
-
-#~ msgid "software bug"
-#~ msgstr "programfeil"
-
-#~ msgid "documentation bug"
-#~ msgstr "dokumentasjonsfeil"
-
-#~ msgid "change request"
-#~ msgstr "endre forespørsel"
-
-#~ msgid "support"
-#~ msgstr "støtte"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "Det er mye mer nyttig hvis du spesifiserer\n"
-#~ "noe mer spesifikt enn 'generell'.\n"
-#~ "\n"
-#~ "Vennligst spesifiser en pakke."
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Du må inkludere et emne og en beskrivelse\n"
-#~ "i din feilrapport."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "'%s' ser ikke ut til å eksistere. Du vil ikke kunne sende en\n"
-#~ "feilrapport, men du vil kunne lagre den til en fil.\n"
-#~ "\n"
-#~ "Spesifiser ny plassering for sendmail?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr "Du må spesifisere en e-post adresse for mottaker"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Send denne feilrapporten nå?"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Vennligst velg en fil å lagre til."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "Filen '%s' eksisterer allerede.\n"
-#~ "Overskriv denne filen?"
-
-#~ msgid "Help"
-#~ msgstr "Hjelp"
-
-#~ msgid "Refresh"
-#~ msgstr "Oppdatér"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Kunne ikke åpne '%s'.\n"
-#~ "Vennligst forsikre deg om at Bug Buddy ble riktig installert."
