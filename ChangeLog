@@ -1,3 +1,8 @@
+2002-04-01  jacob berkman  <jacob@ximian.com>
+
+	* src/Makefile.am (bug_buddy_LDFLAGS): add back -export-dynamic
+	for now (fixes #77035)
+
 2002-03-29  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.keys.in: add a nl
