@@ -1,3 +1,7 @@
+2000-02-16  Fatih Demir	<kabalak@gmx.net>
+
+	* configure.in : Added tr to ALL_LINGUAS .
+	
 2000-01-26  Yukihiro Nakai <nakai@gnome.gr.jp>
 
 	* configure.in (ALL_LINGUAS): add ja
