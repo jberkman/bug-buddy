@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2000-11-16 08:17+0100\n"
-"PO-Revision-Date: 2000-11-16 08:23+01:00\n"
+"POT-Creation-Date: 2000-12-09 08:53+0100\n"
+"PO-Revision-Date: 2000-12-09 08:55+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +257,7 @@ msgstr ""
 
 #: src/bug-buddy.c:855
 msgid "You must specify a recipient email address"
-msgstr "Sie müssen die E-Mail-Adreese des Empfängers angeben."
+msgstr "Sie müssen die E-Mail-Adresse des Empfängers angeben."
 
 #: src/bug-buddy.c:861
 msgid "Submit this bug report now?"
@@ -303,7 +303,7 @@ msgid ""
 msgstr ""
 "'%s' kann nicht geöffnet werden.\n"
 "\n"
-"Bitte überprüfen Sie, ob bug-buddy richtig\n"
+"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
 "installiert wurde."
 
 #: src/bug-buddy.c:1076
