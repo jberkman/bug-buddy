@@ -49,11 +49,11 @@ typedef enum {
 typedef struct {
 	GtkWidget *the_druid;
 
-	GtkWidget *nature;
+	GtkWidget *action;
 	GtkWidget *attach;
 	GtkWidget *core;
 	GtkWidget *less;
-	GtkWidget *misc;
+	GtkWidget *nature;
 
 	GtkWidget *gdb_text;
 	GtkWidget *gdb_anim;

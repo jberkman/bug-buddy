@@ -1,5 +1,11 @@
 1999-11-11  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.[ch]:
+	* src/bug-buddy.glade: reorder the dialogs a little
+
+	* src/bug-buddy.c: change the scripts so that we have
+	the distribution for debian and slackware on one line
+
 	* src/Makefile.am (buddy_DATA): add prog.bugmap (stolen
 	from the crashed app web page).  added bug-buddy and rp3
 	do it first

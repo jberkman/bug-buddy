@@ -45,6 +45,7 @@ void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
 void on_version_apply_clicked (GtkButton *button, gpointer udata);
 void on_file_radio_toggled (GtkWidget *radio, gpointer data);
 gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
+gboolean on_action_page_prev (GtkWidget *page, GtkWidget *druid);
 GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
 		       gchar *string2, gint int1, gint int2);
 
@@ -58,10 +59,10 @@ const gchar *severity[] = {
 	NULL };
 
 const gchar *bug_class[][2] = {
-	{ N_("software bug"), "sw-bug" },
+	{ N_("software bug"),     "sw-bug" },
 	{ N_("documentaion bug"), "doc-bug" },
-	{ N_("change request"), "change-request" },
-	{ N_("support"), "support" },
+	{ N_("change request"),   "change-request" },
+	{ N_("support"),          "support" },
 	{ NULL, NULL } };
 
 struct {
@@ -84,18 +85,14 @@ struct {
 DruidData druid_data;
 
 static ListData list_data[] = {
-	{ N_("Operating System"), { "uname -a" } },
+	{ N_("System"), { "uname -a" } },
 	{ N_("Distribution"),
-	  { "( [ -f /etc/slackware-version ] && echo \"Slackware\") || "
-	    "( [ -f /etc/debian_version ] && echo \"Debian\") || "
-	    "( [ -f /etc/redhat-release ] && echo \"Red Hat\") || "
-	    "( [ -f /etc/SuSE-release ]   && echo \"SuSE\") || "
-	    "echo \"\"" } },
-	{ N_("Distribution version"),
-	  { "( [ -f /etc/slackware-version ] && cat /etc/slackware-version) || "
-	    "( [ -f /etc/debian_version ] && cat /etc/debian_version) || "
+	  { "( [ -f /etc/slackware-version ] && "
+	    "  echo -n \"Slackware \" && cat /etc/slackware-version) || "
+	    "( [ -f /etc/slackware-version ] && "
+	    "  echo -n \"Debian \" && cat /etc/debian_version) || "
 	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) || "
-	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) || "
+	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
 	    "echo \"\"" } },
 	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc" } },
 	{ N_("C Compiler"), { "gcc --version", "cc -V" } },
@@ -237,7 +234,7 @@ on_nature_page_next (GtkWidget *page, GtkWidget *druid)
 		newpage = druid_data.core;
 		break;
 	default:
-		newpage = druid_data.misc;
+		newpage = druid_data.action;
 		break;
 	}
 	gnome_druid_set_page (GNOME_DRUID (druid),
@@ -326,7 +323,7 @@ on_less_page_back (GtkWidget *page, GtkWidget *druid)
 }
 
 gboolean
-on_misc_page_back (GtkWidget *page, GtkWidget *druid)
+on_action_page_prev (GtkWidget *page, GtkWidget *druid)
 {
 	if (druid_data.crash_type != CRASH_NONE)
 		return FALSE;
@@ -657,16 +654,17 @@ set_bug_class (GtkWidget *w, gpointer data)
 }
 
 GtkWidget *
-make_anim (gchar *widget_name, gchar *string1, 
-	   gchar *string2, gint int1, gint int2)
+make_anim (gchar *widget_name, gchar *imgname, 
+	   gchar *string2, gint size, gint freq)
 {
 	gchar *pixmap;
 	druid_data.gdb_anim = gnome_animator_new_with_size (48, 48);
 	gnome_animator_set_loop_type (GNOME_ANIMATOR (druid_data.gdb_anim),
 				      GNOME_ANIMATOR_LOOP_RESTART);
-	pixmap = BUDDY_DATADIR "/bug-anim.png";
+	pixmap = g_strconcat (BUDDY_DATADIR, imgname, NULL);
 	gnome_animator_append_frames_from_file (GNOME_ANIMATOR (druid_data.gdb_anim),
-						pixmap, 0, 0, 250, 48);
+						pixmap, 0, 0, freq, size);
+	g_free (pixmap);
 	return druid_data.gdb_anim;
 }
 
@@ -902,7 +900,7 @@ init_ui (GladeXML *xml)
 	druid_data.attach = glade_xml_get_widget (xml, "attach_page");
 	druid_data.core = glade_xml_get_widget (xml, "core_page");
 	druid_data.less = glade_xml_get_widget (xml, "less_page");
-	druid_data.misc = glade_xml_get_widget (xml, "misc_page");
+	druid_data.action = glade_xml_get_widget (xml, "action_page");
 }
 
 int
