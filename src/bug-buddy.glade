@@ -53,8 +53,12 @@
       <name>druidpagestart1</name>
       <cxx_use_heap>True</cxx_use_heap>
       <title>GNOME bug-buddy</title>
-      <text>This will guide you through the 
-GNOME bug submission process</text>
+      <text>This will guide you through the bug report submission process.
+
+
+
+Copyright (C) 1999 Jacob Berkman
+Author:  Jacob Berkman  &lt;jberkman@andrew.cmu.edu&gt;</text>
       <title_color>255,255,255</title_color>
       <text_color>0,0,0</text_color>
       <background_color>0,0,1</background_color>
@@ -527,7 +531,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <name>frame6</name>
 	    <border_width>5</border_width>
 	    <cxx_use_heap>True</cxx_use_heap>
-	    <label>This is for a...</label>
+	    <label>Action</label>
 	    <label_xalign>0</label_xalign>
 	    <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 	    <child>
@@ -537,9 +541,8 @@ bug is resolved, or for developers to request more information from you.</label>
 	    </child>
 
 	    <widget>
-	      <class>GtkHBox</class>
-	      <name>hbox12</name>
-	      <border_width>5</border_width>
+	      <class>GtkVBox</class>
+	      <name>vbox4</name>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <homogeneous>False</homogeneous>
 	      <spacing>5</spacing>
@@ -554,7 +557,7 @@ bug is resolved, or for developers to request more information from you.</label>
 		  <handler>on_newreport_radio_toggled</handler>
 		  <last_modification_time>Wed, 24 Nov 1999 04:30:23 GMT</last_modification_time>
 		</signal>
-		<label>New report</label>
+		<label>File a new bug report</label>
 		<active>True</active>
 		<draw_indicator>True</draw_indicator>
 		<group>report_radio</group>
@@ -575,7 +578,7 @@ bug is resolved, or for developers to request more information from you.</label>
 		  <handler>on_existing_radio_toggled</handler>
 		  <last_modification_time>Wed, 24 Nov 1999 03:45:02 GMT</last_modification_time>
 		</signal>
-		<label>Existing report</label>
+		<label>Add information to an existing bug report</label>
 		<active>False</active>
 		<draw_indicator>True</draw_indicator>
 		<group>report_radio</group>
@@ -1082,7 +1085,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	<handler>on_nature_page_next</handler>
 	<last_modification_time>Mon, 11 Oct 1999 21:29:38 GMT</last_modification_time>
       </signal>
-      <title>Nature of the Bug</title>
+      <title>Debugging Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -1107,7 +1110,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	  <name>frame7</name>
 	  <border_width>5</border_width>
 	  <cxx_use_heap>True</cxx_use_heap>
-	  <label>What type of bug are you reporting?</label>
+	  <label>Debugging Information</label>
 	  <label_xalign>0</label_xalign>
 	  <shadow_type>GTK_SHADOW_ETCHED_IN</shadow_type>
 	  <child>
@@ -1129,7 +1132,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <name>dialog_radio</name>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
-	      <label>Application crash with crash dialog</label>
+	      <label>Attach to a crashed application</label>
 	      <active>False</active>
 	      <draw_indicator>True</draw_indicator>
 	      <group>dialog_radio</group>
@@ -1145,7 +1148,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <name>core_radio</name>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
-	      <label>Application crash with core file</label>
+	      <label>Obtain from a core file</label>
 	      <active>False</active>
 	      <draw_indicator>True</draw_indicator>
 	      <group>dialog_radio</group>
@@ -1161,7 +1164,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	      <name>no_crash_radio</name>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <can_focus>True</can_focus>
-	      <label>No crash</label>
+	      <label>No debugging information</label>
 	      <active>True</active>
 	      <draw_indicator>True</draw_indicator>
 	      <group>dialog_radio</group>
@@ -1374,7 +1377,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	<handler>on_less_page_prepare</handler>
 	<last_modification_time>Mon, 11 Oct 1999 21:56:59 GMT</last_modification_time>
       </signal>
-      <title>Debugging Information</title>
+      <title>Collecting Debugging Information</title>
       <title_color>255,255,255</title_color>
       <background_color>0,0,1</background_color>
       <logo_background_color>1,1,1</logo_background_color>
@@ -1410,8 +1413,8 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkLabel</class>
 	    <name>label37</name>
 	    <cxx_use_heap>True</cxx_use_heap>
-	    <label>Please wait while bug-buddy
-collects debugging info...</label>
+	    <label>Please wait while debugging
+information is collected...</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>

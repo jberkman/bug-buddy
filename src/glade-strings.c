@@ -6,8 +6,12 @@
 
 gchar *s = N_("bug-buddy");
 gchar *s = N_("GNOME bug-buddy");
-gchar *s = N_("This will guide you through the \n"
-              "GNOME bug submission process");
+gchar *s = N_("This will guide you through the bug report submission process.\n"
+              "\n"
+              "\n"
+              "\n"
+              "Copyright (C) 1999 Jacob Berkman\n"
+              "Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>");
 gchar *s = N_("Contact Information");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
@@ -21,9 +25,9 @@ gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
 gchar *s = N_("Report Information");
-gchar *s = N_("This is for a...");
-gchar *s = N_("New report");
-gchar *s = N_("Existing report");
+gchar *s = N_("Action");
+gchar *s = N_("File a new bug report");
+gchar *s = N_("Add information to an existing bug report");
 gchar *s = N_("Bug severity");
 gchar *s = N_("Version");
 gchar *s = N_("Package");
@@ -35,17 +39,17 @@ gchar *s = N_("Short description");
 gchar *s = N_("Extra Information");
 gchar *s = N_("Full description of the bug:");
 gchar *s = N_("How to repeat the bug:");
-gchar *s = N_("Nature of the Bug");
-gchar *s = N_("What type of bug are you reporting?");
-gchar *s = N_("Application crash with crash dialog");
-gchar *s = N_("Application crash with core file");
-gchar *s = N_("No crash");
+gchar *s = N_("Debugging Information");
+gchar *s = N_("Debugging Information");
+gchar *s = N_("Attach to a crashed application");
+gchar *s = N_("Obtain from a core file");
+gchar *s = N_("No debugging information");
 gchar *s = N_("Binary");
 gchar *s = N_("Process ID");
 gchar *s = N_("Core file");
-gchar *s = N_("Debugging Information");
-gchar *s = N_("Please wait while bug-buddy\n"
-              "collects debugging info...");
+gchar *s = N_("Collecting Debugging Information");
+gchar *s = N_("Please wait while debugging\n"
+              "information is collected...");
 gchar *s = N_("Action");
 gchar *s = N_("Choose the action you wish to take");
 gchar *s = N_("Submit bug report");

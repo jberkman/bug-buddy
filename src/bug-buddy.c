@@ -303,6 +303,7 @@ on_action_page_back (GtkWidget *page, GtkWidget *druid)
 gboolean
 on_the_druid_cancel (GtkWidget *w)
 {
+	save_config ();
 	gtk_main_quit ();
 	return FALSE;
 }

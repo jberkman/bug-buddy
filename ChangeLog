@@ -1,5 +1,10 @@
 1999-11-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.glade: more ui nicities
+
+	* src/bug-buddy.c (on_the_druid_cancel): save config
+	on cancel, to save email
+
 	* src/bug-buddy.glade: add some padding and stuff
 	
 	* src/util.[ch]: actually read a line at a time
