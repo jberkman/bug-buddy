@@ -61,9 +61,9 @@ utils_DATA = $(utils_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = \
-	$(utils_DATA)	\
-	$(utils_in_files) \
-	gdb-cmd		\
-	bug-buddy.glade	\
-	bug-buddy.mime	\
+	$(utils_DATA)		\
+	$(utils_in_files)	\
+	$(buddy_DATA)		\
+	bug-buddy.glade		\
+	bug-buddy.mime		\
 	bug-buddy.keys.in
