@@ -30,6 +30,9 @@ bug_buddy_SOURCES = \
 	util.c		\
 	util.h
 
+bug_buddy_LDFLAGS = \
+	-export-dynamic
+
 bug_buddy_LDADD = \
 	$(LIBGLADE_LIBS)	\
 	$(INTLLIBS)
