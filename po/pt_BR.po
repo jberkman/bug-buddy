@@ -1,0 +1,572 @@
+# Brazilian Portuguese translation of bug-buddy.
+# Copyright (C) 2000 Juan Carlos Castro y Castro.
+# Juan Carlos Castro y Castro <jcastro@appi.com.br>, 2000.
+#
+# First Version: 2000-07-18 15:52-0300
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 1.0\n"
+"POT-Creation-Date: 2000-10-02 09:37-0300\n"
+"PO-Revision-Date: 2000-07-18 15:55-0300\n"
+"Last-Translator: Juan Carlos Castro y Castro <jcastro@appi.com.br>\n"
+"Language-Team: Brazilian Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/bts.c:99
+msgid "Distribution"
+msgstr "Distribuição"
+
+#: src/bts.c:107
+msgid "System"
+msgstr "Sistema"
+
+#: src/bug-buddy.c:74
+msgid "critical"
+msgstr "crítico"
+
+#: src/bug-buddy.c:75
+msgid "grave"
+msgstr "grave"
+
+#: src/bug-buddy.c:76
+msgid "normal"
+msgstr "normal"
+
+#: src/bug-buddy.c:77
+msgid "wishlist"
+msgstr "lista de desejos"
+
+#: src/bug-buddy.c:82
+msgid "software bug"
+msgstr "erro de software"
+
+#: src/bug-buddy.c:83
+msgid "documentation bug"
+msgstr "erro de documentação"
+
+#: src/bug-buddy.c:84
+msgid "change request"
+msgstr "pedido de mudança"
+
+#: src/bug-buddy.c:85
+msgid "support"
+msgstr "suporte"
+
+#: src/bug-buddy.c:90
+msgid "Submit bug report"
+msgstr "Enviar relatório de erro"
+
+#: src/bug-buddy.c:91
+msgid "Only send report to yourself"
+msgstr "Enviar relatório apenas para si próprio"
+
+#: src/bug-buddy.c:92
+msgid "Save report to file"
+msgstr "Salvar relatório em arquivo"
+
+#: src/bug-buddy.c:97
+msgid "Collect debugging information from a crashed application"
+msgstr "Colher informação de debug de um aplicativo abortado"
+
+#: src/bug-buddy.c:98
+msgid "Collect debugging information from a core file"
+msgstr "Colher informação de debug de um arquivo core"
+
+#: src/bug-buddy.c:99
+msgid "Skip this step"
+msgstr "Pular este passo"
+
+#: src/bug-buddy.c:104
+msgid "Create a new bug report"
+msgstr "Criar um novo relatório de erro"
+
+#: src/bug-buddy.c:105
+msgid "Add more information to existing report"
+msgstr "Adicionar informação a um relatório existente"
+
+#: src/bug-buddy.c:114
+msgid "Name of contact"
+msgstr "Nome do contato"
+
+#: src/bug-buddy.c:114
+msgid "NAME"
+msgstr "NOME"
+
+#: src/bug-buddy.c:115
+msgid "Email address of contact"
+msgstr "Email do contato"
+
+#: src/bug-buddy.c:115
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:116
+msgid "Package containing the program"
+msgstr "Pacote que contém o programa"
+
+#: src/bug-buddy.c:116
+msgid "PACKAGE"
+msgstr "PACOTE"
+
+#: src/bug-buddy.c:117
+msgid "Version of the package"
+msgstr "Versão do pacote"
+
+#: src/bug-buddy.c:117
+msgid "VERSION"
+msgstr "VERSÃO"
+
+#: src/bug-buddy.c:118
+msgid "File name of crashed program"
+msgstr "Nome de arquivo do programa abortado"
+
+#: src/bug-buddy.c:118 src/bug-buddy.c:120
+msgid "FILE"
+msgstr "ARQUIVO"
+
+#: src/bug-buddy.c:119
+msgid "PID of crashed program"
+msgstr "PID do programa abortado"
+
+#: src/bug-buddy.c:119
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:120
+msgid "Core file from program"
+msgstr "Arquivo core do programa"
+
+#: src/bug-buddy.c:335
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Do you want to continue anyway?"
+msgstr ""
+"Será muito mais útil se você especificar\n"
+"um pacote especifico em vez de 'geral'.\n"
+"\n"
+"Deseja continuar assim mesmo?"
+
+#: src/bug-buddy.c:378
+msgid "The specified file does not exist."
+msgstr "O arquivo especificado não existe."
+
+#: src/bug-buddy.c:383
+#, c-format
+msgid "File is of type: %s"
+msgstr "O arquivo é do tipo: %s"
+
+#: src/bug-buddy.c:386
+#, c-format
+msgid "'%s' does not look like a text file."
+msgstr "'%s' não parece ser um arquivo texto."
+
+#: src/bug-buddy.c:400
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+"Você tem que incluir um assunto e uma descrição\n"
+"no seu relatório de erro."
+
+#: src/bug-buddy.c:443
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"O gdb não acabou de obter a informação de debug.\n"
+"Matar o proceso gdb (o rastreamento de pilha ficará incompleto)?"
+
+#: src/bug-buddy.c:451 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "gdb já terminou"
+
+#: src/bug-buddy.c:494
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Copyright (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:496
+msgid "The GNOME graphical bug reporting tool"
+msgstr "A ferramenta GNOME para relatórios de erro"
+
+#: src/bug-buddy.c:503
+msgid "The lame bug-buddy web page"
+msgstr "A página web chinfrim do bug-buddy"
+
+#: src/bug-buddy.c:591
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"Aparentemente, '%s' não existe.  Você não poderá enviar um\n"
+"relatório de erro, mas poderá salvá-lo em um arquivo.\n"
+"\n"
+"Indicar un novo caminho para o sendmail?"
+
+#: src/bug-buddy.c:627
+msgid "Please enter your name and email address"
+msgstr "Por favor, entre seu nome e endereço de email"
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid "Unable to open file: '%s'"
+msgstr "Impossível abrir arquivo: '%s'"
+
+#: src/bug-buddy.c:659
+#, c-format
+msgid "about to run '%s'"
+msgstr "prestes a executar '%s'"
+
+#: src/bug-buddy.c:663
+#, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr "Impossível executar programa de correio: '%s'"
+
+#: src/bug-buddy.c:691
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "Seu relatório de erro foi gravado em '%s'"
+
+#: src/bug-buddy.c:694
+#, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>"
+msgstr ""
+"Seu relatório de erro foi enviado para:\n"
+"        <%s>"
+
+#: src/bug-buddy.c:824
+msgid "You must specify a recipient email address"
+msgstr "Você precisa especificar o email do destinatário"
+
+#: src/bug-buddy.c:830
+msgid "Submit this bug report now?"
+msgstr "Enviar relatório de erro agora?"
+
+#: src/bug-buddy.c:840
+msgid "Please choose a file to save to."
+msgstr "Escolha um arquivo no qual salvar."
+
+#: src/bug-buddy.c:847
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"O arquivo '%s' já existe.\n"
+"Sobrescrever este arquivo?"
+
+#: src/bug-buddy.c:899
+msgid "About"
+msgstr "Sobre"
+
+#: src/bug-buddy.c:899
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/bug-buddy.c:899
+msgid "Stop"
+msgstr "Parar"
+
+#: src/bug-buddy.c:899
+msgid "Refresh"
+msgstr "Atualizar"
+
+#: src/bug-buddy.c:949
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Impossível abrir '%s'.\n"
+"Por favor, assegure-se de que o bug-buddy foi instalado corretamente."
+
+#: src/bug-buddy.c:1054
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME está obsoleto.\n"
+"Por favor, use a opção de linha de comando --appname."
+
+#: src/bug-buddy.c:1067
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID está obsoleto.\n"
+"Por favor, use a opção de linha de comando --pid."
+
+#: src/bug-buddy.c:1199
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Impossível encontrar '%s'.\n"
+"Por favor, assegure-se de que o bug-buddy foi instalado corretamente."
+
+#: src/gdb-buddy.c:41
+#, c-format
+msgid "obtaining stack trace... (%d)"
+msgstr "obtendo rastreamento de pilha... (%d)"
+
+#: src/gdb-buddy.c:115
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Impossível processar o arquivo core com gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:141
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Impossível determinar qual executável criou\n"
+"'%s'"
+
+#: src/gdb-buddy.c:172
+msgid "Error on read... aborting"
+msgstr "Erro de leitura... abortando"
+
+#: src/gdb-buddy.c:204
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"Impossível encontrar arquivo gdb-cmd.\n"
+"Por favor, tente reinstalar o bug-buddy."
+
+#: src/gdb-buddy.c:212 src/util.c:75
+msgid "Error on fork()."
+msgstr "Erro no fork()."
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "Welcome to the Wonderful World of bug-buddy"
+msgstr "Bem-vindo ao Maravilhoso Mundo de bug-buddy"
+
+#: src/glade-strings.c:9
+msgid ""
+"bug-buddy will walk you through the process\n"
+"of submitting a bug report.  If this is your first time \n"
+"using bug-buddy, you will be prompted for your\n"
+"email address so that the bug report can be\n"
+"submitted."
+msgstr ""
+"bug-buddy ira guiá-lo através do processo de enviar um\n"
+"relatório de erro.  Se esta é a primeira vez que você\n"
+"usa o bug-buddy, ele perguntará seu endereço de email,\n"
+"de modo que o relatório possa ser enviado."
+
+#: src/glade-strings.c:14
+msgid "Contact Information"
+msgstr "Informação de Contato"
+
+#: src/glade-strings.c:15
+msgid "Choose which sendmail to use"
+msgstr "Escolha que sendmail usar"
+
+#: src/glade-strings.c:16
+msgid "Email Address"
+msgstr "Endereço de Email"
+
+#: src/glade-strings.c:17
+msgid "Full path of sendmail"
+msgstr "Caminho completo do sendmail"
+
+#: src/glade-strings.c:18
+msgid "Your Name"
+msgstr "Seu Nome"
+
+#: src/glade-strings.c:19
+msgid ""
+"bug-buddy will walk you through the process of\n"
+"submitting a bug report.  You can click the help\n"
+"button for a more in-depth explanation of the process."
+msgstr ""
+"bug-buddy ira guiá-lo através do processo de enviar um\n"
+"relatório de erro.  Você pode clicar em 'ajuda' para\n"
+"uma explicação mais detalhada do processo."
+
+#: src/glade-strings.c:22
+msgid "Report Information"
+msgstr "Dados do Relatório"
+
+#: src/glade-strings.c:23
+msgid ""
+"Select a bug tracking system to use, and then fill out\n"
+"the remaining information."
+msgstr ""
+"Selecione o sistema de rastreamento de bugs a usar,\n"
+"e depois preencha o resto das informações."
+
+#: src/glade-strings.c:25
+msgid "Bug Tracking System "
+msgstr "Sistema de Rastreamento de Bugs "
+
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
+msgid "Package"
+msgstr "Pacote"
+
+#: src/glade-strings.c:27
+msgid "Severity"
+msgstr "Severidade"
+
+#: src/glade-strings.c:28
+msgid "Class"
+msgstr "Classe"
+
+#: src/glade-strings.c:29 src/glade-strings.c:31
+msgid "Version"
+msgstr "Versão"
+
+#: src/glade-strings.c:32
+msgid ""
+"Please check to see if your bug has already been submitted,\n"
+"and if so, use \"Add information to existing report\" above."
+msgstr ""
+"Verifique se seu bug já foi enviado. Se for o caso, use\n"
+"\"Adicionar informação a um relatório existente\" acima."
+
+#: src/glade-strings.c:34 src/glade-strings.c:35
+msgid "Bug Number"
+msgstr "Número do Erro"
+
+#: src/glade-strings.c:36
+msgid "Description"
+msgstr "Descrição"
+
+#: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr "Por favor, escreva seu relatório em inglês, se possível."
+
+#: src/glade-strings.c:38
+msgid "Short subject for the bug report"
+msgstr "Descrição resumida do relatório (assunto)"
+
+#: src/glade-strings.c:39
+msgid "Full description of the bug, including how to reproduce it"
+msgstr "Descrição completa do erro, incluindo como reproduzí-lo"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "Incluir um arquivo texto"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Informação de Debug"
+
+#: src/glade-strings.c:42
+msgid "Select the crashed application's binary"
+msgstr "Selecione o executável do aplicativo abortado"
+
+#: src/glade-strings.c:43
+msgid "Binary"
+msgstr "Executável"
+
+#: src/glade-strings.c:44
+msgid "Process ID"
+msgstr "ID do processo"
+
+#: src/glade-strings.c:45
+msgid "Core file"
+msgstr "Arquivo core"
+
+#: src/glade-strings.c:46
+msgid "Select a core file"
+msgstr "Escolher um arquivo core"
+
+#: src/glade-strings.c:47
+msgid "Collecting Debugging Information"
+msgstr "Recolhendo Informação de Debug"
+
+#: src/glade-strings.c:48
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Por favor, espere enquanto a informação\n"
+"de debug está sendo recolhida..."
+
+#: src/glade-strings.c:50
+msgid "System Configuration"
+msgstr "Configuração do Sistema"
+
+#: src/glade-strings.c:51
+msgid "Please verify that this information is correct"
+msgstr "Por favor, verifique se esta informação é correta"
+
+#: src/glade-strings.c:53
+msgid "Version installed"
+msgstr "Versão instalada"
+
+#: src/glade-strings.c:54
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:55
+msgid "Automatically go to next page when complete"
+msgstr "Avançar página automaticamente ao completar"
+
+#: src/glade-strings.c:56
+msgid "Submitting the Report"
+msgstr "Enviando Relatório"
+
+#: src/glade-strings.c:57
+msgid "To"
+msgstr "Para"
+
+#: src/glade-strings.c:58
+msgid "Send copy to yourself"
+msgstr "Enviar uma cópia a si próprio"
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr "Salvar relatório em..."
+
+#: src/glade-strings.c:60
+msgid "Content"
+msgstr "Conteúdo"
+
+#: src/glade-strings.c:61
+msgid "Summary"
+msgstr "Resumo"
+
+#: src/glade-strings.c:62
+msgid "The GEGL is watching."
+msgstr "O GEGL está observando."
+
+#: src/util.c:60
+msgid "Unable to open pipe"
+msgstr "Impossível abrir pipe"
+
+#: src/util.c:72
+#, c-format
+msgid "Could not run '%s'."
+msgstr "Impossível executar '%s'."
+
+#: src/util.c:112
+msgid "Error on read..."
+msgstr "Error ao ler..."
