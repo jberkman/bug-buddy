@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.1\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-06-24 20:59+0200\n"
 "PO-Revision-Date: 2001-05-22 10:36+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -533,9 +533,8 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "Du må inkludere en forståelig beskrivelse i din feilrapport."
 
 #: src/united-states-of-bug-buddy.c:383
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Send feilrapport"
+msgstr "Send denne feilrapporten nå?"
 
 #: src/united-states-of-bug-buddy.c:397
 #, c-format
@@ -558,7 +557,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -568,7 +567,9 @@ msgid ""
 msgstr ""
 "Din feilrapport ble sendt til:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Takk!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."

@@ -1,10 +1,10 @@
+2001-06-24  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* no.po: Updated Norwegian translation.
+
 2001-06-22  Christophe Merlet  <redfox@eikonex.org>
 
 	* fr.po: Updated French translation.
-
-2001-06-21  gettextize  <bug-gnu-utils@gnu.org>
-
-	* Makefile.in.in: Upgrade to gettext-0.10.38.
 
 2001-06-21  Pablo Saratxaga  <pablo@mandrakesoft.com>
 
