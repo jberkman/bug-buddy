@@ -1319,8 +1319,8 @@ of products for the bug tracking systems.</label>
 
 	    <widget>
 	      <class>GtkLabel</class>
-	      <name>label123</name>
-	      <label>Show products for</label>
+	      <name>label138</name>
+	      <label>Bug tracking system</label>
 	      <justify>GTK_JUSTIFY_CENTER</justify>
 	      <wrap>False</wrap>
 	      <xalign>0.5</xalign>
@@ -1340,23 +1340,6 @@ of products for the bug tracking systems.</label>
 	      <can_focus>True</can_focus>
 	      <items></items>
 	      <initial_choice>0</initial_choice>
-	      <child>
-		<padding>0</padding>
-		<expand>False</expand>
-		<fill>False</fill>
-	      </child>
-	    </widget>
-
-	    <widget>
-	      <class>GtkLabel</class>
-	      <name>label124</name>
-	      <label>bug tracking systems.</label>
-	      <justify>GTK_JUSTIFY_CENTER</justify>
-	      <wrap>False</wrap>
-	      <xalign>0.5</xalign>
-	      <yalign>0.5</yalign>
-	      <xpad>0</xpad>
-	      <ypad>0</ypad>
 	      <child>
 		<padding>0</padding>
 		<expand>False</expand>
