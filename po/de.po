@@ -1,4 +1,5 @@
 # German message file for bug-buddy.
+# Christian Meyer <cm@ggtt.de>, 2000.
 # Karl Eichwalder <ke@suse.de>, 2000.
 # Matthias Warkus  <mawa@iname.com>, 2000.
 #
@@ -8,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 23:34+0200\n"
-"PO-Revision-Date: 2000-10-04 23:36+0200\n"
-"Last-Translator: Christian Meyer <cm@ggtt.de>\n"
+"Project-Id-Version: bug-buddy 1.1\n"
+"POT-Creation-Date: 2000-10-05 20:14+0200\n"
+"PO-Revision-Date: 2000-10-05 20:18+02:00\n"
+"Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -202,9 +203,8 @@ msgid "Please enter your name."
 msgstr "Bitte geben Sie Ihren Namen an."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse an."
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse an."
 
 #: src/bug-buddy.c:620
 #, c-format
@@ -595,4 +595,3 @@ msgstr "Kann '%s' nicht starten."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Fehler beim Lesen...."
-
