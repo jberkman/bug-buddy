@@ -1,19 +1,18 @@
 # Spanish translation of bug-buddy.
-# Copyright (C) 2000 Jes˙s Bravo ¡lvarez.
-# Copyright (C) 2001 Carlos PerellÛ MarÌn.
-# Jes˙s Bravo ¡lvarez <jba@pobox.com>, 2000.
-# Carlos PerellÛ MarÌn <carlos@gnome-db.org>, 2001
-# HÈctor GarcÌa ¡lvarez <hector@scouts-es.org>, 2001
+# Copyright (C) 2000-2002 Free Software Foundation, Inc.
+# Jes√∫s Bravo √Ålvarez <jba@pobox.com>, 2000.
+# Carlos Perell√≥ Mar√≠n <carlos@gnome-db.org>, 2001
+# H√©ctor Garc√≠a √Ålvarez <hector@scouts-es.org>, 2001
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
+"Project-Id-Version: bug-buddy 2.2\n"
+"POT-Creation-Date: 2002-06-01 16:05+0200\n"
 "PO-Revision-Date: 2002-03-04 10:13+0100\n"
-"Last-Translator: HÈctor GarcÌa ¡lvarez <hector@scouts-es.org>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"Last-Translator: H√©ctor Garc√≠a √Ålvarez <hector@scouts-es.org>\n"
+"Language-Team: Spanish <traductores@es.gnome.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bug-buddy.c:55
@@ -22,7 +21,7 @@ msgstr "Enviar el informe de error"
 
 #: src/bug-buddy.c:56
 msgid "Only send report to yourself"
-msgstr "Enviar el informe sÛlo a sÌ mismo"
+msgstr "Enviar el informe s√≥lo a s√≠ mismo"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
@@ -30,7 +29,7 @@ msgstr "Guardar el informe en un archivo"
 
 #: src/bug-buddy.c:62
 msgid "crashed application"
-msgstr "aplicaciÛn estropeada"
+msgstr "aplicaci√≥n estropeada"
 
 #: src/bug-buddy.c:63
 msgid "core file"
@@ -46,7 +45,7 @@ msgstr "Hacer un nuevo informe de error"
 
 #: src/bug-buddy.c:70
 msgid "Add more information to existing report"
-msgstr "AÒadir m·s informaciÛn a un informe de error existente"
+msgstr "A√±adir m√°s informaci√≥n a un informe de error existente"
 
 #: src/bug-buddy.c:79
 msgid "Name of contact"
@@ -58,7 +57,7 @@ msgstr "NOMBRE"
 
 #: src/bug-buddy.c:80
 msgid "Email address of contact"
-msgstr "DirecciÛn de correo electrÛnico del contacto"
+msgstr "Direcci√≥n de correo electr√≥nico del contacto"
 
 #: src/bug-buddy.c:80
 msgid "EMAIL"
@@ -74,15 +73,15 @@ msgstr "PAQUETE"
 
 #: src/bug-buddy.c:82
 msgid "Version of the package"
-msgstr "VersiÛn del paquete"
+msgstr "Versi√≥n del paquete"
 
 #: src/bug-buddy.c:82
 msgid "VERSION"
-msgstr "VERSI”N"
+msgstr "VERSI√ìN"
 
 #: src/bug-buddy.c:83
 msgid "File name of crashed program"
-msgstr "Nombre de archivo de la aplicaciÛn estropeada"
+msgstr "Nombre de archivo de la aplicaci√≥n estropeada"
 
 #: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
@@ -90,7 +89,7 @@ msgstr "ARCHIVO"
 
 #: src/bug-buddy.c:84
 msgid "PID of crashed program"
-msgstr "PID de la aplicaciÛn estropeada"
+msgstr "PID de la aplicaci√≥n estropeada"
 
 #: src/bug-buddy.c:84
 msgid "PID"
@@ -98,7 +97,7 @@ msgstr "PID"
 
 #: src/bug-buddy.c:85
 msgid "Core file from program"
-msgstr "Archivo core de la aplicaciÛn"
+msgstr "Archivo core de la aplicaci√≥n"
 
 #: src/bug-buddy.c:86
 msgid "Text file to include in the report"
@@ -114,8 +113,8 @@ msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb a˙n no terminÛ de obtener la informaciÛn de depuraciÛn.\n"
-"øMatar el proceso gdb (la traza de la pila no estar· completa)?"
+"gdb a√∫n no termin√≥ de obtener la informaci√≥n de depuraci√≥n.\n"
+"¬øMatar el proceso gdb (la traza de la pila no estar√° completa)?"
 
 #: src/bug-buddy.c:219 src/gdb-buddy.c:125
 msgid "gdb has already exited"
@@ -165,27 +164,27 @@ msgstr ""
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
-msgstr "Ocultar informaciÛn de depuraciÛn"
+msgstr "Ocultar informaci√≥n de depuraci√≥n"
 
 #: src/bug-buddy.c:492
 msgid "Show Debugging Options"
-msgstr "Mostrar informaciÛn de DepuraciÛn"
+msgstr "Mostrar informaci√≥n de Depuraci√≥n"
 
 #: src/bug-buddy.c:556
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME est· obsoleto.\n"
-"Emplee el argumento de la lÌnea de comandos --apname."
+"$GNOME_CRASHED_APPNAME est√° obsoleto.\n"
+"Emplee el argumento de la l√≠nea de comandos --apname."
 
 #: src/bug-buddy.c:566
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID est· obsoleto.\n"
-"Emplee el argumento de la lÌnea de comandos --pid."
+"$GNOME_CRASHED_PID est√° obsoleto.\n"
+"Emplee el argumento de la l√≠nea de comandos --pid."
 
 #: src/bug-buddy.c:582
 msgid ""
@@ -193,7 +192,7 @@ msgid ""
 "It will step you through the process of submitting a bug report."
 msgstr ""
 "Bienvenido a Bug Buddy, una herramienta para informar de fallos en GNOME.\n"
-"Te guiar· a traves del proceso necesario para informar de un fallo."
+"Te guiar√° a traves del proceso necesario para informar de un fallo."
 
 #: src/bug-buddy.c:585
 msgid ""
@@ -203,7 +202,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Estas viendo esto porque otra aplicaciÛn ha fallado."
+"Estas viendo esto porque otra aplicaci√≥n ha fallado."
 
 #: src/bug-buddy.c:588
 msgid ""
@@ -214,9 +213,9 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Por favor espere unos momentos mientras Bug Buddy recaba informaciÛn de "
-"depurado de la aplicaciÛn.  Esto permite a Bug Buddy facilitar un informe de "
-"error m·s valioso."
+"Por favor espere unos momentos mientras Bug Buddy recaba informaci√≥n de "
+"depurado de la aplicaci√≥n.  Esto permite a Bug Buddy facilitar un informe de "
+"error m√°s valioso."
 
 #: src/bug-buddy.c:727
 #, c-format
@@ -230,7 +229,7 @@ msgid ""
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "No se pudo cargar su archivo de interfaz de usuario (%s).\n"
-"Aseg˙rese que Bug Buddy se instalÛ correctamente."
+"Aseg√∫rese que Bug Buddy se instal√≥ correctamente."
 
 #: src/bugzilla.c:616
 msgid "ID"
@@ -244,12 +243,13 @@ msgstr "Producto"
 msgid "Component"
 msgstr "Componente"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
-msgstr "DescripciÛn"
+msgstr "Descripci√≥n"
 
 #: src/bugzilla.c:774
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -257,7 +257,7 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "Bug Buddy no pudo abrir '%s'.\n"
-"Aseg˙rese que Bug Buddy se instalÛ correctamente.\n"
+"Aseg√∫rese que Bug Buddy se instal√≥ correctamente.\n"
 "\n"
 "Bug Buddy se cerrara ahora."
 
@@ -275,7 +275,7 @@ msgid ""
 msgstr ""
 "Bug Buddy no pudo encontrar informacion acerca de donde enviar el error.\n"
 "\n"
-"Aseg˙rese que Bug Buddy se instalÛ correctamente.\n"
+"Aseg√∫rese que Bug Buddy se instal√≥ correctamente.\n"
 "\n"
 "Bug Buddy se cerrara ahora."
 
@@ -319,7 +319,7 @@ msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"GDB no se pudo determinar quÈ binario se creÛ\n"
+"GDB no se pudo determinar qu√© binario se cre√≥\n"
 "'%s'"
 
 #: src/gdb-buddy.c:228
@@ -332,7 +332,7 @@ msgid ""
 "Debugging information will not be obtained."
 msgstr ""
 "No se ha podido encontrar GDB en su sistema.\n"
-"No se obtendr· informaciÛn de depuraciÛn."
+"No se obtendr√° informaci√≥n de depuraci√≥n."
 
 #: src/gdb-buddy.c:308
 msgid ""
@@ -376,9 +376,9 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy puede enviar informaciÛn de depuraciÛn con su informe de error.\n"
-"Se deben de haber seleccionado autom·ticamente las opciÛnes correctas.\n"
-"Para m·s informaciÛn, pulse el botÛn de Ayuda."
+"Bug Buddy puede enviar informaci√≥n de depuraci√≥n con su informe de error.\n"
+"Se deben de haber seleccionado autom√°ticamente las opci√≥nes correctas.\n"
+"Para m√°s informaci√≥n, pulse el bot√≥n de Ayuda."
 
 #: src/bug-buddy.glade.h:10
 msgid ""
@@ -387,10 +387,10 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
-"Bug Buddy usa el correo electrÛnico para enviar un informe de fallos.\n"
-"Por favor elija como le gustarÌa que Bug Buddy envie el correo.\n"
+"Bug Buddy usa el correo electr√≥nico para enviar un informe de fallos.\n"
+"Por favor elija como le gustar√≠a que Bug Buddy envie el correo.\n"
 "Si elije usar el cliente de correo por defecto de GNOME, esta\n"
-"configuraciÛn ser· compartida con otras aplicaciones de GNOME."
+"configuraci√≥n ser√° compartida con otras aplicaciones de GNOME."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
@@ -414,7 +414,7 @@ msgstr "Personalizar mailer"
 
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
-msgstr "DepuraciÛn"
+msgstr "Depuraci√≥n"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
@@ -446,15 +446,15 @@ msgstr "Ruta de sendmail"
 
 #: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
-msgstr "Elija un componente, versiÛn y nivel de severidad."
+msgstr "Elija un componente, versi√≥n y nivel de severidad."
 
 #: src/bug-buddy.glade.h:29
 msgid "Please make any final corrections to the bug report."
-msgstr "Por favor haga cualquier correcciÛn final al informe."
+msgstr "Por favor haga cualquier correcci√≥n final al informe."
 
 #: src/bug-buddy.glade.h:30
 msgid "Please make your bug report in English, if possible."
-msgstr "Por favor, haga su informe de error en inglÈs, si es posible."
+msgstr "Por favor, haga su informe de error en ingl√©s, si es posible."
 
 #: src/bug-buddy.glade.h:31
 msgid "Please select the product for the bug you wish to report."
@@ -467,7 +467,7 @@ msgid ""
 "If the bug is already reported, please do not report it again."
 msgstr ""
 "Por favor emplee un minuto en comprobar si su bug es uno de los reportados "
-"m·s frecuentemente.\n"
+"m√°s frecuentemente.\n"
 "Si el bug ya ha sido reportado, por favor no lo reporte de nuevo."
 
 #: src/bug-buddy.glade.h:34
@@ -512,11 +512,11 @@ msgstr "Severidad"
 
 #: src/bug-buddy.glade.h:44
 msgid "Show _Debugging Details"
-msgstr "Mostrar _detalles de depuraciÛn"
+msgstr "Mostrar _detalles de depuraci√≥n"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
-msgstr "Mostrar los bugs m·s frecuentes en:"
+msgstr "Mostrar los bugs m√°s frecuentes en:"
 
 #: src/bug-buddy.glade.h:46
 msgid "Simple"
@@ -572,7 +572,7 @@ msgstr "Usar el cliente de correo por defecto de GNOME"
 
 #: src/bug-buddy.glade.h:59
 msgid "Version"
-msgstr "VersiÛn"
+msgstr "Versi√≥n"
 
 #: src/bug-buddy.glade.h:60
 msgid "component"
@@ -584,7 +584,7 @@ msgstr "desc"
 
 #: src/bug-buddy.glade.h:62
 msgid "email info"
-msgstr "informaciÛn correo-e"
+msgstr "informaci√≥n correo-e"
 
 #: src/bug-buddy.glade.h:63
 msgid "finished"
@@ -600,11 +600,11 @@ msgstr "gnome"
 
 #: src/bug-buddy.glade.h:66
 msgid "mail config"
-msgstr "configuraciÛn del correo"
+msgstr "configuraci√≥n del correo"
 
 #: src/bug-buddy.glade.h:67
 msgid "mostfreq"
-msgstr "m·s frecuentes"
+msgstr "m√°s frecuentes"
 
 #: src/bug-buddy.glade.h:68
 msgid "product"
@@ -632,19 +632,19 @@ msgstr "Bugs reportados frecuentemente"
 
 #: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
-msgstr "DescripciÛn del error"
+msgstr "Descripci√≥n del error"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "Mail Configuration"
-msgstr "ConfiguraciÛn del correo"
+msgstr "Configuraci√≥n del correo"
 
 #: src/united-states-of-bug-buddy.c:55
 msgid "Confirmation"
-msgstr "ConfirmaciÛn"
+msgstr "Confirmaci√≥n"
 
 #: src/united-states-of-bug-buddy.c:56
 msgid "Finished!"
-msgstr "°Finalizado!"
+msgstr "¬°Finalizado!"
 
 #: src/united-states-of-bug-buddy.c:98
 msgid "The graphical bug reporting tool for GNOME."
@@ -652,7 +652,7 @@ msgstr "La utilidad de GNOME para informar de errores"
 
 #: src/united-states-of-bug-buddy.c:109
 msgid "The lame Bug Buddy web page"
-msgstr "La pobre p·gina web de Bug Buddy"
+msgstr "La pobre p√°gina web de Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:293
 msgid "Please enter your name."
@@ -660,7 +660,7 @@ msgstr "Introduzca su nombre"
 
 #: src/united-states-of-bug-buddy.c:309
 msgid "Please enter a valid email address."
-msgstr "Introduzca una direcciÛn de correo v·lida"
+msgstr "Introduzca una direcci√≥n de correo v√°lida"
 
 #: src/united-states-of-bug-buddy.c:325
 #, c-format
@@ -703,11 +703,11 @@ msgstr "Tiene que incluir un asunto entendible en su informe de error."
 
 #: src/united-states-of-bug-buddy.c:474
 msgid "You must include a comprehensible description in your bug report."
-msgstr "Tiene que incluir una descripciÛn entendible en su informe de error."
+msgstr "Tiene que incluir una descripci√≥n entendible en su informe de error."
 
 #: src/united-states-of-bug-buddy.c:502
 msgid "Submit this bug report now?"
-msgstr "øEnviar este informe de error ahora?"
+msgstr "¬øEnviar este informe de error ahora?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
@@ -754,7 +754,7 @@ msgstr ""
 "\n"
 "        <%s>\n"
 "\n"
-"°Gracias!"
+"¬°Gracias!"
 
 #: src/united-states-of-bug-buddy.c:644
 msgid ""
@@ -762,7 +762,7 @@ msgid ""
 "report in, you will have to manually address the bug report."
 msgstr ""
 "Dado que Bug Buddy no conoce el producto sobre el que quiere informar de un "
-"error, tendr· que ocuparse del informe de error manualmente."
+"error, tendr√° que ocuparse del informe de error manualmente."
 
 #: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
@@ -774,7 +774,7 @@ msgstr "Tiene que especificar un componente para su informe de error."
 
 #: src/united-states-of-bug-buddy.c:702
 msgid "You must specify a version for your bug report."
-msgstr "Tiene que especificar una versiÛn para su informe de error."
+msgstr "Tiene que especificar una versi√≥n para su informe de error."
 
 #: src/united-states-of-bug-buddy.c:785
 msgid ""
@@ -782,7 +782,7 @@ msgid ""
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
-"Se ha ejecutado tu programa de correo electrÛnico.  Por favor miralo por "
+"Se ha ejecutado tu programa de correo electr√≥nico.  Por favor miralo por "
 "encima y mandalo.\n"
 "\n"
 "Gracias por enviar informes de fallos."
@@ -792,7 +792,7 @@ msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr ""
-"øEst· seguro que quiere cancelar\n"
+"¬øEst√° seguro que quiere cancelar\n"
 "este informe de error?"
 
 #: src/bug-buddy.desktop.in.h:1
@@ -802,257 +802,3 @@ msgstr "Herramienta de informe de errores"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Informe de un error en GNOME"
-
-#~ msgid "%P %%"
-#~ msgstr "%P %%"
-
-#~ msgid "About"
-#~ msgstr "Acerca de"
-
-#~ msgid "Go"
-#~ msgstr "Iniciar"
-
-#~ msgid "HTTP Proxy Settings"
-#~ msgstr "ConfiguraciÛn del proxy HTTP"
-
-#~ msgid "Location"
-#~ msgstr "Lugar"
-
-#~ msgid "Password"
-#~ msgstr "Clave"
-
-#~ msgid "Port"
-#~ msgstr "Puerto"
-
-#~ msgid "Proxy requires a username and password"
-#~ msgstr "El proxy requiere un nombre de usuario y clave"
-
-#~ msgid "Use HTTP Proxy"
-#~ msgstr "Usar proxy HTTP"
-
-#~ msgid "Username"
-#~ msgstr "Nombre de usuario"
-
-#~ msgid "Automatically continue to the next step when debugging is complete"
-#~ msgstr ""
-#~ "Ir autom·ticamente al siguiente paso cuando se complete la depuraciÛn"
-
-#~ msgid "Automatically go to next page when complete"
-#~ msgstr "Ir autom·ticamente a la siguiente p·gina cuando estÈ completo"
-
-#~ msgid "Content"
-#~ msgstr "Contenido"
-
-#~ msgid ""
-#~ "Description of Problem:\n"
-#~ "\n"
-#~ "\n"
-#~ "Steps to reproduce the problem:\n"
-#~ "1. \n"
-#~ "2. \n"
-#~ "3. \n"
-#~ "\n"
-#~ "Actual Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "Expected Results:\n"
-#~ "\n"
-#~ "\n"
-#~ "How often does this happen? \n"
-#~ "\n"
-#~ "\n"
-#~ "Additional Information:"
-#~ msgstr ""
-#~ "DescripciÛn del problema:\n"
-#~ "\n"
-#~ "\n"
-#~ "Pasos para reproducir el problema:\n"
-#~ "1. \n"
-#~ "2. \n"
-#~ "3. \n"
-#~ "\n"
-#~ "Resultados actuales:\n"
-#~ "\n"
-#~ "\n"
-#~ "Resultados esperados:\n"
-#~ "\n"
-#~ "\n"
-#~ "øCon que frecuencia ocurre? \n"
-#~ "\n"
-#~ "\n"
-#~ "InformaciÛn adicional:"
-
-#~ msgid "Package"
-#~ msgstr "Paquete"
-
-#~ msgid ""
-#~ "Please wait while Bug Buddy determines some information about your system."
-#~ msgstr "Espere mientras Bug Buddy obtiene informaciÛn sobre su sistema."
-
-#~ msgid "Send copy to yourself"
-#~ msgstr "Enviar una copia a sÌ mismo"
-
-#~ msgid "Skip this step in the future"
-#~ msgstr "Saltar este paso en el futuro"
-
-#~ msgid ""
-#~ "This program will walk you through the steps for \n"
-#~ "submitting a bug report for projects such as GNOME.\n"
-#~ "\n"
-#~ "These bug reports are submitted via email, so\n"
-#~ "please specify your email address so you can be\n"
-#~ "contacted if further information is required, or\n"
-#~ "when a fixed version is available."
-#~ msgstr ""
-#~ "Este programa le guiar· por los pasos a seguir para\n"
-#~ "enviar un informe de error a proyectos como GNOME.\n"
-#~ "\n"
-#~ "Estos informes de errores se enviar·n por correo electrÛnico,\n"
-#~ "por tanto indique su direcciÛn de correo electrÛnico para que\n"
-#~ "puedan contactar con usted si requieren m·s informaciÛn o cuando\n"
-#~ "tengan disponible un versiÛn arreglada"
-
-#~ msgid "Version installed"
-#~ msgstr "VersiÛn instalada"
-
-#~ msgid "intro"
-#~ msgstr "introducciÛn"
-
-#~ msgid "system"
-#~ msgstr "sistema"
-
-#~ msgid "Submitting the Report"
-#~ msgstr "Enviando el informe"
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.\n"
-#~ "\n"
-#~ "You won't be able to actually submit a bug report, but you will\n"
-#~ "be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "No parece que '%s' exista.\n"
-#~ "\n"
-#~ "No ser· capaz de enviar un informe de error, pero podr· guardarlo\n"
-#~ "en un archivo.\n"
-#~ "\n"
-#~ "øDesea indicar una nueva ruta para sendmail?"
-
-#~ msgid ""
-#~ "Bug Buddy has determined that some of its information about\n"
-#~ "the various bug tracking systems may need to be updated.\n"
-#~ "\n"
-#~ "Should Bug Buddy try to update these files now?"
-#~ msgstr ""
-#~ "Bug Buddy ha determinado que parte de su informaciÛn sobre los distintos\n"
-#~ "sistemas de seguimiento de errores, puede necesitar una actualizaciÛn.\n"
-#~ "\n"
-#~ "øDebe Bug Buddy intentar actualizar esos archivos ahora?"
-
-#~ msgid "download"
-#~ msgstr "descargar"
-
-#~ msgid "Are you sure you want to cancel this update?"
-#~ msgstr "øEst· seguro que quiere cancelar esta actualizaciÛn?"
-
-#~ msgid "Error on fork()."
-#~ msgstr "Error al hacer fork()."
-
-#~ msgid "Full description of the bug, including how to reproduce it"
-#~ msgstr "DescripciÛn completa del error, incluyendo cÛmo reproducirlo"
-
-#~ msgid "Short subject for the bug report"
-#~ msgstr "Asunto corto para el informe de error"
-
-#~ msgid "'%s' does not look like a text file."
-#~ msgstr "'%s' no parece un archivo de texto."
-
-#~ msgid "Unable to open pipe"
-#~ msgstr "No se puede abrir una tuberÌa"
-
-#~ msgid "Could not run '%s'."
-#~ msgstr "No se pudo ejecutar '%s'."
-
-#~ msgid "Error on read..."
-#~ msgstr "Error al leer..."
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "No se pudo abrir '%s'.\n"
-#~ "Aseg˙rese que bug-buddy se instalÛ correctamente."
-
-#~ msgid "critical"
-#~ msgstr "crÌtico"
-
-#~ msgid "grave"
-#~ msgstr "grave"
-
-#~ msgid "normal"
-#~ msgstr "normal"
-
-#~ msgid "wishlist"
-#~ msgstr "lista de deseos"
-
-#~ msgid "software bug"
-#~ msgstr "error de software"
-
-#~ msgid "documentation bug"
-#~ msgstr "error de documentaciÛn"
-
-#~ msgid "change request"
-#~ msgstr "peticiÛn de cambio"
-
-#~ msgid "support"
-#~ msgstr "soporte"
-
-#~ msgid ""
-#~ "It is much more helpful if you specify\n"
-#~ "a more specific package than 'general'.\n"
-#~ "\n"
-#~ "Please specify a package."
-#~ msgstr ""
-#~ "Es de m·s ayuda si usted indica un\n"
-#~ "paquete m·s especÌfico que 'general'.\n"
-#~ "\n"
-#~ "Especifique un paquete"
-
-#~ msgid ""
-#~ "You must include a subject and a description\n"
-#~ "in your bug report."
-#~ msgstr ""
-#~ "Tiene que incluir un asunto y una descripciÛn\n"
-#~ "en su informe de error."
-
-#~ msgid ""
-#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
-#~ "submit a bug report, but you will be able to save it to a file.\n"
-#~ "\n"
-#~ "Specify a new location for sendmail?"
-#~ msgstr ""
-#~ "No parece que '%s' exista.  No ser· capaz de enviar un informe\n"
-#~ "de error, pero podr· guardarlo en un archivo.\n"
-#~ "\n"
-#~ "øDesea indicar un nuevo lugar para sendmail?"
-
-#~ msgid "You must specify a recipient email address"
-#~ msgstr ""
-#~ "Tiene que indicar la direcciÛn de correo electrÛnico del destinatario"
-
-#~ msgid "Please choose a file to save to."
-#~ msgstr "Elija un archivo al que grabar."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr ""
-#~ "El archivo '%s' ya existe.\n"
-#~ "øSobreescribir este archivo?"
-
-#~ msgid "Help"
-#~ msgstr "Ayuda"
-
-#~ msgid "Refresh"
-#~ msgstr "Refrescar"
