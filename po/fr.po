@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.90\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-15 19:12+0100\n"
+"Project-Id-Version: bug-buddy 2.0\n"
+"POT-Creation-Date: 2001-03-22 10:57+0100\n"
+"PO-Revision-Date: 2001-02-15 11:11+0100\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -148,10 +148,10 @@ msgstr "Êtes-vous sûr de vouloir annuler cette mise à jour ?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Ne peut ouvrir « %s ».\n"
-"Vérifiez que bug-buddy a été correctement installé."
+"Vérifiez que Bug Buddy a été correctement installé."
 
 #: src/bugzilla.c:549
 msgid "All"
@@ -209,10 +209,10 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Ne peut trouver le fichier gdb-cmd.\n"
-"Essayer de réinstaller bug-buddy."
+"Essayez de réinstaller Bug Buddy."
 
 #: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
@@ -515,7 +515,7 @@ msgstr "Veuillez saisir une adresse électronique valide."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -618,6 +618,13 @@ msgstr "Ne peut exécuter « %s »."
 msgid "Error on read..."
 msgstr "Erreur en lecture..."
 
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ne peut ouvrir « %s ».\n"
+#~ "Vérifiez que bug-buddy a été correctement installé."
+
 #~ msgid "critical"
 #~ msgstr "critique"
 
@@ -692,13 +699,6 @@ msgstr "Erreur en lecture..."
 
 #~ msgid "Refresh"
 #~ msgstr "Rafraîchir"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Ne peut ouvrir « %s ».\n"
-#~ "Vérifiez que Bug Buddy a été correctement installé."
 
 #~ msgid "Distribution"
 #~ msgstr "Distribution"
