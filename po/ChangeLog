@@ -1,3 +1,8 @@
+2001-11-29  Abel Cheung  <maddog@linux.org.hk>
+
+	* zh_TW.po: Updated traditional Chinese translation from
+	  Joe Man <trmetal@yahoo.com.hk>. Fixed a few strings.
+
 2001-11-27  Hector Garcia Alvarez <hector@scouts-es.org>
 
         * es.po: Updated Spanish translation.

@@ -7,131 +7,131 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.0\n"
 "POT-Creation-Date: 2001-11-26 07:30-0500\n"
-"PO-Revision-Date: 2001-11-27 14:29+0800\n"
+"PO-Revision-Date: 2001-11-28 11:25+0800\n"
 "Last-Translator: Joe Man <trmetal@yahoo.com.hk>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=big5\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bug-buddy.c:53
 msgid "Submit bug report"
-msgstr "¶Ç°e¿ù»~³ø§i"
+msgstr "å‚³é€éŒ¯èª¤å ±å‘Š"
 
 #: src/bug-buddy.c:54
 msgid "Only send report to yourself"
-msgstr "¥u§â³ø§i¶Ç°eµ¹¦Û¤v"
+msgstr "åªæŠŠå ±å‘Šå‚³é€çµ¦è‡ªå·±"
 
 #: src/bug-buddy.c:55
 msgid "Save report to file"
-msgstr "±N³ø§i¦s¦¨ÀÉ®×"
+msgstr "å°‡å ±å‘Šå­˜æˆæª”æ¡ˆ"
 
 #: src/bug-buddy.c:60
 msgid "crashed application"
-msgstr "µo¥Í¿ù»~ªºµ{¦¡"
+msgstr "ç™¼ç”ŸéŒ¯èª¤çš„ç¨‹å¼"
 
 #: src/bug-buddy.c:61
 msgid "core file"
-msgstr "core ÀÉ"
+msgstr "core æª”"
 
 #: src/bug-buddy.c:62
 msgid "nothing"
-msgstr "µL"
+msgstr "ç„¡"
 
 #: src/bug-buddy.c:67
 msgid "Create a new bug report"
-msgstr "·s¼W¿ù»~³ø§i"
+msgstr "å»ºç«‹ä¸€å€‹æ–°çš„éŒ¯èª¤å ±å‘Š"
 
 #: src/bug-buddy.c:68
 msgid "Add more information to existing report"
-msgstr "¦b²{¦³¿ù»~³ø§i¤¤¼W¥[§ó¦h¸ê°T"
+msgstr "åœ¨ç¾æœ‰éŒ¯èª¤å ±å‘Šä¸­å¢åŠ æ›´å¤šè³‡è¨Š"
 
 #: src/bug-buddy.c:77
 msgid "Name of contact"
-msgstr "Ápµ¸ªÌ©m¦W"
+msgstr "è¯çµ¡è€…å§“å"
 
 #: src/bug-buddy.c:77
 msgid "NAME"
-msgstr "©m¦W"
+msgstr "å§“å"
 
 #: src/bug-buddy.c:78
 msgid "Email address of contact"
-msgstr "¹q¤l¶l¥ó¦a§}"
+msgstr "é›»å­éƒµä»¶åœ°å€"
 
 #: src/bug-buddy.c:78
 msgid "EMAIL"
-msgstr "¹q¶l"
+msgstr "é›»éƒµ"
 
 #: src/bug-buddy.c:79
 msgid "Package containing the program"
-msgstr "¥]§t¸Óµ{¦¡ªº®M¥ó"
+msgstr "åŒ…å«è©²ç¨‹å¼çš„å¥—ä»¶"
 
 #: src/bug-buddy.c:79
 msgid "PACKAGE"
-msgstr "®M¥ó"
+msgstr "å¥—ä»¶"
 
 #: src/bug-buddy.c:80
 msgid "Version of the package"
-msgstr "®M¥óª©¥»"
+msgstr "å¥—ä»¶ç‰ˆæœ¬"
 
 #: src/bug-buddy.c:80
 msgid "VERSION"
-msgstr "ª©¥»"
+msgstr "ç‰ˆæœ¬"
 
 #: src/bug-buddy.c:81
 msgid "File name of crashed program"
-msgstr "µo¥Í¿ù»~ªºµ{¦¡¦WºÙ"
+msgstr "ç™¼ç”ŸéŒ¯èª¤çš„ç¨‹å¼çš„åç¨±"
 
 #: src/bug-buddy.c:81
 #: src/bug-buddy.c:83
 #: src/bug-buddy.c:84
 msgid "FILE"
-msgstr "ÀÉ®×"
+msgstr "ç¨‹å¼åç¨±"
 
 #: src/bug-buddy.c:82
 msgid "PID of crashed program"
-msgstr "¦³°İÃDµ{¦¡ªº PID (¦æµ{½s¸¹)"
+msgstr "ç™¼ç”ŸéŒ¯èª¤çš„ç¨‹å¼çš„ PID (è¡Œç¨‹ç·¨è™Ÿ)"
 
 #: src/bug-buddy.c:82
 msgid "PID"
-msgstr "PID (¦æµ{½s¸¹)"
+msgstr "PID (è¡Œç¨‹ç·¨è™Ÿ)"
 
 #: src/bug-buddy.c:83
 msgid "Core file from program"
-msgstr "¥Ñµ{¦¡©Ò²£¥Íªº core ÀÉ"
+msgstr "ç”±ç¨‹å¼æ‰€ç”¢ç”Ÿçš„ core æª”"
 
 #: src/bug-buddy.c:84
 msgid "Text file to include in the report"
-msgstr "¥]¬A©ó³ø§i¤ºªº¤å¦rÀÉ"
+msgstr "é™„åŠ æ–¼éŒ¯èª¤å ±å‘Šå…§çš„æ–‡å­—æª”"
 
 #: src/bug-buddy.c:227
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb ¤´¥¼§¹¦¨¨ú±o°£¿ù¸ê®Æªºµ{§Ç¡C\n"
-"¬O§_°±¤î gdb ªº°õ¦æ (°ïÅ|°lÂÜ¸ê®Æ±N·|¬O¤£§¹¾ãªº)?"
+"gdb å°šæœªå®Œæˆå–å¾—é™¤éŒ¯è³‡æ–™çš„ç¨‹åºã€‚\n"
+"æ˜¯å¦ç¢ºå®šçµæŸ gdb (å †ç–Šè¿½è¹¤è³‡æ–™å°‡æœƒæ˜¯ä¸å®Œæ•´çš„)?"
 
 #: src/bug-buddy.c:238
 #: src/gdb-buddy.c:117
 msgid "gdb has already exited"
-msgstr "gdb ¤w¸g¦s¦b"
+msgstr "gdb ç¨‹å¼å·²ç¶“çµæŸ"
 
 #: src/bug-buddy.c:424
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME ¤w´î¤Ö¨Ï¥Î¡C\n"
-"½Ğ¨Ï¥Î --appname ³o­Ó«ü¥O¦C°Ñ¼Æ´À¥N¡C"
+"$GNOME_CRASHED_APPNAME å·²æ¸›å°‘ä½¿ç”¨ã€‚\n"
+"è«‹ä½¿ç”¨ --appname é€™å€‹æŒ‡ä»¤åˆ—åƒæ•¸æ›¿ä»£ã€‚"
 
 #: src/bug-buddy.c:434
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID ¤w´î¤Ö¨Ï¥Î¡C\n"
-"½Ğ¨Ï¥Î --pid ³o­Ó«ü¥O¦C°Ñ¼Æ´À¥N¡C"
+"$GNOME_CRASHED_PID å·²æ¸›å°‘ä½¿ç”¨ã€‚\n"
+"è«‹ä½¿ç”¨ --pid é€™å€‹æŒ‡ä»¤åˆ—åƒæ•¸æ›¿ä»£ã€‚"
 
 #: src/bug-buddy.c:555
 #, c-format
@@ -139,26 +139,26 @@ msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Bug Buddy µLªk¸ü¤J¥ÎªÌ¤¶­±ÀÉ®× (%s)¡C\n"
-"½Ğ½T©w Bug Buddy ¤w¥¿½T¦w¸Ë¡C"
+"Bug Buddy ç„¡æ³•è¼‰å…¥ç”¨è€…ä»‹é¢æª”æ¡ˆ (%s)ã€‚\n"
+"è«‹ç¢ºå®š Bug Buddy å·²æ­£ç¢ºå®‰è£ã€‚"
 
 #: src/bug-buddy.glade.h:49
 #: src/bugzilla.c:562
 #: src/united-states-of-bug-buddy.c:52
 msgid "Product"
-msgstr "²£«~"
+msgstr "ç”¢å“"
 
 #: src/bug-buddy.glade.h:18
 #: src/bugzilla.c:568
 #: src/bugzilla.c:596
 msgid "Description"
-msgstr "´y­z"
+msgstr "æè¿°"
 
 #: src/bug-buddy.glade.h:14
 #: src/bugzilla.c:590
 #: src/united-states-of-bug-buddy.c:53
 msgid "Component"
-msgstr "¤¸¥ó"
+msgstr "å…ƒä»¶"
 
 #: src/bugzilla.c:617
 #, c-format
@@ -166,12 +166,12 @@ msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Bug Buddy µLªk¶}±Ò '%s'¡C\n"
-"½Ğ½T©w Bug Buddy ¤w¥¿½T¦w¸Ë¡C"
+"Bug Buddy ç„¡æ³•é–‹å•Ÿ '%s'ã€‚\n"
+"è«‹ç¢ºå®š Bug Buddy å·²æ­£ç¢ºå®‰è£ã€‚"
 
 #: src/bugzilla.c:633
 msgid "All"
-msgstr "¥ş³¡"
+msgstr "å…¨éƒ¨"
 
 #: src/bugzilla.c:662
 msgid ""
@@ -180,15 +180,15 @@ msgid ""
 "\n"
 "Should Bug Buddy try to update these files now?"
 msgstr ""
-"Bug Buddy µo²{¬Y¨ÇÃö©ó³o­Ó¦h­«¿ù»~°lÂÜ¨t²Î\n"
-"ªº¸ê°T©Î³\¶·­n§ó·s¡C\n"
+"Bug Buddy ç™¼ç¾æŸäº›é—œæ–¼é€™å€‹å¤šé‡éŒ¯èª¤è¿½è¹¤ç³»çµ±\n"
+"çš„è³‡è¨Šæˆ–è¨±é ˆè¦æ›´æ–°ã€‚\n"
 "\n"
-"¬O§_¶·­n Bug Buddy ²{¦b¹Á¸Õ§ó·s³o¨ÇÀÉ®×¡H"
+"æ˜¯å¦éœ€è¦ Bug Buddy ç«‹åˆ»å˜—è©¦æ›´æ–°é€™äº›æª”æ¡ˆï¼Ÿ"
 
 #: src/gdb-buddy.c:74
 #, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "¥¿¦b¨ú¦^°ïÅ|°lÂÜ¸ê®Æ... (%d)"
+msgstr "æ­£åœ¨å–å›å †ç–Šè¿½è¹¤è³‡æ–™... (%d)"
 
 #: src/gdb-buddy.c:159
 #, c-format
@@ -196,7 +196,7 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"µLªk¥H gdb ³B²z core ÀÉ¡G\n"
+"ç„¡æ³•ä»¥ gdb è™•ç† core æª”ï¼š\n"
 "'%s'"
 
 #: src/gdb-buddy.c:190
@@ -205,32 +205,32 @@ msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"GDB µLªk¨M©w«Ø¥ß¤F¨º¤@­Ó¤G¶i¦ìÀÉ\n"
+"GDB ç„¡æ³•æ±ºå®šå“ªä¸€å€‹äºŒå…ƒç¢¼æª”ç”¢ç”Ÿäº†\n"
 "'%s'"
 
 #: src/gdb-buddy.c:222
 msgid "Error on read... aborting"
-msgstr "Åª¨ú¿ù»~... ¤¤Â_¤¤"
+msgstr "è®€å–éŒ¯èª¤... ä¸­æ­¢"
 
 #: src/gdb-buddy.c:267
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
-"¦b±zªº¨t²Î¤º§ä¤£¨ì GDB µ{¦¡¡C\n"
-"±N¤£·|±o¨ì°£¿ù¸ê°T¡C"
+"æ‰¾ä¸åˆ° GDB ç¨‹å¼ã€‚\n"
+"ç„¡æ³•å–å¾—é™¤éŒ¯è³‡è¨Šã€‚"
 
 #: src/gdb-buddy.c:301
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
-"µLªk§ä¨ì gdb-cmd ÀÉ¡C\n"
-"½Ğ¹Á¸Õ­«·s¦w¸Ë Bug Buddy¡C"
+"ç„¡æ³•æ‰¾åˆ° gdb-cmd æª”ã€‚\n"
+"è«‹å˜—è©¦é‡æ–°å®‰è£ Bug Buddyã€‚"
 
 #: src/gdb-buddy.c:321
 msgid "There was an error running gdb."
-msgstr "±Ò°Ê gdb ®Éµo¥Í¿ù»~¡C"
+msgstr "å•Ÿå‹• gdb æ™‚ç™¼ç”ŸéŒ¯èª¤ã€‚"
 
 #: src/bug-buddy.glade.h:2
 #, no-c-format
@@ -239,23 +239,23 @@ msgstr "%P %%"
 
 #: src/bug-buddy.glade.h:3
 msgid "About"
-msgstr "Ãö©ó"
+msgstr "é—œæ–¼"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
-msgstr "Assbarn ²{¶H"
+msgstr "Assbarn ç¾è±¡"
 
 #: src/bug-buddy.glade.h:5
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "°£¿ù§¹¦¨«á¦Û°Ê¨ì¤U¤@­¶"
+msgstr "é™¤éŒ¯å®Œæˆå¾Œè‡ªå‹•åˆ°ä¸‹ä¸€é "
 
 #: src/bug-buddy.glade.h:6
 msgid "Automatically go to next page when complete"
-msgstr "§¹¦¨«á¦Û°Ê¨ì¤U¤@­¶"
+msgstr "å®Œæˆå¾Œè‡ªå‹•åˆ°ä¸‹ä¸€é "
 
 #: src/bug-buddy.glade.h:7
 msgid "Binary file"
-msgstr "¤G¶i¦ìÀÉ"
+msgstr "äºŒå…ƒç¢¼æª”"
 
 #: src/bug-buddy.glade.h:8
 #: src/united-states-of-bug-buddy.c:100
@@ -268,29 +268,29 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy ¯à°÷³s¦P±zªº¿ù»~³ø§i±N°£¿ù¸ê°T°e¥X¡C\n"
-"¥¿½Tªº¿ï¶µÀ³¸Ó·|¦Û°Ê¬°±z¿ï©w¡C\n"
-"­n¨ú±o§ó¦h¸ê°T¡A½Ğ«ö¥H¤Uªº \"»¡©ú\" «ö¶s¡C"
+"Bug Buddy èƒ½å¤ é€£åŒæ‚¨çš„éŒ¯èª¤å ±å‘Šå°‡é™¤éŒ¯è³‡è¨Šé€å‡ºã€‚\n"
+"æ­£ç¢ºçš„é¸é …æ‡‰è©²æœƒè‡ªå‹•ç‚ºæ‚¨é¸å®šã€‚\n"
+"è¦å–å¾—æ›´å¤šè³‡è¨Šï¼Œè«‹æŒ‰ä»¥ä¸‹çš„ \"èªªæ˜\" æŒ‰éˆ•ã€‚"
 
 #: src/bug-buddy.glade.h:12
 msgid "Bug tracking system"
-msgstr "¿ù»~°lÂÜ¨t²Î"
+msgstr "éŒ¯èª¤è¿½è¹¤ç³»çµ±"
 
 #: src/bug-buddy.glade.h:13
 msgid "Cc"
-msgstr "´T¥»"
+msgstr "å‰¯æœ¬"
 
 #: src/bug-buddy.glade.h:15
 msgid "Content"
-msgstr "¤º®e"
+msgstr "å…§å®¹"
 
 #: src/bug-buddy.glade.h:16
 msgid "Core file"
-msgstr "Core ÀÉ"
+msgstr "Core æª”"
 
 #: src/bug-buddy.glade.h:17
 msgid "Debug"
-msgstr "°£¿ù"
+msgstr "é™¤éŒ¯"
 
 #: src/bug-buddy.glade.h:19
 msgid ""
@@ -313,111 +313,111 @@ msgid ""
 "\n"
 "Additional Information:"
 msgstr ""
-"°İÃD´y­z¡G\n"
+"å•é¡Œæè¿°ï¼š\n"
 "\n"
 "\n"
-"°İÃD­«²{¨B»E¡G\n"
+"å•é¡Œé‡ç¾æ­¥èšï¼š\n"
 "1. \n"
 "2. \n"
 "3. \n"
-"¹ê»Úµ²ªG¡G\n"
+"å¯¦éš›çµæœï¼š\n"
 "\n"
 "\n"
-"¹w´Áµ²ªG¡G\n"
+"é æœŸçµæœï¼š\n"
 "\n"
 "\n"
-"°İÃDªº¥X²{¦¸¼ÆÀWÁc¶Ü¡H(¬Û¹j¦h¤[¤~¥X²{¡H)\n"
+"å•é¡Œçš„å‡ºç¾æ¬¡æ•¸é »ç¹å—ï¼Ÿ(ç›¸éš”å¤šä¹…æ‰å‡ºç¾ï¼Ÿ)\n"
 "\n"
 "\n"
-"¨ä¥¦¸ê°T¡G"
+"å…¶å®ƒè³‡è¨Šï¼š"
 
 #: src/bug-buddy.glade.h:37
 msgid "Email"
-msgstr "¹q¶l"
+msgstr "é›»éƒµåœ°å€"
 
 #: src/bug-buddy.glade.h:38
 msgid "Go"
-msgstr "²¾¦Ü"
+msgstr "é™¤éŒ¯"
 
 #: src/bug-buddy.glade.h:39
 msgid "Include a text file"
-msgstr "¤Ş¤J¤@­Ó¤å¦rÀÉ"
+msgstr "é™„åŠ æ–‡å­—æª”"
 
 #: src/bug-buddy.glade.h:40
 msgid "Name"
-msgstr "©m¦W"
+msgstr "å§“å"
 
 #: src/bug-buddy.glade.h:41
 msgid "Package"
-msgstr "®M¥ó"
+msgstr "å¥—ä»¶"
 
 #: src/bug-buddy.glade.h:42
 msgid "Please choose a component, version, and severity level."
-msgstr "½Ğ¿ï¾Ü¤@­Ó¤¸¥ó¡Aª©¥»¡A¥H¤ÎÄY­«µ{«×¡C"
+msgstr "è«‹é¸æ“‡ä¸€å€‹å…ƒä»¶ï¼Œç‰ˆæœ¬ï¼Œä»¥åŠåš´é‡ç¨‹åº¦ã€‚"
 
 #: src/bug-buddy.glade.h:43
 msgid "Please make your bug report in English, if possible."
-msgstr "½ĞºÉ¶q¨Ï¥Î­^¤å¶×³ø¿ù»~"
+msgstr "è«‹ç›¡é‡ä½¿ç”¨è‹±æ–‡åŒ¯å ±éŒ¯èª¤"
 
 #: src/bug-buddy.glade.h:44
 msgid "Please select the product for the bug you wish to report."
-msgstr "½Ğ¿ï¾Ü¶·­n¶×³ø¿ù»~ªº²£«~¡C"
+msgstr "è«‹é¸å–éœ€è¦åŒ¯å ±éŒ¯èª¤çš„ç”¢å“ã€‚"
 
 #: src/bug-buddy.glade.h:45
 msgid "Please wait while Bug Buddy determines some information about your system."
-msgstr "½Ğµy­Ô¡ABug Buddy ¥¿¦b´ú©w¦³Ãö±zªº¨t²Îªº¬Y¨Ç¸ê°T¡C"
+msgstr "è«‹ç¨å€™ï¼ŒBug Buddy æ­£åœ¨æ¸¬å®šæœ‰é—œæ‚¨çš„ç³»çµ±çš„æŸäº›è³‡è¨Šã€‚"
 
 #: src/bug-buddy.glade.h:46
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
-"½Ğµy­Ô¡ABug Buddy ¥¿¦b§ó·s¿ù»~°lÂÜ¨t²Î\n"
-"ªº²£«~²M³æ¡C"
+"è«‹ç¨å€™ï¼ŒBug Buddy æ­£åœ¨æ›´æ–°éŒ¯èª¤è¿½è¹¤ç³»çµ±\n"
+"çš„ç”¢å“æ¸…å–®ã€‚"
 
 #: src/bug-buddy.glade.h:48
 msgid "Process ID"
-msgstr "¦æµ{½s¸¹"
+msgstr "è¡Œç¨‹ç·¨è™Ÿ"
 
 #: src/bug-buddy.glade.h:50
 msgid "Save the report to..."
-msgstr "±N³ø§i¦s¨ì..."
+msgstr "å°‡å ±å‘Šå„²å­˜åˆ°..."
 
 #: src/bug-buddy.glade.h:51
 msgid "Saving:"
-msgstr "Àx¦s¡G"
+msgstr "å„²å­˜ï¼š"
 
 #: src/bug-buddy.glade.h:52
 msgid "Select an action"
-msgstr "¿ï¾Ü¤@­Ó°Ê§@"
+msgstr "é¸å–ä¸€å€‹å‹•ä½œ"
 
 #: src/bug-buddy.glade.h:53
 msgid "Send copy to yourself"
-msgstr "¶Ç°e°Æ¥»µ¹¦Û¤v"
+msgstr "å‚³é€å‰¯æœ¬çµ¦è‡ªå·±"
 
 #: src/bug-buddy.glade.h:54
 msgid "Sendmail"
-msgstr "Sendmail ¦ì¸m"
+msgstr "Sendmail ä½ç½®"
 
 #: src/bug-buddy.glade.h:55
 msgid "Severity"
-msgstr "ÄY­«©Ê"
+msgstr "åš´é‡æ€§"
 
 #: src/bug-buddy.glade.h:56
 msgid "Skip this step in the future"
-msgstr "¤U¦¸­n¸õ¹L³o­Ó¨BÆJ"
+msgstr "ä¸è¦å†é¡¯ç¤ºé€™å€‹æ­¥é©Ÿ"
 
 #: src/bug-buddy.glade.h:57
 msgid "Stop"
-msgstr "°±¤î"
+msgstr "åœæ­¢"
 
 #: src/bug-buddy.glade.h:58
 msgid "Submit another bug"
-msgstr "¶Ç°e¥t¤@­Ó¿ù»~"
+msgstr "åŒ¯å ±å¦ä¸€å€‹éŒ¯èª¤"
 
 #: src/bug-buddy.glade.h:59
 msgid "Summary"
-msgstr "ºK­n"
+msgstr "æ‘˜è¦"
 
 #: src/bug-buddy.glade.h:60
 msgid ""
@@ -429,49 +429,49 @@ msgid ""
 "contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
-"³o­Óµ{¦¡±N·|³v¨B¤Ş»â±z\n"
-"¥h§¹¦¨¤Î¶Ç°e¦³Ãö±M®×ªº¿ù»~³ø§i¡C\n"
+"é€™å€‹ç¨‹å¼å°‡æœƒé€æ­¥å¼•é ˜æ‚¨\n"
+"å»å®ŒæˆåŠå‚³é€æœ‰é—œå°ˆæ¡ˆçš„éŒ¯èª¤å ±å‘Šã€‚\n"
 "\n"
-"³o¨Ç¿ù»~³ø§i·|¥Î¹q¤l¶l¥ó§Î¦¡±H¥X¡A\n"
-"©Ò¥H½Ğ«ü©w±zªº¹q¶l¦a§}¡A¥H«K±N¨Ó¦³\n"
-"¶·­n©Î¦³­×¥¿ª©¥»®É¡A\n"
-"¥i¥H»P±zÁpµ¸¡C"
+"é€™äº›éŒ¯èª¤å ±å‘Šæœƒç”¨é›»å­éƒµä»¶å½¢å¼å¯„å‡ºï¼Œ\n"
+"æ‰€ä»¥è«‹æŒ‡å®šæ‚¨çš„é›»éƒµåœ°å€ï¼Œä»¥ä¾¿å°‡ä¾†æœ‰\n"
+"éœ€è¦æˆ–æœ‰ä¿®æ­£ç‰ˆæœ¬æ™‚ï¼Œ\n"
+"å¯ä»¥èˆ‡æ‚¨è¯çµ¡ã€‚"
 
 #: src/bug-buddy.glade.h:67
 msgid "To"
-msgstr "¨ì"
+msgstr "æ”¶ä»¶è€…"
 
 #: src/bug-buddy.glade.h:68
 msgid "To:"
-msgstr "¦¬¥óªÌ¡G"
+msgstr "åˆ°ï¼š"
 
 #: src/bug-buddy.glade.h:69
 msgid "Version"
-msgstr "ª©¥»"
+msgstr "ç‰ˆæœ¬"
 
 #: src/bug-buddy.glade.h:70
 msgid "Version installed"
-msgstr "¤w¦w¸Ëªºª©¥»"
+msgstr "å·²å®‰è£çš„ç‰ˆæœ¬"
 
 #: src/bug-buddy.glade.h:71
 msgid "component"
-msgstr "¤¸¥ó"
+msgstr "å…ƒä»¶"
 
 #: src/bug-buddy.glade.h:72
 msgid "desc"
-msgstr "´y­z"
+msgstr "æè¿°"
 
 #: src/bug-buddy.glade.h:73
 msgid "download"
-msgstr "¤U¸ü"
+msgstr "ä¸‹è¼‰"
 
 #: src/bug-buddy.glade.h:74
 msgid "email info"
-msgstr "¹q¶l¸ê°T"
+msgstr "é›»éƒµè³‡è¨Š"
 
 #: src/bug-buddy.glade.h:75
 msgid "finished"
-msgstr "§¹¦¨"
+msgstr "å®Œæˆ"
 
 #: src/bug-buddy.glade.h:76
 msgid "gdb"
@@ -479,59 +479,59 @@ msgstr "gdb"
 
 #: src/bug-buddy.glade.h:77
 msgid "intro"
-msgstr "Â²¤¶"
+msgstr "ç°¡ä»‹"
 
 #: src/bug-buddy.glade.h:78
 msgid "product"
-msgstr "²£«~"
+msgstr "ç”¢å“"
 
 #: src/bug-buddy.glade.h:79
 msgid "system"
-msgstr "¨t²Î"
+msgstr "ç³»çµ±"
 
 #: src/united-states-of-bug-buddy.c:48
 msgid "Welcome to Bug Buddy"
-msgstr "Åwªï¨Ï¥Î Bug Buddy"
+msgstr "æ­¡è¿ä½¿ç”¨ Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Debugging Information"
-msgstr "°£¿ù¸ê°T"
+msgstr "é™¤éŒ¯è³‡è¨Š"
 
 #: src/united-states-of-bug-buddy.c:50
 msgid "Bug Description"
-msgstr "¿ù»~´y­z"
+msgstr "éŒ¯èª¤æè¿°"
 
 #: src/united-states-of-bug-buddy.c:51
 msgid "Updating Product Listing"
-msgstr "¥¿¦b§ó·s²£«~²M³æ"
+msgstr "æ­£åœ¨æ›´æ–°ç”¢å“æ¸…å–®"
 
 #: src/united-states-of-bug-buddy.c:54
 msgid "System Configuration"
-msgstr "¨t²Î³]©w"
+msgstr "ç³»çµ±è¨­å®š"
 
 #: src/united-states-of-bug-buddy.c:55
 msgid "Submitting the Report"
-msgstr "°e¥X³ø§i"
+msgstr "å‚³é€å ±å‘Š"
 
 #: src/united-states-of-bug-buddy.c:56
 msgid "Finished!"
-msgstr "§¹¦¨¡I"
+msgstr "å®Œæˆï¼"
 
 #: src/united-states-of-bug-buddy.c:103
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "GNOME ¹Ï§Î¤Æªº¿ù»~¶×³ø¤u¨ã¡C"
+msgstr "GNOME åœ–å½¢åŒ–çš„éŒ¯èª¤åŒ¯å ±å·¥å…·ã€‚"
 
 #: src/united-states-of-bug-buddy.c:114
 msgid "The lame Bug Buddy web page"
-msgstr "Bug Buddy ºô­¶"
+msgstr "Bug Buddy ç¶²é "
 
 #: src/united-states-of-bug-buddy.c:288
 msgid "Please enter your name."
-msgstr "½Ğ¿é¤J§Aªº©m¦W¡C"
+msgstr "è«‹è¼¸å…¥ä½ çš„å§“åã€‚"
 
 #: src/united-states-of-bug-buddy.c:304
 msgid "Please enter a valid email address."
-msgstr "½Ğ¿é¤J¹q¶l¦a§}¡C"
+msgstr "è«‹è¼¸å…¥é›»éƒµåœ°å€ã€‚"
 
 #: src/united-states-of-bug-buddy.c:321
 #, c-format
@@ -543,21 +543,21 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s' ¦ü¥G¤£¦s¦b¡C\n"
+"åœ¨æä¾›çš„ä½ç½®å…§æ‰¾ä¸åˆ° '%s' ç¨‹å¼ã€‚\n"
 "\n"
-"§A±NµLªk¶Ç°e¿ù»~³ø§i¡C\n"
-"¦ı§A¥i¥H±N¸ê®ÆÀx¦s¨ìÀÉ®×¡C\n"
+"ä½ å°‡ç„¡æ³•åŒ¯å ±éŒ¯èª¤å ±å‘Šã€‚\n"
+"ä½†ä½ å¯ä»¥å°‡è³‡æ–™å„²å­˜åˆ°æª”æ¡ˆã€‚\n"
 "\n"
-"«ü©w·sªº¦ì¸mµ¹ sendmail ¶Ü¡H"
+"æ˜¯å¦å†å˜—è©¦æä¾› sendmail çš„ä½ç½®ï¼Ÿ"
 
 #: src/united-states-of-bug-buddy.c:381
 msgid "The specified file does not exist."
-msgstr "«ü©wªºÀÉ®×¤£¦s¦b¡C"
+msgstr "æŒ‡å®šçš„æª”æ¡ˆä¸å­˜åœ¨ã€‚"
 
 #: src/united-states-of-bug-buddy.c:391
 #, c-format
 msgid "File is of type: %s"
-msgstr "ÀÉ®×Ãş§O¡G %s"
+msgstr "æª”æ¡ˆé¡åˆ¥ï¼š %s"
 
 #: src/united-states-of-bug-buddy.c:398
 #, c-format
@@ -566,25 +566,25 @@ msgid ""
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
-"'%s' ¬O¤@­Ó %s ªºÀÉ®×¡C\n"
+"'%s' æ˜¯ä¸€å€‹ %s çš„æª”æ¡ˆã€‚\n"
 "\n"
-"Bug Buddy ¥u¥i¥H¶Ç°e¯Â¤å¦rÀÉ®× (text/*)¡C"
+"Bug Buddy åªå¯ä»¥å‚³é€ç´”æ–‡å­—æª”æ¡ˆ (text/*)ã€‚"
 
 #: src/united-states-of-bug-buddy.c:418
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
-"¥²¶·¦b±zªº¿ù»~³ø§i¤¤\n"
-"¥]§t¤@­Ó¥i²z¸Ñªº¥D¦®¡C"
+"å¿…é ˆåœ¨æ‚¨çš„éŒ¯èª¤å ±å‘Šä¸­\n"
+"åŒ…å«ä¸€å€‹å¯ç†è§£çš„ä¸»æ—¨ã€‚"
 
 #: src/united-states-of-bug-buddy.c:434
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
-"¥²¶·¦b±zªº¿ù»~³ø§i¤¤\n"
-"¥]§t¤@­Ó¥i²z¸Ñªº´y­z¡C"
+"å¿…é ˆåœ¨æ‚¨çš„éŒ¯èª¤å ±å‘Šä¸­\n"
+"åŒ…å«ä¸€å€‹å¯ç†è§£çš„æè¿°ã€‚"
 
 #: src/united-states-of-bug-buddy.c:457
 msgid "Submit this bug report now?"
-msgstr "¥ß§Y¶Ç°e³o¥÷¿ù»~³ø§i¡H"
+msgstr "æ˜¯å¦ç¢ºå®šç«‹å³å‚³é€é€™ä»½éŒ¯èª¤å ±å‘Šï¼Ÿ"
 
 #: src/united-states-of-bug-buddy.c:479
 #, c-format
@@ -592,13 +592,13 @@ msgid ""
 "Unable to open file '%s':\n"
 "%s"
 msgstr ""
-"µLªk¶}±ÒÀÉ®× '%s'¡G\n"
+"ç„¡æ³•é–‹å•Ÿæª”æ¡ˆ '%s'ï¼š\n"
 "%s"
 
 #: src/united-states-of-bug-buddy.c:494
 #, c-format
 msgid "about to run '%s'"
-msgstr "§Y±N°õ¦æ '%s'"
+msgstr "å³å°‡åŸ·è¡Œ '%s'"
 
 #: src/united-states-of-bug-buddy.c:502
 #, c-format
@@ -606,13 +606,13 @@ msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
 msgstr ""
-"µLªk±Ò°Ê¶l¥óµ{¦¡ '%s'¡G\n"
+"ç„¡æ³•å•Ÿå‹•éƒµä»¶ç¨‹å¼ '%s'ï¼š\n"
 "%s"
 
 #: src/united-states-of-bug-buddy.c:545
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr "±zªº¿ù»~³ø¤w§iÀx¦s¬° '%s'"
+msgstr "æ‚¨çš„éŒ¯èª¤å ±å·²å‘Šå„²å­˜ç‚º '%s'"
 
 #: src/united-states-of-bug-buddy.c:548
 #, c-format
@@ -623,43 +623,43 @@ msgid ""
 "\n"
 "Thanks!"
 msgstr ""
-"±zªº¿ù»~³ø§i¤w¸g³Q¶Ç°e¨ì¡G\n"
+"æ‚¨çš„éŒ¯èª¤å ±å‘Šå·²ç¶“è¢«å‚³é€åˆ°ï¼š\n"
 "\n"
 "       <%s>\n"
 "\n"
-"¦hÁÂ¡I"
+"å¤šè¬ï¼"
 
 #: src/united-states-of-bug-buddy.c:609
 msgid "You must specify a product for your bug report."
 msgstr ""
-"±z¥²¶·¦b¿ù»~³ø§i¤¤\n"
-"«ü©w¤@­Ó²£«~¡C"
+"æ‚¨å¿…é ˆåœ¨éŒ¯èª¤å ±å‘Šä¸­\n"
+"æŒ‡å®šä¸€å€‹ç”¢å“ã€‚"
 
 #: src/united-states-of-bug-buddy.c:626
 msgid "You must specify a component for your bug report."
 msgstr ""
-"±z¥²¶·¦b¿ù»~³ø§i¤¤\n"
-"«ü©w¤@­Ó¤¸¥ó¡C"
+"æ‚¨å¿…é ˆåœ¨éŒ¯èª¤å ±å‘Šä¸­\n"
+"æŒ‡å®šä¸€å€‹å…ƒä»¶ã€‚"
 
 #: src/united-states-of-bug-buddy.c:640
 msgid "You must specify a version for your bug report."
 msgstr ""
-"±z¥²¶·¦b¿ù»~³ø§i¤¤\n"
-"«ü©w¤@­Óª©¥»½s¸¹¡C"
+"æ‚¨å¿…é ˆåœ¨éŒ¯èª¤å ±å‘Šä¸­\n"
+"æŒ‡å®šä¸€å€‹ç‰ˆæœ¬ç·¨è™Ÿã€‚"
 
 #: src/united-states-of-bug-buddy.c:676
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr ""
-"¬O§_½T©w¨ú®ø\n"
-"³o­Ó¿ù»~³ø§i¡H"
+"æ˜¯å¦ç¢ºå®šå–æ¶ˆ\n"
+"åŒ¯å ±éŒ¯èª¤ï¼Ÿ"
 
 #: src/bug-buddy.desktop.in.h:1
 msgid "Bug Report Tool"
-msgstr "¿ù»~³ø§i¤u¨ã"
+msgstr "éŒ¯èª¤å ±å‘Šå·¥å…·"
 
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
-msgstr "¦b GNOME ¤º³ø§i¿ù»~"
+msgstr "åœ¨ GNOME å…§åŒ¯å ±éŒ¯èª¤"
 
