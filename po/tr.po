@@ -1,0 +1,486 @@
+# -------------------------------------------------------
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Fatih Demir <kabalak@gmx.net>, 2000.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 0.6\n"
+"POT-Creation-Date: 2000-02-15 19:00+0100\n"
+"PO-Revision-Date: 2000-02-15 19:02+0100\n"
+"Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
+"Language-Team: Turkish Gnome Tranlation Team <gnotrap@gmx.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-9\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/gdb-buddy.c:41
+msgid "obtaining stack trace..."
+msgstr "topuðu tarýyorum ..."
+
+#: src/bug-buddy.c:298 src/gdb-buddy.c:82
+msgid "gdb has already exited"
+msgstr "gdb zaten bitirilmiþ"
+
+#: src/gdb-buddy.c:91
+#, c-format
+msgid "Subprocess exited with status %d"
+msgstr "Alt-iþlem %d durumuyla bitirildi"
+
+#: src/gdb-buddy.c:119
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"gdb ile çöküntü dosyasýný tarayamadým :\n"
+"'%s'"
+
+#: src/gdb-buddy.c:144
+#, c-format
+msgid "Child process exited with status %d"
+msgstr "Çocuk-iþlemi %d durumuyla bitirildi"
+
+#: src/gdb-buddy.c:147
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"'%s''yi hangi biner uygulamanýn yaptýðýný\n"
+"bilmiyorum ."
+
+#: src/gdb-buddy.c:178
+msgid "Error on read... aborting"
+msgstr "Okurken hata oldu ... bitiriliyorum"
+
+#: src/gdb-buddy.c:210
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"gdb-cmd dosyasýný bulamadým .\n"
+"Lütfen bug-buddy'yi yeniden yükle ."
+
+#: src/gdb-buddy.c:218
+msgid "Error on fork()."
+msgstr "fork()'ta hata oldu ."
+
+#: src/bug-buddy.c:70
+msgid "critical"
+msgstr "çok önemli"
+
+#: src/bug-buddy.c:71
+msgid "grave"
+msgstr "aðýr"
+
+#: src/bug-buddy.c:72
+msgid "normal"
+msgstr "vasat"
+
+#: src/bug-buddy.c:73
+msgid "wishlist"
+msgstr "emeller-listesi"
+
+#: src/bug-buddy.c:77
+msgid "software bug"
+msgstr "uygulama hatasý"
+
+#: src/bug-buddy.c:78
+msgid "documentation bug"
+msgstr "dokümentasyon hatasý"
+
+#: src/bug-buddy.c:79
+msgid "change request"
+msgstr "isteði deðiþtir"
+
+#: src/bug-buddy.c:80
+msgid "support"
+msgstr "desktek"
+
+#: src/bug-buddy.c:88
+msgid "Contact's name"
+msgstr "Baðlantýnýn adý"
+
+#: src/bug-buddy.c:88
+msgid "NAME"
+msgstr "NAME"
+
+#: src/bug-buddy.c:89
+msgid "Contact's email address"
+msgstr "ePosta adresi"
+
+#: src/bug-buddy.c:89
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:90
+msgid "Package of the program"
+msgstr "Uygulamanýn pakajý"
+
+#: src/bug-buddy.c:90
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/bug-buddy.c:91
+msgid "Version of the package"
+msgstr "Pakajýn nesli"
+
+#: src/bug-buddy.c:91
+msgid "0.6"
+msgstr "0.6"
+
+#: src/bug-buddy.c:92
+msgid "Crashed file name"
+msgstr "Çöken dosyanýn adý"
+
+#: src/bug-buddy.c:92 src/bug-buddy.c:94
+msgid "FILE"
+msgstr "FILE"
+
+#: src/bug-buddy.c:93
+msgid "PID of crashed app"
+msgstr "Çöken uygulamanýn iþlemin ID'si"
+
+#: src/bug-buddy.c:93
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:94
+msgid "core file from app"
+msgstr "uygulamadan kalan çöküntüyü kullan"
+
+#: src/bug-buddy.c:290
+msgid ""
+"gdb has not finished getting thedebugging information.\n"
+"Kill the gdb process (the stack tracewill be incomplete)?"
+msgstr ""
+"gdb çöküntü bilgilerini toplamayla hala daha meþgul .\n"
+"gdb iþlemini buna raðmen öldüreyim mi (çöküntü bilgileri tam olmayabilir) ?"
+
+#: src/bug-buddy.c:341
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Tel'if hakký (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:343
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Gnome hata raporlama uygulamasý"
+
+#: src/bug-buddy.c:350
+msgid "The lame bug-buddy web page"
+msgstr "Lame bug-buddy web-sitesi"
+
+#: src/bug-buddy.c:422
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a but report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' yok gibimine geliyor . Ve böylece hiç bir hata raporunu\n"
+"gönderemeyeceksin , fakat hata raporunu bir dosyaya kaydedebilirsin ."
+"\n"
+"Sendmail için yeni bir dizinleme belirlemek ister misin ?"
+
+#: src/bug-buddy.c:459
+msgid "Please enter your name and email address"
+msgstr "Lütfen ismini ve ePosta adresini ver"
+
+#: src/bug-buddy.c:499
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+"\"Bitir\"'e basýp bug-buddy'den çýk .\n"
+"Hata raporu gönderilmeyektir ."
+
+#: src/bug-buddy.c:522
+#, c-format
+msgid ""
+"You are about to save a bug report in '%s'.\n"
+"This can later be used to report a bug in '%s'."
+msgstr ""
+"Hata raporunu '%s''ye kaydediyorsun .\n"
+"Bunu sonra'dan '%s''de kullanabilirsin ."
+
+#: src/bug-buddy.c:527
+#, c-format
+msgid ""
+"You are about to report a bug in '%s'.\n"
+"\n"
+"This will be submitted via email:\n"
+"To: %s\n"
+"From: %s <%s>\n"
+"Subject: %s\n"
+"\n"
+"Clicking on 'Finish' will submit the bug report."
+msgstr ""
+"'%s''deki bir hatayý rapor ediyorsun .\n"
+"\n"
+"Bunlarý ePosta ile göndereceðim :\n"
+"Gönderilen : %s\n"
+"Gönderen : %s <%s> \n"
+"Konu : %s\n"
+"\n"
+"'Bitir''e basmak hata raporunu göndermek demektir ."
+
+#: src/bug-buddy.c:639
+msgid "Please choose a file to save to."
+msgstr "Kaydedilecek dosyayý seç ."
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"'%s' dosyasý zaten var .\n"
+"Bu dosyanýn üstüne yazayým mý ?"
+
+#: src/bug-buddy.c:759
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"'%s''yi açamadým .\n"
+"Lütfen bug-buddy'nin doðruca yüklendiðini te'min et ."
+
+#: src/bug-buddy.c:855
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME tam desteklenmiyor .\n"
+"Lütfen o'nun yerine --appname komuta seçeneðini seç ."
+
+#: src/bug-buddy.c:868
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+" Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID tam deskteklenmiyor .\n"
+"Lütfen o'nun yerine --pid komuta seçeneðini seç ."
+
+#: src/bug-buddy.c:974
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"'%s''yi bulamadým .\n"
+"Lütfen bug-buddy'nin doðruca yüklendiðini te'min et ."
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "all will be revealed."
+msgstr "hepsi silinecektir ."
+
+#: src/glade-strings.c:9
+msgid "Contact Information"
+msgstr "Bazý þahsi bilgiler"
+
+#: src/glade-strings.c:10
+msgid "Email Address"
+msgstr "Eposta adresi"
+
+#: src/glade-strings.c:11
+msgid "Your Name"
+msgstr "Ismin"
+
+#: src/glade-strings.c:12
+msgid ""
+"Enter your name and email address, so you will be notified when the\n"
+"bug is resolved, or for developers to request more information from you."
+msgstr ""
+"Ismini ve ePosta adresini ver ki , hata düzeltildiyse , sana haber gönderilsin\n"
+"veya yazanlarýn daha derine giden sorularý varsa , sana ePosta yöneltebilmeleri için ."
+
+#: src/glade-strings.c:14
+msgid "Bug Track System"
+msgstr "Hata Araþtýrma Grubu"
+
+#: src/glade-strings.c:15
+msgid ""
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+
+#: src/glade-strings.c:18
+msgid "Choose which sendmail to use"
+msgstr "Kullanýlacak sendmail'i seç"
+
+#: src/glade-strings.c:19
+msgid "Full path of sendmail"
+msgstr "Sendmail'in tam dizinlemesi"
+
+#: src/glade-strings.c:20
+msgid "System Configuration"
+msgstr "Sistem Ayarlamasý"
+
+#: src/glade-strings.c:21
+msgid "Please verify that this information is correct"
+msgstr "Lütfen bu bilgilerin doðru olmasýna dikkat et"
+
+#: src/glade-strings.c:22 src/glade-strings.c:32
+msgid "Package"
+msgstr "Pakaj"
+
+#: src/glade-strings.c:23
+msgid "Version installed"
+msgstr "Yüklenmiþ nesil"
+
+#: src/glade-strings.c:24
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:25
+msgid "Automatically go to next page when complete"
+msgstr "Tamamlanýnca otomatikman ileri git"
+
+#: src/glade-strings.c:26
+msgid "Report Information"
+msgstr "bilgileri rapor et"
+
+#: src/glade-strings.c:27 src/glade-strings.c:55
+msgid "Action"
+msgstr "Eylem"
+
+#: src/glade-strings.c:28
+msgid "File a new bug report"
+msgstr "Yeni bir hata raporunu dosyala"
+
+#: src/glade-strings.c:29
+msgid "Add information to an existing bug report"
+msgstr "Varolan bir hata raporuna ekle"
+
+#: src/glade-strings.c:30
+msgid "Version"
+msgstr "Nesil"
+
+#: src/glade-strings.c:31
+msgid "Class"
+msgstr "Sýnýf"
+
+#: src/glade-strings.c:33
+msgid "Severity"
+msgstr "Önem"
+
+#: src/glade-strings.c:34
+msgid "Bug Number"
+msgstr "Hata numara"
+
+#: src/glade-strings.c:35
+msgid "Description"
+msgstr "Anlatým"
+
+#: src/glade-strings.c:36
+msgid "Short subject for the bug report"
+msgstr "Hata raporu için kýsa bir üstyazý"
+
+#: src/glade-strings.c:37
+msgid "Full description of the bug"
+msgstr "Hata'nýn tam anlatýmý"
+
+#: src/glade-strings.c:38
+msgid "More Information"
+msgstr "Daha fazla bilgi"
+
+#: src/glade-strings.c:39
+msgid "Detailed instructions on how to reproduce the bug"
+msgstr "Hata'ya yeniden sebebiyet vermenin tam yolunu anlat"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "Bir metin dosyasýný içer"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Çözülme bilgileri"
+
+#: src/glade-strings.c:42
+msgid "How to collect debugging information"
+msgstr "Çözülme bilgileri nasýl toplansýn"
+
+#: src/glade-strings.c:43
+msgid "Attach to a crashed application"
+msgstr "Çökmüþ bir dosyaya ekle"
+
+#: src/glade-strings.c:44
+msgid "Read from a core file"
+msgstr "Çöküntü dosyasýndan oku"
+
+#: src/glade-strings.c:45
+msgid "Skip this step"
+msgstr "Bu adýmý atla"
+
+#: src/glade-strings.c:46
+msgid "Binary"
+msgstr "Biner"
+
+#: src/glade-strings.c:47
+msgid "Process ID"
+msgstr "Iþlem ID'si"
+
+#: src/glade-strings.c:48
+msgid "Select the crashed application's binary"
+msgstr "Çöken uygulamanýn biner þekilini belirle"
+
+#: src/glade-strings.c:49
+msgid "Core file"
+msgstr "Çöküntü dosyasý"
+
+#: src/glade-strings.c:50
+msgid "Select a core file"
+msgstr "Bir çöküntü dosyasýný seç"
+
+#: src/glade-strings.c:51
+msgid "Collecting Debugging Information"
+msgstr "Çözülme bilgileri toplanýyor"
+
+#: src/glade-strings.c:52
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Çözülme bilgileri toplanýrken\n"
+"lütfen bekle ..."
+
+#: src/glade-strings.c:54
+msgid "Submitting the Report"
+msgstr "Rapor gönderiliyor"
+
+#: src/glade-strings.c:56
+msgid "Submit bug report"
+msgstr "Hata raporunu gönder"
+
+#: src/glade-strings.c:57
+msgid "Send report to your email address only"
+msgstr "Rapor'u sadece benim ePosta adresime gönder"
+
+#: src/glade-strings.c:58
+msgid "Save the report to a file"
+msgstr "Rapor'u bir dosyaya kaydet"
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr "Rapor'u farklý kaydet ..."
+
+#: src/glade-strings.c:60
+msgid "Summary"
+msgstr "Bir toplama'da"
+
+#: src/glade-strings.c:61
+msgid "The GEGL is watching."
+msgstr "GEGL þimdi seyrediyor ."
