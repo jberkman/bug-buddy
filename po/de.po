@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-19 20:29+01:00\n"
+"POT-Creation-Date: 2001-03-01 06:28+0100\n"
+"PO-Revision-Date: 2001-03-01 06:33+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -576,17 +576,17 @@ msgstr ""
 #: src/united-states-of-bug-buddy.c:388
 #, c-format
 msgid "Unable to open file: '%s'"
-msgstr "Kann Datei nicht öffnen: `%s'"
+msgstr "Es ist nicht möglich, die Datei zu öffnen: '%s'"
 
 #: src/united-states-of-bug-buddy.c:400
 #, c-format
 msgid "about to run '%s'"
-msgstr "dabei '%s' zu starten"
+msgstr "Start: '%s'"
 
 #: src/united-states-of-bug-buddy.c:404
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr "Kann das Mail-Programm nicht starten: '%s'"
+msgstr "Es ist nicht möglich, das Mail-Programm zu starten: '%s'"
 
 #: src/united-states-of-bug-buddy.c:438
 #, c-format
