@@ -27,7 +27,7 @@ msgstr "kritièna"
 
 #: src/bug-buddy.c:82
 msgid "grave"
-msgstr "mrtva¹ka"
+msgstr "ubijalska"
 
 #: src/bug-buddy.c:83
 msgid "normal"
