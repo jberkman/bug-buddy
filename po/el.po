@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
-"PO-Revision-Date: 2000-07-15 00:18+0000\n"
+"Project-Id-Version: bug-buddy 1.1\n"
+"POT-Creation-Date: 2000-10-06 13:36+0000\n"
+"PO-Revision-Date: 2000-10-06 13:39:04+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,6 @@ msgid "Core file from program"
 msgstr "Αρχείο core από εφαρμογή"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -176,9 +175,9 @@ msgid ""
 "Please specify a package."
 msgstr ""
 "Είναι αρκετά πιο βοηθητικό αν διευκρινίσετε\n"
-"ένα πιο συγκεκριμένο πακένο από το 'γενικό'.\n"
+"ένα πιο συγκεκριμένο πακέτο από το 'γενικό'.\n"
 "\n"
-"Θέλετε να συνεχίσετε ούτως ή άλλως;"
+"Παρακαλώ διευκρινίστε το πακέτο."
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -218,9 +217,8 @@ msgstr "το gdb έχει ήδη τερματίσει"
 
 #
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "Το γραφικό εργαλείο αναφοράς σφαλμάτων του GNOME"
+msgstr "Το γραφικό εργαλείο αναφοράς σφαλμάτων του GNOME."
 
 #
 #: src/bug-buddy.c:496
@@ -229,15 +227,13 @@ msgstr "Η σελίδα WWW του bug-buddy"
 
 #
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Παρακαλώ εισάγετε το όνομά σας και τη διεύθυνση ηλεκ.ταχυδρομείου"
+msgstr "Παρακαλώ εισάγετε το όνομά σας."
 
 #
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Παρακαλώ εισάγετε το όνομά σας και τη διεύθυνση ηλεκ.ταχυδρομείου"
+msgstr "Παρακαλώ εισάγετε την ηλεκτρονική διεύθυνσή σας."
 
 #
 #: src/bug-buddy.c:620
@@ -672,7 +668,6 @@ msgstr "Σφάλμα στην ανάγνωση..."
 #~ msgstr "Η θυγατρική διεργασία τερματίστηκε με κατάσταση %d"
 
 #
-#, fuzzy
 #~ msgid ""
 #~ "Submit new report\n"
 #~ "Add information to an existing report\n"
