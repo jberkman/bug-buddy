@@ -1,5 +1,7 @@
 2002-03-18  jacob berkman  <jacob@ximian.com>
 
+	* src/gdb-buddy.c (get_trace_from_pair): change wording
+
 	* NEWS: 
 	* configure.in: 2.1.4
 
