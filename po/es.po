@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-11-27 18:19+0100\n"
+"POT-Creation-Date: 2001-12-06 16:39-0500\n"
 "PO-Revision-Date: 2001-08-13 13:25+0200\n"
 "Last-Translator: Héctor García Álvarez <hector@scouts-es.org>\n"
 "Language-Team: Spanish <es@li.org>\n"

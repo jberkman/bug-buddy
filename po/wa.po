@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.0\n"
-"POT-Creation-Date: 2001-11-13 16:40+0100\n"
+"POT-Creation-Date: 2001-12-06 16:39-0500\n"
 "PO-Revision-Date: 2001-03-24 19:15+0100\n"
 "Last-Translator: Pablo Saratxaga <pablo@mandrakesoft.com>\n"
 "Language-Team: Walon <linux-wa@chanae.alphanet.ch>\n"
@@ -135,6 +135,7 @@ msgstr ""
 "Eployîz purade l' argumint e roye di comande « --pid » s' i vs plait."
 
 #: src/bug-buddy.c:555
+#, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -157,6 +158,7 @@ msgid "Component"
 msgstr "Componint"
 
 #: src/bugzilla.c:617
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -196,6 +198,7 @@ msgstr ""
 "«%s»"
 
 #: src/gdb-buddy.c:190
+#, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
@@ -262,8 +265,7 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy pout-z evoyî des informåcions di disbugaedje avou vosse "
-"rapoirt.\n"
+"Bug Buddy pout-z evoyî des informåcions di disbugaedje avou vosse rapoirt.\n"
 "Les bounès tchûzes dvrént ddja aveur stî tchwezeyes por vos.\n"
 "Po pus d' informåcions, clitchoz sol boton «Aidance» chal pa dzo."
 
@@ -309,18 +311,23 @@ msgid ""
 "Additional Information:"
 msgstr ""
 "Discrijhaedje do probleme:\n"
-"\n\n"
+"\n"
+"\n"
 "Etapes a fé po rprodure li probleme:\n"
 "1. \n"
 "2. \n"
-"3. \n\n"
-"Rizulta k' arive po do bon:\n\n\n"
-"Rizulta k' åreut dvou ariver:\n\n\n"
+"3. \n"
+"\n"
+"Rizulta k' arive po do bon:\n"
+"\n"
+"\n"
+"Rizulta k' åreut dvou ariver:\n"
+"\n"
+"\n"
 "Kibén d' feyes ki çoula arive? \n"
 "\n"
 "\n"
 "Ôtes racsegnmints:"
-
 
 #: src/bug-buddy.glade.h:37
 msgid "Email"
@@ -358,9 +365,8 @@ msgstr "Tchwezixhoz li produt ki vos vloz fé on rapoirt di bug."
 msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
-"Tårdjîz on moumint s' i vs plait, Bug Buddy cwîr après des informåcions "
-"sol sistinme da vosse."
-
+"Tårdjîz on moumint s' i vs plait, Bug Buddy cwîr après des informåcions sol "
+"sistinme da vosse."
 
 #: src/bug-buddy.glade.h:46
 msgid ""
@@ -564,10 +570,13 @@ msgid "Submit this bug report now?"
 msgstr "Evoyî ci rapoirt di bug tot d' shûte?"
 
 #: src/united-states-of-bug-buddy.c:479
+#, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
-msgstr "Dji n' sai nén drovî l' fitchî «%s»:\n%s"
+msgstr ""
+"Dji n' sai nén drovî l' fitchî «%s»:\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:494
 #, c-format
@@ -575,10 +584,13 @@ msgid "about to run '%s'"
 msgstr "dji va enonder «%s»"
 
 #: src/united-states-of-bug-buddy.c:502
+#, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
-msgstr "Dji n' sai enonder li programe d' emilaedje: «%s»:\n%s"
+msgstr ""
+"Dji n' sai enonder li programe d' emilaedje: «%s»:\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:545
 #, c-format
@@ -645,4 +657,3 @@ msgstr "Fé on rapoirt di bug po GNOME"
 
 #~ msgid "Could not run '%s'."
 #~ msgstr "Dji n' sai enonder «%s»."
-

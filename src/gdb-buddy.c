@@ -153,7 +153,7 @@ get_trace_from_core (const gchar *core_file)
 	if (!f) {
 		GtkWidget *d;
 		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Unable to process core file with gdb:\n"
@@ -184,7 +184,7 @@ get_trace_from_core (const gchar *core_file)
 	if (!binary) {
 		GtkWidget *d;
 		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("GDB was unable to determine which binary created\n"
@@ -261,7 +261,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	if (!args[0]) {
 		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("GDB could not be found on your system.\n"
@@ -295,7 +295,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	
 	if (!g_file_test (BUDDY_DATADIR "/gdb-cmd", G_FILE_TEST_EXISTS)) {
 		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Could not find the gdb-cmd file.\n"
@@ -315,7 +315,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 				       &druid_data.fd, 
 				       NULL, NULL)) {
 		d = gtk_message_dialog_new (GTK_WINDOW (GTK_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("There was an error running gdb."));

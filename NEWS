@@ -1,5 +1,13 @@
 2.1.0:
 
+  * Fixes:
+
+	- Clean up GtkDialogs
+
+	- Other misc. porting fixes and cleanups.
+
+2.1.0:
+
   * Improvements:
 
 	- port to GNOME 2.0

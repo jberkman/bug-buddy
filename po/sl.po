@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-11-24 14:32+0100\n"
+"POT-Creation-Date: 2001-12-06 16:39-0500\n"
 "PO-Revision-Date: 2000-06-25 01:16+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -130,6 +130,7 @@ msgstr ""
 "Prosim raje uporabite --pid argument ukazne vrstice."
 
 #: src/bug-buddy.c:555
+#, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -152,6 +153,7 @@ msgid "Component"
 msgstr "Komponenta"
 
 #: src/bugzilla.c:617
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -190,6 +192,7 @@ msgstr ""
 "'%s'"
 
 #: src/gdb-buddy.c:190
+#, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
@@ -576,10 +579,13 @@ msgid "Submit this bug report now?"
 msgstr "Takoj po¹lji to poroèilo o hro¹èu?"
 
 #: src/united-states-of-bug-buddy.c:479
+#, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
-msgstr "Ne morem odpreti datoteke '%s':\n%s"
+msgstr ""
+"Ne morem odpreti datoteke '%s':\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:494
 #, c-format
@@ -587,10 +593,13 @@ msgid "about to run '%s'"
 msgstr "pognal bom '%s'"
 
 #: src/united-states-of-bug-buddy.c:502
+#, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
-msgstr "Ne morem pognati programa za po¹to '%s':\n%s"
+msgstr ""
+"Ne morem pognati programa za po¹to '%s':\n"
+"%s"
 
 #: src/united-states-of-bug-buddy.c:545
 #, c-format

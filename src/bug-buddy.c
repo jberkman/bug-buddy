@@ -221,7 +221,7 @@ on_gdb_stop_clicked (GtkWidget *button, gpointer data)
 		return;
 
 	w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-				    GTK_DIALOG_NO_SEPARATOR,
+				    0,
 				    GTK_MESSAGE_QUESTION,
 				    GTK_BUTTONS_YES_NO,
 				    _("gdb has not finished getting the "
@@ -549,7 +549,7 @@ main (int argc, char *argv[])
 
 	if (!druid_data.xml) {
 		w = gtk_message_dialog_new (NULL,
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Bug Buddy could not load its user interface file (%s).\n"

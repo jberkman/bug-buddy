@@ -282,7 +282,7 @@ intro_page_ok (void)
 	if (! (s && strlen (s))) {
 		g_free (s);
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Please enter your name."));
@@ -298,7 +298,7 @@ intro_page_ok (void)
 	if (!email_is_valid (s)) {
 		g_free (s);
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Please enter a valid email address."));
@@ -315,7 +315,7 @@ intro_page_ok (void)
 		if (druid_data.submit_type == SUBMIT_TO_SELF ||
 		    druid_data.submit_type == SUBMIT_REPORT) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_QUESTION,
 						    GTK_BUTTONS_YES_NO,
 						    _("'%s' doesn't seem to exist.\n\n"
@@ -375,7 +375,7 @@ desc_page_ok (void)
 		const char *mime_type;
 		if (!g_file_test (s, G_FILE_TEST_EXISTS)) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("The specified file does not exist."));
@@ -392,7 +392,7 @@ desc_page_ok (void)
 		
 		if (strncmp ("text/", mime_type, 5)) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("'%s' is a %s file.\n\n"
@@ -412,7 +412,7 @@ desc_page_ok (void)
 	if (!text_is_sensical (s, 6)) {
 		g_free (s);
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("You must include a comprehensible subject line in your bug report."));
@@ -428,7 +428,7 @@ desc_page_ok (void)
 	if (!text_is_sensical (s, 8)) {
 		g_free (s);
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("You must include a comprehensible description in your bug report."));
@@ -451,7 +451,7 @@ submit_ok (void)
 
 	if (druid_data.submit_type != SUBMIT_FILE) {
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_QUESTION,
 					    GTK_BUTTONS_YES_NO,
 					    _("Submit this bug report now?"));
@@ -473,7 +473,7 @@ submit_ok (void)
 		fp = fopen (file, "w");
 		if (!fp) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("Unable to open file '%s':\n%s"), 
@@ -496,7 +496,7 @@ submit_ok (void)
 		g_free (command);
 		if (!fp) {
 			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("Unable to start mail program '%s':\n%s"), 
@@ -603,7 +603,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		druid_data.product = get_selected_row ("product-list", PRODUCT_DATA);
 		if (!druid_data.product) {
 			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a product for your bug report."));
@@ -620,7 +620,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		druid_data.component = get_selected_row ("component-list", COMPONENT_DATA);
 		if (!druid_data.component) {
 			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a component for your bug report."));
@@ -634,7 +634,7 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		if (!s[0] && !getenv ("BUG_ME_HARDER")) {
 			g_free (s);
 			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    GTK_DIALOG_NO_SEPARATOR,
+						    0,
 						    GTK_MESSAGE_ERROR,
 						    GTK_BUTTONS_OK,
 						    _("You must specify a version for your bug report."));
@@ -670,7 +670,7 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 	GtkWidget *d;
 
 	d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-				    GTK_DIALOG_NO_SEPARATOR,
+				    0,
 				    GTK_MESSAGE_QUESTION,
 				    GTK_BUTTONS_YES_NO,
 				    _("Are you sure you want to cancel\n"

@@ -1,7 +1,6 @@
 buddydir = $(datadir)/bug-buddy
 
 INCLUDES = \
-	-I$(top_srcdir)/intl -I$(top_builddir)/intl	\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	$(BUG_BUDDY_CFLAGS) -I$(includedir)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
@@ -9,6 +8,7 @@ INCLUDES = \
 	-DGNOME_DISABLE_DEPRECATED	\
 	-DGTK_DISABLE_DEPRECATED	\
 	-DG_DISABLE_DEPRECATED		\
+	-DLIBGLADE_DISABLE_DEPRECATED	\
 	-D_GNU_SOURCE
 
 bin_PROGRAMS = bug-buddy

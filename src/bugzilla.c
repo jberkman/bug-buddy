@@ -611,7 +611,7 @@ load_bugzillas (void)
 	dir = opendir (BUDDY_DATADIR"/bugzilla/");
 	if (!dir) {
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_ERROR,
 					    GTK_BUTTONS_OK,
 					    _("Bug Buddy could not open '%s'.\n"
@@ -656,7 +656,7 @@ load_bugzillas (void)
 		GtkWidget *w;
 
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    GTK_DIALOG_NO_SEPARATOR,
+					    0,
 					    GTK_MESSAGE_QUESTION,
 					    GTK_BUTTONS_YES_NO,
 					    _("Bug Buddy has determined that some of its information about\n"

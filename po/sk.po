@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2001-11-11 11:54+0100\n"
+"POT-Creation-Date: 2001-12-06 16:39-0500\n"
 "PO-Revision-Date: 2001-11-11 11:58CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -357,7 +357,8 @@ msgid "Please select the product for the bug you wish to report."
 msgstr "Prosím, vyberte produkt, pre ktorý chcete poslať správu o chybe."
 
 #: src/bug-buddy.glade.h:45
-msgid "Please wait while Bug Buddy determines some information about your system."
+msgid ""
+"Please wait while Bug Buddy determines some information about your system."
 msgstr "Prosím, počkajte pokým budú získané informácie o vašom systéme."
 
 #: src/bug-buddy.glade.h:46
@@ -645,4 +646,3 @@ msgstr "Nástroj pre oznamovanie chýb"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Nástroj GNOME pre oznamovanie chýb"
-
