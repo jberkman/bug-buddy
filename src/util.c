@@ -28,8 +28,9 @@
 #include <fcntl.h>
 #include <sys/types.h>
 
-
 #include "util.h"
+
+#define d(x)
 
 static gboolean
 clean_hash (gpointer key, gpointer value, gpointer data)
@@ -69,7 +70,7 @@ start_commandv (const char *args[], int *rfd)
 		dup (fd[1]);
 
 		execvp (args[0], (char **)args);
-		g_warning (_("Could not run '%s'."), args[0]);
+		d(g_warning (_("Could not run '%s'."), args[0]));
 		_exit (1);
 	} else if (pid == -1) {
 		d = gnome_error_dialog (_("Error on fork()."));
@@ -110,7 +111,7 @@ get_line_from_ioc (GIOChannel *ioc)
 		case G_IO_ERROR_AGAIN:
 			goto try_read;
 		default:
-			g_warning (_("Error on read..."));
+			d(g_warning (_("Error on read...")));
 			return NULL;
 		}
 		if (buf[pos] == '\n')
@@ -180,7 +181,7 @@ get_line_from_file (const char *filename)
 
 	fd = open (filename, O_RDONLY);
 	if (fd == -1) {
-		g_warning ("Could not open file '%s' for reading", filename);
+		d(g_warning ("Could not open file '%s' for reading", filename));
 		return NULL;
 	}
 	

@@ -1,3 +1,17 @@
+2001-03-28  jacob berkman  <jacob@ximian.com>
+
+	* src/bug-buddy.c (delete_me): save the config here
+
+	* src/united-states-of-bug-buddy.c (on_druid_cancel_clicked): save
+	the config here
+
+	* src/*.c: turn off debugging output
+
+	* src/bugzilla.c (get_xml_file): really fix cache this time
+
+	* NEWS:
+	* configure.in: 2.0.1
+	
 2001-03-26  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.c (get_xml_file): turn an or into an and to make

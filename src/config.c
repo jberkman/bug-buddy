@@ -25,6 +25,8 @@
 
 #include "bug-buddy.h"
 
+#define d(x)
+
 typedef enum {
 	CONFIG_DONE,
 	CONFIG_TOGGLE,
@@ -67,6 +69,8 @@ save_config (void)
 	gboolean b;
 	char *s;
 
+	d(g_print ("saving config...\n"));
+
 	for (item = configs; item->t; item++) {
 		if (item->t == CONFIG_TOGGLE) {
 			b = gtk_toggle_button_get_active (
@@ -106,6 +110,8 @@ load_config (void)
 	GtkWidget *w;
 	char *def = NULL, *d2;
 	
+	d(g_print ("loading config...\n"));
+
 	for (item = configs; item->t; item++) {
 		switch (item->t) {
 		case CONFIG_TOGGLE:

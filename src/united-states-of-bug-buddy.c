@@ -51,6 +51,8 @@ static char *state_title[] = {
 	NULL
 };
 
+#define d(x)
+
 void
 druid_set_sensitive (gboolean prev, gboolean next, gboolean cancel)
 {
@@ -314,7 +316,7 @@ text_is_sensical (const gchar *text, int sensitivity)
 		if (!chars[(guchar)*text])
 			chars[(guchar)*text] = ++uniq;
 	
-	g_message ("%d", uniq);
+	d(g_message ("%d", uniq));
 
 	return chars[' '] && uniq >= sensitivity;
  }
@@ -339,7 +341,7 @@ desc_page_ok (void)
 		}
 
 		mime_type = gnome_mime_type_of_file (s);
-		g_message (_("File is of type: %s"), mime_type);
+		d(g_message (_("File is of type: %s"), mime_type));
 		
 		if (!mime_type || strncmp ("text/", mime_type, 5)) {
 			char *msg = g_strdup_printf (_("'%s' does not look like a text file."), s);
@@ -397,7 +399,7 @@ submit_ok (void)
 		s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 		command = g_strdup_printf ("%s -i -t", s);
 
-		g_message (_("about to run '%s'"), command);
+		d(g_message (_("about to run '%s'"), command));
 		fp =  popen (command, "w");
 		g_free (command);
 		if (!fp) {
@@ -527,5 +529,6 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 	if (gnome_dialog_run_and_close (GNOME_DIALOG (d)))
 		return;
 
+	save_config ();
 	gtk_main_quit ();
 }

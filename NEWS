@@ -1,6 +1,21 @@
+2.0.1:
+
+  * Fixes:
+
+	- Fix a bug where the cache never gets updated.
+
+	- Don't access widgets after they have been destroyed when
+	  saving config.
+
+2.0:
+
+  * Rewritten to support bugzilla
+
+  * The UI should be nicer too
+
 1.2:
 
- * FIxes:
+ * Fixes:
 
 	- bug #29310
 

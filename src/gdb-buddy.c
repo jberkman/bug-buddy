@@ -34,6 +34,8 @@
 #include "bug-buddy.h"
 #include "util.h"
 
+#define d(x)
+
 static gint
 animate (gpointer data)
 {
@@ -69,7 +71,7 @@ start_gdb (void)
 	static CrashType old_type = -1;
 	gchar *app = NULL, *extra = NULL;
 
-	g_message (_("Obtaining stack trace... (%d)"), druid_data.crash_type);
+	d(g_message (_("Obtaining stack trace... (%d)"), druid_data.crash_type));
 
 	if (druid_data.crash_type == CRASH_NONE)
 		return;
@@ -113,7 +115,7 @@ void
 stop_gdb (void)
 {
 	if (!druid_data.ioc) {
-		g_message (_("gdb has already exited"));
+		d(g_message (_("gdb has already exited")));
 		return;
 	}
 	
@@ -185,7 +187,7 @@ get_trace_from_core (const gchar *core_file)
 	}	
 
 	if (!popt_data.app_file) {
-		g_message ("Setting binary: %s", binary);
+		d(g_message ("Setting binary: %s", binary));
 		popt_data.app_file = g_strdup (binary);
 	}
 
@@ -212,7 +214,7 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 	case G_IO_ERROR_AGAIN:
 		goto gdb_try_read;
 	default:
-		g_warning (_("Error on read... aborting"));
+		d(g_warning (_("Error on read... aborting")));
 		stop_gdb ();
 		return FALSE;
 	}
@@ -241,7 +243,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	args[5] = (char *)extra;
 
 	if (!args[0]) {
-		g_message ("Path: %s", getenv ("PATH"));
+		d(g_message ("Path: %s", getenv ("PATH")));
 		gnome_dialog_run_and_close (
 			GNOME_DIALOG (
 				gnome_error_dialog (_("GDB could not be found on your system.\n"
@@ -266,7 +268,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	args[4] = app2;
 
-	g_message ("About to debug '%s'", app2);
+	d(g_message ("About to debug '%s'", app2));
 	
 	if (!g_file_exists (BUDDY_DATADIR "/gdb-cmd")) {
 		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"

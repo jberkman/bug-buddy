@@ -46,6 +46,8 @@
 
 #include "libglade-buddy.h"
 
+#define d(x)
+
 #define DRUID_PAGE_HEIGHT 440
 #define DRUID_PAGE_WIDTH  600
 
@@ -172,7 +174,7 @@ on_gdb_stop_clicked (GtkWidget *button, gpointer data)
 
 	if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (w))) {
 		if (druid_data.gdb_pid == 0) {
-			g_warning (_("gdb has already exited"));
+			d(g_warning (_("gdb has already exited")));
 			return;
 		}
 		kill (druid_data.gdb_pid, SIGTERM);
@@ -537,6 +539,7 @@ init_ui (void)
 gint
 delete_me (GtkWidget *w, GdkEventAny *evt, gpointer data)
 {
+	save_config ();
 	gtk_main_quit ();
 	return FALSE;
 }
@@ -589,8 +592,6 @@ main (int argc, char *argv[])
 	druid_set_state (STATE_INTRO);
 
 	gtk_main ();
-
-	save_config ();
 
 	return 0;
 }

@@ -33,6 +33,8 @@
 #include "distro.h"
 #include "bts.h"
 
+#define d(x)
+
 static Distribution distros[] = {
 	{ "Slackware",     "/etc/slackware-version",  &debian_phy },
 	{ "Debian",        "/etc/debian_version",     &debian_phy },
@@ -158,7 +160,7 @@ load_bts_xml ()
 	file = g_strconcat (BUDDY_DATADIR "/xml/", druid_data.bts_file, NULL);
 	doc = xmlParseFile (file);
 	if (!doc || !doc->root || !doc->root->childs) {
-		g_warning ("'%s' not found", file);
+		d(g_warning ("'%s' not found", file));
 		g_free (file);
 		return TRUE;
 	}

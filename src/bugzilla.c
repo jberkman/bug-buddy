@@ -38,7 +38,7 @@
 #include <xmlmemory.h>
 
 /* define to x for some debugging output */
-#define d(x) x
+#define d(x)
 
 static int
 prod_cmp (BugzillaProduct *a, BugzillaProduct *b)
@@ -178,7 +178,7 @@ goto_product_page (void)
 static int
 async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpointer data)
 {
-	g_print ("%lu\n", info->bytes_copied);
+	d(g_print ("%lu\n", info->bytes_copied));
 	if (info->source_name)
 		gtk_label_set_text (GTK_LABEL (GET_WIDGET ("progress-source")), info->source_name);
 
@@ -190,7 +190,7 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 
 	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
 		goto_product_page ();
-		g_print ("w00t!\n");
+		d(g_print ("w00t!\n"));
 		return FALSE;
 	}
 
@@ -253,6 +253,8 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	char *localdir, *tmppath, *src_uri;
 	char *err;
 	struct stat sys_stat, local_stat;
+	gboolean sys_is_newer, cache_is_old;
+	xmlDoc *doc;
 
 	src_uri = gnome_config_get_string (key);
 	if (!src_uri) {
@@ -291,19 +293,21 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 		goto append_uris;
 	}
        
-	if ((sys_stat.st_mtime < local_stat.st_mtime) &&
-	    ((time (NULL) - local_stat.st_mtime) < (7 * 24 * 60 * 60))) {
-		xmlDoc *doc;
-		doc = xmlParseFile (xmlfile->cache_path);
-		if (!doc)
-			goto append_uris;
+	sys_is_newer = sys_stat.st_mtime > local_stat.st_mtime;
+	cache_is_old = (time (NULL) - local_stat.st_mtime) > (7 * 24 * 60 * 60);
 
-		parse_func (bts, doc);
+	if (sys_is_newer || cache_is_old)
+		goto append_uris;
+
+	doc = xmlParseFile (xmlfile->cache_path);
+	if (!doc)
+		goto append_uris;
+	
+	parse_func (bts, doc);
 		
-		xmlfile->done = TRUE;
-
-		return xmlfile;
-	}
+	xmlfile->done = TRUE;
+	
+	return xmlfile;
 
  append_uris:
 
@@ -443,11 +447,11 @@ check_yoself (void)
 void
 on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 {
-	g_print ("clicked!!\n");
+	d(g_print ("clicked!!\n"));
 	gnome_vfs_async_cancel (druid_data.vfshandle);
-	g_print ("shaggy?\n");
+	d(g_print ("shaggy?\n"));
 	goto_product_page ();
-	g_print ("scooby dooby doo!\n");
+	d(g_print ("scooby dooby doo!\n"));
 }
 
 static void
@@ -477,7 +481,7 @@ load_bugzilla_xml (void)
 	if (loaded) return;
 	loaded = TRUE;
 
-	g_print ("loading xml..\n");
+	d(g_print ("loading xml..\n"));
 
 	m = gtk_menu_new ();
 

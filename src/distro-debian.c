@@ -30,6 +30,8 @@
 #include "distro.h"
 #include "util.h"
 
+#define d(x)
+
 static char *get_debian_version (Distribution *distro);
 static void get_package_versions (GSList *packages);
 
@@ -49,7 +51,7 @@ get_debian_version (Distribution *distro)
 
 	version = get_line_from_file (distro->version_file);
 	if (!version) {
-		g_warning ("Could not get distro version");
+		d(g_warning ("Could not get distro version"));
 		return NULL;
 	}
 	
