@@ -1,3 +1,8 @@
+2000-04-25  Sami Pesonen <spesonen@dlc.fi>
+
+	* src/bug-buddy.desktop : Added [fi]
+	* configure.in (ALL_LINGUAS): added Finnish 
+
 2000-04-24  Arjan van de Ven	<arjan@fenrus.demon.nl>
 
 	* po/nl.po : Updated dutch translation
