@@ -590,7 +590,7 @@ load_bugzillas (void)
 		GtkWidget *w = gnome_question_dialog (
 			_("Bug Buddy has determined that some of its information about\n"
 			  "the various bug tracking systems may need to be updated.\n\n"
-			  "Should Bug Buddy try and update these files now?"), NULL, NULL);
+			  "Should Bug Buddy try to update these files now?"), NULL, NULL);
 
 		gnome_dialog_set_default (GNOME_DIALOG (w), GNOME_YES);
 

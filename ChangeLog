@@ -1,3 +1,7 @@
+2001-02-12  Karl Eichwalder  <ke@suse.de>
+
+	* src/bugzilla.c (load_bugzillas): Fix message.
+
 2001-02-12  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.glade: un-split a string
