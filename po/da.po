@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 2000-02-07 17:53+0100\n"
-"PO-Revision-Date: 2000-01-15 21:53+01:00\n"
+"POT-Creation-Date: 2000-02-10 21:20+0100\n"
+"PO-Revision-Date: 2000-02-10 21:25+01:00\n"
 "Last-Translator: Birger Langkjer <birger.langkjer@image.dk>\n"
 "Language-Team: Dansk/Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "NAME"
 
 #: src/bug-buddy.c:89
 msgid "Contact's email address"
-msgstr "Kontaktens e-postadresse"
+msgstr "Kontaktens epostadresse"
 
 #: src/bug-buddy.c:89
 msgid "EMAIL"
@@ -168,7 +168,7 @@ msgstr "GNOME's grafiske fejlrapporteringsværktøj"
 
 #: src/bug-buddy.c:350
 msgid "The lame bug-buddy web page"
-msgstr "Den lamme fejl-hjælper hjemmeside"
+msgstr "Den kedelige fejl-hjælper hjemmeside"
 
 #: src/bug-buddy.c:422
 #, c-format
@@ -185,7 +185,7 @@ msgstr ""
 
 #: src/bug-buddy.c:459
 msgid "Please enter your name and email address"
-msgstr "Indtast venligst dit navn og e-postadresse"
+msgstr "Indtast venligst dit navn og epostadresse"
 
 #: src/bug-buddy.c:499
 msgid ""
@@ -218,7 +218,7 @@ msgid ""
 msgstr ""
 "Du er ved at rapportere en fejl i '%s'.\n"
 "\n"
-"Dette vil blive sendt via e-post:\n"
+"Dette vil blive sendt via epost:\n"
 "Til: %s\n"
 "Fra: %s <%s>\n"
 "Emne: %s\n"
@@ -291,7 +291,7 @@ msgstr "Kontaktinformation"
 
 #: src/glade-strings.c:10
 msgid "Email Address"
-msgstr "E-postadresse"
+msgstr "Epostadresse"
 
 #: src/glade-strings.c:11
 msgid "Your Name"
@@ -391,7 +391,7 @@ msgstr "Kort emne for fejlrapporten"
 
 #: src/glade-strings.c:37
 msgid "Full description of the bug"
-msgstr "Fuld beskrivelse af fejlen (engelsk):"
+msgstr "Fuld beskrivelse af fejlen (på engelsk):"
 
 #: src/glade-strings.c:38
 msgid "More Information"
@@ -399,7 +399,7 @@ msgstr "Mere information"
 
 #: src/glade-strings.c:39
 msgid "Detailed instructions on how to reproduce the bug"
-msgstr "Detaljerede instrukser om hvordan fejlen gentages"
+msgstr "Detaljerede instrukser om hvordan fejlen kan gentages"
 
 #: src/glade-strings.c:40
 msgid "Include a text file"
@@ -467,7 +467,7 @@ msgstr "Send fejlrapport"
 
 #: src/glade-strings.c:57
 msgid "Send report to your email address only"
-msgstr "Send *kun* rapport til din e-postadresse"
+msgstr "Send *kun* rapport til din epostadresse"
 
 #: src/glade-strings.c:58
 msgid "Save the report to a file"
