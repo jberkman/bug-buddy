@@ -371,6 +371,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	fprintf (fp, "Version: %s\n\n", s);
 
 	for (data  = list_data; data->label; data++) {
+		s = NULL;
 		gtk_clist_get_text (GTK_CLIST (druid_data.version_list),
 				    data->row, 1, &s);
 		if (s && strlen (s))
