@@ -1,3 +1,7 @@
+2000-09-06  Simos Xenitellis  <simos@hellug.gr>
+
+	* src/bug-buddy.desktop: added messages for the Greek language
+
 2000-06-02  Szabolcs BAN <shooby@gnome.hu>
 
 	* po/hu.po: added po of Greg Nagy <greg@gnome.hu>

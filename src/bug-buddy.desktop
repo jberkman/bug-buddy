@@ -2,6 +2,7 @@
 Name=Bug Report Tool
 Name[da]=Fejl-hjζlper
 Name[de]=Fehlermelder
+Name[el]=Εργαλείο Αναφοράς Σφαλμάτων
 Name[es]=bug-buddy
 Name[gl]=bug-buddy
 Name[it]=bug-buddy
@@ -15,6 +16,7 @@ Name[tr]=Hata rapolayύcύsύ
 Comment=Report a bug in GNOME
 Comment[da]=Indberet en fejl i GNOME
 Comment[de]=Einen Fehler bei GNOME melden
+Comment[el]=Αναφορά σφαλμάτων του GNOME
 Comment[es]=Informe de un error de GNOME
 Comment[gl]=Informe dun erro de GNOME
 Comment[it]=Invia notifica di errore
