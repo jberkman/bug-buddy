@@ -25,12 +25,16 @@
 #include <gnome-xml/parser.h>
 #include <gnome-xml/tree.h>
 
+#include <gtk/gtkeditable.h>
+
+#define DEFAULT_BTS "GNOME.bts"
+
 typedef struct _BugTrackingSystem BugTrackingSystem;
 struct _BugTrackingSystem {
 	gint (*init) (xmlNodePtr node);
 	void (*denit) (void);
 
-	gint (*doit) (void);
+	void (*doit) (GtkEditable *);
 	const char *(*get_email) (void);
 };
 

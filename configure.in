@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 0.7)
+AM_INIT_AUTOMAKE(bug-buddy, 0.8)
 
 AM_MAINTAINER_MODE
 
@@ -34,14 +34,17 @@ else
     AC_MSG_RESULT(no)
 fi
 
-AC_SUBST(CFLAGS)
-AC_SUBST(CPPFLAGS)
-AC_SUBST(LDFLAGS)
+EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui gdk_pixbuf libglade xml`
+EXTRA_GNOME_LIBS=`gnome-config --libs gnomeui gdk_pixbuf libglade xml`
+AC_SUBST(EXTRA_GNOME_CFLAGS)
+AC_SUBST(EXTRA_GNOME_LIBS)
 
 AC_OUTPUT([
 bug-buddy.spec
 debian/changelog
 Makefile
+docs/Makefile
+docs/C/Makefile
 po/Makefile.in
 intl/Makefile
 debian/Makefile

@@ -1,0 +1,583 @@
+<!DOCTYPE Article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.0//EN"[
+<!ENTITY version "0.7"> 
+]>
+
+<article id="index">
+ <artheader> 
+  <title>Bug-Buddy</title>
+  <copyright>
+   <year>2000</year>
+   <holder>Jacob Berkman</holder>
+   <holder>Telsa Gwynne</holder>
+  </copyright>
+ <!-- translators: uncomment this:
+   <copyright>
+    <year>2000</year>
+    <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+   </copyright>
+    -->
+
+  <legalnotice>
+   <para>
+      Permission is granted to make and distribute verbatim copies of this
+      manual provided the copyright notice and this permission notice are
+      preserved on all copies.
+   </para>
+   <para>
+      Permission is granted to copy and distribute modified versions of
+      this manual under the conditions for verbatim copying, provided that
+      the entire resulting derived work is distributed under the terms of a
+      permission notice identical to this one.
+   </para>
+   <para>
+      Permission is granted to copy and distribute translations of this
+      manual into another language, under the above conditions for modified
+      versions, except that this permission notice may be stated in a
+      translation approved by the Free Software Foundation.
+   </para>
+
+   <para> Linux is a trademark of Linus Torvalds.</para>
+   <para> Red Hat and RPM are trademarks of Red Hat, Inc. </para>
+   <para> All other trademarks are property of their respective owners</para>
+  </legalnotice>
+
+  <releaseinfo> 
+    Manual version 0.1: first release.
+  </releaseinfo>
+ </artheader>
+
+ <sect1 id="intro">
+  <title>Introduction</title> 
+
+  <para>
+    The <application>bug-buddy</application> program is a tool which
+    will guide you through making a bug report as painlessly as possible.
+    You can alter things at any stage, and then either send, save, or
+    abandon the resulting report. This document describes
+    version &version; of <application>bug-buddy</application>.
+  </para>
+
+  <para>
+    <application>bug-buddy</application> can be started in a variety
+    of ways:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <para>
+      Open the <guimenu>main GNOME menu</guimenu> and select
+      <menuchoice>
+       <guimenu>Programs</guimenu>
+       <guisubmenu>Utilities</guisubmenu>
+       <guimenuitem>Bug Report Tool</guimenuitem>
+      </menuchoice>
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+      Run <command>bug-buddy</command> at the prompt in a terminal such
+      as <application>gnome-terminal</application> or
+      <application>xterm</application>
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+      If you are using the <application>GNOME file manager</application>,
+      gmc, you can double-click your mouse on a core file to start it
+    </para>
+   </listitem>
+
+   <listitem>
+    <para>
+      When a GNOME program experiences a bad crash, a <guilabel>crash
+      dialogue box</guilabel> is displayed. If <application>bug-buddy</application>
+      is present on the system, then one of the options in the dialogue
+      box will be to submit a bug report. Selecting that will invoke 
+     <application>bug-buddy</application>.
+    </para>
+   </listitem>
+  </itemizedlist>
+
+  <para>
+    <application>bug-buddy</application> is a very structured program.
+    At any stage you can continue forward or head backwards to correct
+    earlier details.
+  </para>
+
+  <para>
+    The aim of all this is to be able to collect all the information
+    which a developer will need to reproduce the same problem and be
+    able to fix it. Some of the information generated may look a bit
+    off-putting, but don't delete it. It will be useful.
+  </para>
+ </sect1>
+
+ <sect1 id="contact-info">
+  <title>Contact information</title>
+
+  <para>
+    <application>bug-buddy</application> first asks for these pieces
+    of information, in order to be able to send the report correctly.
+    It makes very good guesses so you should be able to skip straight
+    ahead.
+  </para>
+
+  <variablelist>
+   <varlistentry>
+    <term>Your name</term>
+    <listitem>
+     <para>
+       GNOME works this out itself, but you can change it if you care to
+       here.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Email address</term>
+    <listitem>
+     <para>
+       Again, GNOME should work this out. You should not need to change
+       this unless you normally fetch your mail from another account. In
+       that case, you may wish to put your other account here, so that
+       any responses to the bug go to that address.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Full path of sendmail</term>
+    <listitem>
+     <para>
+       This allows you to check that bug-buddy is looking in the right
+       place when it tries to send email. You will almost certainly not
+       need to change this. 
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Bug tracking system</term>
+    <listitem>
+     <para>
+       <application>bug-buddy</application> can send reports to several
+       different places. A drop-down list is available here. Currently
+       you can report bugs to the bug-trackers of KDE, GNOME, and Debian
+       GNU/Linux.
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+
+  <para>
+    There is an <guibutton>About</guibutton> button in the lower corner,
+    which provides access to an About box and to
+    <ulink type="http" url="http://bug-buddy.org/">
+    bug-buddy's home on the web</ulink>. 
+  </para>
+ </sect1>
+
+ <sect1 id="system-config">
+  <title>System Configuration</title>
+
+  <para>
+    There are certain details which bug-fixers always want to know about
+    your system. <application>bug-buddy</application> goes and looks for
+    the details on your machine. If you happen to be using something which 
+    you know is different, you can alter the details here. You shouldn't
+    need to.
+  </para>
+  <para>
+    If you don't want to see this every time you use the program, you can
+    select the <guibutton>automatically go to next page when complete</guibutton>
+    option. If you do this and later want to go back and check, you can use
+    the <guibutton>Back</guibutton> option from the <link
+    linkend="report-info">Reporting Information</link> section to get back
+    here.
+  </para>
+ </sect1>
+
+ <sect1 id="report-info">
+  <title>Report Information</title>
+
+  <para>
+    The options which show up here vary according to which of the
+    radio-button choices you make. Sometimes it is much more helpful
+    to add information to an existing report than to start a new one.
+    (And sometimes you realise you forgot something in one of your
+    earlier reports, and you want to add it. You can search the bug 
+    trackers for 
+    <ulink type="http" url="http://bugs.gnome.org">GNOME</ulink>,
+    <ulink type="http" url="http://bugs.kde.org">KDE</ulink> or
+    <ulink type="http" url="http://bugs.debian.org">Debian</ulink> to
+    find a relevant bug report and note down the number. If you then
+    select <guibutton>Add information to an existing bug report</guibutton>,
+    you will be prompted for the bug number to add to. 
+  </para>
+  <para>
+    If you select <guibutton>File a new bug report</guibutton> then you
+    will be prompted for the package number, the package version, the
+    bug severity and the class of bug:
+  </para>
+
+  <variablelist>
+   <varlistentry>
+    <term>Package</term>
+    <listitem>
+     <para>
+       You can search through the drop-down list for the correct package
+       to assign this bug to. If you know the exact filename of the program
+       you ran, and you use rpms, you can use the command <command>rpm -qf 
+       <filename>/full/path/to/file</filename></command> to verify which
+       package it came from. If you use Debian, you can use the command 
+       <command>dpkg -S <filename>/full/path/to/file</filename></command>.
+       To find out the full pathname to, say, gnome-terminal, or
+       kfloppy, you can use the command <command>which</command>: 
+       <command>which gnome-terminal</command> or <command>which 
+       kfloppy</command>. 
+     </para>
+     <para>
+       If you are still not sure which package to assign a bug to, searching
+       the bug-trackers on the web by keyword to find out where other
+       people have assigned it in the past can be very helpful.
+     </para>
+     <para>
+       Because there are so many possible packages, the drop-down list is
+       split alphabetically. Clicking on a package beginning with 'a',
+       for example, will give you a further selection of several other 
+       apps beginning with 'a'. So you will need to double-click on a
+       package and then look at the sub-categories to find some packages.
+     </para>
+     <para>
+       If you do not select a package, it will be left as 'general'. This
+       will get through to the bug-tracking system, but someone there will
+       have to manually assign it a package, which slows its progress 
+       down. Some bug-trackers send back automatic "Please assign a 
+       package next time" responses to bugs with no package, too.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Version</term>
+    <listitem>
+     <para>
+       Once you have decided on a package, checking its version number
+       is much simpler. For GNOME and KDE programs, it will often be in
+       the 'About' box of a program.
+     </para>
+     <para>
+       FIXME: need more about getting package version number. Debian, etc?
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Severity</term>
+    <listitem>
+     <para>
+       There are different severities of bugs you can assign. If you 
+       are not sure, normal is fine. There should not be that many 
+       critical or grave bugs in software which is in daily use. They
+       tend to get fixed fast. So it is probably unlike you will need
+       those two categories. Before assigning bugs to those, you really
+       should get the latest stable version and check it has not already
+       been fixed.
+     </para>
+
+     <variablelist>
+      <varlistentry>
+       <term>Critical</term>
+       <listitem>
+        <para>
+          This bug makes unrelated software on the system (or the whole 
+          system) break, or causes serious data loss, or introduces a 
+          security hole on systems where you install the software. Examples
+          would be hanging the entire machine or overwriting files it should
+          not even touch. 
+        </para>
+       </listitem>
+      </varlistentry>
+      <varlistentry>
+       <term>Grave</term>
+       <listitem>
+        <para>
+          This bug makes the software in question unusable or mostly so, 
+          or causes data loss, or introduces a security hole allowing 
+          access to the accounts of users who use the software. A program
+          which consistently crashes on startup or produces files called
+          <filename>core</filename> in your home directory might well be 
+          grave. 
+        </para>
+       </listitem>
+      </varlistentry>
+      <varlistentry>
+       <term>Normal</term>
+       <listitem>
+        <para>
+          This is what you will usually want: the default value.
+        </para>
+       </listitem>
+      </varlistentry>
+      <varlistentry>
+       <term>Wishlist</term>
+       <listitem>
+        <para>
+          This is a useful category for two things: very hard to fix
+          bugs; and requests for features or enhancements. ("It would be
+          nice if...")
+        </para>
+       </listitem>
+      </varlistentry>
+     </variablelist>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Class</term>
+    <listitem>
+     <para>
+       The default class of a bug is a software bug: "there is something
+       wrong with the program". Sometimes this is not quite what you need.
+       You can change the class to a few other things. A "documentation 
+       bug" is obvious. "Change request" and "support" are not. FIXME!!
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+ </sect1>
+
+ <sect1 id="description">
+  <title>Description</title>
+  <para>
+    The <guilabel>Short subject for the bug report</guilabel> section
+    will be used at the start of the emailed bug report. You do not
+    need the package name in it as you have already assigned that. But
+    being specific is good. "Crash when I try to save" or "Forgets my
+    preferences" is much better than "Bug". Hackers will read these
+    summaries when looking for something they can fix, and clear 
+    one-sentence summaries will catch their attention. 
+  </para>
+
+  <para>
+    The <guilabel>Full description of the bug</guilabel> section is where
+    you describe what you did, what happened, and what you expected to
+    happen. Good things to include:
+  </para>
+   
+  <itemizedlist>
+   <listitem>
+    <para>
+      Exact copies of any error messages;
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+      Your window manager name and version (especially if the bug involves 
+      moving things around the screen or mouse focus problems);
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+      If you can make it happen in one way, and not in another way,
+      include that. If there are two ways to do something (a menu
+      selection and a typed command, for example), and only one triggers
+      the bug, definitely include that;
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+      Why you think it is a bug. What should have happened instead?
+      Whilst this is obvious for some things, ("It shouldn't crash when
+      I try to save the file") it is not obvious for others. "If it
+      can't save the file, it should tell me so that I don't keep editing
+      it without realising I am wasting my effort". 
+    </para>
+   </listitem>
+   <listitem>
+    <para>
+      Sometimes screenshots can be helpful. Please do not send one in
+      a bug-buddy report! But if you have one, mention that you have it,
+      so that a bug-fixer who would like to see it can email you about it.
+    </para>
+   </listitem>
+  </itemizedlist>
+
+  <para>
+    If you have any suggestions on what caused it or how to fix it,
+    wonderful. If not, don't worry. Just explain what happened. If
+    a developer needs more information, s/he can mail you back for
+    it. 
+  </para>
+ </sect1>
+
+ <sect1 id="more-info">
+  <title>More information</title>
+
+  <para>
+    You may want to add more information. If your description of how you
+    caused the bug was sufficiently detailed, you may not want to fill
+    this in. Deciding what belongs here and what belongs in the previous
+    section can be tricky. 
+  </para>
+
+  <para>
+    If you have a (short!) text-file which contains information of use
+    you can include it here, too. If you have a small HTML file which
+    crashes your editor, or two sets of options for a program where one
+    works and the other doesn't, these are the sort of things to include
+    here. 
+  </para>
+ </sect1>
+
+ <sect1 id="debug-info">
+  <title>Debugging Information</title>
+
+  <para>
+    You will have to pick one of the three radio-buttons here. 
+  </para>
+
+  <variablelist>
+   <varlistentry>
+    <term>Attach to a crashed application</term>
+    <listitem>
+     <para>
+       If <application>bug-buddy</application> began because you said
+       yes to "Report a bug" in a dialogue box telling you something had
+       crashed, select this.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Read from a core file</term>
+    <listitem>
+     <para>
+       If <application>bug-buddy</application> began because you 
+       double-clicked on a file named <filename>core</filename> in the
+       file manager, select this. Also select this if you have a core file
+       which you know was created as a result of the bug you are reporting.
+       An extra box will appear where you can tell it where the core file
+       lives.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>Skip this step</term>
+    <listitem>
+     <para>
+       If you are reporting a documentation bug, or reporting a bug which
+       doesn't crash the program, or reporting a bug and you don't have a
+       core file associated with it, select this option and disregard the
+       next page of this guide.
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+ </sect1>
+
+ <sect1 id="collect-debug-info">
+  <title>Collecting debugging information</title>
+  <para>
+    This page may look completely strange. You will see it if you have
+    selected "Attach to a crashed application" or "Read from a core file"
+    in the previous page. When the application crashed, a copy of all the
+    details of what the program was doing was frozen. This was either dumped
+    to the core file or held in place. What <application>bug-buddy</application>
+    is doing is to go through all that information and find out what steps
+    the program took to get to the stage where it crashed. Programmers
+    can follow the rather cryptic output and work out where something
+    started to go wrong. This output will be automatically attached to 
+    your bug report.
+  </para>
+  <para>
+    Sometimes <application>bug-buddy</application> will not be able to
+    generate the information and tell you that it cannot recognise the
+    core file. If so, simply continue to the next stage. Do not send the
+    core file itself as an alternative. It is only the output that 
+    bug-buddy wants.
+  </para>
+ </sect1>
+
+ <sect1 id="submit-report">
+  <title>Submitting the Report</title>
+  <para>
+    Once you have finished your report, you can decide what to do with
+    it. You will probably want to submit it to the bug-tracking system,
+    but if you want to send it to yourself for some reason, you can. 
+    You can also choose to save the report so far to a file. If you
+    select this option, you will be prompted for the file to save it
+    to. 
+  </para>
+ </sect1>
+
+ <sect1 id="summary">
+  <title>Summary</title>
+  <para>
+    <application>bug-buddy</application> will tell you what it is about
+    to do: save the bug report to a file, or send it, with the details
+    of where it is going to send the bug. Selecting the "Finish" option
+    will save or send the report and exit 
+    <application>bug-buddy</application>.
+  </para>
+ </sect1>
+
+ <sect1 id="bugs">
+  <title>Known bugs and limitations</title>
+
+  <para>
+    <application>bug-buddy</application> has very few bugs or limitations.
+    Currently known:
+  </para>
+
+  <itemizedlist>
+   <listitem>
+    <para>
+      There is an applet called <application>Tick-A-Stat</application>
+      which can be set to look for core files and timestamp them with
+      their origin and date. <application>bug-buddy</application> cannot
+      read files which <application>Tick-A-Stat</application> has done
+      this to. 
+    </para>
+   </listitem>
+  </itemizedlist>
+ </sect1>
+ 
+ <sect1 id="authors">
+  <title>Authors</title>
+
+  <para>
+    <application>bug-buddy</application> was written by Jacob Berkman
+    (<email>jacob@helixcode.com</email>). To find more information
+    about it, please visit 
+    <ulink type="http" url="http://bug-buddy.org/">
+    bug-buddy's home on the web</ulink>.
+  </para>
+
+  <para>
+     Please send all comments, suggestions, and bug reports to the
+     <ulink url="http://bugs.gnome.org" type="http">GNOME bug
+     tracking database</ulink>. The package is of course bug-buddy.
+  </para>
+  
+  <para>
+    This guide was written by Telsa Gwynne 
+    (<email>telsa@linuxchix.org</email>). Please send all comments
+    and suggestions regarding it to the GNOME Documentation Project 
+    at <email>docs@gnome.org</email>. Some parts of this document
+    (the definitions of "grave", "critical", and so on) are directly
+    derived from the Debian bug tracker <ulink type="http" 
+    url="http://bugs.debian.org/Bugs/Developer#severities">severity
+    definitions</ulink> and other pages.
+  </para>
+
+  <!-- For translations: uncomment this:
+   <para> Latin translation was done by ME
+     (<email>MYNAME@MYADDRESS</email>). Please send all comments
+     and suggestions regarding this translation to SOMEWHERE.
+   </para> 
+     -->
+ </sect1>
+</article>

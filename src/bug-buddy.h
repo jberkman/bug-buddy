@@ -1,8 +1,9 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) Jacob Berkman
+ * Copyright (C) 1999, 2000 Jacob Berkman
+ * Copyright 2000 Helix Code, Inc.
  *
- * Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>
+ * Author:  Jacob Berkman  <jacob@helixcode.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,17 +29,14 @@
 #include "bts.h"
 
 typedef enum {
-	CRASH_NONE,
 	CRASH_DIALOG,
-	CRASH_CORE
+	CRASH_CORE,
+	CRASH_NONE
 } CrashType;
 
 typedef enum {
 	SUBMIT_REPORT,
 	SUBMIT_TO_SELF,
-#if 0
-	SUBMIT_DONE,
-#endif
 	SUBMIT_FILE
 } SubmitType;
 
@@ -82,6 +80,8 @@ extern PoptData popt_data;
 typedef struct {
 	GtkWidget *the_druid;
 	GladeXML  *xml;
+
+	gboolean default_email;
 
 	Distribution      *distro;
 	BugTrackingSystem *bts;

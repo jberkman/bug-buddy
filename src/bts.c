@@ -1,8 +1,9 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) Jacob Berkman
+ * Copyright (C) 1999, 2000 Jacob Berkman
+ * Copyright 2000 Helix Code, Inc.
  *
- * Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>
+ * Author:  Jacob Berkman  <jacob@helixcode.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,9 +37,10 @@
 static Distribution distros[] = {
 	{ "Slackware", "/etc/slackware-version", &debian_phy },
 	{ "Debian",    "/etc/debian_version",    &debian_phy },
-	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
-	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
 	{ "Mandrake",  "/etc/mandrake-release",  &redhat_phy },
+	{ "TurboLinux","/etc/turbolinux-release",&turbolinux_phy },
+	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
+	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
 	{ NULL }
 };
 
@@ -79,7 +81,7 @@ get_version_from_pre (gpointer data, gpointer udata)
 	package->version = get_line_from_command (package->pre_command);
 }
 
-static void
+void
 update_das_clist ()
 {
 	GtkWidget *w;
@@ -134,7 +136,6 @@ load_bts_xml ()
 
 	g_return_val_if_fail (druid_data.bts_file, TRUE);
 	if (last_file && !strcmp (last_file, druid_data.bts_file)) {
-		stop_progress ();
 		return FALSE;
 	}
 	
@@ -159,7 +160,6 @@ load_bts_xml ()
 	if (!doc || !doc->root || !doc->root->childs) {
 		g_warning ("'%s' not found", file);
 		g_free (file);
-		stop_progress ();
 		return TRUE;
 	}
 	g_free (file);
@@ -199,7 +199,7 @@ load_bts_xml ()
 	}
 	xmlFreeDoc (doc);
 
-	update_das_clist ();
+	/* update_das_clist (); */
 
 	return FALSE;
 }

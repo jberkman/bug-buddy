@@ -5,58 +5,69 @@
  */
 
 gchar *s = N_("bug-buddy");
-gchar *s = N_("all will be revealed.");
+gchar *s = N_("Welcome to the Wonderful World of bug-buddy");
+gchar *s = N_("bug-buddy will walk you through the process\n"
+              "of submitting a bug report.  If this is your first time \n"
+              "using bug-buddy, you will be prompted for your\n"
+              "email address so that the bug report can be\n"
+              "submitted.");
 gchar *s = N_("Contact Information");
-gchar *s = N_("Email Address");
-gchar *s = N_("Your Name");
-gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
-              "bug is resolved, or for developers to request more information from you.");
-gchar *s = N_("Bug Tracking System");
-gchar *s = N_("\n"
-              "\n"
-              "");
 gchar *s = N_("Choose which sendmail to use");
+gchar *s = N_("Email Address");
 gchar *s = N_("Full path of sendmail");
+gchar *s = N_("Your Name");
+gchar *s = N_("bug-buddy will walk you through the process of\n"
+              "submitting a bug report.  You can click the help\n"
+              "button for a more in-depth explanation of the process.");
+gchar *s = N_("Report Information");
+gchar *s = N_("Select a bug tracking system to use, and then fill out\n"
+              "the remaining information.");
+gchar *s = N_("Bug Tracking System ");
+gchar *s = N_("Submit new report\n"
+              "Add information to an existing report\n"
+              "");
+gchar *s = N_("Package");
+gchar *s = N_("Severity");
+gchar *s = N_("Class");
+gchar *s = N_("Version");
+gchar *s = N_("Package");
+gchar *s = N_("Version");
+gchar *s = N_("Please check to see if your bug has already been submitted,\n"
+              "and if so, use \"Add information to existing report\" above.");
+gchar *s = N_("Bug Number");
+gchar *s = N_("Bug Number");
+gchar *s = N_("Description");
+gchar *s = N_("Short subject for the bug report");
+gchar *s = N_("Full description of the bug, including how to reproduce it");
+gchar *s = N_("Include a text file");
+gchar *s = N_("Debugging Information");
+gchar *s = N_("App go BOOM!!");
+gchar *s = N_("Collect debugging information from a crashed application\n"
+              "Collect debugging information from a core file\n"
+              "Skip this step\n"
+              "");
+gchar *s = N_("Select the crashed application's binary");
+gchar *s = N_("Binary");
+gchar *s = N_("Process ID");
+gchar *s = N_("Core file");
+gchar *s = N_("Select a core file");
+gchar *s = N_("Collecting Debugging Information");
+gchar *s = N_("Please wait while debugging\n"
+              "information is collected...");
 gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
 gchar *s = N_("%P %%");
 gchar *s = N_("Automatically go to next page when complete");
-gchar *s = N_("Report Information");
-gchar *s = N_("Action");
-gchar *s = N_("File a new bug report");
-gchar *s = N_("Add information to an existing bug report");
-gchar *s = N_("Version");
-gchar *s = N_("Class");
-gchar *s = N_("Package");
-gchar *s = N_("Severity");
-gchar *s = N_("Bug Number");
-gchar *s = N_("Description");
-gchar *s = N_("Short subject for the bug report");
-gchar *s = N_("Full description of the bug");
-gchar *s = N_("More Information");
-gchar *s = N_("Detailed instructions on how to reproduce the bug");
-gchar *s = N_("Include a text file");
-gchar *s = N_("Debugging Information");
-gchar *s = N_("How to collect debugging information");
-gchar *s = N_("Attach to a crashed application");
-gchar *s = N_("Read from a core file");
-gchar *s = N_("Skip this step");
-gchar *s = N_("Binary");
-gchar *s = N_("Process ID");
-gchar *s = N_("Select the crashed application's binary");
-gchar *s = N_("Core file");
-gchar *s = N_("Select a core file");
-gchar *s = N_("Collecting Debugging Information");
-gchar *s = N_("Please wait while debugging\n"
-              "information is collected...");
 gchar *s = N_("Submitting the Report");
-gchar *s = N_("Action");
-gchar *s = N_("Submit bug report to bug tracking system");
-gchar *s = N_("Submit to individual author");
-gchar *s = N_("Send report to your email address only");
-gchar *s = N_("Save the report to a file");
+gchar *s = N_("Submit bug report\n"
+              "Send to your amail address only\n"
+              "Save report to file\n"
+              "");
+gchar *s = N_("To");
+gchar *s = N_("Send copy to yourself");
 gchar *s = N_("Save the report to...");
+gchar *s = N_("Content");
 gchar *s = N_("Summary");
 gchar *s = N_("The GEGL is watching.");

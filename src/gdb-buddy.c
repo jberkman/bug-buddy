@@ -38,7 +38,7 @@ start_gdb ()
 	
 	gchar *app = NULL, *extra = NULL;
 
-	g_message (_("obtaining stack trace..."));
+	g_message (_("obtaining stack trace... (%d)"), druid_data.crash_type);
 	
 	switch (druid_data.crash_type) {
 	case CRASH_DIALOG:

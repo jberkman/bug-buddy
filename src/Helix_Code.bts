@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<project name="Helix Code">
+        <bts name="debian">
+		<email>@bugs.helixcode.com</email>
+		<web>http://bugs.helixcode.com</web>
+		<packages-list>helix-packages</packages-list>
+	</bts>
+	<version-stuff>
+		<package name="C library"
+		         rpm="glibc" 
+			 deb="libc6"/>
+		<package name="C compiler" 
+		         pre="gcc --version || cc -V"/>
+		<package name="glib"
+			 pre="glib-config --version"
+			 rpm="glib"
+			 deb="libglib1.2"/>
+		<package name="GTK+"
+			 pre="gtk-config --version"
+			 rpm="gtk+"
+			 deb="libgtk1.2"/>
+		<package name="ORBit"
+			 pre="orbit-config --version"
+			 rpm="ORBit"
+			 deb="liborbit0"/>
+		<package name="gnome-libs"
+			 pre="gnome-config --version"
+			 rpm="gnome-libs"
+			 deb="gnome-libs-data"/>
+		<package name="gnome-core"
+			 pre="gnome-config --modversion applets | grep -v gnome-libs | sed -e 's^applets-^gnome-core ^g'"
+			 rpm="gnome-core"
+			 deb="gnome-core"/>
+	</version-stuff>
+</project>
+

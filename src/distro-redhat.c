@@ -25,11 +25,17 @@
 #include "util.h"
 
 static char *get_redhat_version (Distribution *distro);
+static char *get_turbolinux_version (Distribution *distro);
 static void get_package_versions (GSList *packages);
 
 Phylum redhat_phy = { 
 	get_redhat_version,
 	get_package_versions 
+};
+
+Phylum turbolinux_phy = {
+	get_turbolinux_version,
+	get_package_versions
 };
 
 static char *
@@ -39,6 +45,19 @@ get_redhat_version (Distribution *distro)
 	g_return_val_if_fail (distro->version_file, NULL);
 
 	return get_line_from_file (distro->version_file);
+}
+
+static char *
+get_turbolinux_version (Distribution *distro)
+{
+	char *tmp, *ret;
+	g_return_val_if_fail (distro, NULL);
+	g_return_val_if_fail (distro->version_file, NULL);
+
+	tmp = get_line_from_file (distro->version_file);
+	ret = g_strdup_printf ("TurboLinux %s", tmp);
+	g_free (tmp);
+	return ret;
 }
 
 static void

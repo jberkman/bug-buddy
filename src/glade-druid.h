@@ -28,10 +28,12 @@
 
 #define THE_DRUID      GET_WIDGET ("the_druid")
 
+#define DEBIAN_PAGE    GET_WIDGET ("debian_page")
 #define ACTION_PAGE    GET_WIDGET ("action_page")
 #define COMPLETE_PAGE  GET_WIDGET ("complete_page")
 #define NATURE_PAGE    GET_WIDGET ("nature_page")
 #define LESS_PAGE      GET_WIDGET ("less_page")
+#define VERSION_PAGE   GET_WIDGET ("version_page")
 #define MORE_PAGE      GET_WIDGET ("more_page")
 
 #define VERSION_LIST   GET_WIDGET ("version_list")

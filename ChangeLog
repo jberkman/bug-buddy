@@ -1,3 +1,37 @@
+2000-04-17  Jacob Berkman  <jacob@helixcode.com>
+
+	* lot's of hacking this weekend
+
+	* turbolinux should now correctly be detected
+
+	* add Helix Code's BTS, and an 'Independent' BTS... for submitting
+	to other email addresses
+
+	* docs from Telsa
+
+	* rework the user experience:
+
+	* now, you have to have a subject / description (no more empty
+	reports hopefully)
+
+	* remove the redundant 'how to repeat' section
+
+	* move the system config page to the end, since it is rather
+	boring
+
+	* you can now Cc: yourself on reports you submit
+
+	* UI retouching
+
+	* there is now a preview of the report at the end
+
+	* changes to the popt stuff as suggested by Karl Eichwalder
+
+	* new button to browse bugs for a package, so hopefully people
+	will stop submitting g-h-b crash reports
+
+	* basicall bug-buddy is ready for some 1.0 action
+
 2000-04-05  Dan Damian  <dand@dnttm.ro>
 
 	* configure.in: Added "ro" to ALL_LINGUAS.

@@ -5,7 +5,7 @@ buddydir = $(datadir)/bug-buddy
 INCLUDES = \
 	-I$(top_srcdir)/intl -I$(top_builddir)/intl	\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-I$(includedir) $(LIBGLADE_CFLAGS)		\
+	-I$(includedir) $(EXTRA_GNOME_CFLAGS)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"
 
@@ -34,8 +34,7 @@ bug_buddy_LDFLAGS = \
 	-export-dynamic
 
 bug_buddy_LDADD = \
-	$(LIBGLADE_LIBS)	\
-	$(INTLLIBS)
+	$(EXTRA_GNOME_LIBS)	$(INTLLIBS)
 
 noinst_PROGRAMS = gnome-crash
 
@@ -69,7 +68,8 @@ buddy_DATA = \
 	gdb-cmd		\
 	gnome-packages	\
 	debian-packages	\
-	kde-packages
+	kde-packages	\
+	helix-packages
 
 utilsdir = $(datadir)/gnome/apps/Utilities
 utils_DATA = bug-buddy.desktop
@@ -78,7 +78,9 @@ xmldir = $(datadir)/bug-buddy/xml
 xml_DATA = \
 	GNOME.bts	\
 	Debian.bts	\
-	KDE.bts
+	KDE.bts		\
+	Helix_Code.bts	\
+	Independent_Project.bts
 
 EXTRA_DIST = \
 	glade-strings.c	\
