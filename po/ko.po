@@ -423,7 +423,7 @@ msgid ""
 "If the bug is already reported, please do not report it again."
 msgstr ""
 "보고하려는 버그가 가장 자주 보고되는 버그 중에 들어 있다면 잠시 기다려 주십시오.\n"
-"버그가 이미 보고되어 있다면, 또 보고하지는 말아 주십시오.\n"
+"버그가 이미 보고되어 있다면, 또 보고하지는 말아 주십시오."
 
 #: src/bug-buddy.glade.h:40
 msgid ""
