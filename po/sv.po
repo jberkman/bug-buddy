@@ -10,108 +10,108 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-06-19 15:19-0400\n"
-"PO-Revision-Date: 2002-05-20 13:50+0200\n"
+"POT-Creation-Date: 2002-08-13 13:55+0200\n"
+"PO-Revision-Date: 2002-08-13 13:56+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:56
 msgid "Submit bug report"
 msgstr "Skicka felrapporten"
 
-#: src/bug-buddy.c:56
+#: src/bug-buddy.c:57
 msgid "Only send report to yourself"
 msgstr "Skicka felrapporten enbart till dig själv"
 
-#: src/bug-buddy.c:57
+#: src/bug-buddy.c:58
 msgid "Save report to file"
 msgstr "Spara felrapporten till en fil"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:63
 msgid "crashed application"
 msgstr "kraschat program"
 
-#: src/bug-buddy.c:63
+#: src/bug-buddy.c:64
 msgid "core file"
 msgstr "core-fil"
 
-#: src/bug-buddy.c:64
+#: src/bug-buddy.c:65
 msgid "nothing"
 msgstr "ingenting"
 
-#: src/bug-buddy.c:69
+#: src/bug-buddy.c:70
 msgid "Create a new bug report"
 msgstr "Skapa en ny felrapport"
 
-#: src/bug-buddy.c:70
+#: src/bug-buddy.c:71
 msgid "Add more information to existing report"
 msgstr "Lägg till information till en existerande rapport"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:80
 msgid "Name of contact"
 msgstr "Namn på kontaktperson"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:80
 msgid "NAME"
 msgstr "NAMN"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:81
 msgid "Email address of contact"
 msgstr "Kontaktpersonens e-postadress"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:81
 msgid "EMAIL"
 msgstr "E-POST"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:82
 msgid "Package containing the program"
 msgstr "Programpaketet som innehåller programmet"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:82
 msgid "PACKAGE"
 msgstr "PAKET"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:83
 msgid "Version of the package"
 msgstr "Programpaketets versionsnummer"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:83
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:84
 msgid "File name of crashed program"
 msgstr "Det kraschade programmets namn"
 
-#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
+#: src/bug-buddy.c:84 src/bug-buddy.c:86 src/bug-buddy.c:87
 msgid "FILE"
 msgstr "FIL"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:85
 msgid "PID of crashed program"
 msgstr "Det kraschade programmets PID"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:85
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:86
 msgid "Core file from program"
 msgstr "Core-fil från programmet"
 
-#: src/bug-buddy.c:86
+#: src/bug-buddy.c:87
 msgid "Text file to include in the report"
 msgstr "Textfil som skall inkluderas i rapporten"
 
-#: src/bug-buddy.c:96
+#: src/bug-buddy.c:97
 #, c-format
 msgid "Could not find widget named %s at %s"
 msgstr "Kunde inte hitta widget med namnet %s vid %s"
 
-#: src/bug-buddy.c:208
+#: src/bug-buddy.c:209
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -119,38 +119,38 @@ msgstr ""
 "gdb är inte klar med att hämta felsökningsinformationen.\n"
 "Döda gdb-processen (stackspårningen kommer inte att vara komplett)?"
 
-#: src/bug-buddy.c:219 src/gdb-buddy.c:125
+#: src/bug-buddy.c:220 src/gdb-buddy.c:125
 msgid "gdb has already exited"
 msgstr "gdb har redan avslutats"
 
-#: src/bug-buddy.c:286
+#: src/bug-buddy.c:250
 msgid "Save Backtrace"
 msgstr "Spara bakåtspår"
 
-#: src/bug-buddy.c:305
+#: src/bug-buddy.c:267
 #, c-format
 msgid ""
-"There was an error trying to save %s:\n"
+"The stack trace was not saved in %s:\n"
 "\n"
 "%s\n"
 "\n"
 "Please choose another file and try again."
 msgstr ""
-"Ett fel inträffade vid försök att spara %s:\n"
+"Bakåtspåret sparades inte i %s:\n"
 "\n"
 "%s\n"
 "\n"
 "Välj en annan fil och försök igen."
 
-#: src/bug-buddy.c:402
+#: src/bug-buddy.c:360
 msgid "_Start Mailer"
 msgstr "_Starta e-postprogram"
 
-#: src/bug-buddy.c:406
+#: src/bug-buddy.c:364
 msgid "_Send Report"
 msgstr "_Skicka rapport"
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:401
 #, c-format
 msgid ""
 "There was an error showing the proxy settings:\n"
@@ -165,15 +165,15 @@ msgstr ""
 "\n"
 "Försäkra dig om att GNOME-kontrollpanelen har installerats korrekt."
 
-#: src/bug-buddy.c:491
+#: src/bug-buddy.c:449
 msgid "Hide Debugging Options"
 msgstr "Dölj felsökningsalternativ"
 
-#: src/bug-buddy.c:492
+#: src/bug-buddy.c:450
 msgid "Show Debugging Options"
 msgstr "Visa felsökningsalternativ"
 
-#: src/bug-buddy.c:556
+#: src/bug-buddy.c:514
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -181,7 +181,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME är föråldrat.\n"
 "Använd kommandoradsflaggan --appname istället."
 
-#: src/bug-buddy.c:566
+#: src/bug-buddy.c:524
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -189,7 +189,7 @@ msgstr ""
 "$GNOME_CRASHED_PID är föråldrat.\n"
 "Använd kommandoradsflaggan --pid istället."
 
-#: src/bug-buddy.c:582
+#: src/bug-buddy.c:540
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
@@ -197,7 +197,7 @@ msgstr ""
 "Välkommen till Bug Buddy, ett felrapporteringsverktyg för GNOME.\n"
 "Det kommer att hjälpa dig gå igenom stegen i skickandet av en felrapport."
 
-#: src/bug-buddy.c:585
+#: src/bug-buddy.c:543
 msgid ""
 "\n"
 "\n"
@@ -207,7 +207,7 @@ msgstr ""
 "\n"
 "Du ser detta eftersom ett annat program har kraschat."
 
-#: src/bug-buddy.c:588
+#: src/bug-buddy.c:546
 msgid ""
 "\n"
 "\n"
@@ -220,12 +220,12 @@ msgstr ""
 "felsökningsinformation från programmen. Detta gör att Bug Buddy kan "
 "tillhandahålla en mer användbar felrapport."
 
-#: src/bug-buddy.c:727
+#: src/bug-buddy.c:685
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Kunde inte hitta bild: %s (%d)\n"
 
-#: src/bug-buddy.c:794
+#: src/bug-buddy.c:752
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -584,7 +584,7 @@ msgstr "Evolution"
 msgid "Obtaining stack trace... (%d)"
 msgstr "Hämtar stackspårning... (%d)"
 
-#: src/gdb-buddy.c:165
+#: src/gdb-buddy.c:175
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -593,7 +593,7 @@ msgstr ""
 "Kunde inte undersöka core-filen med gdb:\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:196
+#: src/gdb-buddy.c:206
 #, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
@@ -602,11 +602,11 @@ msgstr ""
 "GDB kunde inte bestämma vilken körbar fil som\n"
 "skapade \"%s\""
 
-#: src/gdb-buddy.c:228
+#: src/gdb-buddy.c:238
 msgid "Error on read... aborting"
 msgstr "Fel vid läsning... avbryter"
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:288
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -614,7 +614,7 @@ msgstr ""
 "GDB kunde inte hittas på ditt system.\n"
 "Felsökningsinformation kan inte fås fram."
 
-#: src/gdb-buddy.c:308
+#: src/gdb-buddy.c:322
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -622,9 +622,63 @@ msgstr ""
 "Kunde inte hitta filen gdb-cmd.\n"
 "Prova att installera om Bug Buddy."
 
-#: src/gdb-buddy.c:328
+#: src/gdb-buddy.c:342
 msgid "There was an error running gdb."
 msgstr "Det uppstod ett fel vid körning av gdb."
+
+#: src/save-buddy.c:83
+#, c-format
+msgid "Could not read symbolic link information for %s"
+msgstr "Kunde inte läsa symbolisk länkinformation för %s"
+
+#: src/save-buddy.c:129
+msgid "The file has too many symbolic links."
+msgstr "Filen har för många symboliska länkar."
+
+#: src/save-buddy.c:169
+msgid "Invalid filename."
+msgstr "Ogiltigt filnamn."
+
+#: src/save-buddy.c:194
+#, c-format
+msgid ""
+"There already exists a file name '%s'.\n"
+"\n"
+"Do you wish to overwrite this file?"
+msgstr ""
+"Det finns redan ett filnamn \"%s\".\n"
+"\n"
+"Vill du skriva över denna fil?"
+
+#: src/save-buddy.c:199
+msgid "_Overwrite"
+msgstr "Skriv _över"
+
+#: src/save-buddy.c:207
+msgid "The file already exists."
+msgstr "Filen finns redan."
+
+#: src/save-buddy.c:306
+msgid ""
+"There is not enough disk space to save the file.\n"
+"Please free some disk space and try again."
+msgstr ""
+"Det finns inte tillräckligt med diskutrymme för att spara filen.\n"
+"Frigör en del diskutrymme och försök igen."
+
+#: src/save-buddy.c:311
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes.  Please try saving a smaller file or saving it to a disk that does "
+"not have this limitation."
+msgstr ""
+"Disken där du försöker spara filen har en begränsning på filstorlekar. "
+"Försök att spara en mindre fil eller spara den på en disk som inte har denna "
+"begränsning."
+
+#: src/save-buddy.c:349
+msgid "Could not create a backup file."
+msgstr "Kunde inte skapa en säkerhetskopia."
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
