@@ -1,3 +1,7 @@
+2001-02-18  Akira TAGOH  <tagoh@gnome.gr.jp>
+
+	* src/bug-buddy.desktop: Updated Japanese entry.
+
 2001-02-15  jacob berkman  <jacob@ximian.com>
 
 	* src/united-states-of-bug-buddy.c (intro_page_ok): make these
