@@ -570,6 +570,8 @@ msgstr ""
 "Va¹e poroèilo o hro¹èu je bilo poslano na:\n"
 "\n"
 "        <%s>\n"
+"\n"
+"Hvala!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
