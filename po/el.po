@@ -5,12 +5,13 @@
 # simos: 121 messages, 11Feb2001.
 # simos: 140 messages, 13Feb2001.
 # simos: 137 messages, 16Feb2001.
+# simos: 119 messages, 26Mar2001, (sgpbea).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.90\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-16 16:36:12+0900\n"
+"Project-Id-Version: bug-buddy 2.0\n"
+"POT-Creation-Date: 2001-03-26 20:13+0100\n"
+"PO-Revision-Date: 2001-03-26 19:15:45+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
@@ -176,10 +177,10 @@ msgstr "Είστε σίγουρος ότι θέλετε να ακυρώσετε αυτήν την ανανέωση;"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Το άνοιγμα του '%s' είναι αδύνατο.\n"
-"Παρακαλώ ελέγξτε ότι ο βοηθός-σφαλμάτων έχει εγκατασταθεί σωστά."
+"Αδύνατο το άνοιγμα του '%s'.\n"
+"Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
 #: src/bugzilla.c:549
 msgid "All"
@@ -241,10 +242,10 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Δε βρέθηκε το αρχείο gdb-cmd.\n"
-"Παρακαλώ εγκαταστήστε ξανά το βοηθό-σφαλμάτων."
+"Παρακαλώ εγκαταστήστε ξανά το Βοηθό Σφαλμάτων."
 
 #
 #: src/gdb-buddy.c:281 src/util.c:75
@@ -571,19 +572,19 @@ msgstr "Παρακαλώ εισάγετε την ηλεκτρονική διεύθυνσή σας."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"Το '%s' δε φαίνεται να υπάρχει. \n"
+"Το '%s' δε φαίνεται να υπάρχει.\n"
 "\n"
-"Δε θα μπορέσετε να αποστείλετε την αναφορά σφάλματος, αλλά \n"
+"Δε θα μπορέσετε να αποστείλετε την αναφορά σφάλματος, αλλά\n"
 "θα μπορέσετε να την αποθηκεύσετε σε αρχείο.\n"
 "\n"
-"Θέλετε να ορίσετε νέα διαδρομή για το sendmail;"
+"Θέλετε να καθορίσετε νέα διαδρομή για το sendmail;"
 
 #: src/united-states-of-bug-buddy.c:336
 msgid "The specified file does not exist."
@@ -683,6 +684,14 @@ msgid "Error on read..."
 msgstr "Σφάλμα στην ανάγνωση..."
 
 #
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Το άνοιγμα του '%s' είναι αδύνατο.\n"
+#~ "Παρακαλώ ελέγξτε ότι ο βοηθός-σφαλμάτων έχει εγκατασταθεί σωστά."
+
+#
 #~ msgid "critical"
 #~ msgstr "κρίσιμο"
 
@@ -769,14 +778,6 @@ msgstr "Σφάλμα στην ανάγνωση..."
 
 #~ msgid "Refresh"
 #~ msgstr "Ανανέωση"
-
-#
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Αδύνατο το άνοιγμα του '%s'.\n"
-#~ "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
 #
 #~ msgid "Distribution"
