@@ -140,7 +140,6 @@ msgid "Core file from program"
 msgstr "Arquivo core do programa"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -150,7 +149,7 @@ msgstr ""
 "Será muito mais útil se você especificar\n"
 "um pacote especifico em vez de 'geral'.\n"
 "\n"
-"Deseja continuar assim mesmo?"
+"Por favor, especifique um pacote"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -187,7 +186,6 @@ msgid "gdb has already exited"
 msgstr "gdb já terminou"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "A ferramenta GNOME para relatórios de erro"
 
@@ -196,14 +194,12 @@ msgid "The lame bug-buddy web page"
 msgstr "A página web chinfrim do bug-buddy"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Por favor, entre seu nome e endereço de email"
+msgstr "Por favor, entre seu nome."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Por favor, entre seu nome e endereço de email"
+msgstr "Por favor, entre um endereço de email válido."
 
 #: src/bug-buddy.c:620
 #, c-format
