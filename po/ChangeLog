@@ -1,3 +1,8 @@
+2000-11-26  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
+
+	* it.po: Updated italian translation from Giovanni Bortolozzo
+	<borto@pluto.linux.it>
+
 2000-11-23  Yukihiro Nakai  <nakai@gnome.gr.jp>
 
 	* zh_CN.GB2312: Initial Chinese translation From Wu Yulun.
@@ -12,13 +17,13 @@
 
 2000-11-17  Kjartan Maraas  <kmaraas@gnome.org>
 
-	* no.po: Updated Norwegian (bokmål) translation.
+	* no.po: Updated Norwegian (bokmel) translation.
 	
 2000-11-17  Valek Filippov  <frob@df.ru>
 
 	* ru.po: updated russian translation.
 
-2000-11-17  Martin Norbäck  <d95mback@dtek.chalmers.se>
+2000-11-17  Martin Norbdck  <d95mback@dtek.chalmers.se>
 
 	* sv.po: Updated Swedish translation.
 
@@ -505,7 +510,7 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 	
 1999-11-03  Vincent Renardias  <vincent@ldsol.com>
 
-	* fr.po: contributed by Herv$Bi.(B
+	* fr.po: contributed by Herv$(Bi.(B
 
 1999-10-23  Kjartan Maraas  <kmaraas@online.no>
 

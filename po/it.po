@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-10-22 15:26+02:00\n"
+"POT-Creation-Date: 2000-11-26 02:04+0100\n"
+"PO-Revision-Date: 2000-11-25 12:27+01:00\n"
 "Last-Translator: Giovanni Bortolozzo <borto@pluto.linux.it>\n"
 "Language-Team: ITALIANO <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr "File core dall'applicazione"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "File testo da includere nella notifica"
 
 #: src/bug-buddy.c:332
 msgid ""
