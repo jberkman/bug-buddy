@@ -24,7 +24,7 @@
 #include <gnome.h>
 #include <glade/glade.h>
 
-#include "gdb-buddy.h"
+#include "bug-buddy.h"
 
 /* libglade callbacks */
 gboolean on_nature_page_next (GtkWidget *, GtkWidget *);
@@ -48,27 +48,11 @@ gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
 
 extern const char *packages[];
 
-#define SUBMIT_ADDRESS "submit@bugs.gnome.org";
-#define COMMAND_SIZE 5
-
 const gchar *severity[] = { N_("normal"),
 			    N_("critical"),
 			    N_("severe"),
 			    N_("wishlist"),
 			    NULL };
-
-typedef enum {
-	CRASH_NONE,
-	CRASH_DIALOG,
-	CRASH_CORE
-} CrashType;
-
-typedef enum {
-	SUBMIT_REPORT,
-	SUBMIT_TO_SELF,
-	SUBMIT_NONE,
-	SUBMIT_FILE
-} SubmitType;	
 
 struct {
 	/* contact page */
@@ -87,38 +71,7 @@ struct {
 	gchar *core_file;
 } popt_data;
 
-typedef struct {
-	const gchar *label;
-	const gchar *cmds[COMMAND_SIZE];	
-	gint row;
-} ListData;
-
-struct {
-	GtkWidget *the_druid;
-
-	GtkWidget *nature;
-	GtkWidget *attach;
-	GtkWidget *core;
-	GtkWidget *less;
-	GtkWidget *misc;
-
-	GtkWidget *gdb_text;
-	GtkWidget *app_file;
-	GtkWidget *pid;
-	GtkWidget *core_file;
-
-	GtkWidget *version_edit;
-	GtkWidget *version_label;
-	GtkWidget *version_list;
-	ListData *selected_data;
-
-	gchar *mail_cmd;
-	CrashType crash_type;
-	SubmitType submit_type;
-	int severity;
-
-	GladeXML *xml;
-} druid_data;
+DruidData druid_data;
 
 static ListData list_data[] = {
 	{ N_("Operating System"), { "uname -a" } },
@@ -145,16 +98,22 @@ static ListData list_data[] = {
 };
 
 static const struct poptOption options[] = {
-	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        0, N_("Contact's name"),          N_("NAME")},
-	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       0, N_("Contact's email address"), N_("EMAIL")},
-
-	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     0, N_("Package of the program"),  N_("PACKAGE")},
-	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 0, N_("Version of the package"),  N_("VERSION")},
-	
-	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    0, N_("Crashed file name"),       N_("FILE")},
-	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         0, N_("PID of crashed app"),      N_("PID")},
-	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("core file from app"),      N_("FILE")},
-	{NULL } };
+	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        
+	  0, N_("Contact's name"),          N_("NAME") },
+	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       
+	  0, N_("Contact's email address"), N_("EMAIL") },
+	{ "package",     0, POPT_ARG_STRING, &popt_data.package,     
+	  0, N_("Package of the program"),  N_("PACKAGE") },
+	{ "package-ver", 0, POPT_ARG_STRING, &popt_data.package_ver, 
+	  0, N_("Version of the package"),  N_("VERSION") },
+	{ "appname",     0, POPT_ARG_STRING, &popt_data.app_file,    
+	  0, N_("Crashed file name"),       N_("FILE") },
+	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         
+	  0, N_("PID of crashed app"),      N_("PID") },
+	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   
+	  0, N_("core file from app"),      N_("FILE") },
+	{ NULL } 
+};
 
 static void
 save_config ()
@@ -304,18 +263,14 @@ on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 		if ((old_type != CRASH_DIALOG) ||
 		    (!old_app || strcmp (app, old_app)) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_pair (GNOME_DRUID (druid_data.the_druid),
-					     GTK_TEXT (druid_data.gdb_text),
-					     app, extra);
+			get_trace_from_pair (app, extra);
 		}
 		break;
 	case CRASH_CORE:
 		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.core_file));
 		if ((old_type != CRASH_CORE) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_core (GNOME_DRUID (druid_data.the_druid),
-					     GTK_TEXT (druid_data.gdb_text),
-					     extra);
+			get_trace_from_core (extra);
 		}
 		break;
 	default:

@@ -22,10 +22,10 @@
 #include <config.h>
 #include <gnome.h>
 
-#include "gdb-buddy.h"
+#include "bug-buddy.h"
 
 void 
-get_trace_from_core (GnomeDruid *druid, GtkText *text, gchar *core_file)
+get_trace_from_core (const gchar *core_file)
 {
 	gchar *gdb_cmd;
 	gchar buf[1024];
@@ -71,45 +71,41 @@ get_trace_from_core (GnomeDruid *druid, GtkText *text, gchar *core_file)
 		return;
 	}	
 
-	get_trace_from_pair (druid, text, binary, core_file);
+	get_trace_from_pair (binary, core_file);
 	g_free (binary);
 }
 
-typedef struct {
-	FILE *fp;
-	GtkText *text;
-	GnomeDruid *druid;
-	int input;
-} GdbData;
-GdbData gdb_data;
+static int input;
 
 static void
 handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 {	
 	char buf[1024];
-	GdbData *gdb_data = data;
+	FILE *fp = data;
 
-	if (feof (gdb_data->fp)) {
-		gdk_input_remove (gdb_data->input);
-		gnome_druid_set_buttons_sensitive (gdb_data->druid, 
+	if (feof (fp)) {
+		fclose (fp);
+		gdk_input_remove (input);
+		gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 						   TRUE, TRUE, TRUE);
 		return;
 	}
 
-	fgets (buf, 1024, gdb_data->fp);
+	fgets (buf, 1024, fp);
 
-	gtk_text_set_point (gdb_data->text, gtk_text_get_length(gdb_data->text));
-	gtk_text_insert (gdb_data->text, NULL, NULL, NULL, buf, strlen(buf)); 
+	gtk_text_set_point (GTK_TEXT (druid_data.gdb_text),
+			    gtk_text_get_length (GTK_TEXT (druid_data.gdb_text)));
+	gtk_text_insert (druid_data.gdb_text, NULL, NULL, NULL, buf, strlen (buf));
 
 	return;
 }
 
 void
-get_trace_from_pair (GnomeDruid *druid, GtkText *text,
-		     const gchar *app, const gchar *extra)
+get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	gchar *cmd_buf;
 	gchar *cmd_file;
+	FILE *fp;
 
 	if (!app || !extra || !app[0] || !extra[0])
 		return;
@@ -127,10 +123,10 @@ get_trace_from_pair (GnomeDruid *druid, GtkText *text,
 	g_free (cmd_file);
 	
 	g_message ("about to run: %s", cmd_buf);
-	gdb_data.fp = popen (cmd_buf, "r");
+	fp = popen (cmd_buf, "r");
 	g_free (cmd_buf);
 
-	if (!gdb_data.fp) {
+	if (!fp) {
 		gchar *s = g_strdup_printf (_("Unable to start '%s'.\n"), cmd_buf);
 		GtkWidget *d = gnome_error_dialog (s);
 		g_free (s);
@@ -138,10 +134,6 @@ get_trace_from_pair (GnomeDruid *druid, GtkText *text,
 		return;
 	}
 
-	gdb_data.druid = druid;
-	gdb_data.text = text;
-	gdb_data.input = gdk_input_add (fileno (gdb_data.fp),
-					GDK_INPUT_READ,
-					handle_gdb_input,
-					&gdb_data);
+	input = gdk_input_add (fileno (fp), GDK_INPUT_READ,
+			       handle_gdb_input, fp);
 }

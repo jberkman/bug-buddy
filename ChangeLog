@@ -1,3 +1,14 @@
+1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+ 	* src/gdb-buddy.h:
+	* src/bug-buddy.h: use bug-buddy.h for a while
+
+	* src/gdb-buddy.c:
+	* src/bug-buddy.c: some reorganization with the non blockingness
+	stuff.
+
+	Look at me, coding on a Friday night.
+	
 1999-11-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.glade:
