@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20000406\n"
-"POT-Creation-Date: 2000-04-18 00:14-0400\n"
-"PO-Revision-Date: 2000-04-06 21:46+0900\n"
+"Project-Id-Version: bug-buddy CVS-20000419\n"
+"POT-Creation-Date: 2000-04-19 01:01+0900\n"
+"PO-Revision-Date: 2000-04-19 01:03+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -14,9 +14,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "スタックトレースを獲得中..."
+msgstr "スタックトレースを獲得中... (%d)"
 
 #: src/bug-buddy.c:410 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -92,65 +92,56 @@ msgid "support"
 msgstr "サポート"
 
 #: src/bug-buddy.c:89
-#, fuzzy
 msgid "Submit bug report"
-msgstr "Submitting the Report"
+msgstr "不具合報告を送信"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Only send report to yourself"
-msgstr "あなたの email アドレスにだけ報告を送信する"
+msgstr "自分自身にだけ報告を送信する"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Save report to file"
 msgstr "ファイルに報告を保存する"
 
 #: src/bug-buddy.c:96
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "デバッグ情報を収集中です..."
+msgstr "クラッシュしたアプリケーションからデバッグ情報を収集します"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "デバッグ情報を収集中です..."
+msgstr "core ファイルからデバッグ情報を収集します"
 
 #: src/bug-buddy.c:98
 msgid "Skip this step"
-msgstr "このステップはスキップする"
+msgstr "このステップは飛ばします"
 
 #: src/bug-buddy.c:103
-#, fuzzy
 msgid "Create a new bug report"
-msgstr "新しい不具合報告を提出する"
+msgstr "新しい不具合報告を作成する"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Add more information to existing report"
-msgstr "既存の不具合報告に情報を追加する"
+msgstr "既存の不具合報告により多くの情報を追加する"
 
 #: src/bug-buddy.c:113
 msgid "Name of contact"
-msgstr ""
+msgstr "連絡者の名前"
 
 #: src/bug-buddy.c:113
 msgid "NAME"
 msgstr "NAME"
 
 #: src/bug-buddy.c:114
-#, fuzzy
 msgid "Email address of contact"
-msgstr "Email アドレス"
+msgstr "連絡者の Email アドレス"
 
 #: src/bug-buddy.c:114
 msgid "EMAIL"
 msgstr "EMAIL"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Package containing the program"
-msgstr "プログラムのパッケージ"
+msgstr "プログラムを含むパッケージ"
 
 #: src/bug-buddy.c:115
 msgid "PACKAGE"
@@ -165,44 +156,38 @@ msgid "VERSION"
 msgstr "VERSION"
 
 #: src/bug-buddy.c:117
-#, fuzzy
 msgid "File name of crashed program"
-msgstr "プログラムのパッケージ"
+msgstr "クラッシュしたプログラムのファイル名"
 
 #: src/bug-buddy.c:117 src/bug-buddy.c:119
 msgid "FILE"
 msgstr "FILE"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "PID of crashed program"
-msgstr "クラッシュしたアプリケーションの PID"
+msgstr "クラッシュしたプログラムの PID"
 
 #: src/bug-buddy.c:118
 msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "Core file from program"
-msgstr "アプリケーションからの core ファイル"
+msgstr "プログラムからの core ファイル"
 
 #: src/bug-buddy.c:359
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
-msgstr ""
+msgstr "不具合報告に表題と説明を含めなければなりません"
 
 #: src/bug-buddy.c:402
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb はデバッグ情報の収集が完了しま\n"
-"せんでした\n"
-"gdb プロセスを終了しますか (スタック\n"
-"トレースは不完全でしょう)?"
+"gdb はデバッグ情報の収集が完了しませんでした\n"
+"gdb プロセスを終了しますか (スタックトレースは不完全でしょう)?"
 
 #: src/bug-buddy.c:453
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -234,40 +219,37 @@ msgid "Please enter your name and email address"
 msgstr "あなたの名前と email アドレスを入れてください"
 
 #: src/bug-buddy.c:605
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"gdb によって core ファイルを処理できません:\n"
-"'%s'"
+msgstr "ファイルを開くことが出来ません: '%s'"
 
 #: src/bug-buddy.c:618
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "実行される '%s' について"
 
 #: src/bug-buddy.c:622
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "メールプログラムを開始することが出来ません: '%s'"
 
 #: src/bug-buddy.c:653
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "あなたの不具合報告は '%s' に保存されました"
 
 #: src/bug-buddy.c:656
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
-msgstr ""
+msgstr "あなたの不具合報告は <%s> へ提出されました"
 
 #: src/bug-buddy.c:786
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "受取人の email アドレスを指定しなければなりません"
 
 #: src/bug-buddy.c:792
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Submitting the Report"
+msgstr "この不具合報告を今提出しますか?"
 
 #: src/bug-buddy.c:802
 msgid "Please choose a file to save to."
@@ -327,7 +309,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "bug-buddy の素晴らしい世界へようこそ"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -337,6 +319,11 @@ msgid ""
 "email address so that the bug report can be\n"
 "submitted."
 msgstr ""
+"bug-buddy は不具合報告提出のプロセスを通じて\n"
+"あなたと歩むことでしょう．これが bug-buddy を\n"
+"初めて使用するなら，不具合報告を提出することが\n"
+"出来て，あなたの email アドレスのために促される\n"
+"でしょう"
 
 #: src/glade-strings.c:14
 msgid "Contact Information"
@@ -364,6 +351,9 @@ msgid ""
 "submitting a bug report.  You can click the help\n"
 "button for a more in-depth explanation of the process."
 msgstr ""
+"bug-buddy は不具合報告提出のプロセスを通じてあなたと\n"
+"歩むでしょう．あなたはより多くの詳細なプロセスの説明\n"
+"を目的としてヘルプボタンをクリックすることが出来ます"
 
 #: src/glade-strings.c:22
 msgid "Report Information"
@@ -374,98 +364,86 @@ msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"使用する bug tracking system を選択し，次に残りの情報を\n"
+"記入します"
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
-msgstr "Bug Tracking System"
+msgstr "Bug Tracking System "
 
-#: src/glade-strings.c:26
-#, fuzzy
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr "既存の不具合報告に情報を追加する"
-
-#: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
 msgid "Package"
 msgstr "パッケージ"
 
-#: src/glade-strings.c:30
+#: src/glade-strings.c:27
 msgid "Severity"
 msgstr "重大度"
 
-#: src/glade-strings.c:31
+#: src/glade-strings.c:28
 msgid "Class"
 msgstr "クラス"
 
-#: src/glade-strings.c:32 src/glade-strings.c:34
+#: src/glade-strings.c:29 src/glade-strings.c:31
 msgid "Version"
 msgstr "バージョン"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:32
 msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"あなたの不具合がすでに提出されたかどうかをチェックしてみて下さい,\n"
+"そしてそうならば上で \"既存の報告に情報を追加する\" を使用して下さい"
 
-#: src/glade-strings.c:37 src/glade-strings.c:38
+#: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
 msgstr "不具合番号"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:36
 msgid "Description"
 msgstr "Description"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:37
 msgid "Short subject for the bug report"
 msgstr "不具合報告のための短い題名"
 
-#: src/glade-strings.c:41
-#, fuzzy
+#: src/glade-strings.c:38
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "不具合の詳しい説明"
+msgstr "それを再現させる方法を含む不具合の完全な説明"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:39
 msgid "Include a text file"
 msgstr "テキストファイルを包有する"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:40
 msgid "Debugging Information"
 msgstr "Debugging Information"
 
-#: src/glade-strings.c:44
-msgid ""
-"Collect debugging information from a crashed application\n"
-"Collect debugging information from a core file\n"
-"Skip this step\n"
-msgstr ""
-
-#: src/glade-strings.c:48
+#: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
 msgstr "クラッシュしたアプリケーションのバイナリを選択"
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:42
 msgid "Binary"
 msgstr "バイナリ"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:43
 msgid "Process ID"
 msgstr "プロセス ID"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:44
 msgid "Core file"
 msgstr "core ファイル"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:45
 msgid "Select a core file"
 msgstr "core ファイルを選択"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:46
 msgid "Collecting Debugging Information"
 msgstr "デバッグ情報を収集中です..."
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:47
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -473,142 +451,50 @@ msgstr ""
 "デバッグ中の間お待ちください\n"
 "情報は収集しました..."
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:49
 msgid "System Configuration"
 msgstr "System Configuration"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:50
 msgid "Please verify that this information is correct"
 msgstr "この情報が正しいか確認してください"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:52
 msgid "Version installed"
 msgstr "インストールされたバージョン"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:53
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:54
 msgid "Automatically go to next page when complete"
 msgstr "完了した時，次のページへ自動的に進む"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:55
 msgid "Submitting the Report"
 msgstr "Submitting the Report"
 
-#: src/glade-strings.c:63
-#, fuzzy
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr "あなたの email アドレスにだけ報告を送信する"
-
-#: src/glade-strings.c:67
+#: src/glade-strings.c:56
 msgid "To"
-msgstr ""
+msgstr "To"
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:57
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "自分自身へコピーを送信する"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:58
 msgid "Save the report to..."
 msgstr "報告を保存..."
 
-#: src/glade-strings.c:70
+#: src/glade-strings.c:59
 msgid "Content"
-msgstr ""
+msgstr "連絡"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:60
 msgid "Summary"
 msgstr "Summary"
 
-#: src/glade-strings.c:72
+#: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "GEGL は見守っています"
-
-#~ msgid "Contact's name"
-#~ msgstr "連絡する人の名前"
-
-#~ msgid "Contact's email address"
-#~ msgstr "連絡する人の email アドレス"
-
-#~ msgid "Crashed file name"
-#~ msgstr "クラッシュしたファイルの名前"
-
-#~ msgid ""
-#~ "Click \"Finish\" to exit bug-buddy.\n"
-#~ "No bug report will be submitted."
-#~ msgstr ""
-#~ "\"終了\"をクリックすると bug-buddy は終了します\n"
-#~ "不具合報告は提出されないでしょう"
-
-#~ msgid ""
-#~ "You are about to save a bug report in '%s'.\n"
-#~ "This can later be used to report a bug in '%s'."
-#~ msgstr ""
-#~ "'%s' の中に不具合報告を保存しようとしています\n"
-#~ "これは '%s' で不具合を報告するために後で使うことが出来ます"
-
-#~ msgid ""
-#~ "You are about to report a bug in '%s'.\n"
-#~ "\n"
-#~ "This will be submitted via email:\n"
-#~ "To: %s\n"
-#~ "From: %s <%s>\n"
-#~ "Subject: %s\n"
-#~ "\n"
-#~ "Clicking on 'Finish' will submit the bug report."
-#~ msgstr ""
-#~ "'%s' について不具合を報告します\n"
-#~ "\n"
-#~ "これは email を経由して提出されます:\n"
-#~ "To: %s\n"
-#~ "From: %s<%s>\n"
-#~ "Subject: %s\n"
-#~ "\n"
-#~ "'終了'をクリックすることで不具合報告を提出します"
-
-#~ msgid "all will be revealed."
-#~ msgstr "すべて明らかにされるでしょう"
-
-#~ msgid ""
-#~ "Enter your name and email address, so you will be notified when the\n"
-#~ "bug is resolved, or for developers to request more information from you."
-#~ msgstr ""
-#~ "あなたの名前と email アドレスを入力してください. "
-#~ "あなたは不具合が解決されるとき, \n"
-#~ "もしくは開発者があなたからもっと多くの情報を要求するために通知されるでしょう"
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Action"
-#~ msgstr "行動"
-
-#~ msgid "More Information"
-#~ msgstr "More Information"
-
-#~ msgid "Detailed instructions on how to reproduce the bug"
-#~ msgstr "不具合の再現方法を詳しく述べてください"
-
-#~ msgid "How to collect debugging information"
-#~ msgstr "デバッグ情報の集め方"
-
-#~ msgid "Attach to a crashed application"
-#~ msgstr "クラッシュしたアプリケーションを張り付ける"
-
-#~ msgid "Read from a core file"
-#~ msgstr "core ファイルから読み込む"
-
-#~ msgid "Submit bug report to bug tracking system"
-#~ msgstr "Bug Tracking System へ不具合報告を提出する"
-
-#~ msgid "Submit to individual author"
-#~ msgstr "作者へ提出する"
