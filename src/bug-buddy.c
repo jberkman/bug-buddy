@@ -254,8 +254,7 @@ on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 	gchar *app = NULL, *extra = NULL;
 
 	g_message (_("obtaining stack trace..."));
-	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid),
-					   FALSE, FALSE, TRUE);
+	
 	switch (druid_data.crash_type) {
 	case CRASH_DIALOG:
 		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
