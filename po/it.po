@@ -1,0 +1,483 @@
+# Italian translation for Bug Buddy
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Christopher R. Gabriel <cgabriel@pluto.linux.it>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy CVS\n"
+"POT-Creation-Date: 2000-02-23 18:42+0000\n"
+"PO-Revision-Date: 2000-03-27 06:54+02:00\n"
+"Last-Translator: Christopher R. Gabriel <cgabriel@pluto.linux.it>\n"
+"Language-Team: ITALIANO <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=US-ASCII\n"
+"Content-Transfer-Encoding: 7bit\n"
+
+#: src/gdb-buddy.c:41
+msgid "obtaining stack trace..."
+msgstr "generazione stack trace..."
+
+#: src/bug-buddy.c:298 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "gdb è precedentemente terminato"
+
+#: src/gdb-buddy.c:115
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Impossibile leggere il file core con gdb:\n"
+"%s"
+
+#: src/gdb-buddy.c:140
+#, c-format
+msgid "Child process exited with status %d"
+msgstr "Il processo figlio è terminato con stato %d"
+
+#: src/gdb-buddy.c:143
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Impossibile determinare quale binario ha creato\n"
+"%s"
+
+#: src/gdb-buddy.c:174
+msgid "Error on read... aborting"
+msgstr "Errore in lettura... annullamento"
+
+#: src/gdb-buddy.c:206
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"Impossibile trovare il file gdb-cmd.\n"
+"Reinstallare bug-buddy."
+
+#: src/gdb-buddy.c:214
+msgid "Error on fork()."
+msgstr "Errore durante fork()."
+
+#: src/bug-buddy.c:70
+msgid "critical"
+msgstr "critico"
+
+#: src/bug-buddy.c:71
+msgid "grave"
+msgstr "grave"
+
+#: src/bug-buddy.c:72
+msgid "normal"
+msgstr "normale"
+
+#: src/bug-buddy.c:73
+msgid "wishlist"
+msgstr "lista dei desideri"
+
+#: src/bug-buddy.c:77
+msgid "software bug"
+msgstr "errore nel software"
+
+#: src/bug-buddy.c:78
+msgid "documentation bug"
+msgstr "errore nella documentazione"
+
+#: src/bug-buddy.c:79
+msgid "change request"
+msgstr "richiesta di cambiamenti"
+
+#: src/bug-buddy.c:80
+msgid "support"
+msgstr "supporto"
+
+#: src/bug-buddy.c:88
+msgid "Contact's name"
+msgstr "Nome Contatto"
+
+#: src/bug-buddy.c:88
+msgid "NAME"
+msgstr "NOME"
+
+#: src/bug-buddy.c:89
+msgid "Contact's email address"
+msgstr "Indirizzo email del contatto"
+
+#: src/bug-buddy.c:89
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:90
+msgid "Package of the program"
+msgstr "Pacchetto del programma"
+
+#: src/bug-buddy.c:90
+msgid "PACKAGE"
+msgstr "PACCHETTO"
+
+#: src/bug-buddy.c:91
+msgid "Version of the package"
+msgstr "Versione del pacchetto"
+
+#: src/bug-buddy.c:91
+msgid "VERSION"
+msgstr "VERSIONE"
+
+#: src/bug-buddy.c:92
+msgid "Crashed file name"
+msgstr "Nome del file terminato"
+
+#: src/bug-buddy.c:92 src/bug-buddy.c:94
+msgid "FILE"
+msgstr "FILE"
+
+#: src/bug-buddy.c:93
+msgid "PID of crashed app"
+msgstr "PID dell'applicazione terminata"
+
+#: src/bug-buddy.c:93
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:94
+msgid "core file from app"
+msgstr "file core dall'applicazione"
+
+#: src/bug-buddy.c:290
+msgid ""
+"gdb has not finished getting thedebugging information.\n"
+"Kill the gdb process (the stack tracewill be incomplete)?"
+msgstr ""
+"gdb non ha terminato di ottenere le informazioni di debugging.\n"
+"Terminare il processo gdb (lo stack trace sarà imcompleto) ?"
+
+#: src/bug-buddy.c:341
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Copyright (C) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:343
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Il tool grafico di GNOME per il resoconto degli errori"
+
+#: src/bug-buddy.c:350
+msgid "The lame bug-buddy web page"
+msgstr "La pagina web di bug-buddy"
+
+#: src/bug-buddy.c:423
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a but report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s' non sembra esistere. Non siete in grado attualmente di inviare un\n"
+"resoconto di errore, ma è possibile salvarlo in un file.\n"
+"\n"
+"Specificare un nuovo percorso per sendmail?"
+
+#: src/bug-buddy.c:460
+msgid "Please enter your name and email address"
+msgstr "Inserire il proprio nome e indirizzo email"
+
+#: src/bug-buddy.c:500
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+"Premere su \"Finish\" per terminare bug-buddy.\n"
+"Nessun resoconto verrà inviato."
+
+#: src/bug-buddy.c:523
+#, c-format
+msgid ""
+"You are about to save a bug report in '%s'.\n"
+"This can later be used to report a bug in '%s'."
+msgstr ""
+"State per salvare il resoconto in '%s'.\n"
+"Questo potrà successivamente essere inviato per '%s'."
+
+#: src/bug-buddy.c:528
+#, c-format
+msgid ""
+"You are about to report a bug in '%s'.\n"
+"\n"
+"This will be submitted via email:\n"
+"To: %s\n"
+"From: %s <%s>\n"
+"Subject: %s\n"
+"\n"
+"Clicking on 'Finish' will submit the bug report."
+msgstr ""
+"State per inviare un resoconto di errore per '%s'.\n"
+"\n"
+"Questo verrà inviato per email:\n"
+"A: %s\n"
+"Da: %s <%s>\n"
+"Soggetto: %s\n"
+"\n"
+"Premere su 'Finish' per inviare il recosonto."
+
+#: src/bug-buddy.c:650
+msgid "Please choose a file to save to."
+msgstr "Selezionare il file dove salvare le informazioni."
+
+#: src/bug-buddy.c:657
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Il file '%s' è già esistente.\n"
+"Sovrascrivere questo file?"
+
+#: src/bug-buddy.c:768
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Impossibile aprire '%s'.\n"
+"Assicuratevi che bug-buddy sia installato correttamente."
+
+#: src/bug-buddy.c:864
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_APPNAME è deprecato.\n"
+"Utilizzate l'argomento da linea di comando --appname."
+
+#: src/bug-buddy.c:877
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+" Please use the --pid command lineargument instead."
+msgstr ""
+"$GNOME_CRASHED_PID è deprecato.\n"
+"Utilizzate l'argomento da linea di comando --pid."
+
+#: src/bug-buddy.c:990
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Impossibile trovare '%s'.\n"
+"Assicuratevi che bug-buddy sia installato correttamente."
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "all will be revealed."
+msgstr "tutto verrà rivelato."
+
+#: src/glade-strings.c:9
+msgid "Contact Information"
+msgstr "Informazioni sul contatto"
+
+#: src/glade-strings.c:10
+msgid "Email Address"
+msgstr "Indirizzo Email"
+
+#: src/glade-strings.c:11
+msgid "Your Name"
+msgstr "Il vostro nome"
+
+#: src/glade-strings.c:12
+msgid ""
+"Enter your name and email address, so you will be notified when the\n"
+"bug is resolved, or for developers to request more information from you."
+msgstr ""
+"Inserite il vostro nome e indirizzo email, in modo da poter essere avvisati\n"
+"quando l'errore verrà risolto, oppure essere contatti dagli sviluppatori \n"
+"per chiedervi maggiori informazioni."
+
+#: src/glade-strings.c:14
+msgid "Bug Tracking System"
+msgstr "Sistema di bug tracking"
+
+#: src/glade-strings.c:15
+msgid ""
+"\n"
+"\n"
+msgstr "\n\n"
+
+#: src/glade-strings.c:18
+msgid "Choose which sendmail to use"
+msgstr "Selezionare quale sendmail utilizzare"
+
+#: src/glade-strings.c:19
+msgid "Full path of sendmail"
+msgstr "Percorso completo per sendmail"
+
+#: src/glade-strings.c:20
+msgid "System Configuration"
+msgstr "Configurazione di sistema"
+
+#: src/glade-strings.c:21
+msgid "Please verify that this information is correct"
+msgstr "Verificare che le informazioni siano corrette"
+
+#: src/glade-strings.c:22 src/glade-strings.c:32
+msgid "Package"
+msgstr "Pacchetto"
+
+#: src/glade-strings.c:23
+msgid "Version installed"
+msgstr "Versione installata"
+
+#: src/glade-strings.c:24
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:25
+msgid "Automatically go to next page when complete"
+msgstr "Accedi automaticamente alla pagina successiva quando completo"
+
+#: src/glade-strings.c:26
+msgid "Report Information"
+msgstr "Resoconto delle informazioni"
+
+#: src/glade-strings.c:27 src/glade-strings.c:55
+msgid "Action"
+msgstr "Azione"
+
+#: src/glade-strings.c:28
+msgid "File a new bug report"
+msgstr "Crea un nuovo resoconto di errore"
+
+#: src/glade-strings.c:29
+msgid "Add information to an existing bug report"
+msgstr "Aggiungi informazioni ad un precedente resoconto"
+
+#: src/glade-strings.c:30
+msgid "Version"
+msgstr "Versione"
+
+#: src/glade-strings.c:31
+msgid "Class"
+msgstr "Classe"
+
+#: src/glade-strings.c:33
+msgid "Severity"
+msgstr "Severita'"
+
+#: src/glade-strings.c:34
+msgid "Bug Number"
+msgstr "Numero dell'errore"
+
+#: src/glade-strings.c:35
+msgid "Description"
+msgstr "Descrizione"
+
+#: src/glade-strings.c:36
+msgid "Short subject for the bug report"
+msgstr "Soggetto breve per il resoconto"
+
+#: src/glade-strings.c:37
+msgid "Full description of the bug"
+msgstr "Descrizione completa dell'errore"
+
+#: src/glade-strings.c:38
+msgid "More Information"
+msgstr "Maggiori informazioni"
+
+#: src/glade-strings.c:39
+msgid "Detailed instructions on how to reproduce the bug"
+msgstr "Istruzioni dettagliato su come riprodurre l'errore"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "Includi un file di testo"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Informazioni di debugging"
+
+#: src/glade-strings.c:42
+msgid "How to collect debugging information"
+msgstr "Come reperire le informazioni di debugging"
+
+#: src/glade-strings.c:43
+msgid "Attach to a crashed application"
+msgstr "Attaccare all'applicazione terminata"
+
+#: src/glade-strings.c:44
+msgid "Read from a core file"
+msgstr "Leggi da un file core"
+
+#: src/glade-strings.c:45
+msgid "Skip this step"
+msgstr "Ignora questo passo"
+
+#: src/glade-strings.c:46
+msgid "Binary"
+msgstr "Binario"
+
+#: src/glade-strings.c:47
+msgid "Process ID"
+msgstr "ID del processo"
+
+#: src/glade-strings.c:48
+msgid "Select the crashed application's binary"
+msgstr "Selezionare il binario dell'applicazione terminata"
+
+#: src/glade-strings.c:49
+msgid "Core file"
+msgstr "File core"
+
+#: src/glade-strings.c:50
+msgid "Select a core file"
+msgstr "Selezionare un file core"
+
+#: src/glade-strings.c:51
+msgid "Collecting Debugging Information"
+msgstr "Raccolta informazioni di debugging"
+
+#: src/glade-strings.c:52
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Attendere prego, raccolta di\n"
+"informazioni per il debug in corso..."
+
+#: src/glade-strings.c:54
+msgid "Submitting the Report"
+msgstr "Invia il resoconto"
+
+#: src/glade-strings.c:56
+msgid "Submit bug report to bug tracking system"
+msgstr "Invia il recosonto al sistema di bug tracking"
+
+#: src/glade-strings.c:57
+msgid "Submit to individual author"
+msgstr "Invia al singolo autore"
+
+#: src/glade-strings.c:58
+msgid "Send report to your email address only"
+msgstr "Invia il resoconto unicamente al proprio indirizzo di posta"
+
+#: src/glade-strings.c:59
+msgid "Save the report to a file"
+msgstr "Salva il resoconto in un file"
+
+#: src/glade-strings.c:60
+msgid "Save the report to..."
+msgstr "Salva il resoconto in..."
+
+#: src/glade-strings.c:61
+msgid "Summary"
+msgstr "Sommario"
+
+#: src/glade-strings.c:62
+msgid "The GEGL is watching."
+msgstr "Il GEGL ti guarda."
