@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
 "POT-Creation-Date: 2000-03-29 03:19+0200\n"
-"PO-Revision-Date: 2000-03-29 04:22+02:00\n"
+"PO-Revision-Date: 2000-03-29 04:54+02:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -215,7 +215,7 @@ msgid ""
 msgstr ""
 "Sie sind dabei, einen Fehler bei dem Paket '%s' zu melden.\n"
 "\n"
-"Dies wird via E-Mail eingeschickt werden:\n"
+"Dieser Bericht wird via E-Mail eingeschickt werden:\n"
 "\n"
 "To: %s\n"
 "From: %s <%s>\n"
@@ -360,11 +360,11 @@ msgstr "Automatisch zur nächsten Seite weitergehen, wenn die Angaben vollständig
 
 #: src/glade-strings.c:26
 msgid "Report Information"
-msgstr ""
+msgstr "Informationen zum Bericht"
 
 #: src/glade-strings.c:27 src/glade-strings.c:55
 msgid "Action"
-msgstr ""
+msgstr "Aktion"
 
 #: src/glade-strings.c:28
 msgid "File a new bug report"
@@ -372,7 +372,7 @@ msgstr "Einen neuen Fehlerbericht auf den Weg bringen"
 
 #: src/glade-strings.c:29
 msgid "Add information to an existing bug report"
-msgstr "Weitere Angaben einem vorhandenen Fehlerbericht hinzufügen"
+msgstr "Einem vorhandenen Fehlerbericht weitere Angaben hinzufügen"
 
 #: src/glade-strings.c:30
 msgid "Version"
@@ -380,11 +380,11 @@ msgstr "Version"
 
 #: src/glade-strings.c:31
 msgid "Class"
-msgstr ""
+msgstr "Klasse"
 
 #: src/glade-strings.c:33
 msgid "Severity"
-msgstr ""
+msgstr "Schwere"
 
 #: src/glade-strings.c:34
 msgid "Bug Number"
@@ -396,7 +396,7 @@ msgstr "Beschreibung"
 
 #: src/glade-strings.c:36
 msgid "Short subject for the bug report"
-msgstr "Kurzes \"Subject\" für den Fehlerbericht"
+msgstr "Kurzer Betreff (\"Subject\") für den Fehlerbericht"
 
 #: src/glade-strings.c:37
 msgid "Full description of the bug"
@@ -420,15 +420,15 @@ msgstr "Debug-Informationen"
 
 #: src/glade-strings.c:42
 msgid "How to collect debugging information"
-msgstr "Wie sich Debug-Informationen zusammenstellen lassen"
+msgstr "Debug-Informationen zusammenstellen"
 
 #: src/glade-strings.c:43
 msgid "Attach to a crashed application"
-msgstr ""
+msgstr "An eine abgestürzte Anwendung anhängen"
 
 #: src/glade-strings.c:44
 msgid "Read from a core file"
-msgstr ""
+msgstr "Aus einer Core-Datei lesen"
 
 #: src/glade-strings.c:45
 msgid "Skip this step"
@@ -470,19 +470,19 @@ msgstr "Bericht einschicken"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report to bug tracking system"
-msgstr "Den Bericht zum Bug-Tracking-System schicken"
+msgstr "Den Bericht zum Bug-Tracking-System schicken."
 
 #: src/glade-strings.c:57
 msgid "Submit to individual author"
-msgstr "Zu einem einzelnen Programmautor schicken"
+msgstr "Zu einem einzelnen Programmautor schicken."
 
 #: src/glade-strings.c:58
 msgid "Send report to your email address only"
-msgstr "Den Bericht nur zu Ihrer E-Mail-Adresse schicken"
+msgstr "Den Bericht nur zu Ihrer E-Mail-Adresse schicken."
 
 #: src/glade-strings.c:59
 msgid "Save the report to a file"
-msgstr "Den Bericht in einer Datei speichern"
+msgstr "Den Bericht in einer Datei speichern."
 
 #: src/glade-strings.c:60
 msgid "Save the report to..."
