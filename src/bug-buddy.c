@@ -24,6 +24,8 @@
 #include <gnome.h>
 #include <glade/glade.h>
 
+#include <signal.h>
+
 #include "bug-buddy.h"
 
 /* libglade callbacks */
@@ -271,14 +273,20 @@ static void
 on_stop_button_clicked (GtkWidget *button, gpointer data)
 {
 	GtkWidget *w;
-	if (!druid_data.fp)
+	if (!druid_data.fd)
 		return;
 
 	w = gnome_question_dialog (_("gdb has not exited.  Kill this process?"),
 				   NULL, NULL);
 
 	if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (w))) {
-		stop_gdb ();
+		if (druid_data.gdb_pid == 0) {
+			g_warning (_("gdb has already exited"));
+			return;
+		}
+		kill (druid_data.gdb_pid, SIGTERM);
+		stop_gdb ();		
+		kill (druid_data.app_pid, SIGCONT);
 		druid_data.explicit_dirty = TRUE;
 	}
 }

@@ -24,6 +24,10 @@
 
 #include "bug-buddy.h"
 
+#include <sys/wait.h>
+#include <unistd.h>
+#include <fcntl.h>
+
 void
 start_gdb ()
 {
@@ -39,6 +43,7 @@ start_gdb ()
 	case CRASH_DIALOG:
 		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
 		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.pid));
+		druid_data.app_pid = atoi (extra);
 		if (druid_data.explicit_dirty ||
 		    (old_type != CRASH_DIALOG) ||
 		    (!old_app || strcmp (app, old_app)) ||
@@ -72,19 +77,22 @@ void
 stop_gdb ()
 {
 	int status;
-	if (!druid_data.fp) {
+	if (!druid_data.ioc) {
 		g_message (_("gdb has exited"));
 		return;
 	}
-
-	status = pclose (druid_data.fp);
+	
+	g_io_channel_close (druid_data.ioc);
+	waitpid (druid_data.gdb_pid, &status, 0);
+	
+	druid_data.gdb_pid = 0;
 	g_message (_("Subprocess exited with status %d"), status);
-	gdk_input_remove (druid_data.input);
+	
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   TRUE, TRUE, TRUE);
 	gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
-	druid_data.fp = NULL;
-	druid_data.input = 0;
+	druid_data.fd = 0;
+	druid_data.ioc = NULL;
 	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), FALSE);
 	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
 				  TRUE);
@@ -130,7 +138,7 @@ get_trace_from_core (const gchar *core_file)
 	}
 
 	status = pclose(f);
-	g_message (_("Child process exited with status %d\n"), status);
+	g_message (_("Child process exited with status %d"), status);
 	if (!binary) {
 		gchar *s = g_strdup_printf (_("Unable to determine which binary created\n"
 					      "'%s'"), core_file);
@@ -144,69 +152,94 @@ get_trace_from_core (const gchar *core_file)
 	g_free (binary);
 }
 
-static void
-handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
+static gboolean
+handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 {	
-	char buf[1024];
-	FILE *fp = druid_data.fp;
-
-	if (!fp) {
-		g_warning (_("fp is NULL, not reading input"));
-		return;
+	gchar buf[1024];
+	guint len;
+	
+	if (condition == G_IO_HUP) {
+		stop_gdb ();
+		return FALSE;
 	}
 
-	if (feof (fp) || !fgets (buf, 1024, fp)) {
+	switch (g_io_channel_read (ioc, buf, 1024, &len)) {
+	case G_IO_ERROR_AGAIN:
+		return TRUE;
+	case G_IO_ERROR_NONE:
+		break;
+	default:
+		g_warning (_("Error on read... aborting"));
 		stop_gdb ();
-		return;
+		return FALSE;
 	}
 
 	gtk_text_set_point (GTK_TEXT (druid_data.gdb_text),
 			    gtk_text_get_length (GTK_TEXT (druid_data.gdb_text)));
 	gtk_text_insert (GTK_TEXT (druid_data.gdb_text), 
-			 NULL, NULL, NULL, buf, strlen (buf));
+			 NULL, NULL, NULL, buf, len);
 
-	return;
+	return TRUE;
 }
 
 void
 get_trace_from_pair (const gchar *app, const gchar *extra)
 {
-	gchar *cmd_buf;
-	gchar *cmd_file;
+	GtkWidget *d;
+	gchar *s;
+	int fd[2];
+	const char *args[] = { "gdb", 
+			       "--batch", 
+			       "--quiet",
+			       "--command=" BUDDY_DATADIR "/gdb-cmd",
+			       NULL, NULL, NULL };
+
+	args[4] = app;
+	args[5] = extra;
 
 	if (!app || !extra || !app[0] || !extra[0])
 		return;
-
-	cmd_file = BUDDY_DATADIR "/gdb-cmd";
-	if (!cmd_file) {
-	        GtkWidget *d;
+	
+	if (!g_file_exists (BUDDY_DATADIR "/gdb-cmd")) {
 		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
 					  "Please try reinstalling bug-buddy."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return;
 	}
 
-	cmd_buf = g_strdup_printf ("gdb --batch --quiet --command=%s %s %s",
-				   cmd_file, app, extra);
-
-	g_message ("about to run: %s", cmd_buf);
-	druid_data.fp = popen (cmd_buf, "r");
-	g_free (cmd_buf);
-
-	if (!druid_data.fp) {
-		gchar *s = g_strdup_printf (_("Unable to start '%s'.\n"), cmd_buf);
-		GtkWidget *d = gnome_error_dialog (s);
-		g_free (s);
+	if (pipe (fd) == -1) {
+		d = gnome_error_dialog (_("Unable to open pipe"));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return;
 	}
 
+	druid_data.gdb_pid = fork ();
+	if (druid_data.gdb_pid == 0) {
+		close (1);
+		close (fd[0]);
+		dup (fd[1]);
+
+		execvp (args[0], args);
+		d = gnome_error_dialog (_("Could not run gdb.  Time to panic."));
+		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		return;
+	} else if (druid_data.gdb_pid == -1) {
+		d = gnome_error_dialog (_("Error on fork()."));
+		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		return;
+	}
+	
+	close (fd[1]);
+	druid_data.fd = fd[0];
+	fcntl (fd[0], F_SETFL, O_NONBLOCK);
+	druid_data.ioc = g_io_channel_unix_new (fd[0]);
+	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP, 
+			handle_gdb_input, NULL);
+	g_io_channel_unref (druid_data.ioc);
 	gtk_editable_delete_text (GTK_EDITABLE (druid_data.gdb_text), 0, -1);
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   FALSE, FALSE, TRUE);
 	gnome_animator_start (GNOME_ANIMATOR (druid_data.gdb_anim));
-	druid_data.input = gdk_input_add (fileno (druid_data.fp), GDK_INPUT_READ,
-					  handle_gdb_input, druid_data.fp);
 	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), TRUE);
 	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
 				  FALSE);

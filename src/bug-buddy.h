@@ -23,6 +23,7 @@
 #define __BUG_BUDDY_H__
 
 #include <glade/glade.h>
+#include <sys/types.h>
 
 #define SUBMIT_ADDRESS "submit@bugs.gnome.org";
 #define COMMAND_SIZE 5
@@ -77,8 +78,11 @@ typedef struct {
 
 	GladeXML *xml;
 
-	FILE *fp;
-	int input;
+	pid_t app_pid;
+
+	pid_t gdb_pid;
+	GIOChannel *ioc;
+	int fd;
 
 	gboolean explicit_dirty;
 } DruidData;
@@ -89,6 +93,7 @@ void get_trace_from_core (const gchar *core_file);
 void get_trace_from_pair (const gchar *app, const gchar *extra);
 void stop_gdb (void);
 void start_gdb (void);
+
 #endif /* __bug_buddy_h__ */
 
 
