@@ -1,3 +1,7 @@
+2000-03-11 Alastair McKinstry <mckinstry@computer.org>
+
+	* configure.in (ALL_LINGUAS): Added Irish (ga) translation.
+
 2000-03-04  Jacob Berkman  <jacob@helixcode.com>
 
 	* src/bug-buddy.[ch] (on_complete_page_prepare): use email address from
