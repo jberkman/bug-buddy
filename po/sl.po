@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2000-06-25 01:16+0200\n"
+"POT-Creation-Date: 2002-06-07 21:41+0200\n"
+"PO-Revision-Date: 2002-06-07 21:46+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -154,6 +154,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Ob prikazovanju nastavitev posrednika se je zgodila napaka:\n"
+"\n"
+"%s\n"
+"\n"
+"Prosim, prepričajte se ali je Nadzorni center GNOME pravilno nameščen."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -207,8 +212,8 @@ msgstr ""
 "\n"
 "\n"
 "Prosim, počakajte nekaj trenutkov medtem, ko Bug Buddy pridobiva "
-"razhroščevalne podatke od programov. To bo omogočilo Bug Buddyu narediti "
-"bolj uporabno poročilo o hrošču."
+"razhroščevalne podatke od programov. To bo omogočilo Bug Buddyu narediti bolj "
+"uporabno poročilo o hrošču."
 
 #: src/bug-buddy.c:727
 #, c-format
@@ -242,7 +247,6 @@ msgid "Description"
 msgstr "Opis"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -251,13 +255,14 @@ msgid ""
 msgstr ""
 "Bug Buddy ni mogel odpreti '%s'.\n"
 "Preverite, ali je bil Bug Buddy pravilno nameščen."
+"\n"
+"Bug Buddy se bo sedaj zaprl."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Vse"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -265,8 +270,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"Nisem mogel odpreti datoteke z uporabiškim vmesnikom (%s).\n"
-"Preverite, ali je bil Bug Buddy pravilno nameščen."
+"Bug buddy ni našel podatkov o tem kam poslati poročila o hroščih.\n"
+"\n"
+"Preverite, ali je bil Bug Buddy pravilno nameščen.\n"
+"\n"
+"Bug Buddy se bo zdaj zaprl."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -340,9 +348,8 @@ msgid "*"
 msgstr "*"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -380,8 +387,8 @@ msgid ""
 msgstr ""
 "Bug Buddy uporablja e-pošto za oddajo poročil o hroščih.\n"
 "Prosim, izberite kako želite, da Bug Buddy pošlje e-pošto.\n"
-"Če boste uporabili privzet poštni program GNOME, bo ta nastavitev enaka kot "
-"v drugih programih GNOME."
+"Če boste uporabili privzet poštni program GNOME, bo ta nastavitev enaka kot v "
+"drugih programih GNOME."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
@@ -702,7 +709,7 @@ msgstr "Takoj pošlji to poročilo o hrošču?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "_Pošlji"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
