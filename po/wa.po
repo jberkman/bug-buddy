@@ -357,9 +357,8 @@ msgid "Send copy to yourself"
 msgstr "Vis evoyî ene copeye"
 
 #: src/bug-buddy.glade.h:37
-#, fuzzy
 msgid "Sendmail"
-msgstr "Evoyî ci messaedje chal"
+msgstr "Sendmail"
 
 #: src/bug-buddy.glade.h:38
 #, fuzzy
@@ -582,14 +581,12 @@ msgid ""
 msgstr "Estoz seur di voleur wårder cis apontiaedjes la?"
 
 #: src/util.c:61
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "Dji n' sai drovî li fitchî log!\n"
+msgstr "Dji n' sai drovî ene bûze"
 
 #: src/util.c:73
-#, fuzzy, c-format
 msgid "Could not run '%s'."
-msgstr "Dji n' trove nén li fitchî %s"
+msgstr "Dji n' sai enonder «%s»."
 
 #: src/util.c:114
 #, fuzzy

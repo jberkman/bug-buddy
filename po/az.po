@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2000-06-19 17:18GMT +0200\n"
+"POT-Creation-Date: 2001-06-22 16:44+0200\n"
+"PO-Revision-Date: 2001-07-28 02:30GMT +0200\n"
 "Last-Translator: Vasif İsmayıloğlu MD <azerb_linux@hotmail.com>\n"
 "Language-Team: Azerbaijani Turkish <linuxaz@azerimal.net>\n"
 "MIME-Version: 1.0\n"
@@ -533,9 +533,8 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr "Xəta raportunda bir qısa izahat olmalıdır."
 
 #: src/united-states-of-bug-buddy.c:383
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Raportu göndər"
+msgstr "Raportu indi göndərim?"
 
 #: src/united-states-of-bug-buddy.c:397
 #, c-format
@@ -558,7 +557,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Xəta raportu `%s''də qeyd edildi"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -568,7 +567,8 @@ msgid ""
 msgstr ""
 "Xəta raportu göndərilmişdir:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"Sağ Olun!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
