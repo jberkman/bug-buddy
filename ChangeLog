@@ -1,5 +1,9 @@
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* 0.1 release
+	
+	* src/bug-buddy.mime: go back to the old regex
+
 	* src/bug-buddy.c (load_config): initially default to real/user name
 
 	* src/Makefile.am (bug_buddy_SOURCES): distcheck fix

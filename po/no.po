@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-06 11:48+0100\n"
+"POT-Creation-Date: 1999-11-06 17:08-0500\n"
 "PO-Revision-Date: 1999-11-06 11:55+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -44,123 +44,129 @@ msgstr ""
 msgid "Unable to start '%s'.\n"
 msgstr "Kunne ikke starte '%s'.\n"
 
-#: src/bug-buddy.c:51
+#: src/bug-buddy.c:53
 msgid "normal"
 msgstr "normal"
 
-#: src/bug-buddy.c:52
+#: src/bug-buddy.c:54
 msgid "critical"
 msgstr "kritisk"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "severe"
 msgstr "alvorlig"
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "wishlist"
 msgstr "ønskeliste"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Operating System"
 msgstr "Operativsystem"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Distribution"
 msgstr "Distribusjon"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Distribution version"
 msgstr "Distribusjonens versjon"
 
-#: src/bug-buddy.c:90
+#: src/bug-buddy.c:92
 msgid "C library"
 msgstr "C-bibliotek"
 
-#: src/bug-buddy.c:91
+#: src/bug-buddy.c:93
 msgid "C Compiler"
 msgstr "C-kompilator"
 
-#: src/bug-buddy.c:92
+#: src/bug-buddy.c:94
 msgid "glib"
 msgstr "glib"
 
-#: src/bug-buddy.c:93
+#: src/bug-buddy.c:95
 msgid "GTK+"
 msgstr "GTK+"
 
-#: src/bug-buddy.c:94
+#: src/bug-buddy.c:96
 msgid "ORBit"
 msgstr "ORBit"
 
-#: src/bug-buddy.c:95
+#: src/bug-buddy.c:97
 msgid "gnome-libs"
 msgstr "gnome-libs"
 
-#: src/bug-buddy.c:96
+#: src/bug-buddy.c:98
 msgid "gnome-core"
 msgstr "gnome-core"
 
-#: src/bug-buddy.c:102
+#: src/bug-buddy.c:104
 msgid "Contact's name"
 msgstr "Kontaktens navn"
 
-#: src/bug-buddy.c:102
+#: src/bug-buddy.c:104
 msgid "NAME"
 msgstr "NAVN"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:106
 msgid "Contact's email address"
 msgstr "Kontaktens e-post adresse"
 
-#: src/bug-buddy.c:104
+#: src/bug-buddy.c:106
 msgid "EMAIL"
 msgstr "E-POST"
 
-#: src/bug-buddy.c:106
+#: src/bug-buddy.c:108
 msgid "Package of the program"
 msgstr "Pakken programmet tilhører"
 
-#: src/bug-buddy.c:106
+#: src/bug-buddy.c:108
 msgid "PACKAGE"
 msgstr "PAKKE"
 
-#: src/bug-buddy.c:108
+#: src/bug-buddy.c:110
 msgid "Version of the package"
 msgstr "Versjon av pakken"
 
-#: src/bug-buddy.c:108
+#: src/bug-buddy.c:110
 msgid "VERSION"
 msgstr "VERSJON"
 
-#: src/bug-buddy.c:110
+#: src/bug-buddy.c:112
 msgid "Crashed file name"
 msgstr "Navn på filen som krasjet"
 
-#: src/bug-buddy.c:110 src/bug-buddy.c:114
+#: src/bug-buddy.c:112 src/bug-buddy.c:116
 msgid "FILE"
 msgstr "FIL"
 
-#: src/bug-buddy.c:112
+#: src/bug-buddy.c:114
 msgid "PID of crashed app"
 msgstr "PID på programmet som krasjet"
 
-#: src/bug-buddy.c:112
+#: src/bug-buddy.c:114
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:114
+#: src/bug-buddy.c:116
 msgid "core file from app"
 msgstr "core fil fra programmet"
 
-#: src/bug-buddy.c:256
+#: src/bug-buddy.c:262
 msgid "obtaining stack trace..."
 msgstr "henter stack trace..."
 
-#: src/bug-buddy.c:349
+#: src/bug-buddy.c:354
 msgid "Please enter your name and email address"
 msgstr "Vennligst skriv inn navn og e-post adresse"
 
-#: src/bug-buddy.c:398
+#: src/bug-buddy.c:383
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+
+#: src/bug-buddy.c:403
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -169,7 +175,7 @@ msgstr ""
 "Du er i ferd med å lagre en feilrapport i '%s'.\n"
 "Denne kan senere brukes til å rapportere en feil i '%s'."
 
-#: src/bug-buddy.c:403
+#: src/bug-buddy.c:408
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -190,7 +196,7 @@ msgstr ""
 "\n"
 "Rapporten sendes ved å klikke på fullfør."
 
-#: src/bug-buddy.c:438
+#: src/bug-buddy.c:443
 #, c-format
 msgid ""
 "Unable to start mail program:\n"
@@ -199,7 +205,7 @@ msgstr ""
 "Kunne ikke starte e-post programmet:\n"
 "'%s'"
 
-#: src/bug-buddy.c:451
+#: src/bug-buddy.c:456
 #, c-format
 msgid ""
 "Unable to open file:\n"
@@ -208,25 +214,25 @@ msgstr ""
 "Kunne ikke åpne filen:\n"
 "'%s'"
 
-#: src/bug-buddy.c:586
+#: src/bug-buddy.c:592
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:599
+#: src/bug-buddy.c:605
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Kunne ikke kjøre kommandoen '%s'"
 
-#: src/bug-buddy.c:604
+#: src/bug-buddy.c:610
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Feil under lesing av inndata fra '%s'"
 
-#: src/bug-buddy.c:791
+#: src/bug-buddy.c:812
 msgid "Could not find a mail program.\n"
 msgstr "Kunne ikke finne et e-post program.\n"
 
-#: src/bug-buddy.c:799
+#: src/bug-buddy.c:820
 msgid ""
 "Could not find bug-buddy.glade file.\n"
 "Please make sure bug-buddy was installed correctly."
@@ -234,7 +240,7 @@ msgstr ""
 "Kunne ikke finne bug-buddy.glade filen.\n"
 "Vennligst forsikre deg om at bug-buddy ble korrekt installert."
 
-#: src/bug-buddy.c:809
+#: src/bug-buddy.c:830
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "XML-filen '%s' kunne ikke lastes"
