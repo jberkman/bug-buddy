@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.9\n"
-"POT-Creation-Date: 2000-05-10 01:33-0400\n"
-"PO-Revision-Date: 2000-05-06 12:23+02:00\n"
+"POT-Creation-Date: 2000-05-12 19:30+0200\n"
+"PO-Revision-Date: 2000-05-12 19:31+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -221,11 +221,13 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
 #: src/bug-buddy.c:682
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\t<%s>"
-msgstr "Din feilrapport ble sendt til <%s>"
+msgstr ""
+"Din feilrapport ble sendt til:\n"
+"\t<%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
