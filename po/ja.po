@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20000516\n"
 "POT-Creation-Date: 2000-05-16 23:50+0900\n"
-"PO-Revision-Date: 2000-05-16 23:51+0900\n"
+"PO-Revision-Date: 2000-05-18 19:19+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,11 @@ msgstr ""
 
 #: src/bts.c:99
 msgid "Distribution"
-msgstr "ディストリビューション"
+msgstr "Distribution"
 
 #: src/bts.c:107
 msgid "System"
-msgstr "システム"
+msgstr "System"
 
 #: src/bug-buddy.c:74
 msgid "critical"
