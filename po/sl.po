@@ -561,7 +561,7 @@ msgid ""
 msgstr ""
 "'%s' je datoteka %s.\n"
 "\n"
-"Bug Buddy lahko po¹lje le datoteke z besedilom (text/*).
+"Bug Buddy lahko po¹lje le datoteke z besedilom (text/*)."
 
 #: src/united-states-of-bug-buddy.c:418
 msgid "You must include a comprehensible subject line in your bug report."
