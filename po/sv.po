@@ -3,13 +3,14 @@
 # Richard Hult <rhult@hem.passagen.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000.
+# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
 "POT-Creation-Date: 2000-11-17 14:27+0100\n"
-"PO-Revision-Date: 2000-10-06 20:00+0200\n"
-"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"PO-Revision-Date: 2000-11-17 14:27+0100\n"
+"Last-Translator: Martin Norbäck <d95mback@dtek.chalmers.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
