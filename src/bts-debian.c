@@ -36,9 +36,23 @@
 #include "util.h"
 #include "bts.h"
 
+#include "ctree-combo.h"
+
+#define MAKE_LEAF(w, r, rw) gtk_ctree_insert_node (GTK_CTREE (w), r, NULL, rw,\
+                                                   0, NULL, NULL, NULL, NULL,\
+                                                   TRUE, FALSE)
+
+#define MAKE_ROOT(w, rw) gtk_ctree_insert_node (GTK_CTREE (w), NULL, NULL, rw,\
+                                                0, NULL, NULL, NULL, NULL,\
+                                                FALSE, FALSE)
+
+
 static gint debian_bts_init (xmlNodePtr node);
 static void debian_bts_denit (void);
 static gint debian_bts_doit (void);
+
+GtkWidget *make_miggie_combo (gchar *widget_name, gchar *s1,
+			      gchar *s2, gint i1, gint i2);
 
 BugTrackingSystem debian_bts = {
 	debian_bts_init,
@@ -52,15 +66,22 @@ static struct {
 	GList *packages;
 } debian_data;
 
+GtkWidget *
+make_miggie_combo (gchar *widget_name, gchar *s1,
+		   gchar *s2, gint i1, gint i2)
+{
+	return ctree_combo_new (1, 0);
+}
+
 static gint
 debian_bts_init (xmlNodePtr node)
 {
 	xmlNodePtr cur;
 	GtkWidget *w;
-	char *line, *file;
+	char *line, *file, *row[2] = { NULL };
+	char last_letter='\0';
 	int fd;
-	GList *gitem = NULL;
-
+	GtkCTreeNode *last_leaf = NULL, *last_root = NULL;
 	w = GET_WIDGET ("package_entry2");
 	cur = node->childs;
 	while (cur) {
@@ -72,24 +93,24 @@ debian_bts_init (xmlNodePtr node)
 				xmlNodeGetContent (cur);
 		else if (!strcmp (cur->name, "packages-list")) {
 			file = xmlNodeGetContent (cur);
-			line = g_strconcat (BUDDY_DATADIR "/",
-					    file, NULL);
+			line = g_strconcat (BUDDY_DATADIR "/", file, NULL);
 			xmlFree (file);
 			fd = open (line, O_RDONLY);
 			g_free (line);
-			if (fd == -1) {
-				cur = cur->next;
-				continue;
+			if (fd == -1) break;
+			w = GET_WIDGET ("miggie_combo");
+			w = CTREE_COMBO (w)->ctree;
+			gtk_clist_clear (GTK_CLIST (w));
+			gtk_clist_freeze (GTK_CLIST (w));
+			while ((row[0] = get_line_from_fd (fd))) {
+				if (row[0][0] != last_letter) {
+					last_root = MAKE_ROOT(w, row);
+					last_letter = row[0][0];
+				} else
+					MAKE_LEAF (w, last_root, row);
+				g_free (row[0]);
 			}
-			while ((line = get_line_from_fd (fd))) {
-				w = gtk_list_item_new_with_label (line);
-				gtk_widget_show (w);
-				gitem = g_list_prepend (gitem, w);
-				g_free (line);
-			}
-			w = GTK_COMBO (GET_WIDGET ("package_entry2"))->list;
-			gtk_list_clear_items (GTK_LIST (w), 0, -1);
-			gtk_list_prepend_items (GTK_LIST (w), gitem);
+			gtk_clist_thaw (GTK_CLIST (w));
 		} else {
 			g_warning ("unknown node: %s", cur->name);
 		}
@@ -146,7 +167,7 @@ debian_bts_doit ()
 	gchar *s, *s2, *s3, *subject;
 	char *command;
 	FILE *fp = stdout;
-	int status, bugnum, i;
+	int bugnum, i;
 
 	if (druid_data.bug_type == BUG_NEW) {
 		s2 = g_strconcat ("submit", debian_data.email, NULL);

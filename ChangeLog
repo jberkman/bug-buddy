@@ -1,3 +1,18 @@
+1999-12-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bts-debian: use the new ctree combo box
+	
+	* src/glade-druid.h: sync with .glade file
+
+	* src/Makefile.am:
+	* src/kde-packages: packages files shouldn't be backwards
+	any more
+
+	* src/ctree-combo.[ch]: combo box with a drop down ctree
+
+	* src/gtk-combo-box.[ch]: steal miguel's combo box from
+	gnumeric
+
 1999-12-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/KDE.bts:

@@ -16,11 +16,15 @@ bug_buddy_SOURCES = \
 	bts-debian.c	\
 	bug-buddy.c	\
 	bug-buddy.h	\
+	ctree-combo.c	\
+	ctree-combo.h	\
 	distro.h	\
 	distro-debian.c	\
 	distro-redhat.c	\
 	gdb-buddy.c	\
 	glade-druid.h	\
+	gtk-combo-box.c	\
+	gtk-combo-box.h	\
 	util.c		\
 	util.h
 
@@ -48,10 +52,10 @@ mime_DATA = \
 
 debian-packages: Makefile.am
 	grep -h ^Package $(DEBIAN_ROOT)/var/state/apt/lists/*_Packages | \
-	sort -r | awk '{ print $$2 }' > debian-packages
+	sort | awk '{ print $$2 }' > debian-packages
 
 gnome-packages: Makefile.am
-	sort -r $(top_srcdir)/debbugs/Maintainers | \
+	sort $(top_srcdir)/debbugs/Maintainers | \
 	awk '{ print $$1 }' > gnome-packages
 
 buddy_DATA = \

@@ -942,15 +942,13 @@ bug is resolved, or for developers to request more information from you.</label>
 	    </widget>
 
 	    <widget>
-	      <class>GtkCombo</class>
-	      <name>package_entry2</name>
+	      <class>Custom</class>
+	      <name>miggie_combo</name>
 	      <cxx_use_heap>True</cxx_use_heap>
-	      <value_in_list>False</value_in_list>
-	      <ok_if_empty>True</ok_if_empty>
-	      <case_sensitive>False</case_sensitive>
-	      <use_arrows>True</use_arrows>
-	      <use_arrows_always>False</use_arrows_always>
-	      <items></items>
+	      <creation_function>make_miggie_combo</creation_function>
+	      <int1>0</int1>
+	      <int2>0</int2>
+	      <last_modification_time>Sun, 05 Dec 1999 23:32:32 GMT</last_modification_time>
 	      <child>
 		<left_attach>1</left_attach>
 		<right_attach>2</right_attach>
@@ -958,25 +956,13 @@ bug is resolved, or for developers to request more information from you.</label>
 		<bottom_attach>1</bottom_attach>
 		<xpad>0</xpad>
 		<ypad>0</ypad>
-		<xexpand>True</xexpand>
+		<xexpand>False</xexpand>
 		<yexpand>False</yexpand>
 		<xshrink>False</xshrink>
 		<yshrink>False</yshrink>
 		<xfill>True</xfill>
 		<yfill>False</yfill>
 	      </child>
-
-	      <widget>
-		<class>GtkEntry</class>
-		<child_name>GtkCombo:entry</child_name>
-		<name>package_entry</name>
-		<cxx_use_heap>True</cxx_use_heap>
-		<can_focus>True</can_focus>
-		<editable>True</editable>
-		<text_visible>True</text_visible>
-		<text_max_length>0</text_max_length>
-		<text></text>
-	      </widget>
 	    </widget>
 	  </widget>
 
