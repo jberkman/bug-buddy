@@ -1,7 +1,8 @@
 1999-11-14  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.c: code clean up
-	
+	(get_data_from_command): remove extra \n's and add _()'s
+
 	* src/bug-buddy.c (init_ui): actually do something
 	for the --package command line arg
 

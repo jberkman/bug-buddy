@@ -434,7 +434,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		/* fall through */
 	case SUBMIT_REPORT:
 		/*s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);*/
-		g_message ("about to run '%s'", druid_data.mail_cmd);
+		g_message (_("about to run '%s'"), druid_data.mail_cmd);
 		fp = popen (druid_data.mail_cmd, "w");
 		if (!fp) {
 			s = g_strdup_printf (_("Unable to start mail program:\n"
@@ -519,7 +519,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	g_free (s);
 
 	status = pclose (fp);
-	g_message ("Subprocess exited with status %d\n", status);
+	g_message (_("Subprocess exited with status %d"), status);
 	save_config ();
 	gtk_main_quit ();
 
@@ -613,7 +613,7 @@ get_data_from_command (const gchar *cmd)
 	} 
 
 	status = pclose (fp);
-	g_message ("Subprocess exited with status %d\n", status);
+	g_message (_("Subprocess exited with status %d"), status);
 
 	return g_strchomp (buf);	
 }
