@@ -139,17 +139,17 @@ msgstr "Core bestand van het programma"
 
 #: src/bug-buddy.c:365
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Het gekozen bestand bestaat niet."
 
 #: src/bug-buddy.c:370
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Het betstand is van het type: %s"
 
 #: src/bug-buddy.c:373
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "'%s' lijkt geen tekstbestand te zijn."
 
 #: src/bug-buddy.c:387
 msgid ""
@@ -222,11 +222,12 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Uw bugrapport is opgeslagen in '%s'"
 
 #: src/bug-buddy.c:682
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\t<%s>"
-msgstr "Uw bugrapport is opgestuurd naar <%s>"
+msgstr "Uw bugrapport is opgestuurd naar:\n"
+\tr <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
@@ -436,7 +437,7 @@ msgstr "Korte omschrijving"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Het is belangrijk dat U de foutmelding in het engels beschrijft."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
@@ -540,15 +541,14 @@ msgid "Unable to open pipe"
 msgstr "Het is niet mogelijk om verbinding met GDB te maken"
 
 #: src/util.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Could not run '%s'."
-msgstr "Het programma '%s' wordt zodadelijk uitgevoerd"
+msgstr "Het programma '%s' kon niet worden uitgevoerd"
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
 msgstr ""
-"Er is een fout opgetreden tijdens het lezen. De operatie wordt afgebroken"
+"Er is een fout opgetreden tijdens het lezen."
 
 #~ msgid ""
 #~ "Submit new report\n"
