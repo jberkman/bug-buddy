@@ -62,6 +62,7 @@ utils_DATA = $(utils_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST = \
 	$(utils_DATA)	\
+	$(utils_in_files) \
 	gdb-cmd		\
 	bug-buddy.glade	\
 	bug-buddy.mime	\
