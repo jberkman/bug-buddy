@@ -539,9 +539,10 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <widget>
 	      <class>GtkHBox</class>
 	      <name>hbox12</name>
+	      <border_width>5</border_width>
 	      <cxx_use_heap>True</cxx_use_heap>
 	      <homogeneous>False</homogeneous>
-	      <spacing>0</spacing>
+	      <spacing>5</spacing>
 
 	      <widget>
 		<class>GtkRadioButton</class>

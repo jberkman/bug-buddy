@@ -1,8 +1,18 @@
 1999-11-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.glade: add some padding and stuff
+	
 	* src/util.[ch]: actually read a line at a time
 	
 	* src/distro-debian.c: it works now
+
+	* src/bug-buddy.glade:
+	* src/bug-buddy.c: merge the attach/core/nature pages;
+	some cleanup
+
+	* src/gdb-buddy.c: don't pipe() on the fd anymore
+
+	* src/distro-debian.c: some fixes, not working yet
 
 1999-11-29  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
