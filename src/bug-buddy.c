@@ -320,6 +320,8 @@ init_ui (void)
 
 	load_config ();
 
+	//gtk_widget_set_default_direction (GTK_TEXT_DIR_RTL);
+
 	w = GET_WIDGET ("druid-notebook");
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (w), FALSE);
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (w), FALSE);
@@ -426,7 +428,7 @@ init_ui (void)
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-custom-radio")),
 				      druid_data.use_custom_mailer);
 
-	buddy_set_text ("email-default-entry"), _(druid_data.mailer->name);
+	buddy_set_text ("email-default-entry", _(druid_data.mailer->name));
 	buddy_set_text ("email-command-entry", druid_data.custom_mailer.command);
 
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-terminal-toggle")),
@@ -442,7 +444,12 @@ init_ui (void)
 					       mailers);
 		g_list_free (mailers);
 	}
-			    
+
+	w = GET_WIDGET ("druid-next");
+	gtk_widget_set_direction (GTK_BIN (GTK_BIN (w)->child)->child,
+				  gtk_widget_get_direction (w) == GTK_TEXT_DIR_RTL
+				  ? GTK_TEXT_DIR_LTR
+				  : GTK_TEXT_DIR_RTL);
 #if 0
 	/* set the cursor at the beginning of the second line */
 	{

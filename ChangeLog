@@ -1,5 +1,8 @@
 2002-01-14  jacob berkman  <jacob@ximian.com>
 
+	* src/bug-buddy.c (init_ui): reverse the text direction of the
+	forward button.  also make it compile
+
 	* src/united-states-of-bug-buddy.c (druid_set_state): steal some
 	code from the new GnomeDruidPageStandard
 	(on_druid_next_clicked): if "use_gnome_mailer" was set fire off
