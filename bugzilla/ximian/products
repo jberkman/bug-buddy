@@ -16,6 +16,8 @@
     <component initialowner="2" description="Other GAL problems" initialqacontact="3661" value="GAL Miscellaneous" />
     <component initialowner="21" description="Shortcut Bar" initialqacontact="3661" value="Shortcut Bar" />
     <component initialowner="2" description="Gal View menus." initialqacontact="3661" value="GalView" />
+    <component initialowner="2" description="The categories dialog" initialqacontact="3661" value="ECategories" />
+    <component initialowner="2" description="The reflow widget" initialqacontact="3661" value="EReflow" />
     <version value="unspecified" />
     <version value="evolution-1-0-branch" />
     <version value="trunk" />
@@ -28,7 +30,7 @@
     <component initialowner="41" description="Pilot conduits" initialqacontact="3661" value="Conduits" />
     <component initialowner="3" description="misc stuff" initialqacontact="3661" value="Miscellaneous" />
     <component initialowner="41" description="External libraries and programs for evolution" initialqacontact="3661" value="Gnome-pilot &amp; pilot-link" />
-    <component initialowner="16" description="The Evolution Developer's Guide" initialqacontact="3661" value="Developer Documentation" />
+    <component initialowner="3" description="The Evolution Developer's Guide" initialqacontact="3661" value="Developer Documentation" />
     <component initialowner="330" description="The stand-alone task component and the small tasks view in the calendar day view" initialqacontact="3661" value="Tasks" />
     <component initialowner="69" description="The various built-in importing tools" initialqacontact="3661" value="Importers" />
     <component initialowner="69" description="the Evolution summary page" initialqacontact="3661" value="Summary [was My Evolution]" />
@@ -60,6 +62,7 @@
     <version value="1.0.0.99" />
     <version value="1.0.2" />
     <version value="1.1.0.99" />
+    <version value="1.0.1" />
   </product>
   <product votestoconfirm="0" description="GNOME's lightweight engine for the rendering, printing and editing of HTML." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GtkHtml">
     <component initialowner="450" description="The GtkHTML C API." initialqacontact="3661" value="API" />
@@ -82,8 +85,8 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The Ximian Red Carpet package management and updating system." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Red Carpet">
-    <component initialowner="191" description="General Red Carpet issues" initialqacontact="3117" value="Red Carpet" />
-    <component initialowner="191" description="bugs against the installer should go here." initialqacontact="3117" value="Installer" />
+    <component initialowner="191" description="General Red Carpet issues" initialqacontact="4235" value="Red Carpet" />
+    <component initialowner="191" description="bugs against the installer should go here." initialqacontact="4235" value="Installer" />
     <component initialowner="170" description="Problems with the Red Carpet server, including bad XML and missing packages. Please don't file 'it's slow'- we know that already :)" initialqacontact="3545" value="Server" />
     <version value="unspecified" />
     <version value="0.9" />
@@ -102,6 +105,8 @@
     <version value="1.1.92" />
     <version value="1.1.4" />
     <version value="1.2" />
+    <version value="1.2.1" />
+    <version value="1.2.2" />
   </product>
   <product votestoconfirm="0" description="The Ximian Setup Tools simplify workstation system configuration" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Setup Tools">
     <component initialowner="143" description="The network interfaces / DNS settings tool." initialqacontact="1569" value="network" />
@@ -119,6 +124,7 @@
     <component initialowner="149" description="X configuration" initialqacontact="1569" value="display" />
     <component initialowner="150" description="Printer configuration" initialqacontact="1569" value="print" />
     <component initialowner="143" description="Controls sharing the computer's internet connection with other users on a local network." initialqacontact="1569" value="internetsharing" />
+    <component initialowner="149" description="Font tool for XST." initialqacontact="1569" value="Font Tool" />
     <version value="unspecified" />
     <version value="0.7" />
     <version value="0.6" />

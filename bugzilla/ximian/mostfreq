@@ -8,9 +8,17 @@
       </bug>
     </component>
     <component name="Mailer">
+      <bug bugid="16481">
+        <desc>evolution-mail 1.0 crashes retrieving mail</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=16481</url>
+      </bug>
       <bug bugid="16453">
         <desc>Crash: email check?</desc>
         <url>http://bugzilla.ximian.com/show_bug.cgi?id=16453</url>
+      </bug>
+      <bug bugid="9553">
+        <desc>crashed on selecting imap folder [giop_main_next_message_2]</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=9553</url>
       </bug>
     </component>
     <component name="Gnome-pilot &amp; pilot-link">
@@ -27,12 +35,6 @@
     </component>
   </product>
   <product name="Red Carpet">
-    <component name="Red Carpet">
-      <bug bugid="17584">
-        <desc>red-carpet doesn't work if user's home is nfs mounted</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=17584</url>
-      </bug>
-    </component>
     <component name="Installer">
       <bug bugid="15869">
         <desc>Downloading is a serious problem</desc>
