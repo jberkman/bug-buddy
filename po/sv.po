@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-05-14 15:35+0200\n"
+"POT-Creation-Date: 2000-05-19 11:32+0200\n"
 "PO-Revision-Date: 2000-05-08 20:05+02:00\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -223,6 +223,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Din felrapport har sparats i \"%s\""
 
 #: src/bug-buddy.c:682
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -250,7 +251,7 @@ msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
-"Filen \"%s\" existerar redan.\n"
+"Filen \"%s\" finns redan.\n"
 "Vill du skriva över filen?"
 
 #: src/bug-buddy.c:935
@@ -324,7 +325,7 @@ msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
 msgstr ""
-"Kunde inte hitta filen gdb-cmd.\n"
+"Kunde inte hitta gdb-cmd filen.\n"
 "Var vänlig och installera bug-buddy igen."
 
 #: src/gdb-buddy.c:214 src/util.c:75
@@ -353,8 +354,8 @@ msgid ""
 "submitted."
 msgstr ""
 "bud-buddy kommer att hjälpa dig genom processen\n"
-"att skicka en felrapport. Om detta är första gången\n"
-"du använder bug-buddy kommer du bli efterfrågas\n"
+"att skicka en felrapport. Om detta är första gången \n"
+"du använder bug-buddy kommer du efterfrågas\n"
 "din epostadress så att felrapporten kan\n"
 "skickas."
 
@@ -426,7 +427,7 @@ msgid ""
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
 "Var vänlig och kontrollera om ditt programfel redan har skickats,\n"
-"och om det har det, använd \"Lägg till information till en\n"
+"om det har det, använd \"Lägg till information till en\n"
 "existerande rapport\" ovan."
 
 #: src/glade-strings.c:34 src/glade-strings.c:35
@@ -511,7 +512,7 @@ msgstr "Gå automatiskt till den följande sidan när aktuell sida är klar"
 
 #: src/glade-strings.c:56
 msgid "Submitting the Report"
-msgstr "Skicka felrapporten"
+msgstr "Skickar felrapporten"
 
 #: src/glade-strings.c:57
 msgid "To"
