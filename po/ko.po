@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.5\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-04-29 12:58+0900\n"
+"POT-Creation-Date: 2002-05-22 14:28+0900\n"
+"PO-Revision-Date: 2002-05-22 14:29+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org.org>\n"
 "Language-Team: Korean <gnome-kr-translation@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -155,6 +155,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"프록시 설정을 보여주는 데 오류가 발생했습니다:\n"
+"\n"
+"%s.\n"
+"\n"
+"그놈 조종 센터가 올바르게 설치되었는지 확인하십시오."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -236,13 +241,13 @@ msgstr "제품명"
 msgid "Component"
 msgstr "컴포넌트"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 msgid "Description"
 msgstr "설명"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -250,14 +255,15 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "버그버디에서 '%s'을(를) 열 수 없습니다.\n"
-"버그버디가 제대로 설치되었는 지 확인하십시오."
+"버그버디가 제대로 설치되었는지 확인하십시오.\n"
+"\n"
+"버그버디는 지금 종료합니다."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "전부"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -265,8 +271,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"버그버디에서 사용자 인터페이스 파일을 (%s) 읽어 들일 수 없습니다.\n"
-"버그버디가 제대로 설치되었는 지 확인하십시오."
+"버그버디에서 버그를 어디에 제출할 지에 관한 정보를 읽지 못했습니다.\n"
+"\n"
+"버그버디가 제대로 설치되었는 지 확인하십시오.\n"
+"\n"
+"버그버디는 지금 종료합니다."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -700,7 +709,7 @@ msgstr "버그 보고를 지금 보낼까요?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "제출(_S)"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
@@ -791,27 +800,3 @@ msgstr "버그 보고 도구"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "그놈 버그 보고"
-
-#~ msgid "Go"
-#~ msgstr "진행"
-
-#~ msgid "HTTP Proxy Settings"
-#~ msgstr "HTTP 프록시 설정"
-
-#~ msgid "Location"
-#~ msgstr "위치"
-
-#~ msgid "Password"
-#~ msgstr "비밀번호"
-
-#~ msgid "Port"
-#~ msgstr "포트"
-
-#~ msgid "Proxy requires a username and password"
-#~ msgstr "프록시에 사용자 이름과 비밀번호가 필요합니다"
-
-#~ msgid "Use HTTP Proxy"
-#~ msgstr "HTTP 프록시 사용"
-
-#~ msgid "Username"
-#~ msgstr "사용자 이름"
