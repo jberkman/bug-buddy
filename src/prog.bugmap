@@ -127,6 +127,5 @@ gnome-terminal gnome-core
 gnorpm gnorpm
 gedit gedit
 bug-buddy bug-buddy
-gnome-crash bug-buddy
-rp3 rp3
 rp3-config rp3
+gnomeicu
