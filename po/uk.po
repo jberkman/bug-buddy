@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-02-21 07:47+0200\n"
+"POT-Creation-Date: 2001-02-23 08:21+0200\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -430,7 +430,8 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy може в╕д╕слати у вашому зв╕т╕ про помилку налагоджувальну ╕нформац╕ю.\n"
+"Bug Buddy може в╕д╕слати у вашому зв╕т╕ про помилку налагоджувальну "
+"╕нформац╕ю.\n"
 "Коректн╕ параметри мають бути вибран╕ для вас автоматично.\n"
 "Для додатково╖ ╕нформац╕╖ натисн╕ть кнопку \"Дов╕дка\"."
 
@@ -508,7 +509,8 @@ msgstr "звантажити"
 
 #: src/glade-strings.c:42
 msgid "Please select the product for the bug you wish to report."
-msgstr "Будь ласка, вибер╕ть програму, про помилку в як╕й ви хочете пов╕домити."
+msgstr ""
+"Будь ласка, вибер╕ть програму, про помилку в як╕й ви хочете пов╕домити."
 
 #: src/glade-strings.c:43 src/united-states-of-bug-buddy.c:45
 msgid "Product"
@@ -549,8 +551,7 @@ msgstr "компонент"
 #: src/glade-strings.c:53
 msgid ""
 "Please wait while Bug Buddy determines some information about your system."
-msgstr ""
-"Будь ласка, закечайте поки збира╓ться ╕нформац╕я про вашу систему..."
+msgstr "Будь ласка, закечайте поки збира╓ться ╕нформац╕я про вашу систему..."
 
 #: src/glade-strings.c:54
 msgid "Package"
@@ -598,7 +599,7 @@ msgstr "╕нформац╕я про е-пошту"
 
 #: src/glade-strings.c:66
 msgid "Assbarn Phenomenon"
-msgstr ""
+msgstr "Assbarn Phenomenon"
 
 #: src/glade-strings.c:67
 msgid "Submit another bug"
