@@ -8,6 +8,7 @@ bin_PROGRAMS = bug-buddy
 bug_buddy_SOURCES = \
 	bug-buddy.c	\
 	gdb-buddy.c	\
+	gdb-buddy.h	\
 	packages.c
 
 bug_buddy_LDADD = \
@@ -32,8 +33,8 @@ utils_DATA = bug-buddy.desktop
 
 EXTRA_DIST = \
 	glade-strings.c	\
-	bug-buddy.desktop
-
+	$(buddy_DATA)	\
+	$(utils_DATA)
 
 
 

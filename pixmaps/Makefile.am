@@ -6,3 +6,8 @@ pixmap_DATA = \
 icondir = $(datadir)/pixmaps
 icon_DATA = \
 	bug-buddy.png
+
+
+EXTRA_DIST = \
+	$(icon_DATA)	\
+	$(pixmap_DATA)
