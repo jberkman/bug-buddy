@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2001-06-20 17:13+0200\n"
+"POT-Creation-Date: 2001-06-21 15:27-0400\n"
 "PO-Revision-Date: 2001-06-20 17:13+02:00\n"
 "Last-Translator: Ole Laursen <olau@hardworking.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
@@ -141,11 +141,11 @@ msgstr ""
 "Kunne ikke indlæse '%s'.\n"
 "Tjek venligst om Fejl-Frede er korrekt installeret."
 
-#: src/bugzilla.c:470
+#: src/bugzilla.c:476
 msgid "Are you sure you want to cancel this update?"
 msgstr "Er du sikker på at du vil annullere denne opdatering?"
 
-#: src/bugzilla.c:576
+#: src/bugzilla.c:592
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -154,11 +154,11 @@ msgstr ""
 "Kunne ikke åbne '%s'.\n"
 "Tjek venligst om Fejl-Frede er korrekt installeret."
 
-#: src/bugzilla.c:587
+#: src/bugzilla.c:603
 msgid "All"
 msgstr "Alt"
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:627
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"

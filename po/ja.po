@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20010213\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
+"POT-Creation-Date: 2001-06-21 15:27-0400\n"
 "PO-Revision-Date: 2001-02-13 22:19-0500\n"
 "Last-Translator: Akira TAGOH <tagoh@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
@@ -139,11 +139,11 @@ msgstr ""
 "'%s' を読み込むことが出来ませんでした\n"
 "Bug Buddy が正しくインストールされているか確認してください"
 
-#: src/bugzilla.c:470
+#: src/bugzilla.c:476
 msgid "Are you sure you want to cancel this update?"
 msgstr "本当にこの更新をキャンセルしたいですか?"
 
-#: src/bugzilla.c:576
+#: src/bugzilla.c:592
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -152,11 +152,11 @@ msgstr ""
 "'%s' を開くことが出来ませんでした\n"
 "Bug Buddy が正しくインストールされているか確認してください"
 
-#: src/bugzilla.c:587
+#: src/bugzilla.c:603
 msgid "All"
 msgstr "すべて"
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:627
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"

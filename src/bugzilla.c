@@ -23,6 +23,8 @@
 #include <config.h>
 
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <utime.h>
 #include <errno.h>
 
 #include <gnome.h>
@@ -71,9 +73,9 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 	char *s;
 
 	for (node = doc->root->childs; node; node = node->next) {
-		if (!strcmp (node->name, "severities")) {
+		if (!strcmp (node->name, bts->severity_node)) {
 			for (cur = node->childs; cur; cur = cur->next) {
-				if (strcmp (cur->name, "severity"))
+				if (strcmp (cur->name, bts->severity_item))
 					continue;
 				s = xmlNodeGetContent (cur);
 				bts->severities = g_slist_append (bts->severities,
@@ -423,6 +425,10 @@ load_bugzilla (const char *filename)
 		gdk_pixbuf_unref (pb2);
 	}
 
+	bts->severity_node   = gnome_config_get_string ("severity_node=severities");
+	bts->severity_item   = gnome_config_get_string ("severity_item=severity");
+	bts->severity_header = gnome_config_get_string ("severity_header=Severity");
+
 	bts->products_xml = get_xml_file (bts, "products", load_products_xml);
 	bts->config_xml   = get_xml_file (bts, "config",   load_config_xml);
 
@@ -562,6 +568,16 @@ load_bugzilla_xml (void)
 	bugzilla_bts_add_products_to_clist (druid_data.all_products);	
 }
 
+static void
+p_string (GnomeVFSURI *uri, gpointer data)
+{
+	char *s;
+	
+	s = gnome_vfs_uri_to_string (uri, GNOME_VFS_URI_HIDE_NONE);
+	g_print ("\t%s\n", s);
+	g_free (s);
+}
+
 void
 load_bugzillas (void)
 {
@@ -613,6 +629,11 @@ load_bugzillas (void)
 			  "Should Bug Buddy try to update these files now?"), NULL, NULL);
 
 		gnome_dialog_set_default (GNOME_DIALOG (w), GNOME_YES);
+
+		d(g_print ("downloading:\n"));
+		d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));
+		d(g_print ("to:\n"));
+		d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
 
 		if (!gnome_dialog_run_and_close (GNOME_DIALOG (w)))
 			if (GNOME_VFS_OK == gnome_vfs_async_xfer (	    
@@ -794,7 +815,7 @@ generate_email_text (void)
 			"Subject: %s\n"
 			"\n"
 			"Package: %s\n"
-			"Severity: %s\n"
+			"%s: %s\n"
 			"Version: %s\n"
 			"Synopsis: %s\n"
 			"Bugzilla-Product: %s\n"
@@ -805,6 +826,7 @@ generate_email_text (void)
 			"\n",
 			subject,
 			product,
+			druid_data.product->bts->severity_header,
 			severity,
 			version,
 			subject,

@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
+"POT-Creation-Date: 2001-06-21 15:27-0400\n"
 "PO-Revision-Date: 2001-03-26 19:15:45+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -168,12 +168,12 @@ msgstr ""
 "Αδύνατη η φόρτωση του '%s'.\n"
 "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
-#: src/bugzilla.c:470
+#: src/bugzilla.c:476
 msgid "Are you sure you want to cancel this update?"
 msgstr "Είστε σίγουρος ότι θέλετε να ακυρώσετε αυτήν την ανανέωση;"
 
 #
-#: src/bugzilla.c:576
+#: src/bugzilla.c:592
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -182,11 +182,11 @@ msgstr ""
 "Αδύνατο το άνοιγμα του '%s'.\n"
 "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
-#: src/bugzilla.c:587
+#: src/bugzilla.c:603
 msgid "All"
 msgstr "Όλα"
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:627
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"

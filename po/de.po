@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.5\n"
-"POT-Creation-Date: 2001-06-19 20:20+0200\n"
+"POT-Creation-Date: 2001-06-21 15:27-0400\n"
 "PO-Revision-Date: 2001-06-19 20:30+0200\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -150,11 +150,11 @@ msgstr ""
 "Bitte überprüfen Sie, ob Bug Buddy richtig\n"
 "installiert wurde."
 
-#: src/bugzilla.c:470
+#: src/bugzilla.c:476
 msgid "Are you sure you want to cancel this update?"
 msgstr "Wollen Sie die Aktualisierung wirklich abbrechen?"
 
-#: src/bugzilla.c:576
+#: src/bugzilla.c:592
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -165,11 +165,11 @@ msgstr ""
 "Bitte überprüfen Sie, ob Bug Buddy richtig\n"
 "installiert wurde."
 
-#: src/bugzilla.c:587
+#: src/bugzilla.c:603
 msgid "All"
 msgstr "Alle"
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:627
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"

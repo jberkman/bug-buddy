@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
+"POT-Creation-Date: 2001-06-21 15:27-0400\n"
 "PO-Revision-Date: 2000-02-23 18:50+0000\n"
 "Last-Translator: Robert Brady <rwb197@zepler.org>\n"
 "Language-Team: \n"
@@ -132,11 +132,11 @@ msgstr ""
 "Could not open '%s'.\n"
 "Please make sure bug-mate was installed correctly."
 
-#: src/bugzilla.c:470
+#: src/bugzilla.c:476
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:576
+#: src/bugzilla.c:592
 #, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -145,11 +145,11 @@ msgstr ""
 "Could not open '%s'.\n"
 "Please make sure bug-mate was installed correctly."
 
-#: src/bugzilla.c:587
+#: src/bugzilla.c:603
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:611
+#: src/bugzilla.c:627
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"

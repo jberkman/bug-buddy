@@ -62,6 +62,10 @@ struct _BugzillaBTS {
 
 	GdkPixmap *pixmap;
 	GdkBitmap *mask;
+
+	char *severity_node;
+	char *severity_item;
+	char *severity_header;
 	
 	/* products.xml */
 	GSList    *products;

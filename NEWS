@@ -1,3 +1,14 @@
+2.0.6:
+
+  * Fixes:
+
+	- translation updates
+
+  * Improvements:
+
+	- allows bugzillas to use different parts of the config.xml
+	  for "severity"
+
 2.0.5:
 
   * Fixes:

@@ -1,3 +1,14 @@
+2001-06-21  jacob berkman  <jacob@ximian.com>
+
+	* NEWS: 
+	* configure.in: 2.0.6
+
+	* src/bugzilla.c (load_config_xml): use the configured xml node
+	names
+	(load_bugzilla): load the name of the severity nodes and header
+	from the config file
+	(generate_email_text): use the configured severity header
+
 2001-06-19  jacob berkman  <jacob@ximian.com>
 
 	* NEWS:
