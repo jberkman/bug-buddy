@@ -1,3 +1,14 @@
+2001-10-23  jacob berkman  <jacob@ximian.com>
+
+	* configure.in (GETTEXT_PACKAGE): we don't have to be parallel installable
+
+	* src/bugzilla.c (load_config_xml):
+	(load_products_xml): fix libxml 2 port
+
+	* src/bug-buddy.c (init_canvi): use a PangoFontDescription rather
+	than a fontset
+	(main): glade file is .glade2 now
+
 2001-10-20  jacob berkman  <jacob@ximian.com>
 
 	* */*: initial gnome 2 port

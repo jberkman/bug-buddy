@@ -293,7 +293,7 @@ append_packages ()
 void
 update_selected_row (GtkWidget *w, gpointer data)
 {
-	static char *s;
+	const char *s;
 	gint row;
 
 	if (druid_data.selected_row == -1)
@@ -370,6 +370,7 @@ init_canvi (void)
 	GdkPixbuf *pb;
 	GnomeCanvasItem *root;
 	GnomeCanvas *canvas;
+	PangoFontDescription *pfd;
 
 	canvas = GNOME_CANVAS (GET_WIDGET ("title-canvas"));
 	root = GNOME_CANVAS_ITEM (gnome_canvas_root (GNOME_CANVAS (canvas)));
@@ -380,15 +381,15 @@ init_canvi (void)
 				       "fill_color", "black",
 				       "outline_color", "black", NULL);
 
+	pfd = pango_font_description_from_string ("Helvetica Bold 18");
 	druid_data.banner =
 		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
 				       gnome_canvas_text_get_type (),
 				       "fill_color", "white",
-				       "font", "-adobe-helvetica-bold-r-normal-*-18-*-*-*-p-*-iso8859-1",
-				       "fontset", "-adobe-helvetica-bold-r-normal-*-18-*-*-*-p-*-iso8859-1,*-r-*",
+				       "font_desc", pfd,
 				       "anchor", GTK_ANCHOR_WEST,
-				       NULL);	
-
+				       NULL);
+	pango_font_description_free (pfd);
 
 	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-core.png", NULL);
 	druid_data.logo =
@@ -573,9 +574,9 @@ main (int argc, char *argv[])
 	gnome_vfs_init ();
 	glade_gnome_init ();
 
-	s = "bug-buddy.glade";
+	s = "bug-buddy.glade2";
 	if (!g_file_exists (s))
-		s = BUDDY_DATADIR "/bug-buddy.glade";
+		s = BUDDY_DATADIR "/bug-buddy.glade2";
 
 	druid_data.xml = glade_xml_new (s, NULL, GETTEXT_PACKAGE);
 

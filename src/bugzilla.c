@@ -73,9 +73,13 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 	xmlNode *node, *cur;
 	char *s;
 
-	for (node = doc->children; node; node = node->next) {
+	d(g_print ("config:\n"));
+
+	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
+		d(g_print ("\t%s\n", node->name));
 		if (!strcmp (node->name, bts->severity_node)) {
 			for (cur = node->children; cur; cur = cur->next) {
+				d(g_print ("\t\t%s\n", cur->name));
 				if (strcmp (cur->name, bts->severity_item))
 					continue;
 				s = xmlNodeGetContent (cur);
@@ -85,6 +89,7 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 			}
 		} else if (!strcmp (node->name, "opsys_list")) {
 			for (cur = node->children; cur; cur = cur->next) {
+				d(g_print ("\t\t%s\n", cur->name));
 				if (strcmp (cur->name, "opsys"))
 					continue;
 				s = xmlNodeGetContent (cur);
@@ -106,7 +111,10 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 	xmlNode *node, *cur;
 	char *s;
 
-	for (node = doc->children; node; node = node->next) {
+	d(g_print ("products:\n"));
+
+	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
+		d(g_print ("\t%s\n", node->name));
 		if (!strcmp (node->name, "product")) {
 			prod = g_new0 (BugzillaProduct, 1);
 			prod->bts = bts;
@@ -123,6 +131,7 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 			bugzilla_bts_insert_product (druid_data.all_products, prod);
 
 			for (cur = node->children; cur; cur = cur->next) {
+				d(g_print ("\t\t%s\n", node->name));
 				if (strcmp (cur->name, "component"))
 					continue;
 				
