@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-12 22:08+0100\n"
+"POT-Creation-Date: 2001-03-24 20:19+0100\n"
+"PO-Revision-Date: 2001-03-24 20:20+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -151,10 +151,10 @@ msgstr "Är du säker på att du vill avbryta denna uppdatering?"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Kunde inte öppna \"%s\".\n"
-"Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
+"Var vänlig och försäkra dig om att Bug Buddy installerats korrekt."
 
 #: src/bugzilla.c:549
 msgid "All"
@@ -210,10 +210,10 @@ msgstr ""
 #: src/gdb-buddy.c:272
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Kunde inte hitta filen gdb-cmd.\n"
-"Var vänlig och installera bug-buddy igen."
+"Försök att installera om Bug Buddy."
 
 #: src/gdb-buddy.c:281 src/util.c:75
 msgid "Error on fork()."
@@ -507,7 +507,7 @@ msgstr "Var vänlig och ange en giltig e-postadress."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -607,6 +607,13 @@ msgstr "Kunde inte köra \"%s\"."
 msgid "Error on read..."
 msgstr "Fel vid läsning..."
 
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Kunde inte öppna \"%s\".\n"
+#~ "Var vänlig och försäkra dig om att bug-buddy installerats korrekt."
+
 #~ msgid "Distribution"
 #~ msgstr "Distribution"
 
@@ -687,13 +694,6 @@ msgstr "Fel vid läsning..."
 
 #~ msgid "Refresh"
 #~ msgstr "Uppdatera"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Kunde inte öppna \"%s\".\n"
-#~ "Var vänlig och försäkra dig om att Bug Buddy installerats korrekt."
 
 #~ msgid "Finish"
 #~ msgstr "Slutför"
