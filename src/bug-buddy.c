@@ -59,10 +59,10 @@ const gchar *severity[] = {
 	NULL };
 
 const gchar *bug_class[][2] = {
-	{ N_("software bug"),     "sw-bug" },
-	{ N_("documentaion bug"), "doc-bug" },
-	{ N_("change request"),   "change-request" },
-	{ N_("support"),          "support" },
+	{ N_("software bug"),      "sw-bug" },
+	{ N_("documentation bug"), "doc-bug" },
+	{ N_("change request"),    "change-request" },
+	{ N_("support"),           "support" },
 	{ NULL, NULL } };
 
 struct {
