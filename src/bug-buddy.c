@@ -320,7 +320,7 @@ init_ui (void)
 
 	load_config ();
 
-	//gtk_widget_set_default_direction (GTK_TEXT_DIR_RTL);
+	/* gtk_widget_set_default_direction (GTK_TEXT_DIR_RTL); */
 
 	w = GET_WIDGET ("druid-notebook");
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (w), FALSE);
