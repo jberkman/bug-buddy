@@ -38,6 +38,10 @@ gboolean on_complete_page_finish (GtkWidget *, GtkWidget *);
 gboolean on_system_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_gnome_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_contact_page_next (GtkWidget *, GtkWidget *);
+void on_version_list_select_row (GtkCList *list, gint row, gint col,
+				 GdkEventButton *event, gpointer udata);
+void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
+void on_version_apply_clicked (GtkButton *button, gpointer udata);
 
 extern const char *packages[];
 
@@ -78,17 +82,28 @@ struct {
 	gchar *core_file;
 } popt_data;
 
+typedef struct {
+	const gchar *label;
+	const gchar *cmds[COMMAND_SIZE];	
+	gint row;
+} ListData;
+
 struct {
 	GtkWidget *nature;
 	GtkWidget *attach;
 	GtkWidget *core;
 	GtkWidget *less;
 	GtkWidget *misc;
-	
+
 	GtkWidget *gdb_less;
 	GtkWidget *app_file;
 	GtkWidget *pid;
 	GtkWidget *core_file;
+
+	GtkWidget *version_edit;
+	GtkWidget *version_label;
+	GtkWidget *version_list;
+	ListData *selected_data;
 
 	gchar *mail_cmd;
 	CrashType crash_type;
@@ -98,36 +113,20 @@ struct {
 	GladeXML *xml;
 } druid_data;
 
-typedef struct {
-	const gchar *xml_key;
-	const gchar *mail_header;
-	const gchar *cmds[COMMAND_SIZE];
-	GtkWidget *widget;
-} EntryData;
-
-static EntryData sys_data[] = {
-	{ "os_entry",      "Operating System: %s\n", { "uname -a" } },
-	{ "distro_entry",  "Distribution: %s\n",
+static ListData list_data[] = {
+	{ "Operating System", { "uname -a" } },
+	{ "Distribution",  
 	  { "( [ -f /etc/debian_version ] && cat /etc/debian_version) ||"
 	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) ||"
 	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
 	    "echo \"\"" } },
-	{ "libc_entry",    "libc: %s\n", { "rpm -q glibc",  "rpm -q libc" } },
-	{ "cc_entry", "C compiler: %s\n\n", { "gcc --version", "cc -V" } },
-	{ NULL }
-};
-
-static EntryData gnome_data[] = {
-	{ "glib_entry", "glib: %s\n", 
-	  { "glib-config --version", "rpm -q glib" } },
-	{ "gtk_entry",     "gtk+: %s\n",
-	  { "gtk-config --version", "rpm -q gtk+" } },
-	{ "orbit_entry",   "ORBit: %s\n",
-	  { "orbit-config --version", "rpm -q ORBit" } },
-	{ "libs_entry",    "gnome-libs: %s\n",
-	  { "gnome-config --version", "rpm -q gnome-libs" } },
-	{ "core_entry",    "gnome-core: %s\n",
-	  { "gnome-config --modversion applets", "rpm -q gnome-core" } },
+	{ "C library", { "rpm -q glibc",  "rpm -q libc" } },
+	{ "C Compiler", { "gcc --version", "cc -V" } },
+	{ "glib", { "glib-config --version", "rpm -q glib" } },
+	{ "GTK+", { "gtk-config --version", "rpm -q gtk+" } },
+	{ "ORBit", { "orbit-config --version", "rpm -q ORBit" } },
+	{ "gnome-libs", { "gnome-config --version", "rpm -q gnome-libs" } },
+	{ "gnome-core", { "gnome-config --modversion applets", "rpm -q gnome-core" } },
 	{ NULL }
 };
 
@@ -142,15 +141,6 @@ static const struct poptOption options[] = {
 	{ "pid",         0, POPT_ARG_STRING, &popt_data.pid,         0, N_("PID of crashed app"),      N_("PID")},
 	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("core file from app"),      N_("FILE")},
 	{NULL } };
-
-static gchar *
-get_text_from_entry (EntryData *entry)
-{
-	g_return_val_if_fail (entry, NULL);
-	if (!entry->widget)
-		entry->widget = glade_xml_get_widget (druid_data.xml, entry->xml_key);
-	return gtk_entry_get_text (GTK_ENTRY (entry->widget));
-}
 
 static gboolean
 update_crash_type (GtkWidget *w, gpointer data)
@@ -312,7 +302,7 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 	return FALSE;
 
  contact_failed:
-	w = gnome_error_dialog ("Please enter your name and email address");
+	gnome_error_dialog ("Please enter your name and email address");
 	return TRUE;
 }
 
@@ -322,8 +312,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	GtkWidget *w;
 	gchar *s, *s2, *s3;
 	FILE *fp = stdout;
-	EntryData *entry;
-	int i;
+	ListData *data;	
 
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
@@ -374,19 +363,17 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	fprintf (fp, "Version: %s\n\n", s);
 
-	for (entry = sys_data; entry->xml_key; entry++) {	
-		if (!entry->mail_header)
-			continue;
-		s = get_text_from_entry (entry);
-		fprintf (fp, entry->mail_header, s);
+	for (data  = list_data; data->label; data++) {
+		gtk_clist_get_text (GTK_CLIST (druid_data.version_list),
+				    data->row, 1, &s);
+		if (s && strlen (s))
+			fprintf (fp, "%s: %s\n", data->label, s);
 	}
 
-	for (entry = gnome_data; entry->xml_key; entry++) {	
-		if (!entry->mail_header)
-			continue;
-		s = get_text_from_entry (entry);
-		fprintf (fp, entry->mail_header, s);
-	}
+	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
+	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+	fprintf (fp, "\nHow to repeat:\n\n%s\n", s);
+	g_free (s);
 
 	w = glade_xml_get_widget (druid_data.xml, "extra_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
@@ -411,12 +398,44 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	return FALSE;
 }
 
+void
+on_version_list_select_row (GtkCList *list, gint row, gint col,
+			    GdkEventButton *event, gpointer udata)
+{	
+	gchar *s;
+	druid_data.selected_data = gtk_clist_get_row_data (list, row);
+	gtk_clist_get_text (list, row, 1, &s);
+	gtk_entry_set_text (GTK_ENTRY (druid_data.version_edit), s);
+	gtk_clist_get_text (list, row, 0, &s);
+	gtk_label_set_text (GTK_LABEL (druid_data.version_label), s);
+}
+
+static void
+update_selected_row ()
+{
+	gchar *s;
+	gint row = druid_data.selected_data->row;
+	s = gtk_entry_get_text (GTK_ENTRY (druid_data.version_edit));
+	gtk_clist_set_text (GTK_CLIST (druid_data.version_list), row, 1, s);}
+
+void
+on_version_edit_activate (GtkEditable *editable, gpointer user_data)
+{
+	update_selected_row ();
+}
+
+void
+on_version_apply_clicked (GtkButton *button, gpointer udata)
+{
+	update_selected_row ();
+}
+
+
 static gchar *
 get_data_from_command (const gchar *cmd)
 {
 	static gchar buf[1024];
 	FILE *fp;
-	gint len;
 
 	/*g_message (_("about to run `%s`"), cmd);*/
 	
@@ -437,46 +456,6 @@ get_data_from_command (const gchar *cmd)
 	return g_strchomp (buf);	
 }
 
-
-static gboolean
-init_page (EntryData *entry)
-{
-	gchar *s;
-	int i, j;	
-	
-	g_return_val_if_fail (entry, FALSE);
-
-	for (; entry->xml_key; entry++) {
-		s = NULL;
-		if (!entry->widget)
-			entry->widget = glade_xml_get_widget (druid_data.xml, 
-							      entry->xml_key);
-		for (j=0; entry->cmds[j] && !s; j++)
-			s = get_data_from_command (entry->cmds[j]);
-		if (s && entry->widget)
-			gtk_entry_set_text (GTK_ENTRY (entry->widget), s);
-	}
-	return TRUE;
-}
-
-gboolean
-on_system_page_prepare (GtkWidget *page, GtkWidget *druid)
-{
-	static gboolean done = FALSE;
-	if (!done)
-		done = init_page (sys_data);
-	return FALSE;
-}
-
-gboolean
-on_gnome_page_prepare (GtkWidget *page, GtkWidget *druid)
-{
-	static gboolean done = FALSE;
-	if (!done)
-		done = init_page (gnome_data);
-	return FALSE;
-}
-
 static gboolean
 set_severity (GtkWidget *w, gpointer data)
 {
@@ -488,6 +467,8 @@ static void
 init_ui (GladeXML *xml)
 {
 	GtkWidget *w, *m;
+	ListData *data;
+	gchar *row[3] = { NULL };
 	gchar *s;
 	int i;
 
@@ -546,6 +527,24 @@ init_ui (GladeXML *xml)
 	w = glade_xml_get_widget (xml, "email_entry2");
 	gnome_entry_load_history (GNOME_ENTRY (w));
 
+	/* system config page */
+	druid_data.version_edit = glade_xml_get_widget (xml, "version_edit");
+	druid_data.version_label = glade_xml_get_widget (xml, "version_label");
+	druid_data.version_list = w =
+		glade_xml_get_widget (xml, "version_list");
+	for (data = list_data; data->label; data++) {
+		for (i = 0; data->cmds[i] && !row[1]; i++)
+			row[1] = get_data_from_command (data->cmds[i]);
+		if (!row[1]) {
+			data->row = -1;
+			continue;
+		}
+		row[0] = data->label;
+		data->row = gtk_clist_append (GTK_CLIST (w), row);
+		gtk_clist_set_row_data (GTK_CLIST (w), data->row, data);
+		row[1] = NULL;
+	}
+
 	/* dialog crash page */
 	w = glade_xml_get_widget (xml, "app_file");
 	s = getenv ("GNOME_CRASHED_APPNAME");
@@ -563,8 +562,7 @@ init_ui (GladeXML *xml)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 	druid_data.pid = w;
 
-
-        /* core crash page */
+	/* core crash page */
 	w = glade_xml_get_widget (xml, "core_file");
 	if (popt_data.core_file)
 		gtk_entry_set_text (GTK_ENTRY (w), popt_data.core_file);
@@ -585,7 +583,6 @@ main (int argc, char *argv[])
 {
 	gchar *xml_path;
 
-	memset (&popt_data, 0, sizeof (popt_data));
 	memset (&druid_data, 0, sizeof (druid_data));
 
 	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, options, 0, NULL);

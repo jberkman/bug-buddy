@@ -11,19 +11,10 @@ gchar *s = N_("Enter your name and email address,\n"
               "request more information from you.");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
-gchar *s = N_("Please check that this\n"
-              "information is correct");
-gchar *s = N_("Operating System");
-gchar *s = N_("Distribution");
-gchar *s = N_("libc version");
-gchar *s = N_("Compiler");
-gchar *s = N_("Please check that this\n"
-              "information is correct.");
-gchar *s = N_("glib");
-gchar *s = N_("gtk+");
-gchar *s = N_("ORBit");
-gchar *s = N_("gnome-libs");
-gchar *s = N_("gnome-core");
+gchar *s = N_("Please verify that this information is correct");
+gchar *s = N_("Package");
+gchar *s = N_("Version installed");
+gchar *s = N_("something");
 gchar *s = N_("Enter the information about the\n"
               "bug you are reporting");
 gchar *s = N_("Package");
@@ -42,9 +33,8 @@ gchar *s = N_("Process ID");
 gchar *s = N_("Enter the filename of the core dump");
 gchar *s = N_("This is the debugging information\n"
               "bug-buddy has obtained:");
-gchar *s = N_("Please enter any extra information about\n"
-              "the bug, such as how to reproduce it,\n"
-              "patches, or suggested fixes.");
+gchar *s = N_("How to repeat the bug:");
+gchar *s = N_("Extra information (patches, special configuration, etc)");
 gchar *s = N_("Choose the action you wish to take");
 gchar *s = N_("Submit bug report");
 gchar *s = N_("Send report to your email address *only*");

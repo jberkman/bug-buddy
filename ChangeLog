@@ -1,3 +1,9 @@
+1999-10-27  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.glade:
+	* src/bug-buddy.c: change to using a clist instead of lots
+	of gtk_entry's.  This gets rid of a druid page, and is nicer.
+
 1999-10-26  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/gdb-buddy.c (get_trace_from_pair): try batch mode
