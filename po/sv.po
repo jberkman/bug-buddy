@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-05-12 23:50+0200\n"
+"POT-Creation-Date: 2000-05-14 15:35+0200\n"
 "PO-Revision-Date: 2000-05-08 20:05+02:00\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -225,10 +225,12 @@ msgstr "Din felrapport har sparats i \"%s\""
 #: src/bug-buddy.c:682
 msgid ""
 "Your bug report has been submitted to:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 msgstr ""
 "Din felrapport har skickats till:\n"
-"\t<%s>"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
