@@ -302,7 +302,7 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 	return FALSE;
 
  contact_failed:
-	gnome_error_dialog ("Please enter your name and email address");
+	gnome_error_dialog (_("Please enter your name and email address"));
 	return TRUE;
 }
 
