@@ -1,5 +1,6 @@
 2000-03-29  Karl EICHWALDER  <ke@suse.de>
 
+	* src/bug-buddy.c (init_ui): Delete spurious white space.
 	* src/bug-buddy.c (on_contact_page_next): Typo.
 
 2000-03-27  Christopher R. Gabriel  <cgabriel@firenze.linux.it>

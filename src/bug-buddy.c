@@ -875,7 +875,7 @@ init_ui ()
 	if (!s) {
 		s = getenv ("GNOME_CRASHED_PID");
 		if (s)
-			g_warning (_("$GNOME_CRASHED_PID is deprecated.\n "
+			g_warning (_("$GNOME_CRASHED_PID is deprecated.\n"
 				     "Please use the --pid command line"
 				     "argument instead."));
 	}
