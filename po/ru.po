@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-05-13 15:01+00:00\n"
+"POT-Creation-Date: 2000-05-23 22:45+0000\n"
+"PO-Revision-Date: 2000-05-23 22:50+00:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -143,6 +143,10 @@ msgid ""
 "\n"
 "Do you want to continue anyway?"
 msgstr ""
+"Гораздо полезнее, если вы укажете\n"
+"более конкретный пакет чем 'general'.\n"
+"\n"
+"Вы хотите продолжать?"
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
@@ -261,19 +265,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "О программе"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Справка"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Стоп"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Обновить"
 
 #: src/bug-buddy.c:949
 #, c-format
@@ -565,6 +569,3 @@ msgstr "Не удалось запустить '%s'."
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "Ошибка при чтении..."
-
-#~ msgid "Child process exited with status %d"
-#~ msgstr "Дочерний процесс завершился с состоянием %d"
