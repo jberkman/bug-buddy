@@ -2,12 +2,16 @@
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Fatih Demir <kabalak@gmx.net>, 2000.
 # 
+# Hehe, basliga herseyi eklenmez; bunu buraya cektim.
+#
+# "Translator: Görkem Cetin <gorkem@gelecek.com.tr>\n"
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.90\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-02-19 00:02+0100\n"
-"Last-Translator: Ozgur Dogan GUNES <ozgurdogan@programmer.net>\n"
+"Project-Id-Version: bug-buddy 2.0\n"
+"POT-Creation-Date: 2001-03-18 11:40+0100\n"
+"PO-Revision-Date: 2001-03-21 13:15+0200\n"
+"Last-Translator: Kemal YILMAZ <kyilmaz@uekae.tubitak.gov.tr>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-9\n"
@@ -27,12 +31,10 @@ msgid "Save report to file"
 msgstr "Raporu dosyaya kaydet"
 
 #: src/bug-buddy.c:60
-#, fuzzy
 msgid "crashed application"
-msgstr "Çöken uygulamanýn çalýþtýrýlan dosyasýný seç"
+msgstr "çöken uygulama"
 
 #: src/bug-buddy.c:61
-#, fuzzy
 msgid "core file"
 msgstr "Core dosyasý"
 
@@ -50,7 +52,7 @@ msgstr "Bu rapora daha fazla bilgi ekle"
 
 #: src/bug-buddy.c:77
 msgid "Name of contact"
-msgstr "Ýsim"
+msgstr "Ýsmi"
 
 #: src/bug-buddy.c:77
 msgid "NAME"
@@ -133,7 +135,7 @@ msgstr ""
 "Lütfen yerine --pid parametresini kullanýn."
 
 #: src/bug-buddy.c:575
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -170,9 +172,9 @@ msgstr ""
 "Gerekli dosyalarý güncellensin mi?"
 
 #: src/gdb-buddy.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "yýðýt izi alýnýyor... (%d)"
+msgstr "Yýðýn izi alýnýyor... (%d)"
 
 #: src/gdb-buddy.c:153
 #, c-format
@@ -189,7 +191,7 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"'%s''yi hangi biner uygulamanýn yaptýðýný\n"
+"'%s''yi hangi binary uygulamanýn yaptýðýný\n"
 "bilmiyorum ."
 
 #: src/gdb-buddy.c:215
@@ -202,7 +204,7 @@ msgid ""
 "Debugging information will not be obtained."
 msgstr ""
 "GDM sisteminizde bulunamadi.\n"
-"Hatayi ayiklama için gerekli bilgiler toplanamadý."
+"Hatayý ayýklama için gerekli bilgiler toplanamadý."
 
 #: src/gdb-buddy.c:272
 msgid ""
@@ -222,7 +224,6 @@ msgstr "fork()'ta hata oldu."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-#, fuzzy
 msgid "Bug Buddy"
 msgstr "Bug Buddy"
 
@@ -245,14 +246,12 @@ msgstr ""
 "."
 
 #: src/glade-strings.c:15
-#, fuzzy
 msgid "Skip this step in the future"
-msgstr "Bu adýmý atla"
+msgstr "Gelecekte bu adýmý atla"
 
 #: src/glade-strings.c:16
-#, fuzzy
 msgid "Name"
-msgstr "Adýnýz"
+msgstr "Ýsim"
 
 #: src/glade-strings.c:17
 msgid "Sendmail"
@@ -260,11 +259,11 @@ msgstr "Sendmail"
 
 #: src/glade-strings.c:18
 msgid "Email"
-msgstr "ePosta"
+msgstr "Eposta"
 
 #: src/glade-strings.c:19
 msgid "intro"
-msgstr "Giris"
+msgstr "giriþ"
 
 #: src/glade-strings.c:20
 msgid ""
@@ -290,9 +289,8 @@ msgid "Stop"
 msgstr "Dur"
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid "Binary file"
-msgstr "Ýkili"
+msgstr "Binary dosya"
 
 #: src/glade-strings.c:27
 msgid "Process ID"
@@ -305,7 +303,7 @@ msgstr "Core dosyasý"
 #: src/glade-strings.c:29
 #, fuzzy
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Tamamlanýnca ileri git"
+msgstr "Hatalarý ayýklama bitince otomatik olarak sonraki adýma git"
 
 #: src/glade-strings.c:30
 msgid "gdb"
@@ -344,9 +342,8 @@ msgid "Saving:"
 msgstr "Kaydetme:"
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "To:"
-msgstr "Kime"
+msgstr "Kime:"
 
 #: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
@@ -354,7 +351,7 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:41
 msgid "download"
-msgstr "Yükle(indir)"
+msgstr "yükle(indir)"
 
 #: src/glade-strings.c:42
 msgid "Please select the product for the bug you wish to report."
@@ -369,9 +366,8 @@ msgid "Description"
 msgstr "Anlatým"
 
 #: src/glade-strings.c:45
-#, fuzzy
 msgid "Bug tracking system"
-msgstr "Hata Takip istemi"
+msgstr "Hata Takip sistemi"
 
 #: src/glade-strings.c:46
 msgid "product"
@@ -382,7 +378,6 @@ msgid "Please choose a component, version, and severity level."
 msgstr "Lütfen bir içerik, sürüm ve önem kademesini seçiniz."
 
 #: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:47
-#, fuzzy
 msgid "Component"
 msgstr "Ýçerik"
 
@@ -395,17 +390,14 @@ msgid "Severity"
 msgstr "Önem"
 
 #: src/glade-strings.c:52
-#, fuzzy
 msgid "component"
 msgstr "Ýçerik"
 
 #: src/glade-strings.c:53
-#, fuzzy
 msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
-"Hata ayýklama bilgileri toplanýrken\n"
-"lütfen bekleyiniz..."
+"Bug Buddy sisteminiz hakkýnda bazý bilgileri toplarken lütfen bekleyiniz."
 
 #: src/glade-strings.c:54
 msgid "Package"
@@ -420,18 +412,16 @@ msgid "Automatically go to next page when complete"
 msgstr "Tamamlanýnca ileri git"
 
 #: src/glade-strings.c:58
-#, fuzzy
 msgid "system"
 msgstr "Sistem"
 
 #: src/glade-strings.c:59
-#, fuzzy
 msgid "Select an action"
-msgstr "Bir core dosyasý seçin"
+msgstr "Bir etki seçin"
 
 #: src/glade-strings.c:60
 msgid "Cc"
-msgstr "Cc:(baþka kime)"
+msgstr "Cc"
 
 #: src/glade-strings.c:61
 msgid "To"
@@ -455,7 +445,7 @@ msgstr "ePosta bilgisi"
 
 #: src/glade-strings.c:66
 msgid "Assbarn Phenomenon"
-msgstr "**** Olay"
+msgstr "***** Olay"
 
 #: src/glade-strings.c:67
 msgid "Submit another bug"
@@ -463,14 +453,13 @@ msgstr "Baþka bir hata gönder"
 
 #: src/glade-strings.c:68
 msgid "finished"
-msgstr "Tamamlandý"
+msgstr "tamamlandý"
 
 #: src/glade-strings.c:69
 msgid "About"
 msgstr "Hakkýnda"
 
 #: src/united-states-of-bug-buddy.c:42
-#, fuzzy
 msgid "Welcome to Bug Buddy"
 msgstr "Bug Buddy 'ye hoþgeldiniz"
 
@@ -479,9 +468,8 @@ msgid "Debugging Information"
 msgstr "Hata Ayýklama Bilgileri"
 
 #: src/united-states-of-bug-buddy.c:44
-#, fuzzy
 msgid "Bug Description"
-msgstr "Anlatým"
+msgstr "Hata Anlatým"
 
 #: src/united-states-of-bug-buddy.c:45
 msgid "Updating Product Listing"
@@ -504,7 +492,6 @@ msgid "The graphical bug reporting tool for GNOME."
 msgstr "GNOME için grafiksel hata raporlama programý."
 
 #: src/united-states-of-bug-buddy.c:96
-#, fuzzy
 msgid "The lame Bug Buddy web page"
 msgstr "Bug Buddy web sayfasý"
 
@@ -517,7 +504,7 @@ msgid "Please enter a valid email address."
 msgstr "Lütfen geçerli bir e-posta adresi verin."
 
 #: src/united-states-of-bug-buddy.c:286
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "`%s' doesn't seem to exist.\n"
 "\n"
@@ -546,18 +533,12 @@ msgid "'%s' does not look like a text file."
 msgstr "%s bir metin dosyasý gibi görünmüyor"
 
 #: src/united-states-of-bug-buddy.c:356
-#, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
-msgstr ""
-"Hata raporunda bir konu ve bir taným\n"
-"bulunmak zorundadýr"
+msgstr "Hata raporunda bir konu satýrý bulunmak zorundadýr"
 
 #: src/united-states-of-bug-buddy.c:364
-#, fuzzy
 msgid "You must include a comprehensible description in your bug report."
-msgstr ""
-"Hata raporunda bir konu ve bir taným\n"
-"bulunmak zorundadýr"
+msgstr "Hata raporunda bir taným bulunmak zorundadýr"
 
 #: src/united-states-of-bug-buddy.c:388
 #, c-format
@@ -591,19 +572,16 @@ msgstr ""
 "           <%s>"
 
 #: src/united-states-of-bug-buddy.c:479
-#, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "Hata raporunuz için bir ürün seçilmelidir"
 
 #: src/united-states-of-bug-buddy.c:488
-#, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "Hata raporunuz için bir içerik seçilmelidir"
 
 #: src/united-states-of-bug-buddy.c:496
-#, fuzzy
 msgid "You must specify a version for your bug report."
-msgstr "Hara raporunuz için bir sürün seçilmelidir."
+msgstr "Hara raporunuz için bir sürüm seçilmelidir."
 
 #: src/united-states-of-bug-buddy.c:525
 msgid ""
@@ -701,7 +679,6 @@ msgstr "Okurken hata oldu..."
 #~ msgid "Refresh"
 #~ msgstr "Tazele"
 
-#, fuzzy
 #~ msgid ""
 #~ "Could not open '%s'.\n"
 #~ "Please make sure Bug Buddy was installed correctly."
