@@ -1,3 +1,10 @@
+2002-09-30  jacob berkman  <jacob@ximian.com>
+
+	* src/bugzilla.c (load_applets): 
+	(visit_cb):
+	(visit_cb):
+	(load_applications): port from GnomeIconLoader to GnomeIconTheme
+
 2002-09-06  jacob berkman  <jacob@ximan.com>
 
 	* src/bug-buddy.[ch]:

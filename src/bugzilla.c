@@ -920,7 +920,7 @@ get_i18n_slist (void)
 }
 
 static void
-load_applets (GnomeIconLoader *gil)
+load_applets (GnomeIconTheme *git)
 {
 	Bonobo_ServerInfoList *info_list;
 	Bonobo_ServerInfo *info;
@@ -967,7 +967,7 @@ visit_cb (const char *rel_path,
 	GnomeDesktopItem *ditem;
 	GError *error = NULL;
 	char *full_path, *icon;
-	GnomeIconLoader *gil = data;
+	GnomeIconTheme *git = data;
 
 	full_path = g_strconcat (ALL_APPLICATIONS_URI, rel_path, NULL);
 
@@ -982,7 +982,7 @@ visit_cb (const char *rel_path,
 	if (gnome_desktop_item_get_entry_type (ditem) != GNOME_DESKTOP_ITEM_TYPE_APPLICATION)
 		goto visit_cb_out;
 
-	icon = gnome_desktop_item_get_icon (ditem, gil);
+	icon = gnome_desktop_item_get_icon (ditem, git);
 	bugzilla_application_new (
 		gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_NAME),
 		gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_COMMENT),
@@ -1008,23 +1008,23 @@ visit_cb (const char *rel_path,
 void
 load_applications (void)
 {
-	GnomeIconLoader *gil;
+	GnomeIconTheme *git;
 
 	druid_data.program_to_application = g_hash_table_new (g_str_hash, g_str_equal);
 
-	gil = gnome_icon_loader_new ();
-	gnome_icon_loader_set_allow_svg (gil, FALSE);
+	git = gnome_icon_theme_new ();
+	gnome_icon_theme_set_allow_svg (git, FALSE);
 	
 	/* load applications */
 	gnome_vfs_directory_visit (ALL_APPLICATIONS_URI,
 				   GNOME_VFS_FILE_INFO_FOLLOW_LINKS,
 				   GNOME_VFS_DIRECTORY_VISIT_LOOPCHECK,
-				   visit_cb, gil);
+				   visit_cb, git);
 
 
-	load_applets (gil);
+	load_applets (git);
 
-	g_object_unref (gil);
+	g_object_unref (git);
 }
 
 static void
