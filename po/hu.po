@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
-"PO-Revision-Date: 2001-06-12 18:17+0200\n"
+"POT-Creation-Date: 2001-06-20 08:38+0200\n"
+"PO-Revision-Date: 2001-06-20 08:44+0200\n"
 "Last-Translator: András Tímár <timar@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
 "MIME-Version: 1.0\n"
@@ -560,7 +560,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "A hibabejelentés ide lett mentve: '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -570,7 +570,9 @@ msgid ""
 msgstr ""
 "A hibabejelentés ide lett elküldve:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Köszönjük!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
