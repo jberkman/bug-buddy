@@ -70,6 +70,7 @@ typedef struct {
 	CrashType crash_type;
 	SubmitType submit_type;
 	int severity;
+	int bug_class;
 
 	GladeXML *xml;
 } DruidData;
@@ -80,6 +81,7 @@ void get_trace_from_core (const gchar *core_file);
 void get_trace_from_pair (const gchar *app, const gchar *extra);
 
 #endif /* __bug_buddy_h__ */
+
 
 
 

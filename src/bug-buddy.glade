@@ -491,7 +491,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	<widget>
 	  <class>GtkTable</class>
 	  <name>table5</name>
-	  <rows>5</rows>
+	  <rows>6</rows>
 	  <columns>2</columns>
 	  <homogeneous>False</homogeneous>
 	  <row_spacing>5</row_spacing>
@@ -516,8 +516,8 @@ of the problem</label>
 	    <child>
 	      <left_attach>0</left_attach>
 	      <right_attach>1</right_attach>
-	      <top_attach>4</top_attach>
-	      <bottom_attach>5</bottom_attach>
+	      <top_attach>5</top_attach>
+	      <bottom_attach>6</bottom_attach>
 	      <xpad>0</xpad>
 	      <ypad>0</ypad>
 	      <xexpand>False</xexpand>
@@ -540,8 +540,8 @@ of the problem</label>
 	    <child>
 	      <left_attach>1</left_attach>
 	      <right_attach>2</right_attach>
-	      <top_attach>4</top_attach>
-	      <bottom_attach>5</bottom_attach>
+	      <top_attach>5</top_attach>
+	      <bottom_attach>6</bottom_attach>
 	      <xpad>0</xpad>
 	      <ypad>0</ypad>
 	      <xexpand>True</xexpand>
@@ -714,10 +714,58 @@ bug you are reporting</label>
 	  </widget>
 
 	  <widget>
+	    <class>GtkLabel</class>
+	    <name>label48</name>
+	    <label>Bug class</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	    <child>
+	      <left_attach>0</left_attach>
+	      <right_attach>1</right_attach>
+	      <top_attach>4</top_attach>
+	      <bottom_attach>5</bottom_attach>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	      <xexpand>False</xexpand>
+	      <yexpand>False</yexpand>
+	      <xshrink>False</xshrink>
+	      <yshrink>False</yshrink>
+	      <xfill>False</xfill>
+	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>GtkOptionMenu</class>
+	    <name>class_option</name>
+	    <can_focus>True</can_focus>
+	    <items></items>
+	    <initial_choice>0</initial_choice>
+	    <child>
+	      <left_attach>1</left_attach>
+	      <right_attach>2</right_attach>
+	      <top_attach>4</top_attach>
+	      <bottom_attach>5</bottom_attach>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	      <xexpand>False</xexpand>
+	      <yexpand>False</yexpand>
+	      <xshrink>False</xshrink>
+	      <yshrink>False</yshrink>
+	      <xfill>True</xfill>
+	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+
+	  <widget>
 	    <class>GtkHBox</class>
-	    <name>hbox1</name>
+	    <name>hbox5</name>
 	    <homogeneous>False</homogeneous>
-	    <spacing>5</spacing>
+	    <spacing>0</spacing>
 	    <child>
 	      <left_attach>1</left_attach>
 	      <right_attach>2</right_attach>
@@ -747,11 +795,11 @@ bug you are reporting</label>
 	    </widget>
 
 	    <widget>
-	      <class>GtkButton</class>
-	      <name>help_button</name>
-	      <visible>False</visible>
+	      <class>GnomeHRef</class>
+	      <name>href1</name>
 	      <can_focus>True</can_focus>
-	      <stock_button>GNOME_STOCK_BUTTON_HELP</stock_button>
+	      <url>http://bugs.gnome.org/Developer.html#severities</url>
+	      <label>(descriptions)</label>
 	      <child>
 		<padding>0</padding>
 		<expand>False</expand>
@@ -1245,7 +1293,7 @@ the application that crashed.</label>
 	<widget>
 	  <class>GtkLabel</class>
 	  <name>label36</name>
-	  <label>How to repeat the bug:</label>
+	  <label>Full description of the bug:</label>
 	  <justify>GTK_JUSTIFY_CENTER</justify>
 	  <wrap>False</wrap>
 	  <xalign>0.5</xalign>
@@ -1274,7 +1322,7 @@ the application that crashed.</label>
 
 	  <widget>
 	    <class>GtkText</class>
-	    <name>repeat_area</name>
+	    <name>desc_area</name>
 	    <can_focus>True</can_focus>
 	    <editable>True</editable>
 	    <text></text>
@@ -1284,7 +1332,7 @@ the application that crashed.</label>
 	<widget>
 	  <class>GtkLabel</class>
 	  <name>label46</name>
-	  <label>Extra information (patches, special configuration, etc)</label>
+	  <label>How to repeat the bug:</label>
 	  <justify>GTK_JUSTIFY_CENTER</justify>
 	  <wrap>False</wrap>
 	  <xalign>0.5</xalign>
@@ -1313,7 +1361,7 @@ the application that crashed.</label>
 
 	  <widget>
 	    <class>GtkText</class>
-	    <name>extra_area</name>
+	    <name>repeat_area</name>
 	    <can_focus>True</can_focus>
 	    <editable>True</editable>
 	    <text></text>

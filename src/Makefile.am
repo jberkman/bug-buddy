@@ -1,7 +1,12 @@
+buddydir = $(datadir)/bug-buddy
+
 INCLUDES = \
 	-I$(top_srcdir)/intl -I$(top_builddir)/intl	\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-I$(includedir) $(LIBGLADE_CFLAGS)
+	-I$(includedir) $(LIBGLADE_CFLAGS)		\
+	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
+        -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"
+
 
 bin_PROGRAMS = bug-buddy
 
@@ -25,7 +30,7 @@ gnome_crash_LDADD = \
 
 # taken from gnumeric/Makefile.am
 bug-buddy.keys: bug-buddy.keys.in Makefile
-	sed -e 's^\@icondir\@^$(appicondir)^g' < $(srcdir)/bug-buddy.keys.in > bug-buddy.keys.tmp \
+	sed -e 's^\@iconsdir\@^$(datadir)/pixmaps^g' < $(srcdir)/bug-buddy.keys.in > bug-buddy.keys.tmp \
 	&& mv bug-buddy.keys.tmp bug-buddy.keys 
 
 mimedir = $(datadir)/mime-info
@@ -33,7 +38,6 @@ mime_DATA = \
 	bug-buddy.keys	\
 	bug-buddy.mime
 
-buddydir = $(datadir)/bug-buddy
 buddy_DATA = \
 	bug-buddy.glade	\
 	gdb-cmd

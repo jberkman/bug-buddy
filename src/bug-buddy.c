@@ -50,11 +50,19 @@ GtkWidget * make_anim (gchar *widget_name, gchar *string1,
 
 extern const char *packages[];
 
-const gchar *severity[] = { N_("normal"),
-			    N_("critical"),
-			    N_("grave"),
-			    N_("wishlist"),
-			    NULL };
+const gchar *severity[] = { 
+	N_("critical"),
+	N_("grave"),
+	N_("normal"),
+	N_("wishlist"),
+	NULL };
+
+const gchar *bug_class[][2] = {
+	{ N_("software bug"), "sw-bug" },
+	{ N_("documentaion bug"), "doc-bug" },
+	{ N_("change request"), "change-request" },
+	{ N_("support"), "support" },
+	{ NULL, NULL } };
 
 struct {
 	/* contact page */
@@ -425,10 +433,11 @@ gboolean
 on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 {
 	GtkWidget *w;
-	gchar *s, *s2, *s3;
+	gchar *s, *s2, *s3, *subject;
 	FILE *fp = stdout;
 	ListData *data;	
-
+	int status;
+	
 	s2 = SUBMIT_ADDRESS;
 
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
@@ -480,20 +489,23 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	fprintf (fp, "From: %s <%s>\n", s2, s);
 
 	w = glade_xml_get_widget (druid_data.xml, "desc_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
+	subject = s = gtk_entry_get_text (GTK_ENTRY (w));
 	fprintf (fp, "Subject: %s\nX-Mailer: %s %s\n", s, PACKAGE, VERSION);
 
 	w = glade_xml_get_widget (druid_data.xml, "package_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	if (!strlen(s))
 		s = "general";
-	fprintf (fp, "\nPackage: %s\n", s);
-
-	fprintf (fp, "Severity: %s\n", severity[druid_data.severity]);
+	fprintf (fp, 
+		 "\nPackage: %s\n"
+		 "Severity: %s\n", s, severity[druid_data.severity]);
 
 	w = glade_xml_get_widget (druid_data.xml, "version_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
-	fprintf (fp, "Version: %s\n\n", s);
+	fprintf (fp, 
+		 "Version: %s\n\n"
+		 ">Synopsis: %s\n"
+		 ">Class: %s\n", bug_class[druid_data.bug_class][1], s);
 
 	for (data  = list_data; data->label; data++) {
 		s = NULL;
@@ -503,25 +515,26 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 			fprintf (fp, "%s: %s\n", data->label, s);
 	}
 
-	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
+	w = glade_xml_get_widget (druid_data.xml, "desc_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	if (s)
-		fprintf (fp, "\nHow to repeat:\n\n%s\n", s);
+	if (s && strlen (s))
+		fprintf (fp, "\n>Description:\n%s\n", s);
 	g_free (s);
 
-	w = glade_xml_get_widget (druid_data.xml, "extra_area");
+	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	if (s)
-		fprintf (fp, "\nExtra information:\n\n%s\n", s);
+	if (s && strlen(s))
+		fprintf (fp, "\n>How-To-Repeat:\n%s\n", s);
 	g_free (s);
 
 	w = glade_xml_get_widget (druid_data.xml, "gdb_text");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	if (s)
-		fprintf (fp, "\nDebugging information:\n\n%s\n", s);
+	if (s && strlen(s))
+		fprintf (fp, "\nDebugging information:\n%s\n", s);
 	g_free (s);
 
-	fclose (fp);
+	status = pclose (fp);
+	g_message ("Subprocess exited with status %d\n", status);
 	save_config ();
 	gtk_main_quit ();
 
@@ -626,6 +639,13 @@ set_severity (GtkWidget *w, gpointer data)
 	return FALSE;
 }
 
+static gboolean
+set_bug_class (GtkWidget *w, gpointer data)
+{
+	druid_data.bug_class = GPOINTER_TO_INT (data);
+	return FALSE;
+}
+
 GtkWidget *
 make_anim (gchar *widget_name, gchar *string1, 
 	   gchar *string2, gint int1, gint int2)
@@ -634,10 +654,9 @@ make_anim (gchar *widget_name, gchar *string1,
 	druid_data.gdb_anim = gnome_animator_new_with_size (48, 48);
 	gnome_animator_set_loop_type (GNOME_ANIMATOR (druid_data.gdb_anim),
 				      GNOME_ANIMATOR_LOOP_RESTART);
-	pixmap = gnome_datadir_file ("bug-buddy/bug-anim.png");
+	pixmap = BUDDY_DATADIR "/bug-anim.png";
 	gnome_animator_append_frames_from_file (GNOME_ANIMATOR (druid_data.gdb_anim),
 						pixmap, 0, 0, 250, 48);
-	g_free (pixmap);
 	return druid_data.gdb_anim;
 }
 
@@ -673,13 +692,32 @@ init_ui (GladeXML *xml)
 	}
 	w = glade_xml_get_widget (xml, "severity_option");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
+	gtk_option_menu_set_history (GTK_OPTION_MENU (w), 2);
+	druid_data.severity = 2;
+
+	m = gtk_menu_new ();
+	for (i = 0; bug_class[i][0]; i++) {
+		w = gtk_menu_item_new_with_label (_(bug_class[i][0]));
+		gtk_signal_connect (GTK_OBJECT (w), "activate",
+				    GTK_SIGNAL_FUNC (set_bug_class),
+				    GINT_TO_POINTER (i));
+		gtk_widget_show (w);
+		gtk_menu_append (GTK_MENU (m), w);
+	}
+	w = glade_xml_get_widget (xml, "class_option");
+	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
 
 	/* dialog crash page */
 	w = glade_xml_get_widget (xml, "app_file");
 	if (popt_data.app_file)
 		s = popt_data.app_file;
-	else
+	else {
 		s = getenv ("GNOME_CRASHED_APPNAME");
+		if (s)
+			g_warning ("$GNOME_CRASHED_APPNAME is deprectated,"
+				   "Please use the --appname command line"
+				   "argument instead.\n");
+	}
 
 	if (s) {
 		gtk_entry_set_text (GTK_ENTRY (w), s);
@@ -690,8 +728,13 @@ init_ui (GladeXML *xml)
 	w = glade_xml_get_widget (xml, "crashed_pid");
 	if (popt_data.pid)
 		s = popt_data.pid;
-	else
+	else {
 		s = getenv ("GNOME_CRASHED_PID");
+		if (s)
+			g_warning ("$GNOME_CRASHED_PID is deprectated,"
+				   "Please use the --pid command line"
+				   "argument instead.\n");
+	}
 
 	if (s) {
 		gtk_entry_set_text (GTK_ENTRY (w), s);
@@ -770,10 +813,6 @@ init_ui (GladeXML *xml)
 	for (data = list_data; data->label; data++) {
 		for (i = 0; data->cmds[i] && !row[1]; i++)
 			row[1] = get_data_from_command (data->cmds[i]);
-		if (!row[1]) {
-			data->row = -1;
-			continue;
-		}
 		row[0] = _(data->label);
 		data->row = gtk_clist_append (GTK_CLIST (w), row);
 		gtk_clist_set_row_data (GTK_CLIST (w), data->row, data);
@@ -818,10 +857,13 @@ main (int argc, char *argv[])
 	}
 
 
-	xml_path = gnome_datadir_file ("bug-buddy/bug-buddy.glade");
+	xml_path = BUDDY_DATADIR "/bug-buddy.glade";
 	if (!xml_path) {
-		GtkWidget *d = gnome_error_dialog (_("Could not find bug-buddy.glade file.\n"
-						     "Please make sure bug-buddy was installed correctly."));
+		GtkWidget *d;
+		gchar *s = g_strdup_printf (_("Could not find our glade file '%s'\n"
+					      "Please make sure bug-buddy was "
+					      "installed correctly."), xml_path);
+		d = gnome_error_dialog (s);
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return 0;
 	}
@@ -835,7 +877,6 @@ main (int argc, char *argv[])
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return 0;
 	}
-	g_free (xml_path);
 
 	init_ui (druid_data.xml);
 

@@ -1,3 +1,21 @@
+1999-11-10  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* configure.in: bump to 0.3
+
+	* src/bug-buddy.glade:
+	* src/bug-buddy.[ch]: stuff to look more like gnome-bug
+	
+	* src/bug-buddy.c (init_ui): if no data was obtained, display
+	a blank thing anyway (so people can type it in)
+	(main): better warning and stuff
+	(on_complete_page_finish): 
+
+	* src/Makefile.am:
+	* src/gdb-buddy.c (get_trace_from_pair): 
+	* src/bug-buddy.c (make_anim): 
+	(main): define the prefix, so we can locate our data
+	This will be unnecessary with gnome-libs 2
+
 1999-11-08  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* docs/multiple_bts.txt: email excerpt talking about

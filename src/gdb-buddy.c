@@ -30,6 +30,7 @@ get_trace_from_core (const gchar *core_file)
 	gchar *gdb_cmd;
 	gchar buf[1024];
 	gchar *binary = NULL;
+	int status;
 	FILE *f;
 
 	gdb_cmd = g_strdup_printf ("gdb --batch --core=%s", core_file);
@@ -61,7 +62,8 @@ get_trace_from_core (const gchar *core_file)
 		}
 	}
 
-	fclose(f);
+	status = pclose(f);
+	g_message (_("Child process exited with status %d\n"), status);
 	if (!binary) {
 		gchar *s = g_strdup_printf (_("Unable to determine which binary created\n"
 					      "'%s'"), core_file);
@@ -84,7 +86,8 @@ handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 	FILE *fp = data;
 
 	if (feof (fp) || !fgets (buf, 1024, fp)) {
-		fclose (fp);
+		int retval = pclose (fp);
+		g_message (_("subprocess exited with status %d\n"), retval);
 		gdk_input_remove (input);
 		gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 						   TRUE, TRUE, TRUE);
@@ -110,7 +113,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	if (!app || !extra || !app[0] || !extra[0])
 		return;
 
-	cmd_file = gnome_datadir_file ("bug-buddy/gdb-cmd");
+	cmd_file = BUDDY_DATADIR "/gdb-cmd";
 	if (!cmd_file) {
 	        GtkWidget *d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
 						     "Please try reinstalling bug-buddy."));
@@ -120,8 +123,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	cmd_buf = g_strdup_printf ("gdb --batch --quiet --command=%s %s %s",
 				   cmd_file, app, extra);
-	g_free (cmd_file);
-	
+
 	g_message ("about to run: %s", cmd_buf);
 	fp = popen (cmd_buf, "r");
 	g_free (cmd_buf);
