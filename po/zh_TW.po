@@ -1,8 +1,8 @@
-# traditional chinese translation of bug-buddy
+# traditional Chinese translation of bug-buddy.
 # Copyright (C) 2000-2002 Free Software Foundation, Inc.
 #
 # Gnome 1.x
-# Jing-Jong SHYUE <shyue@sonoma.com.tw>, 2000
+# Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000
 # Joe Man <trmetal@yahoo.com.hk>, 2001
 #
 # Gnome 2.x
@@ -10,11 +10,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.1.4\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-04-26 17:46+0800\n"
+"Project-Id-Version: bug-buddy 2.1.6\n"
+"POT-Creation-Date: 2002-06-13 17:46+0800\n"
+"PO-Revision-Date: 2002-06-13 17:53+0800\n"
 "Last-Translator: Joe Man <trmetal@yahoo.com.hk>\n"
-"Language-Team: Traditonal Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: traditonal Chinese <zh-l10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,11 +25,11 @@ msgstr "傳送錯誤報告"
 
 #: src/bug-buddy.c:56
 msgid "Only send report to yourself"
-msgstr "只把報告傳送給自己"
+msgstr "只將報告傳送給自己"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
-msgstr "將報告存成檔案"
+msgstr "將報告存入檔案"
 
 #: src/bug-buddy.c:62
 msgid "crashed application"
@@ -45,11 +45,11 @@ msgstr "無"
 
 #: src/bug-buddy.c:69
 msgid "Create a new bug report"
-msgstr "建立一個新的錯誤報告"
+msgstr "建立新的錯誤報告"
 
 #: src/bug-buddy.c:70
 msgid "Add more information to existing report"
-msgstr "在現有錯誤報告中增加更多資訊"
+msgstr "在現有的錯誤報告中加入資訊"
 
 #: src/bug-buddy.c:79
 msgid "Name of contact"
@@ -110,15 +110,15 @@ msgstr "附加於錯誤報告內的文字檔"
 #: src/bug-buddy.c:96
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr "無法找到具有名稱 %s 的元件 (在 %s 中)"
+msgstr "無法找到具有名稱 %s 的視窗元件 (在 %s 中)"
 
 #: src/bug-buddy.c:208
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
-"gdb 尚未完成取得除錯資料的程序。\n"
-"是否確定結束 gdb (堆疊追蹤資料將會是不完整的)?"
+"gdb 尚未完全取得偵錯資訊。\n"
+"是否確定結束 gdb (堆疊追蹤資料將會不完整)？"
 
 #: src/bug-buddy.c:219 src/gdb-buddy.c:125
 msgid "gdb has already exited"
@@ -126,7 +126,7 @@ msgstr "gdb 程式已經結束"
 
 #: src/bug-buddy.c:286
 msgid "Save Backtrace"
-msgstr ""
+msgstr "儲存堆疊追蹤資料"
 
 #: src/bug-buddy.c:305
 #, c-format
@@ -137,6 +137,10 @@ msgid ""
 "\n"
 "Please choose another file and try again."
 msgstr ""
+"嘗試儲存檔案 %s 時發生錯誤：\n"
+"\n"
+"%s\n"
+"請選取另一個檔案名稱並再嘗試。"
 
 #: src/bug-buddy.c:402
 msgid "_Start Mailer"
@@ -155,30 +159,35 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"顯示代理伺服程式設定時出現錯誤：\n"
+"\n"
+"%s.\n"
+"\n"
+"請確定已正確安裝 GNOME 控制中心。"
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
-msgstr "隱藏除錯選項"
+msgstr "隱藏偵錯選項"
 
 #: src/bug-buddy.c:492
 msgid "Show Debugging Options"
-msgstr "顯示除錯選項"
+msgstr "顯示偵錯選項"
 
 #: src/bug-buddy.c:556
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME 已減少使用。\n"
-"請使用 --appname 這個指令列參數替代。"
+"$GNOME_CRASHED_APPNAME 已過時。\n"
+"請使用 --appname 指令列參數代替。"
 
 #: src/bug-buddy.c:566
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID 已減少使用。\n"
-"請使用 --pid 這個指令列參數替代。"
+"$GNOME_CRASHED_PID 已過時。\n"
+"請使用 --pid 指令列參數代替。"
 
 #: src/bug-buddy.c:582
 msgid ""
@@ -207,8 +216,8 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"請稍候片刻，正在讀取程式的錯誤資料。Bug Buddy 會使用這些資料建立更有用的錯誤"
-"報告。"
+"請稍候片刻，正在從程式中讀取偵錯資訊。Bug Buddy 會使用這些資料建立較有用的錯"
+"誤報告。"
 
 #: src/bug-buddy.c:727
 #, c-format
@@ -224,125 +233,21 @@ msgstr ""
 "Bug Buddy 無法載入用者介面檔案 (%s)。\n"
 "請確定 Bug Buddy 已正確安裝。"
 
-#: src/bugzilla.c:616
-msgid "ID"
-msgstr "ID"
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "錯誤匯報工具"
 
-#: src/bugzilla.c:630 src/bugzilla.c:665
-msgid "Product"
-msgstr "產品"
-
-#: src/bugzilla.c:636 src/bugzilla.c:705
-msgid "Component"
-msgstr "元件"
-
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
-msgid "Description"
-msgstr "描述"
-
-#: src/bugzilla.c:774
-#, fuzzy, c-format
-msgid ""
-"Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy 無法開啟 '%s'。\n"
-"請確定 Bug Buddy 已正確安裝。"
-
-#: src/bugzilla.c:793
-msgid "All"
-msgstr "全部"
-
-#: src/bugzilla.c:822
-#, fuzzy
-msgid ""
-"Bug Buddy could not find any information on where to submit bugs.\n"
-"\n"
-"Please make sure Bug Buddy was installed correctly.\n"
-"\n"
-"Bug Buddy will now quit."
-msgstr ""
-"Bug Buddy 無法載入用者介面檔案 (%s)。\n"
-"請確定 Bug Buddy 已正確安裝。"
-
-#: src/config.c:75
-msgid "Evolution"
-msgstr "Evolution"
-
-#: src/cell-renderer-uri.c:145
-msgid "URI"
-msgstr "URI"
-
-#: src/cell-renderer-uri.c:146
-msgid "URI to show when clicked."
-msgstr "當按下滑鼠鍵時會顯示的 URI。"
-
-#: src/cell-renderer-uri.c:153
-msgid "Visited"
-msgstr "已瀏覽"
-
-#: src/cell-renderer-uri.c:154
-msgid "If the URI has been visited before."
-msgstr "若這個 URI 早前已瀏覽。"
-
-#: src/gdb-buddy.c:82
-#, c-format
-msgid "Obtaining stack trace... (%d)"
-msgstr "正在取回堆疊追蹤資料... (%d)"
-
-#: src/gdb-buddy.c:165
-#, c-format
-msgid ""
-"Unable to process core file with gdb:\n"
-"'%s'"
-msgstr ""
-"無法以 gdb 處理 core 檔：\n"
-"'%s'"
-
-#: src/gdb-buddy.c:196
-#, c-format
-msgid ""
-"GDB was unable to determine which binary created\n"
-"'%s'"
-msgstr ""
-"GDB 無法決定哪一個二元碼檔產生了\n"
-"'%s'"
-
-#: src/gdb-buddy.c:228
-msgid "Error on read... aborting"
-msgstr "讀取錯誤... 中止"
-
-#: src/gdb-buddy.c:274
-msgid ""
-"GDB could not be found on your system.\n"
-"Debugging information will not be obtained."
-msgstr ""
-"找不到 GDB 程式。\n"
-"無法取得除錯資訊。"
-
-#: src/gdb-buddy.c:308
-msgid ""
-"Could not find the gdb-cmd file.\n"
-"Please try reinstalling Bug Buddy."
-msgstr ""
-"無法找到 gdb-cmd 檔。\n"
-"請嘗試重新安裝 Bug Buddy。"
-
-#: src/gdb-buddy.c:328
-msgid "There was an error running gdb."
-msgstr "啟動 gdb 時發生錯誤。"
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "在 GNOME 內匯報錯誤"
 
 #: src/bug-buddy.glade.h:1
 msgid "*"
 msgstr "*"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -366,9 +271,9 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy 能夠連同您的錯誤報告將除錯資訊送出。\n"
-"正確的選項應該會自動為您選定。\n"
-"要取得更多資訊，請按以下的 \"說明\" 按鈕。"
+"Bug Buddy 能夠將除錯資訊連同錯誤報告一起送出。\n"
+"正確的選項應該已經自動選定了。\n"
+"要取得更多資訊，請按以下的「說明」按鈕。"
 
 #: src/bug-buddy.glade.h:10
 msgid ""
@@ -379,7 +284,7 @@ msgid ""
 msgstr ""
 "Bug Buddy 會使用電郵傳送錯誤報告。\n"
 "請選擇傳送電郵的方式。\n"
-"若您選取預設的 GNOME 電郵程式，\n"
+"若選取預設的 GNOME 電郵程式，\n"
 "其它 GNOME 程式亦會使用這些設定。"
 
 #: src/bug-buddy.glade.h:14
@@ -404,11 +309,16 @@ msgstr "自訂電郵傳送程式"
 
 #: src/bug-buddy.glade.h:19
 msgid "Debug"
-msgstr "除錯"
+msgstr "偵錯"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "描述"
 
 #: src/bug-buddy.glade.h:21
 msgid "Download Progress"
-msgstr "下載進行"
+msgstr "下載進度"
 
 #: src/bug-buddy.glade.h:22
 msgid "Email"
@@ -424,7 +334,7 @@ msgstr "附加文字檔"
 
 #: src/bug-buddy.glade.h:25
 msgid "Just save to a file so I can submit a bug report manually"
-msgstr "只需要將資料儲存到檔案，我會自己安排傳送錯誤報告。"
+msgstr "只需要將資料儲存到檔案，使用者會自己安排傳送錯誤報告。"
 
 #: src/bug-buddy.glade.h:26
 msgid "Name"
@@ -436,7 +346,7 @@ msgstr "sendmail 的位置"
 
 #: src/bug-buddy.glade.h:28
 msgid "Please choose a component, version, and severity level."
-msgstr "請選擇一個元件，版本，以及嚴重程度。"
+msgstr "請選擇軟件、版本以及嚴重程度。"
 
 #: src/bug-buddy.glade.h:29
 msgid "Please make any final corrections to the bug report."
@@ -457,7 +367,7 @@ msgid ""
 "If the bug is already reported, please do not report it again."
 msgstr ""
 "請用少許時間檢查這個錯誤是否已出現在「常見錯誤」清單中。\n"
-"若在清單中已有這個錯誤，請不必再匯報。"
+"若在清單中已有這個錯誤報告，就不必再匯報。"
 
 #: src/bug-buddy.glade.h:34
 msgid ""
@@ -501,7 +411,7 @@ msgstr "嚴重性"
 
 #: src/bug-buddy.glade.h:44
 msgid "Show _Debugging Details"
-msgstr "顯示除錯資訊(_D)"
+msgstr "顯示偵錯詳細資訊(_D)"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
@@ -517,7 +427,7 @@ msgstr "開始"
 
 #: src/bug-buddy.glade.h:48
 msgid "Start in terminal"
-msgstr "在終端機內開始"
+msgstr "在終端機內執行"
 
 #: src/bug-buddy.glade.h:49
 msgid "Stop"
@@ -565,7 +475,7 @@ msgstr "版本"
 
 #: src/bug-buddy.glade.h:60
 msgid "component"
-msgstr "元件"
+msgstr "軟件"
 
 #: src/bug-buddy.glade.h:61
 msgid "desc"
@@ -603,6 +513,114 @@ msgstr "產品"
 msgid "sendmail"
 msgstr "sendmail"
 
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "產品"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "軟件"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy 無法開啟‘%s’。\n"
+"請確定 Bug Buddy 已正確安裝。"
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "全部"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy 無法決定錯誤報告將要傳送的目的地。\n"
+"\n"
+"請確定 Bug Buddy 已正確安裝。\n"
+"\n"
+"Bug Buddy 會立即離開。"
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "當按下滑鼠鍵時會顯示的 URI。"
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "已瀏覽"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "若這個 URI 早前已瀏覽。"
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr "正在擷取堆疊追蹤資料... (%d)"
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"無法以 gdb 處理 core 檔：\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"GDB 無法決定哪一個二元碼檔產生了\n"
+"‘%s’"
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "讀取時發生錯誤... 中止"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"找不到 GDB 程式。\n"
+"無法擷取偵錯資訊。"
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"無法找到 gdb-cmd 檔。\n"
+"請嘗試重新安裝 Bug Buddy。"
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "執行 gdb 時發生錯誤。"
+
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "歡迎使用 Bug Buddy"
@@ -613,7 +631,7 @@ msgstr "選取產品"
 
 #: src/united-states-of-bug-buddy.c:51
 msgid "Select a Component"
-msgstr "選取元件"
+msgstr "選取軟件"
 
 #: src/united-states-of-bug-buddy.c:52
 msgid "Frequently Reported Bugs"
@@ -649,7 +667,7 @@ msgstr "請輸入你的姓名。"
 
 #: src/united-states-of-bug-buddy.c:309
 msgid "Please enter a valid email address."
-msgstr "請輸入電郵地址。"
+msgstr "請輸入有效的電郵地址。"
 
 #: src/united-states-of-bug-buddy.c:325
 #, c-format
@@ -664,7 +682,7 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:357
 msgid "Please enter a valid email command."
-msgstr "請輸入正確的電郵指令。"
+msgstr "請輸入有效的電郵指令。"
 
 #: src/united-states-of-bug-buddy.c:421
 msgid "The specified file does not exist."
@@ -673,7 +691,7 @@ msgstr "指定的檔案不存在。"
 #: src/united-states-of-bug-buddy.c:431
 #, c-format
 msgid "File is of type: %s"
-msgstr "檔案類別： %s"
+msgstr "檔案類別：%s"
 
 #: src/united-states-of-bug-buddy.c:438
 #, c-format
@@ -682,21 +700,21 @@ msgid ""
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
-"‘%s’是一個 %s 的檔案。\n"
+"‘%s’是一個 %s 類型的檔案。\n"
 "\n"
 "Bug Buddy 只可以傳送純文字檔案 (text/*)。"
 
 #: src/united-states-of-bug-buddy.c:458
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
-"必須在您的錯誤報告中\n"
-"包含一個可理解的主旨。"
+"錯誤報告中的主旨\n"
+"必須容易理解。"
 
 #: src/united-states-of-bug-buddy.c:474
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
-"必須在您的錯誤報告中\n"
-"包含一個可理解的描述。"
+"錯誤報告中的描述\n"
+"必須容易理解。"
 
 #: src/united-states-of-bug-buddy.c:502
 msgid "Submit this bug report now?"
@@ -704,7 +722,7 @@ msgstr "是否確定立即傳送這份錯誤報告？"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "傳送(_S)"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
@@ -732,7 +750,7 @@ msgstr ""
 #: src/united-states-of-bug-buddy.c:586
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr "您的錯誤報告已儲存為‘%s’"
+msgstr "錯誤報告已儲存為‘%s’"
 
 #: src/united-states-of-bug-buddy.c:589
 #, c-format
@@ -753,25 +771,27 @@ msgstr ""
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
-msgstr "由於 Bug Buddy 不認識您想匯報錯誤的產品，您將會需要自己建立錯誤報告。"
+msgstr ""
+"由於 Bug Buddy 無法辨認準備匯報錯誤的產品，您必須自行指定錯誤報告送出的目的"
+"地。"
 
 #: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
 msgstr ""
-"您必須在錯誤報告中\n"
-"指定一個產品。"
+"必須在錯誤報告中\n"
+"指定一種產品。"
 
 #: src/united-states-of-bug-buddy.c:688
 msgid "You must specify a component for your bug report."
 msgstr ""
-"您必須在錯誤報告中\n"
-"指定一個元件。"
+"必須在錯誤報告中\n"
+"指定一種軟件。"
 
 #: src/united-states-of-bug-buddy.c:702
 msgid "You must specify a version for your bug report."
 msgstr ""
-"您必須在錯誤報告中\n"
-"指定一個版本編號。"
+"必須在錯誤報告中\n"
+"指定版本編號。"
 
 #: src/united-states-of-bug-buddy.c:785
 msgid ""
@@ -787,17 +807,7 @@ msgstr ""
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
-msgstr ""
-"是否確定取消\n"
-"匯報錯誤？"
-
-#: src/bug-buddy.desktop.in.h:1
-msgid "Bug Report Tool"
-msgstr "錯誤報告工具"
-
-#: src/bug-buddy.desktop.in.h:2
-msgid "Report a bug in GNOME"
-msgstr "在 GNOME 內匯報錯誤"
+msgstr "是否確定取消匯報？"
 
 #~ msgid "Go"
 #~ msgstr "除錯"
