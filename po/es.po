@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.9\n"
-"POT-Creation-Date: 2000-05-10 01:33-0400\n"
-"PO-Revision-Date: 2000-05-06 11:21+0200\n"
+"Project-Id-Version: bug-buddy 0.90\n"
+"POT-Creation-Date: 2000-05-14 11:23+0200\n"
+"PO-Revision-Date: 2000-05-14 11:27+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -223,11 +223,14 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
 #: src/bug-buddy.c:682
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
-"\t<%s>"
-msgstr "Su informe de error fue enviado a <%s>"
+"\n"
+"        <%s>"
+msgstr ""
+"Su informe de error fue enviado a:\n"
+"        <%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
