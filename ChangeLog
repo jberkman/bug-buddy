@@ -1,5 +1,9 @@
 1999-11-07  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.mime: ok, this regex works now
+
+	* configure.in: bump to 0.2
+	
 	* src/bug-buddy.c: slightly better gnome-core version script;
 	grave, not severe, is the correct severity
 
