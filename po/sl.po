@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
+"POT-Creation-Date: 2000-11-11 12:06+0100\n"
 "PO-Revision-Date: 2000-06-25 01:16+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -138,17 +138,16 @@ msgid "Core file from program"
 msgstr "Core datoteka programa"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
 "Please specify a package."
 msgstr ""
-"Zelo pomaga, èe doloèite\n"
-"paket bolj natanèno kot 'general'.\n"
+"Zelo pomaga, èe doloèite paket\n"
+"bolj natanèno kot 'splo¹no'.\n"
 "\n"
-"®elite vseeno nadaljevati?"
+"Prosim doloèite paket"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -185,23 +184,20 @@ msgid "gdb has already exited"
 msgstr "gdb je ¾e konèal z izvajanjem"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "GNOME grafièno orodje za poroèanje o hro¹èih"
+msgstr "GNOME grafièno orodje za poroèanje o hro¹èih."
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "Leva bug-buddy spletna stran"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Prosim vpi¹ite ime in e-po¹tni naslov"
+msgstr "Prosim vpi¹ite va¹e ime."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Prosim vpi¹ite ime in e-po¹tni naslov"
+msgstr "Prosim vpi¹ite veljaven e-po¹tni naslov."
 
 #: src/bug-buddy.c:620
 #, c-format
