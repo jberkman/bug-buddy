@@ -1,5 +1,7 @@
 1999-12-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/ctree-combo.c: maybe getting closer to working
+
 	* src/bts-debian: use the new ctree combo box
 	
 	* src/glade-druid.h: sync with .glade file
