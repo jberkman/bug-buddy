@@ -1,5 +1,7 @@
 src/bug-buddy.c
 src/bugzilla.c
+src/config.c
+src/cell-renderer-uri.c
 src/gdb-buddy.c
 src/bug-buddy.glade
 src/united-states-of-bug-buddy.c
