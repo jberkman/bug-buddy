@@ -143,7 +143,10 @@ msgid ""
 "a more specific package than 'general'.\n"
 "\n"
 "Do you want to continue anyway?"
-msgstr ""
+msgstr "Het is nuttiger als U een ander\n"
+"pakket dan 'general' kiest.\n"
+"\n"
+"Wilt U toch doorgaan?" 
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
@@ -230,14 +233,15 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Uw bugrapport is opgeslagen in '%s'"
 
 #: src/bug-buddy.c:694
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
 msgstr ""
 "Uw bugrapport is opgestuurd naar:\n"
-"\tr <%s>"
+"\n"
+"       <%s>"
 
 #: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
@@ -262,19 +266,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "Info"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Stop"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Verversen"
 
 #: src/bug-buddy.c:949
 #, c-format
