@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
 "POT-Creation-Date: 2001-10-07 20:10-0400\n"
-"PO-Revision-Date: 2001-10-22 03:56+0200\n"
+"PO-Revision-Date: 2001-11-01 17:36+0200\n"
 "Last-Translator: Artis Trops <hornet@navigators.lv>\n"
 "Language-Team: Latvian <hornet@navigators.lv>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Sûtît paziòojumu tikai sev paðam"
 
 #: src/bug-buddy.c:57
 msgid "Save report to file"
-msgstr "Saglabât paziòojumu datnç"
+msgstr "Saglabât paziòojumu failâ"
 
 #: src/bug-buddy.c:62
 msgid "crashed application"
@@ -31,7 +31,7 @@ msgstr "avarçjuðo programmu"
 
 #: src/bug-buddy.c:63
 msgid "core file"
-msgstr "core datni"
+msgstr "core fails"
 
 #: src/bug-buddy.c:64
 msgid "nothing"
@@ -79,13 +79,13 @@ msgstr "VERSIJA"
 
 #: src/bug-buddy.c:83
 msgid "File name of crashed program"
-msgstr "Avarçjuðâs programmas datnes nosaukums"
+msgstr "Avarçjuðâs programmas faila nosaukums"
 
 #: src/bug-buddy.c:83
 #: src/bug-buddy.c:85
 #: src/bug-buddy.c:86
 msgid "FILE"
-msgstr "DATNE"
+msgstr "FAILS"
 
 #: src/bug-buddy.c:84
 msgid "PID of crashed program"
@@ -97,11 +97,11 @@ msgstr "PID"
 
 #: src/bug-buddy.c:85
 msgid "Core file from program"
-msgstr "Programmas core datne"
+msgstr "Programmas core fails"
 
 #: src/bug-buddy.c:86
 msgid "Text file to include in the report"
-msgstr "Iekïaujamâ teksta datne"
+msgstr "Iekïaujamâ teksta fails"
 
 #: src/bug-buddy.c:169
 msgid ""
@@ -122,7 +122,7 @@ msgid ""
 "Please use the --appname command lineargument instead."
 msgstr ""
 "$GNOME_CRASHED_APPNAME ir noþçlojams.\n"
-"Lûdzu, tâ vietâ lieto komandrindas argumentu --appname."
+"Lûdzu tâ vietâ lieto komandrindas argumentu --appname."
 
 #: src/bug-buddy.c:483
 msgid ""
@@ -130,7 +130,7 @@ msgid ""
 "Please use the --pid command lineargument instead."
 msgstr ""
 "$GNOME_CRASHED_PID ir noþçlojams.\n"
-"Lûdzu, tâ vietâ lieto komandrindas argumentu --pid."
+"Lûdzu tâ vietâ lieto komandrindas argumentu --pid."
 
 #: src/bug-buddy.c:581
 #, c-format
@@ -168,7 +168,7 @@ msgstr ""
 "Blusu Draugs ir noskaidrojis, ka daïu tâ informâcijas par\n"
 "daþâdâm blusu íeramajâm sistçmâm var bût nepieciðmasms atjauninât.\n"
 "\n"
-"Vai Blusu Draugam vajadzçtu tagad ðîs datnes atjauninât?"
+"Vai Blusu Draugam vajadzçtu tagad ðos failus atjauninât?"
 
 #: src/gdb-buddy.c:74
 #, c-format
@@ -181,7 +181,7 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Nevarçju apstrâdât core datni ar gdb:\n"
+"Nevarçju apstrâdât core failu ar gdb:\n"
 "'%s'"
 
 #: src/gdb-buddy.c:180
@@ -190,7 +190,7 @@ msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
-"Nevarçju noskaidrot, kura binârâ datne radîja\n"
+"Nevarçju noskaidrot, kurð binârais fails radîja\n"
 "'%s'"
 
 #: src/gdb-buddy.c:216
@@ -210,8 +210,8 @@ msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
 msgstr ""
-"Nevarçju atrast gdb-cmd datni.\n"
-"Lûdzu, mçìini pârinstalçt Blusu Draugu."
+"Nevarçju atrast gdb-cmd failu.\n"
+"Lûdzu mçìini pârinstalçt Blusu Draugu."
 
 #: src/gdb-buddy.c:282
 #: src/util.c:76
@@ -241,7 +241,7 @@ msgstr "Automâtiski pâriet pie nâkamâs lappas, kad pabeigts"
 
 #: src/bug-buddy.glade.h:7
 msgid "Binary file"
-msgstr "Binârâ datne"
+msgstr "Binârais fails"
 
 #: src/bug-buddy.glade.h:8
 msgid "Bug Buddy"
@@ -276,7 +276,7 @@ msgstr "Saturs"
 
 #: src/bug-buddy.glade.h:16
 msgid "Core file"
-msgstr "Core datne"
+msgstr "Core fails"
 
 #: src/bug-buddy.glade.h:17
 msgid "Debug"
@@ -300,7 +300,7 @@ msgstr "Aiziet"
 
 #: src/bug-buddy.glade.h:22
 msgid "Include a text file"
-msgstr "Iekïaut teksta datni"
+msgstr "Iekïaut teksta failu"
 
 #: src/bug-buddy.glade.h:23
 msgid "Name"
@@ -316,22 +316,22 @@ msgstr "Lûdzu izvçlies componentu, versiju un svarîguma lîmeni."
 
 #: src/bug-buddy.glade.h:26
 msgid "Please make your bug report in English, if possible."
-msgstr "Lûdzu, sastâdi savu kïûdas paziòojumu Angïu valodâ, ja iespçjams."
+msgstr "Lûdzu sastâdi savu kïûdas paziòojumu Angïu valodâ, ja iespçjams."
 
 #: src/bug-buddy.glade.h:27
 msgid "Please select the product for the bug you wish to report."
-msgstr "Lûdzu, izvçlies produktu kïûdai, par kuru vçlies ziòot."
+msgstr "Lûdzu izvçlies produktu kïûdai, par kuru vçlies ziòot."
 
 #: src/bug-buddy.glade.h:28
 msgid "Please wait while Bug Buddy determines some information about your system."
-msgstr "Lûdzu, uzgaidi lîdz Blusu Draugs noskaidro nedaudz informâciju par jûsu sistçmu."
+msgstr "Lûdzu uzgaidi lîdz Blusu Draugs noskaidro nedaudz informâciju par jûsu sistçmu."
 
 #: src/bug-buddy.glade.h:29
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
-"Lûdzu, uzgaidi lîdz Blusu Draugs atjaunina\n"
+"Lûdzu uzgaidi lîdz Blusu Draugs atjaunina\n"
 "tâ blusu íeramâs sistçmas produktu sarakstu."
 
 #: src/bug-buddy.glade.h:31
@@ -397,7 +397,7 @@ msgstr ""
 "nosûtîtu kïûdu paziòojumu projektiem tâdiem kâ GNOME.\n"
 "\n"
 "Ðie kïûdu paziòojumi tiek sûtîti izmantojot epastu, tâpçc,\n"
-"lûdzu, norâdi savu epasta adresi tâ, lai ar tevi vçlâk varçtu\n"
+"lûdzu norâdi savu epasta adresi tâ, lai ar tevi vçlâk varçtu\n"
 "kontaktçties, ja bûs nepiecieðama plaðâka informâcija vai\n"
 "kad izlabota versija bûs pieejama."
 
@@ -495,7 +495,7 @@ msgstr "Lûdzu ievadi savu vârdu."
 
 #: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
-msgstr "Lûdzu, ieraksti îstu epasta adresi."
+msgstr "Lûdzu ieraksti îstu epasta adresi."
 
 #: src/united-states-of-bug-buddy.c:297
 #, c-format
@@ -510,23 +510,23 @@ msgstr ""
 "Neizskatâs, ka '%s' eksistçtu.\n"
 "\n"
 "Tu îsti nevarçsi nosûtît kïûdas paziòojumu,\n"
-"bet tu varçsi saglabât to datnç.\n"
+"bet tu varçsi saglabât to failâ.\n"
 "\n"
 "Specify a new location for sendmail?"
 
 #: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
-msgstr "Norâdîtâ datne neeksistç."
+msgstr "Norâdîtais fails neeksistç."
 
 #: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
-msgstr "Datnes tips: %s"
+msgstr "Faila tips: %s"
 
 #: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr "'%s' neizskatâs pçc teksta datnes."
+msgstr "'%s' neizskatâs pçc teksta faila."
 
 #: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
@@ -543,7 +543,7 @@ msgstr "Sûtît ðo kïûdas paziòojumu tagad?"
 #: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
-msgstr "Nevarçja atvçrt datni: '%s'"
+msgstr "Nevarçja atvçrt failu: '%s'"
 
 #: src/united-states-of-bug-buddy.c:418
 #, c-format
