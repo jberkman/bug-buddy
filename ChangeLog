@@ -1,3 +1,8 @@
+2001-12-12  jacob berkman  <jacob@ximian.com>
+
+	* src/united-states-of-bug-buddy.c (on_druid_next_clicked): don't
+	get stuck on the description page
+
 2001-12-11  jacob berkman  <jacob@ximian.com>
 
 	* */*: add mostfreq support and some other stuff.  this module is

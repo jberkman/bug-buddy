@@ -638,6 +638,8 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		/* validate subject, description, and file name */
 		if (!desc_page_ok ())
 			return;
+		/* skip system */
+		newstate++;
 		break;
 	case STATE_SYSTEM:
 		/* nothing */
