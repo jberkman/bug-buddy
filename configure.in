@@ -1,0 +1,37 @@
+dnl Configure script for bug-buddy
+
+AC_INIT(src/bug-buddy-druid.c)
+
+AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(bug-buddy, 0.1)
+
+AM_MAINTAINER_MODE
+
+AM_ACLOCAL_INCLUDE(macros)
+
+GNOME_INIT
+
+AC_PROG_CC
+AC_ISC_POSIX
+AC_HEADER_STDC
+AC_ARG_PROGRAM
+AM_PROG_LIBTOOL
+
+GNOME_COMPILE_WARNINGS
+
+AM_PATH_LIBGLADE(,,gnome)
+
+AC_SUBST(CFLAGS)
+AC_SUBST(CPPFLAGS)
+AC_SUBST(LDFLAGS)
+
+ALL_LINGUAS=""
+AM_GNU_GETTEXT
+
+AC_OUTPUT([
+Makefile
+intl/Makefile
+po/Makefile.in
+src/Makefile
+])

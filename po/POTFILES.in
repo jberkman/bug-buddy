@@ -1,0 +1,3 @@
+src/gdb-buddy.c
+src/bug-buddy.c
+src/glade-strings.c
