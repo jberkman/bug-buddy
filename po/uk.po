@@ -346,7 +346,7 @@ msgstr ""
 
 #: src/glade-strings.c:26
 msgid "Report Information"
-msgstr ""
+msgstr "Дан╕ зв╕ту"
 
 #: src/glade-strings.c:27 src/glade-strings.c:55
 msgid "Action"
@@ -370,7 +370,7 @@ msgstr "Клас"
 
 #: src/glade-strings.c:33
 msgid "Severity"
-msgstr ""
+msgstr "Важлив╕сть"
 
 #: src/glade-strings.c:34
 msgid "Bug Number"
