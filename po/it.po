@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2000-10-22 22:24+0200\n"
+"POT-Creation-Date: 2000-10-29 18:34+0100\n"
 "PO-Revision-Date: 2000-10-22 15:26+02:00\n"
 "Last-Translator: Giovanni Bortolozzo <borto@pluto.linux.it>\n"
 "Language-Team: ITALIANO <it@li.org>\n"
@@ -484,7 +484,7 @@ msgstr "Selezionare il binario dell'applicazione terminata"
 
 #: src/glade-strings.c:43
 msgid "Binary"
-msgstr "Binario"
+msgstr "Eseguibile"
 
 #: src/glade-strings.c:44
 msgid "Process ID"
@@ -528,7 +528,7 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
-msgstr "Accedi automaticamente alla pagina successiva quando completo"
+msgstr "Accedi automaticamente alla schermata successiva quando completo"
 
 #: src/glade-strings.c:56
 msgid "Submitting the Report"
