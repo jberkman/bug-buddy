@@ -83,6 +83,7 @@ EXTRA_DIST = \
 	$(utils_DATA)		\
 	$(utils_in_files)	\
 	$(buddy_DATA)		\
+	$(applications_DATA)	\
 	bug-buddy.mime		\
 	bug-buddy.keys.in	\
 	bb-marshal.list
