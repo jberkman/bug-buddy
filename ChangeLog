@@ -1,3 +1,14 @@
+2002-08-15  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: require bonobo-activation and libbonobo
+
+	* src/bugzilla.c (bugzilla_application_new): helper func
+	(get_i18n_slist): cut-n-paste from (gasp!) menu.c
+	(load_applets): get the list of applets from bonobo-activation
+	(visit_cb): use bugzilla_application_new()
+	(load_applications): load the applets too and don't leak the icon
+	loader
+
 2002-08-14  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.c (BUGZILLA_*): 

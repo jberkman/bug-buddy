@@ -38,6 +38,9 @@
 
 #include <libgnome/gnome-desktop-item.h>
 
+#include <bonobo/bonobo-exception.h>
+#include <bonobo-activation/bonobo-activation.h>
+
 #include <dirent.h>
 
 #include <libxml/tree.h>
@@ -802,11 +805,121 @@ load_bugzillas (void)
 }
 
 #define ALL_APPLICATIONS_URI "all-applications:///"
+#define APPLET_REQUIREMENTS \
+	"has_all (repo_ids, ['IDL:Bonobo/Control:1.0'," \
+	"		     'IDL:GNOME/Vertigo/PanelAppletShell:1.0']) && " \
+	"defined (panel:icon) && defined (panel:category)"
 
 #define BUGZILLA_BUGZILLA  "X-GNOME-Bugzilla-Bugzilla"
 #define BUGZILLA_PRODUCT   "X-GNOME-Bugzilla-Product"
 #define BUGZILLA_COMPONENT "X-GNOME-Bugzilla-Component"
 #define BUGZILLA_EMAIL     "X-GNOME-Bugzilla-Email"
+
+#define BA_BUGZILLA_BUGZILLA  "bugzilla:bugzilla"
+#define BA_BUGZILLA_PRODUCT   "bugzilla:product"
+#define BA_BUGZILLA_COMPONENT "bugzilla:component"
+#define BA_BUGZILLA_EMAIL     "bugzilla:email"
+
+static void
+bugzilla_application_new (const char *name, 
+			  const char *comment, 
+			  const char *bugzilla, 
+			  const char *product, 
+			  const char *component, 
+			  const char *email, 
+			  const char *icon)
+{
+	BugzillaApplication *app;
+	GdkPixbuf *pb = NULL;
+	char *icon_copy;
+	GError *error = NULL;
+
+	app = g_new0 (BugzillaApplication, 1);
+	
+	app->name        = g_strdup (name);
+	app->comment     = g_strdup (comment);
+	app->bugzilla    = g_strdup (bugzilla);
+	app->product     = g_strdup (product);
+	app->component   = g_strdup (component);
+	app->email       = g_strdup (email);
+
+	if (icon && *icon != G_DIR_SEPARATOR)
+		icon_copy = gnome_program_locate_file (NULL,
+						       GNOME_FILE_DOMAIN_PIXMAP,
+						       icon, TRUE, NULL);
+	else
+		icon_copy = g_strdup (icon);
+
+	if (icon_copy) {
+		pb = gdk_pixbuf_new_from_file (icon_copy, &error);
+		g_free (icon_copy);
+	}
+
+	if (pb) {
+		app->pixbuf = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_HYPER);
+		g_object_unref (pb);
+	} else if (error) {
+		g_warning (_("Couldn't load icon for %s: %s"), app->name, error->message);
+		g_error_free (error);
+	}
+	
+	druid_data.applications = g_slist_prepend (druid_data.applications, app);
+}
+
+static const GSList *
+get_i18n_slist (void)
+{
+  GList *langs_glist;
+  static GSList *langs_gslist;
+
+  if (langs_gslist)
+	  return langs_gslist;
+
+  langs_glist = (GList *)gnome_i18n_get_language_list ("LC_MESSAGES");
+  langs_gslist = NULL;
+  while (langs_glist != NULL) {
+    langs_gslist = g_slist_append (langs_gslist, langs_glist->data);
+    langs_glist = langs_glist->next;
+  }
+
+  return langs_gslist;
+}
+
+static void
+load_applets (GnomeIconLoader *gil)
+{
+	Bonobo_ServerInfoList *info_list;
+	Bonobo_ServerInfo *info;
+	CORBA_Environment ev;
+	GSList *langs;
+	int i;
+
+	CORBA_exception_init (&ev);
+	info_list = bonobo_activation_query (APPLET_REQUIREMENTS, NULL, &ev);
+	if (BONOBO_EX (&ev)) {
+		g_warning ("Applet list query failed: %s", BONOBO_EX_REPOID (&ev));
+		CORBA_exception_free (&ev);
+		return;
+	}
+	CORBA_exception_free (&ev);
+
+	langs = (GSList *)get_i18n_slist ();
+
+	for (i = 0; i < info_list->_length; i++) {
+		info = info_list->_buffer + i;
+
+		bugzilla_application_new (
+			bonobo_server_info_prop_lookup (info, "name", langs),
+			bonobo_server_info_prop_lookup (info, "description", langs),
+			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_BUGZILLA,  NULL),
+			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_PRODUCT,   NULL),
+			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_COMPONENT, NULL),
+			bonobo_server_info_prop_lookup (info, BA_BUGZILLA_EMAIL,     NULL),
+			bonobo_server_info_prop_lookup (info, "panel:icon", NULL));
+	}
+
+	CORBA_free (info_list);
+}
 
 static gboolean
 visit_cb (const char *rel_path,
@@ -819,8 +932,6 @@ visit_cb (const char *rel_path,
 	GError *error = NULL;
 	char *full_path, *icon;
 	GnomeIconLoader *gil = data;
-	BugzillaApplication *app;
-	GdkPixbuf *pb = NULL;
 
 	full_path = g_strconcat (ALL_APPLICATIONS_URI, rel_path, NULL);
 
@@ -835,32 +946,16 @@ visit_cb (const char *rel_path,
 	if (gnome_desktop_item_get_entry_type (ditem) != GNOME_DESKTOP_ITEM_TYPE_APPLICATION)
 		goto visit_cb_out;
 
-	app = g_new0 (BugzillaApplication, 1);
-
-	app->name     = g_strdup (gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_NAME));
-	app->comment  = g_strdup (gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_COMMENT));
-	app->bugzilla = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_BUGZILLA));
-	if (app->bugzilla) {
-		app->product   = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_PRODUCT));
-		app->component = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_COMPONENT));
-	} else {
-		app->email = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_EMAIL));
-	}
-
 	icon = gnome_desktop_item_get_icon (ditem, gil);
-	if (icon)
-		pb = gdk_pixbuf_new_from_file (icon, &error);
-
-	if (pb) {
-		app->pixbuf = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_HYPER);
-		g_object_unref (pb);
-	} else if (error) {
-		g_warning (_("Couldn't load icon for %s: %s"), full_path, error->message);
-		g_error_free (error);
-	}
+	bugzilla_application_new (
+		gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_NAME),
+		gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_COMMENT),
+		gnome_desktop_item_get_string (ditem, BUGZILLA_BUGZILLA),
+		gnome_desktop_item_get_string (ditem, BUGZILLA_PRODUCT),
+		gnome_desktop_item_get_string (ditem, BUGZILLA_COMPONENT),
+		gnome_desktop_item_get_string (ditem, BUGZILLA_EMAIL),
+		icon);
 	g_free (icon);
-
-	druid_data.applications = g_slist_prepend (druid_data.applications, app);
 
  visit_cb_out:
 	g_free (full_path);
@@ -880,13 +975,19 @@ load_applications (void)
 	gil = gnome_icon_loader_new ();
 	gnome_icon_loader_set_allow_svg (gil, FALSE);
 	
+	/* load applications */
 	gnome_vfs_directory_visit (ALL_APPLICATIONS_URI,
 				   GNOME_VFS_FILE_INFO_FOLLOW_LINKS,
 				   GNOME_VFS_DIRECTORY_VISIT_LOOPCHECK,
 				   visit_cb, gil);
 
+
+	load_applets (gil);
+
 	if (!druid_data.show_products)
 		products_list_load ();
+
+	g_object_unref (gil);
 }
 
 static void
