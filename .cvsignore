@@ -20,3 +20,7 @@ bug-buddy.spec
 build-stamp
 install-stamp
 intltool-*
+INSTALL
+install-sh
+missing
+mkinstalldirs

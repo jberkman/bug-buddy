@@ -614,9 +614,9 @@ For more information, please click the Help button below.</property>
 			  <property name="spacing">4</property>
 
 			  <child>
-			    <widget class="GtkLabel" id="label115">
+			    <widget class="GtkLabel" id="product-label">
 			      <property name="visible">True</property>
-			      <property name="label" translatable="yes">Please select the product for the bug you wish to report.</property>
+			      <property name="label" translatable="yes">Please select the product or application for the bug you wish to report.</property>
 			      <property name="use_underline">False</property>
 			      <property name="use_markup">False</property>
 			      <property name="justify">GTK_JUSTIFY_CENTER</property>
@@ -662,15 +662,44 @@ For more information, please click the Help button below.</property>
 			  </child>
 
 			  <child>
-			    <widget class="GtkCheckButton" id="no-product-toggle">
+			    <widget class="GtkHBox" id="hbox41">
 			      <property name="visible">True</property>
-			      <property name="can_focus">True</property>
-			      <property name="label" translatable="yes">The product is not listed above.</property>
-			      <property name="use_underline">True</property>
-			      <property name="relief">GTK_RELIEF_NORMAL</property>
-			      <property name="active">False</property>
-			      <property name="inconsistent">False</property>
-			      <property name="draw_indicator">True</property>
+			      <property name="homogeneous">False</property>
+			      <property name="spacing">5</property>
+
+			      <child>
+				<widget class="GtkButton" id="product-toggle">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="label" translatable="yes">Show _Products</property>
+				  <property name="use_underline">True</property>
+				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <signal name="clicked" handler="on_product_toggle_clicked" last_modification_time="Wed, 14 Aug 2002 19:20:18 GMT"/>
+				</widget>
+				<packing>
+				  <property name="padding">0</property>
+				  <property name="expand">False</property>
+				  <property name="fill">False</property>
+				</packing>
+			      </child>
+
+			      <child>
+				<widget class="GtkCheckButton" id="no-product-toggle">
+				  <property name="visible">True</property>
+				  <property name="can_focus">True</property>
+				  <property name="label" translatable="yes">The product or application is not listed above.</property>
+				  <property name="use_underline">True</property>
+				  <property name="relief">GTK_RELIEF_NORMAL</property>
+				  <property name="active">False</property>
+				  <property name="inconsistent">False</property>
+				  <property name="draw_indicator">True</property>
+				</widget>
+				<packing>
+				  <property name="padding">0</property>
+				  <property name="expand">False</property>
+				  <property name="fill">False</property>
+				</packing>
+			      </child>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>

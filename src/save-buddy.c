@@ -143,6 +143,8 @@ typedef struct {
 
 	guint watch_id;
 	guint timeout_id;
+
+	const char *wait_msg;
 } AsyncXferData;
 
 static gboolean
@@ -223,7 +225,7 @@ timeout_cb (gpointer data)
 	AsyncXferData *xfer_data = data;
 	GtkWidget *w;
 
-	w = gtk_label_new (_("Please wait while Bug Buddy does something..."));
+	w = gtk_label_new (xfer_data->wait_msg);
 	gtk_widget_show (GTK_WIDGET (w));
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (xfer_data->dialog)->vbox), w, TRUE, FALSE, 5);
 
@@ -231,7 +233,7 @@ timeout_cb (gpointer data)
 	gtk_progress_bar_pulse (GTK_PROGRESS_BAR (w));
 	gtk_widget_show (GTK_WIDGET (w));
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (xfer_data->dialog)->vbox), w, TRUE, FALSE, 5);
-	xfer_data->timeout_id = gtk_timeout_add (666, pulse_cb, w);
+	xfer_data->timeout_id = gtk_timeout_add (333, pulse_cb, w);
 
 	g_signal_connect (xfer_data->dialog, "response",
 			  G_CALLBACK (response_cb), xfer_data);
@@ -284,13 +286,14 @@ setup_sigchld_handler (AsyncXferData *xfer_data)
 }
 
 static gboolean
-bb_write_buffer_to_fd (GtkWindow *parent, int fd, int pid, const char *buffer, gssize buflen, GError **error)
+bb_write_buffer_to_fd (GtkWindow *parent, const char *wait_msg, int fd, int pid, const char *buffer, gssize buflen, GError **error)
 {
 	AsyncXferData xfer_data = { NULL };
 
 	xfer_data.ioc = g_io_channel_unix_new (fd);
 
 	xfer_data.parent = parent;
+	xfer_data.wait_msg = wait_msg;
 	xfer_data.buf = buffer;
 	xfer_data.bytes_to_write = buflen >= 0 ? buflen : strlen (buffer);
 	xfer_data.bytes_written = 0;
@@ -352,7 +355,7 @@ bb_write_buffer_to_fd (GtkWindow *parent, int fd, int pid, const char *buffer, g
  */
 
 gboolean	
-bb_write_buffer_to_file (GtkWindow *parent, const char *filename, const char *buffer, gssize buflen, GError **error)
+bb_write_buffer_to_file (GtkWindow *parent, const char *wait_msg, const char *filename, const char *buffer, gssize buflen, GError **error)
 {
 	char *real_filename; /* Final filename with no symlinks */
 	char *backup_filename; /* Backup filename, like real_filename.bak */
@@ -491,7 +494,7 @@ bb_write_buffer_to_file (GtkWindow *parent, const char *filename, const char *bu
 	}	    
 #endif
 
-	if (!bb_write_buffer_to_fd (parent, fd, -1, buffer, buflen, error)) {
+	if (!bb_write_buffer_to_fd (parent, wait_msg, fd, -1, buffer, buflen, error)) {
 		unlink (temp_filename);
 		goto out;
 	}
@@ -552,7 +555,7 @@ bb_write_buffer_to_file (GtkWindow *parent, const char *filename, const char *bu
 }
 
 gboolean
-bb_write_buffer_to_command (GtkWindow *parent, char **argv, const char *buffer, gssize buflen, GError **error)
+bb_write_buffer_to_command (GtkWindow *parent, const char *wait_msg, char **argv, const char *buffer, gssize buflen, GError **error)
 {
   int fd, pid;
 
@@ -563,5 +566,5 @@ bb_write_buffer_to_command (GtkWindow *parent, char **argv, const char *buffer, 
 				 NULL, NULL, error))
     return FALSE;
 
-  return bb_write_buffer_to_fd (parent, fd, pid, buffer, buflen, error);
+  return bb_write_buffer_to_fd (parent, wait_msg, fd, pid, buffer, buflen, error);
 }

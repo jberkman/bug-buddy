@@ -112,6 +112,7 @@ typedef struct {
 	gboolean    explicit_dirty;
 
 	GHashTable  *bugzillas;
+	GSList *applications;
 
 	/* Debian BTS stuff */
 	SubmitType    submit_type;
@@ -141,6 +142,8 @@ typedef struct {
 	char *gnome_vendor;
 
 	guint dl_timeout;
+
+	gboolean show_products;
 } DruidData;
 
 extern DruidData druid_data;

@@ -107,6 +107,8 @@ save_config (void)
 
 	gnome_config_set_bool ("/bug-buddy/last/show_debugging", 
 			       gtk_notebook_get_current_page (GTK_NOTEBOOK (GET_WIDGET ("gdb-notebook"))));
+
+	gnome_config_set_bool ("/bug-buddy/last/show_products", druid_data.show_products);
 			       
 	gnome_config_sync ();
 }
@@ -176,4 +178,7 @@ load_config (void)
 
 	if (gnome_config_get_bool ("/bug-buddy/last/show_debugging=0"))
 		gtk_button_clicked (GTK_BUTTON (GET_WIDGET ("debugging-options-button")));
+
+	if (gnome_config_get_bool ("/bug-buddy/last/show_products=1"))
+		gtk_button_clicked (GTK_BUTTON (GET_WIDGET ("product-toggle")));
 }

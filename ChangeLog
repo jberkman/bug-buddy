@@ -1,5 +1,50 @@
 2002-08-14  jacob berkman  <jacob@ximian.com>
 
+	* configure.in: check for gnome-desktop
+
+	* src/united-states-of-bug-buddy.c (druid_set_state): disable next
+	button if we are downloading
+	(on_druid_prev_clicked): handle a new state we can be in
+	(submit_ok): handle the user selecting an application (this
+	function needs to be refactored)
+
+	* src/save-buddy.c (bb_write_buffer_to_*): add a wait_msg arg that
+	is the label of the dialog that pops up after a while
+
+	* src/config.c (save_config): 
+	(load_config): persist whether we are showing products or
+	applications
+
+	* src/bugzilla.c (load_bugzilla_xml): only populate the products
+	list if we are showing products
+	(end_bugzilla_download):
+	(start_bugzilla_download): turn the next button off while
+	downloading if we are on the product page
+	(visit_cb):
+	(load_applications): load a list of applications from
+	all-applications:/// to present the user, rather than using a list
+	of products.  .desktop files with X-Gnome-Bugzilla-* headers will
+	work automagically
+	(products_list_load): populate the products list with either
+	products or applications
+
+	* src/bug-buddy.h (DruidData): add show_products and applications
+	list
+
+	* src/bug-buddy.glade: add a button to swtich between product and
+	application selection mode
+
+	* src/bug-buddy.desktop.in: add X-Gnome-Bugzilla-* entries
+
+	* src/bug-buddy.c (buddy_set_text_widget): 
+	(buddy_get_text_widget): add support for GtkButton
+	(on_gdb_save_clicked): pass a wait message
+	(on_product_toggle_clicked): toggle the tree view between
+	applications / products listing
+	(on_list_button_press_event): don't continue if a download is in
+	progress
+	(main): load the list of applications
+
 	* src/bugzilla.[ch] (bugzilla_bts_add_products_to_clist): nuke
 	(BugzillaProduct): make components a hash table
 	(BugzillaBTS): make products a hash table

@@ -104,7 +104,8 @@ buddy_set_text_widget (GtkWidget *w, const char *s)
 {
 	g_return_if_fail (GTK_IS_ENTRY (w) || 
 			  GTK_IS_TEXT_VIEW (w) ||
-			  GTK_IS_LABEL (w));
+			  GTK_IS_LABEL (w) ||
+			  GTK_IS_BUTTON (w));
 
 	if (!s) s = "";
 
@@ -116,6 +117,8 @@ buddy_set_text_widget (GtkWidget *w, const char *s)
 			s, strlen (s));
 	} else if (GTK_IS_LABEL (w)) {
 		gtk_label_set_text (GTK_LABEL (w), s);
+	} else if (GTK_IS_BUTTON (w)) {
+		gtk_button_set_label (GTK_BUTTON (w), s);
 	}
 }
 
@@ -125,7 +128,9 @@ buddy_get_text_widget (GtkWidget *w)
 	char *s = NULL;
 	g_return_val_if_fail (GTK_IS_ENTRY (w) || 
 			      GTK_IS_TEXT_VIEW (w) ||
-			      GTK_IS_LABEL (w), NULL);
+			      GTK_IS_LABEL (w) ||
+			      GTK_IS_BUTTON (w), 
+			      NULL);
 
 	if (GTK_IS_ENTRY (w)) {
 		s = g_strdup (gtk_entry_get_text (GTK_ENTRY (w)));
@@ -138,6 +143,8 @@ buddy_get_text_widget (GtkWidget *w)
 		s = gtk_text_iter_get_text (&start, &end);
 	} else if (GTK_IS_LABEL (w)) {
 		s = g_strdup (gtk_label_get_text (GTK_LABEL (w)));
+	} else if (GTK_IS_BUTTON (w)) {
+		s = g_strdup (gtk_button_get_label (GTK_BUTTON (w)));
 	}
 	return s;
 }
@@ -250,7 +257,9 @@ on_gdb_save_clicked (GtkWidget *w, gpointer data)
 
 		file = gtk_file_selection_get_filename (GTK_FILE_SELECTION (filesel));
 		text = buddy_get_text ("gdb-text");
-		if (!bb_write_buffer_to_file (GTK_WINDOW (filesel), file, text, -1, &gerr)) {
+		if (!bb_write_buffer_to_file (GTK_WINDOW (filesel), 
+					      _("Please wait while Bug Buddy saves the stack trace..."),
+					      file, text, -1, &gerr)) {
 			if (gerr) {
 				GtkWidget *d;
 				
@@ -276,6 +285,26 @@ on_gdb_save_clicked (GtkWidget *w, gpointer data)
 	gtk_widget_destroy (filesel);
 }
 
+void
+on_product_toggle_clicked (GtkWidget *w, gpointer data)
+{
+	char *button;
+
+	g_return_if_fail (druid_data.state == STATE_PRODUCT);
+
+	druid_data.show_products = !druid_data.show_products;
+
+	if (druid_data.show_products) {
+		button = _("Show _Applications");
+	} else {
+		button = _("Show _Products");
+	}
+
+	buddy_set_text ("product-toggle",    button);
+
+	products_list_load ();
+}
+
 static void
 on_list_button_press_event (GtkWidget *w, GdkEventButton *button, gpointer data)
 {
@@ -283,11 +312,14 @@ on_list_button_press_event (GtkWidget *w, GdkEventButton *button, gpointer data)
 
 	if (button->type != GDK_2BUTTON_PRESS)
 		return;
+
+	if (druid_data.download_in_progress)
+		return;
 	
 	selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (w));
 	if (!gtk_tree_selection_get_selected (selection, NULL, NULL))
 		return;
-	
+
 	on_druid_next_clicked (NULL, NULL);
 }
 
@@ -773,6 +805,7 @@ main (int argc, char *argv[])
 	
 	load_bugzillas ();
 	start_bugzilla_download ();
+	load_applications ();
 	start_gdb ();
 
 	gtk_main ();

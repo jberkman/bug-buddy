@@ -36,6 +36,8 @@
 
 #include <libgnomevfs/gnome-vfs.h>
 
+#include <libgnome/gnome-desktop-item.h>
+
 #include <dirent.h>
 
 #include <libxml/tree.h>
@@ -454,20 +456,6 @@ load_bugzilla_xml_file (BugzillaXMLFile *xml_file)
 }
 
 static void
-add_product (gpointer key, BugzillaProduct *p, GtkListStore *store)
-{
-	GtkTreeIter iter;
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
-			    PRODUCT_ICON, p->bts->pixbuf,
-			    PRODUCT_NAME, p->name,
-			    PRODUCT_DESC, p->description,
-			    PRODUCT_DATA, p,
-			    -1);
-}
-
-static void
 load_bugzilla_xml_cb (gpointer key, BugzillaBTS *bts, GtkListStore *store)
 {
 	xmlDoc *doc;
@@ -492,28 +480,17 @@ load_bugzilla_xml_cb (gpointer key, BugzillaBTS *bts, GtkListStore *store)
 			load_mostfreq_xml (bts, doc);
 		bts->mostfreq_xml->done = TRUE;
 	}
-	
-	g_hash_table_foreach (bts->products, (GHFunc)add_product, store);
 }
 
 void
 load_bugzilla_xml (void)
 {
-	GtkTreeView *w;
-	GtkListStore *store;
-
-	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
-
-	g_object_get (G_OBJECT (w), "model", &store, NULL);
-
-	gtk_list_store_clear (store);
-	druid_data.product = NULL;
-
 	d(g_print ("loading xml..\n"));
 
-	g_hash_table_foreach (druid_data.bugzillas, (GHFunc)load_bugzilla_xml_cb, store);
+	g_hash_table_foreach (druid_data.bugzillas, (GHFunc)load_bugzilla_xml_cb, NULL);
 
-	gtk_tree_view_columns_autosize (w);
+	if (druid_data.show_products)
+		products_list_load ();
 }
 
 static void
@@ -714,6 +691,9 @@ end_bugzilla_download (EndBugzillaFlags flags)
 	}
 
 	druid_data.download_in_progress = FALSE;
+
+	if (druid_data.state == STATE_PRODUCT)
+		druid_set_sensitive (TRUE, TRUE, TRUE);
 }
 
 gboolean
@@ -736,6 +716,10 @@ start_bugzilla_download (void)
 		GNOME_VFS_PRIORITY_DEFAULT,
 		async_update, NULL, NULL, NULL);
 	druid_data.dl_timeout = 0;
+
+	if (druid_data.state == STATE_PRODUCT)
+		druid_set_sensitive (TRUE, TRUE, TRUE);
+
 	return FALSE;
 }
 
@@ -817,6 +801,94 @@ load_bugzillas (void)
 	d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
 }
 
+#define ALL_APPLICATIONS_URI "all-applications:///"
+
+#define BUGZILLA_BUGZILLA  "X-Gnome-Bugzilla-Bugzilla"
+#define BUGZILLA_PRODUCT   "X-Gnome-Bugzilla-Product"
+#define BUGZILLA_COMPONENT "X-Gnome-Bugzilla-Component"
+#define BUGZILLA_EMAIL     "X-Gnome-Bugzilla-Email"
+
+static gboolean
+visit_cb (const char *rel_path,
+	  GnomeVFSFileInfo *info,
+	  gboolean recursing_will_loop,
+	  gpointer data,
+	  gboolean *recurse)
+{
+	GnomeDesktopItem *ditem;
+	GError *error = NULL;
+	char *full_path, *icon;
+	GnomeIconLoader *gil = data;
+	BugzillaApplication *app;
+	GdkPixbuf *pb = NULL;
+
+	full_path = g_strconcat (ALL_APPLICATIONS_URI, rel_path, NULL);
+
+	ditem = gnome_desktop_item_new_from_uri (full_path, 0, &error);
+	if (!ditem) {
+		if (error) {
+			g_warning ("Couldn't load %s: %s", full_path, error->message);
+		}
+		goto visit_cb_out;
+	}
+    
+	if (gnome_desktop_item_get_entry_type (ditem) != GNOME_DESKTOP_ITEM_TYPE_APPLICATION)
+		goto visit_cb_out;
+
+	app = g_new0 (BugzillaApplication, 1);
+
+	app->name     = g_strdup (gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_NAME));
+	app->comment  = g_strdup (gnome_desktop_item_get_localestring (ditem, GNOME_DESKTOP_ITEM_COMMENT));
+	app->bugzilla = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_BUGZILLA));
+	if (app->bugzilla) {
+		app->product   = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_PRODUCT));
+		app->component = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_COMPONENT));
+	} else {
+		app->email = g_strdup (gnome_desktop_item_get_string (ditem, BUGZILLA_EMAIL));
+	}
+
+	icon = gnome_desktop_item_get_icon (ditem, gil);
+	if (icon)
+		pb = gdk_pixbuf_new_from_file (icon, &error);
+
+	if (pb) {
+		app->pixbuf = gdk_pixbuf_scale_simple (pb, 20, 20, GDK_INTERP_HYPER);
+		g_object_unref (pb);
+	} else if (error) {
+		g_warning (_("Couldn't load icon for %s: %s"), full_path, error->message);
+		g_error_free (error);
+	}
+	g_free (icon);
+
+	druid_data.applications = g_slist_prepend (druid_data.applications, app);
+
+ visit_cb_out:
+	g_free (full_path);
+	if (error)
+		g_error_free (error);
+	if (ditem)
+		gnome_desktop_item_unref (ditem);
+
+	return TRUE;
+}
+
+void
+load_applications (void)
+{
+	GnomeIconLoader *gil;
+
+	gil = gnome_icon_loader_new ();
+	gnome_icon_loader_set_allow_svg (gil, FALSE);
+	
+	gnome_vfs_directory_visit (ALL_APPLICATIONS_URI,
+				   GNOME_VFS_FILE_INFO_FOLLOW_LINKS,
+				   GNOME_VFS_DIRECTORY_VISIT_LOOPCHECK,
+				   visit_cb, gil);
+
+	if (!druid_data.show_products)
+		products_list_load ();
+}
+
 static void
 add_component (gpointer key, BugzillaComponent *comp, GtkListStore *store)
 {
@@ -852,6 +924,62 @@ add_severity (char *s, GtkMenu *m)
 		gtk_option_menu_set_history (GTK_OPTION_MENU (GET_WIDGET ("severity-list")), 
 					     g_slist_index (druid_data.product->bts->severities, s));
 	}
+}
+
+static void
+add_product (gpointer key, BugzillaProduct *p, GtkListStore *store)
+{
+	GtkTreeIter iter;
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
+			    PRODUCT_ICON, p->bts->pixbuf,
+			    PRODUCT_NAME, p->name,
+			    PRODUCT_DESC, p->description,
+			    PRODUCT_DATA, p,
+			    -1);
+}
+
+static void
+add_products (gpointer key, BugzillaBTS *bts, GtkListStore *store)
+{
+	g_hash_table_foreach (bts->products, (GHFunc)add_product, store);
+}
+
+static void
+add_application (BugzillaApplication *app, GtkListStore *store)
+{
+	GtkTreeIter iter;
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
+			    PRODUCT_ICON, app->pixbuf,
+			    PRODUCT_NAME, app->name,
+			    PRODUCT_DESC, app->comment,
+			    PRODUCT_DATA, app,
+			    -1);
+}
+
+void
+products_list_load (void)
+{
+	GtkTreeView *view;
+	GtkListStore *store;
+
+	view = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
+	g_object_get (G_OBJECT (view), "model", &store, NULL);
+	gtk_list_store_clear (store);
+
+	druid_data.product = NULL;
+
+	if (druid_data.show_products) {
+		if (druid_data.download_in_progress)
+			return;
+		g_hash_table_foreach (druid_data.bugzillas, (GHFunc)add_products, store);
+	} else {
+		g_slist_foreach (druid_data.applications, (GFunc)add_application, store);
+	}
+	gtk_tree_view_columns_autosize (view);
 }
 
 void

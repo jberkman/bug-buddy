@@ -101,6 +101,16 @@ typedef struct {
 	/* gboolean shown : 1; */
 } BugzillaBug;
 
+typedef struct {
+	char *name;
+	char *comment;
+	GdkPixbuf *pixbuf;
+	char *bugzilla;
+	char *product;
+	char *component;
+	char *email;
+} BugzillaApplication;
+
 enum {
 	PRODUCT_ICON,
 	PRODUCT_NAME,
@@ -129,9 +139,11 @@ enum {
 	MOSTFREQ_COLS,
 };
 
+void load_applications (void);
 void load_bugzillas (void);
 void load_bugzilla_xml (void);
 
+void products_list_load (void);
 void bugzilla_product_add_components_to_clist (BugzillaProduct *product);
 
 gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);
