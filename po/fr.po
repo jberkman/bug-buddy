@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.0.6\n"
-"POT-Creation-Date: 2001-08-06 17:14-0400\n"
-"PO-Revision-Date: 2001-06-22 19:08+0200\n"
+"Project-Id-Version: bug-buddy 2.0.8\n"
+"POT-Creation-Date: 2001-08-16 10:00+0200\n"
+"PO-Revision-Date: 2001-08-16 09:51+0200\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -198,7 +198,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Erreur en lecture... abandon"
 
-#: src/gdb-buddy.c:249
+#: src/gdb-buddy.c:248
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -206,7 +206,7 @@ msgstr ""
 "GDB ne peut etre trouvé sur votre système.\n"
 "Les informations de débogage ne seront pas obtenu."
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:273
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -214,7 +214,7 @@ msgstr ""
 "Ne peut trouver le fichier gdb-cmd.\n"
 "Essayez de réinstaller Bug Buddy."
 
-#: src/gdb-buddy.c:283 src/util.c:76
+#: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
 msgstr "Erreur sur fork()."
 
@@ -254,12 +254,11 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy peut envoyer des information de débogage avec votre\n"
-"rapport d'anomalie.\n"
-"Les options corrects doivent avoir été sélectionné pour vous\n"
+"Bug Buddy peut envoyer des information de débogage avec votre rapport "
+"d'anomalies.\n"
+"Les options corrects doivent avoir été sélectionné pour vous "
 "automatiquement.\n"
-"Pour plus d'information, veuillez cliquer sur le bouton d'aide\n"
-"ci-dessous."
+"Pour plus d'information, veuillez cliquer sur le bouton d'aide ci-dessous."
 
 #: src/bug-buddy.glade.h:12
 msgid "Bug tracking system"
@@ -320,7 +319,7 @@ msgstr "Veuillez choisir un composant, une version, et un niveau de sévérité."
 
 #: src/bug-buddy.glade.h:26
 msgid "Please make your bug report in English, if possible."
-msgstr "Veillez faire votre rapport d'anomalies en anglais, si possible."
+msgstr "Veuillez faire votre rapport d'anomalies en anglais, si possible."
 
 #: src/bug-buddy.glade.h:27
 msgid "Please select the product for the bug you wish to report."
@@ -403,14 +402,14 @@ msgid ""
 "when a fixed version is available."
 msgstr ""
 "Ce programme vous guidera a travers les étapes de\n"
-"transmission d'un rapport d'anomalies poour un projet\n"
+"transmission d'un rapport d'anomalies pour un projet\n"
 "comme GNOME.\n"
 "\n"
 "Ces rapports d'anomalies sont transmis par courrier\n"
 "électronique, aussi veuillez spécifier votre adresse\n"
-"électronique afin que vous puissiez etre contacté si\n"
-"de plus ample informations sont nécessaire, ou lorsque\n"
-"une version corrigée est disponible."
+"électronique afin que vous puissiez être contacté si\n"
+"de plus amples informations étaient nécessaire, ou\n"
+"lorsque une version corrigée est disponible."
 
 #: src/bug-buddy.glade.h:50
 msgid "To"
@@ -542,7 +541,7 @@ msgstr "« %s » ne semble pas être un fichier texte."
 #: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
-"Vous devez inclure un sujet compréhensible dans votre rapport d'anomalie."
+"Vous devez inclure un sujet compréhensible dans votre rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
@@ -591,15 +590,15 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
-msgstr "Vous devez spécifier un produit dans votre rapport d'anomalie."
+msgstr "Vous devez spécifier un produit dans votre rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
-msgstr "Vous devez spécifier un composant dans votre rapport d'anomalie."
+msgstr "Vous devez spécifier un composant dans votre rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
-msgstr "Vous devez spécifier une version dans votre rapport d'anomalie."
+msgstr "Vous devez spécifier une version dans votre rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:558
 msgid ""
@@ -677,7 +676,7 @@ msgstr "Crée un rapport d'anomalies pour GNOME"
 #~ "in your bug report."
 #~ msgstr ""
 #~ "Vous devez inclure un sujet et une description\n"
-#~ "dans votre rapport d'anomalie."
+#~ "dans votre rapport d'anomalies."
 
 #~ msgid ""
 #~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
