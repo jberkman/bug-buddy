@@ -5,6 +5,8 @@
 	it exists  (based on a patch from Ali Abdin 
 	<ALIABDIN@aucegypt.edu>)
 	(on_action_page_next): fix something dumb
+	(on_complete_page_finish): we don't need -t and the
+	address
 
 1999-11-10  Jacob Berkman  <jberkman@andrew.cmu.edu>
 

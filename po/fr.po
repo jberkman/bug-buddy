@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-11-10 22:58-0500\n"
+"POT-Creation-Date: 1999-11-11 00:32-0500\n"
 "PO-Revision-Date: 1999-10-30 00:33+02:00\n"
 "Last-Translator: Hervé Dréau <hdreau@cybercable.fr>\n"
 "Language-Team:GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
@@ -230,25 +230,32 @@ msgstr ""
 "Impossible de procéder à l'examen du fichier core avec gdb :\n"
 "'%s' "
 
-#: src/bug-buddy.c:608
+#: src/bug-buddy.c:606
 msgid "Please choose a file to save to."
 msgstr ""
 
-#: src/bug-buddy.c:621
+#: src/bug-buddy.c:613
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+
+#: src/bug-buddy.c:631
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Impossible d'éxécuter le commande '%s'"
 
-#: src/bug-buddy.c:626
+#: src/bug-buddy.c:636
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Erreur en lisant l'entrée de '%s'"
 
-#: src/bug-buddy.c:854
+#: src/bug-buddy.c:864
 msgid "Could not find a mail program.\n"
 msgstr "Imposible de trouver un prgramme de messagerie.\n"
 
-#: src/bug-buddy.c:863
+#: src/bug-buddy.c:873
 #, fuzzy, c-format
 msgid ""
 "Could not find our glade file '%s'\n"
@@ -257,7 +264,7 @@ msgstr ""
 "Impossible de trouver le fichier bug-budd.glade\n"
 "Vérifiez que bug-buddy a été correctement installé."
 
-#: src/bug-buddy.c:875
+#: src/bug-buddy.c:885
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "Le fichier XML '%s' ne peut pas être chargé"

@@ -448,9 +448,9 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		s2 = s;
 		/* fall through */
 	case SUBMIT_REPORT:
-		s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);
-		g_message ("about to run '%s'", s3);
-		fp = popen (s3, "w");
+		/*s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);*/
+		g_message ("about to run '%s'", druid_data.mail_cmd);
+		fp = popen (druid_data.mail_cmd, "w");
 		if (!fp) {
 			s = g_strdup_printf (_("Unable to start mail program:\n"
 					       "'%s'"), druid_data.mail_cmd);
@@ -856,11 +856,11 @@ main (int argc, char *argv[])
 
 	/* from gnome-bug */
 	if (g_file_exists ("/usr/sbin/sendmail"))
-		druid_data.mail_cmd = "/usr/sbin/sendmail -t ";
+		druid_data.mail_cmd = "/usr/sbin/sendmail -t";
 	else if (g_file_exists ("/usr/lib/sendmail"))
-		druid_data.mail_cmd = "/usr/lib/sendmail -t ";
+		druid_data.mail_cmd = "/usr/lib/sendmail -t";
 	else if ( !(druid_data.mail_cmd = 
-		    gnome_is_program_in_path ("rmail ")) ) {
+		    gnome_is_program_in_path ("rmail")) ) {
 		GtkWidget *d = gnome_error_dialog (_("Could not find a mail program.\n"));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return 0;
