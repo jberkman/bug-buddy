@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-02-11 14:13-0500\n"
+"POT-Creation-Date: 2001-02-14 11:31+0200\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -71,13 +71,12 @@ msgid "crashed application"
 msgstr "Вибер╕ть виконуваний файл, що зазна╓ збою"
 
 #: src/bug-buddy.c:77
-#, fuzzy
 msgid "core file"
 msgstr "Файл core"
 
 #: src/bug-buddy.c:78
 msgid "nothing"
-msgstr ""
+msgstr "н╕чого"
 
 #: src/bug-buddy.c:83
 msgid "Create a new bug report"
@@ -167,16 +166,16 @@ msgstr ""
 "\n"
 "Будь ласка, вкаж╕ть пакет"
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
 msgid "The specified file does not exist."
 msgstr "Вказаного файлу нема╓."
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
 #, c-format
 msgid "File is of type: %s"
 msgstr "Тип файлу: %s"
 
-#: src/bug-buddy.c:390
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "\"%s\" не схожий на текстовий файл."
@@ -189,11 +188,11 @@ msgstr ""
 "Вам необх╕дно вставити заголовок та опис\n"
 "у ваш зв╕т."
 
-#: src/bug-buddy.c:522
+#: src/bug-buddy.c:522 src/united-states-of-bug-buddy.c:255
 msgid "Please enter your name."
 msgstr "Введ╕ть ваше ╕м'я."
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
 msgid "Please enter a valid email address."
 msgstr "Введ╕ть вашу електронну адресу."
 
@@ -210,27 +209,27 @@ msgstr ""
 "\n"
 "Вказати нове м╕сце знаходження sendmail?"
 
-#: src/bug-buddy.c:590
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Не вдалося в╕дкити файл: \"%s\""
 
-#: src/bug-buddy.c:604
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
 #, c-format
 msgid "about to run '%s'"
 msgstr "запуск \"%s\""
 
-#: src/bug-buddy.c:608
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Не вдалося запустити програму: \"%s\""
 
-#: src/bug-buddy.c:637
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваш зв╕т було збережено в \"%s\""
 
-#: src/bug-buddy.c:640
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -261,7 +260,7 @@ msgstr ""
 "Файл \"%s\" вже ╕сну╓.\n"
 "Переписати його?"
 
-#: src/bug-buddy.c:847 src/glade-strings.c:70
+#: src/bug-buddy.c:847 src/glade-strings.c:69
 msgid "About"
 msgstr "Про"
 
@@ -281,10 +280,10 @@ msgstr "Поновити"
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Не можливо в╕дкрити \"%s\".\n"
-"Будь ласка, пересв╕дчитесь, що bug-buddy ╕нстальовано коректно."
+"Не вдалося в╕дкрити \"%s\".\n"
+"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/bug-buddy.c:1144
 msgid ""
@@ -303,18 +302,18 @@ msgstr ""
 "зам╕сть $GNOME_CRASHED_PID."
 
 #: src/bug-buddy.c:1251
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Не можливо в╕дкрити \"%s\".\n"
-"Будь ласка, пересв╕дчитесь, що bug-buddy ╕нстальовано коректно."
+"Не можливо завантажити \"%s\".\n"
+"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/gdb-buddy.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "отримання страси стеку... (%d)"
+msgstr "Отримання страси стеку... (%d)"
 
 #: src/gdb-buddy.c:153
 #, c-format
@@ -362,9 +361,8 @@ msgstr "Помилка на fork()."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-#, fuzzy
 msgid "Bug Buddy"
-msgstr "bug-buddy"
+msgstr "Bug Buddy"
 
 #: src/glade-strings.c:8
 msgid ""
@@ -378,26 +376,24 @@ msgid ""
 msgstr ""
 
 #: src/glade-strings.c:15
-#, fuzzy
 msgid "Skip this step in the future"
-msgstr "Пропустити цей крок"
+msgstr "Пропускати цей крок у майбутньому"
 
 #: src/glade-strings.c:16
-#, fuzzy
 msgid "Name"
-msgstr "Ваше ╕м'я"
+msgstr "╤м'я"
 
 #: src/glade-strings.c:17
 msgid "Sendmail"
-msgstr ""
+msgstr "Sendmail"
 
 #: src/glade-strings.c:18
 msgid "Email"
-msgstr ""
+msgstr "Електронна адреса"
 
 #: src/glade-strings.c:19
 msgid "intro"
-msgstr ""
+msgstr "вступ"
 
 #: src/glade-strings.c:20
 msgid ""
@@ -415,9 +411,8 @@ msgid "Go"
 msgstr ""
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid "Binary file"
-msgstr "Виконуваний файл"
+msgstr "Дв╕йковий файл"
 
 #: src/glade-strings.c:27
 msgid "Process ID"
@@ -428,13 +423,12 @@ msgid "Core file"
 msgstr "Файл core"
 
 #: src/glade-strings.c:29
-#, fuzzy
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Автоматично переходити на нову стор╕нку по завершенню"
+msgstr "Автоматично переходити на нову стор╕нку по завершенню налагодження"
 
 #: src/glade-strings.c:30
 msgid "gdb"
-msgstr ""
+msgstr "gdb"
 
 #: src/glade-strings.c:31
 msgid "Please make your bug report in English, if possible."
@@ -454,7 +448,7 @@ msgstr "Долучити текстовий файл"
 
 #: src/glade-strings.c:35
 msgid "desc"
-msgstr ""
+msgstr "опис"
 
 #: src/glade-strings.c:36
 msgid ""
@@ -467,11 +461,10 @@ msgid "Saving:"
 msgstr ""
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "To:"
-msgstr "До"
+msgstr "До:"
 
-#: src/glade-strings.c:40 src/glade-strings.c:57
+#: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
 msgstr "%P %%"
 
@@ -483,118 +476,195 @@ msgstr ""
 msgid "Please select the product for the bug you wish to report."
 msgstr ""
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:43 src/united-states-of-bug-buddy.c:45
 msgid "Product"
-msgstr ""
+msgstr "Продукт"
 
-#: src/glade-strings.c:44 src/glade-strings.c:50
+#: src/glade-strings.c:44 src/glade-strings.c:49
 msgid "Description"
 msgstr "Опис"
 
 #: src/glade-strings.c:45
-msgid "Show products for"
-msgstr ""
-
-#: src/glade-strings.c:46
-#, fuzzy
-msgid "bug tracking systems."
+msgid "Bug tracking system"
 msgstr "Система в╕дсл╕дковування помилок"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:46
 msgid "product"
-msgstr ""
+msgstr "продукт"
 
-#: src/glade-strings.c:48
+#: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
 msgstr ""
 
-#: src/glade-strings.c:49
-#, fuzzy
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 msgid "Component"
-msgstr "Вм╕ст"
+msgstr "Компонент"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:50
 msgid "Version"
 msgstr "Верс╕я"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:51
 msgid "Severity"
 msgstr "Важлив╕сть"
 
+#: src/glade-strings.c:52
+msgid "component"
+msgstr "компонент"
+
 #: src/glade-strings.c:53
 #, fuzzy
-msgid "component"
-msgstr "Вм╕ст"
-
-#: src/glade-strings.c:54
-#, fuzzy
 msgid ""
-"Please wait while bug-buddy determines some information about your system."
+"Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "Будь ласка, закечайте поки збира╓ться\n"
 "налагоджувальна ╕нформац╕я..."
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:54
 msgid "Package"
 msgstr "Пакет"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "╤нстальована верс╕я"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "Автоматично переходити на нову стор╕нку по завершенню"
 
-#: src/glade-strings.c:59
-#, fuzzy
+#: src/glade-strings.c:58
 msgid "system"
-msgstr "Система"
+msgstr "система"
+
+#: src/glade-strings.c:59
+msgid "Select an action"
+msgstr "Вибер╕ть д╕ю"
 
 #: src/glade-strings.c:60
-#, fuzzy
-msgid "Select an action"
-msgstr "Вибер╕ть core-файл"
+msgid "Cc"
+msgstr "Коп╕я"
 
 #: src/glade-strings.c:61
-msgid "Cc"
-msgstr ""
-
-#: src/glade-strings.c:62
 msgid "To"
 msgstr "До"
 
-#: src/glade-strings.c:63
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "В╕д╕слати коп╕ю соб╕"
 
-#: src/glade-strings.c:64
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "Зберегти зв╕т в..."
 
-#: src/glade-strings.c:65
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "Вм╕ст"
 
-#: src/glade-strings.c:66
+#: src/glade-strings.c:65
 msgid "email info"
 msgstr ""
 
-#: src/glade-strings.c:67
+#: src/glade-strings.c:66
 msgid "Assbarn Phenomeon"
 msgstr ""
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:67
 msgid "Submit another bug"
-msgstr ""
+msgstr "П╕дготувати ╕ншу помилку"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:68
 msgid "finished"
+msgstr "завершено"
+
+#: src/glade-strings.c:70
+msgid "Finish"
+msgstr "Завершити"
+
+#: src/united-states-of-bug-buddy.c:41
+msgid "Welcome to Bug Buddy"
+msgstr "Ласкаво просимо у Bug Buddy"
+
+#: src/united-states-of-bug-buddy.c:42
+msgid "Debugging Information"
+msgstr "Налагоджувальна ╕нформац╕я"
+
+#: src/united-states-of-bug-buddy.c:43
+msgid "Bug Description"
+msgstr "Опис помилки"
+
+#: src/united-states-of-bug-buddy.c:44
+msgid "Updating Product Listing"
 msgstr ""
 
-#: src/glade-strings.c:71
-msgid "Finish"
+#: src/united-states-of-bug-buddy.c:47
+msgid "System Configuration"
+msgstr "Системна конф╕гурац╕я"
+
+#: src/united-states-of-bug-buddy.c:48
+msgid "Submitting the Report"
+msgstr "В╕дсилання зв╕ту"
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Finished!"
+msgstr "Завершено!"
+
+#: src/united-states-of-bug-buddy.c:85
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "Граф╕чний ╕нструмент зв╕тування про помилки для GNOME."
+
+#: src/united-states-of-bug-buddy.c:95
+#, fuzzy
+msgid "The lame Bug Buddy web page"
+msgstr "Простенька веб-стор╕нка bug-buddy"
+
+#: src/united-states-of-bug-buddy.c:273
+#, fuzzy, c-format
+msgid ""
+"`%s' doesn't seem to exist.\n"
+"\n"
+"You won't be able to actually submit a bug report, but you will\n"
+"be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
 msgstr ""
+"Зда╓ться, що \"%s\" нема╓.  Ви не зможете зараз в╕д╕слати\n"
+"зв╕т про помилку, але ви можете зберегти його у файл╕.\n"
+"\n"
+"Вказати нове м╕сце знаходження sendmail?"
+
+#: src/united-states-of-bug-buddy.c:343
+#, fuzzy
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr ""
+"Вам необх╕дно вставити заголовок та опис\n"
+"у ваш зв╕т."
+
+#: src/united-states-of-bug-buddy.c:351
+#, fuzzy
+msgid "You must include a comprehensible description in your bug report."
+msgstr ""
+"Вам необх╕дно вставити заголовок та опис\n"
+"у ваш зв╕т."
+
+#: src/united-states-of-bug-buddy.c:466
+msgid "You must specify a product for your bug report."
+msgstr "Необх╕дно вказати продукт для зв╕ту."
+
+#: src/united-states-of-bug-buddy.c:475
+msgid "You must specify a component for your bug report."
+msgstr "Необх╕дно вказати компонент для зв╕ту."
+
+#: src/united-states-of-bug-buddy.c:483
+msgid "You must specify a version for your bug report."
+msgstr "Необх╕дно вказати верс╕ю для зв╕ту."
+
+#: src/united-states-of-bug-buddy.c:512
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
+msgstr ""
+"Ви впевнен╕, що хочете в╕дм╕нити\n"
+"цей зв╕т про помилку?"
 
 #: src/util.c:60
 msgid "Unable to open pipe"
@@ -608,102 +678,3 @@ msgstr "Не вдалося запустити \"%s\"."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Помилка на зчитуванн╕..."
-
-#~ msgid "Collect debugging information from a crashed application"
-#~ msgstr "Збирання налагоджувально╖ ╕нформац╕╖ з програми, що зазнала збою"
-
-#~ msgid "Collect debugging information from a core file"
-#~ msgstr "Збирання налагоджувально╖ ╕нформац╕╖ з файлу core"
-
-#~ msgid "The graphical bug reporting tool for GNOME."
-#~ msgstr "Граф╕чний ╕нструмент зв╕тування про помилки для GNOME."
-
-#~ msgid "The lame bug-buddy web page"
-#~ msgstr "Простенька веб-стор╕нка bug-buddy"
-
-#~ msgid ""
-#~ "Could not find '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Не знайдено \"%s\".\n"
-#~ "Буль ласка, пересв╕дчитесь в тому, що bug-buddy ╕нстальовано кокектно."
-
-#~ msgid "Welcome to the Wonderful World of bug-buddy"
-#~ msgstr "Запрошу╓мо у чудовий св╕т bug-buddy"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process\n"
-#~ "of submitting a bug report.  If this is your first time \n"
-#~ "using bug-buddy, you will be prompted for your\n"
-#~ "email address so that the bug report can be\n"
-#~ "submitted."
-#~ msgstr ""
-#~ "bug-buddy проведе вас процесом п╕дготування зв╕ту про\n"
-#~ "помилку. Якщо ви вперше використову╓те bug-buddy, вас\n"
-#~ "спитають вашу адресу електронно╖ пошти, ╕ п╕сля цього\n"
-#~ "зв╕т може бути п╕дготовано."
-
-#~ msgid "Contact Information"
-#~ msgstr "Контактна ╕нформац╕я"
-
-#~ msgid "Choose which sendmail to use"
-#~ msgstr "Вибер╕ть, який sendmail використовувати"
-
-#~ msgid "Email Address"
-#~ msgstr "Ваша е-адреса"
-
-#~ msgid "Full path of sendmail"
-#~ msgstr "Повний шлях до sendmail"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process of\n"
-#~ "submitting a bug report.  You can click the help\n"
-#~ "button for a more in-depth explanation of the process."
-#~ msgstr ""
-#~ "bug-buddy проведе вас процесом п╕дготування зв╕ту про\n"
-#~ "помилку.  Ви можете клацнути на кнопку дов╕дки\n"
-#~ "для додаткового пояснення сут╕ процесу."
-
-#~ msgid "Report Information"
-#~ msgstr "Дан╕ зв╕ту"
-
-#~ msgid ""
-#~ "Select a bug tracking system to use, and then fill out\n"
-#~ "the remaining information."
-#~ msgstr ""
-#~ "Вибер╕ть систему в╕дсл╕дковування помилок для використання, та введ╕ть\n"
-#~ "╕нформац╕ю, що лишилася."
-
-#~ msgid "Class"
-#~ msgstr "Клас"
-
-#~ msgid ""
-#~ "Please check to see if your bug has already been submitted,\n"
-#~ "and if so, use \"Add information to existing report\" above."
-#~ msgstr ""
-#~ "Перев╕рте що вашу помилку вже було п╕дготовано та, якщо \n"
-#~ "це так, використайте \"Додати ╕нформац╕ю до ╕снуючого зв╕ту\"."
-
-#~ msgid "Bug Number"
-#~ msgstr "Номер помилки"
-
-#~ msgid "Debugging Information"
-#~ msgstr "Налагоджувальна ╕нформац╕я"
-
-#~ msgid "Collecting Debugging Information"
-#~ msgstr "Збирання налагоджувально╖ ╕нформац╕╖"
-
-#~ msgid "System Configuration"
-#~ msgstr "Системна конф╕гурац╕я"
-
-#~ msgid "Please verify that this information is correct"
-#~ msgstr "Будь ласка, перев╕рте, чи ця ╕нформац╕я коректна"
-
-#~ msgid "Submitting the Report"
-#~ msgstr "В╕дсилання зв╕ту"
-
-#~ msgid "Summary"
-#~ msgstr "Резюме"
-
-#~ msgid "The GEGL is watching."
-#~ msgstr "GEGL спостер╕га╓."
