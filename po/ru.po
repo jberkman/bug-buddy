@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
-"PO-Revision-Date: 2000-05-23 22:50+00:00\n"
+"POT-Creation-Date: 2000-10-08 17:49+0400\n"
+"PO-Revision-Date: 2000-10-08 17:51+04:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -137,7 +137,6 @@ msgid "Core file from program"
 msgstr "core-файл программы"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -147,7 +146,7 @@ msgstr ""
 "Гораздо полезнее, если вы укажете\n"
 "более конкретный пакет чем 'general'.\n"
 "\n"
-"Вы хотите продолжать?"
+"Пожалуйста, укажите пакет."
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -184,23 +183,20 @@ msgid "gdb has already exited"
 msgstr "gdb уже закрыт"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "Средство Gnome для сообщения об ошибках"
+msgstr "Графический инструмент Gnome для сообщения об ошибках."
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "Небольшая веб-страничка bug-buddy"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+msgstr "Пожалуйста, введите ваше имя."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+msgstr "Пожалуйста, введите ваш электронный адрес."
 
 #: src/bug-buddy.c:620
 #, c-format
@@ -573,6 +569,3 @@ msgstr "Не удалось запустить '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Ошибка при чтении..."
-
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Авторское право (С) 1999 Jacob Berkman"
