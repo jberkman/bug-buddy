@@ -61,7 +61,7 @@ gchar *s = N_("%P %%");
 gchar *s = N_("Automatically go to next page when complete");
 gchar *s = N_("Submitting the Report");
 gchar *s = N_("Submit bug report\n"
-              "Send to your amail address only\n"
+              "Send to your email address only\n"
               "Save report to file\n"
               "");
 gchar *s = N_("To");

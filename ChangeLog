@@ -1,3 +1,8 @@
+2000-04-18  Karl EICHWALDER  <ke@suse.de>
+
+	* src/bug-buddy.glade: Typo.
+	* src/glade-strings.c (N_): ditto.
+
 2000-04-17  Jacob Berkman  <jacob@helixcode.com>
 
 	* lot's of hacking this weekend

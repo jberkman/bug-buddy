@@ -1644,7 +1644,7 @@ information is collected...</label>
 	  <name>action_option</name>
 	  <can_focus>True</can_focus>
 	  <items>Submit bug report
-Send to your amail address only
+Send to your email address only
 Save report to file
 </items>
 	  <initial_choice>0</initial_choice>
