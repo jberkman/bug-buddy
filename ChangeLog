@@ -1,3 +1,8 @@
+2001-05-31  Karl Eichwalder  <ke@suse.de>
+
+	* .cvsignore: Add xml-i18n-extract, xml-i18n-merge, and
+	xml-i18n-update.
+
 2001-05-30  Karl Eichwalder  <ke@suse.de>
 
 	* Makefile.am (EXTRA_DIST): Add xml-i18n-extract.in

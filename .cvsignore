@@ -19,3 +19,6 @@ Makefile
 bug-buddy.spec
 build-stamp
 install-stamp
+xml-i18n-extract
+xml-i18n-merge
+xml-i18n-update
