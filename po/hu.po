@@ -6,109 +6,109 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2002-06-19 15:19-0400\n"
-"PO-Revision-Date: 2002-05-14 22:33+0200\n"
+"POT-Creation-Date: 2002-08-13 18:25+0200\n"
+"PO-Revision-Date: 2002-08-13 18:30+0200\n"
 "Last-Translator: András Tímár <timar@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:56
 msgid "Submit bug report"
 msgstr "A hibajelentés elküldése"
 
-#: src/bug-buddy.c:56
+#: src/bug-buddy.c:57
 msgid "Only send report to yourself"
 msgstr "Hibajelentés elküldése csak saját címre"
 
-#: src/bug-buddy.c:57
+#: src/bug-buddy.c:58
 msgid "Save report to file"
 msgstr "Hibajelentés fálba mentése"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:63
 msgid "crashed application"
 msgstr "elszállt program"
 
 # src/glade-strings.c:45
-#: src/bug-buddy.c:63
+#: src/bug-buddy.c:64
 msgid "core file"
 msgstr "core fájl"
 
-#: src/bug-buddy.c:64
+#: src/bug-buddy.c:65
 msgid "nothing"
 msgstr "semmi"
 
-#: src/bug-buddy.c:69
+#: src/bug-buddy.c:70
 msgid "Create a new bug report"
 msgstr "Új hibajelentés létrehozása"
 
-#: src/bug-buddy.c:70
+#: src/bug-buddy.c:71
 msgid "Add more information to existing report"
 msgstr "További információ hozzáfűzése egy létező hibajelentéshez"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:80
 msgid "Name of contact"
 msgstr "Kapcsolat neve"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:80
 msgid "NAME"
 msgstr "NÉV"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:81
 msgid "Email address of contact"
 msgstr "Kapcsolat emailcíme"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:81
 msgid "EMAIL"
 msgstr "E-MAIL"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:82
 msgid "Package containing the program"
 msgstr "A programot tartalmazó csomag"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:82
 msgid "PACKAGE"
 msgstr "CSOMAG"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:83
 msgid "Version of the package"
 msgstr "Csomag verziója"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:83
 msgid "VERSION"
 msgstr "VERZIÓ"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:84
 msgid "File name of crashed program"
 msgstr "A hibás program fájlneve"
 
-#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
+#: src/bug-buddy.c:84 src/bug-buddy.c:86 src/bug-buddy.c:87
 msgid "FILE"
 msgstr "FÁJL"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:85
 msgid "PID of crashed program"
 msgstr "A hibás program PID-je"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:85
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:85
+#: src/bug-buddy.c:86
 msgid "Core file from program"
 msgstr "A program core fájlja"
 
-#: src/bug-buddy.c:86
+#: src/bug-buddy.c:87
 msgid "Text file to include in the report"
 msgstr "A jelentésbe ágyazandó szövegfájl"
 
-#: src/bug-buddy.c:96
+#: src/bug-buddy.c:97
 #, c-format
 msgid "Could not find widget named %s at %s"
-msgstr ""
+msgstr "%s nevű widget nem található a következő helyen: %s"
 
-#: src/bug-buddy.c:208
+#: src/bug-buddy.c:209
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -116,33 +116,38 @@ msgstr ""
 "A gdb még nem fejezte be a hibakeresési adatok gyűjtését.\n"
 "Megszakítsam a gdb folyamatot (a stack trace nem lesz teljes)?"
 
-#: src/bug-buddy.c:219 src/gdb-buddy.c:125
+#: src/bug-buddy.c:220 src/gdb-buddy.c:125
 msgid "gdb has already exited"
 msgstr "A gdb már kilépett."
 
-#: src/bug-buddy.c:286
+#: src/bug-buddy.c:250
 msgid "Save Backtrace"
 msgstr "Backtrace mentése"
 
-#: src/bug-buddy.c:305
+#: src/bug-buddy.c:267
 #, c-format
 msgid ""
-"There was an error trying to save %s:\n"
+"The stack trace was not saved in %s:\n"
 "\n"
 "%s\n"
 "\n"
 "Please choose another file and try again."
 msgstr ""
+"A stack trace mentése nem sikerült: %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Válassz másik fájlt, és próbáld újra!"
 
-#: src/bug-buddy.c:402
+#: src/bug-buddy.c:360
 msgid "_Start Mailer"
 msgstr "_Levélküldő indítása"
 
-#: src/bug-buddy.c:406
+#: src/bug-buddy.c:364
 msgid "_Send Report"
 msgstr "_Jelentés küldése"
 
-#: src/bug-buddy.c:443
+#: src/bug-buddy.c:401
 #, c-format
 msgid ""
 "There was an error showing the proxy settings:\n"
@@ -151,16 +156,21 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Hiba történt a proxybeállítások megjelenítése közben:\n"
+"\n"
+"%s\n"
+"\n"
+"Ellenőrizd, hogy a GNOME Vezérlőpult megfelelően van-e telepítve."
 
-#: src/bug-buddy.c:491
+#: src/bug-buddy.c:449
 msgid "Hide Debugging Options"
 msgstr "Debug információ elrejtése"
 
-#: src/bug-buddy.c:492
+#: src/bug-buddy.c:450
 msgid "Show Debugging Options"
 msgstr "Debug információ megjelenítése"
 
-#: src/bug-buddy.c:556
+#: src/bug-buddy.c:514
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -168,7 +178,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME már elavult.\n"
 "Kérlek használd helyette a --appname parancssori kapcsolót."
 
-#: src/bug-buddy.c:566
+#: src/bug-buddy.c:524
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -176,33 +186,42 @@ msgstr ""
 "$GNOME_CRASHED_PID már elavult\n"
 "Kérlek használd helyette a --pid parancssori kapcsolót."
 
-#: src/bug-buddy.c:582
+#: src/bug-buddy.c:540
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr ""
+"Üdvözöl a Bug Buddy, a GNOME hibabejelentő eszköze.\n"
+"A program segít végigmenni a hibajelentés elkészítésének lépésein."
 
-#: src/bug-buddy.c:585
+#: src/bug-buddy.c:543
 msgid ""
 "\n"
 "\n"
 "You are seeing this because another application has crashed."
 msgstr ""
+"\n"
+"\n"
+"Azért jelent meg ez az üzenet, mert egy másik alkalmazás is összeomlott."
 
-#: src/bug-buddy.c:588
+#: src/bug-buddy.c:546
 msgid ""
 "\n"
 "\n"
 "Please wait a few moments while Bug Buddy obtains debugging information from "
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
 msgstr ""
+"\n"
+"\n"
+"Várj egy kicsit, amíg a Bug Buddy hibakövetési adatokat szerez az "
+"alkalmazástól. Ezek az adatok használhatóbb hibajelentéseket eredményeznek."
 
-#: src/bug-buddy.c:727
+#: src/bug-buddy.c:685
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "A kép nem található: %s (%d)\n"
 
-#: src/bug-buddy.c:794
+#: src/bug-buddy.c:752
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -224,9 +243,8 @@ msgid "*"
 msgstr "*"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
 msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -261,6 +279,10 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
+"A Bug Buddy e-mailben küldi el a hibajelentést.\n"
+"Add meg, hogy küldjön levelet a Bug Buddy.\n"
+"Ha az alapértelmezett GNOME levelezőt választod, akkor\n"
+"néhány másik GNOME alkalmazással közös lesz ez a beállítás."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
@@ -392,7 +414,7 @@ msgstr "_Debug információ megjelenítése"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
-msgstr ""
+msgstr "Leggyakoribb hibák megjelenítése ebben:"
 
 #: src/bug-buddy.glade.h:46
 msgid "Simple"
@@ -539,7 +561,7 @@ msgstr "URI"
 
 #: src/cell-renderer-uri.c:146
 msgid "URI to show when clicked."
-msgstr ""
+msgstr "A kattintás után megjelenítendő URI"
 
 #: src/cell-renderer-uri.c:153
 msgid "Visited"
@@ -547,7 +569,7 @@ msgstr "Látogatott"
 
 #: src/cell-renderer-uri.c:154
 msgid "If the URI has been visited before."
-msgstr ""
+msgstr "Ha az URI-t már meglátogattad valaha"
 
 #: src/config.c:75
 msgid "Evolution"
@@ -558,7 +580,7 @@ msgstr "Evolution"
 msgid "Obtaining stack trace... (%d)"
 msgstr "Verem információ (stack trace) lekérdezése... (%d)"
 
-#: src/gdb-buddy.c:165
+#: src/gdb-buddy.c:175
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -567,7 +589,7 @@ msgstr ""
 "Nem sikerült a core fájlt gdb-vel feldolgozni:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:196
+#: src/gdb-buddy.c:206
 #, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
@@ -576,11 +598,11 @@ msgstr ""
 "A GBD nem tudta megállapítani, hogy melyik bináris\n"
 "hozta létre '%s'-t."
 
-#: src/gdb-buddy.c:228
+#: src/gdb-buddy.c:238
 msgid "Error on read... aborting"
 msgstr "Hiba történt olvasás közben... kilépés"
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:288
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -588,7 +610,7 @@ msgstr ""
 "A GDB nem található a rendszereden.\n"
 "A hibakeresési adatok gyűjtése elmarad."
 
-#: src/gdb-buddy.c:308
+#: src/gdb-buddy.c:322
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -596,9 +618,63 @@ msgstr ""
 "A gdb-cmd file nem található\n"
 "Próbáld orvosolni a Bug Buddy újratelepítésével."
 
-#: src/gdb-buddy.c:328
+#: src/gdb-buddy.c:342
 msgid "There was an error running gdb."
 msgstr "Hiba történt a gdb futtatása közben."
+
+#: src/save-buddy.c:83
+#, c-format
+msgid "Could not read symbolic link information for %s"
+msgstr "Nem olvasható a szimbolikus link adata: %s"
+
+#: src/save-buddy.c:129
+msgid "The file has too many symbolic links."
+msgstr "A fájl túl sok szimbolikus linkkel rendelkezik."
+
+#: src/save-buddy.c:169
+msgid "Invalid filename."
+msgstr "Érvénytelen fájlnév."
+
+#: src/save-buddy.c:194
+#, c-format
+msgid ""
+"There already exists a file name '%s'.\n"
+"\n"
+"Do you wish to overwrite this file?"
+msgstr ""
+"'%s' nevű fájl már létezik. \n"
+"\n"
+"Felülírjam?"
+
+#: src/save-buddy.c:199
+msgid "_Overwrite"
+msgstr "_Felülírás"
+
+#: src/save-buddy.c:207
+msgid "The file already exists."
+msgstr "A fájl már létezik."
+
+#: src/save-buddy.c:306
+msgid ""
+"There is not enough disk space to save the file.\n"
+"Please free some disk space and try again."
+msgstr ""
+"Nincs elég hely a lemezen a fájl mentéséhez.\n"
+"Szabadíts fel lemezhelyet, és próbáld újra."
+
+#: src/save-buddy.c:311
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes.  Please try saving a smaller file or saving it to a disk that does "
+"not have this limitation."
+msgstr ""
+"A lemez, amelyre menteni kívánod a fájlt, a fájlméretet korlátozza. Próbálj "
+"kisebb fájlt menteni, vagy ments olyan lemezre, amelyet nem érint ez a "
+"korlátozás."
+
+#: src/save-buddy.c:349
+msgid "Could not create a backup file."
+msgstr "A biztonsági mentés lértehozása nem sikerült."
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
@@ -655,6 +731,9 @@ msgid ""
 "\n"
 "Please check the path to sendmail again."
 msgstr ""
+"'%s' nem létezik.\n"
+"\n"
+"Ellenőrizd a sendmail elérési útját!"
 
 #: src/united-states-of-bug-buddy.c:357
 msgid "Please enter a valid email command."
@@ -676,6 +755,9 @@ msgid ""
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
+"'%s' fájl típusa %s.\n"
+"\n"
+"A Bug Buddy csak sima szövegben (text/*) tudja elküldeni a jelentést."
 
 #: src/united-states-of-bug-buddy.c:458
 msgid "You must include a comprehensible subject line in your bug report."
@@ -741,6 +823,8 @@ msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr ""
+"Mivel a Bug Buddy nem ismeri azt a programot, amihez hibajelentést szeretnél "
+"feladni, kézzel kell beírnod, hogy kinek címzed a hibajelentést."
 
 #: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
@@ -760,6 +844,9 @@ msgid ""
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
+"A kiválasztott levelezőprogram elindult. Nézd át még egyszer, és küldd el!\n"
+"\n"
+"Köszönjük a hibajelentést."
 
 #: src/united-states-of-bug-buddy.c:812
 msgid ""
@@ -949,11 +1036,6 @@ msgstr ""
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "Kérlek adj meg egy fájlnevet a mentéshez."
-
-#~ msgid ""
-#~ "The file '%s' already exists.\n"
-#~ "Overwrite this file?"
-#~ msgstr "'%s' már létezik. Felülírjam?"
 
 #~ msgid "Help"
 #~ msgstr "Súgó"
