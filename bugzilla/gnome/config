@@ -10,6 +10,7 @@
     <severity>enhancement</severity>
   </severities>
   <priorities>
+    <priority>Immediate</priority>
     <priority>Urgent</priority>
     <priority>High</priority>
     <priority>Normal</priority>

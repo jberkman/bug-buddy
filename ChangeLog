@@ -1,3 +1,23 @@
+2002-03-18  jacob berkman  <jacob@ximian.com>
+
+	* NEWS: 
+	* configure.in: 2.1.4
+
+	* docs/C/bug-buddy.sgml: remove
+	
+	* Makefile.am (SUBDIRS): re-add docs
+
+	* docs/C/bug-buddy.xml: updated per patch from Kevin Conder
+	<kevin@kevindumpscore.com> for bug #71189
+
+	* bugzilla/*: update files
+	
+	* src/bug-buddy.glade: set the default button to Forward, not
+	Back.
+
+	* src/gdb-buddy.c (get_trace_from_pair): add a message saying
+	which program generated the core file
+
 2002-03-14  jacob berkman  <jacob@ximian.com>
 
 	* src/united-states-of-bug-buddy.c (submit_ok): fix up some memory

@@ -37,6 +37,7 @@
     <component initialowner="18" description="Evolution's pretty images." initialqacontact="3661" value="Icons and Artwork" />
     <component initialowner="330" description="Library for handling iCalendar data." initialqacontact="3661" value="libical" />
     <component initialowner="27" description="User Docs" initialqacontact="3661" value="User Documentation" />
+    <component initialowner="12" description="Bugs in the Ximian Connector for Exchange that don't belong in Mail, Calendar, or Contacts" initialqacontact="3661" value="Connector" />
     <version value="unspecified" />
     <version value="0.8" />
     <version value="post-0.8" />
@@ -88,6 +89,10 @@
     <component initialowner="191" description="General Red Carpet issues" initialqacontact="4235" value="Red Carpet" />
     <component initialowner="191" description="bugs against the installer should go here." initialqacontact="4235" value="Installer" />
     <component initialowner="170" description="Problems with the Red Carpet server, including bad XML and missing packages. Please don't file 'it's slow'- we know that already :)" initialqacontact="3545" value="Server" />
+    <component initialowner="191" description="Transfer Problems." initialqacontact="4235" value="Transfer Library" />
+    <component initialowner="191" description="Report here any type of dependency resolution problems." initialqacontact="4235" value="Dependency Resolution" />
+    <component initialowner="191" description="Problems related to rpmlib crashes, dpkg config bugs, etc." initialqacontact="4235" value="Package Backend" />
+    <component initialowner="191" description="Problems related to the autopull client." initialqacontact="4235" value="Autopull" />
     <version value="unspecified" />
     <version value="0.9" />
     <version value="0.9.1" />
@@ -107,6 +112,8 @@
     <version value="1.2" />
     <version value="1.2.1" />
     <version value="1.2.2" />
+    <version value="1.2.3" />
+    <version value="1.2.99" />
   </product>
   <product votestoconfirm="0" description="The Ximian Setup Tools simplify workstation system configuration" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Setup Tools">
     <component initialowner="143" description="The network interfaces / DNS settings tool." initialqacontact="1569" value="network" />
@@ -256,6 +263,15 @@
     <component initialowner="170" description="gnome-spell packages" initialqacontact="3545" value="gnome-spell" />
     <component initialowner="170" description="galeon web browser" initialqacontact="3545" value="galeon" />
     <component initialowner="170" description="Use this component for packaging bugs in the ximian-setup-tools packages.  Use the ximian-setup-tools product to report bugs in the software independent of the packaging." initialqacontact="3545" value="ximian-setup-tools" />
+    <component initialowner="170" description="The RPM package management system." initialqacontact="3545" value="rpm" />
+    <component initialowner="170" description="SVG theme for Nautilus" initialqacontact="3545" value="scalable gorilla" />
+    <component initialowner="170" description="PNG version of the Gorilla theme for Nautilus." initialqacontact="3545" value="Unscalable Gorilla" />
+    <component initialowner="170" description="Unicode library" initialqacontact="3545" value="libunicode" />
+    <component initialowner="170" description="Ximian South theme for Nautilus" initialqacontact="3545" value="Ximian South" />
+    <component initialowner="170" description="Ximian North theme for Nautilus" initialqacontact="3545" value="Ximian North" />
+    <component initialowner="170" description="Gorilla theme for Sawfish" initialqacontact="3545" value="sawfish-gorilla" />
+    <component initialowner="170" description="spelling checker" initialqacontact="3545" value="aspell" />
+    <component initialowner="170" description="spellchecking library" initialqacontact="3545" value="pspell" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="bonobo component for spell checking" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gnome-spell">
@@ -263,18 +279,19 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The Mono C# compiler" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono/MCS">
-    <component initialowner="1523" description="Misc bugs for C# compiler" initialqacontact="1038" value="Misc" />
+    <component initialowner="4536" description="Misc bugs for C# compiler" initialqacontact="4536" value="Misc" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The Mono Class Libraries" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono/Class Libraries">
-    <component initialowner="1525" description="CORLIB assembly" initialqacontact="1038" value="CORLIB" />
-    <component initialowner="1525" description="System assembly" initialqacontact="1038" value="System" />
-    <component initialowner="1525" description="System.Web assembly" initialqacontact="1038" value="System.Web" />
-    <component initialowner="1525" description="System.XML assembly" initialqacontact="1038" value="System.XML" />
+    <component initialowner="4536" description="CORLIB assembly" initialqacontact="4536" value="CORLIB" />
+    <component initialowner="4536" description="System assembly" initialqacontact="4536" value="System" />
+    <component initialowner="4536" description="System.Web assembly" initialqacontact="4536" value="System.Web" />
+    <component initialowner="4536" description="System.XML assembly" initialqacontact="4536" value="System.XML" />
+    <component initialowner="264" description="OleDb provider for ADO.NET implementation" initialqacontact="4536" value="System.Data.OleDb" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="Mono Runtime" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono/Runtime">
-    <component initialowner="1524" description="Misc bugs for Mono Runtime" initialqacontact="1038" value="misc" />
+    <component initialowner="4536" description="Misc bugs for Mono Runtime" initialqacontact="4536" value="misc" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="This is mainly for internal use, but can be used by the public when
@@ -384,7 +401,6 @@
     <component initialowner="3144" description="pan" initialqacontact="2219" value="pan" />
     <component initialowner="3144" description="pilot-link" initialqacontact="2219" value="pilot-link" />
     <component initialowner="3144" description="popt" initialqacontact="2219" value="popt" />
-    <component initialowner="3144" description="red-carpet" initialqacontact="2219" value="red-carpet" />
     <component initialowner="3144" description="rep-gtk" initialqacontact="2219" value="rep-gtk" />
     <component initialowner="3144" description="sane" initialqacontact="2219" value="sane" />
     <component initialowner="3144" description="sawfish" initialqacontact="2219" value="sawfish" />
@@ -430,6 +446,44 @@
     <component initialowner="3144" description="The release procedures for Ximian GNOME" initialqacontact="2219" value="Release procedure" />
     <component initialowner="3144" description="gnome-spell packages" initialqacontact="2219" value="gnome-spell" />
     <component initialowner="3144" description="galeon web browser" initialqacontact="2219" value="galeon" />
+    <component initialowner="3144" description="SVG-based theme for Nautilus" initialqacontact="2219" value="Scalable Gorilla" />
+    <component initialowner="3144" description="PNG version of Gorilla theme for Nautilus" initialqacontact="2219" value="Unscalable Gorilla" />
+    <component initialowner="3144" description="Unicode library" initialqacontact="2219" value="libunicode" />
     <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="Tasks to be performed by Ximian's GNOME 2 team" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GNOME 2 Tasks">
+    <component initialowner="37" description="Porting GNOME 1.4 code to the GNOME 2.0 platform." initialqacontact="37" value="1.4 -&gt; 2.0 porting" />
+    <component initialowner="37" description="Ensuring the functional quality on Solaris" initialqacontact="37" value="Solaris porting" />
+    <component initialowner="37" description="Adding accessible interfaces to GNOME applications" initialqacontact="37" value="Accessibility Enhancement" />
+    <component initialowner="37" description="Implementing features and applications that GNOME lacks but CDE has" initialqacontact="37" value="Building CDE equivalent features" />
+    <component initialowner="37" description="Tasks to help the GNOME 2 community" initialqacontact="37" value="Community Engagement" />
+    <version value="ongoing" />
+    <version value="0%" />
+    <version value="10%" />
+    <version value="20%" />
+    <version value="30%" />
+    <version value="40%" />
+    <version value="50%" />
+    <version value="60%" />
+    <version value="70%" />
+    <version value="80%" />
+    <version value="90%" />
+    <version value="95%" />
+    <version value="done" />
+  </product>
+  <product votestoconfirm="0" description="Task management for the Mono project." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono Tasks">
+    <version value="0%" />
+    <version value="10%" />
+    <version value="20%" />
+    <version value="30%" />
+    <version value="40%" />
+    <version value="50%" />
+    <version value="60%" />
+    <version value="70%" />
+    <version value="80%" />
+    <version value="90%" />
+    <version value="95%" />
+    <version value="done" />
+    <version value="ongoing" />
   </product>
 </products>

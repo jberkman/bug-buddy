@@ -2,7 +2,7 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 <!ENTITY legal SYSTEM "legal.xml">
-<!ENTITY version "1.90"> 
+<!ENTITY version "2.0.6"> 
 ]>
 
 <article id="index">
@@ -63,9 +63,8 @@
   </authorgroup>
 
   <releaseinfo> 
-    Manual version 0.3: added licence of program (GPL): rewrote docs
-    substantially because the program has changed a great deal.
-  </releaseinfo>
+    Manual version 2.0.6: updated the manual for Gnome 2.0.
+  </releaseinfo> 
  </articleinfo>
 
  <sect1 id="intro">
@@ -87,9 +86,8 @@
      recently. 
    </para>
    <para>
-     The Gnome bugtracking system is moving from the email-based 
-     <ulink url="http://bugs.gnome.org/" type="http">debbugs 
-     installation</ulink> which it originally used to the web-based
+     The Gnome bug tracking system is moving from the email-based 
+     debbugs installation which it originally used to the web-based
      <ulink url="http://bugzilla.gnome.org/" type="http">bugzilla 
      installation</ulink>. This is to help deal with bugs more efficiently.
      This means <application>Bug Buddy</application> has been substantially 
@@ -100,7 +98,7 @@
    </para>
    <para>
      This also means that <application>Bug Buddy</application> has currently
-     lost the ability to send bugs to the KDE and Debian bug-trackers
+     lost the ability to send bugs to the KDE and Debian bug trackers
      directly. Note that you can still save reports for those into a file 
      and then mail the file to those trackers yourself.
    </para>
@@ -290,17 +288,77 @@
 
  <sect1 id="description">
   <title>Bug Description</title>
-  <para>
-    The <guilabel>Short subject for the bug report</guilabel> section
-    will be used as the "Subject" header of the emailed bug report,
-    which will turn into a "Summary" line in Bugzilla. Good subject
-    lines are specific and do not just say "Bug" or "It crashed". 
-    "Crash when I try to save" or "Forgets my preferences" are much 
-    better. Hackers will read these summaries when looking for something 
-    they can fix, and clear one-sentence summaries will catch their attention. 
-    You must fill this in. If you do not, <application>Bug Buddy</application>
-    will tell you to.
-  </para>
+
+  <variablelist>
+    <varlistentry>
+      <term>Short subject for the bug report</term>
+      <listitem>
+        <para>
+          The <guilabel>Short subject for the bug report</guilabel> section
+          will be used as the "Subject" header of the emailed bug report,
+          which will turn into a "Summary" line in Bugzilla. Good subject
+          lines are specific and do not just say "Bug" or "It crashed". 
+          "Crash when I try to save" or "Forgets my preferences" are much 
+          better. Hackers will read these summaries when looking for something 
+          they can fix, and clear one-sentence summaries will catch their attention. 
+          You must fill this in. If you do not, <application>Bug Buddy</application>
+          will tell you to.
+        </para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <term>Full description of the bug</term>
+      <listitem>
+        <para>
+          The <guilabel>Full description of the bug</guilabel> section is where
+          you describe what you did, what happened, and what you expected to
+          happen. You must fill this in, too, or
+          <application>Bug Buddy</application> will tell you to. Good things to 
+          include:
+        </para>
+   
+        <itemizedlist>
+         <listitem>
+          <para>
+            Exact copies of any error messages;
+          </para>
+         </listitem>
+         <listitem>
+          <para>
+            Your window manager name and version (especially if the bug involves 
+            moving things around the screen or mouse focus problems);
+          </para>
+         </listitem>
+         <listitem>
+          <para>
+            If you can make it happen in one way, and not in another way,
+            include that. If there are two ways to do something (a menu
+            selection and a typed command, for example), and only one triggers
+            the bug, definitely include that;
+          </para>
+         </listitem>
+         <listitem>
+          <para>
+            Why you think it is a bug. What should have happened instead?
+            Whilst this is obvious for some things, ("It shouldn't crash when
+            I try to save the file") it is not obvious for others. Give a
+            better way for the program to behave. ("If it can't save the file, 
+            it should tell me so that I don't keep editing it without realizing 
+            I am wasting my effort".)
+          </para>
+         </listitem>
+         <listitem>
+          <para>
+            Sometimes screen-shots can help demonstrate bugs. Please do not send one
+            in a Bug Buddy report! But if you have one, mention that you have it,
+            so that a bug-fixer who would like to see it can email you about it.
+          </para>
+         </listitem>
+        </itemizedlist>
+      </listitem>
+    </varlistentry>
+  </variablelist>
 
   <note>
    <title>Something You Don't Need to Include</title>
@@ -309,53 +367,6 @@
      you are going to select that next.
    </para>
   </note>
-
-  <para>
-    The <guilabel>Full description of the bug</guilabel> section is where
-    you describe what you did, what happened, and what you expected to
-    happen. You must fill this in, too, or
-    <application>Bug Buddy</application> will tell you to. Good things to 
-    include:
-  </para>
-   
-  <itemizedlist>
-   <listitem>
-    <para>
-      Exact copies of any error messages;
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-      Your window manager name and version (especially if the bug involves 
-      moving things around the screen or mouse focus problems);
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-      If you can make it happen in one way, and not in another way,
-      include that. If there are two ways to do something (a menu
-      selection and a typed command, for example), and only one triggers
-      the bug, definitely include that;
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-      Why you think it is a bug. What should have happened instead?
-      Whilst this is obvious for some things, ("It shouldn't crash when
-      I try to save the file") it is not obvious for others. Give a
-      better way for the program to behave. ("If it can't save the file, 
-      it should tell me so that I don't keep editing it without realising 
-      I am wasting my effort".)
-    </para>
-   </listitem>
-   <listitem>
-    <para>
-      Sometimes screenshots can help demonstrate bugs. Please do not send one
-      in a Bug Buddy report! But if you have one, mention that you have it,
-      so that a bug-fixer who would like to see it can email you about it.
-    </para>
-   </listitem>
-  </itemizedlist>
  
   <para>
     If you have any suggestions on what caused it or how to fix it,
@@ -385,7 +396,7 @@
     A dialogue box telling you <application>Bug Buddy</application> wants   
     to update its list of information will appear and gives you the option
     to proceed or to say no. It will save this information by default into
-    your <filename class="directory">.gnome/Bug Buddy.d/</filename> directory.
+    your <filename class="directory">.gnome/bug-buddy.d/</filename> directory.
     To get this information, it needs to talk to bugzilla, so your net
     connection will have to be up. 
   </para>
@@ -395,15 +406,16 @@
   <title>Product</title>
   <para>
     This page gives you a list of products, from which you can select,
-    and a button to pick the bug-tracker to use. If you select a new
-    bug-tracker, any highlighted product will become unhighlighted 
+    and a button to pick the bug tracker to use. If you select a new
+    bug tracker, any highlighted product will become unhighlighted 
     again.
   </para>
 
   <para> 
     The choices currently are to select <guilabel>All</guilabel> systems,
-    or to select <guilabel>Gnome's</guilabel> system. The most sensible
-    one to choose is Gnome's. 
+    <guilabel>Gnome's</guilabel> system, or to select 
+    <guilabel>Ximian's</guilabel> system.  The most sensible one to choose 
+    is Gnome's. 
   </para>
  </sect1>
      
@@ -455,7 +467,7 @@
        <listitem>
         <para>
          A trivial bug is precisely that: trivial. It is typically a
-         cosmetic problem such as misspelt words or misaligned text.
+         cosmetic problem such as misspelled words or misaligned text.
         </para>
        </listitem>
        <listitem>
@@ -495,7 +507,7 @@
 
   <para>
     When all three sections are filled in, the <guibutton>Next</guibutton>
-    will become un-greyed out, and you can continue. 
+    will become enabled, and you can continue. 
   </para>
  </sect1>
 
@@ -504,7 +516,7 @@
   <para>
     Once you have finished your report, you can review the report and
     decide what to do with it. You will probably want to submit it to 
-    the bug-tracking system, but if you want to send it elsewhere for
+    the bug tracking system, but if you want to send it elsewhere for
     some reason, you can. You can choose from:
   </para>
   <variablelist>
@@ -591,16 +603,13 @@
 
   <para>
     <application>Bug Buddy</application> was written by Jacob Berkman
-    <email>jacob@bug-buddy.org</email>. To find more information
-    about it, please visit 
-    <ulink type="http" url="http://bug-buddy.org/">
-    Bug Buddy's home on the web</ulink>.
+    <email>jacob@ximian.com</email>.
   </para>
 
   <para>
      Please send all comments, suggestions, and bug reports to the new
      <ulink url="http://bugzilla.gnome.org/" type="http">GNOME bug
-     tracking database</ulink>. The product is of course bug-buddy.
+     tracking database</ulink>. The product is, of course, bug-buddy.
   </para>
   
   <para>
@@ -609,7 +618,7 @@
     and suggestions regarding it to the GNOME Documentation Project 
     at <email>docs@gnome.org</email>. Some parts of this document
     (the definitions of bug severity) are directly lifted from 
-    the new Gnome bugtracker mentioned above.
+    the new Gnome bug tracker mentioned above.
   </para>
 
   <!-- For translations: uncomment this:

@@ -1,16 +1,10 @@
 <!DOCTYPE products SYSTEM "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-gnome-org.dtd">
 <products>
-  <product name="gnome-core">
+  <product name="gnome-desktop">
     <component name="gnome-about">
       <bug bugid="8562">
         <desc>gnome-about</desc>
         <url>http://bugzilla.gnome.org/show_bug.cgi?id=8562</url>
-      </bug>
-    </component>
-    <component name="panel">
-      <bug bugid="70295">
-        <desc>no longer Xinerama compatible</desc>
-        <url>http://bugzilla.gnome.org/show_bug.cgi?id=70295</url>
       </bug>
     </component>
   </product>

@@ -2311,7 +2311,6 @@ will be shared with some other GNOME applications.</label>
 	<class>GtkButton</class>
 	<name>druid-prev</name>
 	<can_default>True</can_default>
-	<has_default>True</has_default>
 	<can_focus>True</can_focus>
 	<signal>
 	  <name>clicked</name>
@@ -2348,6 +2347,7 @@ will be shared with some other GNOME applications.</label>
 	<class>GtkButton</class>
 	<name>druid-next</name>
 	<can_default>True</can_default>
+	<has_default>True</has_default>
 	<can_focus>True</can_focus>
 	<signal>
 	  <name>clicked</name>

@@ -1,3 +1,20 @@
+2.1.4:
+
+  * Fixes:
+
+	- Back button isn't the default button
+
+	- Fix possible crash when saving to a file, and display which
+	file it was saved to at the end (Wayne Schuller, bug #73675)
+
+	- Update docs for GNOME 2.0 version (Kevin Conder, bug #71189
+
+  * Improvements:
+
+	- Support for GNOME's most frequently reported bugs
+
+	- Print which app generated the core file with the bug report
+
 2.1.3:
 
   * Fixes:

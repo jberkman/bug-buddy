@@ -88,6 +88,7 @@
     <version value="1.2.x" />
     <version value="1.3.x" />
     <version value="1.0.x" />
+    <version value="2.0.x" />
   </product>
   <product votestoconfirm="0" description="gedit is a small lightweight text editor for GNOME." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gedit">
     <component initialowner="134" description="general" initialqacontact="0" value="general" />
@@ -114,6 +115,10 @@
     <version value="1.109.1" />
     <version value="1.110.0" />
     <version value="1.110.1" />
+    <version value="1.111.0" />
+    <version value="1.112.0" />
+    <version value="1.113.0" />
+    <version value="1.114.0" />
   </product>
   <product votestoconfirm="0" description="The GLib base library used by GTK+ and GNOME" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="glib">
     <component initialowner="44" description="The GLib reference documentation" initialqacontact="0" value="docs" />
@@ -124,6 +129,7 @@
     <version value="1.2.x" />
     <version value="1.3.x" />
     <version value="1.0.x" />
+    <version value="2.0.x" />
   </product>
   <product votestoconfirm="0" description="Internationalized text handling library" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="pango">
     <component initialowner="6" description="general Pango bugs" initialqacontact="0" value="general" />
@@ -131,15 +137,16 @@
     <version value="unspecified" />
     <version value="0.x" />
     <version value="0.23" />
+    <version value="1.0.x" />
   </product>
   <product votestoconfirm="0" description="General unclassified bugs. Read after the other sections: please try to find a better category than general for your bug if possible" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="general">
     <component initialowner="37" description="Unspecified default component." initialqacontact="0" value="general" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="GNOME Applets" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-applets">
-    <component initialowner="59" description="unspecified" initialqacontact="0" value="general" />
+    <component initialowner="59" description="unspecified" initialqacontact="1286" value="general" />
     <component initialowner="96" description="Tasklist applet" initialqacontact="0" value="tasklist" />
-    <component initialowner="59" description="Deskguide applet" initialqacontact="0" value="deskguide" />
+    <component initialowner="59" description="Deskguide applet" initialqacontact="1286" value="deskguide" />
     <component initialowner="59" description="Analogue clock similar to that of CDE." initialqacontact="0" value="another_clock" />
     <component initialowner="59" description="AfterStep clock in the style of the NeXT" initialqacontact="0" value="as_clock" />
     <component initialowner="59" description="Clock and mail notifier applet: a themable clock which tells you
@@ -149,7 +156,7 @@
     <component initialowner="59" description="Eyes that follow your mouse pointer as it moves" initialqacontact="0" value="geyes" />
     <component initialowner="59" description="This tracks, measures and reports the travel of your mouse pointer
     across the desktop." initialqacontact="0" value="odometer" />
-    <component initialowner="59" description="battery charge monitor" initialqacontact="0" value="battery" />
+    <component initialowner="59" description="battery charge monitor" initialqacontact="1286" value="battery" />
     <component initialowner="59" description="All in one: CPU, memory and swap use in one graph" initialqacontact="0" value="cpumemusage" />
     <component initialowner="59" description="Applet monitoring disk usage" initialqacontact="0" value="diskusage" />
     <component initialowner="59" description="CPU load monitor" initialqacontact="0" value="cpuload" />
@@ -159,24 +166,24 @@
     <component initialowner="59" description="Swap use monitor." initialqacontact="0" value="swapload" />
     <component initialowner="59" description="This is the single applet responsible for cpuload, loadaverage, 
     memload, netload and swapload. If the bug occurs in two or more
-    of these, use this." initialqacontact="0" value="multiload" />
-    <component initialowner="59" description="CD player applet" initialqacontact="0" value="cdplayer" />
-    <component initialowner="59" description="Sets the master volume for sound." initialqacontact="0" value="mixer" />
+    of these, use this." initialqacontact="1286" value="multiload" />
+    <component initialowner="59" description="CD player applet" initialqacontact="1286" value="cdplayer" />
+    <component initialowner="59" description="Sets the master volume for sound." initialqacontact="1286" value="mixer" />
     <component initialowner="59" description="Interface to esound for monitoring and control of it" initialqacontact="0" value="sound-monitor" />
     <component initialowner="59" description="Displays unread mail total" initialqacontact="0" value="mailcheck" />
-    <component initialowner="59" description="Monitors modem status and behaviour" initialqacontact="0" value="modemlights" />
+    <component initialowner="59" description="Monitors modem status and behaviour" initialqacontact="1286" value="modemlights" />
     <component initialowner="59" description="Displays slashdot or gnotices headlines" initialqacontact="0" value="slashapp" />
     <component initialowner="59" description="Launches browser on url you give it" initialqacontact="0" value="webcontrol" />
-    <component initialowner="59" description="Choice of 'special characters' not on all keyboards" initialqacontact="0" value="charpick" />
+    <component initialowner="59" description="Choice of 'special characters' not on all keyboards" initialqacontact="1286" value="charpick" />
     <component initialowner="59" description="mounts and unmounts drives" initialqacontact="0" value="drivemount" />
     <component initialowner="59" description="international keyboard(s) switcher" initialqacontact="0" value="gkb" />
-    <component initialowner="59" description="local (or not so local) weather monitor" initialqacontact="0" value="gweather" />
+    <component initialowner="59" description="local (or not so local) weather monitor" initialqacontact="1286" value="gweather" />
     <component initialowner="59" description="sticky notes" initialqacontact="0" value="gnotes" />
     <component initialowner="59" description="holds many small launchers" initialqacontact="0" value="quicklaunch" />
     <component initialowner="59" description="screenshot taker" initialqacontact="0" value="screenshooter" />
     <component initialowner="59" description="log and info status ticker" initialqacontact="0" value="tickastat" />
     <component initialowner="59" description="reports cursor position" initialqacontact="0" value="whereami" />
-    <component initialowner="59" description="Mini-Commander applet adds a command line to your Panel." initialqacontact="0" value="mini-commander" />
+    <component initialowner="59" description="Mini-Commander applet adds a command line to your Panel." initialqacontact="1286" value="mini-commander" />
     <component initialowner="59" description="an applet that plays the game of life" initialqacontact="0" value="life_applet" />
     <component initialowner="1123" description="GNOME stock ticker applet" initialqacontact="59" value="gtik" />
     <version value="unspecified" />
@@ -239,13 +246,21 @@
     <version value="1.3.2-Devel" />
     <version value="1.2.3" />
     <version value="1.3.3-Devel" />
+    <version value="1.3.4-Devel" />
   </product>
   <product votestoconfirm="0" description="A collection of GNOME media components" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-media">
     <component initialowner="325" description="A GNOME cd player and its text-based friend, tcd." initialqacontact="0" value="gtcd" />
-    <component initialowner="325" description="A GNOME mixer" initialqacontact="0" value="gmix" />
+    <component initialowner="325" description="A GNOME mixer" initialqacontact="0" value="gnome-volume-control [was: gmix]" />
     <component initialowner="325" description="All unspecified bugs" initialqacontact="0" value="general" />
+    <component initialowner="325" description="The GNOME2 CD player- a replacement for gtcd." initialqacontact="0" value="Gnome-CD" />
+    <component initialowner="325" description="A component for getting data from FreeDB or other CDDB-style databases." initialqacontact="0" value="CDDBSlave2" />
+    <component initialowner="325" description="A GNOME application for recording sound." initialqacontact="0" value="Gnome-Sound-Recorder" />
+    <component initialowner="325" description="A visual volume meter; AKA 'Flashy lights that move in time to the music'" initialqacontact="0" value="VU-meter" />
     <version value="unspecified" />
     <version value="1.2.x" />
+    <version value="1.112.0" />
+    <version value="1.176.0" />
+    <version value="2.0" />
   </product>
   <product votestoconfirm="0" description="Also known as gnome-xml this is the XML library shipped
   with GNOME. The head version is called libxml2." maxvotesperbug="10000" milestoneurl="http://xmlsoft.org/" votesperuser="0" disallownew="0" name="libxml">
@@ -253,19 +268,20 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The GNOME Control Center" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="control-center">
-    <component initialowner="145" description="All unclassified bugs" initialqacontact="0" value="general" />
+    <component initialowner="145" description="All unclassified bugs" initialqacontact="1286" value="general" />
     <component initialowner="170" description="user documentation" initialqacontact="0" value="docs" />
-    <component initialowner="1464" description="Keyboard configuration" initialqacontact="0" value="keyboard" />
-    <component initialowner="1464" description="mouse configuration" initialqacontact="0" value="mouse" />
-    <component initialowner="1464" description="background configuration" initialqacontact="0" value="background" />
-    <component initialowner="1464" description="screensaver configuration" initialqacontact="0" value="screensaver" />
-    <component initialowner="1464" description="sound configuration" initialqacontact="0" value="sound" />
-    <component initialowner="1464" description="other capplets" initialqacontact="0" value="other capplets" />
-    <component initialowner="1464" description="The shell component of the control-center" initialqacontact="0" value="shell" />
-    <component initialowner="525" description="The nautilus view of the control center" initialqacontact="0" value="nautilus control center view" />
-    <component initialowner="1464" description="This is the gtk theme selector" initialqacontact="0" value="theme-selector" />
-    <component initialowner="1464" description="Metatheme selector" initialqacontact="0" value="metatheme" />
-    <component initialowner="1189" description="Mime types gnome-vfs capplet" initialqacontact="0" value="mime-types" />
+    <component initialowner="1464" description="Keyboard configuration" initialqacontact="1286" value="keyboard" />
+    <component initialowner="1464" description="mouse configuration" initialqacontact="1286" value="mouse" />
+    <component initialowner="1464" description="background configuration" initialqacontact="1286" value="background" />
+    <component initialowner="1464" description="screensaver configuration" initialqacontact="1286" value="screensaver" />
+    <component initialowner="1464" description="sound configuration" initialqacontact="1286" value="sound" />
+    <component initialowner="1464" description="other capplets" initialqacontact="1286" value="other capplets" />
+    <component initialowner="1464" description="The shell component of the control-center" initialqacontact="1286" value="shell" />
+    <component initialowner="8" description="The nautilus view of the control center" initialqacontact="1286" value="nautilus control center view" />
+    <component initialowner="1464" description="This is the gtk theme selector" initialqacontact="1286" value="theme-selector" />
+    <component initialowner="1464" description="Metatheme selector" initialqacontact="1286" value="metatheme" />
+    <component initialowner="2401" description="Mime types gnome-vfs capplet" initialqacontact="1286" value="mime-types" />
+    <component initialowner="145" description="This is for bugs against the gnome2-settings-daemon" initialqacontact="1286" value="settings-daemon" />
     <version value="unspecified" />
     <version value="pre 1.4.0" />
     <version value="1.4.0" />
@@ -328,6 +344,7 @@
     <version value="1.1.2" />
     <version value="1.0.3" />
     <version value="1.1.3" />
+    <version value="1.2.0" />
   </product>
   <product votestoconfirm="0" description="The GNOME Personal Information Manager package (the GNOME Address Book and GNOME Calendar)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-pim">
     <component initialowner="147" description="The GNOME Calendar" initialqacontact="0" value="gnomecal" />
@@ -400,8 +417,8 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="A graphical bug reporting tool" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="bug-buddy">
-    <component initialowner="185" description="General problems with bug-buddy" initialqacontact="0" value="general" />
-    <component initialowner="185" description="Category for testing bug submissions - don't add new bugs here." initialqacontact="0" value="test" />
+    <component initialowner="185" description="General problems with bug-buddy" initialqacontact="1286" value="general" />
+    <component initialowner="185" description="Category for testing bug submissions - don't add new bugs here." initialqacontact="1286" value="test" />
     <version value="unspecified" />
     <version value="0.1" />
     <version value="0.2" />
@@ -499,6 +516,7 @@
     <version value="0.99.0" />
     <version value="0.99.1" />
     <version value="1.0.x" />
+    <version value="1.1.x" />
   </product>
   <product votestoconfirm="0" description="An IDE program in development" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="anjuta2">
     <component initialowner="27" description="The shell which binds the various components together" initialqacontact="0" value="shell" />
@@ -544,7 +562,7 @@
     <component initialowner="174" description="The TDS provider" initialqacontact="143" value="gda-tds-server" />
     <component initialowner="142" description="The Report Engine system" initialqacontact="143" value="Report Engine" />
     <component initialowner="173" description="The Debian packages" initialqacontact="143" value="Debian packages" />
-    <component initialowner="149" description="The RedHat Packages" initialqacontact="149" value="Red Hat packages" />
+    <component initialowner="2318" description="The RedHat Packages" initialqacontact="149" value="Red Hat packages" />
     <component initialowner="149" description="The test suite (gda-test)" initialqacontact="149" value="Test suite" />
     <component initialowner="143" description="The GDA client library, used by GDA clients" initialqacontact="143" value="Client library" />
     <component initialowner="143" description="GDA server library, used for the implementation of GDA providers" initialqacontact="143" value="Server library" />
@@ -552,6 +570,8 @@
     <component initialowner="143" description="GDA Default provider" initialqacontact="143" value="gda-default-server" />
     <component initialowner="143" description="general and unclassified bugs" initialqacontact="143" value="general" />
     <component initialowner="142" description="The SQLite provider" initialqacontact="143" value="gda-sqlite-server" />
+    <component initialowner="4287" description="libgda bindings for Java" initialqacontact="143" value="Java bindings" />
+    <component initialowner="4287" description="The JDBC provider" initialqacontact="143" value="gda-jdbc-server" />
     <version value="0.2.2" />
     <version value="unspecified" />
     <version value="0.2.3" />
@@ -573,6 +593,7 @@
     <component initialowner="143" description="Log viewer component" initialqacontact="143" value="log-viewer" />
     <component initialowner="143" description="The GNOME-DB application builder component" initialqacontact="143" value="builder" />
     <component initialowner="143" description="GNOME-DB UI widgets" initialqacontact="143" value="widgets" />
+    <component initialowner="2318" description="Red Hat Packages" initialqacontact="143" value="Red Hat Packages" />
     <version value="0.2.2" />
     <version value="unspecified" />
     <version value="0.2.3" />
@@ -588,26 +609,26 @@
     <component initialowner="146" description="General, unclassified bugs." initialqacontact="146" value="general" />
     <component initialowner="146" description="shut down your computer" initialqacontact="0" value="gshutdown" />
     <component initialowner="146" description="Character Map: lets you pick and use characters not on your 
-    keyboard" initialqacontact="0" value="gcharmap" />
-    <component initialowner="146" description="Simple calculator for GNOME" initialqacontact="0" value="gcalc" />
-    <component initialowner="146" description="GNOME search tool" initialqacontact="0" value="gsearchtool" />
-    <component initialowner="146" description="Lets you view system logs" initialqacontact="0" value="logview" />
+    keyboard" initialqacontact="1286" value="gcharmap" />
+    <component initialowner="146" description="Simple calculator for GNOME" initialqacontact="1286" value="gcalc" />
+    <component initialowner="146" description="GNOME search tool" initialqacontact="1286" value="gsearchtool" />
+    <component initialowner="146" description="Lets you view system logs" initialqacontact="1286" value="logview" />
     <component initialowner="226" description="Documentation for gnome-utils programs" initialqacontact="0" value="docs" />
     <component initialowner="146" description="user listing" initialqacontact="0" value="gw" />
-    <component initialowner="146" description="Colo(u)r selector" initialqacontact="0" value="gcolorsel" />
+    <component initialowner="146" description="Colo(u)r selector" initialqacontact="1286" value="gcolorsel" />
     <component initialowner="146" description="font selector" initialqacontact="0" value="gfontsel" />
     <component initialowner="146" description="displays system information" initialqacontact="0" value="guname" />
     <component initialowner="146" description="simple floppy formatter for Gnome" initialqacontact="0" value="gfloppy" />
     <component initialowner="146" description="Gnome word looker-upper which talks to dict servers" initialqacontact="226" value="gdict" />
     <component initialowner="146" description="Gnome text file viewer" initialqacontact="0" value="gless" />
-    <component initialowner="146" description="displays Gnome dialogue boxes from shell scripts" initialqacontact="0" value="gdialog" />
+    <component initialowner="146" description="displays Gnome dialogue boxes from shell scripts" initialqacontact="1286" value="gdialog" />
     <component initialowner="29" description="Displays disk usage graphically" initialqacontact="0" value="gdiskfree" />
     <component initialowner="146" description="GNOME time tracker" initialqacontact="0" value="gtt" />
     <component initialowner="146" description="Program for viewing and tuning properties of IDE drives" initialqacontact="0" value="idetool" />
     <component initialowner="146" description="used to set title and background in the 'splash' program" initialqacontact="0" value="splac" />
     <component initialowner="146" description="Utility for rendering splash screens" initialqacontact="0" value="splash" />
     <component initialowner="431" description="replaces gstripchart, draws charts, typically of system performance" initialqacontact="226" value="stripchart" />
-    <component initialowner="146" description="GNOME Archive Generator, to make tar files" initialqacontact="0" value="meat-grinder" />
+    <component initialowner="146" description="GNOME Archive Generator, to make tar files" initialqacontact="1286" value="archive-generator" />
     <component initialowner="146" description="This is the handler for executable files with bad permissions" initialqacontact="0" value="gnome-exe-handler" />
     <version value="unspecified" />
     <version value="1.2.0" />
@@ -617,6 +638,9 @@
     <version value="1.4.1.x" />
     <version value="1.96.x" />
     <version value="1.97.0" />
+    <version value="CVS HEAD" />
+    <version value="1.100" />
+    <version value="1.99.x" />
   </product>
   <product votestoconfirm="0" description="A set of components for doing graphical debugging." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-debug">
     <component initialowner="79" description="General gnome-debug bugs" initialqacontact="79" value="general" />
@@ -633,7 +657,7 @@
     <component initialowner="6" description="all bugs about CORBA::ORBit" initialqacontact="0" value="general" />
     <version value="unspecified" />
   </product>
-  <product votestoconfirm="1" description="gtranslator is a gettext po file editor with many bells and whistles." maxvotesperbug="10000" milestoneurl="http://www.gtranslator.org" votesperuser="7" defaultmilestone="0.40" name="gtranslator" disallownew="0">
+  <product votestoconfirm="1" description="gtranslator is a gettext po file editor with many bells and whistles." maxvotesperbug="10000" milestoneurl="http://www.gtranslator.org" votesperuser="7" defaultmilestone="0.41" name="gtranslator" disallownew="0">
     <component initialowner="69" description="Views for the different items of a message ro the Viewbar on the leftern side affecting bugs are welcome to here .-)" initialqacontact="69" value="Views/Viewbar" />
     <component initialowner="69" description="The general handling and feeling of gtranslator's GUI." initialqacontact="69" value="General handling" />
     <component initialowner="69" description="The parsing routines of gtranslator." initialqacontact="69" value="Parse engine" />
@@ -658,10 +682,13 @@
     <version value="0.39" />
     <version value="0.39.1" />
     <version value="0.39.2" />
+    <version value="0.41" />
   </product>
   <product votestoconfirm="0" description="A binary file editor." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GHex">
     <component initialowner="192" description="GHex binary file editor." initialqacontact="0" value="general" />
     <version value="unspecified" />
+    <version value="1.2.x" />
+    <version value="1.99.x" />
   </product>
   <product votestoconfirm="0" description="GConf configuration storage library" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GConf">
     <component initialowner="8" description="XML storage backend" initialqacontact="0" value="XML backend" />
@@ -691,6 +718,7 @@
     <version value="unspecified" />
     <version value="1.0.x" />
     <version value="1.1.x" />
+    <version value="1.99.x" />
   </product>
   <product votestoconfirm="0" description="Gnome Display Manager (the graphical login :))" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gdm">
     <component initialowner="153" description="general gdm bugs." initialqacontact="432" value="general" />
@@ -742,6 +770,8 @@
     <version value="0.11.2" />
     <version value="0.11.1.92" />
     <version value="0.11.1.93" />
+    <version value="0.11.2.90" />
+    <version value="0.11.90" />
   </product>
   <product votestoconfirm="0" description="Launcher feeback system" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="xalf">
     <component initialowner="363" description="Capplet for xalf" initialqacontact="0" value="xalf-capplet" />
@@ -834,8 +864,12 @@
     <component initialowner="477" description="The add contacts druid and functionality." initialqacontact="477" value="Add Contacts" />
     <component initialowner="477" description="Either the main message dialog or the Message Chat dialog." initialqacontact="477" value="Message dialogs" />
     <component initialowner="477" description="Anything that doesn't fit into another group." initialqacontact="477" value="Misc." />
+    <component initialowner="477" description="An applet which sits on the panel" initialqacontact="477" value="Applet" />
+    <component initialowner="190" description="Preferences window and things which should be configurable, but aren't" initialqacontact="190" value="Preferences" />
     <version value="0.96.1" />
     <version value="0.94.1" />
+    <version value="0.98" />
+    <version value="0.98.1" />
   </product>
   <product votestoconfirm="0" description="A project manager." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="ToutDoux">
     <component initialowner="491" description="general bugs in toutdoux" initialqacontact="0" value="general" />
@@ -883,8 +917,8 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="Eye of Gnome image viewer and cataloging program." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="EOG">
-    <component initialowner="735" description="General, unclassified bugs." initialqacontact="0" value="general" />
-    <component initialowner="104" description="Documentation for EOG.  This includes the user's manual and the developer's manual." initialqacontact="0" value="documentation" />
+    <component initialowner="735" description="General, unclassified bugs." initialqacontact="1286" value="general" />
+    <component initialowner="104" description="Documentation for EOG.  This includes the user's manual and the developer's manual." initialqacontact="1286" value="documentation" />
     <version value="unspecified" />
     <version value="0.1" />
     <version value="0.2" />
@@ -893,8 +927,10 @@
     <version value="0.5" />
     <version value="0.6" />
     <version value="0.109" />
+    <version value="CVS HEAD" />
     <version value="0.110" />
     <version value="0.111" />
+    <version value="0.112" />
   </product>
   <product votestoconfirm="0" description="Gtk and Gnome bindings for Perl" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-perl">
     <component initialowner="126" description="Main Gtk module" initialqacontact="126" value="Gtk.pm" />
@@ -902,9 +938,9 @@
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="Underlying architecture for embedding programs into other programs" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="bonobo">
-    <component initialowner="805" description="General sort of description" initialqacontact="0" value="general" />
-    <component initialowner="805" description="Non graphical part of Bonobo split in Gnome 2.0" initialqacontact="805" value="libbonobo" />
-    <component initialowner="805" description="The GUI part of bonobo in Gnome 2.0" initialqacontact="805" value="libbonoboui" />
+    <component initialowner="805" description="General sort of description" initialqacontact="1286" value="general" />
+    <component initialowner="805" description="Non graphical part of Bonobo split in Gnome 2.0" initialqacontact="1286" value="libbonobo" />
+    <component initialowner="805" description="The GUI part of bonobo in Gnome 2.0" initialqacontact="1286" value="libbonoboui" />
     <version value="unspecified" />
     <version value="1.0.x" />
   </product>
@@ -920,8 +956,8 @@
     <version value="0.4.99.10" />
   </product>
   <product votestoconfirm="0" description="stocks portfolio manager for Yahoo" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-pm">
-    <component initialowner="1081" description="all bugs for gnome-pm" initialqacontact="0" value="general" />
-    <component initialowner="1081" description="documentation bugs for gnome-pm" initialqacontact="0" value="docs" />
+    <component initialowner="1648" description="all bugs for gnome-pm" initialqacontact="0" value="general" />
+    <component initialowner="1648" description="documentation bugs for gnome-pm" initialqacontact="0" value="docs" />
     <version value="0.9.4" />
   </product>
   <product votestoconfirm="0" description="Gnome Virtual Filesystem Library" maxvotesperbug="5" votesperuser="10" disallownew="0" name="gnome-vfs">
@@ -938,6 +974,7 @@
     <component initialowner="2732" description="Problems compiling (possibly on specific platforms)" initialqacontact="0" value="Build" />
     <component initialowner="2732" description="Bugs specific to gnome-vfs modules that do not have their own category" initialqacontact="0" value="Module: (other)" />
     <component initialowner="2732" description="Problems with gnome-vfs file operations that are not module-specific" initialqacontact="0" value="File operations" />
+    <component initialowner="153" description="The vfolder module for the GNOME panel menus" initialqacontact="0" value="Module: vfolder" />
     <version value="unspecified" />
     <version value="0.1" />
     <version value="0.2" />
@@ -965,7 +1002,7 @@
     <version value="CVS HEAD" />
   </product>
   <product votestoconfirm="0" description="Gnome-system-monitor is a nice and simple process viewer and system monitor for GNOME. It was previously known as procman." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="system-monitor [was: procman]">
-    <component initialowner="492" description="general procman bugs" initialqacontact="0" value="general" />
+    <component initialowner="492" description="general system-monitor bugs" initialqacontact="1286" value="general" />
     <version value="unspecified" />
     <version value="0.4" />
     <version value="0.5" />
@@ -1074,6 +1111,8 @@
   <product votestoconfirm="0" description="Database-bound widgets library, based on libgda" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="libgnomedb">
     <component initialowner="143" description="Widgets in the library" initialqacontact="143" value="widgets" />
     <component initialowner="143" description="Default category for bugs" initialqacontact="143" value="general" />
+    <component initialowner="2318" description="Red Hat Packages" initialqacontact="143" value="Red Hat Packages" />
+    <component initialowner="143" description="libgnomedb documentation" initialqacontact="143" value="documentation" />
     <version value="unspecified" />
     <version value="0.8.x" />
   </product>
@@ -1086,9 +1125,12 @@
     <version value="1.1.1" />
     <version value="1.1.2" />
     <version value="1.1.3" />
+    <version value="1.1.4" />
+    <version value="1.1.5" />
+    <version value="1.1.6" />
   </product>
   <product votestoconfirm="0" description="A library for rendering svg files that also has some font-handling code used by eel and nautilus." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="librsvg">
-    <component initialowner="78" description="You need one component." initialqacontact="0" value="general" />
+    <component initialowner="4872" description="You need one component." initialqacontact="0" value="general" />
     <version value="unspecified" />
     <version value="1.0.1" />
     <version value="1.0.2" />
@@ -1097,19 +1139,18 @@
   <product votestoconfirm="0" description="data file internationalization tools" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="intltool">
     <component initialowner="2275" description="All sorts of bugs" initialqacontact="0" value="general" />
     <version value="unspecified" />
-    <version value="0.13" />
-    <version value="0.12" />
-    <version value="0.14" />
   </product>
   <product votestoconfirm="0" description="Sawfish Window Manager" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="sawfish">
-    <component initialowner="2276" description="Configuration Editor" initialqacontact="0" value="Config Tool" />
-    <component initialowner="2276" description="general stuff" initialqacontact="0" value="general" />
-    <component initialowner="2276" description="Theme Editor" initialqacontact="0" value="Theme Editor" />
-    <component initialowner="2276" description="Window Manager" initialqacontact="0" value="Window Manager" />
+    <component initialowner="2276" description="Configuration Editor" initialqacontact="1286" value="Config Tool" />
+    <component initialowner="2276" description="general stuff" initialqacontact="1286" value="general" />
+    <component initialowner="2276" description="Theme Editor" initialqacontact="1286" value="Theme Editor" />
+    <component initialowner="2276" description="Window Manager" initialqacontact="1286" value="Window Manager" />
     <version value="1.0" />
+    <version value="pre-1.0" />
+    <version value="pre-2.0" />
   </product>
   <product votestoconfirm="0" description="bonobo-activation, the code formerly known as the GNOME Object Activation Framework" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="bonobo-activation [was: oaf]">
-    <component initialowner="34" description="general stuff" initialqacontact="0" value="general" />
+    <component initialowner="805" description="general stuff" initialqacontact="1286" value="general" />
     <version value="unspecified" />
     <version value="0.1" />
     <version value="0.2" />
@@ -1157,6 +1198,7 @@
     <component initialowner="2274" description="This is the embedded mozilla component" initialqacontact="0" value="View as Web Page" />
     <component initialowner="2274" description="General visual issues (icons, splash screens, widget design), and bugs of a visual nature that need pixel work before going to their engineering owner." initialqacontact="0" value="Visual Design" />
     <component initialowner="2274" description="Catch-all component for things that don't fit into others." initialqacontact="0" value="general" />
+    <component initialowner="2274" description="Bugs against the 'scripts' functionality of nautilus (accessed by right clicking on an item and selecting 'scripts') should be filed here." initialqacontact="0" value="Scripts facilities" />
     <version value="1.0.4" />
     <version value="unspecified" />
     <version value="0.1" />
@@ -1174,6 +1216,11 @@
     <version value="1.1.2" />
     <version value="1.1.3" />
     <version value="1.1.4" />
+    <version value="1.1.5" />
+    <version value="1.1.6" />
+    <version value="1.1.7" />
+    <version value="1.1.8" />
+    <version value="1.1.9" />
   </product>
   <product votestoconfirm="0" description="GNOME Notification Framework" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="grapevine">
     <component initialowner="153" description="Gnome Properties" initialqacontact="0" value="GnoP" />
@@ -1278,6 +1325,7 @@
     <version value="unspecified" />
     <version value="0.x" />
     <version value="0.9" />
+    <version value="1.0.x" />
   </product>
   <product votestoconfirm="0" description="Accessibility Toolkit - Service Provider Interface" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="at-spi">
     <component initialowner="1862" description="at-spi API" initialqacontact="0" value="api" />
@@ -1308,7 +1356,9 @@
   <product votestoconfirm="0" description="Help browser" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Yelp">
     <component initialowner="831" description="general" initialqacontact="880" value="general" />
     <version value="unspecified" />
+    <version value="0.2" />
     <version value="0.1" />
+    <version value="0.3" />
   </product>
   <product votestoconfirm="0" description="A fax sender/manager for GNOME, part of GNOME Office" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gfax">
     <component initialowner="3602" description="For general bugs about gfax" initialqacontact="0" value="general" />
@@ -1338,11 +1388,24 @@
     <version value="2.4.13" />
   </product>
   <product votestoconfirm="0" description="A library that provides terminal functionality." maxvotesperbug="10000" milestoneurl="2.0" votesperuser="0" disallownew="0" name="libzvt">
-    <component initialowner="37" description="Bugs against libzvt" initialqacontact="185" value="general" />
+    <component initialowner="185" description="Bugs against libzvt" initialqacontact="37" value="general" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The GNOME Human interface guide. Bugs should be with respect to the guide itself, not about applications that do not conform with the guide." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="HIG">
-    <component initialowner="4308" description="File all HIG bugs here" initialqacontact="0" value="General" />
+    <component initialowner="4470" description="Bugs that aren't specific to a section" initialqacontact="0" value="General" />
+    <component initialowner="4470" description="Introduction" initialqacontact="0" value="Section: Introduction" />
+    <component initialowner="4470" description="Desktop integration section" initialqacontact="0" value="Section: Desktop Integration" />
+    <component initialowner="4470" description="Section on Usability Principles" initialqacontact="0" value="Section: Usability Principles" />
+    <component initialowner="4470" description="Section on Windows" initialqacontact="0" value="Section: Windows" />
+    <component initialowner="4470" description="Section on Menus" initialqacontact="0" value="Section: Menus" />
+    <component initialowner="4470" description="Section on Toolbars" initialqacontact="0" value="Section: Toolbars" />
+    <component initialowner="4470" description="Section on Controls (widgets)" initialqacontact="0" value="Section: Controls" />
+    <component initialowner="4470" description="Section on Feedback" initialqacontact="0" value="Section: Feedback" />
+    <component initialowner="4470" description="Section on Visual Design" initialqacontact="0" value="Section: Visual Design" />
+    <component initialowner="4470" description="Section on Icons" initialqacontact="0" value="Section: Icons" />
+    <component initialowner="4470" description="Section on User Input" initialqacontact="0" value="Section: User Input" />
+    <component initialowner="4470" description="Section on Language" initialqacontact="0" value="Section: Language" />
+    <component initialowner="4470" description="Checklists for HIG compliance" initialqacontact="0" value="Section: Checklists" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="The GNOME Canvas and its stock items for GNOME 2.0 and later." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="libgnomecanvas">
@@ -1353,14 +1416,14 @@
     <version value="1.110.0" />
   </product>
   <product votestoconfirm="0" description="The Gnome 2.x panel, the panel applet library and some core  utility applets (window list, workspace switcher, inbox monitor, clock and wanda the fish)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-panel">
-    <component initialowner="4570" description="The GNOME 2.x panel" initialqacontact="0" value="Panel" />
-    <component initialowner="1779" description="The panel applet library" initialqacontact="0" value="libpanel-applet" />
-    <component initialowner="4570" description="The Clock applet" initialqacontact="0" value="clock applet" />
-    <component initialowner="61" description="The Inbox Monitor Applet" initialqacontact="0" value="Inbox Monitor Applet" />
-    <component initialowner="4570" description="The Window List Applet" initialqacontact="0" value="Window List Applet" />
-    <component initialowner="4570" description="The Workspace Switcher Applet" initialqacontact="0" value="Workspace Switcher Applet" />
-    <component initialowner="4570" description="Wanda the Fish" initialqacontact="0" value="Fish Applet" />
-    <component initialowner="4570" description="Build problems etc." initialqacontact="0" value="general" />
+    <component initialowner="4570" description="The GNOME 2.x panel" initialqacontact="1286" value="Panel" />
+    <component initialowner="1779" description="The panel applet library" initialqacontact="1286" value="libpanel-applet" />
+    <component initialowner="4570" description="The Clock applet" initialqacontact="1286" value="clock applet" />
+    <component initialowner="61" description="The Inbox Monitor Applet" initialqacontact="1286" value="Inbox Monitor Applet" />
+    <component initialowner="4570" description="The Window List Applet" initialqacontact="1286" value="Window List Applet" />
+    <component initialowner="4570" description="The Workspace Switcher Applet" initialqacontact="1286" value="Workspace Switcher Applet" />
+    <component initialowner="4570" description="Wanda the Fish" initialqacontact="1286" value="Fish Applet" />
+    <component initialowner="4570" description="Build problems etc." initialqacontact="1286" value="general" />
     <version value="unspecified" />
     <version value="1.5.x" />
   </product>
@@ -1372,13 +1435,13 @@
     <version value="1.5.x" />
   </product>
   <product votestoconfirm="0" description="The GNOME 2.x session manager and session manager proxy" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-session">
-    <component initialowner="4571" description="The session manager" initialqacontact="0" value="gnome-session" />
-    <component initialowner="4571" description="Session manager proxy" initialqacontact="0" value="smproxy" />
-    <component initialowner="4571" description="Build problems etc." initialqacontact="0" value="general" />
+    <component initialowner="4571" description="The session manager" initialqacontact="1286" value="gnome-session" />
+    <component initialowner="4571" description="Session manager proxy" initialqacontact="1286" value="smproxy" />
+    <component initialowner="4571" description="Build problems etc." initialqacontact="1286" value="general" />
     <version value="unspecified" />
     <version value="1.5.x" />
   </product>
-  <product votestoconfirm="0" description="The GNOME 2.x terminal (a.k.a profterm)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-terminal">
+  <product votestoconfirm="0" description="GNOME 2 ONLY terminal; gnome-terminal 1.x goes in gnome-core product, gnome-terminal component" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-terminal">
     <component initialowner="8" description="All bugs go here ..." initialqacontact="8" value="general" />
     <version value="unspecified" />
     <version value="1.9.x" />
@@ -1390,5 +1453,26 @@
     <component initialowner="1072" description="For accessing the Rio 500 device (that thing for mp3s :))" initialqacontact="0" value="rio-500" />
     <version value="unspecified" />
     <version value="0.1.2" />
+  </product>
+  <product votestoconfirm="0" description="a performance meter visualization tool" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gperfmeter">
+    <component initialowner="4610" description="All bugs for gperfmeter should go here for now." initialqacontact="1286" value="general" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="The RhythmBox iTunes clone" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="rhythmbox">
+    <component initialowner="4903" description="General bugs" initialqacontact="0" value="General" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="HTML rendering library" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gtkhtml2">
+    <component initialowner="96" description="The CSS Parser and matcher" initialqacontact="96" value="CSS Parser" />
+    <component initialowner="96" description="The DOM implementation" initialqacontact="96" value="DOM" />
+    <component initialowner="96" description="General stuff" initialqacontact="96" value="General" />
+    <component initialowner="16" description="The GtkHtml2 layout engine" initialqacontact="16" value="Layout engine" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="A screensaver program. Only bugs against the xscreensaver capplet, gtk2 port, and gettext problems should be filed here. Other bugs should be reported to the original maintainer." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="xscreensaver">
+    <component initialowner="185" description="Bugs against the capplet." initialqacontact="1286" value="capplet" />
+    <component initialowner="185" description="The screen locking tool" initialqacontact="1286" value="screen locker" />
+    <component initialowner="185" description="gnome-specific xscreensaver bugs. General xscreensaver bugs ('xscreensaver crashes') should NOT be filed here and will immediately be marked NOTGNOME." initialqacontact="1286" value="general gnome-xscreensaver bugs" />
+    <version value="unspecified" />
   </product>
 </products>

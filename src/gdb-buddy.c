@@ -254,6 +254,7 @@ void
 get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	GtkWidget *d;
+	char *s;
 	char *app2;
 	char *args[] = { "gdb",
 			 "--batch", 
@@ -332,10 +333,13 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	}
 	
 	druid_data.ioc = g_io_channel_unix_new (druid_data.fd);
+	
+	s = g_strdup_printf ("Core was generated from '%s'\n\n", app2);
+	buddy_set_text ("gdb-text", s);
+	g_free (s);
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP,
 			handle_gdb_input, NULL);
 	g_io_channel_unref (druid_data.ioc);
-	buddy_set_text ("gdb-text", NULL);
 
 	druid_set_sensitive (FALSE, FALSE, TRUE);
 	start_animation ();
