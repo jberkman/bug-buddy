@@ -5,10 +5,9 @@
  *
  * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of version 2 of the GNU General Public
+ * License as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,6 +20,10 @@
  */
 
 #include "config.h"
+
+#include "bug-buddy.h"
+
+#include "libglade-buddy.h"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -39,12 +42,6 @@
 
 #include <sys/types.h>
 #include <signal.h>
-
-#include "bug-buddy.h"
-#include "util.h"
-#include "distro.h"
-
-#include "libglade-buddy.h"
 
 #define d(x)
 
@@ -248,19 +245,6 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 	gtk_label_set_text (GTK_LABEL (GET_WIDGET ("version-label")), _(s));
 }
 
-static void
-add_to_clist (gpointer data, gpointer udata)
-{
-	char *row[3] = { NULL };
-	Package *package = data;
-	GtkWidget *clist = udata;
-
-	row[0] = _(package->name);
-	row[1] = package->version;
-
-	gtk_clist_append (GTK_CLIST (clist), row);
-}
-
 void
 stop_progress ()
 {
@@ -269,25 +253,6 @@ stop_progress ()
 
 	gtk_timeout_remove (druid_data.progress_timeout);
 	gtk_widget_hide (GET_WIDGET ("config_progress"));
-}
-
-void
-append_packages ()
-{
-	GtkWidget *w;
-	w = GET_WIDGET ("version-clist");
-
-	gtk_clist_freeze (GTK_CLIST (w));
-	g_slist_foreach (druid_data.packages, add_to_clist, w);
-	gtk_clist_thaw (GTK_CLIST (w));
-
-	stop_progress ();
-
-	w = GET_WIDGET ("version-toggle");
-	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
-		return;
-
-	on_druid_next_clicked (NULL, NULL);
 }
 
 void

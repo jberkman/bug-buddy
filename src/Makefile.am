@@ -18,14 +18,8 @@ bug_buddy_SOURCES = \
 	bugzilla.c		\
 	bugzilla.h		\
 	config.c		\
-	distro.h		\
-	distro-debian.c		\
-	distro-irix.c		\
-	distro-redhat.c		\
 	gdb-buddy.c		\
 	libglade-buddy.h	\
-	util.c			\
-	util.h			\
 	united-states-of-bug-buddy.c
 
 bug_buddy_LDFLAGS = \

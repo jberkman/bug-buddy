@@ -5,10 +5,9 @@
  *
  * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of version 2 of the GNU General Public
+ * License as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -23,13 +22,13 @@
 #ifndef __BUG_BUDDY_H__
 #define __BUG_BUDDY_H__
 
+#include "bugzilla.h"
+
 #include <glade/glade.h>
 #include <libgnomecanvas/gnome-canvas.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include <sys/types.h>
-#include "distro.h"
-#include "bugzilla.h"
 
 typedef enum {
 	CRASH_DIALOG,
@@ -103,7 +102,9 @@ typedef struct {
 
 	gboolean already_run;
 
+#if 0
 	Distribution      *distro;
+#endif
 	char              *bts_file;
 
 	CrashType  crash_type;

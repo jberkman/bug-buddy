@@ -1,6 +1,10 @@
 #ifndef LIBGLADE_BUDDY_H
 #define LIBGLADE_BUDDY_H
 
+#include <libgnomeui/gnome-druid.h>
+#include <gtk/gtkclist.h>
+#include <gtk/gtkbutton.h>
+
 /* this file should include all of the definitions for libglade */
 
 /* libglade callbacks */

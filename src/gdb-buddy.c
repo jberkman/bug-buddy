@@ -2,12 +2,11 @@
  *
  * Copyright (C) Jacob Berkman
  *
- * Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>
+ * Author:  Jacob Berkman  <jacob@bug-buddy.org>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of version 2 of the GNU General Public
+ * License as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -20,6 +19,8 @@
  */
 
 #include <config.h>
+
+#include "bug-buddy.h"
 
 /* for GtkText */
 #define GTK_ENABLE_BROKEN
@@ -34,9 +35,6 @@
 #include <math.h>
 
 #include <libart_lgpl/libart.h>
-
-#include "bug-buddy.h"
-#include "util.h"
 
 #define d(x)
 
@@ -204,7 +202,7 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 	GtkWidget *w = NULL;
 	gchar buf[1024];
 	guint len;
-	
+
 	if (condition == G_IO_HUP) {
 		stop_gdb ();
 		return FALSE;
@@ -281,17 +279,20 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 		return;
 	}
 
-	druid_data.gdb_pid = start_commandv ((const char **)args, &fd);
-	if (druid_data.gdb_pid == -1) {
+	/* FIXME: use GError */
+	if (!g_spawn_async_with_pipes (NULL, args, NULL, 0, NULL, NULL,
+				       &druid_data.gdb_pid,
+				       NULL, 
+				       &druid_data.fd, 
+				       NULL, NULL)) {
 		d = gnome_error_dialog (_("Error on fork()."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		g_free (app2);
 		return;
 	}
 	
-	druid_data.fd = fd;
-	druid_data.ioc = g_io_channel_unix_new (fd);
-	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP, 
+	druid_data.ioc = g_io_channel_unix_new (druid_data.fd);
+	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP,
 			handle_gdb_input, NULL);
 	g_io_channel_unref (druid_data.ioc);
 	gtk_editable_delete_text (GTK_EDITABLE (GET_WIDGET ("gdb-text")), 0, -1);
@@ -306,9 +307,3 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	g_free (app2);
 }
-
-
-
-
-
-

@@ -2,11 +2,11 @@
  *
  * Copyright (C) Jacob Berkman
  *
- * Author: Jacob Berkman  <jberkman@andrew.cmu.edu>
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * Author: Jacob Berkman  <jacob@bug-buddy.org>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of version 2 of the GNU General Public
+ * License as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -27,7 +27,7 @@ main (int argc, char *argv[])
 {
 	int *n = NULL;
 	gnome_client_disable_master_connection ();
-	gnome_init (PACKAGE, VERSION, argc, argv);
+	gnome_init ("Crashing GNOME Program", VERSION, argc, argv);
 	n[27] = 10-7-78;
 	return 0;
 }

@@ -5,10 +5,9 @@
  *
  * Author:  jacob berkman  <jacob@bug-buddy.org>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of version 2 of the GNU General Public
+ * License as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -22,6 +21,9 @@
 
 #include <config.h>
 
+#include "bug-buddy.h"
+#include "libglade-buddy.h"
+
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <utime.h>
@@ -31,9 +33,6 @@
 
 #include <libgnomevfs/gnome-vfs.h>
 
-#include "bug-buddy.h"
-#include "libglade-buddy.h"
-#include "util.h"
 #include <dirent.h>
 
 #include <libxml/tree.h>
@@ -654,7 +653,7 @@ load_bugzillas (void)
 				    GNOME_VFS_XFER_DEFAULT,
 				    GNOME_VFS_XFER_ERROR_MODE_ABORT,
 				    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
-				    GNOME_VFS_DEFAULT_PRIORITY,
+				    GNOME_VFS_PRIORITY_DEFAULT,
 				    async_update, NULL, NULL, NULL))
 				return;
 	}
@@ -754,6 +753,50 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	c = GET_WIDGET ("severity-list");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (c), m);
 	g_slist_foreach (prod->bts->severities, (GFunc)add_severity, m);
+}
+
+#define LINE_WIDTH 72
+static void
+append_line_width (GString *str, char *s)
+{
+	gchar *sp;
+	if (!s) return;
+
+	if (strlen (s) < LINE_WIDTH) {
+		g_string_append (str, s);
+		g_string_append_c (str, '\n');
+		return;
+	}
+
+	for (sp = s+LINE_WIDTH; sp > s && !isspace (*sp); sp--)
+		;
+
+	if (s == sp) sp = strpbrk (s+LINE_WIDTH, "\t\n ");
+       
+	if (sp)	*sp = '\0';
+
+	g_string_append (str, s);
+	g_string_append_c (str, '\n');
+
+	if (sp) append_line_width (str, sp+1);
+}
+
+static char *
+format_for_width (const char *s)
+{
+	GString *str;
+	int i;
+	char **sv, *r;
+
+	str = g_string_new (NULL);
+
+	sv = g_strsplit (s, "\n", -1);
+	for (i = 0; sv[i]; i++)
+		append_line_width (str, sv[i]);
+
+	r = str->str;
+	g_string_free (str, FALSE);
+	return r;
 }
 
 /*

@@ -1,3 +1,28 @@
+2001-10-28  jacob berkman  <jacob@ximian.com>
+
+	* src/gdb-buddy.c (get_trace_from_pair): use the awesome
+	g_spawn_async_with_pipes() function.  glib2 rules.
+
+	* src/bugzilla.c (format_for_width): 
+	(append_line_width): move from util.c as these are still needed
+
+	* src/bug-buddy.c (add_to_clist): 
+	(append_packages): remove unused functions
+
+	* src/*.bts:
+	* src/ctree-combo.[ch]:
+	* src/distro*:
+	* src/gnome.appmap:
+	* src/packages.c:
+	* src/bts.c:
+	* src/*-packages:
+	* src/util.[ch]:
+	* src/bug-buddy.buddy: remove outdated / unused files
+
+	* src/*.[ch]:
+	* COPYING: add in a nice little note saying only version 2 of the
+	gpl applies
+
 2001-10-27  jacob berkman  <jacob@ximian.com>
 
 	* src/bugzilla.c (start_xfer): use GNOME_VFS_PRIORITY_DEFAULT
