@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-06-05 13:40+0200\n"
-"PO-Revision-Date: 2000-05-25 15:28+0200\n"
+"POT-Creation-Date: 2000-06-07 21:43+0200\n"
+"PO-Revision-Date: 2000-06-07 21:44+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -106,16 +106,16 @@ msgid "Package containing the program"
 msgstr "Uygulamanýn pakajý"
 
 #: src/bug-buddy.c:116
-msgid "PACKAGE"
-msgstr ""
+msgid "bug-buddy"
+msgstr "PAKAJ"
 
 #: src/bug-buddy.c:117
 msgid "Version of the package"
 msgstr "Pakajýn nesli"
 
 #: src/bug-buddy.c:117
-msgid "VERSION"
-msgstr ""
+msgid "1.0"
+msgstr "NESIL"
 
 #: src/bug-buddy.c:118
 msgid "File name of crashed program"
