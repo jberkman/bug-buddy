@@ -31,6 +31,7 @@ struct _BugTrackingSystem {
 	void (*denit) (void);
 
 	gint (*doit) (void);
+	const char *(*get_email) (void);
 };
 
 extern BugTrackingSystem debian_bts;

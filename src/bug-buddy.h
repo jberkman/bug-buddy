@@ -27,8 +27,6 @@
 #include "distro.h"
 #include "bts.h"
 
-#define SUBMIT_ADDRESS "@bugs.gnome.org"
-
 typedef enum {
 	CRASH_NONE,
 	CRASH_DIALOG,

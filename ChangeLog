@@ -1,3 +1,13 @@
+2000-03-04  Jacob Berkman  <jacob@helixcode.com>
+
+	* src/bug-buddy.[ch] (on_complete_page_prepare): use email address from
+	BTS instead of GNOME one
+
+	* src/bts-debian.c (debian_bts_get_email): implement get_email
+	for debian
+
+	* src/bts.h: add get_email function
+
 2000-02-23  Jacob Berkman  <jacob@helixcode.com>
 
 	* NEWS, configure.in: 0.7 release

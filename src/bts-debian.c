@@ -50,6 +50,7 @@
 static gint debian_bts_init (xmlNodePtr node);
 static void debian_bts_denit (void);
 static gint debian_bts_doit (void);
+static const char *debian_bts_get_email (void);
 
 GtkWidget *make_miggie_combo (gchar *widget_name, gchar *s1,
 			      gchar *s2, gint i1, gint i2);
@@ -57,7 +58,8 @@ GtkWidget *make_miggie_combo (gchar *widget_name, gchar *s1,
 BugTrackingSystem debian_bts = {
 	debian_bts_init,
 	debian_bts_denit,
-	debian_bts_doit
+	debian_bts_doit,
+	debian_bts_get_email
 };
 
 static struct {
@@ -65,6 +67,12 @@ static struct {
 	char *web;
 	GList *packages;
 } debian_data;
+
+static const char *
+debian_bts_get_email ()
+{
+	return debian_data.email;
+}
 
 GtkWidget *
 make_miggie_combo (gchar *widget_name, gchar *s1,

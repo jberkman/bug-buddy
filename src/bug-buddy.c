@@ -469,7 +469,6 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 	gchar *text;
 	GtkWidget *w;
 	int bugnum;
-	to = SUBMIT_ADDRESS;
 
 	w = GET_WIDGET ("email_entry");
 	from = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
@@ -482,13 +481,15 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 		break;
 	case SUBMIT_REPORT:
 		if (druid_data.bug_type == BUG_NEW) {
-			to = g_strdup ("submit" SUBMIT_ADDRESS);
+			to = g_strdup_printf ("submit%s", 
+					      druid_data.bts->get_email ());
 			break;
 		}
 
 		w = GET_WIDGET ("bug_number");
 		bugnum = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (w));
-		to = g_strdup_printf ("%d" SUBMIT_ADDRESS, bugnum);
+		to = g_strdup_printf ("%d%s", bugnum,
+				      druid_data.bts->get_email ());
 		break;
 	case SUBMIT_FILE:
 		w = GET_WIDGET ("file_entry");
