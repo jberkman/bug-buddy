@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
 "POT-Creation-Date: 2000-04-29 17:02-0400\n"
-"PO-Revision-Date: 2000-04-29 16:42+02:00\n"
+"PO-Revision-Date: 2000-05-05 11:42+02:00\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -249,7 +249,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne fil?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:937
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -258,7 +258,7 @@ msgstr ""
 "Kunne ikke åbne '%s'.\n"
 "Tjek venligst om fejl-hjælper er korrekt installeret."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1044
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -266,7 +266,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME bruges ikke længere.\n"
 "Brug venligst --appname kommandolineargumentet istedet."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1057
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -274,7 +274,7 @@ msgstr ""
 "$GNOME_CRASHED_PID bruges ikke længere.\n"
 "Brug venligst --pid kommandolinieargumentet istedet."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1189
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -400,7 +400,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Fejlfølgningssystem "
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Pakke"
 
@@ -434,48 +434,52 @@ msgid "Description"
 msgstr "Beskrivelse"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr "Lav venligst din fejlrapport på engelsk, om muligt."
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Kort overskrift for fejlrapporten"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr ""
 "Detaljeret beskrivelse af fejlen, med beskrivelse af hvordan man gentager "
 "den (på engelsk)"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Inkludér en tekstfil"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Fejlanalyseringsinformation"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Vælg kørbar fil for program der gik ned"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binær"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Proces-ID"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Core-fil"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Vælg en core-fil"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Indsamler fejlanalyseringsinformation"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -483,51 +487,51 @@ msgstr ""
 "Vent venligst mens fejlanalyserings-\n"
 "informationen indsamles..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Systemkonfiguration"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Undersøg venligst om disse oplysninger er korrekte"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Installeret version"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Gå automatisk til næste side når du er færdig"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Send fejlrapport"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "Til"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Send kopi til dig selv"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Gem rapporten som..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Indhold"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Resumé"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL er altseende."
 
