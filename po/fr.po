@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.8\n"
-"POT-Creation-Date: 2001-08-16 10:00+0200\n"
-"PO-Revision-Date: 2001-08-16 09:51+0200\n"
+"POT-Creation-Date: 2001-09-03 00:18+0200\n"
+"PO-Revision-Date: 2001-09-03 00:18+0200\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "Créer un nouveau rapport d'anomalies"
 
 #: src/bug-buddy.c:70
 msgid "Add more information to existing report"
-msgstr "Ajouter plus d'informations à un rapport d'anomalies existant"
+msgstr "Ajouter plus d'informations à un rapport existant"
 
 #: src/bug-buddy.c:79
 msgid "Name of contact"
@@ -137,7 +137,7 @@ msgid ""
 "Could not load '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Ne peut ouvrir « %s ».\n"
+"Ne peut charger « %s ».\n"
 "Vérifiez que Bug Buddy a été correctement installé."
 
 #: src/bugzilla.c:477
@@ -165,10 +165,10 @@ msgid ""
 "Should Bug Buddy try to update these files now?"
 msgstr ""
 "Bug Buddy a déterminé que quelques informations concernant les\n"
-"différents systèmes de surveillance d'anomalies ont besoin d'etre\n"
-"mise à jour.\n"
+"différents systèmes de surveillance d'anomalies ont besoin d'être\n"
+"mises à jour.\n"
 "\n"
-"Voulez-vous que Bug Buddy essaye de mettre à jous ces fichiers\n"
+"Voulez-vous que Bug Buddy essaie de mettre à jour ces fichiers\n"
 "maintenant ?"
 
 #: src/gdb-buddy.c:74
@@ -229,16 +229,16 @@ msgstr "À propos"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
-msgstr "Assbarn Phenomenon"
+msgstr "Phénomène Assbarn"
 
 #: src/bug-buddy.glade.h:5
 msgid "Automatically continue to next step when debugging is complete"
 msgstr ""
-"Continuer automatiquement à l'étape suivante quand le débogage est effectué"
+"Continuer automatiquement à l'étape suivante quand le débogage sera terminé"
 
 #: src/bug-buddy.glade.h:6
 msgid "Automatically go to next page when complete"
-msgstr "Aller automatiquement à la page suivante"
+msgstr "Aller automatiquement à la page suivante quand cela sera terminé"
 
 #: src/bug-buddy.glade.h:7
 msgid "Binary file"
@@ -254,11 +254,11 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
-"Bug Buddy peut envoyer des information de débogage avec votre rapport "
+"Bug Buddy peut envoyer des informations de débogage avec votre rapport "
 "d'anomalies.\n"
-"Les options corrects doivent avoir été sélectionné pour vous "
-"automatiquement.\n"
-"Pour plus d'information, veuillez cliquer sur le bouton d'aide ci-dessous."
+"Les options correctes devraient avoir été sélectionnées automatiquement pour "
+"vous.\n"
+"Pour plus d'informations, veuillez cliquer sur le bouton d'aide ci-dessous."
 
 #: src/bug-buddy.glade.h:12
 msgid "Bug tracking system"
@@ -282,7 +282,7 @@ msgstr "Fichier core"
 
 #: src/bug-buddy.glade.h:17
 msgid "Debug"
-msgstr "Débog"
+msgstr "Déboguer"
 
 #: src/bug-buddy.glade.h:18
 msgid "Description"
@@ -294,8 +294,7 @@ msgstr "Adresse électronique"
 
 #: src/bug-buddy.glade.h:20
 msgid "Full description of the bug, including how to reproduce it"
-msgstr ""
-"Description complète de l'anomalie, incluant une manière de la reproduire"
+msgstr "Description complète de l'anomalie, incluant la façon de la reproduire"
 
 #: src/bug-buddy.glade.h:21
 msgid "Go"
@@ -324,14 +323,14 @@ msgstr "Veuillez faire votre rapport d'anomalies en anglais, si possible."
 #: src/bug-buddy.glade.h:27
 msgid "Please select the product for the bug you wish to report."
 msgstr ""
-"Veuillez sélectionner le produit correspondant à l'anomalie que vous "
+"Veuillez sélectionner l'application correspondant à l'anomalie que vous "
 "souhaitez rapporter."
 
 #: src/bug-buddy.glade.h:28
 msgid ""
 "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
-"Veullez patientez le temps que Bug Buddy détermine les informations "
+"Veullez patientez pendant que Bug Buddy détermine les informations "
 "concernant votre système."
 
 #: src/bug-buddy.glade.h:29
@@ -340,7 +339,7 @@ msgid ""
 "of products for the bug tracking systems."
 msgstr ""
 "Veuillez attendre que Bug Buddy mette à jour sa\n"
-"liste de produits pour le système de suivi d'\n"
+"liste d'applications pour le système de suivi d'\n"
 "anomalies."
 
 #: src/bug-buddy.glade.h:31
@@ -349,7 +348,7 @@ msgstr "Numéro de processus (PID)"
 
 #: src/bug-buddy.glade.h:32 src/united-states-of-bug-buddy.c:46
 msgid "Product"
-msgstr "Produit"
+msgstr "Application"
 
 #: src/bug-buddy.glade.h:33
 msgid "Save the report to..."
@@ -401,15 +400,15 @@ msgid ""
 "contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
-"Ce programme vous guidera a travers les étapes de\n"
-"transmission d'un rapport d'anomalies pour un projet\n"
+"Ce programme vous guidera dans les différentes étapes de\n"
+"soumission d'un rapport d'anomalies d'un projet\n"
 "comme GNOME.\n"
 "\n"
-"Ces rapports d'anomalies sont transmis par courrier\n"
+"Ces rapports d'anomalies sont soumis par courrier\n"
 "électronique, aussi veuillez spécifier votre adresse\n"
 "électronique afin que vous puissiez être contacté si\n"
-"de plus amples informations étaient nécessaire, ou\n"
-"lorsque une version corrigée est disponible."
+"de plus amples informations étaient nécessaires, ou\n"
+"lorsque une version corrigée sera disponible."
 
 #: src/bug-buddy.glade.h:50
 msgid "To"
@@ -457,7 +456,7 @@ msgstr "intro"
 
 #: src/bug-buddy.glade.h:61
 msgid "product"
-msgstr "produit"
+msgstr "application"
 
 #: src/bug-buddy.glade.h:62
 msgid "system"
@@ -469,7 +468,7 @@ msgstr "Bienvenue dans Bug Buddy"
 
 #: src/united-states-of-bug-buddy.c:43
 msgid "Debugging Information"
-msgstr "Information de débogage"
+msgstr "Informations de débogage"
 
 #: src/united-states-of-bug-buddy.c:44
 msgid "Bug Description"
@@ -477,7 +476,7 @@ msgstr "Description de l'anomalie"
 
 #: src/united-states-of-bug-buddy.c:45
 msgid "Updating Product Listing"
-msgstr "Mise à jour de la liste des produits"
+msgstr "Mise à jour de la liste des applications"
 
 #: src/united-states-of-bug-buddy.c:48
 msgid "System Configuration"
@@ -485,7 +484,7 @@ msgstr "Configuration du système"
 
 #: src/united-states-of-bug-buddy.c:49
 msgid "Submitting the Report"
-msgstr "Transmettre le rapport d'anomalies"
+msgstr "Soumettre le rapport d'anomalies"
 
 #: src/united-states-of-bug-buddy.c:50
 msgid "Finished!"
@@ -493,7 +492,7 @@ msgstr "Fini !"
 
 #: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "L'outil graphique GNOME pour rapporter les anomalies."
+msgstr "L'outil graphique GNOME de rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
@@ -551,7 +550,7 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
-msgstr "Transmettre ce rapport d'anomalies maintenant ?"
+msgstr "Soumettre ce rapport d'anomalies maintenant ?"
 
 #: src/united-states-of-bug-buddy.c:406
 #, c-format
@@ -582,7 +581,7 @@ msgid ""
 "\n"
 "Thanks!"
 msgstr ""
-"Votre rapport d'anomalies a été transmis à :\n"
+"Votre rapport d'anomalies a été soumis à :\n"
 "\n"
 "        <%s>\n"
 "\n"
@@ -590,7 +589,7 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
-msgstr "Vous devez spécifier un produit dans votre rapport d'anomalies."
+msgstr "Vous devez spécifier une application dans votre rapport d'anomalies."
 
 #: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
@@ -623,7 +622,7 @@ msgstr "Erreur en lecture..."
 
 #: src/bug-buddy.desktop.in.h:1
 msgid "Bug Report Tool"
-msgstr "Bug Buddy"
+msgstr "Outil de rapport d'anomalies"
 
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
@@ -667,7 +666,7 @@ msgstr "Crée un rapport d'anomalies pour GNOME"
 #~ "Please specify a package."
 #~ msgstr ""
 #~ "Il est beaucoup plus utile de spécifier\n"
-#~ "un paquet plus précis que « general ».\n"
+#~ "un paquet spécifique que « general ».\n"
 #~ "\n"
 #~ "Veuillez spécifier un paquet."
 
@@ -684,7 +683,7 @@ msgstr "Crée un rapport d'anomalies pour GNOME"
 #~ "\n"
 #~ "Specify a new location for sendmail?"
 #~ msgstr ""
-#~ "« %s » ne semble pas exister. Vous ne pourrez pas transmettre ce rapport\n"
+#~ "« %s » ne semble pas exister. Vous ne pourrez pas soumettre un rapport\n"
 #~ "d'anomalies, mais vous pourrez néanmoins l'enregistrer dans un fichier.\n"
 #~ "\n"
 #~ "Spécifier un nouvel emplacement pour sendmail ?"
@@ -693,7 +692,7 @@ msgstr "Crée un rapport d'anomalies pour GNOME"
 #~ msgstr "Vous devez spécifier l'adresse électronique d'un destinataire"
 
 #~ msgid "Please choose a file to save to."
-#~ msgstr "Choisissez un fichier l'enregistrement."
+#~ msgstr "Veuillez choisir un fichier d'enregistrement."
 
 #~ msgid ""
 #~ "The file '%s' already exists.\n"
