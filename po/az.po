@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.1.0\n"
 "POT-Creation-Date: 2001-12-06 16:39-0500\n"
-"PO-Revision-Date: 2001-11-11 18:27GMT+0200\n"
+"PO-Revision-Date: 2001-12-19 19:16GMT+0200\n"
 "Last-Translator: Vasif İsmayıloğlu MD <azerb_linux@hotmail.com>\n"
 "Language-Team: Azerbaijani Turkic <linuxaz@azerimail.net>\n"
 "MIME-Version: 1.0\n"
@@ -131,12 +131,12 @@ msgstr ""
 "Lütfən onun yerinə --pid əmrini seçin."
 
 #: src/bug-buddy.c:555
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"'%s''i yükləyə bilmirəm.\n"
+"Bug-buddy '%s'i yükləyə bilmir.\n"
 "Lütfən bug-buddy'nin düzgün qurulub qurulmadığını yoxlayın ."
 
 #: src/bug-buddy.glade.h:49 src/bugzilla.c:562
@@ -154,12 +154,12 @@ msgid "Component"
 msgstr "Komponent"
 
 #: src/bugzilla.c:617
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"'%s''i aça bilmədim.\n"
+"Bug-buddy '%s' i aça bilmədi.\n"
 "Lütfən bug-buddy'nin düzgün qurulub qurulmadığını yoxlayın ."
 
 #: src/bugzilla.c:633
@@ -357,8 +357,7 @@ msgid "Please select the product for the bug you wish to report."
 msgstr "Lütfən yollamaq istədiyiniz xətanın mə'mulunu seçin."
 
 #: src/bug-buddy.glade.h:45
-msgid ""
-"Please wait while Bug Buddy determines some information about your system."
+msgid "Please wait while Bug Buddy determines some information about your system."
 msgstr "Lütfən sisteminiz haqqında mə'lumatlar toplanırkən gözləyin."
 
 #: src/bug-buddy.glade.h:46
@@ -645,3 +644,4 @@ msgstr "Xəta Bildirmə Vasitəsi"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "GNOME xətasını bildir"
+
