@@ -1,3 +1,8 @@
+2000-10-31  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
+
+	* configure.in (ALL_LINGUAS): added 'pt_BR' under the request of
+	Juan Carlos Castro y Castro <jcastro@appi.com.br>
+
 2000-10-29  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
 
 	* configure.in (AC_OUTPUT): added Makefile for italian documentation
