@@ -1380,8 +1380,13 @@ bug-buddy has obtained:</label>
 	<handler>on_complete_page_finish</handler>
 	<last_modification_time>Fri, 15 Oct 1999 07:02:12 GMT</last_modification_time>
       </signal>
-      <title>Bug submission complete</title>
-      <title>Bug submission complete</title>
+      <signal>
+	<name>prepare</name>
+	<handler>on_complete_page_prepare</handler>
+	<last_modification_time>Fri, 05 Nov 1999 08:36:41 GMT</last_modification_time>
+      </signal>
+      <title>Summary</title>
+      <title>Summary</title>
       <text></text>
       <text></text>
       <background_color>0,0,1</background_color>

@@ -34,6 +34,7 @@ gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_less_page_back (GtkWidget *, GtkWidget *);
 gboolean on_misc_page_back (GtkWidget *, GtkWidget *);
 gboolean on_the_druid_cancel (GtkWidget *);
+gboolean on_complete_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_complete_page_finish (GtkWidget *, GtkWidget *);
 gboolean on_system_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_gnome_page_prepare (GtkWidget *, GtkWidget *);
@@ -47,6 +48,7 @@ gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
 
 extern const char *packages[];
 
+#define SUBMIT_ADDRESS "submit@bugs.gnome.org";
 #define COMMAND_SIZE 5
 
 const gchar *severity[] = { N_("normal"),
@@ -389,6 +391,69 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 	return TRUE;
 }
 
+/* too much duplication here; fix later */
+gboolean
+on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
+{
+	gchar *name, *from, *to, *package, *subject;
+	gchar *text;
+	GtkWidget *w;
+
+	to = SUBMIT_ADDRESS;
+
+	w = glade_xml_get_widget (druid_data.xml, "email_entry");
+	from = gtk_entry_get_text (GTK_ENTRY (w));
+
+	switch (druid_data.submit_type) {
+	case SUBMIT_TO_SELF:
+		to = from;
+		break;
+	case SUBMIT_REPORT:
+		break;
+	case SUBMIT_FILE:
+		w = glade_xml_get_widget (druid_data.xml, "file_entry");
+		to = gtk_entry_get_text (GTK_ENTRY (w));
+		break;
+	case SUBMIT_NONE:
+		gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page),
+						  "Click \"Finish\" to exit bug-buddy.\n"
+						  "No bug report will be submitted.");
+		return FALSE;
+	default:
+		g_assert_not_reached ();
+		return FALSE;
+	}
+
+	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	name = gtk_entry_get_text (GTK_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "desc_entry");
+	subject = gtk_entry_get_text (GTK_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "package_entry");
+	package = gtk_entry_get_text (GTK_ENTRY (w));
+	if (!strlen(package))
+		package = "general";
+	
+	if (druid_data.submit_type == SUBMIT_FILE)
+		text = g_strdup_printf (_("You are about to save a bug report in '%s'.\n"
+					  "This can later be used to report a bug in '%s'."),
+					to, package);
+					  
+	else
+		text = g_strdup_printf (_("You are about to report a bug in '%s'.\n"
+					  "This will be submitted via email:\n"
+					  "To: %s\n"
+					  "From: %s <%s>\n"
+					  "Subject: %s\n\n"
+					  "Clicking on 'Finish' will submit the bug report."),
+					package, to, name, from, subject);
+
+	gnome_druid_page_finish_set_text (GNOME_DRUID_PAGE_FINISH (page), text);
+	g_free (text);
+	return FALSE;
+}
+
 gboolean
 on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 {
@@ -397,7 +462,8 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	FILE *fp = stdout;
 	ListData *data;	
 
-	s2 = "submit@bugs.gnome.org";
+	s2 = SUBMIT_ADDRESS;
+
 	w = glade_xml_get_widget (druid_data.xml, "email_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 
@@ -410,11 +476,11 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		g_message ("about to run '%s'", s3);
 		fp = popen (s3, "w");
 		if (!fp) {
-			gchar *s = g_strdup_printf (_("Unable to start mail program:"
-						      "'%s'"), druid_data.mail_cmd);
-			GtkWidget *d = gnome_error_dialog (s);
+			s = g_strdup_printf (_("Unable to start mail program:\n"
+					       "'%s'"), druid_data.mail_cmd);
+			w = gnome_error_dialog (s);
 			g_free (s);
-			gnome_dialog_run_and_close (GNOME_DIALOG (d));
+			gnome_dialog_run_and_close (GNOME_DIALOG (w));
 			return FALSE;
 		}
 		break;
@@ -423,11 +489,11 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		s3 = gtk_entry_get_text (GTK_ENTRY (w));
 		fp = fopen (s3, "w");
 		if (!fp) {
-			gchar *s4 = g_strdup_printf (_("Unable to open file:\n"
+			s = g_strdup_printf (_("Unable to open file:\n"
 						      "'%s'"), s3);
-			GtkWidget *d = gnome_error_dialog (s4);
-			g_free (s4);
-			gnome_dialog_run_and_close (GNOME_DIALOG (d));
+			w = gnome_error_dialog (s);
+			g_free (s);
+			gnome_dialog_run_and_close (GNOME_DIALOG (w));
 			return FALSE;
 		}
 		break;
@@ -452,6 +518,8 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 
 	w = glade_xml_get_widget (druid_data.xml, "package_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
+	if (!strlen(s))
+		w = "general";
 	fprintf (fp, "\nPackage: %s\n", s);
 
 	fprintf (fp, "Severity: %s\n", severity[druid_data.severity]);

@@ -49,4 +49,4 @@ gchar *s = N_("Submit bug report");
 gchar *s = N_("Send report to your email address *only*");
 gchar *s = N_("Do not send bug report anywhere");
 gchar *s = N_("Save the report to a file");
-gchar *s = N_("Bug submission complete");
+gchar *s = N_("Summary");
