@@ -441,7 +441,7 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 					to, package);
 					  
 	else
-		text = g_strdup_printf (_("You are about to report a bug in '%s'.\n"
+		text = g_strdup_printf (_("You are about to report a bug in '%s'.\n\n"
 					  "This will be submitted via email:\n"
 					  "To: %s\n"
 					  "From: %s <%s>\n"
