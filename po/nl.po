@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2000-05-10 01:33-0400\n"
+"POT-Creation-Date: 2000-05-21 15:24-0400\n"
 "PO-Revision-Date: 2000-04-24 23:59+02:00\n"
 "Last-Translator: Dennis Smit <synap@area101.penguin.nl>\n"
 "Language-Team:\n"
@@ -216,32 +216,34 @@ msgstr "Het programma '%s' wordt zodadelijk uitgevoerd"
 msgid "Unable to start mail program: '%s'"
 msgstr "Kan het '%s' mailprogramma niet starten"
 
-#: src/bug-buddy.c:679
+#: src/bug-buddy.c:678
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Uw bugrapport is opgeslagen in '%s'"
 
-#: src/bug-buddy.c:682
-#, c-format
+#: src/bug-buddy.c:681
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
-"\t<%s>"
-msgstr "Uw bugrapport is opgestuurd naar:\n"
+"\n"
+"        <%s>"
+msgstr ""
+"Uw bugrapport is opgestuurd naar:\n"
 "\tr <%s>"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:811
 msgid "You must specify a recipient email address"
 msgstr "U dient een email-adres van de ontvanger op te geven"
 
-#: src/bug-buddy.c:818
+#: src/bug-buddy.c:817
 msgid "Submit this bug report now?"
 msgstr "Dit bugrapport nu opsturen?"
 
-#: src/bug-buddy.c:828
+#: src/bug-buddy.c:827
 msgid "Please choose a file to save to."
 msgstr "Kiest U een bestand waarin de bug opgeslagen moet worden"
 
-#: src/bug-buddy.c:835
+#: src/bug-buddy.c:834
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -250,7 +252,7 @@ msgstr ""
 "Het bestand '%s' bestaat reeds. \n"
 "Wilt U dit bestand overschrijven?"
 
-#: src/bug-buddy.c:935
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -259,7 +261,7 @@ msgstr ""
 "Ik kan het '%s' bestand niet vinden.\n"
 "Controleer of bug-buddy correct is geinstalleerd."
 
-#: src/bug-buddy.c:1042
+#: src/bug-buddy.c:1039
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -267,7 +269,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME is niet meer te gebruiken.\n"
 "Gebruik alstublieft --appname command line optie."
 
-#: src/bug-buddy.c:1055
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -275,7 +277,7 @@ msgstr ""
 "$GNOME_CRASHED_PID is niet meer te gebruiken.\n"
 "Gebruik alstublieft --pid command line optie."
 
-#: src/bug-buddy.c:1187
+#: src/bug-buddy.c:1184
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -298,12 +300,7 @@ msgstr ""
 "Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
 "'%s' "
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "Het subproces is geeindigt met statuscode %d"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:141
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -312,12 +309,12 @@ msgstr ""
 "Het is niet mogelijk te achterhalen welk programma\n"
 "de file '%s' heeft gecreerd."
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
 msgstr ""
 "Er is een fout opgetreden tijdens het lezen. De operatie wordt afgebroken"
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:204
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -325,7 +322,7 @@ msgstr ""
 "De gdb-cmd file kan niet gevonden worden.\n"
 "Zou U bug-buddy opnieuw kunnen installeren?"
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
 msgstr "Er is een probleem met het fork() commando"
 
@@ -547,8 +544,10 @@ msgstr "Het programma '%s' kon niet worden uitgevoerd"
 
 #: src/util.c:112
 msgid "Error on read..."
-msgstr ""
-"Er is een fout opgetreden tijdens het lezen."
+msgstr "Er is een fout opgetreden tijdens het lezen."
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "Het subproces is geeindigt met statuscode %d"
 
 #~ msgid ""
 #~ "Submit new report\n"

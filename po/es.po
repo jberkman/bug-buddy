@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2000-05-14 11:23+0200\n"
+"POT-Creation-Date: 2000-05-21 15:24-0400\n"
 "PO-Revision-Date: 2000-05-14 11:27+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -217,12 +217,12 @@ msgstr "a punto de ejecutar '%s'"
 msgid "Unable to start mail program: '%s'"
 msgstr "No se puede ejecutar el programa de correo: '%s'"
 
-#: src/bug-buddy.c:679
+#: src/bug-buddy.c:678
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
-#: src/bug-buddy.c:682
+#: src/bug-buddy.c:681
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -232,19 +232,19 @@ msgstr ""
 "Su informe de error fue enviado a:\n"
 "        <%s>"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:811
 msgid "You must specify a recipient email address"
 msgstr "Tiene que indicar la dirección de email del destinatario"
 
-#: src/bug-buddy.c:818
+#: src/bug-buddy.c:817
 msgid "Submit this bug report now?"
 msgstr "¿Enviar este informe de error ahora?"
 
-#: src/bug-buddy.c:828
+#: src/bug-buddy.c:827
 msgid "Please choose a file to save to."
 msgstr "Elija un archivo al que grabar."
 
-#: src/bug-buddy.c:835
+#: src/bug-buddy.c:834
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -253,7 +253,7 @@ msgstr ""
 "El archivo '%s' ya existe.\n"
 "¿Sobreescribir este archivo?"
 
-#: src/bug-buddy.c:935
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -262,7 +262,7 @@ msgstr ""
 "No se pudo abrir '%s'.\n"
 "Por favor, asegúrese de que bug-buddy está bien instalado."
 
-#: src/bug-buddy.c:1042
+#: src/bug-buddy.c:1039
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -270,7 +270,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --apname."
 
-#: src/bug-buddy.c:1055
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -278,7 +278,7 @@ msgstr ""
 "$GNOME_CRASHED_PID está obsoleto.\n"
 "Por favor, use el argumento de línea de comandos --pid."
 
-#: src/bug-buddy.c:1187
+#: src/bug-buddy.c:1184
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -301,12 +301,7 @@ msgstr ""
 "No se pudo procesar el archivo core con gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "El proceso hijo salió con estado %d"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:141
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -315,11 +310,11 @@ msgstr ""
 "No se puede determinar qué binario se creó\n"
 "'%s'"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
 msgstr "Error al leer... abortando"
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:204
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -327,7 +322,7 @@ msgstr ""
 "No se pudo encontrar el archivo gdb-cmd.\n"
 "Por favor, pruebe a reinstalar bug-buddy."
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
 msgstr "Error al hacer fork()."
 
@@ -547,3 +542,6 @@ msgstr "No se pudo ejecutar '%s'."
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "Error al leer..."
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "El proceso hijo salió con estado %d"

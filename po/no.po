@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.9\n"
-"POT-Creation-Date: 2000-05-16 17:37+0200\n"
+"POT-Creation-Date: 2000-05-21 15:24-0400\n"
 "PO-Revision-Date: 2000-05-16 17:38+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -215,12 +215,12 @@ msgstr "i ferd med å kjøre '%s'"
 msgid "Unable to start mail program: '%s'"
 msgstr "Kunne ikke starte e-postprogram: '%s'"
 
-#: src/bug-buddy.c:679
+#: src/bug-buddy.c:678
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
-#: src/bug-buddy.c:682
+#: src/bug-buddy.c:681
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -231,19 +231,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:811
 msgid "You must specify a recipient email address"
 msgstr "Du må spesifisere en e-post adresse for mottaker"
 
-#: src/bug-buddy.c:818
+#: src/bug-buddy.c:817
 msgid "Submit this bug report now?"
 msgstr "Send denne feilrapporten nå?"
 
-#: src/bug-buddy.c:828
+#: src/bug-buddy.c:827
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:835
+#: src/bug-buddy.c:834
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -252,7 +252,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:935
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -261,7 +261,7 @@ msgstr ""
 "Kunne ikke åpne '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble riktig installert."
 
-#: src/bug-buddy.c:1042
+#: src/bug-buddy.c:1039
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -269,7 +269,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:1055
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -277,7 +277,7 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:1187
+#: src/bug-buddy.c:1184
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -300,12 +300,7 @@ msgstr ""
 "Kunne ikke håndtere core filen med gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "Barnprosess avsluttet med status %d"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:141
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -314,11 +309,11 @@ msgstr ""
 "Kunne ikke bestemme hvilken kjørbar fil som\n"
 "laget '%s'"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
 msgstr "Feil ved lesing... avbryter"
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:204
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -326,7 +321,7 @@ msgstr ""
 "Kunne ikke finne gdb-cmd filen.\n"
 "Vennligst installer bug-buddy på nytt."
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
 msgstr "Feil ved fork()."
 
@@ -548,3 +543,6 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "Barnprosess avsluttet med status %d"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20000516\n"
-"POT-Creation-Date: 2000-05-16 23:50+0900\n"
+"POT-Creation-Date: 2000-05-21 15:24-0400\n"
 "PO-Revision-Date: 2000-05-18 19:19+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
@@ -213,12 +213,12 @@ msgstr "実行される '%s' について"
 msgid "Unable to start mail program: '%s'"
 msgstr "メールプログラムを開始することが出来ません: '%s'"
 
-#: src/bug-buddy.c:679
+#: src/bug-buddy.c:678
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "あなたの不具合報告は '%s' に保存されました"
 
-#: src/bug-buddy.c:682
+#: src/bug-buddy.c:681
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -229,19 +229,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:811
 msgid "You must specify a recipient email address"
 msgstr "受取人の email アドレスを指定しなければなりません"
 
-#: src/bug-buddy.c:818
+#: src/bug-buddy.c:817
 msgid "Submit this bug report now?"
 msgstr "この不具合報告を今提出しますか?"
 
-#: src/bug-buddy.c:828
+#: src/bug-buddy.c:827
 msgid "Please choose a file to save to."
 msgstr "保存するファイルを選択してください"
 
-#: src/bug-buddy.c:835
+#: src/bug-buddy.c:834
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -250,7 +250,7 @@ msgstr ""
 "ファイル '%s' はすでに存在しています\n"
 "上書きしますか?"
 
-#: src/bug-buddy.c:935
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -259,7 +259,7 @@ msgstr ""
 "'%s' が開けません\n"
 "bug-buddy が正しくインストールされているか確認してください"
 
-#: src/bug-buddy.c:1042
+#: src/bug-buddy.c:1039
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -267,7 +267,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME は反対です\n"
 "代わりにコマンドラインオプションの --appname を使ってください"
 
-#: src/bug-buddy.c:1055
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -275,7 +275,7 @@ msgstr ""
 "$GNOME_CRASHED_PID は反対です\n"
 "代わりにコマンドラインオプションの --pid を使ってください"
 
-#: src/bug-buddy.c:1187
+#: src/bug-buddy.c:1184
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -298,23 +298,18 @@ msgstr ""
 "gdb によって core ファイルを処理できません:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "子プロセスはステータス '%d' で終了しています"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:141
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr "作られたバイナリ '%s' から確定することが出来ません"
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
 msgstr "読み込みでエラー...中断します"
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:204
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -322,7 +317,7 @@ msgstr ""
 "gdb-cmd ファイルを見つけることが出来ません\n"
 "bug-buddy を再インストールしてください"
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
 msgstr "fork() でエラー"
 
@@ -543,3 +538,6 @@ msgstr "'%s' を実行できませんでした"
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "読み込みでエラー..."
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "子プロセスはステータス '%d' で終了しています"

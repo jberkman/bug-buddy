@@ -136,9 +136,7 @@ get_trace_from_core (const gchar *core_file)
 	}
 
 	status = pclose(f);
-#if 0
-	g_message (_("Child process exited with status %d"), status);
-#endif
+
 	if (!binary) {
 		gchar *s = g_strdup_printf (_("Unable to determine which binary created\n"
 					      "'%s'"), core_file);

@@ -147,7 +147,7 @@ debian_bts_init (xmlNodePtr node)
 {
 	xmlNodePtr cur;
 	GtkWidget *w, *combo;
-	char *s, *p, *line, *appmap, *file, *row[2] = { NULL };
+	char *s, *p, *line, *appmap, *file, *row[2] = { NULL }, *pa;
 	char last_letter='\0';
 	int fd, count=0;
 	GtkCTreeNode *last_root = NULL;
@@ -156,7 +156,7 @@ debian_bts_init (xmlNodePtr node)
 
 
 	combo = GET_WIDGET ("miggie_combo");
-	gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), "general");
+	/*gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), "general");*/
 	gtk_clist_clear    (GTK_CLIST (CTREE_COMBO (combo)->ctree));
 
 	while (cur) {
@@ -183,19 +183,35 @@ debian_bts_init (xmlNodePtr node)
 			p = g_strdup (popt_data.package);
 			appmap = xmlGetProp (cur, "appmap");
 
-			if (!p && strlen (s) && appmap)
-				p = get_package_from_appname (appmap, s);
+			pa = gtk_entry_get_text (GTK_ENTRY (CTREE_COMBO (GET_WIDGET ("miggie_combo"))->entry));
 
-			xmlFree (appmap);
-			if (p) gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), p);
+			/*
+			  if (the string is general or there is no string)
+			  	look it up;
+				if (it wasn't found)
+					use general;
+			*/
+
+			if (!pa[0] || !strcmp (pa, "general")) {
+				if (!p && appmap && s)
+					p = get_package_from_appname (appmap, s);
+				gtk_entry_set_text (GTK_ENTRY (CTREE_COMBO (combo)->entry), p ? p : "general");
+			}
 			g_free (p);
+			
+			xmlFree (appmap);
 
 			w = GTK_CLIST (CTREE_COMBO (combo)->ctree);
 			gtk_clist_freeze (GTK_CLIST (w));
 			while ((row[0] = get_line_from_fd (fd))) {
 				if (row[0][0] != last_letter ||
 				    count > 20) {
+					char *s = g_strdup_printf ("%.8s...", row[0]);
+					char *t = row[0];
+					row[0] = s;
 					last_root = MAKE_ROOT(w, row);
+					g_free (row[0]);
+					row[0] = t;
 					last_letter = row[0][0];
 					count = 0;
 				}

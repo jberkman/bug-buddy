@@ -330,6 +330,19 @@ on_debian_page_next (GtkWidget *page, GnomeDruid *druid)
 	char *s, *email;
 	int bugnum;
 
+	s = gtk_entry_get_text (GTK_ENTRY (CTREE_COMBO (GET_WIDGET ("miggie_combo"))->entry));
+	if (!strcmp ("general", s)) {
+		w = gnome_message_box_new (_("It is much more helpful if you specify\n"
+					     "a more specific package than 'general'.\n\n"
+					     "Do you want to continue anyway?"),
+					   GNOME_MESSAGE_BOX_QUESTION,
+					   GNOME_STOCK_BUTTON_YES,
+					   GNOME_STOCK_BUTTON_NO,
+					   NULL);
+		if (GNOME_NO == gnome_dialog_run_and_close (w))
+			return TRUE;		
+	}
+
 	email = druid_data.bts->get_email ();
 	if (email) {
 		if (druid_data.bug_type == BUG_NEW) {
@@ -343,7 +356,7 @@ on_debian_page_next (GtkWidget *page, GnomeDruid *druid)
 	} else {
 		s = g_strdup ("");
 	}
-		
+	
 	w = GET_WIDGET ("submit_to_entry");
 	gtk_editable_delete_text (GTK_EDITABLE (w), 0, -1);
 	gtk_editable_insert_text (GTK_EDITABLE (w), s, strlen (s), &bugnum);
@@ -662,7 +675,6 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 
 	if (druid_data.submit_type == SUBMIT_REPORT &&
 	    GTK_TOGGLE_BUTTON (GET_WIDGET ("cc_toggle"))->active) {
-		g_message ("trying to cc...");
 		w = GET_WIDGET ("email_entry");
 		s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
 		fprintf (fp, "Cc: %s\n", s);
@@ -999,8 +1011,6 @@ init_ui ()
 
 	load_config ();
 
-	init_bts_menu ();
-
 	gtk_button_set_relief (GET_WIDGET ("already_href"),
 			       GTK_RELIEF_NONE);
 
@@ -1194,6 +1204,8 @@ main (int argc, char *argv[])
 	}
 
 	init_ui ();
+
+	init_bts_menu ();
 
 	gtk_widget_show (GET_WIDGET ("druid_window"));
 

@@ -16,7 +16,7 @@ URL: http://www.andrew.cmu.edu/~jberkman/bug-buddy/
 BuildRoot: /var/tmp/bug-buddy-root
 Docdir: %{prefix}/doc
 
-Requires: gnome-libs >= 1.0.53
+Requires: gnome-libs >= 1.0.60
 Requires: libglade >= 0.5
 
 %description

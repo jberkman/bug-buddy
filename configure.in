@@ -4,13 +4,21 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 0.90)
+AM_INIT_AUTOMAKE(bug-buddy, 1.0)
 
 AM_MAINTAINER_MODE
 
 AM_ACLOCAL_INCLUDE(macros)
 
 GNOME_INIT
+
+AC_PROG_CC
+AC_ISC_POSIX
+AC_HEADER_STDC
+AC_ARG_PROGRAM
+AM_PROG_LIBTOOL
+
+GNOME_COMPILE_WARNINGS
 
 dnl Check for new enough gnome-libs
 CFLAGS_save=$CFLAGS
@@ -23,14 +31,6 @@ AC_MSG_ERROR(gnome-libs 1.0.60 or higher is required.)])
 
 CFLAGS=$CFLAGS_save
 LIBS=$LIBS_save
-
-AC_PROG_CC
-AC_ISC_POSIX
-AC_HEADER_STDC
-AC_ARG_PROGRAM
-AM_PROG_LIBTOOL
-
-GNOME_COMPILE_WARNINGS
 
 AM_PATH_LIBGLADE(,,gnome)
 
@@ -59,7 +59,6 @@ docs/Makefile
 docs/C/Makefile
 po/Makefile.in
 intl/Makefile
-debian/Makefile
 pixmaps/Makefile
 src/Makefile
 ])

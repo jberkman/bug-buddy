@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2000-05-13 09:16+0200\n"
+"POT-Creation-Date: 2000-05-21 15:24-0400\n"
 "PO-Revision-Date: 2000-05-13 09:18+02:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -222,12 +222,12 @@ msgstr "dabei '%s' zu starten"
 msgid "Unable to start mail program: '%s'"
 msgstr "Kann das Mail-Programm nicht starten: '%s'"
 
-#: src/bug-buddy.c:679
+#: src/bug-buddy.c:678
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ihr Fehlerbericht wurde in '%s' gespeichert."
 
-#: src/bug-buddy.c:682
+#: src/bug-buddy.c:681
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -238,21 +238,21 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/bug-buddy.c:812
+#: src/bug-buddy.c:811
 msgid "You must specify a recipient email address"
 msgstr "Sie müssen die E-Mail-Adreese des Empfängers angeben."
 
-#: src/bug-buddy.c:818
+#: src/bug-buddy.c:817
 msgid "Submit this bug report now?"
 msgstr "Diesen Fehlerbericht jetzt abschicken?"
 
-#: src/bug-buddy.c:828
+#: src/bug-buddy.c:827
 msgid "Please choose a file to save to."
 msgstr ""
 "Bitte wählen Sie eine Datei,\n"
 "in der gespeichert werden soll."
 
-#: src/bug-buddy.c:835
+#: src/bug-buddy.c:834
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -261,7 +261,7 @@ msgstr ""
 "Die Datei `%s' existiert bereits.\n"
 "Diese Datei überschreiben?"
 
-#: src/bug-buddy.c:935
+#: src/bug-buddy.c:934
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -272,7 +272,7 @@ msgstr ""
 "Bitte überprüfen Sie, ob bug-buddy richtig\n"
 "installiert wurde."
 
-#: src/bug-buddy.c:1042
+#: src/bug-buddy.c:1039
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -282,7 +282,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --appname als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1055
+#: src/bug-buddy.c:1052
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -292,7 +292,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --pid als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1187
+#: src/bug-buddy.c:1184
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -317,12 +317,7 @@ msgstr ""
 "Kann folgende Core-Datei nicht mit gdb verarbeiten:\n"
 "`%s'"
 
-#: src/gdb-buddy.c:140
-#, c-format
-msgid "Child process exited with status %d"
-msgstr "Kindprozess verabschiedete sich mit Status %d"
-
-#: src/gdb-buddy.c:143
+#: src/gdb-buddy.c:141
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -332,11 +327,11 @@ msgstr ""
 "`%s'\n"
 "erstellt hat."
 
-#: src/gdb-buddy.c:174
+#: src/gdb-buddy.c:172
 msgid "Error on read... aborting"
 msgstr "Fehler beim Lesen...  Abbruch."
 
-#: src/gdb-buddy.c:206
+#: src/gdb-buddy.c:204
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
@@ -346,7 +341,7 @@ msgstr ""
 "Bitte versuchen Sie, bug-buddy noch einmal zu\n"
 "installieren."
 
-#: src/gdb-buddy.c:214 src/util.c:75
+#: src/gdb-buddy.c:212 src/util.c:75
 msgid "Error on fork()."
 msgstr "Fehler bei fork()."
 
@@ -571,3 +566,6 @@ msgstr "Kann '%s' nicht starten."
 #: src/util.c:112
 msgid "Error on read..."
 msgstr "Fehler beim Lesen...."
+
+#~ msgid "Child process exited with status %d"
+#~ msgstr "Kindprozess verabschiedete sich mit Status %d"

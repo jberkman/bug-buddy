@@ -1,4 +1,4 @@
-SUBDIRS = po intl debian pixmaps src docs
+SUBDIRS = po intl pixmaps src docs
 
 EXTRA_DIST = \
 	bug-buddy.spec.in	\
