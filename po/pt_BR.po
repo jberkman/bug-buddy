@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2000-10-24 11:12-0200\n"
+"POT-Creation-Date: 2000-10-19 16:31-0200\n"
 "PO-Revision-Date: 2000-07-18 15:55-0300\n"
 "Last-Translator: Juan Carlos Castro y Castro <jcastro@appi.com.br>\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -140,6 +140,7 @@ msgid "Core file from program"
 msgstr "Arquivo core do programa"
 
 #: src/bug-buddy.c:328
+#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -149,7 +150,7 @@ msgstr ""
 "Será muito mais útil se você especificar\n"
 "um pacote especifico em vez de 'geral'.\n"
 "\n"
-"Por favor, especifique um pacote."
+"Deseja continuar assim mesmo?"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -186,20 +187,23 @@ msgid "gdb has already exited"
 msgstr "gdb já terminou"
 
 #: src/bug-buddy.c:486
+#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "A ferramenta GNOME para relatórios de erro."
+msgstr "A ferramenta GNOME para relatórios de erro"
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "A página web chinfrim do bug-buddy"
 
 #: src/bug-buddy.c:603
+#, fuzzy
 msgid "Please enter your name."
-msgstr "Por favor, entre seu nome."
+msgstr "Por favor, entre seu nome e endereço de email"
 
 #: src/bug-buddy.c:609
+#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Por favor, entre um endereço de email válido."
+msgstr "Por favor, entre seu nome e endereço de email"
 
 #: src/bug-buddy.c:620
 #, c-format
@@ -570,3 +574,6 @@ msgstr "Impossível executar '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Error ao ler..."
+
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Copyright (C) 1999 Jacob Berkman"
