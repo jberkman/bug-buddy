@@ -145,7 +145,7 @@ get_trace_from_core (const gchar *core_file)
 	int status;
 	FILE *f;
 
-	gdb_cmd = g_strdup_printf ("gdb --nw --batch --core=%s", core_file);
+	gdb_cmd = g_strdup_printf ("gdb --batch --core=%s", core_file);
 
 	f = popen (gdb_cmd, "r");
 	g_free (gdb_cmd);
@@ -234,7 +234,6 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	int fd;
 	char *app2;
 	char *args[] = { "gdb",
-			 "--nw",
 			 "--batch", 
 			 "--quiet",
 			 "--command=" BUDDY_DATADIR "/gdb-cmd",

@@ -1,6 +1,13 @@
 2001-08-06  jacob berkman  <jacob@ximian.com>
 
 	* configure.in: 
+	* NEWS: 2.0.8
+
+	* src/gdb-buddy.c (get_trace_from_pair): 
+	(get_trace_from_core): revert --nw patch: it seems to break things
+	for me pretty badly.  i'm an idiot.
+
+	* configure.in: 
 	* NEWS: 2.0.7
 
 	* src/util.c (format_for_width): wrap to GStrings rather than text
