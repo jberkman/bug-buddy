@@ -18,6 +18,8 @@ GtkWidget *make_image (char *widget_name, char *s1, char *s2, int i1, int i2);
 
 void on_gdb_go_clicked (GtkWidget *w, gpointer data);
 void on_gdb_stop_clicked (GtkWidget *w, gpointer data);
+void on_gdb_copy_clicked (GtkWidget *w, gpointer data);
+void on_gdb_save_clicked (GtkWidget *w, gpointer data);
 
 void on_druid_help_clicked   (GtkWidget *w, gpointer);
 void on_druid_about_clicked  (GtkWidget *w, gpointer);

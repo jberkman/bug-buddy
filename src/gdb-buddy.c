@@ -57,6 +57,7 @@ start_animation (void)
 
 	druid_data.throbber_id = gtk_timeout_add (150, animate, NULL);
 	gtk_widget_show (GET_WIDGET ("gdb-progress"));
+	gtk_widget_set_sensitive (GET_WIDGET ("gdb-copy-save-box"), FALSE);
 }
 
 static void
@@ -67,6 +68,7 @@ stop_animation (void)
 	gtk_timeout_remove (druid_data.throbber_id);
 	druid_data.throbber_id = 0;
 	gtk_widget_hide (GET_WIDGET ("gdb-progress"));
+	gtk_widget_set_sensitive (GET_WIDGET ("gdb-copy-save-box"), TRUE);
 }
 
 void

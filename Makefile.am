@@ -1,4 +1,4 @@
-SUBDIRS = po pixmaps src docs
+SUBDIRS = po pixmaps src docs omf-install
 
 agnomedir = $(datadir)/bug-buddy/bugzilla/gnome
 agnome_DATA =

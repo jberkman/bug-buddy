@@ -431,6 +431,7 @@ For more information, please click the Help button below.</property>
 
 				  <child>
 				    <widget class="GtkScrolledWindow" id="gdb-text-scrolled">
+				      <property name="height_request">150</property>
 				      <property name="visible">True</property>
 				      <property name="can_focus">True</property>
 				      <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
@@ -453,6 +454,45 @@ For more information, please click the Help button below.</property>
 					  <property name="right_margin">0</property>
 					  <property name="indent">0</property>
 					  <property name="text" translatable="yes"></property>
+					</widget>
+				      </child>
+				    </widget>
+				    <packing>
+				      <property name="padding">0</property>
+				      <property name="expand">True</property>
+				      <property name="fill">True</property>
+				    </packing>
+				  </child>
+
+				  <child>
+				    <widget class="GtkHButtonBox" id="gdb-copy-save-box">
+				      <property name="border_width">4</property>
+				      <property name="visible">True</property>
+				      <property name="sensitive">False</property>
+				      <property name="layout_style">GTK_BUTTONBOX_END</property>
+				      <property name="spacing">8</property>
+
+				      <child>
+					<widget class="GtkButton" id="gdb-copy">
+					  <property name="visible">True</property>
+					  <property name="can_default">True</property>
+					  <property name="can_focus">True</property>
+					  <property name="label">gtk-copy</property>
+					  <property name="use_stock">True</property>
+					  <property name="relief">GTK_RELIEF_NORMAL</property>
+					  <signal name="clicked" handler="on_gdb_copy_clicked" last_modification_time="Tue, 09 Apr 2002 16:58:51 GMT"/>
+					</widget>
+				      </child>
+
+				      <child>
+					<widget class="GtkButton" id="gdb-save">
+					  <property name="visible">True</property>
+					  <property name="can_default">True</property>
+					  <property name="can_focus">True</property>
+					  <property name="label">gtk-save</property>
+					  <property name="use_stock">True</property>
+					  <property name="relief">GTK_RELIEF_NORMAL</property>
+					  <signal name="clicked" handler="on_gdb_save_clicked" last_modification_time="Tue, 09 Apr 2002 16:59:04 GMT"/>
 					</widget>
 				      </child>
 				    </widget>
@@ -2313,7 +2353,6 @@ will be shared with some other GNOME applications.</property>
 	      <child>
 		<widget class="GtkImage" id="druid-logo">
 		  <property name="visible">True</property>
-		  <property name="file">bug-buddy.png</property>
 		  <property name="xalign">1</property>
 		  <property name="yalign">0.5</property>
 		  <property name="xpad">0</property>
@@ -2347,7 +2386,6 @@ will be shared with some other GNOME applications.</property>
 
 	  <child>
 	    <widget class="GtkButton" id="druid-help">
-	      <property name="sensitive">False</property>
 	      <property name="can_default">True</property>
 	      <property name="can_focus">True</property>
 	      <property name="label">gtk-help</property>

@@ -227,6 +227,101 @@ on_gdb_stop_clicked (GtkWidget *button, gpointer data)
 	gtk_widget_destroy (w);
 }
 
+void
+on_gdb_copy_clicked (GtkWidget *w, gpointer data)
+{
+	GtkWidget *text;
+	GtkTextBuffer *buffy;
+	GtkTextIter start_iter, end_iter;
+
+	text = GET_WIDGET ("gdb-text");
+	buffy = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text));
+	gtk_text_buffer_get_bounds (buffy, &start_iter, &end_iter);
+	gtk_text_buffer_move_mark_by_name (buffy, "insert", &start_iter);
+	gtk_text_buffer_move_mark_by_name (buffy, "selection_bound", &end_iter);
+	gtk_text_buffer_copy_clipboard (buffy, gtk_clipboard_get (GDK_NONE));
+}
+
+typedef struct {
+	char *buffer;
+	gsize written;
+	gsize to_write;
+} SaveData;
+
+static gboolean
+save_cb (GIOChannel *source, GIOCondition condition, gpointer data)
+{
+	SaveData *save_data = data;
+	GIOStatus status;
+	gsize new_written;
+	
+ do_save_write:
+	status = g_io_channel_write_chars (source, save_data->buffer + save_data->written, save_data->to_write, &new_written, NULL);
+	switch (status) {
+	case G_IO_STATUS_AGAIN:
+		goto do_save_write;
+	case G_IO_STATUS_ERROR:
+		break;
+	default:
+		save_data->written += new_written;
+		save_data->to_write -= new_written;
+		if (save_data->to_write)
+			return TRUE;
+		break;
+	}
+
+	g_free (save_data->buffer);
+	g_free (save_data);
+
+	return FALSE;
+}
+
+void
+on_gdb_save_clicked (GtkWidget *w, gpointer data)
+{
+	GtkWidget *filesel;
+	int response;
+
+	filesel = gtk_file_selection_new (_("Save Backtrace"));
+ run_save_dialog:
+	response = gtk_dialog_run (GTK_DIALOG (filesel));
+	if (response == GTK_RESPONSE_OK) {
+		const char *file;
+		GIOChannel *ioc;
+		GError *gerr = NULL;
+		SaveData *save_data;
+
+		file = gtk_file_selection_get_filename (GTK_FILE_SELECTION (filesel));
+		ioc = g_io_channel_new_file (file, "w", &gerr);
+
+		if (!ioc) {
+			GtkWidget *d;
+
+			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    0,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("There was an error trying to save %s:\n\n"
+						      "%s\n\n"
+						      "Please choose another file and try again."),
+						    file, gerr->message);
+			gtk_dialog_run (GTK_DIALOG (d));
+			gtk_widget_destroy (d);
+			g_error_free (gerr);
+			goto run_save_dialog;
+		}
+
+		save_data = g_new (SaveData, 1);
+		save_data->buffer = buddy_get_text ("gdb-text");
+		save_data->written = 0;
+		save_data->to_write = strlen (save_data->buffer);
+		g_io_add_watch (ioc, G_IO_OUT, save_cb, save_data);
+		g_io_channel_unref (ioc);
+	}
+	
+	gtk_widget_destroy (filesel);
+}
+
 static void
 on_list_button_press_event (GtkWidget *w, GdkEventButton *button, gpointer data)
 {

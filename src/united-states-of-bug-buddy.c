@@ -70,11 +70,7 @@ druid_set_sensitive (gboolean prev, gboolean next, gboolean cancel)
 void
 on_druid_help_clicked (GtkWidget *w, gpointer data)
 {
-#ifdef FIXME
-	GnomeHelpMenuEntry help_entry = { "bug-buddy", NULL };
-	help_entry.path = help_pages[druid_data.state];
-	gnome_help_display (NULL, &help_entry);
-#endif
+	gnome_help_display ("bug-buddy", NULL, NULL);
 }
 
 void

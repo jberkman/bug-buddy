@@ -1,3 +1,23 @@
+2002-04-09  jacob berkman  <jacob@ximian.com>
+
+	* src/bug-buddy.glade: add copy/save buttons
+
+	* src/bug-buddy.c (on_gdb_copy_clicked): copy the contents of the
+	gdb text widget to the clipboard
+	(on_gdb_save_clicked): save the contents of the gdb text widget to
+	a file
+
+	* src/gdb-buddy.c (start_animation): 
+	(stop_animation): enable/disable copy/save buttons
+
+	fixes bug #77891
+
+	* src/united-states-of-bug-buddy.c (on_druid_help_clicked): call
+	gnome_help_display()
+
+	* configure.in (AC_OUTPUT):
+	* Makefile.am (SUBDIRS): add omf-install/
+
 2002-04-02  jacob berkman  <jacob@ximian.com>
 
 	* configure.in: fix stupid tyop in previous commit (noticed by
