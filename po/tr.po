@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-04-20 12:51+0100\n"
+"Project-Id-Version: bug-buddy 1.0\n"
+"POT-Creation-Date: 2000-05-25 15:22+0200\n"
+"PO-Revision-Date: 2000-05-25 15:28+0200\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,13 +14,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Anlatým"
+msgstr "Dadýtým"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "Sistem"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -107,16 +106,16 @@ msgid "Package containing the program"
 msgstr "Uygulamanýn pakajý"
 
 #: src/bug-buddy.c:116
-msgid "PACKAGE"
-msgstr ""
+msgid "bug-buddy"
+msgstr "bug-buddy"
 
 #: src/bug-buddy.c:117
 msgid "Version of the package"
 msgstr "Pakajýn nesli"
 
 #: src/bug-buddy.c:117
-msgid "VERSION"
-msgstr ""
+msgid "1.0"
+msgstr "1.0"
 
 #: src/bug-buddy.c:118
 msgid "File name of crashed program"
@@ -145,20 +144,24 @@ msgid ""
 "\n"
 "Do you want to continue anyway?"
 msgstr ""
+"'genel''den baþka ve daha belirtiyeci bir\n"
+"paket belirtmen iþi kolaylaþtýrýr.\n"
+"\n"
+"Illa ki devam etmek istiyormusun ?"
 
 #: src/bug-buddy.c:378
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Belirtilen dosya yok."
 
 #: src/bug-buddy.c:383
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Dosya tipi : %s"
 
 #: src/bug-buddy.c:386
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "`%s' bir metin dosyasýna benzemiyor."
 
 #: src/bug-buddy.c:400
 msgid ""
@@ -231,12 +234,15 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Hata raporu `%s''de kadedildi"
 
 #: src/bug-buddy.c:694
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
 "        <%s>"
-msgstr "Hata raporun <%s>'ye gönderilmiþtir"
+msgstr ""
+"Hata raporun gönderilmiþtir:\n"
+"\n"
+"        <%s>"
 
 #: src/bug-buddy.c:824
 msgid "You must specify a recipient email address"
@@ -261,19 +267,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "Bilgi"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "Yardým"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "Dur"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "Yenile"
 
 #: src/bug-buddy.c:949
 #, c-format
@@ -456,7 +462,7 @@ msgstr "Anlatým"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Mümkün olduðu kadariyle hata raporlarýný Ingilizce'de yaz."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
@@ -555,22 +561,14 @@ msgid "The GEGL is watching."
 msgstr "GEGL þimdi seyrediyor ."
 
 #: src/util.c:60
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "`%s' dosyasýný açamadým"
+msgstr "Tünel açamadým"
 
 #: src/util.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Could not run '%s'."
-msgstr "`%s''yi çalýþtýrýyorum"
+msgstr "`%s''yi çalýþtýrýmýyyorum."
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Okurken hata oldu ... bitiriliyorum"
-
-#~ msgid "Child process exited with status %d"
-#~ msgstr "Çocuk-iþlemi %d durumuyla bitirildi"
-
-#~ msgid "0.8"
-#~ msgstr "0.8"
+msgstr "Okurken hata oldu ..."
