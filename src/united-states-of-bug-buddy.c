@@ -480,15 +480,24 @@ submit_ok (void)
 	GtkWidget *w;
 	FILE *fp;
 
+	enum {
+		RESPONSE_SUBMIT,
+		RESPONSE_CANCEL
+	};
+
 	if (druid_data.submit_type != SUBMIT_FILE) {
 		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
 					    0,
 					    GTK_MESSAGE_QUESTION,
-					    GTK_BUTTONS_YES_NO,
+					    GTK_BUTTONS_NONE,
 					    _("Submit this bug report now?"));
+		gtk_dialog_add_buttons (GTK_DIALOG (w),
+					GTK_STOCK_CANCEL, RESPONSE_CANCEL,
+					_("_Submit"), RESPONSE_SUBMIT,
+					NULL);
 		gtk_dialog_set_default_response (GTK_DIALOG (w),
 						 GTK_RESPONSE_YES);
-		if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (w))) {
+		if (RESPONSE_SUBMIT != gtk_dialog_run (GTK_DIALOG (w))) {
 			gtk_widget_destroy (w);
 			return FALSE;
 		}
