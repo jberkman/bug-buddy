@@ -606,6 +606,12 @@ main (int argc, char *argv[])
 
 
 	xml_path = gnome_datadir_file ("bug-buddy/bug-buddy.glade");
+	if (!xml_path) {
+		GtkWidget *d = gnome_error_dialog (_("Could not find bug-buddy.glade file.\n"
+						     "Please make sure bug-buddy was installed correctly."));
+		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		return 0;
+	}
 	druid_data.xml = glade_xml_new (xml_path , "druid_window");
 
 	if (!druid_data.xml) {
