@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 2.0.3)
+AM_INIT_AUTOMAKE(bug-buddy, 2.0.5)
 
 AM_MAINTAINER_MODE
 

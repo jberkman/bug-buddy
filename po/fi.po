@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-04-07 00:32+03:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -141,11 +141,11 @@ msgstr ""
 "Ei pystynyt lataamaan tiedostoa '%s'.\n"
 "Varmista, ett‰ Bug Buddy on oikein asennettu."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Oletko varma, ett‰ haluat peruuttaa t‰m‰n p‰ivityksen?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -154,11 +154,11 @@ msgstr ""
 "Ei pystynyt avaamaan tiedostoa '%s'.\n"
 "Varmista, ett‰ Bug Buddy on oikein asennettu."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Kaikki"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -544,50 +544,57 @@ msgstr "Virheraportissa tulee olla kattava otsikko."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Virheraportissa tulee olla kattava selitysosa."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+#, fuzzy
+msgid "Submit this bug report now?"
+msgstr "L‰het‰ virheraportti"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Ei pysty aukaisemaan tiedostoa: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "juuri ajamassa '%s'"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Ei pysty k‰ynnist‰m‰‰n s‰hkˆpostiohjelmaa: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Virheraportti on l‰hetetty osoitteeseen:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "M‰‰rittele virheraportin kohteena oleva tuote."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "M‰‰rittele virheraporttia varten komponentti."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "M‰‰rittele versio virheraporttia varten."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-06-12 18:17+0200\n"
 "Last-Translator: András Tímár <timar@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
@@ -140,11 +140,11 @@ msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Biztos félbeszakítod ezt a frissítést?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -153,11 +153,11 @@ msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Minden"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -535,50 +535,56 @@ msgstr "A hibajelentéshez meg kell adni egy értelmes tárgy mezõt."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "A hibajelentéshez kell adni egy használható leírást."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "Most küldjem el a hibajelentést?"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nem lehet '%s'-t megnyitni"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "most fog '%s' lefutni"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nem lehet a '%s' levelezõprogramot elindítani"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "A hibabejelentés ide lett mentve: '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "A hibabejelentés ide lett elküldve:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "A hibajelentéshez meg kell adni egy terméket."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "A hibajelentéshez meg kell adni egy komponenst."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "A hibajelentéshez meg kell adni a verziót."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -670,9 +676,6 @@ msgstr "A GNOME grafikus hibabejelentõ eszköze"
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "Meg kell adni a címzett e-mail címét"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Most küldjem el a hibajelentést?"
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "Kérlek adj meg egy fájlnevet a mentéshez."

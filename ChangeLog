@@ -1,3 +1,21 @@
+2001-06-19  jacob berkman  <jacob@ximian.com>
+
+	* NEWS:
+	* configure.in: 2.0.5
+
+	* src/bugzilla.c (async_update): touch files we download so that
+	the cache finally works
+
+	* NEWS:
+	* configure.in: 2.0.4
+
+	* src/united-states-of-bug-buddy.c (submit_ok): thank the
+	submitter
+	(submit_ok): set the From: line.  it used to do this before 2.0.
+	i apparently am a doofus.
+	(submit_ok): pop up a question dialog before sending the bug
+	report
+	
 2001-06-15  jacob berkman  <jacob@ximian.com>
 
 	* NEWS: 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.95\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-03-04 22:22+0900\n"
 "Last-Translator: Chideok Hwang <hwang@mizi.co.kr>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -138,11 +138,11 @@ msgstr ""
 "'%s'을 열수가 없습니다.\n"
 "bug-buddy가 제대로 설치되었는지를 확인해주시요."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "정말로 이 갱신을 취소하기를 원하십니까?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "'%s'을 열수가 없습니다.\n"
 "bug-buddy가 제대로 설치되었는지를 확인해주시요."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "전부"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -532,50 +532,57 @@ msgstr "버그 레포트에는 제목을 포함하여야합니다."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "버그 레포트에는 설명을 포함하여야합니다."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+#, fuzzy
+msgid "Submit this bug report now?"
+msgstr "버그 레포트를 보냄"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "'%s'을 열수가 없습니다"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "'%s'을 실행할려고 함"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "메일 프로그램('%s')을 시작할 수가 없습니다"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "버그 레포트가 '%s'에 저장되었습니다"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "버그 레포트가 다음 주소로 보내졌습니다.\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "버그 레포트에는 제품이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "버그 레포트에는 컴포넌트 이름을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "버그 레포트에는 버전을 기입하셔야 합니다."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

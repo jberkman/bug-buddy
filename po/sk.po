@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-02-14 13:40CET\n"
 "Last-Translator: Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -139,11 +139,11 @@ msgstr ""
 "Nemô¾em naèíta» '%s'.\n"
 "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Naozaj chcete zru¹i» túto aktualizáciu?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -152,11 +152,11 @@ msgstr ""
 "Nemô¾em otvori» '%s'.\n"
 "Prosím, overte, ¾e je Priateµ v núdzi správne nain¹talovaný."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "V¹etko"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -532,50 +532,56 @@ msgstr "Vo va¹ej správe o chybe musíte uvies» podrobný predmet."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Vo va¹ej správe o chybe musíte uvies» podrobný popis."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "Odosla» správu o chybe?"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nepodarilo sa otvori» súbor: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "spú¹»am '%s'"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nepodarilo sa spusti» po¹tový program: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Va¹a správa o chybe bola ulo¾ená do '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Va¹a správa o chybe bola odoslaná na:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "Vo va¹ej správe o chybe musíte uvies» produkt."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "Vo va¹ej správe o chybe musíte uvies» komponent."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "Vo va¹ej správe o chybe musíte uvies» verziu."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -666,9 +672,6 @@ msgstr "Nástroj GNOME pre oznamovanie chýb"
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "Musíte uvies» e-mailovú adresu príjemcu"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Odosla» správu o chybe?"
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "Prosím, vyberte súbor, do ktorého sa má ulo¾i»."

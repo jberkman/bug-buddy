@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-02-16 00:19+0200\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <gnome-ro@pelican.level7.ro>\n"
@@ -138,11 +138,11 @@ msgstr ""
 "Nu am putut încãrca '%s'\n"
 "Vã rog sã vã asiguraþi cã Bug Buddy este instalat corect."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Sunteþi sigur cã doriþi sã renunþaþi la aceastã actualizare?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "Nu am putut deschide '%s'.\n"
 "Vã rog sã vã asiguraþi cã Bug Buddy a fost instalat corect."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Toate"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -539,50 +539,56 @@ msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 "Trebuie sã includeþi o descriere inteligibilã în raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "Trimit raportul acum?"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nu pot deschide fiºierul: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "pe cale sã rulez '%s'"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nu pot porni programul de email: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Raportul dvs. de probleme a fost salvat în '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Raportul dvs. de probleme a fost trimis la:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "Trebuie sã specificaþi un produs pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "Trebuie sã specificaþi o componentã pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "Trebuie sã specificaþi o versiune pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -673,9 +679,6 @@ msgstr ""
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "Trebuie sã specificaþi o adresã email pentru recipient"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Trimit raportul acum?"
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "Vã rog sã salvaþi un fiºier pentru salvare."

@@ -137,6 +137,7 @@ typedef struct {
 
 	GList *dlsources;
 	GList *dldests;
+
 	GnomeVFSAsyncHandle *vfshandle;
 	gboolean need_to_download;
 } DruidData;

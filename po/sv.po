@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-06-12 18:36+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -143,11 +143,11 @@ msgstr ""
 "Kunde inte läsa in \"%s\".\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Är du säker på att du vill avbryta denna uppdatering?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -156,11 +156,11 @@ msgstr ""
 "Kunde inte öppna \"%s\".\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Alla"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -538,50 +538,56 @@ msgstr "Du måste inkludera en förståelig ämnesrad i din felrapport."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Du måste inkludera en förståelig beskrivning i din felrapport."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "Skicka felrapporten nu?"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kunde inte öppna filen: \"%s\""
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "kommer att köra \"%s\""
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kunde inte starta e-postprogrammet: \"%s\""
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din felrapport har sparats i \"%s\""
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Din felrapport har skickats till:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "Du måste ange en produkt för din felrapport."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "Du måste ange en komponent för din felrapport."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "Du måste ange ett versionsnummer för din buggrapport."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -649,9 +655,6 @@ msgstr "Rapportera ett fel i GNOME"
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "Du måste ange en mottagarepostadress"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Skicka felrapporten nu?"
 
 #~ msgid "Help"
 #~ msgstr "Hjälp"

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-02-14 23:07+0100\n"
 "Last-Translator: Carlos Perelló Marín <carlos@gnome-db.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -140,11 +140,11 @@ msgstr ""
 "No se pudo cargar '%s'.\n"
 "Asegúrese que Bug Buddy se instaló correctamente."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "¿Está seguro que quiere cancelar esta actualización?"
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -153,11 +153,11 @@ msgstr ""
 "No se pudo abrir '%s'.\n"
 "Asegúrese que Bug Buddy se instaló correctamente."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Todo"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -534,49 +534,55 @@ msgstr "Tiene que incluir un asunto entendible en su informe de error."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Tiene que incluir una descripción entendible en su informe de error."
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "¿Enviar este informe de error ahora?"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "No se puede abrir el archivo: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "apunto de ejecutar '%s'"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "No se puede ejecutar el programa de correo: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Su informe de error fue enviado a:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr "Tiene que especificar un producto para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr "Tiene que especificar un componente para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr "Tiene que especificar una versión para su informe de error."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -668,9 +674,6 @@ msgstr "Informe de un error en GNOME"
 #~ msgid "You must specify a recipient email address"
 #~ msgstr ""
 #~ "Tiene que indicar la dirección de correo electrónico del destinatario"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "¿Enviar este informe de error ahora?"
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "Elija un archivo al que grabar."

@@ -379,6 +379,13 @@ submit_ok (void)
 	GtkWidget *w;
 	FILE *fp;
 
+	if (druid_data.submit_type != SUBMIT_FILE) {
+		w = gnome_question_dialog (_("Submit this bug report now?"),
+					   NULL, NULL);
+		if (gnome_dialog_run_and_close (GNOME_DIALOG (w)))
+			return FALSE;
+	}
+
 	w = GET_WIDGET ( (druid_data.submit_type == SUBMIT_TO_SELF)
 			 ? "email-email-entry" : "email-to-entry");
 	to = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
@@ -413,6 +420,21 @@ submit_ok (void)
 		g_free (s);
 	}
 
+	{
+		char *name, *from;
+		
+		w = GET_WIDGET ("email-name-entry");
+		name = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+
+
+		w = GET_WIDGET ("email-email-entry");
+		from = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
+
+		fprintf (fp, "From: %s <%s>\n", name, from);
+		g_free (from);
+		g_free (name);
+	}
+
 	fprintf (fp, "To: %s\n", to);
 
 	if (druid_data.submit_type == SUBMIT_REPORT &&
@@ -440,7 +462,7 @@ submit_ok (void)
 		s = g_strdup_printf (_("Your bug report was saved in '%s'"), file);
 	} else {
 		pclose (fp);
-		s = g_strdup_printf (_("Your bug report has been submitted to:\n\n        <%s>"), to);
+		s = g_strdup_printf (_("Your bug report has been submitted to:\n\n        <%s>\n\nThanks!"), to);
 	}
 	g_free (to);
 

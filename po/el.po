@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2001-03-26 19:15:45+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -168,12 +168,12 @@ msgstr ""
 "Αδύνατη η φόρτωση του '%s'.\n"
 "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr "Είστε σίγουρος ότι θέλετε να ακυρώσετε αυτήν την ανανέωση;"
 
 #
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -182,11 +182,11 @@ msgstr ""
 "Αδύνατο το άνοιγμα του '%s'.\n"
 "Παρακαλώ ελέγξτε ότι ο Βοηθός Σφαλμάτων έχει εγκατασταθεί σωστά."
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr "Όλα"
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -609,56 +609,64 @@ msgstr ""
 "στην αναφορά σφάλματός σας."
 
 #
-#: src/united-states-of-bug-buddy.c:390
+#
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "Αποστολή αυτής της αναφοράς σφάλματος τώρα;"
+
+#
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Αδύνατο το άνοιγμα αρχείου: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr "πρόκειτε να εκτελεστεί το '%s'"
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Αδύνατη η εκκίνηση του προγράμματος ηλεκ. αλληλογραφίας: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Η αναφορά σφάλματος έχει αποθηκευθεί στο '%s'"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "Η αναφορά σφάλματός σας έχει σταλεί στο:\n"
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε το συγκεκριμένο λογισμικό\n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a component for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε ένα συστατικό\n"
 "για την αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 msgid "You must specify a version for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε μια έκδοση\n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -759,11 +767,6 @@ msgstr "Αναφορά σφαλμάτων του GNOME"
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "Πρέπει να ορίσετε ηλεκ. διεύθυνση παραλήπτη"
-
-#
-#
-#~ msgid "Submit this bug report now?"
-#~ msgstr "Αποστολή αυτής της αναφοράς σφάλματος τώρα;"
 
 #
 #~ msgid "Please choose a file to save to."

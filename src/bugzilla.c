@@ -179,16 +179,35 @@ static int
 async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpointer data)
 {
 	d(g_print ("%lu\n", info->bytes_copied));
-	if (info->source_name)
+	if (info->source_name) {
+		d(g_print ("source: %s\n", info->source_name));
 		gtk_label_set_text (GTK_LABEL (GET_WIDGET ("progress-source")), info->source_name);
+	}
 
-	if (info->target_name)
+	if (info->target_name) {
+		d(g_print ("target: %s\n", info->target_name));
 		gtk_label_set_text (GTK_LABEL (GET_WIDGET ("progress-dest")), info->target_name);
+	}
 
 	if (info->bytes_total)
 		gtk_progress_set_percentage (GTK_PROGRESS (GET_WIDGET ("progress-progress")), (gfloat)info->total_bytes_copied / info->bytes_total);
 
 	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
+		GList *li;
+		char *remote, *local;
+
+		/* until gnome-vfs will touch the file for us */
+		for (li = druid_data.dldests; li; li=li->next) {
+			remote = gnome_vfs_uri_to_string (li->data, GNOME_VFS_URI_HIDE_NONE);
+			local = gnome_vfs_get_local_path_from_uri (remote);
+			g_free (remote);
+			if (!local)
+				continue;
+			d(g_print ("touching: %s\n", local));
+			utime (local, NULL);
+			g_free (local);
+		}
+
 		goto_product_page ();
 		d(g_print ("w00t!\n"));
 		return FALSE;
@@ -293,8 +312,21 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 		goto append_uris;
 	}
        
+#define A_DAY (24 * 60 * 60)
+
 	sys_is_newer = sys_stat.st_mtime > local_stat.st_mtime;
-	cache_is_old = (time (NULL) - local_stat.st_mtime) > (7 * 24 * 60 * 60);
+	cache_is_old = (time (NULL) - local_stat.st_mtime) > (7 * A_DAY);
+
+
+	d(g_print ("sys_is_newer (%d): %d - %d = %d (%f)\n",
+		   sys_is_newer, sys_stat.st_mtime, local_stat.st_mtime,
+		   sys_stat.st_mtime - local_stat.st_mtime,
+		   (sys_stat.st_mtime - local_stat.st_mtime) / (float)A_DAY));
+
+	d(g_print ("cache_is_old (%d): %d - %d = %d (%f)\n",
+		   cache_is_old, time (NULL), local_stat.st_mtime,
+		   time (NULL) - local_stat.st_mtime,
+		   (time (NULL) - local_stat.st_mtime) / (float)A_DAY));
 
 	if (sys_is_newer || cache_is_old)
 		goto append_uris;
@@ -582,7 +614,7 @@ load_bugzillas (void)
 
 		gnome_dialog_set_default (GNOME_DIALOG (w), GNOME_YES);
 
-		if (!gnome_dialog_run_and_close (GNOME_DIALOG (w))) {
+		if (!gnome_dialog_run_and_close (GNOME_DIALOG (w)))
 			if (GNOME_VFS_OK == gnome_vfs_async_xfer (	    
 				    &druid_data.vfshandle,
 				    druid_data.dlsources,
@@ -592,7 +624,6 @@ load_bugzillas (void)
 				    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
 				    async_update, NULL, NULL, NULL))
 				return;
-		}
 	}
 	goto_product_page ();
 }

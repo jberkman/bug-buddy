@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2001-06-15 11:12-0400\n"
+"POT-Creation-Date: 2001-06-19 12:59-0400\n"
 "PO-Revision-Date: 2000-11-21 11:42+02:00\n"
 "Last-Translator: Wu Yulun <migr@operamail.com>\n"
 "Language-Team: \n"
@@ -129,11 +129,11 @@ msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:438
+#: src/bugzilla.c:470
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:544
+#: src/bugzilla.c:576
 #, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -142,11 +142,11 @@ msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:555
+#: src/bugzilla.c:587
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:579
+#: src/bugzilla.c:611
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -509,52 +509,58 @@ msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 msgid "You must include a comprehensible description in your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:390
+#: src/united-states-of-bug-buddy.c:383
+msgid "Submit this bug report now?"
+msgstr "是否立即发送BUG报告？"
+
+#: src/united-states-of-bug-buddy.c:397
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "无法找开文件: '%s'"
 
-#: src/united-states-of-bug-buddy.c:402
+#: src/united-states-of-bug-buddy.c:409
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:406
+#: src/united-states-of-bug-buddy.c:413
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "无法打开邮件程序: '%s'"
 
-#: src/united-states-of-bug-buddy.c:440
+#: src/united-states-of-bug-buddy.c:462
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "你的BUG报告已存在\"%s\"里了"
 
-#: src/united-states-of-bug-buddy.c:443
-#, c-format
+#: src/united-states-of-bug-buddy.c:465
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Thanks!"
 msgstr ""
 "你的BUG报告已发往:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:481
+#: src/united-states-of-bug-buddy.c:503
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:490
+#: src/united-states-of-bug-buddy.c:512
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:498
+#: src/united-states-of-bug-buddy.c:520
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:527
+#: src/united-states-of-bug-buddy.c:549
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -616,9 +622,6 @@ msgstr ""
 
 #~ msgid "You must specify a recipient email address"
 #~ msgstr "必须指定接收者邮件地址"
-
-#~ msgid "Submit this bug report now?"
-#~ msgstr "是否立即发送BUG报告？"
 
 #~ msgid "Please choose a file to save to."
 #~ msgstr "请选择一个存盘文件名"

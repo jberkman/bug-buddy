@@ -1,3 +1,19 @@
+2.0.5:
+
+  * Fixes:
+
+	- touch files after we download them so that the cache
+	  actually works.
+
+2.0.4:
+
+  * Fixes:
+
+	- set the From: header
+
+	- make sure the user knows the bug is going to be submitted
+	  before it is sent
+
 2.0.3:
 
   * Fixes:
