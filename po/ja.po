@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20000524\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
-"PO-Revision-Date: 2000-05-24 00:52+0900\n"
+"Project-Id-Version: bug-buddy CVS-20001005\n"
+"POT-Creation-Date: 2000-10-05 15:31+0900\n"
+"PO-Revision-Date: 2000-10-05 15:37+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,6 @@ msgid "Core file from program"
 msgstr "プログラムからの core ファイル"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
@@ -148,7 +147,7 @@ msgstr ""
 "'general' より特定のパッケージを指定するなら\n"
 "それははるかに役立っています\n"
 "\n"
-"どうしても続けたいですか?"
+"ばっケ−ジを指定してください"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -183,23 +182,20 @@ msgid "gdb has already exited"
 msgstr "gdb はすでに終了しています"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "GNOME のグラフィカルな不具合報告ツールです"
+msgstr "GNOME のグラフィカルな不具合報告ツール"
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "不完全な bug-buddy の web ページ"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "あなたの名前と email アドレスを入れてください"
+msgstr "あなたの名前を入れてください"
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "あなたの名前と email アドレスを入れてください"
+msgstr "有効な email アドレスを入れてください"
 
 #: src/bug-buddy.c:620
 #, c-format
@@ -570,6 +566,3 @@ msgstr "'%s' を実行できませんでした"
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "読み込みでエラー..."
-
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Copyright (C) 1999 Jacob Berkman"
