@@ -34,7 +34,7 @@ LIBS=$LIBS_save
 
 AM_PATH_LIBGLADE(,,gnome)
 
-ALL_LINGUAS="ca cs da de el en_AU en_GB es fi fr ga gl hu it ja ko nl no pl pt_BR ro ru sk sl sv tr uk"
+ALL_LINGUAS="ca cs da de el en_AU en_GB es fi fr ga gl hu it ja ko nl no pl pt_BR ro ru sk sl sv tr uk zh_CN.GB2312"
 AM_GNOME_GETTEXT
 
 AC_MSG_CHECKING(whether this is boc's machine)
