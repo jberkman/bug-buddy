@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<project>
+	<bts name="debian">
+		<email>@bugs.kde.org</email>
+		<web>http://bugs.kde.org</web>
+		<packages-list>kde-packages</packages-list>
+	</bts>
+	<version-stuff>
+		<package name="C library"
+		         rpm="glibc" 
+			 deb="libc6"/>
+		<package name="C compiler" 
+		         pre="gcc --version"
+			 post="cc -V"/>
+		<package name="qt"
+			 rpm="qt1x"
+			 deb="qt1g"/>
+		<package name="kdesupport"
+			 rpm="kdesupport"
+			 deb="kdesupport"/>
+		<package name="kdelibs"
+			 rpm="kdelibs"
+			 deb="kdelibs"/>
+		<package name="kdebase"
+			 rpm="kdebase"
+			 deb="kdebase"/>
+	</version-stuff>
+</project>

@@ -59,7 +59,8 @@ buddy_DATA = \
 	prog.bugmap	\
 	gdb-cmd		\
 	gnome-packages	\
-	debian-packages
+	debian-packages	\
+	kde-packages
 
 utilsdir = $(datadir)/gnome/apps/Utilities
 utils_DATA = bug-buddy.desktop
@@ -67,7 +68,8 @@ utils_DATA = bug-buddy.desktop
 xmldir = $(datadir)/bug-buddy/xml
 xml_DATA = \
 	GNOME.bts	\
-	Debian.bts
+	Debian.bts	\
+	KDE.bts
 
 EXTRA_DIST = \
 	glade-strings.c	\

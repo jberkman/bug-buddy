@@ -45,8 +45,7 @@ get_version_from_rpm (gpointer data, gpointer udata)
 	const char **args = udata;
 	Package *package = data;
 
-	if (package->version ||
-	    !package->rpm)
+	if (package->version || !package->rpm)
 		return;
 
 	args[2] = package->rpm;

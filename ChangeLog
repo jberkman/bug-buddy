@@ -1,3 +1,15 @@
+1999-12-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/KDE.bts:
+	* src/kde-packages:
+	* src/Makefile.am:  support for KDE BTS
+
+	* src/bts.c:
+	* distro-redhat.c:
+	* src/bts-debian.c:  remove some debugging output;  packages
+	whose version was obtained via rpm/dpkg are now in the clist
+	again
+
 1999-12-04  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/GNOME.bts:

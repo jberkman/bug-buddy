@@ -48,7 +48,6 @@ free_package_from_node (gpointer data, gpointer udata)
 {
 	Package *package = data;
 
-	g_message ("Deleting package %s...", package->name);
 	xmlFree (package->name);
 	xmlFree (package->pre_command);
 	xmlFree (package->rpm);
@@ -65,8 +64,6 @@ make_package_from_node (xmlNodePtr node)
 	Package *package = g_new0 (Package, 1);
 
 	package->name = xmlGetProp (node, "name");
-	g_message ("Loading package %s...", package->name);
-
 	package->pre_command = xmlGetProp (node, "pre");
 	package->rpm = xmlGetProp  (node, "rpm");
 	package->deb = xmlGetProp (node, "deb");
@@ -76,41 +73,34 @@ make_package_from_node (xmlNodePtr node)
 }
 
 static void
-get_version_from_command (Package *package, GtkWidget *clist, char *cmd)
-{
-	char *row[3] = { NULL };
-
-	g_return_if_fail (!package->version);
-	g_return_if_fail (cmd);
-
-	package->version = get_line_from_command (cmd);
-	if (!package->version)
-		return;
-
-	row[0] = _(package->name);
-	row[1] = package->version;
-
-	gtk_clist_append (GTK_CLIST (clist), row);
-}
-
-static void
 get_version_from_pre (gpointer data, gpointer udata)
 {
 	Package *package = data;
 	if (package->version || !package->pre_command)
 		return;
-	get_version_from_command (package, GTK_WIDGET (udata), 
-				  package->pre_command);
+	package->version = get_line_from_command (package->pre_command);
 }
 
 static void
 get_version_from_post (gpointer data, gpointer udata)
 {
 	Package *package = data;
-	if (package->version || !package->post_command)
+	if (package->version || !package->post_command)		
 		return;
-	get_version_from_command (package, GTK_WIDGET (udata), 
-				  package->post_command);
+	package->version = get_line_from_command (package->post_command);
+}
+
+static void
+add_to_clist (gpointer data, gpointer udata)
+{
+	char *row[3] = { NULL };
+	Package *package = data;
+	GtkWidget *clist = udata;
+
+	row[0] = _(package->name);
+	row[1] = package->version;
+
+	gtk_clist_append (GTK_CLIST (clist), row);
 }
 
 static void
@@ -144,12 +134,13 @@ update_das_clist ()
 	if (!druid_data.packages)
 		return;
 
-	g_slist_foreach (druid_data.packages, get_version_from_pre, w);
+	g_slist_foreach (druid_data.packages, get_version_from_pre, NULL);
 
 	if (druid_data.distro)
 		druid_data.distro->phylum->packager (druid_data.packages);
 
-	g_slist_foreach (druid_data.packages, get_version_from_post, w);
+	g_slist_foreach (druid_data.packages, get_version_from_post, NULL);
+	g_slist_foreach (druid_data.packages, add_to_clist, w);
 }
 
 gboolean
@@ -192,7 +183,6 @@ load_bts_xml ()
 	g_free (file);
 	cur = doc->root->childs;
 	while (cur) {
-		g_message ("Node: %s", cur->name);
 		switch (cur->name[0]) {
 		case 'b':
 			if (strcmp (cur->name, "bts"))
@@ -214,7 +204,6 @@ load_bts_xml ()
 				break;
 			cur2 = cur->childs;
 			while (cur2) {
-				g_message ("Subnode: %s", cur2->name);
 				if (strcmp (cur2->name, "package"))
 					continue;
 				druid_data.packages = g_slist_append (

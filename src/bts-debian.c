@@ -61,12 +61,9 @@ debian_bts_init (xmlNodePtr node)
 	int fd;
 	GList *gitem = NULL;
 
-	g_message ("Debian BTS init()");
-
 	w = GET_WIDGET ("package_entry2");
 	cur = node->childs;
 	while (cur) {
-		g_message ("Node: %s", cur->name);
 		if (!strcmp (cur->name, "email"))
 			debian_data.email = 
 				xmlNodeGetContent (cur);
@@ -94,7 +91,7 @@ debian_bts_init (xmlNodePtr node)
 			gtk_list_clear_items (GTK_LIST (w), 0, -1);
 			gtk_list_prepend_items (GTK_LIST (w), gitem);
 		} else {
-			g_message ("unknown node: %s", cur->name);
+			g_warning ("unknown node: %s", cur->name);
 		}
 		cur = cur->next;
 	}
@@ -103,21 +100,18 @@ debian_bts_init (xmlNodePtr node)
 	line = g_strdup_printf ("%s/db/ix/packages.html",
 				debian_data.web);
 	gnome_href_set_url (GNOME_HREF (w), line);
-	g_message ("set URL: %s", line);
 	g_free (line);
 
 	w = GET_WIDGET ("desc_href");
 	line = g_strdup_printf ("%s/Developer.html#severities",
 				debian_data.web);
 	gnome_href_set_url (GNOME_HREF (w), line);
-	g_message ("set URL: %s", line);
 	g_free (line);
 
 	w = GET_WIDGET ("existing_href");
 	line = g_strdup_printf ("%s/db/ix/psummary.html",
 				debian_data.web);
 	gnome_href_set_url (GNOME_HREF (w), line);
-	g_message ("set URL: %s", line);
 	g_free (line);
 
 	return 0;
