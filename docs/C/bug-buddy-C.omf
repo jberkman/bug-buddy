@@ -1,32 +1,19 @@
 <?xml version="1.0" standalone="no"?>
 <omf>
   <resource>
-    <title>Bug Buddy Manual</title>
-
     <creator>
-      <person>
-        <firstname>Telsa</firstname>
-        <lastname>Gwynne</lastname>
-        <email>telsa@linuxchix.org</email>
-      </person>
+      telsa@linuxchix.org (Telsa Gwynne)
     </creator>
-
     <contributor>
-      <person>
-        <firstname>Kevin</firstname>
-        <lastname>Conder</lastname>
-        <email>kevin@kevindumpscore.com</email>
-      </person>
+      kevin@kevindumpscore.com (Kevin Conder)
     </contributor>
-
-    <subject>
-      <category>GNOME|Utilites</category>
-    </subject>
-
+    <title>Bug Buddy Manual</title>
+    <date>March 18, 2002</date>
+    <subject category="GNOME|Utilites"/>
     <type>manual</type>
-
-    <format dtd="DocBook" mime="text/xml"/>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
     <identifier url="bug-buddy.xml"/>
     <language code="C"/>
+    <relation seriesid="69b6f5ee-6cc5-11d6-8051-fe97a46511fa"/>
   </resource>
 </omf>

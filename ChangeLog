@@ -1,3 +1,8 @@
+2002-05-21  Eric Baudais  <baudais@okstate.edu>
+
+	* docs/C/bug-buddy-C.omf: Changed the OMF file to conform with 
+	the OMF DTD Scrollkeeper uses.
+
 2002-05-15  jacob berkman  <jacob@ximian.com>
 
 	* docs/Makefile.am (man_MANS): 
