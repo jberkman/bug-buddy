@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
 "POT-Creation-Date: 2001-02-11 21:41+0100\n"
-"PO-Revision-Date: 2001-02-11 22:01+0100\n"
+"PO-Revision-Date: 2001-02-11 23:22+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 "gdb är inte klar med att hämta felsökningsinformationen.\n"
-"Döda gdb-processen (stack-trace kommer inte att vara komplett)?"
+"Döda gdb-processen (stackspårningen kommer inte att vara komplett)?"
 
 #: src/bug-buddy.c:265 src/gdb-buddy.c:116
 msgid "gdb has already exited"
@@ -295,7 +295,7 @@ msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_APPNAME är ur bruk.\n"
+"$GNOME_CRASHED_APPNAME är föråldrat.\n"
 "Var vänlig och använd kommandoradsflaggan --appname istället."
 
 #: src/bug-buddy.c:1157
@@ -303,7 +303,7 @@ msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
-"$GNOME_CRASHED_PID är ur bruk.\n"
+"$GNOME_CRASHED_PID är föråldrat.\n"
 "Var vänlig och använd kommandoradsflaggan --pid istället."
 
 #: src/bug-buddy.c:1251
@@ -318,7 +318,7 @@ msgstr ""
 #: src/gdb-buddy.c:72
 #, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "Hämtar stack-trace... (%d)"
+msgstr "Hämtar stackspårning... (%d)"
 
 #: src/gdb-buddy.c:153
 #, c-format
