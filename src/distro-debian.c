@@ -69,9 +69,8 @@ get_package_versions (Package packages[])
 	GtkWidget *d;
 
 	g_return_if_fail (packages);
-
-	cur = argc = 3;
-	for (cur = 0; packages[cur].name; cur++) {
+	
+	for (argc = cur = 0; packages[cur].name; cur++) {
 		if (!packages[cur].version &&
 		    packages[cur].deb)
 			argc++;

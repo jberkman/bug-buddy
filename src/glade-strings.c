@@ -40,13 +40,9 @@ gchar *s = N_("What type of bug are you reporting?");
 gchar *s = N_("Application crash with crash dialog");
 gchar *s = N_("Application crash with core file");
 gchar *s = N_("No crash");
-gchar *s = N_("Crashed Application");
-gchar *s = N_("Please enter the filename and pid of\n"
-              "the application that crashed.");
-gchar *s = N_("File");
+gchar *s = N_("Binary");
 gchar *s = N_("Process ID");
-gchar *s = N_("Application Core Dump");
-gchar *s = N_("Enter the filename of the core dump");
+gchar *s = N_("Core file");
 gchar *s = N_("Debugging Information");
 gchar *s = N_("Please wait while bug-buddy\n"
               "collects debugging info...");

@@ -34,10 +34,7 @@
 
 /* libglade callbacks */
 gboolean on_nature_page_next  (GtkWidget *, GtkWidget *);
-gboolean on_attach_page_next  (GtkWidget *, GtkWidget *);
-gboolean on_core_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
-gboolean on_less_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_less_page_next    (GtkWidget *, GtkWidget *);
 gboolean on_misc_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_the_druid_cancel  (GtkWidget *);
@@ -53,10 +50,10 @@ void on_version_apply_clicked (GtkButton *button, gpointer data);
 void on_file_radio_toggled    (GtkWidget *radio, gpointer data);
 gboolean on_action_page_next  (GtkWidget *page, GtkWidget *druid);
 gboolean on_action_page_back  (GtkWidget *page, GtkWidget *druid);
-GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
-		       gchar *string2, gint int1, gint int2);
-GtkWidget * make_pixmap_button (gchar *widget_name, gchar *string1, 
-				gchar *string2, gint int1, gint int2);
+GtkWidget *make_anim (gchar *widget_name, gchar *string1, 
+		      gchar *string2, gint int1, gint int2);
+GtkWidget *make_pixmap_button (gchar *widget_name, gchar *string1, 
+			       gchar *string2, gint int1, gint int2);
 void on_newreport_radio_toggled (GtkWidget *w, gpointer data);
 void on_existing_radio_toggled (GtkWidget *w, gpointer data);
 
@@ -109,52 +106,17 @@ static Distribution distros[] = {
 };
 
 static Package package[] = {
-	{ N_("System"), "uname -a" },
-	{ N_("C library"), NULL, "glibc", "libc6", },
-	{ N_("C compiler"), "gcc --version", NULL, NULL, "cc -V", },
-	{ N_("glib"), "glib-config --version", "glib", "libglib1.2" },
-	{ N_("GTK+"), "gtk-config --version", "gtk+", "libgtk1.2" },
-	{ N_("ORBit"), "orbit-config --version", "ORBit", "liborbit0" },
+	{ N_("System"),    "uname -a" },
+	{ N_("C library"),  NULL,                    "glibc", "libc6", },
+	{ N_("C compiler"), "gcc --version",          NULL,    NULL, "cc -V", },
+	{ N_("glib"),       "glib-config --version",  "glib",  "libglib1.2" },
+	{ N_("GTK+"),       "gtk-config --version",   "gtk+",  "libgtk1.2" },
+	{ N_("ORBit"),      "orbit-config --version", "ORBit", "liborbit0" },
 	{ N_("gnome-libs"), "gnome-config --version", "gnome-libs", "gnome-libs-data" },
 	{ N_("gnome-core"),  "gnome-config --modversion applets "
 	                     "| grep -v gnome-libs "
 	                     "| sed -e 's^applets-^gnome-core ^g'",
 	  "gnome-core", "gnome-core" },
-	{ NULL }
-};
-
-static ListData list_data[] = {
-	{ N_("System"), { "uname -a" } },
-	{ N_("Distribution"),
-	  { "( [ -f /etc/slackware-version ] && "
-	    "  echo -n \"Slackware \" && cat /etc/slackware-version) || "
-	    "( [ -f /etc/debian_version ] && "
-	    "  echo -n \"Debian \" && cat /etc/debian_version) || "
-	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) || "
-	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
-	    "echo \"\"" } },
-	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc",
-			     "dpkg -l libc6 | tail -n 1 | "
-			     "awk '{ print $2\" \"$3 }'" } },
-	{ N_("C Compiler"), { "gcc --version", "cc -V" } },
-	{ N_("glib"), { "glib-config --version", "rpm -q glib",
-			"dpkg -l libglib1.2 | tail -n 1 | "
-			"awk '{ print \"glib \"$3 }'" } },
-	{ N_("GTK+"), { "gtk-config --version", "rpm -q gtk+",
-			"dpkg -l libgtk1.2 | tail -n 1 | "
-			"awk '{ print \"GTK+ \"$3 }'" } },
-	{ N_("ORBit"), { "orbit-config --version", "rpm -q ORBit",
-			 "dpkg -l liborbit0 | tail -n 1 | "
-			 "awk '{ print \"ORBit \"$3 }'" } },
-	{ N_("gnome-libs"), { "gnome-config --version", "rpm -q gnome-libs",
-			      "dpkg -l gnome-libs-data | tail -n 1 | "
-			      "awk '{ print \"gnome-libs \"$3 }'" } },
-	{ N_("gnome-core"), { "gnome-config --modversion applets "
-			      "| grep -v gnome-libs "
-			      "| sed -e 's^applets-^gnome-core ^g'", 
-			      "rpm -q gnome-core",
-			      "dpkg -l gnome-core | tail -n 1 | "
-			      "awk '{ print \"gnome-core \"$3 }'" } },
 	{ NULL }
 };
 
@@ -240,9 +202,28 @@ static gboolean
 update_crash_type (GtkWidget *w, gpointer data)
 {
 	CrashType new_type = GPOINTER_TO_INT (data);
-	
+	GtkWidget *segv, *core;
+
 	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (w)))
 		druid_data.crash_type = new_type;
+
+	segv = glade_xml_get_widget (druid_data.xml, "segv_table");
+	core = glade_xml_get_widget (druid_data.xml, "core_box");
+
+	switch (new_type) {
+	case CRASH_DIALOG:
+		gtk_widget_show (segv);
+		gtk_widget_hide (core);
+		break;
+	case CRASH_CORE:
+		gtk_widget_show (core);
+		gtk_widget_hide (segv);
+		break;
+	case CRASH_NONE:
+		gtk_widget_hide (core);
+		gtk_widget_hide (segv);
+		break;
+	}
 	
 	return FALSE;
 }
@@ -261,36 +242,11 @@ update_submit_type (GtkWidget *w, gpointer data)
 gboolean
 on_nature_page_next (GtkWidget *page, GtkWidget *druid)
 {
-	GtkWidget *newpage;
-	switch (druid_data.crash_type) {
-	case CRASH_DIALOG:
+	if (druid_data.crash_type != CRASH_NONE)
 		return FALSE;
-		break;
-	case CRASH_CORE:
-		newpage = druid_data.core;
-		break;
-	default:
-		newpage = druid_data.action;
-		break;
-	}
-	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (newpage));
-	return TRUE;
-}
 
-gboolean
-on_attach_page_next (GtkWidget *page, GtkWidget *druid)
-{
 	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (druid_data.less));
-	return TRUE;
-}
-
-gboolean
-on_core_page_back (GtkWidget *page, GtkWidget *druid)
-{
-	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (druid_data.nature));
+			      GNOME_DRUID_PAGE (druid_data.action));
 	return TRUE;
 }
 
@@ -331,26 +287,6 @@ on_stop_button_clicked (GtkWidget *button, gpointer data)
 		kill (druid_data.app_pid, SIGCONT);
 		druid_data.explicit_dirty = TRUE;
 	}
-}
-
-gboolean
-on_less_page_back (GtkWidget *page, GtkWidget *druid)
-{
-	GtkWidget *newpage = NULL;
-	switch (druid_data.crash_type) {
-	case CRASH_DIALOG:
-		newpage = druid_data.attach;
-		break;
-	case CRASH_CORE:
-		newpage = druid_data.core;
-		break;
-	default:
-		g_assert_not_reached ();
-		break;
-	}
-	gnome_druid_set_page (GNOME_DRUID (druid),
-			      GNOME_DRUID_PAGE (newpage));
-	return TRUE;
 }
 
 gboolean
@@ -513,7 +449,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	gchar *s, *s2, *s3, *subject;
 	FILE *fp = stdout;
 	ListData *data;	
-	int status, bugnum;
+	int status, bugnum, i;
 
 	if (druid_data.bug_type == BUG_NEW) {
 		s2 = g_strdup ("submit" SUBMIT_ADDRESS);
@@ -590,12 +526,16 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		 ">Synopsis: %s\n"
 		 ">Class: %s\n", s, subject, bug_class[druid_data.bug_class][1]);
 
-	for (data  = list_data; data->label; data++) {
-		s = NULL;
+	for (i = 0; i < GTK_CLIST (druid_data.version_list)->rows; i++) {
+		s = s2 = NULL;
 		gtk_clist_get_text (GTK_CLIST (druid_data.version_list),
-				    data->row, 1, &s);
-		if (s && strlen (s))
-			fprintf (fp, "%s: %s\n", data->label, s);
+				    i, 0, &s);
+		gtk_clist_get_text (GTK_CLIST (druid_data.version_list),
+				    i, 1, &s2);
+		
+		if (s && strlen (s) &&
+		    s2 && strlen (s2))
+			fprintf (fp, "%s: %s\n", s, s2);
 	}
 
 	w = glade_xml_get_widget (druid_data.xml, "desc_area");
@@ -833,7 +773,7 @@ init_toggle (const char *name, int test, int data, GtkSignalFunc func)
 static void
 init_ui ()
 {
-	GtkWidget *w, *m;
+	GtkWidget *w, *m, *segv, *core;
 	gchar *row[3] = { NULL };
 	gchar *s, *p = NULL;
 	int i;
@@ -957,6 +897,24 @@ init_ui ()
 	init_toggle ("file_radio", druid_data.submit_type, SUBMIT_FILE,
 		     GTK_SIGNAL_FUNC (update_submit_type));
 
+	segv = glade_xml_get_widget (druid_data.xml, "segv_table");
+	core = glade_xml_get_widget (druid_data.xml, "core_box");
+
+	switch (druid_data.crash_type) {
+	case CRASH_DIALOG:
+		gtk_widget_show (segv);
+		gtk_widget_hide (core);
+		break;
+	case CRASH_CORE:
+		gtk_widget_show (core);
+		gtk_widget_hide (segv);
+		break;
+	case CRASH_NONE:
+		gtk_widget_hide (core);
+		gtk_widget_hide (segv);
+		break;
+	}
+
 	/* system config page */
 	druid_data.version_edit =
 		glade_xml_get_widget (druid_data.xml, "version_edit");
@@ -983,7 +941,7 @@ init_ui ()
 	}
 
 	if (druid_data.distro)
-		druid_data.distro->phylum->packager (&package);
+		druid_data.distro->phylum->packager (package);
 
 	for (i = 0; package[i].name; i++) {
 		if (!package[i].version &&

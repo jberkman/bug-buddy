@@ -209,12 +209,6 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 		return;
 	}
 
-	if (pipe (fd) == -1) {
-		d = gnome_error_dialog (_("Unable to open pipe"));
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
-		return;
-	}
-
 	druid_data.gdb_pid = start_commandv (args, &fd);
 	if (druid_data.gdb_pid == -1) {
 		d = gnome_error_dialog (_("Error on fork()."));

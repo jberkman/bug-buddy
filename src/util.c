@@ -57,6 +57,7 @@ start_commandv (const char *args[], int *rfd)
 	char *s;
 
 	if (pipe (fd) == -1) {
+		perror ("can't open pipe");
 		d = gnome_error_dialog (_("Unable to open pipe"));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return -1;
