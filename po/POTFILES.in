@@ -1,4 +1,3 @@
-src/bts.c
 src/bug-buddy.c
 src/bugzilla.c
 src/gdb-buddy.c

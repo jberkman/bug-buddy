@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-02-14 11:31+0200\n"
+"POT-Creation-Date: 2001-02-15 04:50-0500\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -166,16 +166,16 @@ msgstr ""
 "\n"
 "Будь ласка, вкаж╕ть пакет"
 
-#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:331
 msgid "The specified file does not exist."
 msgstr "Вказаного файлу нема╓."
 
-#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:337
 #, c-format
 msgid "File is of type: %s"
 msgstr "Тип файлу: %s"
 
-#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:340
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "\"%s\" не схожий на текстовий файл."
@@ -192,7 +192,7 @@ msgstr ""
 msgid "Please enter your name."
 msgstr "Введ╕ть ваше ╕м'я."
 
-#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:266
 msgid "Please enter a valid email address."
 msgstr "Введ╕ть вашу електронну адресу."
 
@@ -209,27 +209,27 @@ msgstr ""
 "\n"
 "Вказати нове м╕сце знаходження sendmail?"
 
-#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Не вдалося в╕дкити файл: \"%s\""
 
-#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:395
 #, c-format
 msgid "about to run '%s'"
 msgstr "запуск \"%s\""
 
-#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:399
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Не вдалося запустити програму: \"%s\""
 
-#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:433
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваш зв╕т було збережено в \"%s\""
 
-#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:436
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -302,13 +302,41 @@ msgstr ""
 "зам╕сть $GNOME_CRASHED_PID."
 
 #: src/bug-buddy.c:1251
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Could not load '%s'.\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"Не вдалося в╕дкрити \"%s\".\n"
+"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
+
+#: src/bugzilla.c:441
+#, fuzzy
+msgid "Are you sure you want to cancel this update?"
+msgstr ""
+"Ви впевнен╕, що хочете в╕дм╕нити\n"
+"цей зв╕т про помилку?"
+
+#: src/bugzilla.c:556
+#, fuzzy, c-format
+msgid ""
+"Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Не можливо завантажити \"%s\".\n"
+"Не вдалося в╕дкрити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
+
+#: src/bugzilla.c:567
+msgid "All"
+msgstr ""
+
+#: src/bugzilla.c:591
+msgid ""
+"Bug Buddy has determined that some of its information about\n"
+"the various bug tracking systems may need to be updated.\n"
+"\n"
+"Should Bug Buddy try to update these files now?"
+msgstr ""
 
 #: src/gdb-buddy.c:72
 #, c-format
@@ -371,7 +399,7 @@ msgid ""
 "\n"
 "These bug reports are submitted via email, so\n"
 "please specify your email address so you can be\n"
-"contacted if furthur information is requred, or\n"
+"contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
 
@@ -565,7 +593,7 @@ msgid "email info"
 msgstr ""
 
 #: src/glade-strings.c:66
-msgid "Assbarn Phenomeon"
+msgid "Assbarn Phenomenon"
 msgstr ""
 
 #: src/glade-strings.c:67
@@ -575,10 +603,6 @@ msgstr "П╕дготувати ╕ншу помилку"
 #: src/glade-strings.c:68
 msgid "finished"
 msgstr "завершено"
-
-#: src/glade-strings.c:70
-msgid "Finish"
-msgstr "Завершити"
 
 #: src/united-states-of-bug-buddy.c:41
 msgid "Welcome to Bug Buddy"
@@ -617,7 +641,7 @@ msgstr "Граф╕чний ╕нструмент зв╕тування про помилки для GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Простенька веб-стор╕нка bug-buddy"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:281
 #, fuzzy, c-format
 msgid ""
 "`%s' doesn't seem to exist.\n"
@@ -632,33 +656,33 @@ msgstr ""
 "\n"
 "Вказати нове м╕сце знаходження sendmail?"
 
-#: src/united-states-of-bug-buddy.c:343
+#: src/united-states-of-bug-buddy.c:351
 #, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 "Вам необх╕дно вставити заголовок та опис\n"
 "у ваш зв╕т."
 
-#: src/united-states-of-bug-buddy.c:351
+#: src/united-states-of-bug-buddy.c:359
 #, fuzzy
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 "Вам необх╕дно вставити заголовок та опис\n"
 "у ваш зв╕т."
 
-#: src/united-states-of-bug-buddy.c:466
+#: src/united-states-of-bug-buddy.c:474
 msgid "You must specify a product for your bug report."
 msgstr "Необх╕дно вказати продукт для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:475
+#: src/united-states-of-bug-buddy.c:483
 msgid "You must specify a component for your bug report."
 msgstr "Необх╕дно вказати компонент для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:483
+#: src/united-states-of-bug-buddy.c:491
 msgid "You must specify a version for your bug report."
 msgstr "Необх╕дно вказати верс╕ю для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:520
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -678,3 +702,13 @@ msgstr "Не вдалося запустити \"%s\"."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Помилка на зчитуванн╕..."
+
+#~ msgid ""
+#~ "Could not load '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Не можливо завантажити \"%s\".\n"
+#~ "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
+
+#~ msgid "Finish"
+#~ msgstr "Завершити"

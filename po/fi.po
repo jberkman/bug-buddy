@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2001-02-12 23:27+0200\n"
+"POT-Creation-Date: 2001-02-15 04:50-0500\n"
 "PO-Revision-Date: 2001-02-12 23:59+02:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -168,16 +168,16 @@ msgstr ""
 "\n"
 "Tarkenna paketti."
 
-#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:331
 msgid "The specified file does not exist."
 msgstr "Annettu tiedostonimi ei ole olemassa."
 
-#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:337
 #, c-format
 msgid "File is of type: %s"
 msgstr "Tiedosto on tyyppiä: %s"
 
-#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:340
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ei ole tekstitiedosto."
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Please enter your name."
 msgstr "Anna nimesi tähän."
 
-#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:266
 msgid "Please enter a valid email address."
 msgstr "Anna sähköpostiosoitteesi tähän."
 
@@ -211,27 +211,27 @@ msgstr ""
 "\n"
 "Haluatko määritellä uuden kohteen sendmailille?"
 
-#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Ei pysty aukaisemaan tiedostoa: '%s'"
 
-#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:395
 #, c-format
 msgid "about to run '%s'"
 msgstr "juuri ajamassa '%s'"
 
-#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:399
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Ei pysty käynnistämään sähköpostiohjelmaa: '%s'"
 
-#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:433
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
-#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:436
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -618,7 +618,8 @@ msgid "email info"
 msgstr "sähköpostitieto"
 
 #: src/glade-strings.c:66
-msgid "Assbarn Phenomeon"
+#, fuzzy
+msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomeon"
 
 #: src/glade-strings.c:67
@@ -628,10 +629,6 @@ msgstr "Ilmoita toisesta virheestä"
 #: src/glade-strings.c:68
 msgid "finished"
 msgstr "valmis"
-
-#: src/glade-strings.c:70
-msgid "Finish"
-msgstr "Valmis"
 
 #: src/united-states-of-bug-buddy.c:41
 msgid "Welcome to Bug Buddy"
@@ -669,7 +666,7 @@ msgstr "Graafinen virheidenraportointityökalu GNOME:lle."
 msgid "The lame Bug Buddy web page"
 msgstr "Laimea Bug Buddy kotisivu"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:281
 #, c-format
 msgid ""
 "`%s' doesn't seem to exist.\n"
@@ -686,27 +683,27 @@ msgstr ""
 "\n"
 "Haluatko määritellä uuden kohteen sendmailille?"
 
-#: src/united-states-of-bug-buddy.c:343
+#: src/united-states-of-bug-buddy.c:351
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Virheraportissa tulee olla kattava otsikko."
 
-#: src/united-states-of-bug-buddy.c:351
+#: src/united-states-of-bug-buddy.c:359
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Virheraportissa tulee olla kattava selitysosa."
 
-#: src/united-states-of-bug-buddy.c:466
+#: src/united-states-of-bug-buddy.c:474
 msgid "You must specify a product for your bug report."
 msgstr "Määrittele virheraportin kohteena oleva tuote."
 
-#: src/united-states-of-bug-buddy.c:475
+#: src/united-states-of-bug-buddy.c:483
 msgid "You must specify a component for your bug report."
 msgstr "Määrittele virheraporttia varten komponentti."
 
-#: src/united-states-of-bug-buddy.c:483
+#: src/united-states-of-bug-buddy.c:491
 msgid "You must specify a version for your bug report."
 msgstr "Määrittele versio virheraporttia varten."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:520
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -726,3 +723,6 @@ msgstr "Ei voinut ajaa '%s'"
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
+
+#~ msgid "Finish"
+#~ msgstr "Valmis"

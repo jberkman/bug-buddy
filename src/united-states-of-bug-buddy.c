@@ -252,14 +252,22 @@ intro_page_ok (void)
 	w = GET_WIDGET ("email-name-entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	if (! (s && strlen (s))) {
-		gnome_error_dialog (_("Please enter your name."));
+		w = gnome_message_box_new (_("Please enter your name."),
+					   GNOME_MESSAGE_BOX_ERROR,
+					   GNOME_STOCK_BUTTON_OK,
+					   NULL);
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return FALSE;
 	}
 
 	w = GET_WIDGET ("email-email-entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	if (!email_is_valid (s)) {
-		gnome_error_dialog (_("Please enter a valid email address."));
+		w = gnome_message_box_new (_("Please enter a valid email address."),
+					   GNOME_MESSAGE_BOX_ERROR,
+					   GNOME_STOCK_BUTTON_OK,
+					   NULL);
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return FALSE;
 	}
 

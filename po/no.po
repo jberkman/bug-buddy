@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-02-14 15:50+0100\n"
+"POT-Creation-Date: 2001-02-15 04:50-0500\n"
 "PO-Revision-Date: 2001-02-14 15:51+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -165,16 +165,16 @@ msgstr ""
 "\n"
 "Vennligst spesifiser en pakke."
 
-#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:331
 msgid "The specified file does not exist."
 msgstr "Den spesifiserte filen eksisterer ikke."
 
-#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:337
 #, c-format
 msgid "File is of type: %s"
 msgstr "Filen er av type: %s"
 
-#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:340
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ser ikke ut som en tekstfil."
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Please enter your name."
 msgstr "Vennligst skriv inn ditt navn."
 
-#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:266
 msgid "Please enter a valid email address."
 msgstr "Vennligst oppgi en gyldig e-post adresse."
 
@@ -208,27 +208,27 @@ msgstr ""
 "\n"
 "Spesifiser ny plassering for sendmail?"
 
-#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kunne ikke åpne filen: '%s'"
 
-#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:395
 #, c-format
 msgid "about to run '%s'"
 msgstr "i ferd med å kjøre '%s'"
 
-#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:399
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kunne ikke starte e-postprogram: '%s'"
 
-#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:433
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
-#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:436
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -606,7 +606,8 @@ msgid "email info"
 msgstr "e-postinfo"
 
 #: src/glade-strings.c:66
-msgid "Assbarn Phenomeon"
+#, fuzzy
+msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomeon"
 
 #: src/glade-strings.c:67
@@ -616,10 +617,6 @@ msgstr "Send inn en feil til"
 #: src/glade-strings.c:68
 msgid "finished"
 msgstr "fullført"
-
-#: src/glade-strings.c:70
-msgid "Finish"
-msgstr "Fullfør"
 
 #: src/united-states-of-bug-buddy.c:41
 msgid "Welcome to Bug Buddy"
@@ -657,7 +654,7 @@ msgstr "Grafisk verktøy for feilrapportering for GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Den lamme Bug Buddy hjemmesiden"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:281
 #, c-format
 msgid ""
 "`%s' doesn't seem to exist.\n"
@@ -674,27 +671,27 @@ msgstr ""
 "\n"
 "Spesifiser ny plassering for sendmail?"
 
-#: src/united-states-of-bug-buddy.c:343
+#: src/united-states-of-bug-buddy.c:351
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Du må inkludere et forståelig emne i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:351
+#: src/united-states-of-bug-buddy.c:359
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Du må inkludere en forståelig beskrivelse i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:466
+#: src/united-states-of-bug-buddy.c:474
 msgid "You must specify a product for your bug report."
 msgstr "Du må spesifisére et produkt i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:475
+#: src/united-states-of-bug-buddy.c:483
 msgid "You must specify a component for your bug report."
 msgstr "Du må spesifisere en komponent i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:483
+#: src/united-states-of-bug-buddy.c:491
 msgid "You must specify a version for your bug report."
 msgstr "Du må spesifisere en versjon for din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:520
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -714,6 +711,9 @@ msgstr "Kunne ikke kjøre '%s'."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Feil ved lesing..."
+
+#~ msgid "Finish"
+#~ msgstr "Fullfør"
 
 #~ msgid "Show products for"
 #~ msgstr "Vis produkter for"

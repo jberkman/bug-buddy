@@ -2040,7 +2040,7 @@ of products for the bug tracking systems.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>finished-label</name>
-	    <label>Assbarn Phenomeon</label>
+	    <label>Assbarn Phenomenon</label>
 	    <justify>GTK_JUSTIFY_LEFT</justify>
 	    <wrap>True</wrap>
 	    <xalign>0.5</xalign>
@@ -2057,6 +2057,7 @@ of products for the bug tracking systems.</label>
 	  <widget>
 	    <class>GtkCheckButton</class>
 	    <name>checkbutton2</name>
+	    <visible>False</visible>
 	    <can_focus>True</can_focus>
 	    <label>Submit another bug</label>
 	    <active>False</active>
@@ -2204,7 +2205,12 @@ of products for the bug tracking systems.</label>
 	    <handler>gtk_main_quit</handler>
 	    <last_modification_time>Fri, 09 Feb 2001 11:23:38 GMT</last_modification_time>
 	  </signal>
-	  <label>Finish</label>
+	  <signal>
+	    <name>clicked</name>
+	    <handler>save_config</handler>
+	    <last_modification_time>Thu, 15 Feb 2001 09:36:06 GMT</last_modification_time>
+	  </signal>
+	  <stock_button>GNOME_STOCK_BUTTON_CLOSE</stock_button>
 	  <relief>GTK_RELIEF_NORMAL</relief>
 	</widget>
 

@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-13 17:10+0000\n"
+"POT-Creation-Date: 2001-02-15 04:50-0500\n"
 "PO-Revision-Date: 2001-02-13 17:23:34+0900\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -199,16 +199,16 @@ msgstr ""
 "\n"
 "Παρακαλώ διευκρινίστε το πακέτο."
 
-#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:323
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:331
 msgid "The specified file does not exist."
 msgstr "Το ζητούμενο αρχείο δεν υπάρχει."
 
-#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:329
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:337
 #, c-format
 msgid "File is of type: %s"
 msgstr "Το αρχείου είναι του είδους: %s"
 
-#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:332
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:340
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "Το '%s' δε μοιάζει με αρχείου κειμένου."
@@ -227,7 +227,7 @@ msgid "Please enter your name."
 msgstr "Παρακαλώ εισάγετε το όνομά σας."
 
 #
-#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:262
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:266
 msgid "Please enter a valid email address."
 msgstr "Παρακαλώ εισάγετε την ηλεκτρονική διεύθυνσή σας."
 
@@ -246,27 +246,27 @@ msgstr ""
 "Θέλετε να ορίσετε νέα θέση για το sendmail;"
 
 #
-#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:375
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Αδύνατο το άνοιγμα αρχείου: '%s'"
 
-#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:387
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:395
 #, c-format
 msgid "about to run '%s'"
 msgstr "πρόκειτε να εκτελεστεί το '%s'"
 
-#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:391
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:399
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Αδύνατη η εκκίνηση του προγράμματος ηλεκ. αλληλογραφίας: '%s'"
 
-#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:425
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:433
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Η αναφορά σφάλματος έχει αποθηκευθεί στο '%s'"
 
-#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:428
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:436
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -687,7 +687,8 @@ msgid "email info"
 msgstr "πληροφορίες ηλεκ. διεύθ."
 
 #: src/glade-strings.c:66
-msgid "Assbarn Phenomeon"
+#, fuzzy
+msgid "Assbarn Phenomenon"
 msgstr "Φαινόμενο Assbarn"
 
 #: src/glade-strings.c:67
@@ -697,10 +698,6 @@ msgstr "Αναφορά και άλλου σφάλματος"
 #: src/glade-strings.c:68
 msgid "finished"
 msgstr "ολοκληρώθηκε"
-
-#: src/glade-strings.c:70
-msgid "Finish"
-msgstr "Τερματισμός"
 
 #
 #: src/united-states-of-bug-buddy.c:41
@@ -743,7 +740,7 @@ msgid "The lame Bug Buddy web page"
 msgstr "Η κουτσή σελίδα WWW του Βοηθού Σφαλμάτων"
 
 #
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:281
 #, c-format
 msgid ""
 "`%s' doesn't seem to exist.\n"
@@ -760,37 +757,37 @@ msgstr ""
 "\n"
 "Θέλετε να ορίσετε νέα διαδρομή για το sendmail;"
 
-#: src/united-states-of-bug-buddy.c:343
+#: src/united-states-of-bug-buddy.c:351
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 "Πρέπει να συμπεριλάβετε ένα ευκατανόητο θέμα/τίτλο \n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:351
+#: src/united-states-of-bug-buddy.c:359
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 "Πρέπει να συμπεριλάβετε μια ευκατανόητη περιγραφή\n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:466
+#: src/united-states-of-bug-buddy.c:474
 msgid "You must specify a product for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε το συγκεκριμένο λογισμικό\n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:475
+#: src/united-states-of-bug-buddy.c:483
 msgid "You must specify a component for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε ένα συστατικό\n"
 "για την αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:483
+#: src/united-states-of-bug-buddy.c:491
 msgid "You must specify a version for your bug report."
 msgstr ""
 "Πρέπει να καθορίσετε μια έκδοση\n"
 "στην αναφορά σφάλματός σας."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:520
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -811,3 +808,5 @@ msgstr "Αδύνατη η εκτέλεση του '%s'."
 msgid "Error on read..."
 msgstr "Σφάλμα στην ανάγνωση..."
 
+#~ msgid "Finish"
+#~ msgstr "Τερματισμός"

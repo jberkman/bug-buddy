@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20000905\n"
-"POT-Creation-Date: 2001-02-11 14:13-0500\n"
+"POT-Creation-Date: 2001-02-15 04:50-0500\n"
 "PO-Revision-Date: 2000-09-05 13:22+0900\n"
 "Last-Translator: Chideok Hwang <hwang@mizi.co.kr>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -168,16 +168,16 @@ msgstr ""
 "\n"
 "계속 하시겠습니까?"
 
-#: src/bug-buddy.c:382
+#: src/bug-buddy.c:382 src/united-states-of-bug-buddy.c:331
 msgid "The specified file does not exist."
 msgstr "지정한 파일이 존재하지 않습니다."
 
-#: src/bug-buddy.c:387
+#: src/bug-buddy.c:387 src/united-states-of-bug-buddy.c:337
 #, c-format
 msgid "File is of type: %s"
 msgstr "파일 타입: %s"
 
-#: src/bug-buddy.c:390
+#: src/bug-buddy.c:390 src/united-states-of-bug-buddy.c:340
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s'은 텍스트 파일같지 않습니다."
@@ -188,12 +188,12 @@ msgid ""
 "in your bug report."
 msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
 
-#: src/bug-buddy.c:522
+#: src/bug-buddy.c:522 src/united-states-of-bug-buddy.c:255
 #, fuzzy
 msgid "Please enter your name."
 msgstr "당신의 이름과 이메일주소를 기입하세요"
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:528 src/united-states-of-bug-buddy.c:266
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "당신의 이름과 이메일주소를 기입하세요"
@@ -211,27 +211,27 @@ msgstr ""
 "\n"
 "sendmail의 위치를 다시 지정하시겠습니까?"
 
-#: src/bug-buddy.c:590
+#: src/bug-buddy.c:590 src/united-states-of-bug-buddy.c:383
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "'%s'을 열수가 없습니다"
 
-#: src/bug-buddy.c:604
+#: src/bug-buddy.c:604 src/united-states-of-bug-buddy.c:395
 #, c-format
 msgid "about to run '%s'"
 msgstr "'%s'을 실행할려고 함"
 
-#: src/bug-buddy.c:608
+#: src/bug-buddy.c:608 src/united-states-of-bug-buddy.c:399
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "메일 프로그램('%s')을 시작할 수가 없습니다"
 
-#: src/bug-buddy.c:637
+#: src/bug-buddy.c:637 src/united-states-of-bug-buddy.c:433
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "버그 레포트가 '%s'에 저장되었습니다"
 
-#: src/bug-buddy.c:640
+#: src/bug-buddy.c:640 src/united-states-of-bug-buddy.c:436
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -263,7 +263,7 @@ msgstr ""
 "파일 '%s'이 이미 존재합니다.\n"
 "덮어 쓸까요?"
 
-#: src/bug-buddy.c:847 src/glade-strings.c:70
+#: src/bug-buddy.c:847 src/glade-strings.c:69
 msgid "About"
 msgstr "버그 버디란?"
 
@@ -280,10 +280,10 @@ msgid "Refresh"
 msgstr "갱신"
 
 #: src/bug-buddy.c:896
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "'%s'을 열수가 없습니다.\n"
 "bug-buddy가 제대로 설치되었는지를 확인해주시요."
@@ -308,10 +308,35 @@ msgstr ""
 #, fuzzy, c-format
 msgid ""
 "Could not load '%s'.\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"'%s'을 열수가 없습니다.\n"
+"bug-buddy가 제대로 설치되었는지를 확인해주시요."
+
+#: src/bugzilla.c:441
+msgid "Are you sure you want to cancel this update?"
+msgstr ""
+
+#: src/bugzilla.c:556
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 "'%s'을 열수가 없습니다.\n"
 "bug-buddy가 제대로 설치되었는지를 확인해주시요."
+
+#: src/bugzilla.c:567
+msgid "All"
+msgstr ""
+
+#: src/bugzilla.c:591
+msgid ""
+"Bug Buddy has determined that some of its information about\n"
+"the various bug tracking systems may need to be updated.\n"
+"\n"
+"Should Bug Buddy try to update these files now?"
+msgstr ""
 
 #: src/gdb-buddy.c:72
 #, fuzzy, c-format
@@ -373,7 +398,7 @@ msgid ""
 "\n"
 "These bug reports are submitted via email, so\n"
 "please specify your email address so you can be\n"
-"contacted if furthur information is requred, or\n"
+"contacted if further information is required, or\n"
 "when a fixed version is available."
 msgstr ""
 
@@ -471,7 +496,7 @@ msgstr ""
 msgid "To:"
 msgstr "받는 이"
 
-#: src/glade-strings.c:40 src/glade-strings.c:57
+#: src/glade-strings.c:40 src/glade-strings.c:56
 msgid "%P %%"
 msgstr "%P %%"
 
@@ -483,117 +508,195 @@ msgstr ""
 msgid "Please select the product for the bug you wish to report."
 msgstr ""
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:43 src/united-states-of-bug-buddy.c:45
 msgid "Product"
 msgstr ""
 
-#: src/glade-strings.c:44 src/glade-strings.c:50
+#: src/glade-strings.c:44 src/glade-strings.c:49
 msgid "Description"
 msgstr "설명"
 
 #: src/glade-strings.c:45
-msgid "Show products for"
-msgstr ""
-
-#: src/glade-strings.c:46
 #, fuzzy
-msgid "bug tracking systems."
+msgid "Bug tracking system"
 msgstr "버그 보고 시스템"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:46
 msgid "product"
 msgstr ""
 
-#: src/glade-strings.c:48
+#: src/glade-strings.c:47
 msgid "Please choose a component, version, and severity level."
 msgstr ""
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:48 src/united-states-of-bug-buddy.c:46
 #, fuzzy
 msgid "Component"
 msgstr "내용"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:50
 msgid "Version"
 msgstr "버전"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:51
 msgid "Severity"
 msgstr "심각성"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:52
 #, fuzzy
 msgid "component"
 msgstr "내용"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:53
 #, fuzzy
 msgid ""
-"Please wait while bug-buddy determines some information about your system."
+"Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "디버깅 정보를 모으는 동안\n"
 "기다려 주십시요."
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:54
 msgid "Package"
 msgstr "패키지"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:55
 msgid "Version installed"
 msgstr "설치된 버전"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:57
 msgid "Automatically go to next page when complete"
 msgstr "다 채워지면 자동으로 다음 페이지 가기"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:58
 #, fuzzy
 msgid "system"
 msgstr "시스템"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:59
 #, fuzzy
 msgid "Select an action"
 msgstr "코아 파일을 선택하세요"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:60
 msgid "Cc"
 msgstr ""
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:61
 msgid "To"
 msgstr "받는 이"
 
-#: src/glade-strings.c:63
+#: src/glade-strings.c:62
 msgid "Send copy to yourself"
 msgstr "복사본을 당신에게 보내기"
 
-#: src/glade-strings.c:64
+#: src/glade-strings.c:63
 msgid "Save the report to..."
 msgstr "레포트를 새 이름으로 저장하기"
 
-#: src/glade-strings.c:65
+#: src/glade-strings.c:64
 msgid "Content"
 msgstr "내용"
 
-#: src/glade-strings.c:66
+#: src/glade-strings.c:65
 msgid "email info"
 msgstr ""
 
-#: src/glade-strings.c:67
-msgid "Assbarn Phenomeon"
+#: src/glade-strings.c:66
+msgid "Assbarn Phenomenon"
 msgstr ""
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:67
 msgid "Submit another bug"
 msgstr ""
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:68
 msgid "finished"
 msgstr ""
 
-#: src/glade-strings.c:71
-msgid "Finish"
+#: src/united-states-of-bug-buddy.c:41
+#, fuzzy
+msgid "Welcome to Bug Buddy"
+msgstr "bug-buddy"
+
+#: src/united-states-of-bug-buddy.c:42
+msgid "Debugging Information"
+msgstr "디버깅 정보"
+
+#: src/united-states-of-bug-buddy.c:43
+#, fuzzy
+msgid "Bug Description"
+msgstr "설명"
+
+#: src/united-states-of-bug-buddy.c:44
+msgid "Updating Product Listing"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:47
+msgid "System Configuration"
+msgstr "시스템 구성"
+
+#: src/united-states-of-bug-buddy.c:48
+msgid "Submitting the Report"
+msgstr "보고를 보내기"
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Finished!"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:85
+#, fuzzy
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "그놈 GUI 버그 레포팅 툴"
+
+#: src/united-states-of-bug-buddy.c:95
+#, fuzzy
+msgid "The lame Bug Buddy web page"
+msgstr "bug-buddy 웹 페이지"
+
+#: src/united-states-of-bug-buddy.c:281
+#, fuzzy, c-format
+msgid ""
+"`%s' doesn't seem to exist.\n"
+"\n"
+"You won't be able to actually submit a bug report, but you will\n"
+"be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+"'%s'는 존재하지않습니다. 버그레포팅을 지금 보낼수는 없습니다.\n"
+"하지만 파일로 저장을 하실수가 있습니다.\n"
+"\n"
+"sendmail의 위치를 다시 지정하시겠습니까?"
+
+#: src/united-states-of-bug-buddy.c:351
+#, fuzzy
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
+
+#: src/united-states-of-bug-buddy.c:359
+#, fuzzy
+msgid "You must include a comprehensible description in your bug report."
+msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
+
+#: src/united-states-of-bug-buddy.c:474
+#, fuzzy
+msgid "You must specify a product for your bug report."
+msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
+
+#: src/united-states-of-bug-buddy.c:483
+#, fuzzy
+msgid "You must specify a component for your bug report."
+msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
+
+#: src/united-states-of-bug-buddy.c:491
+#, fuzzy
+msgid "You must specify a version for your bug report."
+msgstr "버그 레포트에는 제목과 설명을 포함하여야합니다."
+
+#: src/united-states-of-bug-buddy.c:520
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
 msgstr ""
 
 #: src/util.c:60
@@ -614,13 +717,6 @@ msgstr "읽는 도중 에러가 발생했습니다"
 
 #~ msgid "Collect debugging information from a core file"
 #~ msgstr "코아 파일로부터 디버깅 정보를 얻어내기"
-
-#, fuzzy
-#~ msgid "The graphical bug reporting tool for GNOME."
-#~ msgstr "그놈 GUI 버그 레포팅 툴"
-
-#~ msgid "The lame bug-buddy web page"
-#~ msgstr "bug-buddy 웹 페이지"
 
 #~ msgid ""
 #~ "Could not find '%s'.\n"
@@ -686,20 +782,11 @@ msgstr "읽는 도중 에러가 발생했습니다"
 #~ msgid "Bug Number"
 #~ msgstr "버그 번호"
 
-#~ msgid "Debugging Information"
-#~ msgstr "디버깅 정보"
-
 #~ msgid "Collecting Debugging Information"
 #~ msgstr "디버깅 정보를 모으는 중"
 
-#~ msgid "System Configuration"
-#~ msgstr "시스템 구성"
-
 #~ msgid "Please verify that this information is correct"
 #~ msgstr "이 정보가 올바른지를 확인해 주십시요"
-
-#~ msgid "Submitting the Report"
-#~ msgstr "보고를 보내기"
 
 #~ msgid "Summary"
 #~ msgstr "요약"
