@@ -543,20 +543,20 @@ submit_ok (void)
 		g_free (file);
 	} else {
 		char *argv[] = { "", "-i", "-t", NULL };
-		int fd;
-		int pid, exit_status;
 
 		argv[0] = buddy_get_text ("email-sendmail-entry");
 
 		if (!bb_write_buffer_to_command (GTK_WINDOW (GET_WIDGET ("druid-window")), argv, buf->str, buf->len, &error)) {
-			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-						    0,
-						    GTK_MESSAGE_ERROR,
-						    GTK_BUTTONS_OK,
-						    _("There was an error submitting the bug report:\n\n"
-						      "%s"),
-						    error->message);
-			gtk_dialog_run (GTK_DIALOG (w));
+			if (error) {
+				w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+							    0,
+							    GTK_MESSAGE_ERROR,
+							    GTK_BUTTONS_OK,
+							    _("There was an error submitting the bug report:\n\n"
+							      "%s"),
+							    error->message);
+				gtk_dialog_run (GTK_DIALOG (w));
+			}
 			goto submit_ok_out;
 		}
 

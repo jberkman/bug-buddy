@@ -1,12 +1,15 @@
 2002-08-13  jacob berkman  <jacob@ximian.com>
 
+	* src/united-states-of-bug-buddy.c (submit_ok): fix a crash
+
 	* configure.in: bump to 2.2.99
 
-	* src/united-states-of-bug-buddy.c: use new saving code
+	* src/united-states-of-bug-buddy.c: use new saving code (fixes
+	#84914)
 
 	* src/save-buddy.c (bb_write_buffer_to_fd): use an io channel to
 	write to a file, and pop up a dialog if it takes more than 1.1
-	seconds which allows the user to cancel the action
+	seconds which allows the user to cancel the action (fixes #73443)
 
 	* src/*.[ch]: nuke some #if 0'd code and fix some compile warnings
 	
