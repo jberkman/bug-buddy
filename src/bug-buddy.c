@@ -23,7 +23,7 @@
 #include "config.h"
 
 #include <gnome.h>
-/*#include <libgnomeui/gnome-window-icon.h>*/
+#include <libgnomeui/gnome-window-icon.h>
 #include <glade/glade.h>
 
 #include <gnome-xml/tree.h>
@@ -899,8 +899,11 @@ GtkWidget *
 make_anim (gchar *widget_name, gchar *imgname, 
 	   gchar *string2, gint size, gint freq)
 {
-	GtkWidget *w = gnome_animator_new_with_size (48, 48);
+	GtkWidget *w;
 	gchar *pixmap;
+
+	w = gnome_animator_new_with_size (48, 48);
+
 	gnome_animator_set_loop_type (GNOME_ANIMATOR (w),
 				      GNOME_ANIMATOR_LOOP_RESTART);
 	pixmap = g_strconcat (BUDDY_DATADIR, imgname, NULL);
@@ -1143,7 +1146,7 @@ init_ui ()
 	gnome_druid_set_page (GNOME_DRUID (druid_data.the_druid), 
 			      GNOME_DRUID_PAGE (GET_WIDGET ("contact_page")));
 
-	/*gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid_window")));*/
+	gnome_window_icon_set_from_default (GTK_WINDOW (GET_WIDGET ("druid_window")));
 }
 
 gint
@@ -1169,12 +1172,17 @@ main (int argc, char *argv[])
 
 	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, 
 				    options, 0, NULL);
-	/*gnome_window_icon_set_default_from_file (BUDDY_ICONDIR"/bug-buddy.png");*/
+	gnome_window_icon_set_default_from_file (BUDDY_ICONDIR"/bug-buddy.png");
+
 	glade_gnome_init ();
 
 	s = "bug-buddy.glade";
 	if (!g_file_exists (s))
 		s = BUDDY_DATADIR "/bug-buddy.glade";
+
+	gtk_widget_push_visual (gdk_imlib_get_visual ());
+	gtk_widget_push_colormap (gdk_imlib_get_colormap ());
+
 	druid_data.xml = glade_xml_new (s, "druid_window");
 
 	if (!druid_data.xml) {
@@ -1190,6 +1198,9 @@ main (int argc, char *argv[])
 	init_ui ();
 
 	gtk_widget_show (GET_WIDGET ("druid_window"));
+
+	gtk_widget_pop_colormap ();
+	gtk_widget_pop_visual ();
 
 	gtk_main ();
 

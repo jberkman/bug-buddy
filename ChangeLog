@@ -1,3 +1,11 @@
+2000-05-04  Jacob Berkman  <jacob@helixcode.com>
+
+	* configure.in: check for new gnome-libs 1.0.59
+
+	* src/bug-buddy.c (main): push / pop the visual / colormap
+	(init_ui): use the default icon on the main window
+	(main): set the default icon
+
 2000-05-02 Telsa Gwynne <hobbit@aloss.ukuu.org.uk>
 
 	* Silly typo fix in docs. 
