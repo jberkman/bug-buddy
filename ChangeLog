@@ -1,3 +1,8 @@
+2002-02-07  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: add AM_PROG_LIBTOOL (Laszlo PETER
+	<Laszlo.Peter@ireland.sun.com>)
+
 2002-02-04  jacob berkman  <jacob@ximian.com>
 
 	* configure.in: 
