@@ -276,7 +276,10 @@ on_stop_button_clicked (GtkWidget *button, gpointer data)
 	if (!druid_data.fd)
 		return;
 
-	w = gnome_question_dialog (_("gdb has not exited.  Kill this process?"),
+	w = gnome_question_dialog (_("gdb has not finished getting the"
+				     "debugging information.\n"
+				     "Kill the gdb process (the stack trace"
+				     "will be incomplete)?"),
 				   NULL, NULL);
 
 	if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (w))) {
@@ -520,7 +523,9 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	g_free (s);
 
 	status = pclose (fp);
+#if 0
 	g_message (_("Subprocess exited with status %d"), status);
+#endif
 	save_config ();
 	gtk_main_quit ();
 
@@ -533,8 +538,11 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 {	
 	gchar *s;
 	druid_data.selected_data = gtk_clist_get_row_data (list, row);
-	gtk_clist_get_text (list, row, 1, &s);
-	gtk_entry_set_text (GTK_ENTRY (druid_data.version_edit), s);
+	if (gtk_clist_get_text (list, row, 1, &s))
+		gtk_entry_set_text (GTK_ENTRY (druid_data.version_edit), s);
+	else
+		gtk_editable_delete_text (GTK_EDITABLE (druid_data.version_edit),
+					  0, -1);
 	gtk_clist_get_text (list, row, 0, &s);
 	gtk_label_set_text (GTK_LABEL (druid_data.version_label), _(s));
 }
@@ -614,7 +622,9 @@ get_data_from_command (const gchar *cmd)
 	} 
 
 	status = pclose (fp);
+#if 0
 	g_message (_("Subprocess exited with status %d"), status);
+#endif
 
 	return g_strchomp (buf);	
 }
@@ -965,13 +975,3 @@ main (int argc, char *argv[])
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-

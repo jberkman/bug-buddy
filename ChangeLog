@@ -1,5 +1,16 @@
 1999-11-14  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* NEWS:
+	* configure.in: 0.4 release
+
+	* src/gdb-buddy.c:
+	* src/bug-buddy.c: don't print out status messages
+	(on_version_list_select_row): fix a crash if there is no text
+	in the row
+
+	* src/bug-buddy.c (on_stop_button_clicked): better dialog box,
+	I think.
+
 	* src/gdb-buddy.c: don't be so verbose
 
 	* src/gdb-buddy.c:

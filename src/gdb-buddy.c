@@ -78,7 +78,7 @@ stop_gdb ()
 {
 	int status;
 	if (!druid_data.ioc) {
-		g_message (_("gdb has exited"));
+		g_message (_("gdb has already exited"));
 		return;
 	}
 	
@@ -86,8 +86,9 @@ stop_gdb ()
 	waitpid (druid_data.gdb_pid, &status, 0);
 	
 	druid_data.gdb_pid = 0;
+#if 0
 	g_message (_("Subprocess exited with status %d"), status);
-	
+#endif
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   TRUE, TRUE, TRUE);
 	gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
@@ -138,7 +139,9 @@ get_trace_from_core (const gchar *core_file)
 	}
 
 	status = pclose(f);
+#if 0
 	g_message (_("Child process exited with status %d"), status);
+#endif
 	if (!binary) {
 		gchar *s = g_strdup_printf (_("Unable to determine which binary created\n"
 					      "'%s'"), core_file);

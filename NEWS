@@ -1,3 +1,20 @@
+0.4:
+
+* Fixes:
+
+	- possible crash when clicking on a clist with a blank 2nd
+	column
+
+	- spelling errors
+
+* Improvements:
+
+	- reorganized the druid a little
+
+	- code reorg
+
+	- can now stop/refresh the gdb process
+
 0.3 release:
 
 No release announcement this time, I guess.
