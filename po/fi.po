@@ -1,13 +1,13 @@
 # bug-buddy Finnish Translation
 # http://gnome-fi.sourceforge.net/
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Sami Pesonen <spesonen@dlc.fi>, 2000.
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Sami Pesonen <spesonen@dlc.fi>, 2000-2001.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.2\n"
-"POT-Creation-Date: 2001-02-11 14:13-0500\n"
-"PO-Revision-Date: 2000-11-18 23:29+02:00\n"
+"Project-Id-Version: bug-buddy 2.0\n"
+"POT-Creation-Date: 2001-02-11 23:24+0200\n"
+"PO-Revision-Date: 2001-02-11 23:58+02:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -67,18 +67,16 @@ msgid "Save report to file"
 msgstr "Tallenna raportti tiedostoon"
 
 #: src/bug-buddy.c:76
-#, fuzzy
 msgid "crashed application"
-msgstr "Valitse kaatuneen sovelluksen binääri"
+msgstr "kaatunut sovellus"
 
 #: src/bug-buddy.c:77
-#, fuzzy
 msgid "core file"
-msgstr "Core-tiedosto"
+msgstr "core-tiedosto"
 
 #: src/bug-buddy.c:78
 msgid "nothing"
-msgstr ""
+msgstr "ei mitään"
 
 #: src/bug-buddy.c:83
 msgid "Create a new bug report"
@@ -307,18 +305,18 @@ msgstr ""
 "Käytä sen sijaan komennon --pid lisäargumenttia."
 
 #: src/bug-buddy.c:1251
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"Ei pystynyt avaamaan tiedostoa '%s'\n"
+"Ei pystynyt lataamaan tiedostoa '%s'.\n"
 "Varmista, että bug-buddy on oikein asennettu."
 
 #: src/gdb-buddy.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "hakee jäljitystietoja pinosta... (%d)"
+msgstr "Hakee jäljitystietoja pinosta... (%d)"
 
 #: src/gdb-buddy.c:153
 #, c-format
@@ -347,6 +345,8 @@ msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
+"GDB:tä ei löytynyt järjestelmästäsi.\n"
+"Virheenkorjaustietoja ei haeta."
 
 #: src/gdb-buddy.c:272
 msgid ""
@@ -366,9 +366,8 @@ msgstr "Virhe fork():ssa."
 #. * DO NOT compile it as part of your application.
 #.
 #: src/glade-strings.c:7
-#, fuzzy
 msgid "Bug Buddy"
-msgstr "bug-buddy"
+msgstr "Bug Buddy"
 
 #: src/glade-strings.c:8
 msgid ""
@@ -380,28 +379,33 @@ msgid ""
 "contacted if furthur information is requred, or\n"
 "when a fixed version is available."
 msgstr ""
+"Tämä ohjelma auttaa sinua virheraportin eri vaiheiden\n"
+"raportoinnissa projekteille kuten GNOME.\n"
+"\n"
+"Nämä virheraportit toimitetaan sähköpostin välityksellä,\n"
+"joten anna sähköpostiosoitteesi, jotta sinuun voidaan\n"
+"ottaa tarvittaessa yhteyttä lisätietojen takia tai\n"
+"mikäli korjattu versio on saatavilla."
 
 #: src/glade-strings.c:15
-#, fuzzy
 msgid "Skip this step in the future"
-msgstr "Ohita tämä vaihe"
+msgstr "Ohita tämä vaihe jatkossa"
 
 #: src/glade-strings.c:16
-#, fuzzy
 msgid "Name"
 msgstr "Nimesi"
 
 #: src/glade-strings.c:17
 msgid "Sendmail"
-msgstr ""
+msgstr "Sendmail"
 
 #: src/glade-strings.c:18
 msgid "Email"
-msgstr ""
+msgstr "Sähköposti"
 
 #: src/glade-strings.c:19
 msgid "intro"
-msgstr ""
+msgstr "intro"
 
 #: src/glade-strings.c:20
 msgid ""
@@ -409,19 +413,21 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
+"Bug Buddy voi lähettää virheenkorjaustietoja virheraportissasi.\n"
+"Oikea valinta pitäisi olla valittuna puolestasi automaattisesti.\n"
+"Paina Ohje-nappulaa saadaksesi lisätietoja."
 
 #: src/glade-strings.c:23
 msgid "Debug"
-msgstr ""
+msgstr "Virheenkorjaus"
 
 #: src/glade-strings.c:24
 msgid "Go"
-msgstr ""
+msgstr "Mene"
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid "Binary file"
-msgstr "Binääri"
+msgstr "Binääritiedosto"
 
 #: src/glade-strings.c:27
 msgid "Process ID"
@@ -432,13 +438,12 @@ msgid "Core file"
 msgstr "Core-tiedosto"
 
 #: src/glade-strings.c:29
-#, fuzzy
 msgid "Automatically continue to next step when debugging is complete"
-msgstr "Vaihda automaattisesti sivua kun valmis"
+msgstr "Siirry automaattisesti seuraavaan vaiheeseen kun valmis"
 
 #: src/glade-strings.c:30
 msgid "gdb"
-msgstr ""
+msgstr "gdb"
 
 #: src/glade-strings.c:31
 msgid "Please make your bug report in English, if possible."
@@ -459,21 +464,32 @@ msgstr "Liitä tekstitiedosto"
 #: src/glade-strings.c:35
 msgid "desc"
 msgstr ""
+"#: src/glade-strings.c:8\n"
+"msgid \"\"\n"
+"\"This program will walk you through the steps for \\n\"\n"
+"\"submitting a bug report for projects such as GNOME.\\n\"\n"
+"\"\\n\"\n"
+"\"These bug reports are submitted via email, so\\n\"\n"
+"\"please specify your email address so you can be\\n\"\n"
+"\"contacted if furthur information is requred, or\\n\"\n"
+"\"when a fixed version is available.\"\n"
+"msgstr \"\""
 
 #: src/glade-strings.c:36
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr ""
+"Odota sillä aikaa kun Bug Buddy päivittää luettelonsa\n"
+"tuotteista virheiden seurantajärjestelmiä varten."
 
 #: src/glade-strings.c:38
 msgid "Saving:"
-msgstr ""
+msgstr "Tallentaa:"
 
 #: src/glade-strings.c:39
-#, fuzzy
 msgid "To:"
-msgstr "Kenelle"
+msgstr "Kenelle:"
 
 #: src/glade-strings.c:40 src/glade-strings.c:57
 msgid "%P %%"
@@ -481,15 +497,15 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:41
 msgid "download"
-msgstr ""
+msgstr "lataa"
 
 #: src/glade-strings.c:42
 msgid "Please select the product for the bug you wish to report."
-msgstr ""
+msgstr "Valitse tuote, josta haluat raportoida virheen."
 
 #: src/glade-strings.c:43
 msgid "Product"
-msgstr ""
+msgstr "Tuote"
 
 #: src/glade-strings.c:44 src/glade-strings.c:50
 msgid "Description"
@@ -497,25 +513,23 @@ msgstr "Kuvaus"
 
 #: src/glade-strings.c:45
 msgid "Show products for"
-msgstr ""
+msgstr "Näytä tuotteet"
 
 #: src/glade-strings.c:46
-#, fuzzy
 msgid "bug tracking systems."
-msgstr "Virheiden seurantajärjestelmä "
+msgstr "virheiden seurantajärjestelmää varten."
 
 #: src/glade-strings.c:47
 msgid "product"
-msgstr ""
+msgstr "tuote"
 
 #: src/glade-strings.c:48
 msgid "Please choose a component, version, and severity level."
-msgstr ""
+msgstr "Valitse komponentti, versio ja vakavuusluokka."
 
 #: src/glade-strings.c:49
-#, fuzzy
 msgid "Component"
-msgstr "Sisältö"
+msgstr "Komponentti"
 
 #: src/glade-strings.c:51
 msgid "Version"
@@ -526,17 +540,13 @@ msgid "Severity"
 msgstr "Vakavuusaste"
 
 #: src/glade-strings.c:53
-#, fuzzy
 msgid "component"
-msgstr "Sisältö"
+msgstr "komponentti"
 
 #: src/glade-strings.c:54
-#, fuzzy
 msgid ""
 "Please wait while bug-buddy determines some information about your system."
-msgstr ""
-"Odota sillä aikaa kun kerätään \n"
-"tietoja virheen korjaamiseksi..."
+msgstr "Odota sillä aikaa kun bug-buddy kerää tietoja järjestelmästäsi."
 
 #: src/glade-strings.c:55
 msgid "Package"
@@ -551,18 +561,16 @@ msgid "Automatically go to next page when complete"
 msgstr "Vaihda automaattisesti sivua kun valmis"
 
 #: src/glade-strings.c:59
-#, fuzzy
 msgid "system"
-msgstr "Järjestelmä"
+msgstr "järjestelmä"
 
 #: src/glade-strings.c:60
-#, fuzzy
 msgid "Select an action"
-msgstr "Valitse core-tiedosto"
+msgstr "Valitse toimenpide"
 
 #: src/glade-strings.c:61
 msgid "Cc"
-msgstr ""
+msgstr "Kopio"
 
 #: src/glade-strings.c:62
 msgid "To"
@@ -582,23 +590,23 @@ msgstr "Sisältö"
 
 #: src/glade-strings.c:66
 msgid "email info"
-msgstr ""
+msgstr "sähköpostitieto"
 
 #: src/glade-strings.c:67
 msgid "Assbarn Phenomeon"
-msgstr ""
+msgstr "Assbarn Phenomeon"
 
 #: src/glade-strings.c:68
 msgid "Submit another bug"
-msgstr ""
+msgstr "Ilmoita toisesta virheestä"
 
 #: src/glade-strings.c:69
 msgid "finished"
-msgstr ""
+msgstr "valmis"
 
 #: src/glade-strings.c:71
 msgid "Finish"
-msgstr ""
+msgstr "Valmis"
 
 #: src/util.c:60
 msgid "Unable to open pipe"
@@ -612,102 +620,3 @@ msgstr "Ei voinut ajaa '%s'"
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
-
-#~ msgid "Collect debugging information from a crashed application"
-#~ msgstr "Kerää tietoja virheen korjaamiseksi kaatuneesta sovelluksesta"
-
-#~ msgid "Collect debugging information from a core file"
-#~ msgstr "Kerää tietoja virheen korjaamiseksi core-tiedostosta"
-
-#~ msgid "The graphical bug reporting tool for GNOME."
-#~ msgstr "GNOME:n graafinen ohjelmavirheiden raportointityökalu"
-
-#~ msgid "The lame bug-buddy web page"
-#~ msgstr "Vaisut bug-buddy Internet sivut"
-
-#~ msgid ""
-#~ "Could not find '%s'.\n"
-#~ "Please make sure bug-buddy was installed correctly."
-#~ msgstr ""
-#~ "Ei löytänyt '%s'.\n"
-#~ "Varmista, että bug-buddy on oikein asennettu."
-
-#~ msgid "Welcome to the Wonderful World of bug-buddy"
-#~ msgstr "Tervetuloa bug-buddyn suurenmoiseen maailmaan"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process\n"
-#~ "of submitting a bug report.  If this is your first time \n"
-#~ "using bug-buddy, you will be prompted for your\n"
-#~ "email address so that the bug report can be\n"
-#~ "submitted."
-#~ msgstr ""
-#~ "bug-buddy neuvoo sinua vaihe vaiheelta virheraportin\n"
-#~ "tekemisessä. Jos tämä on ensimmäinen bug-buddy käyttökerta\n"
-#~ "sinulta tullaan kysymään sähköpostiosoitetta jotta\n"
-#~ "virheraportti voidaan lähettää eteenpäin."
-
-#~ msgid "Contact Information"
-#~ msgstr "Yhteystiedot"
-
-#~ msgid "Choose which sendmail to use"
-#~ msgstr "Valitse mitä sendmailia käytetään"
-
-#~ msgid "Email Address"
-#~ msgstr "Sähköpostiosoite"
-
-#~ msgid "Full path of sendmail"
-#~ msgstr "Sendmailin hakemistopolku"
-
-#~ msgid ""
-#~ "bug-buddy will walk you through the process of\n"
-#~ "submitting a bug report.  You can click the help\n"
-#~ "button for a more in-depth explanation of the process."
-#~ msgstr ""
-#~ "bug-buddy neuvoo sinua vaihe vaiheelta virheraportin\n"
-#~ "tekemisessä. Voit painaa ohje-painiketta saadaksesi\n"
-#~ "lisätietoja kustakin vaiheesta."
-
-#~ msgid "Report Information"
-#~ msgstr "Raportin tiedot"
-
-#~ msgid ""
-#~ "Select a bug tracking system to use, and then fill out\n"
-#~ "the remaining information."
-#~ msgstr ""
-#~ "Valitse käytettävä virheiden seurantajärjestelmä\n"
-#~ "ja täytä loput tiedot."
-
-#~ msgid "Class"
-#~ msgstr "Luokka"
-
-#~ msgid ""
-#~ "Please check to see if your bug has already been submitted,\n"
-#~ "and if so, use \"Add information to existing report\" above."
-#~ msgstr ""
-#~ "Tarkista onko samanlaista virheraporttia jo olemassa, mikäli on,\n"
-#~ "valitse \"Anna lisätietoja olemassa olevaan virheraporttiin\" yllä."
-
-#~ msgid "Bug Number"
-#~ msgstr "Virhenumero"
-
-#~ msgid "Debugging Information"
-#~ msgstr "Virheenkorjaus tieto"
-
-#~ msgid "Collecting Debugging Information"
-#~ msgstr "Keräämässä tietoja virheen korjaamiseksi"
-
-#~ msgid "System Configuration"
-#~ msgstr "Järjestelmän kokoonpano"
-
-#~ msgid "Please verify that this information is correct"
-#~ msgstr "Tarkista oheisten tietojen paikkansa pitävyys"
-
-#~ msgid "Submitting the Report"
-#~ msgstr "Lähettämässä virheraporttia"
-
-#~ msgid "Summary"
-#~ msgstr "Yhteenveto"
-
-#~ msgid "The GEGL is watching."
-#~ msgstr "The GEGL is watching."
