@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.89cvs\n"
+"Project-Id-Version: bug-buddy 2.0\n"
 "POT-Creation-Date: 2001-02-26 11:17-0500\n"
-"PO-Revision-Date: 2001-03-01 06:33+01:00\n"
+"PO-Revision-Date: 2001-03-19 12:36+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -145,7 +145,7 @@ msgid ""
 "Could not load '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"'%s' kann nicht geöffnet werden.\n"
+"Es ist nicht möglich, '%s' zu öffnen.\n"
 "\n"
 "Bitte überprüfen Sie, ob Bug Buddy richtig\n"
 "installiert wurde."
@@ -160,9 +160,9 @@ msgid ""
 "Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
-"'%s' kann nicht geöffnet werden.\n"
+"Es ist nicht möglich, '%s' zu öffnen.\n"
 "\n"
-"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
+"Bitte überprüfen Sie, ob »Bug Buddy« richtig\n"
 "installiert wurde."
 
 #: src/bugzilla.c:549
@@ -186,7 +186,7 @@ msgstr ""
 #: src/gdb-buddy.c:72
 #, c-format
 msgid "Obtaining stack trace... (%d)"
-msgstr "Beschaffe Stacktrace... (%d)"
+msgstr "Stacktrace wird beschafft... (%d)"
 
 #: src/gdb-buddy.c:153
 #, c-format
@@ -194,8 +194,8 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Kann folgende Core-Datei nicht mit »gdb« verarbeiten:\n"
-"`%s'"
+"Es ist nicht möglich, folgende Core-Datei mit »gdb« zu verarbeiten:\n"
+"»%s«"
 
 #: src/gdb-buddy.c:179
 #, c-format
@@ -335,13 +335,11 @@ msgstr "Wenn möglich, schreiben Sie den Fehlerbericht bitte auf Englisch."
 
 #: src/glade-strings.c:32
 msgid "Short subject for the bug report"
-msgstr "Kurze Betreff für den Fehlerbericht"
+msgstr "Kurzer Betreff für den Fehlerbericht"
 
 #: src/glade-strings.c:33
 msgid "Full description of the bug, including how to reproduce it"
-msgstr ""
-"Ausführliche Beschreibung des Fehlers, einschließlich einer Anleitung zur "
-"Wiederholung"
+msgstr "Ausführliche Beschreibung des Fehlers, einschließlich einer Anleitung, um den Fehler reporduzieren zu können"
 
 #: src/glade-strings.c:34
 msgid "Include a text file"
@@ -357,7 +355,7 @@ msgid ""
 "of products for the bug tracking systems."
 msgstr ""
 "Bitte warten Sie.  Bug Buddy aktualisiert gerade\n"
-"die Liste der produkte für die Fehlermeldestellen\n"
+"die Liste der Produkte für die Fehlermeldestellen\n"
 "(Bug Tracking Systems)."
 
 #: src/glade-strings.c:38
@@ -460,7 +458,7 @@ msgstr "Kopie an sich selbst schicken"
 
 #: src/glade-strings.c:63
 msgid "Save the report to..."
-msgstr "Den Report speichern unter..."
+msgstr "Den Bericht speichern unter..."
 
 #: src/glade-strings.c:64
 msgid "Content"
@@ -637,7 +635,7 @@ msgstr "Es ist nicht möglich, eine Pipe zu öffnen."
 #: src/util.c:72
 #, c-format
 msgid "Could not run '%s'."
-msgstr "Kann »%s« nicht starten."
+msgstr "Es ist nicht möglich, »%s« zu starten."
 
 #: src/util.c:113
 msgid "Error on read..."
