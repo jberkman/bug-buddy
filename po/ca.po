@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-06-29 14:00+0200\n"
+"POT-Creation-Date: 2000-12-26 17:14+0100\n"
+"PO-Revision-Date: 2000-12-26 16:40+0100\n"
 "Last-Translator: Quico Llach <quico@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -142,20 +142,19 @@ msgstr "Fitxer de nucli del programa"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Fitxer de text que s'ha d'incloure a l'informe"
 
 #: src/bug-buddy.c:332
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
 "Please specify a package."
 msgstr ""
-"És molt més útil si especifiqueu\n"
+"És molt més útil si indiqueu\n"
 "un paquet més específic que no pas 'general'.\n"
 "\n"
-"Voleu continuar igualment?"
+"Si us plau, indiqueu un paquet."
 
 #: src/bug-buddy.c:374
 msgid "The specified file does not exist."
@@ -192,23 +191,20 @@ msgid "gdb has already exited"
 msgstr "El gdb ja s'ha abandonat"
 
 #: src/bug-buddy.c:490
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "L'eina gràfica del GNOME per informar d'errors"
+msgstr "L'eina gràfica del GNOME per informar d'errors."
 
 #: src/bug-buddy.c:500
 msgid "The lame bug-buddy web page"
 msgstr "La poc convincent pàgina web del bug-buddy"
 
 #: src/bug-buddy.c:607
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
+msgstr "Si us plau, introduïu el vostre nom."
 
 #: src/bug-buddy.c:613
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Si us plau, introduiu el vostre nom i adreça electrònica"
+msgstr "Si us plau, introduïu una adreça electrònica vàlida."
 
 #: src/bug-buddy.c:624
 #, c-format
