@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-04-23 14:13-0400\n"
+"POT-Creation-Date: 2002-05-24 17:00-0500\n"
 "PO-Revision-Date: 2002-05-21 09:52+0300\n"
 "Last-Translator: Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>\n"
 "Language-Team: Arabic <contact@arabeyes.org>\n"
@@ -118,13 +118,12 @@ msgstr "gdb ال ال gdb ال?"
 msgid "gdb has already exited"
 msgstr "خرج gdb مسبقا"
 
-#: src/bug-buddy.c:285
+#: src/bug-buddy.c:286
 msgid "Save Backtrace"
 msgstr "احفظ تتبع سير البرنامج"
 
-#: src/bug-buddy.c:304
-#, c-format
-#, fuzzy
+#: src/bug-buddy.c:305
+#, fuzzy, c-format
 msgid ""
 "There was an error trying to save %s:\n"
 "\n"
@@ -133,29 +132,39 @@ msgid ""
 "Please choose another file and try again."
 msgstr "الى ث ل ل ث ل ملف و."
 
-#: src/bug-buddy.c:401
+#: src/bug-buddy.c:402
 msgid "_Start Mailer"
 msgstr "_ابدأ مرسل البريد"
 
-#: src/bug-buddy.c:405
+#: src/bug-buddy.c:406
 msgid "_Send Report"
 msgstr "ا_بعث تقريرا"
 
-#: src/bug-buddy.c:474
+#: src/bug-buddy.c:443
+#, c-format
+msgid ""
+"There was an error showing the proxy settings:\n"
+"\n"
+"%s.\n"
+"\n"
+"Please make sure the GNOME Control Center is properly installed."
+msgstr ""
+
+#: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
 msgstr "اخفي "
 
-#: src/bug-buddy.c:475
+#: src/bug-buddy.c:492
 msgid "Show Debugging Options"
 msgstr "أظهر خيارات القضاء على العيوب"
 
-#: src/bug-buddy.c:539
+#: src/bug-buddy.c:556
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr "الرجاء"
 
-#: src/bug-buddy.c:549
+#: src/bug-buddy.c:566
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -163,14 +172,14 @@ msgstr ""
 "$GNOME_CRASHED_PID ملغاة.\n"
 "فضلا استخدم معامل سطر اﻷوامر --pid بدلا منها."
 
-#: src/bug-buddy.c:565
+#: src/bug-buddy.c:582
 #, fuzzy
 msgid ""
 "Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
 "It will step you through the process of submitting a bug report."
 msgstr "مرحبا الى خلل جينوم ال خلل."
 
-#: src/bug-buddy.c:568
+#: src/bug-buddy.c:585
 msgid ""
 "\n"
 "\n"
@@ -180,7 +189,7 @@ msgstr ""
 "\n"
 "أنت ترى هذا ﻷن هناك برنامجا آخر قد انهار."
 
-#: src/bug-buddy.c:571
+#: src/bug-buddy.c:588
 #, fuzzy
 msgid ""
 "\n"
@@ -189,15 +198,13 @@ msgid ""
 "the applications.  This allows Bug Buddy to provide a more useful bug report."
 msgstr "ل ال الى خلل."
 
-#: src/bug-buddy.c:712
-#, c-format
-#, fuzzy
+#: src/bug-buddy.c:727
+#, fuzzy, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "ث"
 
-#: src/bug-buddy.c:779
-#, c-format
-#, fuzzy
+#: src/bug-buddy.c:794
+#, fuzzy, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
@@ -216,26 +223,37 @@ msgstr "المنتج"
 msgid "Component"
 msgstr "الجزء"
 
-#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
-#: src/bug-buddy.glade.h:20
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
 #, fuzzy
 msgid "Description"
 msgstr "الوصف"
 
 #: src/bugzilla.c:774
-#, c-format
-#, fuzzy
+#, fuzzy, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
-"Please make sure Bug Buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
 msgstr "ث."
 
-#: src/bugzilla.c:792
+#: src/bugzilla.c:793
 #, fuzzy
 msgid "All"
 msgstr "الكل"
 
-#: src/config.c:86
+#: src/bugzilla.c:822
+#, fuzzy
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr "تحميل ملف ث."
+
+#: src/config.c:75
 msgid "Evolution"
 msgstr "التطوير"
 
@@ -264,16 +282,14 @@ msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
 #: src/gdb-buddy.c:165
-#, c-format
-#, fuzzy
+#, fuzzy, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr "الى ملف ب gdb ل ث"
 
 #: src/gdb-buddy.c:196
-#, c-format
-#, fuzzy
+#, fuzzy, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
 "'%s'"
@@ -389,65 +405,45 @@ msgid "GNOME Mailer Settings"
 msgstr "جينوم"
 
 #: src/bug-buddy.glade.h:24
-#, fuzzy
-msgid "Go"
-msgstr "اذهب"
-
-#: src/bug-buddy.glade.h:25
-#, fuzzy
-msgid "HTTP Proxy Settings"
-msgstr "HTTP بروكسي"
-
-#: src/bug-buddy.glade.h:26
 msgid "Include a text file"
 msgstr "ضمّن ملف نص"
 
-#: src/bug-buddy.glade.h:27
+#: src/bug-buddy.glade.h:25
 #, fuzzy
 msgid "Just save to a file so I can submit a bug report manually"
 msgstr "الى ملف I خلل"
 
-#: src/bug-buddy.glade.h:28
-#, fuzzy
-msgid "Location"
-msgstr "المكان"
-
-#: src/bug-buddy.glade.h:29
+#: src/bug-buddy.glade.h:26
 #, fuzzy
 msgid "Name"
 msgstr "الاسم"
 
-#: src/bug-buddy.glade.h:30
-#, fuzzy
-msgid "Password"
-msgstr "كلمة السر"
-
-#: src/bug-buddy.glade.h:31
+#: src/bug-buddy.glade.h:27
 #, fuzzy
 msgid "Path of sendmail"
 msgstr "المسار"
 
-#: src/bug-buddy.glade.h:32
+#: src/bug-buddy.glade.h:28
 #, fuzzy
 msgid "Please choose a component, version, and severity level."
 msgstr "إصدارة و."
 
-#: src/bug-buddy.glade.h:33
+#: src/bug-buddy.glade.h:29
 #, fuzzy
 msgid "Please make any final corrections to the bug report."
 msgstr "الى ال خلل."
 
-#: src/bug-buddy.glade.h:34
+#: src/bug-buddy.glade.h:30
 #, fuzzy
 msgid "Please make your bug report in English, if possible."
 msgstr "خلل أنجليزي."
 
-#: src/bug-buddy.glade.h:35
+#: src/bug-buddy.glade.h:31
 #, fuzzy
 msgid "Please select the product for the bug you wish to report."
 msgstr "ال المنتج ال خلل الى."
 
-#: src/bug-buddy.glade.h:36
+#: src/bug-buddy.glade.h:32
 #, fuzzy
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
@@ -455,173 +451,155 @@ msgid ""
 "If the bug is already reported, please do not report it again."
 msgstr "دقيقة الى خلل ال ال خلل it."
 
-#: src/bug-buddy.glade.h:38
+#: src/bug-buddy.glade.h:34
 #, fuzzy
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
 msgstr "ال خلل."
 
-#: src/bug-buddy.glade.h:40
-#, fuzzy
-msgid "Port"
-msgstr "منفذ"
-
-#: src/bug-buddy.glade.h:41
+#: src/bug-buddy.glade.h:36
 #, fuzzy
 msgid "Process ID:"
 msgstr "عملية هوية:"
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:37
 #, fuzzy
 msgid "Proxy Settings..."
 msgstr "بروكسي إعدادات."
 
-#: src/bug-buddy.glade.h:43
-#, fuzzy
-msgid "Proxy requires a username and password"
-msgstr "بروكسي و"
-
-#: src/bug-buddy.glade.h:44
+#: src/bug-buddy.glade.h:38
 #, fuzzy
 msgid "Save in"
 msgstr "احفظ"
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:39
 #, fuzzy
 msgid "Save the report to..."
 msgstr "احفظ ال الى."
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:40
 #, fuzzy
 msgid "Saving:"
 msgstr "جاري الحفظ:"
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:41
 #, fuzzy
 msgid "Select a mailer"
 msgstr "اختر"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:42
 #, fuzzy
 msgid "Sendmail Settings"
 msgstr "Sendmail"
 
-#: src/bug-buddy.glade.h:49
+#: src/bug-buddy.glade.h:43
 msgid "Severity"
 msgstr "اﻷهمية"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:44
 #, fuzzy
 msgid "Show _Debugging Details"
 msgstr "أظهر"
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:45
 #, fuzzy
 msgid "Show most frequent bugs in:"
 msgstr "أظهر:"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:46
 msgid "Simple"
 msgstr "بسيط"
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:47
 msgid "Start"
 msgstr "ابدأ"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:48
 msgid "Start in terminal"
 msgstr "ابدأ في نهاية طرفية"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:49
 msgid "Stop"
 msgstr "توقف"
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:50
 msgid "Submit another bug"
 msgstr "أرسل خللا آخر"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:51
 msgid "Summary"
 msgstr "الملخص"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:52
 msgid "The product is not listed above."
 msgstr "المنتج ليس مدرجا بالأعلى."
 
-#: src/bug-buddy.glade.h:59
+#: src/bug-buddy.glade.h:53
 msgid "To"
 msgstr "إلى"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:54
 msgid "To:"
 msgstr "إلى:"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:55
 msgid "Understands Netscape remote control"
 msgstr "يفهم التحكم عن بعد لنيتسكيب"
 
-#: src/bug-buddy.glade.h:62
+#: src/bug-buddy.glade.h:56
 msgid "Updating products list:"
 msgstr "تجديد قائمة المنتجات:"
 
-#: src/bug-buddy.glade.h:63
-msgid "Use HTTP Proxy"
-msgstr "استخدم وسيط HTTP"
-
-#: src/bug-buddy.glade.h:64
+#: src/bug-buddy.glade.h:57
 msgid "Use sendmail directly"
 msgstr "استخدم sendmail مباشرة"
 
-#: src/bug-buddy.glade.h:65
+#: src/bug-buddy.glade.h:58
 msgid "Use the default GNOME mailer"
 msgstr "استخدم مرسل البريد الافتراضي في جينوم"
 
-#: src/bug-buddy.glade.h:66
-msgid "Username"
-msgstr "اسم المستخدم"
-
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:59
 msgid "Version"
 msgstr "الإصدارة"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:60
 msgid "component"
 msgstr "الجزء"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:61
 msgid "desc"
 msgstr "الوصف"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:62
 msgid "email info"
 msgstr "معلومات البريد"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:63
 msgid "finished"
 msgstr "انتهى"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:64
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:65
 msgid "gnome"
 msgstr "جينوم"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:66
 msgid "mail config"
 msgstr "إعدادات البريد"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:67
 msgid "mostfreq"
 msgstr ""
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:68
 msgid "product"
 msgstr "المنتج"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:69
 msgid "sendmail"
 msgstr "sendmail"
 
@@ -665,93 +643,91 @@ msgstr "الأداة الرسومية لتقرير العيوب في جينوم.
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:284
+#: src/united-states-of-bug-buddy.c:293
 #, fuzzy
 msgid "Please enter your name."
 msgstr "اسم."
 
-#: src/united-states-of-bug-buddy.c:300
+#: src/united-states-of-bug-buddy.c:309
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "يرجى إدخال عنوان بريد إلكتروني صالح."
 
-#: src/united-states-of-bug-buddy.c:316
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:325
+#, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
 "\n"
 "Please check the path to sendmail again."
 msgstr "ث الى ل ال الى sendmail."
 
-#: src/united-states-of-bug-buddy.c:348
+#: src/united-states-of-bug-buddy.c:357
 msgid "Please enter a valid email command."
 msgstr "يرجى إدخال أمر بريد صحيح."
 
-#: src/united-states-of-bug-buddy.c:412
+#: src/united-states-of-bug-buddy.c:421
 #, fuzzy
 msgid "The specified file does not exist."
 msgstr "ملف."
 
-#: src/united-states-of-bug-buddy.c:422
+#: src/united-states-of-bug-buddy.c:431
 #, c-format
 msgid "File is of type: %s"
 msgstr "الملف من نوع: %s"
 
-#: src/united-states-of-bug-buddy.c:429
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:438
+#, fuzzy, c-format
 msgid ""
 "'%s' is a %s file.\n"
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr "ث ث ملف ل."
 
-#: src/united-states-of-bug-buddy.c:449
+#: src/united-states-of-bug-buddy.c:458
 #, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "خلل."
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy
 msgid "You must include a comprehensible description in your bug report."
 msgstr "وصف خلل."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:502
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "أرسل خلل?"
 
-#: src/united-states-of-bug-buddy.c:508
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:505
+msgid "_Submit"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:526
+#, fuzzy, c-format
 msgid ""
 "Unable to open file '%s':\n"
 "%s"
 msgstr "الى ملف ث ل"
 
-#: src/united-states-of-bug-buddy.c:522
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:540
+#, fuzzy, c-format
 msgid "about to run '%s'"
 msgstr "الى ث"
 
-#: src/united-states-of-bug-buddy.c:530
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:548
+#, fuzzy, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
 "%s"
 msgstr "الى برنامج ث ل"
 
-#: src/united-states-of-bug-buddy.c:568
+#: src/united-states-of-bug-buddy.c:586
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "سجل تقريرك في '%s'"
 
-#: src/united-states-of-bug-buddy.c:571
-#, c-format
-#, fuzzy
+#: src/united-states-of-bug-buddy.c:589
+#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -762,36 +738,36 @@ msgstr ""
 "خلل الى ل\n"
 " ث ل!"
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:644
 #, fuzzy
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
 msgstr "ال المنتج الى خلل الى ال خلل."
 
-#: src/united-states-of-bug-buddy.c:647
+#: src/united-states-of-bug-buddy.c:665
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "المنتج خلل."
 
-#: src/united-states-of-bug-buddy.c:670
+#: src/united-states-of-bug-buddy.c:688
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "خلل."
 
-#: src/united-states-of-bug-buddy.c:684
+#: src/united-states-of-bug-buddy.c:702
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr "إصدارة خلل."
 
-#: src/united-states-of-bug-buddy.c:765
+#: src/united-states-of-bug-buddy.c:785
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
 "Thank you for submitting this bug report."
 msgstr "شكرا ل تقرير الخلل"
 
-#: src/united-states-of-bug-buddy.c:792
+#: src/united-states-of-bug-buddy.c:812
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -805,3 +781,32 @@ msgstr "أداة تقرير العيوب"
 msgid "Report a bug in GNOME"
 msgstr "تقرير خلل في جينوم"
 
+#, fuzzy
+#~ msgid "Go"
+#~ msgstr "اذهب"
+
+#, fuzzy
+#~ msgid "HTTP Proxy Settings"
+#~ msgstr "HTTP بروكسي"
+
+#, fuzzy
+#~ msgid "Location"
+#~ msgstr "المكان"
+
+#, fuzzy
+#~ msgid "Password"
+#~ msgstr "كلمة السر"
+
+#, fuzzy
+#~ msgid "Port"
+#~ msgstr "منفذ"
+
+#, fuzzy
+#~ msgid "Proxy requires a username and password"
+#~ msgstr "بروكسي و"
+
+#~ msgid "Use HTTP Proxy"
+#~ msgstr "استخدم وسيط HTTP"
+
+#~ msgid "Username"
+#~ msgstr "اسم المستخدم"
