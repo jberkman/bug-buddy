@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-01-12 07:34-0500\n"
-"PO-Revision-Date: 2002-01-12 21:48+0200\n"
+"POT-Creation-Date: 2002-01-15 07:38-0500\n"
+"PO-Revision-Date: 2002-01-15 19:26+0200\n"
 "Last-Translator: Peteris Krisjanis <peteris.krisjanis@ttc.lv>\n"
 "Language-Team: Latvian <ll10nt@ttc.lv>\n"
 "MIME-Version: 1.0\n"
@@ -110,11 +110,11 @@ msgstr ""
 "gdb nav pabeidzis atkļūdošanas informācijas savākšanu.\n"
 "Nokaut gdb procesu (masīva izmeklēšana būs nepilnīga)?"
 
-#: src/bug-buddy.c:238 src/gdb-buddy.c:117
+#: src/bug-buddy.c:238 src/gdb-buddy.c:119
 msgid "gdb has already exited"
 msgstr "gdb jau ir izbeidzies"
 
-#: src/bug-buddy.c:415
+#: src/bug-buddy.c:340
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -122,7 +122,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME ir nožēlojams.\n"
 "Lūdzu tā vietā lieto komandrindas argumentu --appname."
 
-#: src/bug-buddy.c:425
+#: src/bug-buddy.c:350
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -130,7 +130,7 @@ msgstr ""
 "$GNOME_CRASHED_PID ir nožēlojams.\n"
 "Lūdzu tā vietā lieto komandrindas argumentu --pid."
 
-#: src/bug-buddy.c:557
+#: src/bug-buddy.c:539
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -143,17 +143,17 @@ msgstr ""
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
-#: src/united-states-of-bug-buddy.c:50
+#: src/bug-buddy.glade.h:64 src/bugzilla.c:599 src/bugzilla.c:639
+#: src/united-states-of-bug-buddy.c:53
 msgid "Product"
 msgstr "Produkts"
 
-#: src/bug-buddy.glade.h:14 src/bugzilla.c:605 src/bugzilla.c:667
-#: src/united-states-of-bug-buddy.c:51
+#: src/bug-buddy.glade.h:21 src/bugzilla.c:605 src/bugzilla.c:667
+#: src/united-states-of-bug-buddy.c:54
 msgid "Component"
 msgstr "Komponents"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:611 src/bugzilla.c:645
+#: src/bug-buddy.glade.h:26 src/bugzilla.c:611 src/bugzilla.c:645
 #: src/bugzilla.c:673
 msgid "Description"
 msgstr "Apraksts"
@@ -171,12 +171,32 @@ msgstr ""
 msgid "All"
 msgstr "Visi"
 
-#: src/gdb-buddy.c:74
+#: src/config.c:79
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "URI, kas parādīts, kad klikšķina."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Apmeklēts"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "Ja URI jau ir apmeklēts."
+
+#: src/gdb-buddy.c:76
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Veicu masīva izmeklēšanu... (%d)"
 
-#: src/gdb-buddy.c:159
+#: src/gdb-buddy.c:161
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -185,7 +205,7 @@ msgstr ""
 "Nevarēju apstrādāt core failu ar gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:190
+#: src/gdb-buddy.c:192
 #, c-format
 msgid ""
 "GDB was unable to determine which binary created\n"
@@ -194,11 +214,11 @@ msgstr ""
 "GDB nevarēja noskaidrot, kurš binārais fails radīja\n"
 "'%s'"
 
-#: src/gdb-buddy.c:222
+#: src/gdb-buddy.c:224
 msgid "Error on read... aborting"
 msgstr "Kļūda lasot... izbeidzu"
 
-#: src/gdb-buddy.c:267
+#: src/gdb-buddy.c:269
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -206,7 +226,7 @@ msgstr ""
 "Tavā sistēmā nevar atrast GDB.\n"
 "Atkļūdošanas informācija netiks iegūta."
 
-#: src/gdb-buddy.c:301
+#: src/gdb-buddy.c:303
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -214,7 +234,7 @@ msgstr ""
 "Nevarēju atrast gdb-cmd failu.\n"
 "Lūdzu mēģini pārinstalēt Blusu Draugu."
 
-#: src/gdb-buddy.c:321
+#: src/gdb-buddy.c:323
 msgid "There was an error running gdb."
 msgstr "Bija viena kļūda laižot gdb."
 
@@ -243,7 +263,7 @@ msgstr "Automātiski pāriet pie nākamās lappas, kad pabeigts"
 msgid "Binary file"
 msgstr "Binārais fails"
 
-#: src/bug-buddy.glade.h:8 src/united-states-of-bug-buddy.c:100
+#: src/bug-buddy.glade.h:8 src/united-states-of-bug-buddy.c:103
 msgid "Bug Buddy"
 msgstr "Blusu Draugs"
 
@@ -258,26 +278,58 @@ msgstr ""
 "automātiski. Papildus informācijai spiediet zemākesošo Palīdzības pogu."
 
 #: src/bug-buddy.glade.h:12
+msgid ""
+"Bug Buddy needs to download some files from the web.\n"
+"If you need to use an HTTP Proxy, please configure it here.\n"
+"These settings will be shared with Nautilus and some other GNOME "
+"applications."
+msgstr ""
+"Blusu draugam ir lejupjānolādē daži faili no tīmekļa.\n"
+"Ja jūs vēlaties lietot HTTP Starpniekserveri, lūdzu konfigurējiet to šeit.\n"
+"Šie uzstādījumi tiks koplietoti arī ar Nautilus un dažām citām GNOME "
+"aplikācijām."
+
+#: src/bug-buddy.glade.h:15
+msgid ""
+"Bug Buddy uses email to submit the bug reports.\n"
+"Please choose how you would like Bug Buddy to send email."
+msgstr ""
+"Blusu Draugs lieto epastu lai nosūtītu kļūdu ziņojumus.\n"
+"Lūdzu izvēlieties kā jūs vēletos, lai Blusu Draugs nosūta epastu."
+
+#: src/bug-buddy.glade.h:17
+msgid "Bug Report"
+msgstr "Kļūdas Ziņojums"
+
+#: src/bug-buddy.glade.h:18
 msgid "Bug tracking system"
 msgstr "Blusu ķeramā sistēma"
 
-#: src/bug-buddy.glade.h:13
+#: src/bug-buddy.glade.h:19
 msgid "Cc"
 msgstr "Cc"
 
-#: src/bug-buddy.glade.h:15
+#: src/bug-buddy.glade.h:20
+msgid "Command"
+msgstr "Komanda"
+
+#: src/bug-buddy.glade.h:22
 msgid "Content"
 msgstr "Saturs"
 
-#: src/bug-buddy.glade.h:16
+#: src/bug-buddy.glade.h:23
 msgid "Core file"
 msgstr "Core fails"
 
-#: src/bug-buddy.glade.h:17
+#: src/bug-buddy.glade.h:24
+msgid "Custom mailer"
+msgstr "Parastais pastnieks"
+
+#: src/bug-buddy.glade.h:25
 msgid "Debug"
 msgstr "Atkļūdot"
 
-#: src/bug-buddy.glade.h:19
+#: src/bug-buddy.glade.h:27
 msgid ""
 "Description of Problem:\n"
 "\n"
@@ -317,39 +369,55 @@ msgstr ""
 "\n"
 "Pievienojama Informācija:"
 
-#: src/bug-buddy.glade.h:37
+#: src/bug-buddy.glade.h:45
 msgid "Email"
 msgstr "Epasts"
 
-#: src/bug-buddy.glade.h:38
+#: src/bug-buddy.glade.h:46
+msgid "GNOME Mailer Settings"
+msgstr "GNOME Pastnieka Uzstādījumi"
+
+#: src/bug-buddy.glade.h:47
 msgid "Go"
 msgstr "Aiziet"
 
-#: src/bug-buddy.glade.h:39
+#: src/bug-buddy.glade.h:48
 msgid "Include a text file"
 msgstr "Iekļaut teksta failu"
 
-#: src/bug-buddy.glade.h:40
+#: src/bug-buddy.glade.h:49
+msgid "Location"
+msgstr "Lokācija"
+
+#: src/bug-buddy.glade.h:50
 msgid "Name"
 msgstr "Vārds"
 
-#: src/bug-buddy.glade.h:41
+#: src/bug-buddy.glade.h:51
 msgid "Package"
 msgstr "Pakotne"
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:52
+msgid "Password"
+msgstr "Parole"
+
+#: src/bug-buddy.glade.h:53
+msgid "Path to Sendmail"
+msgstr "Ceļš uz Sendmail"
+
+#: src/bug-buddy.glade.h:54
 msgid "Please choose a component, version, and severity level."
 msgstr "Lūdzu izvēlies componentu, versiju un svarīguma līmeni."
 
-#: src/bug-buddy.glade.h:43
+#: src/bug-buddy.glade.h:55
 msgid "Please make your bug report in English, if possible."
 msgstr "Lūdzu sastādi savu kļūdas paziņojumu Angļu valodā, ja iespējams."
 
-#: src/bug-buddy.glade.h:44
+#: src/bug-buddy.glade.h:56
 msgid "Please select the product for the bug you wish to report."
 msgstr "Lūdzu izvēlies produktu kļūdai, par kuru vēlies ziņot."
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:57
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
 "reported bugs.\n"
@@ -359,13 +427,13 @@ msgstr ""
 "ziņotajām.\n"
 "Ja šī kļūda ir jau ziņota, lūdzu nedariet to vēlreiz."
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:59
 msgid "Please wait while Bug Buddy determines some information about your system."
 msgstr ""
 "Lūdzu uzgaidi līdz Blusu Draugs noskaidro nedaudz informāciju par jūsu "
 "sistēmu."
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:60
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -373,169 +441,223 @@ msgstr ""
 "Lūdzu uzgaidi līdz Blusu Draugs atjaunina\n"
 "tā blusu ķeramās sistēmas produktu sarakstu."
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:62
+msgid "Port"
+msgstr "Ports"
+
+#: src/bug-buddy.glade.h:63
 msgid "Process ID"
 msgstr "Procesa ID"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:65
+msgid "Proxy requires a username and password"
+msgstr "Starpniekserveris pieprasa lietotājvārdu un paroli"
+
+#: src/bug-buddy.glade.h:66
 msgid "Save the report to..."
 msgstr "Saglabāt paziņojumu iekš..."
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:67
 msgid "Saving:"
 msgstr "Saglabāju:"
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:68
+msgid "Select a mailer"
+msgstr "Izvēlies pastnieku"
+
+#: src/bug-buddy.glade.h:69
 msgid "Select an action"
 msgstr "Izvēlies darbību"
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:70
 msgid "Send copy to yourself"
 msgstr "Sūtīt kopiju sev pašam"
 
-#: src/bug-buddy.glade.h:56
-msgid "Sendmail"
-msgstr "Sendmail"
+#: src/bug-buddy.glade.h:71
+msgid "Sendmail Settings"
+msgstr "Sendmail Uzstādījumi"
 
-#: src/bug-buddy.glade.h:57
+#: src/bug-buddy.glade.h:72
 msgid "Severity"
 msgstr "Svarīgums"
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:73
 msgid "Show most frequent bugs in:"
 msgstr "Parādīt visbiežākās kļūdas:"
 
-#: src/bug-buddy.glade.h:59
-msgid "Skip this step in the future"
-msgstr "Turpmāk izlaist šo soli"
+#: src/bug-buddy.glade.h:74
+msgid "Skip this configuration in the future"
+msgstr "Turpmāk izlaist šo konfigurāciju"
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:75
+msgid "Start in terminal"
+msgstr "Sākt terminālī"
+
+#: src/bug-buddy.glade.h:76
 msgid "Stop"
 msgstr "Stop"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:77
 msgid "Submit another bug"
 msgstr "Paziņot par citu kļūdu"
 
-#: src/bug-buddy.glade.h:62
+#: src/bug-buddy.glade.h:78
 msgid "Summary"
 msgstr "Kopsavilkums"
 
-#: src/bug-buddy.glade.h:63
+#: src/bug-buddy.glade.h:79
 msgid ""
 "This program will walk you through the steps for \n"
 "submitting a bug report for projects such as GNOME.\n"
 "\n"
-"These bug reports are submitted via email, so\n"
-"please specify your email address so you can be\n"
-"contacted if further information is required, or\n"
-"when a fixed version is available."
+"First, some configuration options need to be set."
 msgstr ""
 "Šī programma vedīs tevi cauri soļiem, lai\n"
 "nosūtītu kļūdu paziņojumu projektiem tādiem kā GNOME.\n"
 "\n"
-"Šie kļūdu paziņojumi tiek sūtīti izmantojot epastu, tāpēc,\n"
-"lūdzu norādi savu epasta adresi tā, lai ar tevi vēlāk varētu\n"
-"kontaktēties, ja būs nepieciešama plašāka informācija vai\n"
-"kad izlabota versija būs pieejama."
+"Vispirms, ir jauzstāda dažas konfigurācijas opcijas."
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:83
 msgid "To"
 msgstr "Kam"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:84
 msgid "To:"
 msgstr "Kam:"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:85
+msgid "Understands Netscape remote control"
+msgstr "Saprot Netscape attālināto kontroli"
+
+#: src/bug-buddy.glade.h:86
+msgid "Use HTTP Proxy"
+msgstr "Lietot HTTP Starpniekserveri"
+
+#: src/bug-buddy.glade.h:87
+msgid "Use sendmail directly"
+msgstr "Lietot sendmail tieši"
+
+#: src/bug-buddy.glade.h:88
+msgid "Use the default GNOME mailer"
+msgstr "Lietot noklusēto GNOME pasta programmu"
+
+#: src/bug-buddy.glade.h:89
+msgid "Username"
+msgstr "Lietotājvārds"
+
+#: src/bug-buddy.glade.h:90
 msgid "Version"
 msgstr "Versija"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:91
 msgid "Version installed"
 msgstr "Uzstādītā versija"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:92
 msgid "component"
 msgstr "komponents"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:93
 msgid "desc"
 msgstr "apr"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:94
+msgid "email"
+msgstr "epasts"
+
+#: src/bug-buddy.glade.h:95
 msgid "email info"
 msgstr "epasta info"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:96
 msgid "finished"
 msgstr "pabeigts"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:97
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:98
+msgid "gnome"
+msgstr "gnome"
+
+#: src/bug-buddy.glade.h:99
 msgid "intro"
 msgstr "ievads"
 
-#: src/bug-buddy.glade.h:80
+#: src/bug-buddy.glade.h:100
 msgid "mostfreq"
 msgstr "visbiežāk"
 
-#: src/bug-buddy.glade.h:81
+#: src/bug-buddy.glade.h:101
 msgid "product"
 msgstr "produkts"
 
-#: src/bug-buddy.glade.h:82
+#: src/bug-buddy.glade.h:102
+msgid "proxy"
+msgstr "starpniekserveris"
+
+#: src/bug-buddy.glade.h:103
+msgid "sendmail"
+msgstr "sendmail"
+
+#: src/bug-buddy.glade.h:104
 msgid "system"
 msgstr "sistēma"
 
-#: src/united-states-of-bug-buddy.c:48
+#: src/united-states-of-bug-buddy.c:49
 msgid "Welcome to Bug Buddy"
 msgstr "Laipni lūgti pie Blusu Drauga"
 
-#: src/united-states-of-bug-buddy.c:49
+#: src/united-states-of-bug-buddy.c:50
+msgid "HTTP Proxy Configuration"
+msgstr "HTTP Starpniekservera Konfigurācija"
+
+#: src/united-states-of-bug-buddy.c:51
+msgid "EMail Configuration"
+msgstr "EPasta Konfigurācija"
+
+#: src/united-states-of-bug-buddy.c:52
 msgid "Debugging Information"
 msgstr "Atkļūdošanas Informācija"
 
-#: src/united-states-of-bug-buddy.c:52
+#: src/united-states-of-bug-buddy.c:55
 msgid "Frequently Reported Bugs"
 msgstr "Biežāk Ziņotās Kļūdas"
 
-#: src/united-states-of-bug-buddy.c:53
+#: src/united-states-of-bug-buddy.c:56
 msgid "Bug Description"
 msgstr "Kļūdas Apraksts"
 
-#: src/united-states-of-bug-buddy.c:54
+#: src/united-states-of-bug-buddy.c:57
 msgid "System Configuration"
 msgstr "Sistēmas Konfigurācija"
 
-#: src/united-states-of-bug-buddy.c:55
+#: src/united-states-of-bug-buddy.c:58
 msgid "Submitting the Report"
 msgstr "Nosūtīt Paziņojumu"
 
-#: src/united-states-of-bug-buddy.c:56
+#: src/united-states-of-bug-buddy.c:59
 msgid "Finished!"
 msgstr "Pabeigts!"
 
-#: src/united-states-of-bug-buddy.c:103
+#: src/united-states-of-bug-buddy.c:106
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Grafiskais GNOME kļūdu paziņojumu rīks."
 
-#: src/united-states-of-bug-buddy.c:114
+#: src/united-states-of-bug-buddy.c:117
 msgid "The lame Bug Buddy web page"
 msgstr "Leimā Kļūdu Drauga tīkla lappa"
 
-#: src/united-states-of-bug-buddy.c:277
+#: src/united-states-of-bug-buddy.c:291
 msgid "Please enter your name."
 msgstr "Lūdzu ievadi savu vārdu."
 
-#: src/united-states-of-bug-buddy.c:293
+#: src/united-states-of-bug-buddy.c:307
 msgid "Please enter a valid email address."
 msgstr "Lūdzu ieraksti īstu epasta adresi."
 
-#: src/united-states-of-bug-buddy.c:310
+#: src/united-states-of-bug-buddy.c:324
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -552,16 +674,16 @@ msgstr ""
 "\n"
 "Specify a new location for sendmail?"
 
-#: src/united-states-of-bug-buddy.c:370
+#: src/united-states-of-bug-buddy.c:384
 msgid "The specified file does not exist."
 msgstr "Norādītais fails neeksistē."
 
-#: src/united-states-of-bug-buddy.c:380
+#: src/united-states-of-bug-buddy.c:394
 #, c-format
 msgid "File is of type: %s"
 msgstr "Faila tips: %s"
 
-#: src/united-states-of-bug-buddy.c:387
+#: src/united-states-of-bug-buddy.c:401
 #, c-format
 msgid ""
 "'%s' is a %s file.\n"
@@ -572,19 +694,19 @@ msgstr ""
 "\n"
 "Blusu Draugs var nosūtīt tikai teksta failus."
 
-#: src/united-states-of-bug-buddy.c:407
+#: src/united-states-of-bug-buddy.c:421
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Tev jāietver visaptverošs kļūdas paziņojuma nosaukums."
 
-#: src/united-states-of-bug-buddy.c:423
+#: src/united-states-of-bug-buddy.c:437
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Tev jāietver visaptverošs kļūdas paziņojuma apraksts."
 
-#: src/united-states-of-bug-buddy.c:446
+#: src/united-states-of-bug-buddy.c:460
 msgid "Submit this bug report now?"
 msgstr "Sūtīt šo kļūdas paziņojumu tagad?"
 
-#: src/united-states-of-bug-buddy.c:468
+#: src/united-states-of-bug-buddy.c:482
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -593,12 +715,12 @@ msgstr ""
 "Nevarēja atvērt failu: '%s'\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:483
+#: src/united-states-of-bug-buddy.c:497
 #, c-format
 msgid "about to run '%s'"
 msgstr "gatavojos palaist '%s'"
 
-#: src/united-states-of-bug-buddy.c:491
+#: src/united-states-of-bug-buddy.c:505
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -607,12 +729,12 @@ msgstr ""
 "Nevarēju palaist pasta programmu: '%s':\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:534
+#: src/united-states-of-bug-buddy.c:548
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Tavs kļūdas paziņojums tika saglabāts iekš '%s'"
 
-#: src/united-states-of-bug-buddy.c:537
+#: src/united-states-of-bug-buddy.c:551
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -627,19 +749,29 @@ msgstr ""
 "\n"
 "Paldies!"
 
-#: src/united-states-of-bug-buddy.c:593
+#: src/united-states-of-bug-buddy.c:611
 msgid "You must specify a product for your bug report."
 msgstr "Tev jānorāda produkts savā kļūdas paziņojumā."
 
-#: src/united-states-of-bug-buddy.c:610
+#: src/united-states-of-bug-buddy.c:628
 msgid "You must specify a component for your bug report."
 msgstr "Tev jānorāda komponents savā kļūdas paziņojumā."
 
-#: src/united-states-of-bug-buddy.c:624
+#: src/united-states-of-bug-buddy.c:642
 msgid "You must specify a version for your bug report."
 msgstr "Tev jānorāda versija savā kļūdas paziņojumā."
 
-#: src/united-states-of-bug-buddy.c:670
+#: src/united-states-of-bug-buddy.c:700
+msgid ""
+"Your email composer has been launched with a template bug report.\n"
+"\n"
+"Thank you for submitting this bug report."
+msgstr ""
+"Jūsu epasta komponists ir palaists ar kļūdu ziņojuma paraugu.\n"
+"\n"
+"Paldies par kļūdu ziņojuma nosūtīšanu."
+
+#: src/united-states-of-bug-buddy.c:737
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
