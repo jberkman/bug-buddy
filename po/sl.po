@@ -251,7 +251,7 @@ msgstr "Navesti morate e-po¹tni naslov prejemnika"
 
 #: src/bug-buddy.c:830
 msgid "Submit this bug report now?"
-msgstr "Oddaj to poroèilo o hro¹èu sedaj?"
+msgstr "Takoj oddaj to poroèilo o hro¹èu?"
 
 #: src/bug-buddy.c:840
 msgid "Please choose a file to save to."
