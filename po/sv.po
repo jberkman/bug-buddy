@@ -10,21 +10,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-06-12 18:14+0200\n"
+"POT-Creation-Date: 2001-06-12 16:53-0400\n"
 "PO-Revision-Date: 2001-06-12 18:36+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/bts.c:101
-msgid "Distribution"
-msgstr "Distribution"
-
-#: src/bts.c:109
-msgid "System"
-msgstr "System"
 
 #: src/bug-buddy.c:55
 msgid "Submit bug report"
@@ -142,7 +134,7 @@ msgstr ""
 "$GNOME_CRASHED_PID är föråldrat.\n"
 "Använd kommandoradsflaggan --pid istället."
 
-#: src/bug-buddy.c:578
+#: src/bug-buddy.c:581
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
@@ -151,11 +143,11 @@ msgstr ""
 "Kunde inte läsa in \"%s\".\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bugzilla.c:436
+#: src/bugzilla.c:438
 msgid "Are you sure you want to cancel this update?"
 msgstr "Är du säker på att du vill avbryta denna uppdatering?"
 
-#: src/bugzilla.c:542
+#: src/bugzilla.c:544
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -164,11 +156,11 @@ msgstr ""
 "Kunde inte öppna \"%s\".\n"
 "Försäkra dig om att Bug Buddy installerats korrekt."
 
-#: src/bugzilla.c:553
+#: src/bugzilla.c:555
 msgid "All"
 msgstr "Alla"
 
-#: src/bugzilla.c:577
+#: src/bugzilla.c:579
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -617,6 +609,12 @@ msgstr "Felrapporteringsverktyg"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Rapportera ett fel i GNOME"
+
+#~ msgid "Distribution"
+#~ msgstr "Distribution"
+
+#~ msgid "System"
+#~ msgstr "System"
 
 #~ msgid ""
 #~ "Could not open '%s'.\n"

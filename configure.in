@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 2.0.1.1)
+AM_INIT_AUTOMAKE(bug-buddy, 2.0.2)
 
 AM_MAINTAINER_MODE
 
@@ -38,14 +38,14 @@ AM_PATH_LIBGLADE(,,gnome)
 ALL_LINGUAS="az ca cs de el en_AU en_GB es fi fr ga gl hu it ja ko lt nl nn no pl pt_BR ro ru sk sl sv tr uk zh_CN.GB2312"
 AM_GNOME_GETTEXT
 
-AC_MSG_CHECKING(whether this is boc's machine)
-if test -d /debian/var/state/apt/lists; then
-    DEBIAN_ROOT="/debian"
-    AC_SUBST(DEBIAN_ROOT)
-    AC_MSG_RESULT(maybe)
-else
-    AC_MSG_RESULT(no)
-fi
+dnl AC_MSG_CHECKING(whether this is boc's machine)
+dnl if test -d /debian/var/state/apt/lists; then
+dnl    DEBIAN_ROOT="/debian"
+dnl    AC_SUBST(DEBIAN_ROOT)
+dnl    AC_MSG_RESULT(maybe)
+dnl else
+dnl    AC_MSG_RESULT(no)
+dnl fi
 
 EXTRA_GNOME_CFLAGS=`gnome-config --cflags gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
 EXTRA_GNOME_LIBS=`gnome-config   --libs   gnomeui libglade xml gdk_pixbuf gnomecanvaspixbuf vfs`
