@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
 "POT-Creation-Date: 2002-06-19 15:19-0400\n"
-"PO-Revision-Date: 2002-07-18 11:06+0200\n"
+"PO-Revision-Date: 2002-07-18 16:09+0200\n"
 "Last-Translator: Yuriy Syrota <yuri@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "Електронна адреса"
 
 #: src/bug-buddy.c:80
 msgid "EMAIL"
-msgstr "ЕПОШТА"
+msgstr "Е-ПОШТА"
 
 #: src/bug-buddy.c:81
 msgid "Package containing the program"
@@ -215,10 +215,10 @@ msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Не вдалось віднайти зображення: %s (%d)\n"
 
 #: src/bug-buddy.c:794
-#, fuzzy, c-format
+#, c-format
 msgid "Bug Buddy could not load its user interface file (%s).\n"
 "Please make sure Bug Buddy was installed correctly."
-msgstr "Не вдалося завантажити \"%s\".\n"
+msgstr "Не вдалося завантажити файл інтерфейсу користувача (%s).\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
 #: src/bug-buddy.desktop.in.h:1
@@ -239,11 +239,11 @@ msgstr "<span size=\"xx-large\">Bug Buddy</span>"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
-msgstr ""
+msgstr "Додатково"
 
 #: src/bug-buddy.glade.h:4
 msgid "Assbarn Phenomenon"
-msgstr ""
+msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
 msgid "Binary file:"
@@ -260,6 +260,9 @@ msgid ""
 "The correct options should have been selected for you automatically.\n"
 "For more information, please click the Help button below."
 msgstr ""
+"Програма Bug Buddy може відіслати у вашому сповіщенні про помилку налагоджувальну інформацію.\n"
+"Допустимі параметри мають бути вибрані для вас автоматично.\n"
+"Для додаткової інформації натисніть, будь ласка, кнопку \"Довідка\"."
 
 #: src/bug-buddy.glade.h:10
 msgid ""
@@ -268,10 +271,14 @@ msgid ""
 "If you choose to use the default GNOME mailer, this setting\n"
 "will be shared with some other GNOME applications."
 msgstr ""
+"Для сповіщення про помилки, програма Bug Buddy використовує електронну пошту.\n"
+"Виберіть спосіб, яким програма Bug Buddy відсилатиме пошту.\n"
+"Якщо ви виберете звичну поштову програму GNOME, то цей вибір буде\n"
+"розділено з деякими іншими додатками GNOME."
 
 #: src/bug-buddy.glade.h:14
 msgid "Bug tracking system"
-msgstr ""
+msgstr "Система відслідковування помилок"
 
 #: src/bug-buddy.glade.h:15
 msgid "Cc"
@@ -389,9 +396,8 @@ msgid "Severity"
 msgstr "Важливість"
 
 #: src/bug-buddy.glade.h:44
-#, fuzzy
 msgid "Show _Debugging Details"
-msgstr "Налагоджувальна інформація"
+msgstr "Показувати подробиці _налагодження"
 
 #: src/bug-buddy.glade.h:45
 msgid "Show most frequent bugs in:"
@@ -508,29 +514,35 @@ msgid "Component"
 msgstr "Компонент"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
-msgstr "Не вдалося відкрити \"%s\".\n"
-"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
+msgstr ""
+"Не вдалося відкрити \"%s\".\n"
+"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно.\n"
+"\n"
+"Програма Bug Buddy зараз завершиться."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Все"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
 "Please make sure Bug Buddy was installed correctly.\n"
 "\n"
 "Bug Buddy will now quit."
-msgstr "Не вдалося завантажити \"%s\".\n"
-"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
+msgstr ""
+"Не не вдалось знайти ніякої інформації про те, куди повідомляти про помилку.\n"
+"\n"
+"Будь ласка, переконайтесь, що Bug Buddy встановлено коректно.\n"
+"\n"
+"Програма Bug Buddy зараз завершиться."
 
 #: src/cell-renderer-uri.c:145
 msgid "URI"
@@ -670,6 +682,9 @@ msgid ""
 "\n"
 "Bug Buddy can only submit plaintext (text/*) files."
 msgstr ""
+"\"%s\" є файлом %s.\n"
+"\n"
+"Програма Bug Buddy може відсилати лише текстові файли (text/*)."
 
 #: src/united-states-of-bug-buddy.c:458
 msgid "You must include a comprehensible subject line in your bug report."
@@ -685,7 +700,7 @@ msgstr "Відіслати цей звіт зараз?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "Віді_слати"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
@@ -728,7 +743,7 @@ msgstr ""
 
 #: src/united-states-of-bug-buddy.c:644
 msgid "Since Bug Buddy doesn't know about the product you wish to submit a bug report in, you will have to manually address the bug report."
-msgstr ""
+msgstr "Через те, що програма Bug Buddy нічого не знає про програму, до якої ви хочете відіслати сповіщення про помилку, вам необхідно вручну вказати адресу."
 
 #: src/united-states-of-bug-buddy.c:665
 msgid "You must specify a product for your bug report."
@@ -748,6 +763,9 @@ msgid ""
 "\n"
 "Thank you for submitting this bug report."
 msgstr ""
+"Ваш поштар було запущено. Знайдіть його і відішліть повідомлення.\n"
+"\n"
+"Дякуємо, за повідомлення про помилку."
 
 #: src/united-states-of-bug-buddy.c:812
 msgid "Are you sure you want to cancel\n"
