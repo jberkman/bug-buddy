@@ -1,11 +1,12 @@
 # Swedish translation of bug-buddy.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Richard Hult <rhult@hem.passagen.se>, 1999.
+# Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-05-02 16:18+0200\n"
+"POT-Creation-Date: 2000-05-06 18:42+0200\n"
 "PO-Revision-Date: 1999-12-30 21:06+01:00\n"
 "Last-Translator: Andreas Hyden <a.hyden@cyberpoint.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -246,7 +247,7 @@ msgstr ""
 "Filen '%s' existerer redan.\n"
 "Vill du skriva över den filen?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:937
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -255,7 +256,7 @@ msgstr ""
 "Kunde inte öppna '%s'.\n"
 "Var vänlig försäkra dig om att bug-buddy installerats korrekt."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1044
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -263,7 +264,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME är ur bruk.\n"
 "Var vänlig använd kommandoradsflaggan --appname istället."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1057
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -271,7 +272,7 @@ msgstr ""
 "$GNOME_CRASHED_PID är ur bruk.\n"
 "Var vänlig använd kommandoradsflaggan --pid i stället."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1189
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -397,7 +398,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Feluppföljningssystem "
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Paket"
 
@@ -431,46 +432,50 @@ msgid "Description"
 msgstr "Beskrivning"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr "Vänligen skriv din felrapport i engelska, om möjligt."
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Kort ämne för felrapporten"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Komplett beskrivning av felet, och hur man upprepar det"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Inkludera en textfil"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Felsökningsinformation"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Välj binärfil för det kraschade programmet"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binär"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Process-ID"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Core-fil"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Välj en core-fil"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Sammanställer felsökningsinformation"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -478,51 +483,51 @@ msgstr ""
 "Var vänlig vänta mendan\n"
 "felsökningsinformation insamlas..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Systemkonfiguration"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Var vänlig kontrollera att informationen är riktig"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Installerad version"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Gå automatiskt till nästa sida när aktuell sida är klar"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Skicka felrapporten"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "Till"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Skicka en kopia till dig själv"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Spara rapporten till..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Innehåll"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL:en ser oss."
 
@@ -531,6 +536,7 @@ msgid "Unable to open pipe"
 msgstr "Kunde inte öppna rör"
 
 #: src/util.c:72
+#, c-format
 msgid "Could not run '%s'."
 msgstr "Kunde inte köra \"%s\"."
 
