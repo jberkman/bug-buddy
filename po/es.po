@@ -142,9 +142,8 @@ msgstr ""
 "Asegúrese que Bug Buddy se instaló correctamente."
 
 #: src/bugzilla.c:585
-#, fuzzy
 msgid "ID"
-msgstr "PID"
+msgstr "ID"
 
 #: src/bug-buddy.glade.h:51 src/bugzilla.c:599 src/bugzilla.c:639
 #: src/united-states-of-bug-buddy.c:50
@@ -235,10 +234,9 @@ msgid "Assbarn Phenomenon"
 msgstr "Assbarn Phenomenon"
 
 #: src/bug-buddy.glade.h:5
-#, fuzzy
 msgid "Automatically continue to the next step when debugging is complete"
 msgstr ""
-"Ir automáticamente al siguiente paso cuando la depuración esté completa"
+"Ir automáticamente al siguiente paso cuando se complete la depuración"
 
 #: src/bug-buddy.glade.h:6
 msgid "Automatically go to next page when complete"
@@ -360,6 +358,9 @@ msgid ""
 "reported bugs.\n"
 "If the bug is already reported, please do not report it again."
 msgstr ""
+"Por favor emplee un minuto en comprobar si su bug es uno de los reportados más "
+"frecuentemente.\n"
+"Si el bug ya ha sido reportado, por favor no lo reporte de nuevo."
 
 #: src/bug-buddy.glade.h:47
 msgid ""
@@ -404,7 +405,7 @@ msgstr "Severidad"
 
 #: src/bug-buddy.glade.h:58
 msgid "Show most frequent bugs in:"
-msgstr ""
+msgstr "Mostrar los bugs más frecuentes en:"
 
 #: src/bug-buddy.glade.h:59
 msgid "Skip this step in the future"
@@ -482,7 +483,7 @@ msgstr "introducción"
 
 #: src/bug-buddy.glade.h:80
 msgid "mostfreq"
-msgstr ""
+msgstr "más frecuentes"
 
 #: src/bug-buddy.glade.h:81
 msgid "product"
@@ -502,7 +503,7 @@ msgstr "Información de Depuración"
 
 #: src/united-states-of-bug-buddy.c:52
 msgid "Frequently Reported Bugs"
-msgstr ""
+msgstr "Bugs reportados frecuentemente"
 
 #: src/united-states-of-bug-buddy.c:53
 msgid "Bug Description"
