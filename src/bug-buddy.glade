@@ -28,6 +28,7 @@
 <widget>
   <class>GtkWindow</class>
   <name>druid_window</name>
+  <visible>False</visible>
   <title>bug-buddy</title>
   <type>GTK_WINDOW_TOPLEVEL</type>
   <position>GTK_WIN_POS_NONE</position>

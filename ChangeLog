@@ -1,3 +1,11 @@
+1999-10-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.c (main): show the window before gtk_main()
+	(list_data): add slackware detection
+
+	# src/bug-buddy.glade: make the main window not visible by default
+	(so we can do the init before the gui shows)
+
 1999-10-29  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.c (on_contact_page_next): mark a string for

@@ -115,10 +115,17 @@ struct {
 
 static ListData list_data[] = {
 	{ N_("Operating System"), { "uname -a" } },
-	{ N_("Distribution"),  
-	  { "( [ -f /etc/debian_version ] && cat /etc/debian_version) ||"
-	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) ||"
-	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) ||"
+	{ N_("Distribution"),
+	  { "( [ -f /etc/slackware-version ] && echo \"Slackware\") || "
+	    "( [ -f /etc/debian_version ] && echo \"Debian\") || "
+	    "( [ -f /etc/redhat-release ] && echo \"Red Hat\") || "
+	    "( [ -f /etc/SuSE-release ]   && echo \"SuSE\") || "
+	    "echo \"\"" } },
+	{ N_("Distribution version"),
+	  { "( [ -f /etc/slackware-version ] && cat /etc/slackware-version) || "
+	    "( [ -f /etc/debian_version ] && cat /etc/debian_version) || "
+	    "( [ -f /etc/redhat-release ] && cat /etc/redhat-release) || "
+	    "( [ -f /etc/SuSE-release ]   && head -1 /etc/SuSE-release) || "
 	    "echo \"\"" } },
 	{ N_("C library"), { "rpm -q glibc",  "rpm -q libc" } },
 	{ N_("C Compiler"), { "gcc --version", "cc -V" } },
@@ -594,6 +601,7 @@ init_ui (GladeXML *xml)
 int
 main (int argc, char *argv[])
 {
+	GtkWidget *window;
 	gchar *xml_path;
 
 	memset (&druid_data, 0, sizeof (druid_data));
@@ -638,6 +646,9 @@ main (int argc, char *argv[])
 	g_free (xml_path);
 
 	init_ui (druid_data.xml);
+
+	window = glade_xml_get_widget (druid_data.xml, "druid_window");
+	gtk_widget_show (window);
 
 	gtk_main ();
 
