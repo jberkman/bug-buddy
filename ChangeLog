@@ -1,5 +1,10 @@
 1999-11-06  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.mime: better regexp
+
+	* src/gdb-buddy.c (handle_gdb_input): don't print a line of
+	garbage at the end
+
 	* pixmaps/bug-anim.png: new file
 	
 	* pixmaps/Makefile.am (pixmap_DATA): add bug-anim.png

@@ -83,7 +83,7 @@ handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 	char buf[1024];
 	FILE *fp = data;
 
-	if (feof (fp)) {
+	if (feof (fp) || !fgets (buf, 1024, fp)) {
 		fclose (fp);
 		gdk_input_remove (input);
 		gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
@@ -91,8 +91,6 @@ handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 		gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
 		return;
 	}
-
-	fgets (buf, 1024, fp);
 
 	gtk_text_set_point (GTK_TEXT (druid_data.gdb_text),
 			    gtk_text_get_length (GTK_TEXT (druid_data.gdb_text)));
