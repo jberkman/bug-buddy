@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
 "POT-Creation-Date: 2000-04-29 17:02-0400\n"
-"PO-Revision-Date: 2000-04-18 17:33+04:00\n"
+"PO-Revision-Date: 2000-05-03 11:13+00:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -13,13 +13,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8 bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Описание"
+msgstr "Дистрибутив"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -139,17 +138,17 @@ msgstr "core-файл программы"
 
 #: src/bug-buddy.c:365
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Указанный файл не существует."
 
 #: src/bug-buddy.c:370
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Файл типа: %s"
 
 #: src/bug-buddy.c:373
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "'%s' выглядит не как текстовый файл."
 
 #: src/bug-buddy.c:387
 msgid ""
@@ -260,12 +259,16 @@ msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
+"$GNOME_CRASHED_APPNAME больше не используется.\n"
+"Используйте пожалуйста вместо этого аргумент командной строки --appname."
 
 #: src/bug-buddy.c:1054
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
+"$GNOME_CRASHED_PID больше не используется.\n"
+"Используйте пожалуйста вместо этого аргумент командной строки --pid."
 
 #: src/bug-buddy.c:1181
 #, c-format
@@ -519,19 +522,17 @@ msgstr "Резюме"
 
 #: src/glade-strings.c:61
 msgid "The GEGL is watching."
-msgstr ""
+msgstr "GEGL запущен."
 
 #: src/util.c:60
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "Не удалось открыть файл core: \"%s\""
+msgstr "Не удалось открыть канал"
 
 #: src/util.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Could not run '%s'."
-msgstr "о запуске '%s'"
+msgstr "Не удалось запустить '%s'."
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Ошибка при чтении... прервание"
+msgstr "Ошибка при чтении..."
