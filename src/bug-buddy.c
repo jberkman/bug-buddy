@@ -778,12 +778,12 @@ init_ui ()
 
 	if (!p)
 		p = g_strdup ("general");
-
+#if 0
 	w = glade_xml_get_widget (druid_data.xml, 
 				  "package_entry");
 	gtk_entry_set_text (GTK_ENTRY (w), p);
 	g_free (p);
-
+#endif
 	w = CRASHED_PID;
 	s = popt_data.pid;
 	if (!s) {
