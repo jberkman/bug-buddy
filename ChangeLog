@@ -1,5 +1,15 @@
 1999-12-04  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/GNOME.bts:
+	* src/Debian.bts: cleanups; in <package> use attributes
+
+	* src/Makefile.am: don't depend on ../debbugs/Maintainers... yet
+
+	* src/bts.c:
+	* src/bts-debian.c:
+	* src/bug-buddy.c: optimize stuff a little, and don't leak
+	so much memory
+
 	* configure.in: find debian root dir
 	* src/*: Initial support for supporting multiple BTS's
 	Currently Debian and GNOME are supported.

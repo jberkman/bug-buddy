@@ -59,6 +59,7 @@ debian_bts_init (xmlNodePtr node)
 	GtkWidget *w;
 	char *line, *file;
 	int fd;
+	GList *gitem = NULL;
 
 	g_message ("Debian BTS init()");
 
@@ -84,13 +85,14 @@ debian_bts_init (xmlNodePtr node)
 				continue;
 			}
 			while ((line = get_line_from_fd (fd))) {
-				debian_data.packages = g_list_prepend (
-					debian_data.packages, line);
+				w = gtk_list_item_new_with_label (line);
+				gtk_widget_show (w);
+				gitem = g_list_prepend (gitem, w);
+				g_free (line);
 			}
-			close (fd);
-			gtk_combo_set_popdown_strings (
-				GTK_COMBO (GET_WIDGET ("package_entry2")),
-				debian_data.packages);
+			w = GTK_COMBO (GET_WIDGET ("package_entry2"))->list;
+			gtk_list_clear_items (GTK_LIST (w), 0, -1);
+			gtk_list_prepend_items (GTK_LIST (w), gitem);
 		} else {
 			g_message ("unknown node: %s", cur->name);
 		}

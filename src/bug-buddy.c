@@ -94,15 +94,6 @@ struct {
 
 DruidData druid_data;
 
-static Distribution distros[] = {
-	{ "Slackware", "/etc/slackware-version", &debian_phy },
-	{ "Debian",    "/etc/debian_version",    &debian_phy },
-	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
-	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
-	{ "Mandrake",  "/etc/mandrake-release",  &redhat_phy },
-	{ NULL }
-};
-
 static const struct poptOption options[] = {
 	{ "name",        0, POPT_ARG_STRING, &popt_data.name,        0, N_("Contact's name"),          N_("NAME") },
 	{ "email",       0, POPT_ARG_STRING, &popt_data.email,       0, N_("Contact's email address"), N_("EMAIL") },
@@ -337,83 +328,6 @@ on_the_druid_cancel (GtkWidget *w)
 	return FALSE;
 }
 
-static void
-get_version_from_command (Package *package, GtkWidget *clist, char *cmd)
-{
-	char *row[3] = { NULL };
-
-	g_return_if_fail (!package->version);
-	g_return_if_fail (cmd);
-
-	package->version = get_line_from_command (cmd);
-	if (!package->version)
-		return;
-
-	row[0] = _(package->name);
-	row[1] = package->version;
-
-	gtk_clist_append (GTK_CLIST (clist), row);
-}
-
-static void
-get_version_from_pre (gpointer data, gpointer udata)
-{
-	Package *package = data;
-	if (package->version || !package->pre_command)
-		return;
-	get_version_from_command (package, GTK_WIDGET (udata), 
-				  package->pre_command);
-}
-
-static void
-get_version_from_post (gpointer data, gpointer udata)
-{
-	Package *package = data;
-	if (package->version || !package->post_command)
-		return;
-	get_version_from_command (package, GTK_WIDGET (udata), 
-				  package->post_command);
-}
-
-static void
-update_das_clist ()
-{
-	GtkWidget *w;
-	int i;
-	char *row[3] = { NULL };
-
-        /* system config page */
-
-	w = VERSION_LIST;
-	gtk_clist_clear (GTK_CLIST (w));
-
-	for (i = 0; distros[i].name; i++) {
-		if (!g_file_exists (distros[i].version_file))
-			continue;
-		row[0] = _("Distribution");
-		row[1] = distros[i].phylum->version (&distros[i]);
-		gtk_clist_append (GTK_CLIST (w), row);
-		g_free (row[1]);
-		druid_data.distro = &distros[i];
-		break;
-	}
-
-	row[0] = N_("System");
-	row[1] = get_line_from_command ("uname -a");
-	gtk_clist_append (GTK_CLIST (w), row);
-	g_free (row[1]);
-
-	if (!druid_data.packages)
-		return;
-
-	g_slist_foreach (druid_data.packages, get_version_from_pre, w);
-
-	if (druid_data.distro)
-		druid_data.distro->phylum->packager (druid_data.packages);
-
-	g_slist_foreach (druid_data.packages, get_version_from_post, w);
-}
-
 gboolean
 on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 {
@@ -465,8 +379,6 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 
 	if (load_bts_xml ())
 		return TRUE;
-
-	update_das_clist ();
 
 	return FALSE;
 
@@ -939,41 +851,6 @@ init_ui ()
 		gtk_widget_hide (segv);
 		break;
 	}
-
-#if 0
-	/* system config page */
-	w = VERSION_LIST;
-
-	for (i = 0; distros[i].name; i++) {
-		if (!g_file_exists (distros[i].version_file))
-			continue;
-		row[0] = _("Distribution");
-		row[1] = distros[i].phylum->version (&distros[i]);
-		gtk_clist_append (GTK_CLIST (w), row);
-		druid_data.distro = &distros[i];
-		break;
-	}
-
-	/* so we have like 3 passages, but it is better */
-	for (i = 0; package[i].name; i++) {
-		if (!package[i].pre_command)
-			continue;
-		package[i].version = get_line_from_command (package[i].pre_command);
-	}
-
-	if (druid_data.distro)
-		druid_data.distro->phylum->packager (package);
-
-	for (i = 0; package[i].name; i++) {
-		if (!package[i].version &&
-		    package[i].post_command)
-			package[i].version = 
-				get_line_from_command (package[i].post_command);
-		row[0] = _(package[i].name);
-		row[1] = package[i].version;
-		gtk_clist_append (GTK_CLIST (w), row);
-	}
-#endif
 
 	w = glade_xml_get_widget (druid_data.xml, "about_button");
 	gtk_signal_connect (GTK_OBJECT (w), "clicked",

@@ -20,6 +20,7 @@ bug_buddy_SOURCES = \
 	distro-debian.c	\
 	distro-redhat.c	\
 	gdb-buddy.c	\
+	glade-druid.h	\
 	util.c		\
 	util.h
 
@@ -49,7 +50,7 @@ debian-packages: Makefile.am
 	grep -h ^Package $(DEBIAN_ROOT)/var/state/apt/lists/*_Packages | \
 	sort -r | awk '{ print $$2 }' > debian-packages
 
-gnome-packages: Makefile.am $(top_srcdir)/debbugs/Maintainers
+gnome-packages: Makefile.am
 	sort -r $(top_srcdir)/debbugs/Maintainers | \
 	awk '{ print $$1 }' > gnome-packages
 
@@ -72,5 +73,6 @@ EXTRA_DIST = \
 	glade-strings.c	\
 	$(buddy_DATA)	\
 	$(utils_DATA)	\
+	$(xml_DATA)	\
 	bug-buddy.mime	\
 	bug-buddy.keys.in

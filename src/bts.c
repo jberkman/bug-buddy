@@ -29,7 +29,19 @@
 
 #include "bug-buddy.h"
 #include "util.h"
+#include "distro.h"
 #include "bts.h"
+#include "glade-druid.h"
+
+static Distribution distros[] = {
+	{ "Slackware", "/etc/slackware-version", &debian_phy },
+	{ "Debian",    "/etc/debian_version",    &debian_phy },
+	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
+	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
+	{ "Mandrake",  "/etc/mandrake-release",  &redhat_phy },
+	{ NULL }
+};
+
 
 static void
 free_package_from_node (gpointer data, gpointer udata)
@@ -50,43 +62,110 @@ free_package_from_node (gpointer data, gpointer udata)
 static Package *
 make_package_from_node (xmlNodePtr node)
 {
-	xmlNodePtr chile;
 	Package *package = g_new0 (Package, 1);
 
 	package->name = xmlGetProp (node, "name");
 	g_message ("Loading package %s...", package->name);
-	chile = node->childs;
-	while (chile) {
-		switch (chile->name[0]) {
-		case 't':
-			if (strcmp ("try", chile->name)) break;
-			package->pre_command = xmlNodeGetContent (chile);
-			break;
-		case 'l':
-			if (strcmp ("last", chile->name)) break;
-			package->post_command = xmlNodeGetContent (chile);
-			break;
-		case 'r':
-			if (strcmp ("rpm", chile->name)) break;
-			package->rpm = xmlNodeGetContent (chile);
-			break;
-		case 'd':
-			if (strcmp ("deb", chile->name)) break;
-			package->deb = xmlNodeGetContent (chile);
-			break;
-		}
-		chile = chile->next;
-	}
+
+	package->pre_command = xmlGetProp (node, "pre");
+	package->rpm = xmlGetProp  (node, "rpm");
+	package->deb = xmlGetProp (node, "deb");
+	package->post_command = xmlGetProp (node, "post");
+
 	return package;
+}
+
+static void
+get_version_from_command (Package *package, GtkWidget *clist, char *cmd)
+{
+	char *row[3] = { NULL };
+
+	g_return_if_fail (!package->version);
+	g_return_if_fail (cmd);
+
+	package->version = get_line_from_command (cmd);
+	if (!package->version)
+		return;
+
+	row[0] = _(package->name);
+	row[1] = package->version;
+
+	gtk_clist_append (GTK_CLIST (clist), row);
+}
+
+static void
+get_version_from_pre (gpointer data, gpointer udata)
+{
+	Package *package = data;
+	if (package->version || !package->pre_command)
+		return;
+	get_version_from_command (package, GTK_WIDGET (udata), 
+				  package->pre_command);
+}
+
+static void
+get_version_from_post (gpointer data, gpointer udata)
+{
+	Package *package = data;
+	if (package->version || !package->post_command)
+		return;
+	get_version_from_command (package, GTK_WIDGET (udata), 
+				  package->post_command);
+}
+
+static void
+update_das_clist ()
+{
+	GtkWidget *w;
+	int i;
+	char *row[3] = { NULL };
+
+        /* system config page */
+
+	w = VERSION_LIST;
+	gtk_clist_clear (GTK_CLIST (w));
+
+	for (i = 0; distros[i].name; i++) {
+		if (!g_file_exists (distros[i].version_file))
+			continue;
+		row[0] = _("Distribution");
+		row[1] = distros[i].phylum->version (&distros[i]);
+		gtk_clist_append (GTK_CLIST (w), row);
+		g_free (row[1]);
+		druid_data.distro = &distros[i];
+		break;
+	}
+
+	row[0] = N_("System");
+	row[1] = get_line_from_command ("uname -a");
+	gtk_clist_append (GTK_CLIST (w), row);
+	g_free (row[1]);
+
+	if (!druid_data.packages)
+		return;
+
+	g_slist_foreach (druid_data.packages, get_version_from_pre, w);
+
+	if (druid_data.distro)
+		druid_data.distro->phylum->packager (druid_data.packages);
+
+	g_slist_foreach (druid_data.packages, get_version_from_post, w);
 }
 
 gboolean
 load_bts_xml ()
 {
+	static char *last_file;
 	xmlDocPtr doc;
-	xmlNodePtr cur;
+	xmlNodePtr cur, cur2;
 	char *s, *file;
 
+	g_return_val_if_fail (druid_data.project, TRUE);
+	if (last_file && !strcmp (last_file, druid_data.project)) {
+		g_message ("not reloading everything...");
+		return FALSE;
+	}
+	
 	if (druid_data.bts) {
 		druid_data.bts->denit ();
 		druid_data.bts = NULL;
@@ -100,6 +179,9 @@ load_bts_xml ()
 		druid_data.packages = NULL;
 	}
 
+	g_free (last_file);
+	last_file = g_strdup (druid_data.project);
+
 	file = g_strconcat (BUDDY_DATADIR "/xml/", druid_data.project, NULL);
 	doc = xmlParseFile (file);
 	if (!doc || !doc->root || !doc->root->childs) {
@@ -111,15 +193,26 @@ load_bts_xml ()
 	cur = doc->root->childs;
 	while (cur) {
 		g_message ("Node: %s", cur->name);
-		if (!strcmp (cur->name, "bts")) {
+		switch (cur->name[0]) {
+		case 'b':
+			if (strcmp (cur->name, "bts"))
+				break;
 			s = xmlGetProp (cur, "name");
-			if (!strcmp (s, "debian"))
+			switch (s[0]) {
+			case 'd':
+				if (strcmp (s, "debian"))
+					break;
 				druid_data.bts = &debian_bts;
+				break;
+			}
 			xmlFree (s);
 			if (druid_data.bts)
 				druid_data.bts->init (cur);
-		} else if (!strcmp (cur->name, "version-stuff")) {
-			xmlNodePtr cur2 = cur->childs;
+			break;
+		case 'v':
+			if (strcmp (cur->name, "version-stuff"))
+				break;
+			cur2 = cur->childs;
 			while (cur2) {
 				g_message ("Subnode: %s", cur2->name);
 				if (strcmp (cur2->name, "package"))
@@ -129,9 +222,13 @@ load_bts_xml ()
 					make_package_from_node (cur2));
 				cur2 = cur2->next;
 			}
+			break;
 		}
 		cur = cur->next;
 	}
 	xmlFreeDoc (doc);
-	return 0;
+
+	update_das_clist ();
+
+	return FALSE;
 }
