@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=bug-buddy
+Name[no]=feil-kompis
 Comment=Report a bug in GNOME
+Comment[no]=Rapporter en feil i GNOME
 Exec=bug-buddy
 Icon=bug-buddy.png
 Terminal=0
