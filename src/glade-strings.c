@@ -46,7 +46,8 @@ gchar *s = N_("Process ID");
 gchar *s = N_("Application Core Dump");
 gchar *s = N_("Enter the filename of the core dump");
 gchar *s = N_("Debugging Information");
-gchar *s = N_("Please wait while bug-buddy collects debugging info...");
+gchar *s = N_("Please wait while bug-buddy\n"
+              "collects debugging info...");
 gchar *s = N_("Action");
 gchar *s = N_("Choose the action you wish to take");
 gchar *s = N_("Submit bug report");

@@ -24,6 +24,73 @@
 
 #include "bug-buddy.h"
 
+void
+start_gdb ()
+{
+	static gchar *old_app = NULL;
+	static gchar *old_extra = NULL;
+	static CrashType old_type = -1;
+	
+	gchar *app = NULL, *extra = NULL;
+
+	g_message (_("obtaining stack trace..."));
+	
+	switch (druid_data.crash_type) {
+	case CRASH_DIALOG:
+		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
+		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.pid));
+		if (druid_data.explicit_dirty ||
+		    (old_type != CRASH_DIALOG) ||
+		    (!old_app || strcmp (app, old_app)) ||
+		    (!old_extra || strcmp (extra, old_extra))) {
+			get_trace_from_pair (app, extra);
+		}
+		break;
+	case CRASH_CORE:
+		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.core_file));
+		if (druid_data.explicit_dirty ||
+		    (old_type != CRASH_CORE) ||
+		    (!old_extra || strcmp (extra, old_extra))) {
+			get_trace_from_core (extra);
+		}
+		break;
+	default:
+		g_assert_not_reached ();
+		break;
+	}
+
+	g_free (old_extra);
+	old_extra = g_strdup (extra);
+
+	g_free (old_app);
+	old_app = g_strdup (app);
+
+	old_type = druid_data.crash_type;
+}
+
+void
+stop_gdb ()
+{
+	int status;
+	if (!druid_data.fp) {
+		g_message (_("gdb has exited"));
+		return;
+	}
+
+	status = pclose (druid_data.fp);
+	g_message (_("Subprocess exited with status %d"), status);
+	gdk_input_remove (druid_data.input);
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
+					   TRUE, TRUE, TRUE);
+	gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
+	druid_data.fp = NULL;
+	druid_data.input = 0;
+	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), FALSE);
+	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
+				  TRUE);
+	return;
+}
+
 void 
 get_trace_from_core (const gchar *core_file)
 {
@@ -77,21 +144,19 @@ get_trace_from_core (const gchar *core_file)
 	g_free (binary);
 }
 
-static int input;
-
 static void
 handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
 {	
 	char buf[1024];
-	FILE *fp = data;
+	FILE *fp = druid_data.fp;
+
+	if (!fp) {
+		g_warning (_("fp is NULL, not reading input"));
+		return;
+	}
 
 	if (feof (fp) || !fgets (buf, 1024, fp)) {
-		int retval = pclose (fp);
-		g_message (_("subprocess exited with status %d\n"), retval);
-		gdk_input_remove (input);
-		gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
-						   TRUE, TRUE, TRUE);
-		gnome_animator_stop (GNOME_ANIMATOR (druid_data.gdb_anim));
+		stop_gdb ();
 		return;
 	}
 
@@ -108,15 +173,15 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	gchar *cmd_buf;
 	gchar *cmd_file;
-	FILE *fp;
 
 	if (!app || !extra || !app[0] || !extra[0])
 		return;
 
 	cmd_file = BUDDY_DATADIR "/gdb-cmd";
 	if (!cmd_file) {
-	        GtkWidget *d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
-						     "Please try reinstalling bug-buddy."));
+	        GtkWidget *d;
+		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
+					  "Please try reinstalling bug-buddy."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return;
 	}
@@ -125,10 +190,10 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 				   cmd_file, app, extra);
 
 	g_message ("about to run: %s", cmd_buf);
-	fp = popen (cmd_buf, "r");
+	druid_data.fp = popen (cmd_buf, "r");
 	g_free (cmd_buf);
 
-	if (!fp) {
+	if (!druid_data.fp) {
 		gchar *s = g_strdup_printf (_("Unable to start '%s'.\n"), cmd_buf);
 		GtkWidget *d = gnome_error_dialog (s);
 		g_free (s);
@@ -140,8 +205,13 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid_data.the_druid),
 					   FALSE, FALSE, TRUE);
 	gnome_animator_start (GNOME_ANIMATOR (druid_data.gdb_anim));
-	input = gdk_input_add (fileno (fp), GDK_INPUT_READ,
-			       handle_gdb_input, fp);
+	druid_data.input = gdk_input_add (fileno (druid_data.fp), GDK_INPUT_READ,
+					  handle_gdb_input, druid_data.fp);
+	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.stop_button), TRUE);
+	gtk_widget_set_sensitive (GTK_WIDGET (druid_data.refresh_button),
+				  FALSE);
+
+	druid_data.explicit_dirty = FALSE;
 }
 
 

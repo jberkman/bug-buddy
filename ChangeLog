@@ -1,5 +1,10 @@
 1999-11-14  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/gdb-buddy.c: 
+	* src/bug-buddy.glade:
+	* src/bug-buddy.[ch]: add stop/refresh button to the
+	less page, and code to support this
+
 	* src/bug-buddy.c: code clean up
 	(get_data_from_command): remove extra \n's and add _()'s
 

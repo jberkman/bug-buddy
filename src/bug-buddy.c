@@ -32,6 +32,7 @@ gboolean on_attach_page_next  (GtkWidget *, GtkWidget *);
 gboolean on_core_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
 gboolean on_less_page_back    (GtkWidget *, GtkWidget *);
+gboolean on_less_page_next    (GtkWidget *, GtkWidget *);
 gboolean on_misc_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_the_druid_cancel  (GtkWidget *);
 gboolean on_complete_page_prepare (GtkWidget *, GtkWidget *);
@@ -48,6 +49,8 @@ gboolean on_action_page_next  (GtkWidget *page, GtkWidget *druid);
 gboolean on_action_page_back  (GtkWidget *page, GtkWidget *druid);
 GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
 		       gchar *string2, gint int1, gint int2);
+GtkWidget * make_pixmap_button (gchar *widget_name, gchar *string1, 
+				gchar *string2, gint int1, gint int2);
 
 extern const char *packages[];
 
@@ -246,48 +249,34 @@ on_core_page_back (GtkWidget *page, GtkWidget *druid)
 	return TRUE;
 }
 
+static void
+on_refresh_button_clicked (GtkWidget *w, gpointer data)
+{
+	druid_data.explicit_dirty = TRUE;
+	start_gdb ();
+}
+
 gboolean
 on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 {
-	static gchar *old_app = NULL;
-	static gchar *old_extra = NULL;
-	static CrashType old_type = -1;
-	
-	gchar *app = NULL, *extra = NULL;
-
-	g_message (_("obtaining stack trace..."));
-	
-	switch (druid_data.crash_type) {
-	case CRASH_DIALOG:
-		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
-		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.pid));
-		if ((old_type != CRASH_DIALOG) ||
-		    (!old_app || strcmp (app, old_app)) ||
-		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_pair (app, extra);
-		}
-		break;
-	case CRASH_CORE:
-		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.core_file));
-		if ((old_type != CRASH_CORE) ||
-		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_core (extra);
-		}
-		break;
-	default:
-		g_assert_not_reached ();
-		break;
-	}
-
-	g_free (old_extra);
-	old_extra = g_strdup (extra);
-
-	g_free (old_app);
-	old_app = g_strdup (app);
-
-	old_type = druid_data.crash_type;
-
+	start_gdb ();
 	return FALSE;
+}
+
+static void
+on_stop_button_clicked (GtkWidget *button, gpointer data)
+{
+	GtkWidget *w;
+	if (!druid_data.fp)
+		return;
+
+	w = gnome_question_dialog (_("gdb has not exited.  Kill this process?"),
+				   NULL, NULL);
+
+	if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (w))) {
+		stop_gdb ();
+		druid_data.explicit_dirty = TRUE;
+	}
 }
 
 gboolean
@@ -633,6 +622,22 @@ set_bug_class (GtkWidget *w, gpointer data)
 }
 
 GtkWidget *
+make_pixmap_button (gchar *widget_name, gchar *text, 
+		    gchar *s2, int stop, int i2)
+{
+	GtkWidget *p, *w;
+	char *type = stop 
+		? GNOME_STOCK_PIXMAP_STOP
+		: GNOME_STOCK_PIXMAP_REFRESH;
+
+	p = gnome_stock_pixmap_widget (NULL, type);
+	w = gnome_pixmap_button (p, text);
+	GTK_WIDGET_SET_FLAGS (w, GTK_CAN_DEFAULT);
+	gtk_container_set_border_width (GTK_CONTAINER (w), GNOME_PAD_SMALL);
+	return w;
+}
+
+GtkWidget *
 make_anim (gchar *widget_name, gchar *imgname, 
 	   gchar *string2, gint size, gint freq)
 {
@@ -862,6 +867,20 @@ init_ui ()
 	}
 
 	/* less page */
+	druid_data.stop_button = w = 
+		glade_xml_get_widget (druid_data.xml, "stop_button");
+	gtk_signal_connect (GTK_OBJECT (w), "clicked",
+			    GTK_SIGNAL_FUNC (on_stop_button_clicked),
+			    NULL);
+	gtk_widget_set_sensitive (GTK_WIDGET (w), FALSE);
+
+	druid_data.refresh_button = w =
+		glade_xml_get_widget (druid_data.xml, "refresh_button");
+	gtk_signal_connect (GTK_OBJECT (w), "clicked",
+			    GTK_SIGNAL_FUNC (on_refresh_button_clicked),
+			    NULL);
+	
+	/* other stuff */
 	druid_data.gdb_text = glade_xml_get_widget (druid_data.xml, 
 						    "gdb_text");
 	druid_data.nature   = glade_xml_get_widget (druid_data.xml,

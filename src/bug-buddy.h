@@ -66,6 +66,9 @@ typedef struct {
 	GtkWidget *version_list;
 	ListData *selected_data;
 
+	GtkWidget *stop_button;
+	GtkWidget *refresh_button;
+
 	gchar *mail_cmd;
 	CrashType crash_type;
 	SubmitType submit_type;
@@ -73,13 +76,19 @@ typedef struct {
 	int bug_class;
 
 	GladeXML *xml;
+
+	FILE *fp;
+	int input;
+
+	gboolean explicit_dirty;
 } DruidData;
 
 extern DruidData druid_data;
 
 void get_trace_from_core (const gchar *core_file);
 void get_trace_from_pair (const gchar *app, const gchar *extra);
-
+void stop_gdb (void);
+void start_gdb (void);
 #endif /* __bug_buddy_h__ */
 
 

@@ -1310,7 +1310,8 @@ the application that crashed.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>label37</name>
-	    <label>Please wait while bug-buddy collects debugging info...</label>
+	    <label>Please wait while bug-buddy
+collects debugging info...</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>
@@ -1320,6 +1321,36 @@ the application that crashed.</label>
 	    <child>
 	      <padding>0</padding>
 	      <expand>True</expand>
+	      <fill>False</fill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>Custom</class>
+	    <name>refresh_button</name>
+	    <creation_function>make_pixmap_button</creation_function>
+	    <string1>Refresh</string1>
+	    <int1>0</int1>
+	    <int2>0</int2>
+	    <last_modification_time>Sun, 14 Nov 1999 19:41:15 GMT</last_modification_time>
+	    <child>
+	      <padding>0</padding>
+	      <expand>False</expand>
+	      <fill>False</fill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>Custom</class>
+	    <name>stop_button</name>
+	    <creation_function>make_pixmap_button</creation_function>
+	    <string1>Stop</string1>
+	    <int1>1</int1>
+	    <int2>0</int2>
+	    <last_modification_time>Sun, 14 Nov 1999 19:40:47 GMT</last_modification_time>
+	    <child>
+	      <padding>0</padding>
+	      <expand>False</expand>
 	      <fill>False</fill>
 	    </child>
 	  </widget>
