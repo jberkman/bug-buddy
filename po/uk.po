@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-03-23 12:29+0200\n"
+"POT-Creation-Date: 2001-03-28 11:37-0500\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -13,95 +13,95 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-u\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr "В╕д╕слати зв╕т"
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr "В╕д╕слати зв╕т лише соб╕"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr "Зберегти зв╕т у файл╕"
 
-#: src/bug-buddy.c:60
+#: src/bug-buddy.c:62
 msgid "crashed application"
 msgstr "програма, що зазнала збою"
 
-#: src/bug-buddy.c:61
+#: src/bug-buddy.c:63
 msgid "core file"
 msgstr "Файл core"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:64
 msgid "nothing"
 msgstr "н╕чого"
 
-#: src/bug-buddy.c:67
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr "Створити новий зв╕т про помилку"
 
-#: src/bug-buddy.c:68
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr "Додати ╕нформац╕ю до ╕снуючого зв╕ту"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr "Назва контактно╖ ╕нформац╕╖"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr "НАЗВА"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr "Електронна адреса"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr "ЕПОШТА"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr "Пакет, що м╕стить програму"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr "ПАКЕТ"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr "Верс╕я пакету"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr "ВЕРС╤Я"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr "Назва файлу програми, що зазнали збою"
 
-#: src/bug-buddy.c:81 src/bug-buddy.c:83 src/bug-buddy.c:84
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr "ФАЙЛ"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr "PID програми, що зазнала збою"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr "Файл core в╕д програми"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Text file to include in the report"
 msgstr "Текстовий файл, який буде долучено до зв╕ту"
 
-#: src/bug-buddy.c:167
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -109,11 +109,11 @@ msgstr ""
 "gdb не завершив отримання налагоджувально╖ ╕нормац╕╖.\n"
 "Знищити процес gdb (траса стеку буде неповною)?"
 
-#: src/bug-buddy.c:175 src/gdb-buddy.c:116
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr "gdb вже завершив роботу"
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -121,7 +121,7 @@ msgstr ""
 "Використовуйте аргумент командного рядка --appname\n"
 "зам╕сть $GNOME_CRASHED_APPNAME."
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -129,7 +129,7 @@ msgstr ""
 "Використовуйте аргумент командного рядка --pid\n"
 "зам╕сть $GNOME_CRASHED_PID."
 
-#: src/bug-buddy.c:575
+#: src/bug-buddy.c:578
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
@@ -138,11 +138,11 @@ msgstr ""
 "Не вдалося завантажити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
-#: src/bugzilla.c:432
+#: src/bugzilla.c:436
 msgid "Are you sure you want to cancel this update?"
 msgstr "Ви впевнен╕, що хочете в╕дм╕нити це поновлення?"
 
-#: src/bugzilla.c:538
+#: src/bugzilla.c:542
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "Не вдалося в╕дкрити \"%s\".\n"
 "Будь ласка, переконайтесь, що Bug Buddy встановлено коректно."
 
-#: src/bugzilla.c:549
+#: src/bugzilla.c:553
 msgid "All"
 msgstr "Все"
 
-#: src/bugzilla.c:573
+#: src/bugzilla.c:577
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -167,12 +167,12 @@ msgstr ""
 "\n"
 "Чи ма╓ Bug Buddy спробувати поновити ц╕ файли зараз?"
 
-#: src/gdb-buddy.c:72
+#: src/gdb-buddy.c:74
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Отримання страси стеку... (%d)"
 
-#: src/gdb-buddy.c:153
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -181,7 +181,7 @@ msgstr ""
 "Не вдалося обробити core-файл gdb:\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:179
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -190,11 +190,11 @@ msgstr ""
 "Неможливо визначити який дв╕йковий файл створено\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:215
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr "Помилка на зчитуванн╕... переривання"
 
-#: src/gdb-buddy.c:247
+#: src/gdb-buddy.c:249
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -202,7 +202,7 @@ msgstr ""
 "GDB не було знайдено у ваш╕й систем╕.\n"
 "Налагоджувально╖ ╕нформац╕╖ не буде з╕брано."
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -210,7 +210,7 @@ msgstr ""
 "Не знайдено файл gdb-cmd.\n"
 "Будь ласка, спробуйте перевстановити Bug Buddy."
 
-#: src/gdb-buddy.c:281 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr "Помилка на fork()."
 
@@ -482,23 +482,23 @@ msgstr "В╕дсилання зв╕ту"
 msgid "Finished!"
 msgstr "Завершено!"
 
-#: src/united-states-of-bug-buddy.c:86
+#: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Граф╕чний ╕нструмент зв╕тування про помилки для GNOME."
 
-#: src/united-states-of-bug-buddy.c:96
+#: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
 msgstr "Невелика веб-стор╕нка Bug Buddy"
 
-#: src/united-states-of-bug-buddy.c:260
+#: src/united-states-of-bug-buddy.c:262
 msgid "Please enter your name."
 msgstr "Введ╕ть ваше ╕м'я."
 
-#: src/united-states-of-bug-buddy.c:271
+#: src/united-states-of-bug-buddy.c:273
 msgid "Please enter a valid email address."
 msgstr "Введ╕ть вашу електронну адресу."
 
-#: src/united-states-of-bug-buddy.c:286
+#: src/united-states-of-bug-buddy.c:288
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -515,49 +515,49 @@ msgstr ""
 "\n"
 "Вказати нове м╕сце знаходження sendmail?"
 
-#: src/united-states-of-bug-buddy.c:336
+#: src/united-states-of-bug-buddy.c:338
 msgid "The specified file does not exist."
 msgstr "Вказаного файлу нема╓."
 
-#: src/united-states-of-bug-buddy.c:342
+#: src/united-states-of-bug-buddy.c:344
 #, c-format
 msgid "File is of type: %s"
 msgstr "Тип файлу: %s"
 
-#: src/united-states-of-bug-buddy.c:345
+#: src/united-states-of-bug-buddy.c:347
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "\"%s\" не схожий на текстовий файл."
 
-#: src/united-states-of-bug-buddy.c:356
+#: src/united-states-of-bug-buddy.c:358
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Необх╕дно включити розумний рядок теми у ваш зв╕т про помилку."
 
-#: src/united-states-of-bug-buddy.c:364
+#: src/united-states-of-bug-buddy.c:366
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Необх╕дно включити розумний опис у ваш зв╕т про помилку."
 
-#: src/united-states-of-bug-buddy.c:388
+#: src/united-states-of-bug-buddy.c:390
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Не вдалося в╕дкити файл: \"%s\""
 
-#: src/united-states-of-bug-buddy.c:400
+#: src/united-states-of-bug-buddy.c:402
 #, c-format
 msgid "about to run '%s'"
 msgstr "запуск \"%s\""
 
-#: src/united-states-of-bug-buddy.c:404
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Не вдалося запустити програму: \"%s\""
 
-#: src/united-states-of-bug-buddy.c:438
+#: src/united-states-of-bug-buddy.c:440
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваш зв╕т було збережено в \"%s\""
 
-#: src/united-states-of-bug-buddy.c:441
+#: src/united-states-of-bug-buddy.c:443
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -567,19 +567,19 @@ msgstr ""
 "Ваш зв╕т було в╕д╕слано на:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:481
 msgid "You must specify a product for your bug report."
 msgstr "Необх╕дно вказати продукт для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:490
 msgid "You must specify a component for your bug report."
 msgstr "Необх╕дно вказати компонент для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:496
+#: src/united-states-of-bug-buddy.c:498
 msgid "You must specify a version for your bug report."
 msgstr "Необх╕дно вказати верс╕ю для зв╕ту."
 
-#: src/united-states-of-bug-buddy.c:525
+#: src/united-states-of-bug-buddy.c:527
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -587,15 +587,15 @@ msgstr ""
 "Ви впевнен╕, що хочете в╕дм╕нити\n"
 "цей зв╕т про помилку?"
 
-#: src/util.c:60
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr "Не вдалося в╕дкити канал"
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr "Не вдалося запустити \"%s\"."
 
-#: src/util.c:113
+#: src/util.c:114
 msgid "Error on read..."
 msgstr "Помилка на зчитуванн╕..."

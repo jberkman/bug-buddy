@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-28 11:37-0500\n"
 "PO-Revision-Date: 2000-02-23 18:50+0000\n"
 "Last-Translator: Robert Brady <rwb197@zepler.org>\n"
 "Language-Team: \n"
@@ -13,139 +13,139 @@ msgstr ""
 "Content-Type: text/plain; charset=US-ASCII\n"
 "Content-Transfer-Encoding: 7bit\n"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr ""
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr ""
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr ""
 
-#: src/bug-buddy.c:60
+#: src/bug-buddy.c:62
 msgid "crashed application"
 msgstr ""
 
-#: src/bug-buddy.c:61
+#: src/bug-buddy.c:63
 msgid "core file"
 msgstr ""
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:64
 msgid "nothing"
 msgstr ""
 
-#: src/bug-buddy.c:67
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr ""
 
-#: src/bug-buddy.c:68
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr ""
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr ""
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr ""
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr ""
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr ""
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr ""
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr ""
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr ""
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr ""
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr ""
 
-#: src/bug-buddy.c:81 src/bug-buddy.c:83 src/bug-buddy.c:84
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr ""
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr ""
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr ""
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr ""
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Text file to include in the report"
 msgstr ""
 
-#: src/bug-buddy.c:167
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:175 src/gdb-buddy.c:116
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr ""
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:575
+#: src/bug-buddy.c:578
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 
-#: src/bugzilla.c:432
+#: src/bugzilla.c:436
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:538
+#: src/bugzilla.c:542
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 
-#: src/bugzilla.c:549
+#: src/bugzilla.c:553
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:573
+#: src/bugzilla.c:577
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -153,42 +153,42 @@ msgid ""
 "Should Bug Buddy try to update these files now?"
 msgstr ""
 
-#: src/gdb-buddy.c:72
+#: src/gdb-buddy.c:74
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:153
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:179
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:215
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr ""
 
-#: src/gdb-buddy.c:247
+#: src/gdb-buddy.c:249
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 
-#: src/gdb-buddy.c:281 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr ""
 
@@ -446,26 +446,26 @@ msgstr ""
 msgid "Finished!"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:86
+#: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:96
+#: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:260
+#: src/united-states-of-bug-buddy.c:262
 msgid "Please enter your name."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:271
+#: src/united-states-of-bug-buddy.c:273
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:286
+#: src/united-states-of-bug-buddy.c:288
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -473,49 +473,49 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:336
+#: src/united-states-of-bug-buddy.c:338
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:342
+#: src/united-states-of-bug-buddy.c:344
 #, c-format
 msgid "File is of type: %s"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:345
+#: src/united-states-of-bug-buddy.c:347
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:356
+#: src/united-states-of-bug-buddy.c:358
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:364
+#: src/united-states-of-bug-buddy.c:366
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:388
+#: src/united-states-of-bug-buddy.c:390
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:400
+#: src/united-states-of-bug-buddy.c:402
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:404
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:438
+#: src/united-states-of-bug-buddy.c:440
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:441
+#: src/united-states-of-bug-buddy.c:443
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -523,33 +523,33 @@ msgid ""
 "        <%s>"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:481
 msgid "You must specify a product for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:490
 msgid "You must specify a component for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:496
+#: src/united-states-of-bug-buddy.c:498
 msgid "You must specify a version for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:525
+#: src/united-states-of-bug-buddy.c:527
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr ""
 
-#: src/util.c:60
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr ""
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr ""
 
-#: src/util.c:113
+#: src/util.c:114
 msgid "Error on read..."
 msgstr ""

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-28 11:37-0500\n"
 "PO-Revision-Date: 2000-10-09 21:59+0200\n"
 "Last-Translator: Dennis Smit <synap@area101.penguin.nl>\n"
 "Language-Team:\n"
@@ -13,97 +13,97 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr "Een bugrapport opsturen"
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr "Een bugrapport alleen naar uw eigen E-mail adres sturen"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr "Het bugrapport in een bestand opslaan"
 
-#: src/bug-buddy.c:60
+#: src/bug-buddy.c:62
 #, fuzzy
 msgid "crashed application"
 msgstr "Direct van de zojuist gecrashte programma"
 
-#: src/bug-buddy.c:61
+#: src/bug-buddy.c:63
 #, fuzzy
 msgid "core file"
 msgstr "Plaats van het core bestand"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:64
 msgid "nothing"
 msgstr ""
 
-#: src/bug-buddy.c:67
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr "Een nieuw bug-report versturen"
 
-#: src/bug-buddy.c:68
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr "Informatie aan een bestaande bug toevoegen"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr "Naam van de contactpersoon"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr "NAAM"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr "E-mail adres van contact persoon"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr "Pakket waar het programma bij hoort"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr "PACKAGE"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr "Versie van het pakket"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr "VERSIE"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr "Pakket waar het programma bij hoort"
 
-#: src/bug-buddy.c:81 src/bug-buddy.c:83 src/bug-buddy.c:84
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr "BESTAND"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr "PID van de gecrashte applicatie"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr "Core bestand van het programma"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Text file to include in the report"
 msgstr ""
 
-#: src/bug-buddy.c:167
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -111,11 +111,11 @@ msgstr ""
 "gdb is nog niet klaar met het vekrijgen van debug informatie.\n"
 "Kill het gdb proces (de strack trace zou niet compleet zijn)?"
 
-#: src/bug-buddy.c:175 src/gdb-buddy.c:116
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr "De gdb debugger is reeds beeindigd"
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -123,7 +123,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME is niet meer te gebruiken.\n"
 "Gebruik alstublieft --appname command line optie."
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -131,7 +131,7 @@ msgstr ""
 "$GNOME_CRASHED_PID is niet meer te gebruiken.\n"
 "Gebruik alstublieft --pid command line optie."
 
-#: src/bug-buddy.c:575
+#: src/bug-buddy.c:578
 #, fuzzy, c-format
 msgid ""
 "Could not load '%s'.\n"
@@ -140,24 +140,24 @@ msgstr ""
 "Ik kan het '%s' bestand niet vinden.\n"
 "Controleer of bug-buddy correct is geinstalleerd."
 
-#: src/bugzilla.c:432
+#: src/bugzilla.c:436
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:538
-#, c-format
+#: src/bugzilla.c:542
+#, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "Ik kan het '%s' bestand niet vinden.\n"
 "Controleer of bug-buddy correct is geinstalleerd."
 
-#: src/bugzilla.c:549
+#: src/bugzilla.c:553
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:573
+#: src/bugzilla.c:577
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -165,12 +165,12 @@ msgid ""
 "Should Bug Buddy try to update these files now?"
 msgstr ""
 
-#: src/gdb-buddy.c:72
+#: src/gdb-buddy.c:74
 #, fuzzy, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Bezig met het verkrijgen van de stack trace ...(%d)"
 
-#: src/gdb-buddy.c:153
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -179,7 +179,7 @@ msgstr ""
 "Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
 "'%s' "
 
-#: src/gdb-buddy.c:179
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -188,26 +188,27 @@ msgstr ""
 "Het is niet mogelijk te achterhalen welk programma\n"
 "de file '%s' heeft gecreerd."
 
-#: src/gdb-buddy.c:215
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr ""
 "Er is een fout opgetreden tijdens het lezen. De operatie wordt afgebroken"
 
-#: src/gdb-buddy.c:247
+#: src/gdb-buddy.c:249
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "De gdb-cmd file kan niet gevonden worden.\n"
 "Zou U bug-buddy opnieuw kunnen installeren?"
 
-#: src/gdb-buddy.c:281 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr "Er is een probleem met het fork() commando"
 
@@ -481,27 +482,27 @@ msgstr "Een bugrapport opsturen"
 msgid "Finished!"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:86
+#: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Het grafische bug raport programma voor GNOME"
 
-#: src/united-states-of-bug-buddy.c:96
+#: src/united-states-of-bug-buddy.c:98
 #, fuzzy
 msgid "The lame Bug Buddy web page"
 msgstr "De gave bug-buddy webpagina"
 
-#: src/united-states-of-bug-buddy.c:260
+#: src/united-states-of-bug-buddy.c:262
 msgid "Please enter your name."
 msgstr "Vul alstublieft uw naam in."
 
-#: src/united-states-of-bug-buddy.c:271
+#: src/united-states-of-bug-buddy.c:273
 msgid "Please enter a valid email address."
 msgstr "Vul alstublieft een geldig email adres in."
 
-#: src/united-states-of-bug-buddy.c:286
+#: src/united-states-of-bug-buddy.c:288
 #, fuzzy, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -514,55 +515,55 @@ msgstr ""
 "\n"
 "Wil u de plaats van sendmail opnieuw invullen?"
 
-#: src/united-states-of-bug-buddy.c:336
+#: src/united-states-of-bug-buddy.c:338
 msgid "The specified file does not exist."
 msgstr "Het gekozen bestand bestaat niet."
 
-#: src/united-states-of-bug-buddy.c:342
+#: src/united-states-of-bug-buddy.c:344
 #, c-format
 msgid "File is of type: %s"
 msgstr "Het betstand is van het type: %s"
 
-#: src/united-states-of-bug-buddy.c:345
+#: src/united-states-of-bug-buddy.c:347
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' lijkt geen tekstbestand te zijn."
 
-#: src/united-states-of-bug-buddy.c:356
+#: src/united-states-of-bug-buddy.c:358
 #, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/united-states-of-bug-buddy.c:364
+#: src/united-states-of-bug-buddy.c:366
 #, fuzzy
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/united-states-of-bug-buddy.c:388
+#: src/united-states-of-bug-buddy.c:390
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kan het bestand '%s' niet openen."
 
-#: src/united-states-of-bug-buddy.c:400
+#: src/united-states-of-bug-buddy.c:402
 #, c-format
 msgid "about to run '%s'"
 msgstr "Het programma '%s' wordt zodadelijk uitgevoerd"
 
-#: src/united-states-of-bug-buddy.c:404
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kan het '%s' mailprogramma niet starten"
 
-#: src/united-states-of-bug-buddy.c:438
+#: src/united-states-of-bug-buddy.c:440
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Uw bugrapport is opgeslagen in '%s'"
 
-#: src/united-states-of-bug-buddy.c:441
+#: src/united-states-of-bug-buddy.c:443
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -573,46 +574,53 @@ msgstr ""
 "\n"
 "       <%s>"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:481
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:490
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/united-states-of-bug-buddy.c:496
+#: src/united-states-of-bug-buddy.c:498
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr ""
 "Het is verplicht om een onderwerp en een beschrijving in het rapport op te "
 "nemen."
 
-#: src/united-states-of-bug-buddy.c:525
+#: src/united-states-of-bug-buddy.c:527
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr ""
 
 #
-#: src/util.c:60
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr "Het is niet mogelijk om verbinding met GDB te maken"
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr "Het programma '%s' kon niet worden uitgevoerd"
 
-#: src/util.c:113
+#: src/util.c:114
 msgid "Error on read..."
 msgstr "Er is een fout opgetreden tijdens het lezen."
+
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ik kan het '%s' bestand niet vinden.\n"
+#~ "Controleer of bug-buddy correct is geinstalleerd."
 
 #~ msgid "Distribution"
 #~ msgstr "Distributie"
@@ -695,14 +703,6 @@ msgstr "Er is een fout opgetreden tijdens het lezen."
 
 #~ msgid "Refresh"
 #~ msgstr "Verversen"
-
-#, fuzzy
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Ik kan het '%s' bestand niet vinden.\n"
-#~ "Controleer of bug-buddy correct is geinstalleerd."
 
 #~ msgid "Collect debugging information from a crashed application"
 #~ msgstr "Verzamelen van debug-informatie"

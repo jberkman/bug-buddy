@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-28 11:37-0500\n"
 "PO-Revision-Date: 2000-11-21 11:42+02:00\n"
 "Last-Translator: Wu Yulun <migr@operamail.com>\n"
 "Language-Team: \n"
@@ -9,118 +9,118 @@ msgstr ""
 "Content-Type: text/plain; charset=gb2312\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr "发出BUG报告"
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr "仅向自己发送报告"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr "将报告存为文件"
 
-#: src/bug-buddy.c:60
+#: src/bug-buddy.c:62
 msgid "crashed application"
 msgstr ""
 
-#: src/bug-buddy.c:61
+#: src/bug-buddy.c:63
 #, fuzzy
 msgid "core file"
 msgstr "Core文件"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:64
 msgid "nothing"
 msgstr ""
 
-#: src/bug-buddy.c:67
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr "创建一个新的BUG报告"
 
-#: src/bug-buddy.c:68
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr "对已有的报告增加更多的信息"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr "联系名称"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr "NAME"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr "联系电子邮件地址"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr "该程序所属软件包"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr "PACKAGE"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr "软件包版本"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr "VERSION"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr "崩溃的程序的文件名"
 
-#: src/bug-buddy.c:81 src/bug-buddy.c:83 src/bug-buddy.c:84
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr "FILE"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr "崩溃的程序的PID"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr "该程序的core文件"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Text file to include in the report"
 msgstr ""
 
-#: src/bug-buddy.c:167
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:175 src/gdb-buddy.c:116
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr "gdb 已经退出"
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:575
+#: src/bug-buddy.c:578
 #, fuzzy, c-format
 msgid ""
 "Could not load '%s'.\n"
@@ -129,24 +129,24 @@ msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:432
+#: src/bugzilla.c:436
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:538
-#, c-format
+#: src/bugzilla.c:542
+#, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:549
+#: src/bugzilla.c:553
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:573
+#: src/bugzilla.c:577
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -154,12 +154,12 @@ msgid ""
 "Should Bug Buddy try to update these files now?"
 msgstr ""
 
-#: src/gdb-buddy.c:72
+#: src/gdb-buddy.c:74
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:153
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -168,7 +168,7 @@ msgstr ""
 "无法使用 gdb 处理 core 文件:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:179
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -177,25 +177,26 @@ msgstr ""
 "Kunne ikke afg鴕e hvilken bin鎟 fil der lavede\n"
 "'%s'"
 
-#: src/gdb-buddy.c:215
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr "读错误... 中止"
 
-#: src/gdb-buddy.c:247
+#: src/gdb-buddy.c:249
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
 msgstr ""
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "无法找到 gdb-cmd 文件。\n"
 "请尝试重新安装 bug-buddy。"
 
-#: src/gdb-buddy.c:281 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr "fork()错误"
 
@@ -463,26 +464,26 @@ msgstr "发送该报告"
 msgid "Finished!"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:86
+#: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Gnome 图形化BUG报告工具。"
 
-#: src/united-states-of-bug-buddy.c:96
+#: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:260
+#: src/united-states-of-bug-buddy.c:262
 msgid "Please enter your name."
 msgstr "请输入你的名字"
 
-#: src/united-states-of-bug-buddy.c:271
+#: src/united-states-of-bug-buddy.c:273
 msgid "Please enter a valid email address."
 msgstr "请输入有效的邮件地址"
 
-#: src/united-states-of-bug-buddy.c:286
+#: src/united-states-of-bug-buddy.c:288
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -490,51 +491,51 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:336
+#: src/united-states-of-bug-buddy.c:338
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:342
+#: src/united-states-of-bug-buddy.c:344
 #, c-format
 msgid "File is of type: %s"
 msgstr "文件类型: %s"
 
-#: src/united-states-of-bug-buddy.c:345
+#: src/united-states-of-bug-buddy.c:347
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' 不像是文本文件。"
 
-#: src/united-states-of-bug-buddy.c:356
+#: src/united-states-of-bug-buddy.c:358
 #, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:364
+#: src/united-states-of-bug-buddy.c:366
 #, fuzzy
 msgid "You must include a comprehensible description in your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:388
+#: src/united-states-of-bug-buddy.c:390
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "无法找开文件: '%s'"
 
-#: src/united-states-of-bug-buddy.c:400
+#: src/united-states-of-bug-buddy.c:402
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:404
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "无法打开邮件程序: '%s'"
 
-#: src/united-states-of-bug-buddy.c:438
+#: src/united-states-of-bug-buddy.c:440
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "你的BUG报告已存在\"%s\"里了"
 
-#: src/united-states-of-bug-buddy.c:441
+#: src/united-states-of-bug-buddy.c:443
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -544,39 +545,46 @@ msgstr ""
 "你的BUG报告已发往:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:481
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:490
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:496
+#: src/united-states-of-bug-buddy.c:498
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:525
+#: src/united-states-of-bug-buddy.c:527
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
 msgstr ""
 
-#: src/util.c:60
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr "无法打开管道"
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr "无法运行 \"%s\""
 
-#: src/util.c:113
+#: src/util.c:114
 msgid "Error on read..."
 msgstr "读错误..."
+
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "无法打开 \"%s\"。\n"
+#~ "请确保 bug-buddy 已正确安装。"
 
 #~ msgid "Distribution"
 #~ msgstr "发行品牌"
@@ -625,14 +633,6 @@ msgstr "读错误..."
 
 #~ msgid "Refresh"
 #~ msgstr "刷新"
-
-#, fuzzy
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "无法打开 \"%s\"。\n"
-#~ "请确保 bug-buddy 已正确安装。"
 
 #~ msgid "Collect debugging information from a crashed application"
 #~ msgstr "从崩溃的应用程序获取调试信息"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bug Buddy 2.0\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-28 11:37-0500\n"
 "PO-Revision-Date: 2001-02-17 20:54+02:00\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -14,95 +14,95 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/bug-buddy.c:53
+#: src/bug-buddy.c:55
 msgid "Submit bug report"
 msgstr "Lähetä virheraportti"
 
-#: src/bug-buddy.c:54
+#: src/bug-buddy.c:56
 msgid "Only send report to yourself"
 msgstr "Lähetä raportti vain itsellesi"
 
-#: src/bug-buddy.c:55
+#: src/bug-buddy.c:57
 msgid "Save report to file"
 msgstr "Tallenna raportti tiedostoon"
 
-#: src/bug-buddy.c:60
+#: src/bug-buddy.c:62
 msgid "crashed application"
 msgstr "kaatunut sovellus"
 
-#: src/bug-buddy.c:61
+#: src/bug-buddy.c:63
 msgid "core file"
 msgstr "core-tiedosto"
 
-#: src/bug-buddy.c:62
+#: src/bug-buddy.c:64
 msgid "nothing"
 msgstr "ei mitään"
 
-#: src/bug-buddy.c:67
+#: src/bug-buddy.c:69
 msgid "Create a new bug report"
 msgstr "Tee uusi virheraportti"
 
-#: src/bug-buddy.c:68
+#: src/bug-buddy.c:70
 msgid "Add more information to existing report"
 msgstr "Anna lisätietoja olemassa olevaan virheraporttiin"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "Name of contact"
 msgstr "Yhteyshenkilön nimi"
 
-#: src/bug-buddy.c:77
+#: src/bug-buddy.c:79
 msgid "NAME"
 msgstr "NIMI"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "Email address of contact"
 msgstr "Yhteyshenkilön sähköpostiosoite"
 
-#: src/bug-buddy.c:78
+#: src/bug-buddy.c:80
 msgid "EMAIL"
 msgstr "EMAIL"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "Package containing the program"
 msgstr "Ohjelman sisältävä paketti"
 
-#: src/bug-buddy.c:79
+#: src/bug-buddy.c:81
 msgid "PACKAGE"
 msgstr "PAKETTI"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "Version of the package"
 msgstr "Paketin versio"
 
-#: src/bug-buddy.c:80
+#: src/bug-buddy.c:82
 msgid "VERSION"
 msgstr "VERSIO"
 
-#: src/bug-buddy.c:81
+#: src/bug-buddy.c:83
 msgid "File name of crashed program"
 msgstr "Kaatuneen ohjelman tiedostonimi"
 
-#: src/bug-buddy.c:81 src/bug-buddy.c:83 src/bug-buddy.c:84
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
 msgid "FILE"
 msgstr "TIEDOSTO"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID of crashed program"
 msgstr "Kaatuneen ohjelman PID"
 
-#: src/bug-buddy.c:82
+#: src/bug-buddy.c:84
 msgid "PID"
 msgstr "PID"
 
-#: src/bug-buddy.c:83
+#: src/bug-buddy.c:85
 msgid "Core file from program"
 msgstr "Sovelluksen jättämä core-tiedosto"
 
-#: src/bug-buddy.c:84
+#: src/bug-buddy.c:86
 msgid "Text file to include in the report"
 msgstr "Raporttiin sisällytettävä tekstitiedosto"
 
-#: src/bug-buddy.c:167
+#: src/bug-buddy.c:169
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -112,11 +112,11 @@ msgstr ""
 "Lopeta gdb-prosessi (jäljitystiedot\n"
 "pinosta ovat tällöin epätäydelliset)?"
 
-#: src/bug-buddy.c:175 src/gdb-buddy.c:116
+#: src/bug-buddy.c:177 src/gdb-buddy.c:118
 msgid "gdb has already exited"
 msgstr "gdb on lopettanut toimintansa"
 
-#: src/bug-buddy.c:468
+#: src/bug-buddy.c:470
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -124,7 +124,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME on virheellinen.\n"
 "Käytä sen sijaan komennon --appname lisäargumenttia."
 
-#: src/bug-buddy.c:481
+#: src/bug-buddy.c:483
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -132,7 +132,7 @@ msgstr ""
 "$GNOME_CRASHED_PID on virheellinen.\n"
 "Käytä sen sijaan komennon --pid lisäargumenttia."
 
-#: src/bug-buddy.c:575
+#: src/bug-buddy.c:578
 #, c-format
 msgid ""
 "Could not load '%s'.\n"
@@ -141,24 +141,24 @@ msgstr ""
 "Ei pystynyt lataamaan tiedostoa '%s'.\n"
 "Varmista, että Bug Buddy on oikein asennettu."
 
-#: src/bugzilla.c:432
+#: src/bugzilla.c:436
 msgid "Are you sure you want to cancel this update?"
 msgstr "Oletko varma, että haluat peruuttaa tämän päivityksen?"
 
-#: src/bugzilla.c:538
+#: src/bugzilla.c:542
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
+"Please make sure Bug Buddy was installed correctly."
 msgstr ""
-"Ei pystynyt avaamaan tiedostoa '%s'\n"
+"Ei pystynyt avaamaan tiedostoa '%s'.\n"
 "Varmista, että Bug Buddy on oikein asennettu."
 
-#: src/bugzilla.c:549
+#: src/bugzilla.c:553
 msgid "All"
 msgstr "Kaikki"
 
-#: src/bugzilla.c:573
+#: src/bugzilla.c:577
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -170,12 +170,12 @@ msgstr ""
 "\n"
 "Tulisiko Bug Buddyn päivittää nämä tiedostot nyt?"
 
-#: src/gdb-buddy.c:72
+#: src/gdb-buddy.c:74
 #, c-format
 msgid "Obtaining stack trace... (%d)"
 msgstr "Hakee jäljitystietoja pinosta... (%d)"
 
-#: src/gdb-buddy.c:153
+#: src/gdb-buddy.c:155
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -184,7 +184,7 @@ msgstr ""
 "Ei pysty käsittelemään core-tiedostoa gdb:llä:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:179
+#: src/gdb-buddy.c:181
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -193,11 +193,11 @@ msgstr ""
 "Ei pysty määrittelemään mikä binääri-tiedosto luotiin\n"
 "'%s'"
 
-#: src/gdb-buddy.c:215
+#: src/gdb-buddy.c:217
 msgid "Error on read... aborting"
 msgstr "Virhe luettaessa...keskeytetään"
 
-#: src/gdb-buddy.c:247
+#: src/gdb-buddy.c:249
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -205,15 +205,16 @@ msgstr ""
 "GDB:tä ei löytynyt järjestelmästäsi.\n"
 "Virheenkorjaustietoja ei haeta."
 
-#: src/gdb-buddy.c:272
+#: src/gdb-buddy.c:274
+#, fuzzy
 msgid ""
 "Could not find the gdb-cmd file.\n"
-"Please try reinstalling bug-buddy."
+"Please try reinstalling Bug Buddy."
 msgstr ""
 "Ei löytänyt gdb-cmd -tiedostoa.\n"
 "Asenna Bug Buddy uudelleen."
 
-#: src/gdb-buddy.c:281 src/util.c:75
+#: src/gdb-buddy.c:283 src/util.c:76
 msgid "Error on fork()."
 msgstr "Virhe fork():ssa."
 
@@ -493,26 +494,26 @@ msgstr "Lähettämässä virheraporttia"
 msgid "Finished!"
 msgstr "Valmis!"
 
-#: src/united-states-of-bug-buddy.c:86
+#: src/united-states-of-bug-buddy.c:88
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Graafinen virheidenraportointityökalu GNOME:lle."
 
-#: src/united-states-of-bug-buddy.c:96
+#: src/united-states-of-bug-buddy.c:98
 msgid "The lame Bug Buddy web page"
 msgstr "Laimea Bug Buddy kotisivu"
 
-#: src/united-states-of-bug-buddy.c:260
+#: src/united-states-of-bug-buddy.c:262
 msgid "Please enter your name."
 msgstr "Anna nimesi tähän."
 
-#: src/united-states-of-bug-buddy.c:271
+#: src/united-states-of-bug-buddy.c:273
 msgid "Please enter a valid email address."
 msgstr "Anna sähköpostiosoitteesi tähän."
 
-#: src/united-states-of-bug-buddy.c:286
-#, c-format
+#: src/united-states-of-bug-buddy.c:288
+#, fuzzy, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -526,49 +527,49 @@ msgstr ""
 "\n"
 "Haluatko määritellä uuden kohteen sendmailille?"
 
-#: src/united-states-of-bug-buddy.c:336
+#: src/united-states-of-bug-buddy.c:338
 msgid "The specified file does not exist."
 msgstr "Annettu tiedostonimi ei ole olemassa."
 
-#: src/united-states-of-bug-buddy.c:342
+#: src/united-states-of-bug-buddy.c:344
 #, c-format
 msgid "File is of type: %s"
 msgstr "Tiedosto on tyyppiä: %s"
 
-#: src/united-states-of-bug-buddy.c:345
+#: src/united-states-of-bug-buddy.c:347
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ei ole tekstitiedosto."
 
-#: src/united-states-of-bug-buddy.c:356
+#: src/united-states-of-bug-buddy.c:358
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Virheraportissa tulee olla kattava otsikko."
 
-#: src/united-states-of-bug-buddy.c:364
+#: src/united-states-of-bug-buddy.c:366
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Virheraportissa tulee olla kattava selitysosa."
 
-#: src/united-states-of-bug-buddy.c:388
+#: src/united-states-of-bug-buddy.c:390
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Ei pysty aukaisemaan tiedostoa: '%s'"
 
-#: src/united-states-of-bug-buddy.c:400
+#: src/united-states-of-bug-buddy.c:402
 #, c-format
 msgid "about to run '%s'"
 msgstr "juuri ajamassa '%s'"
 
-#: src/united-states-of-bug-buddy.c:404
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Ei pysty käynnistämään sähköpostiohjelmaa: '%s'"
 
-#: src/united-states-of-bug-buddy.c:438
+#: src/united-states-of-bug-buddy.c:440
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
-#: src/united-states-of-bug-buddy.c:441
+#: src/united-states-of-bug-buddy.c:443
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -579,19 +580,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:479
+#: src/united-states-of-bug-buddy.c:481
 msgid "You must specify a product for your bug report."
 msgstr "Määrittele virheraportin kohteena oleva tuote."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:490
 msgid "You must specify a component for your bug report."
 msgstr "Määrittele virheraporttia varten komponentti."
 
-#: src/united-states-of-bug-buddy.c:496
+#: src/united-states-of-bug-buddy.c:498
 msgid "You must specify a version for your bug report."
 msgstr "Määrittele versio virheraporttia varten."
 
-#: src/united-states-of-bug-buddy.c:525
+#: src/united-states-of-bug-buddy.c:527
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -599,18 +600,25 @@ msgstr ""
 "Oletko varma, että haluat peruuttaa\n"
 "tämän virheraportin?"
 
-#: src/util.c:60
+#: src/util.c:61
 msgid "Unable to open pipe"
 msgstr "Ei pysty aukaisemaan putkea"
 
-#: src/util.c:72
+#: src/util.c:73
 #, c-format
 msgid "Could not run '%s'."
 msgstr "Ei voinut ajaa '%s'"
 
-#: src/util.c:113
+#: src/util.c:114
 msgid "Error on read..."
 msgstr "Virhe luettaessa..."
+
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ei pystynyt avaamaan tiedostoa '%s'\n"
+#~ "Varmista, että Bug Buddy on oikein asennettu."
 
 #~ msgid "critical"
 #~ msgstr "kriittinen"
@@ -686,10 +694,3 @@ msgstr "Virhe luettaessa..."
 
 #~ msgid "Refresh"
 #~ msgstr "Päivitä"
-
-#~ msgid ""
-#~ "Could not open '%s'.\n"
-#~ "Please make sure Bug Buddy was installed correctly."
-#~ msgstr ""
-#~ "Ei pystynyt avaamaan tiedostoa '%s'.\n"
-#~ "Varmista, että Bug Buddy on oikein asennettu."
