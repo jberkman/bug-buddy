@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-02-26 12:30+0100\n"
+"POT-Creation-Date: 2000-03-07 22:00+0100\n"
 "PO-Revision-Date: 2000-02-26 12:31+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Please enter your name and email address"
 msgstr "Vennligst skriv inn navn og e-post adresse"
 
-#: src/bug-buddy.c:500
+#: src/bug-buddy.c:501
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
@@ -189,7 +189,7 @@ msgstr ""
 "Klikk \"Fullfør\" for å avslutte bug-buddy.\n"
 "Ingen feilrapport vil bli sendt inn."
 
-#: src/bug-buddy.c:523
+#: src/bug-buddy.c:524
 #, c-format
 msgid ""
 "You are about to save a bug report in '%s'.\n"
@@ -198,7 +198,7 @@ msgstr ""
 "Du er i ferd med å lagre en feilrapport i '%s'.\n"
 "Denne kan senere brukes til å rapportere en feil i '%s'."
 
-#: src/bug-buddy.c:528
+#: src/bug-buddy.c:529
 #, c-format
 msgid ""
 "You are about to report a bug in '%s'.\n"
@@ -219,11 +219,11 @@ msgstr ""
 "\n"
 "Rapporten sendes ved å klikke på fullfør."
 
-#: src/bug-buddy.c:650
+#: src/bug-buddy.c:651
 msgid "Please choose a file to save to."
 msgstr "Vennligst velg en fil å lagre til."
 
-#: src/bug-buddy.c:657
+#: src/bug-buddy.c:658
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -232,7 +232,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne filen?"
 
-#: src/bug-buddy.c:768
+#: src/bug-buddy.c:769
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -241,7 +241,7 @@ msgstr ""
 "Kunne ikke åpne '%s'.\n"
 "Vennligst forsikre deg om at bug-buddy ble riktig installert."
 
-#: src/bug-buddy.c:864
+#: src/bug-buddy.c:865
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -249,7 +249,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME er utgått.\n"
 "Vennligst bruk --appname kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:877
+#: src/bug-buddy.c:878
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
@@ -257,7 +257,7 @@ msgstr ""
 "$GNOME_CRASHED_PID er utgått.\n"
 "Vennligst bruk --pid kommandolinjeflagget i stedet."
 
-#: src/bug-buddy.c:990
+#: src/bug-buddy.c:991
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
