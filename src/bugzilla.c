@@ -621,6 +621,9 @@ create_products_list (void)
 				    G_TYPE_STRING, G_TYPE_STRING,
 				    G_TYPE_POINTER);
 
+	/* sort on Product name */
+	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model), PRODUCT_NAME, GTK_SORT_ASCENDING);
+
 	g_object_set (G_OBJECT (view), "model", model, NULL);
 	g_object_unref (G_OBJECT (model));
 	
@@ -659,6 +662,9 @@ create_components_list (void)
 
 	model = gtk_list_store_new (COMPONENT_COLS, G_TYPE_STRING, 
 				    G_TYPE_STRING, G_TYPE_POINTER);
+
+	/* sort on Product name */
+	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model), COMPONENT_NAME, GTK_SORT_ASCENDING);
 	
 	g_object_set (G_OBJECT (view), "model", model, NULL);
 	g_object_unref (G_OBJECT (model));
