@@ -585,6 +585,9 @@ main (int argc, char *argv[])
 
 	memset (&druid_data, 0, sizeof (druid_data));
 
+	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
+	textdomain (PACKAGE);
+
 	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, options, 0, NULL);
 	glade_gnome_init ();
 

@@ -349,7 +349,7 @@ request more information from you.</label>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>version_label</name>
-	    <label>something</label>
+	    <label></label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>

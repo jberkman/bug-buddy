@@ -14,7 +14,6 @@ gchar *s = N_("Your Name");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
-gchar *s = N_("something");
 gchar *s = N_("Enter the information about the\n"
               "bug you are reporting");
 gchar *s = N_("Package");

@@ -3,6 +3,7 @@
 	* src/bug-buddy.glade:
 	* src/bug-buddy.c: change to using a clist instead of lots
 	of gtk_entry's.  This gets rid of a druid page, and is nicer.
+	(main): bindtextdomain() and textdomain() so translations work
 
 1999-10-26  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
