@@ -3,6 +3,7 @@
 # Andraz Tori <andraz.tori1@guest.arnes.si> 2000
 #
 
+
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
@@ -36,7 +37,7 @@ msgstr "obièajna"
 
 #: src/bug-buddy.c:77
 msgid "wishlist"
-msgstr "seznam ¾elja"
+msgstr "¾elja"
 
 #: src/bug-buddy.c:82
 msgid "software bug"
@@ -146,7 +147,7 @@ msgid ""
 "Do you want to continue anyway?"
 msgstr ""
 "Zelo pomaga, èe doloèite\n"
-"paket bolj natanèno kot 'splo¹en'.\n"
+"paket bolj natanèno kot 'general'.\n"
 "\n"
 "®elite vseeno nadaljevati?"
 
@@ -169,8 +170,8 @@ msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
-"V poroèilo o hro¹èu morate vkljuèiti\n"
-"zadevo in opis."
+"Poroèilo o hro¹èu mora nujno vsebovati\n"
+"naslov in opis."
 
 #: src/bug-buddy.c:443
 msgid ""
@@ -408,8 +409,8 @@ msgid ""
 "button for a more in-depth explanation of the process."
 msgstr ""
 "bug-buddy vas bo vodil po postopku\n"
-"oddaje poroèila o hro¹èu.  Lahko kliknete gumb za \n"
-"pomoè za podrobnej¹o razlago postopka."
+"oddaje poroèila o hro¹èu.  Lahko kliknete gumb \n"
+"\"Pomoè\" za podrobnej¹o razlago postopka."
 
 #: src/glade-strings.c:22
 msgid "Report Information"
@@ -461,7 +462,7 @@ msgstr "Opis"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr "Prosim poroèilo napi¹ite v Angle¹èini, èe je mo¾no."
+msgstr "Prosimo, èe je mogoèe, poroèilo napi¹ite v Angle¹èini."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
