@@ -270,7 +270,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	
 	if (!g_file_exists (BUDDY_DATADIR "/gdb-cmd")) {
 		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
-					  "Please try reinstalling bug-buddy."));
+					  "Please try reinstalling Bug Buddy."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		g_free (app2);
 		return;

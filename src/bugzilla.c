@@ -536,7 +536,7 @@ load_bugzillas (void)
 	dir = opendir (BUDDY_DATADIR"/bugzilla/");
 	if (!dir) {
 		s = g_strdup_printf (_("Could not open '%s'.\n"
-				       "Please make sure bug-buddy was "
+				       "Please make sure Bug Buddy was "
 				       "installed correctly."),
 				     BUDDY_DATADIR "/bugzilla/");
 		w = gnome_error_dialog (s);
