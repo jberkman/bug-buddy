@@ -10,21 +10,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.89cvs\n"
-"POT-Creation-Date: 2001-02-15 04:50-0500\n"
+"POT-Creation-Date: 2001-02-18 18:55+0100\n"
 "PO-Revision-Date: 2001-02-13 07:47+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/bts.c:99
-msgid "Distribution"
-msgstr "Distribution"
-
-#: src/bts.c:107
-msgid "System"
-msgstr "System"
 
 #: src/bug-buddy.c:53
 msgid "critical"
@@ -759,6 +751,12 @@ msgstr "Kann »%s« nicht starten."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Fehler beim Lesen...."
+
+#~ msgid "Distribution"
+#~ msgstr "Distribution"
+
+#~ msgid "System"
+#~ msgstr "System"
 
 #~ msgid "Finish"
 #~ msgstr "Beenden"

@@ -1,3 +1,7 @@
+2001-02-18  Karl Eichwalder  <ke@suse.de>
+
+	* de.po: Update.
+
 2001-02-17 Sami Pesonen <spesonen@dlc.fi>
 
 	* fi.po: Updated Finnish translation.
@@ -20,7 +24,7 @@
 
 2001-02-15  Carlos Perells Marmn <carlos@gnome-db.org>
 
-        * es.po: Updated Spanish translation.
+	* es.po: Updated Spanish translation.
 
 2001-02-15 Kjartan Maraas  <kmaraas@gnome.org>
 
@@ -319,7 +323,7 @@
 2000-05-21  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-05-21  Richard Hult  <rhult@hem.passagen.se>
 
 	* sv.po: Updated Swedish translation.
@@ -339,7 +343,7 @@
 2000-05-16  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-05-16 Yukihiro Nakai <nakai@gnome.gr.jp>
 
 	* ja.po: Update from Akira TAGOH.
@@ -347,7 +351,7 @@
 2000-05-16 Sami Pesonen <spesonen@dlc.fi>
 
 	* fi.po: Updated Finnish translation.
-	
+
 2000-05-14  Andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* sv.po: Updated Swedish translation.
@@ -376,7 +380,7 @@
 2000-05-12  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-05-09  Andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* update.sh: Updated.
@@ -409,7 +413,7 @@
 2000-05-03 Sami Pesonen <spesonen@dlc.fi> 
 
 	* fi.po: Update
-	
+
 2000-05-02  Andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* sv.po: Updated Swedish translation.
@@ -425,7 +429,7 @@
 2000-04-27  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-04-27  Jesus Bravo Alvarez  <jba@pobox.com>
 
 	* gl.po: Updated Galician translation.
@@ -434,7 +438,7 @@
 
 	* POTFILES.in: Added missing files. src/bts.c and src/util.c
 	* no.po: Updated Norwegian translation.
-	
+
 2000-04-25  Jesus Bravo Alvarez  <jba@pobox.com>
 
 	* gl.po: Updated Galician translation.
@@ -442,7 +446,7 @@
 2000-04-25 Sami Pesonen <spesonen@dlc.fi>
 
 	* fi.po: Added finnish translation
-	
+
 2000-04-25  Arjan Scherpenisse  <Arjan Scherpenisse <acscherp@wins.uva.nl>>
 
 	* nl.po: added a better translation
@@ -468,7 +472,7 @@
 2000-04-18  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-04-18  Valek Filippov  <frob@df.ru>
 
 	* ru.po: Updated russian translation.
@@ -517,7 +521,7 @@
 2000-04-01  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-04-01  Spiros Papadimitriou <spapadim+@cs.cmu.edu>
 
 	* el.po: Updated Greek translation (from Simos Xenitellis, simos@hellug.gr)
@@ -538,7 +542,7 @@
 2000-03-27  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-03-27  Karl EICHWALDER  <ke@suse.de>
 
 	* de.po: New file.
@@ -558,7 +562,7 @@
 2000-03-07  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 
 	* cs.po: added a bunch of czech translations
@@ -566,7 +570,7 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 2000-02-26  Kjartan Maraas  <kmaraas@online.no>
 
 	* no.po: Updated Norwegian translation.
-	
+
 2000-02-23  Richard Hult  <rhult@hem.passagen.se>
 
 	* sv.po: Updated Swedish translation.
@@ -593,8 +597,8 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 
 2000-01-24  Sergey Panov <sipan@mit.edu>
 
-        * ru.po: Added Russian translation from
-         Valek Filippov <frob@df.ru>
+	* ru.po: Added Russian translation from Valek Filippov
+	 <frob@df.ru>
 
 2000-01-23  Spiros Papadimitriou  <spapadim+@cs.cmu.edu>
 
@@ -616,8 +620,8 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 2000-01-05  Vincent Renardias <vincent@ldsol.com>
 
 	* fr.po: updated.
-		< 27 translated messages, 20 fuzzy translations, 47 untranslated messages.
-		> 47 translated messages, 17 fuzzy translations, 30 untranslated messages.
+	< 27 translated messages, 20 fuzzy translations, 47 untranslated messages.
+	> 47 translated messages, 17 fuzzy translations, 30 untranslated messages.
 
 2000-01-03  Kjartan Maraas  <kmaraas@online.no>
 
@@ -659,13 +663,12 @@ Sat Mar 04 19:24:10 2000  George Lebl <jirka@5z.com>
 1999-11-06  Kjartan  Maraas  <kmaraas@online.no>
 
 	* no.po: Updated translation.
-	
+
 1999-11-03  Vincent Renardias  <vincent@ldsol.com>
 
-	* fr.po: contributed by Herv藪
+	* fr.po: contributed by Herv?.
 
 1999-10-23  Kjartan Maraas  <kmaraas@online.no>
 
 	* ChangeLog: Added this
 	* no.po: And this too.
-	
