@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-03-24 19:15+0100\n"
 "Last-Translator: Pablo Saratxaga <pablo@mandrakesoft.com>\n"
 "Language-Team: Walon <linux-wa@chanae.alphanet.ch>\n"
@@ -114,7 +114,7 @@ msgstr ""
 "gdb n' a nén co fini di prinde les informåcions di disbugaedje.\n"
 "Touwer li process gdb (li trace del pile srè adon nén complete)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb a ddja fini"
 
@@ -143,11 +143,11 @@ msgstr ""
 "Dji n' a savou tcherdjî «%s».\n"
 "Verifyîz ki Bug Buddy a stî astalé comufåt s' i vs plait."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Estoz sheur di voleur rinoncî a ci metaedje a djoû chal?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -156,11 +156,11 @@ msgstr ""
 "Dji n' a savou drovî «%s».\n"
 "Verifyîz ki Bug Buddy a stî astalé comufåt s' i vs plait."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Tot"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -178,7 +178,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -187,7 +187,7 @@ msgstr ""
 "Nén possibe di processer li fitchî core avou gdb:\n"
 "«%s»"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -196,7 +196,7 @@ msgstr ""
 "Nén possibe di saveur ké programe a prodût\n"
 "«%s»"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 #, fuzzy
 msgid "Error on read... aborting"
 msgstr "Aroke dvins li foncsion di rapoirt\n"
@@ -480,15 +480,15 @@ msgstr ""
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Dinez l' no da vosse, s' i vs plait."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Dinez ene adresse emile valåbe, s' i vs plait."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -499,54 +499,54 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 #, fuzzy
 msgid "The specified file does not exist."
 msgstr "Li tinme n' egzisteye nén"
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "Li fitchî est del sôrte: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Evoyî ci rapoirt di bug tot d' shûte?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Dji n' sai nén drovî l' fitchî: %s"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "dji va enonder «%s»"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Dji n' sai enonder li programe d' emilaedje: «%s»"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -561,19 +561,19 @@ msgstr ""
 "\n"
 "Gråces traze côps!"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 #, fuzzy
 msgid ""
 "Are you sure you want to cancel\n"
@@ -585,6 +585,7 @@ msgid "Unable to open pipe"
 msgstr "Dji n' sai drovî ene bûze"
 
 #: src/util.c:73
+#, c-format
 msgid "Could not run '%s'."
 msgstr "Dji n' sai enonder «%s»."
 

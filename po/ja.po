@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS-20010708\n"
-"POT-Creation-Date: 2001-07-08 01:07+0900\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-07-08 01:13+0900\n"
 "Last-Translator: Akira TAGOH <tagoh@gnome.gr.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
@@ -110,7 +110,7 @@ msgstr ""
 "gdb はデバッグ情報の収集が完了しませんでした\n"
 "gdb プロセスを終了しますか (スタックトレースは不完全でしょう)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb はすでに終了しています"
 
@@ -139,11 +139,11 @@ msgstr ""
 "'%s' を読み込むことが出来ませんでした\n"
 "Bug Buddy が正しくインストールされているか確認してください"
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "本当にこの更新をキャンセルしたいですか?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -152,11 +152,11 @@ msgstr ""
 "'%s' を開くことが出来ませんでした\n"
 "Bug Buddy が正しくインストールされているか確認してください"
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "すべて"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "スタックトレースを取得中... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -182,14 +182,14 @@ msgstr ""
 "gdb によって core ファイルを処理できません:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr "作られたバイナリ '%s' から確定することが出来ません"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "読み込みでエラー...中断します"
 
@@ -484,15 +484,15 @@ msgstr "GNOME のグラフィカルな不具合報告ツール"
 msgid "The lame Bug Buddy web page"
 msgstr "不完全な Bug Buddy のウェブページ"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "あなたの名前を入れてください"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "有効な email アドレスを入れてください"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -509,53 +509,53 @@ msgstr ""
 "\n"
 "sendmail のために新しい位置を指定しますか?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "指定されたファイルはありません"
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "ファイルの種類: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' はテキストファイルの様には見えません"
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "不具合報告に分かりやすい件名を含めなければなりません"
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "不具合報告に分かりやすい説明を含めなければなりません"
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "この不具合報告を今提出しますか?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "ファイルを開くことが出来ません: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "実行される '%s' について"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "メールプログラムを開始することが出来ません: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "あなたの不具合報告は '%s' に保存されました"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -570,19 +570,19 @@ msgstr ""
 "\n"
 "ありがとうございます!"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "不具合報告のための製品を指定しなければなりません"
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "不具合報告のためのコンポーネントを指定しなければなりません"
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "不具合報告のためのバージョンを指定しなければなりません"
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-07-05 19:20+0200\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2000-06-25 01:16+0200\n"
 "Last-Translator: Andraz Tori <andraz.tori1@guest.arnes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -109,7 +109,7 @@ msgstr ""
 "gdb ni konèal z zbiranjem razhro¹èevalnih podatkov.\n"
 "Ubijem gdb proces (sled sklada bo nepopolna)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb je ¾e konèal z izvajanjem"
 
@@ -138,11 +138,11 @@ msgstr ""
 "Nisem mogel odpreti '%s'.\n"
 "Prosim preverite, da je bil Bug Buddy pravilno name¹èen."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Ste preprièani, da ¾elite zavrniti to posodobljenje?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "Nisem mogel odpreti '%s'.\n"
 "Prosim preverite, da je bil Bug Buddy pravilno name¹èen."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Vse"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Pridobivam sled sklada... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -181,7 +181,7 @@ msgstr ""
 "Ne morem obdelati core datoteke z gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Ne morem ugotoviti kater program je povzroèil\n"
 "'%s'"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Napaka pri branju... razveljavljam"
 
@@ -487,15 +487,15 @@ msgstr "Grafièno orodje za poroèanje o hro¹èih v GNOME-u."
 msgid "The lame Bug Buddy web page"
 msgstr "Leva spletna stran Bug Buddy-a"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Prosim vpi¹ite va¹e ime."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Prosim vpi¹ite veljaven e-po¹tni naslov."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -512,53 +512,53 @@ msgstr ""
 "\n"
 "Boste navedli novo mesto, kjer se nahaja program sendmail?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "Navedena datoteka ne obstaja."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "Datoteka je tipa: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' ne izgleda kot datoteka z besedilom."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "V poroèilu o hro¹èu mora biti nujno naveden predmet."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "V poroèilu o hro¹èu mora biti nujno naveden opis."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Takoj po¹lji to poroèilo o hro¹èu?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Ne morem odpreti datoteke: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "pognal bom '%s'"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Ne morem pognati programa za po¹to: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Va¹e poroèilo o hro¹èu je bilo shranjeno v '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -573,19 +573,19 @@ msgstr ""
 "\n"
 "Hvala!"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "V poroèilu o hro¹èu mora biti nujno naveden produkt."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "V poroèilu o hro¹èu mora biti nujno navedena komponenta."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "V poroèilu o hro¹èu mora biti nujno navedena razlièica."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

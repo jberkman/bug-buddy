@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-04-28 18:29+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
@@ -114,7 +114,7 @@ msgstr ""
 "gdb non rematou de obter a información de depuración.\n"
 "¿Matar o proceso gdb (a traza da pila non estará completa)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "o gdb xa rematou"
 
@@ -145,11 +145,11 @@ msgstr ""
 "Non foi posible abrir '%s'.\n"
 "Comprobe que o Bug Buddy está instalado correctamente."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "¿Está seguro de que quere cancelar a actualización?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -158,11 +158,11 @@ msgstr ""
 "Non foi posible abrir '%s'.\n"
 "Comprobe que o Bug Buddy foi instalado correctamente."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Todo"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -179,7 +179,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Obtendo a traza da pila... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -188,7 +188,7 @@ msgstr ""
 "Non se pode procesar o ficheiro core co gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -197,7 +197,7 @@ msgstr ""
 "Non se pode determinar o binario creado\n"
 "'%s'"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Erro ó ler... abortando"
 
@@ -493,15 +493,15 @@ msgstr "A ferramenta gráfica de GNOME para comunicar erros."
 msgid "The lame Bug Buddy web page"
 msgstr "A páxina web do Bug Buddy"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Indique o seu nome."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Indique un enderezo de correo electrónico válido."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -518,54 +518,54 @@ msgstr ""
 "\n"
 "¿Indicar outra localización do sendmail?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "O ficheiro indicado non existe."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "O ficheiro é de tipo: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' non semella ser un ficheiro de texto."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Ten que incluír unha liña de asunto comprensible no informe."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Ten que incluír unha descrición comprensible no informe."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Enviar informe de erro"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Non é posible abrir o ficheiro: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "a piques de executar '%s'"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Non se pode executar o programa de correo: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "O informe de erro foi gardado en '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -577,19 +577,19 @@ msgstr ""
 "O informe de erro foi enviado a:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "Ten que indicar un producto no informe."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "Ten que indicar un compoñente no informe."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "Ten que indicar unha versión no informe."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2000-11-21 11:42+02:00\n"
 "Last-Translator: Wu Yulun <migr@operamail.com>\n"
 "Language-Team: \n"
@@ -104,7 +104,7 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb 已经退出"
 
@@ -129,11 +129,11 @@ msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr ""
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -142,11 +142,11 @@ msgstr ""
 "无法打开 \"%s\"。\n"
 "请确保 bug-buddy 已正确安装。"
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr ""
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -168,14 +168,14 @@ msgstr ""
 "无法使用 gdb 处理 core 文件:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "读错误... 中止"
 
@@ -466,15 +466,15 @@ msgstr "Gnome 图形化BUG报告工具。"
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "请输入你的名字"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "请输入有效的邮件地址"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -485,55 +485,55 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "文件类型: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' 不像是文本文件。"
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 #, fuzzy
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 #, fuzzy
 msgid "You must include a comprehensible description in your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "是否立即发送BUG报告？"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "无法找开文件: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "无法打开邮件程序: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "你的BUG报告已存在\"%s\"里了"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -545,22 +545,22 @@ msgstr ""
 "你的BUG报告已发往:\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr "你应该为你的BUG报告确定一个主题和基本描叙。"
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

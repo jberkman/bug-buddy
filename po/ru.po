@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-03-26 18:18+04:00\n"
 "Last-Translator: Valek Filippov <frob@df.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -108,7 +108,7 @@ msgstr ""
 "gdb не закончил получение отладочной информации.\n"
 "Уничтожить gdb процесс (трассировка стека будет неполной)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb уже закрыт"
 
@@ -137,11 +137,11 @@ msgstr ""
 "Не удалось загрузить \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Вы уверены, что хотите отменить это обновление?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -150,11 +150,11 @@ msgstr ""
 "Не удалось открыть \"%s\".\n"
 "Убедитесь, что bug-buddy правильно установлен."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Все"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -171,7 +171,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Получение состояния стека... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -180,7 +180,7 @@ msgstr ""
 "Не удалось обработать gdb файл core:\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -189,7 +189,7 @@ msgstr ""
 "Невозможно определить какой двойичный файл создан\n"
 "\"%s\""
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Ошибка при чтении... прервание"
 
@@ -489,15 +489,15 @@ msgstr "Графический инструмент Gnome для сообщения об ошибках."
 msgid "The lame Bug Buddy web page"
 msgstr "Небольшая веб-страничка bug-buddy"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Пожалуйста, введите ваше имя."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Пожалуйста, введите ваш электронный адрес."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -514,53 +514,53 @@ msgstr ""
 "\n"
 "Укажете новое расположение sendmail?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "Указанный файл не существует."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "Файл типа: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' выглядит не как текстовый файл."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Вы должны включить разумную строку темы в ваше сообщение об ошибке."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Вы должны включить разумное описание в ваше сообщение об ошибке."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Отправить это сообщение об ошибке сейчас?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Не удалось открыть файл core: \"%s\""
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "о запуске '%s'"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Не удалось запустить почтовую программу: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ваше сообщение об ошибке сохранено в '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -573,19 +573,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "Вы должны указать программу для вашего сообщения об ошибке."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "Вы должны указать компонент для вашего сообщения об ошибке."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "Вы должны указать версию в вашем сообщении об ошибке."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

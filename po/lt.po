@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-02-12 03:10+0200\n"
 "Last-Translator: Gediminas Paulauskas <menesis@delfi.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -109,7 +109,7 @@ msgstr ""
 "gdb dar nebaigë surinkti derinimo informacijos. Nuþudyti gdb procesà "
 "(\"stack trace\" bus nepilnas)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb jau baigë darbà"
 
@@ -138,11 +138,11 @@ msgstr ""
 "Negalëjau ákelti ¥%s´.\n"
 "Praðau, ásitikink, ar bug-buddy buvo teisingai ádiegta."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Ar tikrai nori nutraukti ðá atnaujimà?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, fuzzy, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "Negalëjau atidaryti ¥%s´.\n"
 "Praðau, ásitikink, ar bug-buddy buvo teisingai ádiegta."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Visø"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 #, fuzzy
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
@@ -173,21 +173,21 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr ""
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Klaida skaitant... nutraukiam"
 
@@ -487,15 +487,15 @@ msgstr "Grafinis klaidø praneðimo árankis, skirtas GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Kreivas bug-buddy tinklapis"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Praðau, ávesk savo vardà."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Praðau, ávesk veikiantá el. paðto adresà."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -512,53 +512,53 @@ msgstr ""
 "\n"
 "Ar nori nurodyti naujà sendmail vietà?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "Nurodyta byla neegzistuoja."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "Bylos tipas yra: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "Atrodo, kad ¥%s´ nëra tekstinë byla."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "Tu turi áraðyti suvokiamà klaidos praneðimo temà."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Tu turi áraðyti suvokiamà klaidos praneðimo apraðymà."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Iðsiøsti ðá klaidos praneðimà dabar?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Negaliu atidaryti bylos: ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "ruoðiuosi paleisti ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Negaliu paleisti paðto programos: ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Tavo klaidos praneðimas buvo iðsaugotas á ¥%s´"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -571,19 +571,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti produktà."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti komponentà."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "Klaidos praneðime tu turi nurodyti versijà."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

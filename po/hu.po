@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy VERSION\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-06-20 08:44+0200\n"
 "Last-Translator: András Tímár <timar@gnome.hu>\n"
 "Language-Team: Hungarian <hu@gnome.hu>\n"
@@ -111,7 +111,7 @@ msgstr ""
 "A gdb még nem fejezte be a hibakeresési adatok gyûjtését.\n"
 "Megszakítsam a gdb folyamatot (a stack trace nem lesz teljes)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "A gdb már kilépett."
 
@@ -140,11 +140,11 @@ msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Biztos félbeszakítod ezt a frissítést?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -153,11 +153,11 @@ msgstr ""
 "Nem lehet '%s'-t megnyitni.\n"
 "Ellenõrizd, hogy bug-buddy megfelelõen volt-e telepítve."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Minden"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -174,7 +174,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Verem információ (stack trace) lekérdezése... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -183,7 +183,7 @@ msgstr ""
 "Nem sikerült a core fájlt gdb-vel feldolgozni:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -192,7 +192,7 @@ msgstr ""
 "Nem tudom megállapítani, melyik bináris\n"
 "hozta létre '%s'-t."
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Hiba történt olvasás közben... kilépés"
 
@@ -488,15 +488,15 @@ msgstr "A GNOME grafikus hibabejelentõ eszköze"
 msgid "The lame Bug Buddy web page"
 msgstr "A vagesz bug-buddy honlap"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Add meg a neved!"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Írd be az emailcímed!"
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -513,53 +513,53 @@ msgstr ""
 "\n"
 "Megadsz új elérési útvonalat a sendmail-hez?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "A megadott fájl nem létezik."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "A fájl típusa: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' nem tûnik szöveges fájlnak."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "A hibajelentéshez meg kell adni egy értelmes tárgy mezõt."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "A hibajelentéshez kell adni egy használható leírást."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Most küldjem el a hibajelentést?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nem lehet '%s'-t megnyitni"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "most fog '%s' lefutni"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nem lehet a '%s' levelezõprogramot elindítani"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "A hibabejelentés ide lett mentve: '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -574,19 +574,19 @@ msgstr ""
 "\n"
 "Köszönjük!"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "A hibajelentéshez meg kell adni egy terméket."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "A hibajelentéshez meg kell adni egy komponenst."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "A hibajelentéshez meg kell adni a verziót."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"

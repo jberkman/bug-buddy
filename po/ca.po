@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-07-28 12:34+0200\n"
 "Last-Translator: Softcatalà <tradgnome@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
@@ -110,7 +110,7 @@ msgstr ""
 "El gdb no ha acabat d'obtenir la informació de depuració.\n"
 "Voleu interrompre el procés gdb? (el seguiment de la pila serà incomplet)"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "El gdb ja s'ha abandonat"
 
@@ -139,11 +139,11 @@ msgstr ""
 "No s'ha pogut carregar '%s'.\n"
 "Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Esteu segur que voleu cancel·lar aquesta actualització?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -152,11 +152,11 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, assegureu-vos que el Bug Buddy s'ha instal·lat correctament."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Tots"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "S'està obtenint el seguiment de la pila... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -182,7 +182,7 @@ msgstr ""
 "No s'ha pogut processar el fitxer de nucli amb el gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -191,7 +191,7 @@ msgstr ""
 "No s'ha pogut determinar quin és el binari que va crear\n"
 "'%s'"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Error de lectura...s'està avortant"
 
@@ -490,15 +490,15 @@ msgstr "L'eina gràfica del GNOME per informar d'errors."
 msgid "The lame Bug Buddy web page"
 msgstr "La trista pàgina web del Bug Buddy"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Si us plau, introduïu el vostre nom."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Si us plau, introduïu una adreça electrònica vàlida."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -515,53 +515,54 @@ msgstr ""
 "\n"
 "Voleu indicar una nova ubicació per al sendmail?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "El fitxer especificat no existeix."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "El fitxer és del tipus: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' no sembla un fitxer de text."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr "A l'informe d'errors heu d'incloure una línia d'assumpte comprensible."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr "A l'informe d'errors heu d'incloure una descripció comprensible."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Voleu enviar ara aquest informe d'errors?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "No es pot obrir el fitxer: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "ara s'executarà '%s'"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "No es pot iniciar el programa de correu: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -571,23 +572,22 @@ msgid ""
 msgstr ""
 "S'ha enviat el vostre informe d'errors a:\n"
 "\n"
-"        <%s>"
-"\n"
+"        <%s>\n"
 "Gràcies!"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "Heu d'indicar el producte a què es refereix l'informe d'errors."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "Heu d'indicar el component a què es refereix l'informe d'errors."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "Heu d'indicar la versió a què es refereix l'informe d'errors."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
@@ -879,4 +879,3 @@ msgstr "Informeu d'un error al GNOME"
 
 #~ msgid "Submit to individual author"
 #~ msgstr "Enviar-lo a l'autor"
-

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2001-07-13 12:30+0200\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-06-25 18:55+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian (Nynorsk)\n"
@@ -119,7 +119,7 @@ msgid ""
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 #, fuzzy
 msgid "gdb has already exited"
 msgstr "Spelet er alt starta  ..."
@@ -143,23 +143,23 @@ msgid ""
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 #, fuzzy
 msgid "Are you sure you want to cancel this update?"
 msgstr "Er du sikker pÃ¥ at du vil sletta denne mappa?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly."
 msgstr ""
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Alle"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Lastar tilbakelogg ..."
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, fuzzy, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -181,14 +181,14 @@ msgstr ""
 "Kunne ikkje skriva ut med:\n"
 " %1"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
 "'%s'"
 msgstr ""
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 #, fuzzy
 msgid "Error on read... aborting"
 msgstr "feil ved lasting av %1, avbryt\n"
@@ -500,17 +500,17 @@ msgstr ""
 msgid "The lame Bug Buddy web page"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 #, fuzzy
 msgid "Please enter your name."
 msgstr "&Skriv inn namnet ditt:"
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 #, fuzzy
 msgid "Please enter a valid email address."
 msgstr "Oppgi ei gyldig e-postadresse."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -521,54 +521,54 @@ msgid ""
 "Specify a new location for sendmail?"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "Den oppgjevne fila finst ikkje."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, fuzzy, c-format
 msgid "File is of type: %s"
 msgstr "Fil opna: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, fuzzy, c-format
 msgid "'%s' does not look like a text file."
 msgstr "Kunne ikkje lasta fila."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Send ein feilrapport"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, fuzzy, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Kan ikkje opna utfila."
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, fuzzy, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Kunne ikkje starta barneprosess '%1'."
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -578,22 +578,22 @@ msgid ""
 "Thanks!"
 msgstr ""
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 #, fuzzy
 msgid "You must specify a product for your bug report."
 msgstr "Du må oppgi eit skript.\n"
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 #, fuzzy
 msgid "You must specify a component for your bug report."
 msgstr "Du må oppgi eit telefonnummer!"
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 #, fuzzy
 msgid "You must specify a version for your bug report."
 msgstr "Du må oppgi ei målfil."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 #, fuzzy
 msgid ""
 "Are you sure you want to cancel\n"
@@ -623,4 +623,3 @@ msgstr "Feilrapport"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr ""
-

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.90\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
+"POT-Creation-Date: 2001-08-06 17:14-0400\n"
 "PO-Revision-Date: 2001-02-16 00:19+0200\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <gnome-ro@pelican.level7.ro>\n"
@@ -109,7 +109,7 @@ msgstr ""
 "gdb nu a terminat obþinerea informaþiilor de depanare.\n"
 "Omorâþi procesul gdb (stack trace-ul va fi incomplet)?"
 
-#: src/bug-buddy.c:177 src/gdb-buddy.c:118
+#: src/bug-buddy.c:177 src/gdb-buddy.c:117
 msgid "gdb has already exited"
 msgstr "gdb deja a ieºit"
 
@@ -138,11 +138,11 @@ msgstr ""
 "Nu am putut încãrca '%s'\n"
 "Vã rog sã vã asiguraþi cã Bug Buddy este instalat corect."
 
-#: src/bugzilla.c:476
+#: src/bugzilla.c:477
 msgid "Are you sure you want to cancel this update?"
 msgstr "Sunteþi sigur cã doriþi sã renunþaþi la aceastã actualizare?"
 
-#: src/bugzilla.c:592
+#: src/bugzilla.c:593
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -151,11 +151,11 @@ msgstr ""
 "Nu am putut deschide '%s'.\n"
 "Vã rog sã vã asiguraþi cã Bug Buddy a fost instalat corect."
 
-#: src/bugzilla.c:603
+#: src/bugzilla.c:604
 msgid "All"
 msgstr "Toate"
 
-#: src/bugzilla.c:627
+#: src/bugzilla.c:628
 msgid ""
 "Bug Buddy has determined that some of its information about\n"
 "the various bug tracking systems may need to be updated.\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Obtaining stack trace... (%d)"
 msgstr "Obþin stack trace-ul... (%d)"
 
-#: src/gdb-buddy.c:155
+#: src/gdb-buddy.c:154
 #, c-format
 msgid ""
 "Unable to process core file with gdb:\n"
@@ -181,7 +181,7 @@ msgstr ""
 "Nu pot procesa fiºierul core cu gdb:\n"
 "'%s'"
 
-#: src/gdb-buddy.c:181
+#: src/gdb-buddy.c:180
 #, c-format
 msgid ""
 "Unable to determine which binary created\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Nu pot determina ce binar a creat\n"
 "'%s'"
 
-#: src/gdb-buddy.c:217
+#: src/gdb-buddy.c:216
 msgid "Error on read... aborting"
 msgstr "Eroare la citire... renunþ"
 
@@ -490,15 +490,15 @@ msgstr "Utilitarul grafic de raportare a problemelor pentru GNOME."
 msgid "The lame Bug Buddy web page"
 msgstr "Pagina neinteresantã de web a lui Bug Buddy"
 
-#: src/united-states-of-bug-buddy.c:262
+#: src/united-states-of-bug-buddy.c:271
 msgid "Please enter your name."
 msgstr "Vã rog sã introduceþi numele dvs."
 
-#: src/united-states-of-bug-buddy.c:273
+#: src/united-states-of-bug-buddy.c:282
 msgid "Please enter a valid email address."
 msgstr "Vã rog sã introduceþi numele o adresã validã email."
 
-#: src/united-states-of-bug-buddy.c:288
+#: src/united-states-of-bug-buddy.c:297
 #, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.\n"
@@ -515,55 +515,55 @@ msgstr ""
 "\n"
 "Specificaþi o nouã locaþie pentru sendmail?"
 
-#: src/united-states-of-bug-buddy.c:338
+#: src/united-states-of-bug-buddy.c:347
 msgid "The specified file does not exist."
 msgstr "Fiºierul specificat nu existã."
 
-#: src/united-states-of-bug-buddy.c:344
+#: src/united-states-of-bug-buddy.c:353
 #, c-format
 msgid "File is of type: %s"
 msgstr "Fiºierul este de tipul: %s"
 
-#: src/united-states-of-bug-buddy.c:347
+#: src/united-states-of-bug-buddy.c:356
 #, c-format
 msgid "'%s' does not look like a text file."
 msgstr "'%s' nu pare sã fie un fiºier text."
 
-#: src/united-states-of-bug-buddy.c:358
+#: src/united-states-of-bug-buddy.c:367
 msgid "You must include a comprehensible subject line in your bug report."
 msgstr ""
 "Trebuie sã includeþi un subiect inteligibil în raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:366
+#: src/united-states-of-bug-buddy.c:375
 msgid "You must include a comprehensible description in your bug report."
 msgstr ""
 "Trebuie sã includeþi o descriere inteligibilã în raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:383
+#: src/united-states-of-bug-buddy.c:392
 msgid "Submit this bug report now?"
 msgstr "Trimit raportul acum?"
 
-#: src/united-states-of-bug-buddy.c:397
+#: src/united-states-of-bug-buddy.c:406
 #, c-format
 msgid "Unable to open file: '%s'"
 msgstr "Nu pot deschide fiºierul: '%s'"
 
-#: src/united-states-of-bug-buddy.c:409
+#: src/united-states-of-bug-buddy.c:418
 #, c-format
 msgid "about to run '%s'"
 msgstr "pe cale sã rulez '%s'"
 
-#: src/united-states-of-bug-buddy.c:413
+#: src/united-states-of-bug-buddy.c:422
 #, c-format
 msgid "Unable to start mail program: '%s'"
 msgstr "Nu pot porni programul de email: '%s'"
 
-#: src/united-states-of-bug-buddy.c:462
+#: src/united-states-of-bug-buddy.c:471
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Raportul dvs. de probleme a fost salvat în '%s'"
 
-#: src/united-states-of-bug-buddy.c:465
+#: src/united-states-of-bug-buddy.c:474
 #, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -576,19 +576,19 @@ msgstr ""
 "\n"
 "        <%s>"
 
-#: src/united-states-of-bug-buddy.c:503
+#: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."
 msgstr "Trebuie sã specificaþi un produs pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:512
+#: src/united-states-of-bug-buddy.c:521
 msgid "You must specify a component for your bug report."
 msgstr "Trebuie sã specificaþi o componentã pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:520
+#: src/united-states-of-bug-buddy.c:529
 msgid "You must specify a version for your bug report."
 msgstr "Trebuie sã specificaþi o versiune pentru raportul dvs. de probleme."
 
-#: src/united-states-of-bug-buddy.c:549
+#: src/united-states-of-bug-buddy.c:558
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
