@@ -4,7 +4,7 @@ AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
-AM_INIT_AUTOMAKE(bug-buddy, 2.1.2)
+AM_INIT_AUTOMAKE(bug-buddy, 2.1.3)
 
 AM_MAINTAINER_MODE
 
@@ -20,7 +20,7 @@ GNOME_VFS_REQUIRED="gnome-vfs-2.0 >= 1.9.1"
 LIBGNOME_REQUIRED="libgnome-2.0 >= 1.104.0"
 LIBGNOMECANVAS_REQUIRED="libgnomecanvas-2.0 >= 1.104.0"
 LIBGNOMEUI_REQUIRED="libgnomeui-2.0 >= 1.104.0"
-LIBGLADE_REQUIRED="libglade-2.0 >= 1.99.2"
+LIBGLADE_REQUIRED="libglade-2.0 >= 1.99.6"
 LIBXML_REQUIRED="libxml-2.0 >= 2.4.6"
 
 PKG_CHECK_MODULES(BUG_BUDDY, 

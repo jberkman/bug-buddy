@@ -1,3 +1,8 @@
+2002-02-04  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: 
+	* NEWS: 2.1.3
+
 2002-02-03 John Fleck <jfleck@inkstain.net>
 
 	* docs/C/bug-buddy.xml - patch from Kevin Conder converting doc to

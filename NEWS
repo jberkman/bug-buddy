@@ -1,3 +1,15 @@
+2.1.3:
+
+  * Fixes:
+
+	- don't allow mails from root@ (b.g.o #57490)
+
+  * Improvements:
+
+	- redesigned druid to be easier to use and more sane
+
+	- respects themes a bit more and looks more like GnomeDruid
+
 2.1.2:
 
   * Fixes:

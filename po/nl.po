@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2002-01-21 10:33-0500\n"
+"POT-Creation-Date: 2002-02-04 14:29-0500\n"
 "PO-Revision-Date: 2002-01-22 15:23+0100\n"
 "Last-Translator: Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -182,12 +182,12 @@ msgstr ""
 "Gelieve even te wachten terwijl Bug Buddy debuginformatie van de programma's "
 "verzamelt. Dit stelt Bug Buddy in staat om een "
 
-#: src/bug-buddy.c:594
+#: src/bug-buddy.c:613
 #, c-format
 msgid "Could not find pixmap: %s (%d)\n"
 msgstr "Kon pixmap niet vinden: %s (%d)\n"
 
-#: src/bug-buddy.c:661
+#: src/bug-buddy.c:680
 #, c-format
 msgid ""
 "Bug Buddy could not load its user interface file (%s).\n"
@@ -196,24 +196,24 @@ msgstr ""
 "Bug Buddy kon zijn gebruikersinterface bestand (%s)\n"
 "niet laden. Controleer of Bug Buddy correct geïnstalleerd is."
 
-#: src/bugzilla.c:586
+#: src/bugzilla.c:611
 msgid "ID"
 msgstr "ID"
 
-#: src/bug-buddy.glade.h:62 src/bugzilla.c:600 src/bugzilla.c:635
+#: src/bug-buddy.glade.h:44 src/bugzilla.c:625 src/bugzilla.c:660
 msgid "Product"
 msgstr "Product"
 
-#: src/bug-buddy.glade.h:18 src/bugzilla.c:606 src/bugzilla.c:675
+#: src/bug-buddy.glade.h:18 src/bugzilla.c:631 src/bugzilla.c:700
 msgid "Component"
 msgstr "Component"
 
-#: src/bug-buddy.glade.h:22 src/bugzilla.c:612 src/bugzilla.c:653
-#: src/bugzilla.c:681
+#: src/bug-buddy.glade.h:22 src/bugzilla.c:637 src/bugzilla.c:678
+#: src/bugzilla.c:706
 msgid "Description"
 msgstr "Korte omschrijving"
 
-#: src/bugzilla.c:741
+#: src/bugzilla.c:769
 #, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
@@ -222,7 +222,7 @@ msgstr ""
 "Bug Buddy kon '%s' niet openen.\n"
 "Controleer of bug-buddy correct is geïnstalleerd."
 
-#: src/bugzilla.c:759
+#: src/bugzilla.c:787
 msgid "All"
 msgstr "Alles"
 
@@ -257,8 +257,8 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken "
-":\n'%s' "
+"Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
+"'%s' "
 
 #: src/gdb-buddy.c:194
 #, c-format
@@ -366,107 +366,67 @@ msgid "Debug"
 msgstr "Debug"
 
 #: src/bug-buddy.glade.h:23
-msgid ""
-"Description of Problem:\n"
-"\n"
-"\n"
-"Steps to reproduce the problem:\n"
-"1. \n"
-"2. \n"
-"3. \n"
-"\n"
-"Actual Results:\n"
-"\n"
-"\n"
-"Expected Results:\n"
-"\n"
-"\n"
-"How often does this happen? \n"
-"\n"
-"\n"
-"Additional Information:"
-msgstr ""
-"Probleembeschrijving:\n"
-"\n"
-"\n"
-"Stappen om het probleem te reproduceren:\n"
-"1. \n"
-"2. \n"
-"3. \n"
-"\n"
-"Werkelijke resultaten:\n"
-"\n"
-"\n"
-"Verwachte resultaten:\n"
-"\n"
-"\n"
-"Hoe vaak gebeurt dit? \n"
-"\n"
-"\n"
-"Extra informatie:"
-
-#: src/bug-buddy.glade.h:41
 msgid "Download Progress"
 msgstr "Downloadvoortgang"
 
-#: src/bug-buddy.glade.h:42
+#: src/bug-buddy.glade.h:24
 msgid "Email"
 msgstr "E-mail"
 
-#: src/bug-buddy.glade.h:43
+#: src/bug-buddy.glade.h:25
 msgid "GNOME Mailer Settings"
 msgstr "GNOME E-mailer instellingen"
 
-#: src/bug-buddy.glade.h:44
+#: src/bug-buddy.glade.h:26
 msgid "Go"
 msgstr "Go"
 
-#: src/bug-buddy.glade.h:45
+#: src/bug-buddy.glade.h:27
 msgid "HTTP Proxy Settings"
 msgstr "HTTP Proxy instellingen"
 
-#: src/bug-buddy.glade.h:46
+#: src/bug-buddy.glade.h:28
 msgid "Include a text file"
 msgstr "Een tekst-bestand meesturen"
 
-#: src/bug-buddy.glade.h:47
+#: src/bug-buddy.glade.h:29
 msgid "Just save to a file so I can submit a bug report manually"
 msgstr "Sla op in een bestand zodat ik het zelf kan insturen"
 
-#: src/bug-buddy.glade.h:48
+#: src/bug-buddy.glade.h:30
 msgid "Location"
 msgstr "Plaats"
 
-#: src/bug-buddy.glade.h:49
+#: src/bug-buddy.glade.h:31
 msgid "Name"
 msgstr "Naam"
 
-#: src/bug-buddy.glade.h:50
+#: src/bug-buddy.glade.h:32
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: src/bug-buddy.glade.h:51
+#: src/bug-buddy.glade.h:33
 msgid "Path of sendmail"
 msgstr "Het pad naar sendmail"
 
-#: src/bug-buddy.glade.h:52
+#: src/bug-buddy.glade.h:34
 msgid "Please choose a component, version, and severity level."
 msgstr ""
 "Kies alstublieft een component, versie en niveau van ernstigheid van de bug."
 
-#: src/bug-buddy.glade.h:53
+#: src/bug-buddy.glade.h:35
 msgid "Please make any final corrections to the bug report."
 msgstr "Pas het rapport zo nodig aan voordat het opgestuurd wordt."
 
-#: src/bug-buddy.glade.h:54
+#: src/bug-buddy.glade.h:36
 msgid "Please make your bug report in English, if possible."
 msgstr "Het is belangrijk dat U de foutmelding in het engels beschrijft."
 
-#: src/bug-buddy.glade.h:55
+#: src/bug-buddy.glade.h:37
 msgid "Please select the product for the bug you wish to report."
 msgstr "Kies alstublieft het product waarvoor u de bug wilt rapporteren."
 
-#: src/bug-buddy.glade.h:56
+#: src/bug-buddy.glade.h:38
 msgid ""
 "Please take a minute to see if your bug is one of the most frequently "
 "reported bugs.\n"
@@ -477,7 +437,7 @@ msgstr ""
 "Als er al een rapport is ingestuurd over deze bug, stuur het dan alstublieft "
 "niet nogmaals in."
 
-#: src/bug-buddy.glade.h:58
+#: src/bug-buddy.glade.h:40
 msgid ""
 "Please wait while Bug Buddy updates its list\n"
 "of products for the bug tracking systems."
@@ -486,155 +446,155 @@ msgstr ""
 "met producten ververst voor het \"bugtracking\"\n"
 "systemen."
 
-#: src/bug-buddy.glade.h:60
+#: src/bug-buddy.glade.h:42
 msgid "Port"
 msgstr "Poort"
 
-#: src/bug-buddy.glade.h:61
+#: src/bug-buddy.glade.h:43
 msgid "Process ID"
 msgstr "Nummer van het proces (PID)"
 
-#: src/bug-buddy.glade.h:63
+#: src/bug-buddy.glade.h:45
 msgid "Proxy Settings..."
 msgstr "Proxy-instellingen..."
 
-#: src/bug-buddy.glade.h:64
+#: src/bug-buddy.glade.h:46
 msgid "Proxy requires a username and password"
 msgstr "Proxy vereist gebruikersnaam en wachtwoord"
 
-#: src/bug-buddy.glade.h:65
+#: src/bug-buddy.glade.h:47
 msgid "Save in"
 msgstr "Opslaan in"
 
-#: src/bug-buddy.glade.h:66
+#: src/bug-buddy.glade.h:48
 msgid "Save the report to..."
 msgstr "Het rapport opslaan in..."
 
-#: src/bug-buddy.glade.h:67
+#: src/bug-buddy.glade.h:49
 msgid "Saving:"
 msgstr "Opslaan:"
 
-#: src/bug-buddy.glade.h:68
+#: src/bug-buddy.glade.h:50
 msgid "Select a mailer"
 msgstr "Kies een e-mailer"
 
-#: src/bug-buddy.glade.h:69
+#: src/bug-buddy.glade.h:51
 msgid "Sendmail Settings"
 msgstr "Sendmail instellingen"
 
-#: src/bug-buddy.glade.h:70
+#: src/bug-buddy.glade.h:52
 msgid "Severity"
 msgstr "Ernst van de bug"
 
-#: src/bug-buddy.glade.h:71
+#: src/bug-buddy.glade.h:53
 msgid "Show Debugging Details"
 msgstr "Debugdetails weergeven"
 
-#: src/bug-buddy.glade.h:72
+#: src/bug-buddy.glade.h:54
 msgid "Show most frequent bugs in:"
 msgstr "Geef meest-voorkomende-bugs weer in:"
 
-#: src/bug-buddy.glade.h:73
+#: src/bug-buddy.glade.h:55
 msgid "Simple"
 msgstr "Simpel"
 
-#: src/bug-buddy.glade.h:74
+#: src/bug-buddy.glade.h:56
 msgid "Start"
 msgstr "Start"
 
-#: src/bug-buddy.glade.h:75
+#: src/bug-buddy.glade.h:57
 msgid "Start in terminal"
 msgstr "Start in terminal"
 
-#: src/bug-buddy.glade.h:76
+#: src/bug-buddy.glade.h:58
 msgid "Stop"
 msgstr "Stop"
 
-#: src/bug-buddy.glade.h:77
+#: src/bug-buddy.glade.h:59
 msgid "Submit another bug"
 msgstr "Nog een bug rapporteren"
 
-#: src/bug-buddy.glade.h:78
+#: src/bug-buddy.glade.h:60
 msgid "Summary"
 msgstr "Samenvatting"
 
-#: src/bug-buddy.glade.h:79
+#: src/bug-buddy.glade.h:61
 msgid "The product is not listed above."
 msgstr "Het product staat niet in de lijst."
 
-#: src/bug-buddy.glade.h:80
+#: src/bug-buddy.glade.h:62
 msgid "To"
 msgstr "Aan"
 
-#: src/bug-buddy.glade.h:81
+#: src/bug-buddy.glade.h:63
 msgid "To:"
 msgstr "Aan:"
 
-#: src/bug-buddy.glade.h:82
+#: src/bug-buddy.glade.h:64
 msgid "Understands Netscape remote control"
 msgstr "Begrijpt Netscape afstandbediening-opdrachten"
 
-#: src/bug-buddy.glade.h:83
+#: src/bug-buddy.glade.h:65
 msgid "Updating products list:"
 msgstr "Productlijst wordt ververst:"
 
-#: src/bug-buddy.glade.h:84
+#: src/bug-buddy.glade.h:66
 msgid "Use HTTP Proxy"
 msgstr "Gebruik HTTP Proxy"
 
-#: src/bug-buddy.glade.h:85
+#: src/bug-buddy.glade.h:67
 msgid "Use sendmail directly"
 msgstr "Gebruik sendmail direct"
 
-#: src/bug-buddy.glade.h:86
+#: src/bug-buddy.glade.h:68
 msgid "Use the default GNOME mailer"
 msgstr "Gebruik de standaard GNOME e-mailer"
 
-#: src/bug-buddy.glade.h:87
+#: src/bug-buddy.glade.h:69
 msgid "Username"
 msgstr "Gebruikersnaam"
 
-#: src/bug-buddy.glade.h:88
+#: src/bug-buddy.glade.h:70
 msgid "Version"
 msgstr "Versie"
 
-#: src/bug-buddy.glade.h:89
+#: src/bug-buddy.glade.h:71
 msgid "component"
 msgstr "component"
 
-#: src/bug-buddy.glade.h:90
+#: src/bug-buddy.glade.h:72
 msgid "desc"
 msgstr "beschr"
 
-#: src/bug-buddy.glade.h:91
+#: src/bug-buddy.glade.h:73
 msgid "email info"
 msgstr "e-mail info"
 
-#: src/bug-buddy.glade.h:92
+#: src/bug-buddy.glade.h:74
 msgid "finished"
 msgstr "klaar"
 
-#: src/bug-buddy.glade.h:93
+#: src/bug-buddy.glade.h:75
 msgid "gdb"
 msgstr "gdb"
 
-#: src/bug-buddy.glade.h:94
+#: src/bug-buddy.glade.h:76
 msgid "gnome"
 msgstr "gnome"
 
-#: src/bug-buddy.glade.h:95
+#: src/bug-buddy.glade.h:77
 msgid "mail config"
 msgstr "e-mail opties"
 
-#: src/bug-buddy.glade.h:96
+#: src/bug-buddy.glade.h:78
 msgid "mostfreq"
 msgstr "meestvoork"
 
-#: src/bug-buddy.glade.h:97
+#: src/bug-buddy.glade.h:79
 msgid "product"
 msgstr "product"
 
-#: src/bug-buddy.glade.h:98
+#: src/bug-buddy.glade.h:80
 msgid "sendmail"
 msgstr "sendmail"
 
@@ -825,434 +785,474 @@ msgstr "Bug Rapporteer Hulpmiddel"
 msgid "Report a bug in GNOME"
 msgstr "Rapporteer een bug in GNOME"
 
-msgid "Automatically continue to the next step when debugging is complete"
-msgstr "Direct naar de volgende pagina gaan wanneer het debuggen is voltooid"
+#~ msgid ""
+#~ "Description of Problem:\n"
+#~ "\n"
+#~ "\n"
+#~ "Steps to reproduce the problem:\n"
+#~ "1. \n"
+#~ "2. \n"
+#~ "3. \n"
+#~ "\n"
+#~ "Actual Results:\n"
+#~ "\n"
+#~ "\n"
+#~ "Expected Results:\n"
+#~ "\n"
+#~ "\n"
+#~ "How often does this happen? \n"
+#~ "\n"
+#~ "\n"
+#~ "Additional Information:"
+#~ msgstr ""
+#~ "Probleembeschrijving:\n"
+#~ "\n"
+#~ "\n"
+#~ "Stappen om het probleem te reproduceren:\n"
+#~ "1. \n"
+#~ "2. \n"
+#~ "3. \n"
+#~ "\n"
+#~ "Werkelijke resultaten:\n"
+#~ "\n"
+#~ "\n"
+#~ "Verwachte resultaten:\n"
+#~ "\n"
+#~ "\n"
+#~ "Hoe vaak gebeurt dit? \n"
+#~ "\n"
+#~ "\n"
+#~ "Extra informatie:"
 
-msgid "Automatically go to next page when complete"
-msgstr "Direct naar de volgende pagina gaan indien volledig"
+#~ msgid "Automatically continue to the next step when debugging is complete"
+#~ msgstr ""
+#~ "Direct naar de volgende pagina gaan wanneer het debuggen is voltooid"
 
-msgid "Content"
-msgstr "Inhoud"
+#~ msgid "Automatically go to next page when complete"
+#~ msgstr "Direct naar de volgende pagina gaan indien volledig"
 
-msgid "Package"
-msgstr "Pakket"
+#~ msgid "Content"
+#~ msgstr "Inhoud"
 
-msgid ""
-"Please wait while Bug Buddy determines some information about your system."
-msgstr ""
-"Even geduld AUB. Er wordt wat informatie over uw systeem wordt verzameld"
+#~ msgid "Package"
+#~ msgstr "Pakket"
 
-msgid "Send copy to yourself"
-msgstr "Een kopie naar uwzelf sturen"
+#~ msgid ""
+#~ "Please wait while Bug Buddy determines some information about your system."
+#~ msgstr ""
+#~ "Even geduld AUB. Er wordt wat informatie over uw systeem wordt verzameld"
 
-msgid "Skip this step in the future"
-msgstr "Deze stap voortaan overslaan"
+#~ msgid "Send copy to yourself"
+#~ msgstr "Een kopie naar uwzelf sturen"
 
-msgid ""
-"This program will walk you through the steps for \n"
-"submitting a bug report for projects such as GNOME.\n"
-"\n"
-"These bug reports are submitted via email, so\n"
-"please specify your email address so you can be\n"
-"contacted if further information is required, or\n"
-"when a fixed version is available."
-msgstr ""
-"Dit programma helpt je bij het rapporteren van bugs\n"
-"voor projecten als GNOME.\n"
-"\n"
-"Deze rapporten worden opgestuurd via e-mail, \n"
-"dus geef alstublieft uw e-mail adres zodat contact\n"
-"met u gemaakt kan worden als meer informatie nodig is,\n"
-"of wanneer er een oplossing is voor de bug."
+#~ msgid "Skip this step in the future"
+#~ msgstr "Deze stap voortaan overslaan"
 
-msgid "Version installed"
-msgstr "Geinstalleerde versie"
+#~ msgid ""
+#~ "This program will walk you through the steps for \n"
+#~ "submitting a bug report for projects such as GNOME.\n"
+#~ "\n"
+#~ "These bug reports are submitted via email, so\n"
+#~ "please specify your email address so you can be\n"
+#~ "contacted if further information is required, or\n"
+#~ "when a fixed version is available."
+#~ msgstr ""
+#~ "Dit programma helpt je bij het rapporteren van bugs\n"
+#~ "voor projecten als GNOME.\n"
+#~ "\n"
+#~ "Deze rapporten worden opgestuurd via e-mail, \n"
+#~ "dus geef alstublieft uw e-mail adres zodat contact\n"
+#~ "met u gemaakt kan worden als meer informatie nodig is,\n"
+#~ "of wanneer er een oplossing is voor de bug."
 
-msgid "intro"
-msgstr "intro"
+#~ msgid "Version installed"
+#~ msgstr "Geinstalleerde versie"
 
-msgid "system"
-msgstr "systeem"
+#~ msgid "intro"
+#~ msgstr "intro"
 
-msgid "Submitting the Report"
-msgstr "Een bugrapport opsturen"
+#~ msgid "system"
+#~ msgstr "systeem"
 
-msgid ""
-"'%s' doesn't seem to exist.\n"
-"\n"
-"You won't be able to actually submit a bug report, but you will\n"
-"be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"'%s' lijkt niet te bestaan.\n"
-"\n"
-"Het is zo te zien niet mogelijk om daadwerkelijk een bugrapport op te "
-"sturen,\nmaar u kunt het in een bestand opslaan (om deze dan later op te "
-"sturen). \n"
-"\n"
-"Wil u de plaats van sendmail opnieuw invullen?"
+#~ msgid "Submitting the Report"
+#~ msgstr "Een bugrapport opsturen"
 
-msgid ""
-"Bug Buddy has determined that some of its information about\n"
-"the various bug tracking systems may need to be updated.\n"
-"\n"
-"Should Bug Buddy try to update these files now?"
-msgstr ""
-"Bug buddy heeft vastgesteld dat sommige gegevens over de\n"
-"diverse \"bugtracking\"-systemen misschien ververst moeten worden.\n"
-"\n"
-"Moet Bug Buddy de informatie nu proberen te verversen?"
+#~ msgid ""
+#~ "'%s' doesn't seem to exist.\n"
+#~ "\n"
+#~ "You won't be able to actually submit a bug report, but you will\n"
+#~ "be able to save it to a file.\n"
+#~ "\n"
+#~ "Specify a new location for sendmail?"
+#~ msgstr ""
+#~ "'%s' lijkt niet te bestaan.\n"
+#~ "\n"
+#~ "Het is zo te zien niet mogelijk om daadwerkelijk een bugrapport op te "
+#~ "sturen,\n"
+#~ "maar u kunt het in een bestand opslaan (om deze dan later op te "
+#~ "sturen). \n"
+#~ "\n"
+#~ "Wil u de plaats van sendmail opnieuw invullen?"
 
-msgid "download"
-msgstr "download"
+#~ msgid ""
+#~ "Bug Buddy has determined that some of its information about\n"
+#~ "the various bug tracking systems may need to be updated.\n"
+#~ "\n"
+#~ "Should Bug Buddy try to update these files now?"
+#~ msgstr ""
+#~ "Bug buddy heeft vastgesteld dat sommige gegevens over de\n"
+#~ "diverse \"bugtracking\"-systemen misschien ververst moeten worden.\n"
+#~ "\n"
+#~ "Moet Bug Buddy de informatie nu proberen te verversen?"
 
-msgid "Are you sure you want to cancel this update?"
-msgstr "Weet u zeker dat u het rapporteren van deze bug wilt afbreken?"
+#~ msgid "download"
+#~ msgstr "download"
 
-msgid "Error on fork()."
-msgstr "Fout bij fork()."
+#~ msgid "Are you sure you want to cancel this update?"
+#~ msgstr "Weet u zeker dat u het rapporteren van deze bug wilt afbreken?"
 
-msgid "Full description of the bug, including how to reproduce it"
-msgstr ""
-"Volledige beschrijving van de bug, inclusief een beschrijving om die te "
-"reproduceren"
+#~ msgid "Error on fork()."
+#~ msgstr "Fout bij fork()."
 
-msgid "Short subject for the bug report"
-msgstr "Korte omschrijving van het bugrapport"
+#~ msgid "Full description of the bug, including how to reproduce it"
+#~ msgstr ""
+#~ "Volledige beschrijving van de bug, inclusief een beschrijving om die te "
+#~ "reproduceren"
 
-msgid "'%s' does not look like a text file."
-msgstr "'%s' ziet er niet uit als een tekstbestand."
+#~ msgid "Short subject for the bug report"
+#~ msgstr "Korte omschrijving van het bugrapport"
 
-msgid "Unable to open pipe"
-msgstr "Kan de pipe niet openen"
+#~ msgid "'%s' does not look like a text file."
+#~ msgstr "'%s' ziet er niet uit als een tekstbestand."
 
-msgid "Could not run '%s'."
-msgstr "Het programma '%s' kon niet gestart worden."
+#~ msgid "Unable to open pipe"
+#~ msgstr "Kan de pipe niet openen"
 
-msgid "Error on read..."
-msgstr "Fout tijdens het lezen..."
+#~ msgid "Could not run '%s'."
+#~ msgstr "Het programma '%s' kon niet gestart worden."
 
-msgid ""
-"Could not open '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Ik kon '%s' niet openen.\n"
-"Controleer of bug-buddy correct is geïnstalleerd."
+#~ msgid "Error on read..."
+#~ msgstr "Fout tijdens het lezen..."
 
-msgid "Distribution"
-msgstr "Distributie"
+#~ msgid ""
+#~ "Could not open '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ik kon '%s' niet openen.\n"
+#~ "Controleer of bug-buddy correct is geïnstalleerd."
 
-msgid "System"
-msgstr "Systeem"
+#~ msgid "Distribution"
+#~ msgstr "Distributie"
 
-msgid "critical"
-msgstr "kritiek"
+#~ msgid "System"
+#~ msgstr "Systeem"
 
-msgid "grave"
-msgstr "ernstig"
+#~ msgid "critical"
+#~ msgstr "kritiek"
 
-msgid "normal"
-msgstr "normaal"
+#~ msgid "grave"
+#~ msgstr "ernstig"
 
-msgid "wishlist"
-msgstr "verlanglijst"
+#~ msgid "normal"
+#~ msgstr "normaal"
 
-msgid "software bug"
-msgstr "software fout"
+#~ msgid "wishlist"
+#~ msgstr "verlanglijst"
 
-msgid "documentation bug"
-msgstr "documentatie fout"
+#~ msgid "software bug"
+#~ msgstr "software fout"
 
-msgid "change request"
-msgstr "verzoek om verandering"
+#~ msgid "documentation bug"
+#~ msgstr "documentatie fout"
 
-msgid "support"
-msgstr "ondersteuning"
+#~ msgid "change request"
+#~ msgstr "verzoek om verandering"
 
-msgid ""
-"It is much more helpful if you specify\n"
-"a more specific package than 'general'.\n"
-"\n"
-"Please specify a package."
-msgstr ""
-"Het is help voller als u\n"
-"een specifieker packet dan 'general' kiest.\n"
-"\n"
-"Kies alstublieft een ander paket."
+#~ msgid "support"
+#~ msgstr "ondersteuning"
 
-msgid ""
-"You must include a subject and a description\n"
-"in your bug report."
-msgstr ""
-"Het is verplicht om een onderwerp en een beschrijving\n"
-"in het rapport op te nemen."
+#~ msgid ""
+#~ "It is much more helpful if you specify\n"
+#~ "a more specific package than 'general'.\n"
+#~ "\n"
+#~ "Please specify a package."
+#~ msgstr ""
+#~ "Het is help voller als u\n"
+#~ "een specifieker packet dan 'general' kiest.\n"
+#~ "\n"
+#~ "Kies alstublieft een ander paket."
 
-msgid ""
-"'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a bug report, but you will be able to save it to a file.\n"
-"\n"
-"Specify a new location for sendmail?"
-msgstr ""
-"'%s' lijkt niet te bestaan.\n"
-"Het is zo te zien niet mogelijk om daadwerkelijk een bugrapport\n"
-"op te sturen, maar u kunt het wel in een bestand opslaan.\n"
-"\n"
-"Wil u de plaats van sendmail opnieuw invullen?"
+#~ msgid ""
+#~ "You must include a subject and a description\n"
+#~ "in your bug report."
+#~ msgstr ""
+#~ "Het is verplicht om een onderwerp en een beschrijving\n"
+#~ "in het rapport op te nemen."
 
-msgid "You must specify a recipient email address"
-msgstr "U moet wel een e-mail adres specificeren"
+#~ msgid ""
+#~ "'%s' doesn't seem to exist.  You won't be able to actually\n"
+#~ "submit a bug report, but you will be able to save it to a file.\n"
+#~ "\n"
+#~ "Specify a new location for sendmail?"
+#~ msgstr ""
+#~ "'%s' lijkt niet te bestaan.\n"
+#~ "Het is zo te zien niet mogelijk om daadwerkelijk een bugrapport\n"
+#~ "op te sturen, maar u kunt het wel in een bestand opslaan.\n"
+#~ "\n"
+#~ "Wil u de plaats van sendmail opnieuw invullen?"
 
-msgid "Please choose a file to save to."
-msgstr "Kiest U een bestand waarin de bug opgeslagen moet worden"
+#~ msgid "You must specify a recipient email address"
+#~ msgstr "U moet wel een e-mail adres specificeren"
 
-msgid ""
-"The file '%s' already exists.\n"
-"Overwrite this file?"
-msgstr ""
-"Het bestand '%s' bestaat reeds. \n"
-"Wilt U dit bestand overschrijven?"
+#~ msgid "Please choose a file to save to."
+#~ msgstr "Kiest U een bestand waarin de bug opgeslagen moet worden"
 
-msgid "Help"
-msgstr "Help"
+#~ msgid ""
+#~ "The file '%s' already exists.\n"
+#~ "Overwrite this file?"
+#~ msgstr ""
+#~ "Het bestand '%s' bestaat reeds. \n"
+#~ "Wilt U dit bestand overschrijven?"
 
-msgid "Refresh"
-msgstr "Verversen"
+#~ msgid "Help"
+#~ msgstr "Help"
 
-msgid "Collect debugging information from a crashed application"
-msgstr "Verzamelen van debug-informatie"
+#~ msgid "Refresh"
+#~ msgstr "Verversen"
 
-msgid "Collect debugging information from a core file"
-msgstr "Verzamelen van debug-informatie"
+#~ msgid "Collect debugging information from a crashed application"
+#~ msgstr "Verzamelen van debug-informatie"
 
-msgid ""
-"Could not find '%s'.\n"
-"Please make sure bug-buddy was installed correctly."
-msgstr ""
-"Ik kon '%s' niet vinden.\n"
-"Controleer of bug-buddy correct is geïnstalleerd."
+#~ msgid "Collect debugging information from a core file"
+#~ msgstr "Verzamelen van debug-informatie"
 
-msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr "Welkom in de Wondere Wereld van bug-buddy"
+#~ msgid ""
+#~ "Could not find '%s'.\n"
+#~ "Please make sure bug-buddy was installed correctly."
+#~ msgstr ""
+#~ "Ik kon '%s' niet vinden.\n"
+#~ "Controleer of bug-buddy correct is geïnstalleerd."
 
-msgid ""
-"bug-buddy will walk you through the process\n"
-"of submitting a bug report.  If this is your first time \n"
-"using bug-buddy, you will be prompted for your\n"
-"email address so that the bug report can be\n"
-"submitted."
-msgstr ""
-"Bug-buddy zal u helpen met invullen en \n"
-"opsturen van een bugrapport. Als het de eerste keer is \n"
-"dat U bug-buddy gebruikt, zal uw E-mail adres gevraagt \n"
-"worden, dat gebruikt zal worden om uw rapport per email te\n"
-"versturen."
+#~ msgid "Welcome to the Wonderful World of bug-buddy"
+#~ msgstr "Welkom in de Wondere Wereld van bug-buddy"
 
-msgid "Contact Information"
-msgstr "Contactinformatie"
+#~ msgid ""
+#~ "bug-buddy will walk you through the process\n"
+#~ "of submitting a bug report.  If this is your first time \n"
+#~ "using bug-buddy, you will be prompted for your\n"
+#~ "email address so that the bug report can be\n"
+#~ "submitted."
+#~ msgstr ""
+#~ "Bug-buddy zal u helpen met invullen en \n"
+#~ "opsturen van een bugrapport. Als het de eerste keer is \n"
+#~ "dat U bug-buddy gebruikt, zal uw E-mail adres gevraagt \n"
+#~ "worden, dat gebruikt zal worden om uw rapport per email te\n"
+#~ "versturen."
 
-msgid "Choose which sendmail to use"
-msgstr "Welk 'sendmail' programma moet er gebruikt worden"
+#~ msgid "Contact Information"
+#~ msgstr "Contactinformatie"
 
-msgid "Email Address"
-msgstr "E-mail adres"
+#~ msgid "Choose which sendmail to use"
+#~ msgstr "Welk 'sendmail' programma moet er gebruikt worden"
 
-msgid ""
-"bug-buddy will walk you through the process of\n"
-"submitting a bug report.  You can click the help\n"
-"button for a more in-depth explanation of the process."
-msgstr ""
-"Bug-buddy zal u helpen met invullen en \n"
-"opsturen van een bugrapport. U kunt op de help knop\n"
-"klikken om een gedetailleerdere uitleg van de procedure\n"
-"te krijgen."
+#~ msgid "Email Address"
+#~ msgstr "E-mail adres"
 
-msgid "Report Information"
-msgstr "Rapportinformatie"
+#~ msgid ""
+#~ "bug-buddy will walk you through the process of\n"
+#~ "submitting a bug report.  You can click the help\n"
+#~ "button for a more in-depth explanation of the process."
+#~ msgstr ""
+#~ "Bug-buddy zal u helpen met invullen en \n"
+#~ "opsturen van een bugrapport. U kunt op de help knop\n"
+#~ "klikken om een gedetailleerdere uitleg van de procedure\n"
+#~ "te krijgen."
 
-msgid ""
-"Select a bug tracking system to use, and then fill out\n"
-"the remaining information."
-msgstr ""
-"Kies een foutvolgsysteem en vul de overige \n"
-"informatie in."
+#~ msgid "Report Information"
+#~ msgstr "Rapportinformatie"
 
-msgid "Class"
-msgstr "Type"
+#~ msgid ""
+#~ "Select a bug tracking system to use, and then fill out\n"
+#~ "the remaining information."
+#~ msgstr ""
+#~ "Kies een foutvolgsysteem en vul de overige \n"
+#~ "informatie in."
 
-msgid ""
-"Please check to see if your bug has already been submitted,\n"
-"and if so, use \"Add information to existing report\" above."
-msgstr ""
-"Kijkt u AUB of de fout reeds eerder is gemeld, en zo ja, kies\n"
-"dan hierboven \"Informatie aan een bestaande bug toevoegen\"."
+#~ msgid "Class"
+#~ msgstr "Type"
 
-msgid "Bug Number"
-msgstr "Bug Nummer"
+#~ msgid ""
+#~ "Please check to see if your bug has already been submitted,\n"
+#~ "and if so, use \"Add information to existing report\" above."
+#~ msgstr ""
+#~ "Kijkt u AUB of de fout reeds eerder is gemeld, en zo ja, kies\n"
+#~ "dan hierboven \"Informatie aan een bestaande bug toevoegen\"."
 
-msgid "Select the crashed application's binary"
-msgstr "Kies het uitgevoerde bestand van het programma"
+#~ msgid "Bug Number"
+#~ msgstr "Bug Nummer"
 
-msgid "Collecting Debugging Information"
-msgstr "Debuginformatie wordt verzameld"
+#~ msgid "Select the crashed application's binary"
+#~ msgstr "Kies het uitgevoerde bestand van het programma"
 
-msgid "Please verify that this information is correct"
-msgstr "Controleerd U of deze informatie correct is"
+#~ msgid "Collecting Debugging Information"
+#~ msgstr "Debuginformatie wordt verzameld"
 
-msgid "The GEGL is watching."
-msgstr "De GEGL is aan het bekijken."
+#~ msgid "Please verify that this information is correct"
+#~ msgstr "Controleerd U of deze informatie correct is"
 
-msgid "Copyright (C) 1999 Jacob Berkman"
-msgstr "Copyright (C) 1999 Jacob Berkman"
+#~ msgid "The GEGL is watching."
+#~ msgstr "De GEGL is aan het bekijken."
 
-msgid "Child process exited with status %d"
-msgstr "Het subproces is geeindigt met statuscode %d"
+#~ msgid "Copyright (C) 1999 Jacob Berkman"
+#~ msgstr "Copyright (C) 1999 Jacob Berkman"
 
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr ""
-"Nieuw bugrapport insturen\n"
-"Informatie aan een bestaande bug toevoegen\n"
+#~ msgid "Child process exited with status %d"
+#~ msgstr "Het subproces is geeindigt met statuscode %d"
+
+#~ msgid ""
+#~ "Submit new report\n"
+#~ "Add information to an existing report\n"
+#~ msgstr ""
+#~ "Nieuw bugrapport insturen\n"
+#~ "Informatie aan een bestaande bug toevoegen\n"
 
 #
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr ""
-"Een bugrapport versturen\n"
-"Een bugrapport alleen naar uw eigen E-mail adres sturen\n"
-"Het rapport in een bestand opslaan\n"
+#~ msgid ""
+#~ "Submit bug report\n"
+#~ "Send to your amail address only\n"
+#~ "Save report to file\n"
+#~ msgstr ""
+#~ "Een bugrapport versturen\n"
+#~ "Een bugrapport alleen naar uw eigen E-mail adres sturen\n"
+#~ "Het rapport in een bestand opslaan\n"
 
-msgid "Contact's name"
-msgstr "Naam van de contactpersoon"
+#~ msgid "Contact's name"
+#~ msgstr "Naam van de contactpersoon"
 
-msgid "Contact's email address"
-msgstr "E-mail adres"
+#~ msgid "Contact's email address"
+#~ msgstr "E-mail adres"
 
-msgid "Crashed file name"
-msgstr "Gecrashte bestandsnaam"
+#~ msgid "Crashed file name"
+#~ msgstr "Gecrashte bestandsnaam"
 
-msgid ""
-"Click \"Finish\" to exit bug-buddy.\n"
-"No bug report will be submitted."
-msgstr ""
-"Kies \"Einde\" om bug-buddy te beeindigen.Er wordt dan geen bug-rapport "
-"opgestuurd."
+#~ msgid ""
+#~ "Click \"Finish\" to exit bug-buddy.\n"
+#~ "No bug report will be submitted."
+#~ msgstr ""
+#~ "Kies \"Einde\" om bug-buddy te beeindigen.Er wordt dan geen bug-rapport "
+#~ "opgestuurd."
 
-msgid ""
-"You are about to save a bug report in '%s'.\n"
-"This can later be used to report a bug in '%s'."
-msgstr ""
-"U staat op het punt om een bug-rapport in het bestand '%s'op te slaan. Dit "
-"bestand kan later gebruikt worden om een bug in %s te rapporteren."
+#~ msgid ""
+#~ "You are about to save a bug report in '%s'.\n"
+#~ "This can later be used to report a bug in '%s'."
+#~ msgstr ""
+#~ "U staat op het punt om een bug-rapport in het bestand '%s'op te slaan. "
+#~ "Dit bestand kan later gebruikt worden om een bug in %s te rapporteren."
 
-msgid "all will be revealed."
-msgstr "alles zal zichtbaar zijn."
+#~ msgid "all will be revealed."
+#~ msgstr "alles zal zichtbaar zijn."
 
-msgid ""
-"Enter your name and email address, so you will be notified when the\n"
-"bug is resolved, or for developers to request more information from you."
-msgstr ""
-"Vult U uw E-mail adres in, zodat U op de hoogte gehouden kunt worden\n"
-"als de bug is opgelost, of als de software-ontwikkelaar meer informatie\n"
-"nodig heeft."
+#~ msgid ""
+#~ "Enter your name and email address, so you will be notified when the\n"
+#~ "bug is resolved, or for developers to request more information from you."
+#~ msgstr ""
+#~ "Vult U uw E-mail adres in, zodat U op de hoogte gehouden kunt worden\n"
+#~ "als de bug is opgelost, of als de software-ontwikkelaar meer informatie\n"
+#~ "nodig heeft."
 
-msgid "Detailed instructions on how to reproduce the bug"
-msgstr "Gedetaileerde informatie over hoe de bug te reproduceren is"
+#~ msgid "Detailed instructions on how to reproduce the bug"
+#~ msgstr "Gedetaileerde informatie over hoe de bug te reproduceren is"
 
-msgid "How to collect debugging information"
-msgstr "Manier van verzamelen debuginformatie"
+#~ msgid "How to collect debugging information"
+#~ msgstr "Manier van verzamelen debuginformatie"
 
-msgid "Read from a core file"
-msgstr "Core bestand inlezen"
+#~ msgid "Read from a core file"
+#~ msgstr "Core bestand inlezen"
 
-msgid "Subprocess exited with status %d"
-msgstr "Het deelprogramma is geeindigd met statuscode %d"
+#~ msgid "Subprocess exited with status %d"
+#~ msgstr "Het deelprogramma is geeindigd met statuscode %d"
 
-msgid "C library"
-msgstr "C bibliotheek"
+#~ msgid "C library"
+#~ msgstr "C bibliotheek"
 
-msgid "glib"
-msgstr "glib"
+#~ msgid "glib"
+#~ msgstr "glib"
 
-msgid "ORBit"
-msgstr "ORBit"
+#~ msgid "ORBit"
+#~ msgstr "ORBit"
 
-msgid "gnome-libs"
-msgstr "gnome-libs"
+#~ msgid "gnome-libs"
+#~ msgstr "gnome-libs"
 
-msgid "XML file '%s' could not be loaded"
-msgstr "Het XML bestand '%s' kan niet geladen worden"
-
-#
-msgid "GNOME bug-buddy"
-msgstr "bug-buddy"
-
-msgid "GNOME\n"
-msgstr "GNOME\n"
-
-msgid "Choose the action you wish to take"
-msgstr "Kies wat U met deze situatie wilt doen"
-
-msgid "Do not send bug report anywhere"
-msgstr "Geen bugrapport sturen"
-
-msgid "Error reading input of '%s'"
-msgstr "Er is een probleem met het lezen van het '%s' bestand"
-
-msgid ""
-"Enter the information about the\n"
-"bug you are reporting"
-msgstr ""
-"Vul de informatie over\n"
-"het onstane probleem in"
-
-msgid "What type of bug are you reporting?"
-msgstr "Wat voor soort bugrapport wilt U versturen?"
-
-msgid "Application crash with crash dialog"
-msgstr "Een crash van een programma, via het GNOME crash-venster"
-
-msgid "No crash"
-msgstr "Geen crash"
+#~ msgid "XML file '%s' could not be loaded"
+#~ msgstr "Het XML bestand '%s' kan niet geladen worden"
 
 #
-msgid "Application Core Dump"
-msgstr "Programma Core Dump"
+#~ msgid "GNOME bug-buddy"
+#~ msgstr "bug-buddy"
 
-msgid "Enter the filename of the core dump"
-msgstr "Vul de bestandsnaam van het core bestand in"
+#~ msgid "GNOME\n"
+#~ msgstr "GNOME\n"
 
-msgid "Operating System"
-msgstr "Besturingssysteem"
+#~ msgid "Choose the action you wish to take"
+#~ msgstr "Kies wat U met deze situatie wilt doen"
+
+#~ msgid "Do not send bug report anywhere"
+#~ msgstr "Geen bugrapport sturen"
+
+#~ msgid "Error reading input of '%s'"
+#~ msgstr "Er is een probleem met het lezen van het '%s' bestand"
+
+#~ msgid ""
+#~ "Enter the information about the\n"
+#~ "bug you are reporting"
+#~ msgstr ""
+#~ "Vul de informatie over\n"
+#~ "het onstane probleem in"
+
+#~ msgid "What type of bug are you reporting?"
+#~ msgstr "Wat voor soort bugrapport wilt U versturen?"
+
+#~ msgid "Application crash with crash dialog"
+#~ msgstr "Een crash van een programma, via het GNOME crash-venster"
+
+#~ msgid "No crash"
+#~ msgstr "Geen crash"
 
 #
-msgid "Distribution version"
-msgstr "Distributie"
+#~ msgid "Application Core Dump"
+#~ msgstr "Programma Core Dump"
 
-msgid "severe"
-msgstr "ernstig"
+#~ msgid "Enter the filename of the core dump"
+#~ msgstr "Vul de bestandsnaam van het core bestand in"
 
-msgid "libc version"
-msgstr "libc versie"
+#~ msgid "Operating System"
+#~ msgstr "Besturingssysteem"
 
-msgid "gtk+"
-msgstr "gtk+"
+#
+#~ msgid "Distribution version"
+#~ msgstr "Distributie"
 
-msgid ""
-"This is the debugging information\n"
-"bug-buddy has obtained:"
-msgstr ""
-"Bug-buddy heeft de volgende informatie\n"
-"achterhaald:"
+#~ msgid "severe"
+#~ msgstr "ernstig"
 
-msgid ""
-"Please enter any extra information about\n"
-"the bug, such as how to reproduce it,\n"
-"patches, or suggested fixes."
-msgstr ""
-"Vult U AUB extra informatie over het probleem in, \n"
-"bijvoorbeeld over hoe het probleem te reproduceren is."
+#~ msgid "libc version"
+#~ msgstr "libc versie"
 
+#~ msgid "gtk+"
+#~ msgstr "gtk+"
+
+#~ msgid ""
+#~ "This is the debugging information\n"
+#~ "bug-buddy has obtained:"
+#~ msgstr ""
+#~ "Bug-buddy heeft de volgende informatie\n"
+#~ "achterhaald:"
+
+#~ msgid ""
+#~ "Please enter any extra information about\n"
+#~ "the bug, such as how to reproduce it,\n"
+#~ "patches, or suggested fixes."
+#~ msgstr ""
+#~ "Vult U AUB extra informatie over het probleem in, \n"
+#~ "bijvoorbeeld over hoe het probleem te reproduceren is."
