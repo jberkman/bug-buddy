@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.6\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
+"POT-Creation-Date: 2000-11-20 15:04+0200\n"
 "PO-Revision-Date: 1999-12-28 14:37+0200\n"
 "Last-Translator: Yuri Syrota <rasta@renome.rovno.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -139,7 +139,7 @@ msgstr "Файл core в╕д програми"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Текстовий файл, який буде долучено до зв╕ту"
 
 #: src/bug-buddy.c:332
 msgid ""
@@ -572,6 +572,3 @@ msgstr "Не вдалося запустити \"%s\"."
 #: src/util.c:113
 msgid "Error on read..."
 msgstr "Помилка на зчитуванн╕..."
-
-#~ msgid "Copyright (C) 1999 Jacob Berkman"
-#~ msgstr "Copyright © 1999 Jacob Berkman"
