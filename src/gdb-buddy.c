@@ -256,7 +256,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 			 "--quiet",
 			 "--command=" BUDDY_DATADIR "/gdb-cmd",
 			 NULL, NULL, NULL };
-	args[0] = gnome_is_program_in_path ("gdb");
+	args[0] = g_find_program_in_path ("gdb");
 	args[5] = (char *)extra;
 
 	if (!args[0]) {
@@ -282,7 +282,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	if (g_file_test (app, G_FILE_TEST_IS_REGULAR | G_FILE_TEST_IS_SYMLINK))
 		app2 = g_strdup (app);
 	else
-		app2 = gnome_is_program_in_path (app);
+		app2 = g_find_program_in_path (app);
 
 	if (!app2) {
 		g_free (args[0]);

@@ -1,3 +1,10 @@
+2001-11-28  jacob berkman  <jacob@ximian.com>
+
+	* src/gdb-buddy.c (get_trace_from_pair): 
+	(get_trace_from_pair): 
+	* src/config.c (load_config): gnome_is_program_in_path is
+	deprecated, use g_find_program_in_path
+
 2001-11-09  jacob berkman  <jacob@ximian.com>
 
 	* src/*.c: set the default response on all of our dialogs

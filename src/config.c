@@ -127,7 +127,7 @@ load_config (void)
 			def = g_strdup (g_get_real_name ());
 			break;
 		case CONFIG_MAILER:
-			def = gnome_is_program_in_path ("sendmail");
+			def = g_find_program_in_path ("sendmail");
 			if (!def) {
 				if (g_file_test ("/usr/sbin/sendmail", G_FILE_TEST_EXISTS))
 					def = g_strdup ("/usr/sbin/sendmail");
