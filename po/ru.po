@@ -1,0 +1,460 @@
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Valek Filippov <frob@df.ru>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 0.6\n"
+"POT-Creation-Date: 2000-01-22 19:02+0300\n"
+"PO-Revision-Date: 2000-01-22 19:35+03:00\n"
+"Last-Translator: Valek Filippov <frob@df.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8 bit\n"
+
+#: src/gdb-buddy.c:41
+msgid "obtaining stack trace..."
+msgstr "получение состояния стека..."
+
+#: src/bug-buddy.c:298 src/gdb-buddy.c:82
+msgid "gdb has already exited"
+msgstr "gdb уже закрыт"
+
+#: src/gdb-buddy.c:91
+#, c-format
+msgid "Subprocess exited with status %d"
+msgstr "Подпроцесс завершен с состоянием %d"
+
+#: src/gdb-buddy.c:119
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Не удалось обработать gdb файл core:\n"
+"\"%s\""
+
+#: src/gdb-buddy.c:144
+#, c-format
+msgid "Child process exited with status %d"
+msgstr "Дочерний процесс завершился с состоянием %d"
+
+#: src/gdb-buddy.c:147
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Невозможно определить какой двойичный файл создан\n"
+"\"%s\""
+
+#: src/gdb-buddy.c:178
+msgid "Error on read... aborting"
+msgstr "Ошибка при чтении... прервание"
+
+#: src/gdb-buddy.c:210
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"Не удалось найти файл gdb-cmd.\n"
+"Пожалуйста, попытайтесь переустановить bug-buddy."
+
+#: src/gdb-buddy.c:218
+msgid "Error on fork()."
+msgstr "Ошибка на fork()."
+
+#: src/bug-buddy.c:70
+msgid "critical"
+msgstr "критичная"
+
+#: src/bug-buddy.c:71
+msgid "grave"
+msgstr "серьезная"
+
+#: src/bug-buddy.c:72
+msgid "normal"
+msgstr "обычная"
+
+#: src/bug-buddy.c:73
+msgid "wishlist"
+msgstr ""
+
+#: src/bug-buddy.c:77
+msgid "software bug"
+msgstr "ошибка программы"
+
+#: src/bug-buddy.c:78
+msgid "documentation bug"
+msgstr "ошибка в документации"
+
+#: src/bug-buddy.c:79
+msgid "change request"
+msgstr "запрос изменений"
+
+#: src/bug-buddy.c:80
+msgid "support"
+msgstr "поддержка"
+
+#: src/bug-buddy.c:88
+msgid "Contact's name"
+msgstr "Контактное лицо"
+
+#: src/bug-buddy.c:88
+msgid "NAME"
+msgstr "ИМЯ"
+
+#: src/bug-buddy.c:89
+msgid "Contact's email address"
+msgstr "Контакный электронный адрес"
+
+#: src/bug-buddy.c:89
+msgid "EMAIL"
+msgstr "Эл.Почта"
+
+#: src/bug-buddy.c:90
+msgid "Package of the program"
+msgstr "Программный пакет"
+
+#: src/bug-buddy.c:90
+msgid "PACKAGE"
+msgstr "ПАКЕТ"
+
+#: src/bug-buddy.c:91
+msgid "Version of the package"
+msgstr "Версия пакета"
+
+#: src/bug-buddy.c:91
+msgid "VERSION"
+msgstr "ВЕРСИЯ"
+
+#: src/bug-buddy.c:92
+msgid "Crashed file name"
+msgstr "Название сбойного файла"
+
+#: src/bug-buddy.c:92 src/bug-buddy.c:94
+msgid "FILE"
+msgstr "ФАЙЛ"
+
+#: src/bug-buddy.c:93
+msgid "PID of crashed app"
+msgstr "PID программы вызвавшей сбой"
+
+#: src/bug-buddy.c:93
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:94
+msgid "core file from app"
+msgstr "core-файл программы"
+
+#: src/bug-buddy.c:290
+msgid ""
+"gdb has not finished getting thedebugging information.\n"
+"Kill the gdb process (the stack tracewill be incomplete)?"
+msgstr ""
+
+#: src/bug-buddy.c:341
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr "Авторское право (С) 1999 Jacob Berkman"
+
+#: src/bug-buddy.c:343
+msgid "The GNOME graphical bug reporting tool"
+msgstr "Средство Gnome для сообщения об ошибках"
+
+#: src/bug-buddy.c:350
+msgid "The lame bug-buddy web page"
+msgstr "Небольшая веб-страничка bug-buddy"
+
+#: src/bug-buddy.c:422
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a but report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+
+#: src/bug-buddy.c:459
+msgid "Please enter your name and email address"
+msgstr "Пожалуйста, введите ваше имя и эл.адрес"
+
+#: src/bug-buddy.c:499
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+"Нажмите \"Завершить\" чтобы выйти из bug-buddy.\n"
+"Сообщение об ошибке послано не будет."
+
+#: src/bug-buddy.c:522
+#, c-format
+msgid ""
+"You are about to save a bug report in '%s'.\n"
+"This can later be used to report a bug in '%s'."
+msgstr ""
+
+#: src/bug-buddy.c:527
+#, c-format
+msgid ""
+"You are about to report a bug in '%s'.\n"
+"\n"
+"This will be submitted via email:\n"
+"To: %s\n"
+"From: %s <%s>\n"
+"Subject: %s\n"
+"\n"
+"Clicking on 'Finish' will submit the bug report."
+msgstr ""
+
+#: src/bug-buddy.c:639
+msgid "Please choose a file to save to."
+msgstr "Пожалуйста, выберите файл для сохранения."
+
+#: src/bug-buddy.c:646
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Файл \"%s\" уже существует.\n"
+"Переписать?"
+
+#: src/bug-buddy.c:759
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Не удалось открыть \"%s\".\n"
+"Убедитесь, что bug-buddy правильно установлен."
+
+#: src/bug-buddy.c:855
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:868
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+" Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:974
+#, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Не удалось найти \"%s\".\n"
+"Убедитесь, что bug-buddy правильно установлен."
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+msgid "all will be revealed."
+msgstr "все будет выявлено."
+
+#: src/glade-strings.c:9
+msgid "Contact Information"
+msgstr "Контактная информация"
+
+#: src/glade-strings.c:10
+msgid "Email Address"
+msgstr "Эл. адрес"
+
+#: src/glade-strings.c:11
+msgid "Your Name"
+msgstr "Ваше имя"
+
+#: src/glade-strings.c:12
+msgid ""
+"Enter your name and email address, so you will be notified when the\n"
+"bug is resolved, or for developers to request more information from you."
+msgstr "Введите свое имя и адрес эл.почты, чтобы вас известили, когда ошибка будетисправлена, или чтобы разработчики могли запросить у вас дополнительную информацию."
+
+#: src/glade-strings.c:14
+msgid "Bug Track System"
+msgstr "Система отслеживания ошибок"
+
+#: src/glade-strings.c:15
+msgid ""
+"\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+
+#: src/glade-strings.c:18
+msgid "Choose which sendmail to use"
+msgstr ""
+
+#: src/glade-strings.c:19
+msgid "Full path of sendmail"
+msgstr "Полный путь к sendmail"
+
+#: src/glade-strings.c:20
+msgid "System Configuration"
+msgstr "Системная конфигурация"
+
+#: src/glade-strings.c:21
+msgid "Please verify that this information is correct"
+msgstr "Пожалуйста проверьте, что это информация верна"
+
+#: src/glade-strings.c:22 src/glade-strings.c:32
+msgid "Package"
+msgstr "Пакет"
+
+#: src/glade-strings.c:23
+msgid "Version installed"
+msgstr "Установленная версия"
+
+#: src/glade-strings.c:24
+msgid "%P %%"
+msgstr "%P %%"
+
+#: src/glade-strings.c:25
+msgid "Automatically go to next page when complete"
+msgstr "Автоматически переходить на новую страницу при завершении"
+
+#: src/glade-strings.c:26
+msgid "Report Information"
+msgstr ""
+
+#: src/glade-strings.c:27 src/glade-strings.c:55
+msgid "Action"
+msgstr "Действие"
+
+#: src/glade-strings.c:28
+msgid "File a new bug report"
+msgstr "Файл нового сообщения об ошибке"
+
+#: src/glade-strings.c:29
+msgid "Add information to an existing bug report"
+msgstr "Добавить информацию к существующему сообщению об ошибке"
+
+#: src/glade-strings.c:30
+msgid "Version"
+msgstr "Версия"
+
+#: src/glade-strings.c:31
+msgid "Class"
+msgstr "Класс"
+
+#: src/glade-strings.c:33
+msgid "Severity"
+msgstr "Важность"
+
+#: src/glade-strings.c:34
+msgid "Bug Number"
+msgstr "Номер ошибки"
+
+#: src/glade-strings.c:35
+msgid "Description"
+msgstr "Описание"
+
+#: src/glade-strings.c:36
+msgid "Short subject for the bug report"
+msgstr "Краткий заголовок для сообщения об ошибке"
+
+#: src/glade-strings.c:37
+msgid "Full description of the bug"
+msgstr "Полное описание ошибки"
+
+#: src/glade-strings.c:38
+msgid "More Information"
+msgstr "Дополнительная информация"
+
+#: src/glade-strings.c:39
+msgid "Detailed instructions on how to reproduce the bug"
+msgstr "Детальные инструкции, о том как воспроизвести ошибку"
+
+#: src/glade-strings.c:40
+msgid "Include a text file"
+msgstr "Включить текстовый файл"
+
+#: src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr "Отладочная информация"
+
+#: src/glade-strings.c:42
+msgid "How to collect debugging information"
+msgstr ""
+
+#: src/glade-strings.c:43
+msgid "Attach to a crashed application"
+msgstr ""
+
+#: src/glade-strings.c:44
+msgid "Read from a core file"
+msgstr ""
+
+#: src/glade-strings.c:45
+msgid "Skip this step"
+msgstr "Пропустить этот шаг"
+
+#: src/glade-strings.c:46
+msgid "Binary"
+msgstr "Двойчный"
+
+#: src/glade-strings.c:47
+msgid "Process ID"
+msgstr "Идентификатор процесса"
+
+#: src/glade-strings.c:48
+msgid "Select the crashed application's binary"
+msgstr ""
+
+#: src/glade-strings.c:49
+msgid "Core file"
+msgstr "Сore-файл"
+
+#: src/glade-strings.c:50
+msgid "Select a core file"
+msgstr "Выбрать core-файл"
+
+#: src/glade-strings.c:51
+msgid "Collecting Debugging Information"
+msgstr ""
+
+#: src/glade-strings.c:52
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+
+#: src/glade-strings.c:54
+msgid "Submitting the Report"
+msgstr "Отправка сообщения"
+
+#: src/glade-strings.c:56
+msgid "Submit bug report"
+msgstr "Отправить сообщение об ошибке"
+
+#: src/glade-strings.c:57
+msgid "Send report to your email address only"
+msgstr ""
+
+#: src/glade-strings.c:58
+msgid "Save the report to a file"
+msgstr ""
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr ""
+
+#: src/glade-strings.c:60
+msgid "Summary"
+msgstr "Резюме"
+
+#: src/glade-strings.c:61
+msgid "The GEGL is watching."
+msgstr ""
