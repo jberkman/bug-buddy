@@ -22,7 +22,7 @@ GNOME_COMPILE_WARNINGS
 
 AM_PATH_LIBGLADE(,,gnome)
 
-ALL_LINGUAS="da el es fr gl ja nl no ru sv tr uk"
+ALL_LINGUAS="cs da el es fr gl ja nl no ru sv tr uk"
 AM_GNOME_GETTEXT
 
 AC_MSG_CHECKING(whether this is boc's machine)
