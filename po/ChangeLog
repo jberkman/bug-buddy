@@ -1,3 +1,7 @@
+2001-06-12  Andras Timar  <timar@gnome.hu>
+
+	* hu.po: Updated Hungarian translation.
+
 2001-06-03  Karl Eichwalder  <keichwa@gmx.net>
 
 	* POTFILES.in: Remove src/glade-strings.c.
