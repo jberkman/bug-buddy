@@ -1,3 +1,11 @@
+2002-05-15  jacob berkman  <jacob@ximian.com>
+
+	* docs/Makefile.am (man_MANS): 
+	* docs/bug-buddy.1: man page from David LaBissoniere
+	<labisso@debian.org>
+
+	* AUTHORS: i haven't been to CMU in over 2 years
+
 2002-05-13  jacob berkman  <jacob@ximian.com>
 
 	* NEWS:
