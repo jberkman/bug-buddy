@@ -1,12 +1,12 @@
 # bug-buddy nl.po
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Dennis Smit <synap@area101.penguin.nl>, 2000
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
-"PO-Revision-Date: 2000-04-24 23:59+02:00\n"
+"POT-Creation-Date: 2000-10-09 22:11+0200\n"
+"PO-Revision-Date: 2000-10-09 21:59+0200\n"
 "Last-Translator: Dennis Smit <synap@area101.penguin.nl>\n"
 "Language-Team:\n"
 "MIME-Version: 1.0\n"
@@ -138,17 +138,16 @@ msgid "Core file from program"
 msgstr "Core bestand van het programma"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
 "Please specify a package."
 msgstr ""
-"Het is nuttiger als U een ander\n"
-"pakket dan 'general' kiest.\n"
+"Het is help voller als u\n"
+"een specifieker packet dan 'general' kiest.\n"
 "\n"
-"Wilt U toch doorgaan?"
+"Kies alstublieft een ander paket."
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -185,23 +184,20 @@ msgid "gdb has already exited"
 msgstr "De gdb debugger is reeds beeindigd"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
-msgstr "Het grafische bug-rapporteringsprogramma van GNOME"
+msgstr "Het grafische bug raport programma voor GNOME"
 
 #: src/bug-buddy.c:496
 msgid "The lame bug-buddy web page"
 msgstr "De gave bug-buddy webpagina"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Vul AUB uw naam en email-adres in"
+msgstr "Vul alstublieft uw naam in."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Vul AUB uw naam en email-adres in"
+msgstr "Vul alstublieft een geldig email adres in."
 
 #: src/bug-buddy.c:620
 #, c-format
