@@ -1,5 +1,8 @@
 2001-12-12  jacob berkman  <jacob@ximian.com>
 
+	* src/bugzilla.c (load_mostfreq_xml): add each bug, not just one
+	per product.  this code was so broken before.
+
 	* src/united-states-of-bug-buddy.c (on_druid_next_clicked): don't
 	get stuck on the description page
 

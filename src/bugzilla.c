@@ -94,23 +94,21 @@ load_mostfreq_xml (BugzillaBTS *bts, xmlDoc *doc)
 		if (strcmp (prod->name, "product"))
 			continue;
 
-		bbug = g_new0 (BugzillaBug, 1);
-
-		bbug->product = XML_NODE_GET_PROP (prod, "name");
-
 		for (comp = prod->children; comp; comp = comp->next) {
 			d(g_print ("\t\t%s\n", comp->name));
 			if (strcmp (comp->name, "component"))
 				continue;
-
-			bbug->component = XML_NODE_GET_PROP (comp, "name");
 
 			for (bug = comp->children; bug; bug = bug->next) {
 				d(g_print ("\t\t\t%s\n", bug->name));
 				if (strcmp (bug->name, "bug"))
 					continue;
 				
-				bbug->id = XML_NODE_GET_PROP (bug, "bugid");
+				bbug = g_new0 (BugzillaBug, 1);
+		
+				bbug->product   = XML_NODE_GET_PROP (prod, "name");
+				bbug->component = XML_NODE_GET_PROP (comp, "name");
+				bbug->id        = XML_NODE_GET_PROP (bug, "bugid");
 
 				for (node = bug->children; node; node = node->next) {
 					d(g_print ("\t\t\t\t%s\n", node->name));
@@ -120,11 +118,9 @@ load_mostfreq_xml (BugzillaBTS *bts, xmlDoc *doc)
 					else if (!strcmp (node->name, "url"))
 						bbug->url = XML_NODE_GET_CONTENT (node);
 				}
+				bts->bugs = g_slist_prepend (bts->bugs, bbug);
 			}
 		}
-		
-		bts->bugs = g_slist_prepend (bts->bugs, bbug);
-		
 	}
 
 	xmlFreeDoc (doc);
