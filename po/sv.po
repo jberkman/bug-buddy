@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.4\n"
-"POT-Creation-Date: 2000-04-18 00:14-0400\n"
+"POT-Creation-Date: 2000-04-18 14:03+0200\n"
 "PO-Revision-Date: 1999-12-30 21:06+01:00\n"
 "Last-Translator: Andreas Hyden <a.hyden@cyberpoint.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -14,9 +14,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "hämtar stack-trace..."
+msgstr "hämtar stack-trace... (%d)"
 
 #: src/bug-buddy.c:410 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -94,65 +93,56 @@ msgid "support"
 msgstr "stöd"
 
 #: src/bug-buddy.c:89
-#, fuzzy
 msgid "Submit bug report"
 msgstr "Skicka felrapporten"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Only send report to yourself"
-msgstr "Skicka rapport endast till din e-postadress"
+msgstr "Skicka rapport endast till dig själv"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Save report to file"
 msgstr "Spara rapporten till en fil"
 
 #: src/bug-buddy.c:96
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "Sammanställer felsökningsinformation"
+msgstr "Sammanställ felsökningsinformation från en kraschad applikation"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "Sammanställer felsökningsinformation"
+msgstr "Sammanställ felsökningsinformation från en core-fil"
 
 #: src/bug-buddy.c:98
 msgid "Skip this step"
 msgstr "Hoppa över detta steg"
 
 #: src/bug-buddy.c:103
-#, fuzzy
 msgid "Create a new bug report"
-msgstr "Skicka en ny felrapport"
+msgstr "Skapa en ny felrapport"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Add more information to existing report"
-msgstr "Lägg till information till en existerande felrapport"
+msgstr "Lägg till information till en existerande rapport"
 
 #: src/bug-buddy.c:113
 msgid "Name of contact"
-msgstr ""
+msgstr "Namnet på kontakten"
 
 #: src/bug-buddy.c:113
 msgid "NAME"
 msgstr "NAMN"
 
 #: src/bug-buddy.c:114
-#, fuzzy
 msgid "Email address of contact"
-msgstr "E-postadress"
+msgstr "Kontaktens epostadress"
 
 #: src/bug-buddy.c:114
 msgid "EMAIL"
 msgstr "E-POST"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Package containing the program"
-msgstr "Paketet programmet tillhör"
+msgstr "Paketet som innehåller programmet"
 
 #: src/bug-buddy.c:115
 msgid "PACKAGE"
@@ -167,16 +157,14 @@ msgid "VERSION"
 msgstr "VERSION"
 
 #: src/bug-buddy.c:117
-#, fuzzy
 msgid "File name of crashed program"
-msgstr "Paketet programmet tillhör"
+msgstr "Namnet på det kraschade programmet"
 
 #: src/bug-buddy.c:117 src/bug-buddy.c:119
 msgid "FILE"
 msgstr "FIL"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "PID of crashed program"
 msgstr "PID på programmet som kraschat"
 
@@ -185,18 +173,18 @@ msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "Core file from program"
-msgstr "core-fil från programmet"
+msgstr "Core-fil från programmet"
 
 #: src/bug-buddy.c:359
 msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
+"Du måste inkludera ett ämne och en beskrivning\n"
+"i din felrapport."
 
 #: src/bug-buddy.c:402
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -217,14 +205,13 @@ msgid "The lame bug-buddy web page"
 msgstr "Bug-buddys lama hemsida"
 
 #: src/bug-buddy.c:550
-#, fuzzy, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
 "submit a bug report, but you will be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s' verkar inte existera. Du kommer inte kunna skicka en\n"
+"\"%s\" verkar inte existera. Du kommer inte kunna skicka en\n"
 "felrapport, men du kan lagra den i en fil.\n"
 "\n"
 "Ange ny placering för sendmail?"
@@ -234,40 +221,36 @@ msgid "Please enter your name and email address"
 msgstr "Var vänlig ange ditt namn och e-postadress"
 
 #: src/bug-buddy.c:605
-#, fuzzy, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"Kunde inte behandla core-fil med gdb:\n"
-"'%s'"
+msgstr "Kunde inte öppna filen: \"%s\""
 
 #: src/bug-buddy.c:618
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "håller på att köra \"%s\""
 
 #: src/bug-buddy.c:622
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "Kunde inte starta mail-programmet: \"%s\""
 
 #: src/bug-buddy.c:653
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "Din felrapport har sparats i \"%s\""
 
 #: src/bug-buddy.c:656
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
-msgstr ""
+msgstr "Din felrapport har skickats till <%s>"
 
 #: src/bug-buddy.c:786
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "Du måste ange en mottagares epostadress"
 
 #: src/bug-buddy.c:792
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Skicka felrapporten"
+msgstr "Skicka felrapporten nu?"
 
 #: src/bug-buddy.c:802
 msgid "Please choose a file to save to."
@@ -300,7 +283,6 @@ msgstr ""
 "Var vänlig använd kommandoradsflaggan --appname istället."
 
 #: src/bug-buddy.c:1023
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -328,7 +310,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "Välkommen till den Underbara Världen av bug-buddy"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -338,6 +320,11 @@ msgid ""
 "email address so that the bug report can be\n"
 "submitted."
 msgstr ""
+"bud-buddy kommer att hjälpa dig genom processen\n"
+"att skicka en felrapport.  Om detta är första gången \n"
+"du använder bug-buddy, kommer du bli frågad efter\n"
+"din epostadress så att felrapporten kan\n"
+"skickas."
 
 #: src/glade-strings.c:14
 msgid "Contact Information"
@@ -365,6 +352,9 @@ msgid ""
 "submitting a bug report.  You can click the help\n"
 "button for a more in-depth explanation of the process."
 msgstr ""
+"bug-buddy kommer att hjälpa dig genom processen att\n"
+"skicka en felrapport. Du kan klicka på hjälp-\n"
+"knappen för en mer fördjupad förklaring av processen."
 
 #: src/glade-strings.c:22
 msgid "Report Information"
@@ -375,98 +365,86 @@ msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"Välj ett felsökningssystem att använda, fyll sedan i\n"
+"den resterande informationen."
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
-msgstr "Feluppföljningssystem"
+msgstr "Feluppföljningssystem "
 
-#: src/glade-strings.c:26
-#, fuzzy
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr "Lägg till information till en existerande felrapport"
-
-#: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
 msgid "Package"
 msgstr "Paket"
 
-#: src/glade-strings.c:30
+#: src/glade-strings.c:27
 msgid "Severity"
 msgstr "Allvarlighetsgrad"
 
-#: src/glade-strings.c:31
+#: src/glade-strings.c:28
 msgid "Class"
 msgstr "Klass"
 
-#: src/glade-strings.c:32 src/glade-strings.c:34
+#: src/glade-strings.c:29 src/glade-strings.c:31
 msgid "Version"
 msgstr "Version"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:32
 msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"Var vänlig och se till om ditt fel redan har skickats,\n"
+"och om det har, använd \"Lägg till information till existerande rapport\" ovan."
 
-#: src/glade-strings.c:37 src/glade-strings.c:38
+#: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
 msgstr "Felets nummer"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:36
 msgid "Description"
 msgstr "Beskrivning"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:37
 msgid "Short subject for the bug report"
 msgstr "Kort ämne för felrapporten"
 
-#: src/glade-strings.c:41
-#, fuzzy
+#: src/glade-strings.c:38
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "Komplett beskrivning av felet"
+msgstr "Komplett beskrivning av felet, och hur man upprepar det"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:39
 msgid "Include a text file"
 msgstr "Inkludera en textfil"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:40
 msgid "Debugging Information"
 msgstr "Felsökningsinformation"
 
-#: src/glade-strings.c:44
-msgid ""
-"Collect debugging information from a crashed application\n"
-"Collect debugging information from a core file\n"
-"Skip this step\n"
-msgstr ""
-
-#: src/glade-strings.c:48
+#: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
 msgstr "Välj binärfil för det kraschade programmet"
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:42
 msgid "Binary"
 msgstr "Binär"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:43
 msgid "Process ID"
 msgstr "Process-ID"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:44
 msgid "Core file"
 msgstr "Core-fil"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:45
 msgid "Select a core file"
 msgstr "Välj en core-fil"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:46
 msgid "Collecting Debugging Information"
 msgstr "Sammanställer felsökningsinformation"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:47
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -474,61 +452,66 @@ msgstr ""
 "Var vänlig vänta mendan\n"
 "felsökningsinformation insamlas..."
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:49
 msgid "System Configuration"
 msgstr "Systemkonfiguration"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:50
 msgid "Please verify that this information is correct"
 msgstr "Var vänlig kontrollera att informationen är riktig"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:52
 msgid "Version installed"
 msgstr "Installerad version"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:53
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:54
 msgid "Automatically go to next page when complete"
 msgstr "Gå automatiskt till nästa sida när aktuell sida är klar"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:55
 msgid "Submitting the Report"
 msgstr "Skicka felrapporten"
 
-#: src/glade-strings.c:63
-#, fuzzy
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr "Skicka rapport endast till din e-postadress"
-
-#: src/glade-strings.c:67
+#: src/glade-strings.c:56
 msgid "To"
-msgstr ""
+msgstr "Till"
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:57
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "Skicka en kopia till dig själv"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:58
 msgid "Save the report to..."
 msgstr "Spara rapporten till..."
 
-#: src/glade-strings.c:70
+#: src/glade-strings.c:59
 msgid "Content"
-msgstr ""
+msgstr "Innehåll"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:60
 msgid "Summary"
 msgstr "Sammanfattning"
 
-#: src/glade-strings.c:72
+#: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "GEGL:en ser oss."
+
+#, fuzzy
+#~ msgid ""
+#~ "Submit new report\n"
+#~ "Add information to an existing report\n"
+#~ msgstr "Lägg till information till en existerande felrapport"
+
+#, fuzzy
+#~ msgid ""
+#~ "Submit bug report\n"
+#~ "Send to your amail address only\n"
+#~ "Save report to file\n"
+#~ msgstr "Skicka rapport endast till din e-postadress"
 
 #~ msgid "Contact's name"
 #~ msgstr "Kontaktens namn"
