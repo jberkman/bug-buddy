@@ -1,3 +1,7 @@
+2001-10-07  Gediminas Paulauskas <menesis@delfi.lt>
+
+	* configure.in (ALL_LINGUAS): added lv
+
 2001-09-08  Wang Jian  <lark@linux.net.cn>
 
 	* configure.in(ALL_LINGUAS): Rename zh_CN.GB2312 to zh_CN
