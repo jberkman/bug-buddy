@@ -6,7 +6,7 @@
 
 gchar *s = N_("bug-buddy");
 gchar *s = N_("GNOME bug-buddy");
-gchar *s = N_("This will guide you through the bug report submission process.");
+gchar *s = N_("This will guide you through submitting a bug report.");
 gchar *s = N_("Contact Information");
 gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
@@ -15,6 +15,9 @@ gchar *s = N_("Enter your name and email address, so you will be notified when t
 gchar *s = N_("Bug tracking system to use");
 gchar *s = N_("GNOME\n"
               "");
+gchar *s = N_("Choose which sendmail to use");
+gchar *s = N_("/home/jberkman/");
+gchar *s = N_("Full path of sendmail");
 gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
@@ -41,7 +44,9 @@ gchar *s = N_("Obtain from a core file");
 gchar *s = N_("No debugging information");
 gchar *s = N_("Binary");
 gchar *s = N_("Process ID");
+gchar *s = N_("Select the crashed application's binary");
 gchar *s = N_("Core file");
+gchar *s = N_("Select a core file");
 gchar *s = N_("Collecting Debugging Information");
 gchar *s = N_("Please wait while debugging\n"
               "information is collected...");
@@ -51,5 +56,6 @@ gchar *s = N_("Submit bug report");
 gchar *s = N_("Send report to your email address *only*");
 gchar *s = N_("Do not send bug report anywhere");
 gchar *s = N_("Save the report to a file");
+gchar *s = N_("Save the report to...");
 gchar *s = N_("Summary");
 gchar *s = N_("The GEGL is watching.");

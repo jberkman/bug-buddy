@@ -1,5 +1,19 @@
 1999-11-30  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* 0.5 release
+	
+	* src/*: clean up warnings
+	
+	* src/bug-buddy.glade:
+	* src/bug-buddy.[ch]: add an entry for sendmail's path
+	
+	* configure.in:
+	* debian/changelog(.in): generate changelog with the
+	correct version
+	
+	* Makefile.am:
+	* debian/Makefile.am: dist stuff in debian/
+
 	* src/bug-buddy.c:
 	* src/bug-buddy.glade: ugly glade hackery to get an about
 	button

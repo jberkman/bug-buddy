@@ -66,7 +66,6 @@ get_package_versions (Package packages[])
 	char **argv, *command, *line;
 	Package *package;
 	GHashTable *table;
-	GtkWidget *d;
 
 	g_return_if_fail (packages);
 	

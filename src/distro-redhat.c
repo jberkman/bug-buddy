@@ -43,8 +43,7 @@ static void
 get_package_versions (Package packages[])
 {
 	int i;
-	Package *package;
-	char *args[] = { "rpm", "-q", NULL, NULL };
+	const char *args[] = { "rpm", "-q", NULL, NULL };
 
 	g_return_if_fail (packages);
 

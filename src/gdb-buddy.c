@@ -22,10 +22,11 @@
 #include <config.h>
 #include <gnome.h>
 
-#include "bug-buddy.h"
-
 #include <sys/wait.h>
 #include <unistd.h>
+
+#include "bug-buddy.h"
+#include "util.h"
 
 void
 start_gdb ()
@@ -188,7 +189,6 @@ void
 get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	GtkWidget *d;
-	gchar *s;
 	int fd;
 	const char *args[] = { "gdb", 
 			       "--batch", 

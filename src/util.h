@@ -33,6 +33,6 @@ pid_t start_command (const char *command, int *fd);
 char *get_line_from_fd (int fd);
 char *get_line_from_file (const char *filename);
 char *get_line_from_command (const char *command);
-char *get_line_from_commandv (const char **argv);
+char *get_line_from_commandv (const char *argv[]);
 
 #endif /* __UTIL_H__ */

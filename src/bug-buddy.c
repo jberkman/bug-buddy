@@ -151,9 +151,10 @@ static void
 save_config ()
 {
 
-	save_entry ("name_entry",  "name_entry2",  "/bug-buddy/last/name");
-	save_entry ("email_entry", "email_entry2", "/bug-buddy/last/email");
-	save_entry ("file_entry",  "file_entry2",  "/bug-buddy/last/bugfile");
+	save_entry ("name_entry",   "name_entry2",   "/bug-buddy/last/name");
+	save_entry ("email_entry",  "email_entry2",  "/bug-buddy/last/email");
+	save_entry ("file_entry",   "file_entry2",   "/bug-buddy/last/bugfile");
+	save_entry ("mailer_entry", "mailer_entry2", "/bug-buddy/last/mailer");
 	
 	gnome_config_set_int ("/bug-buddy/last/submittype", 
 			      druid_data.submit_type);
@@ -184,6 +185,8 @@ load_entry (const char *name, const char *name2,
 static void
 load_config ()
 {
+	char *sendmail;
+
 	load_entry ("name_entry", "name_entry2",
 		    "/bug-buddy/last/name", g_get_real_name ());
 
@@ -193,9 +196,19 @@ load_config ()
 	load_entry ("file_entry", "file_entry2",
 		    "/bug-buddy/last/bugfile", NULL);
 
+	sendmail = gnome_is_program_in_path ("sendmail");
+	if (!sendmail) {
+		if (g_file_exists ("/usr/sbin/sendmail"))
+			sendmail = g_strdup ("/usr/sbin/sendmail");
+		else if (g_file_exists ("/usr/lib/sendmail"))
+			sendmail = g_strdup ("/usr/lib/sendmail");
+	}
+	load_entry ("mailer_entry", "mailer_entry2",
+		    "/bug-buddy/last/mailer", sendmail);
+	g_free (sendmail);
+
 	druid_data.submit_type = 
-		gnome_config_get_int ("/bug-buddy/last/submittype=0");
-	
+		gnome_config_get_int ("/bug-buddy/last/submittype");
 }
 
 static gboolean
@@ -300,6 +313,39 @@ on_action_page_back (GtkWidget *page, GtkWidget *druid)
 	return TRUE;
 }
 
+static void
+on_about_button_clicked (GtkWidget *button, gpointer data)
+{
+	static GtkWidget *about, *href;
+	static const char *authors[] = {
+		"Jacob Berkman  <jberkman@andrew.cmu.edu>",
+		NULL
+	};
+
+	if (about) {
+		gdk_window_show (about->window);
+		gdk_window_raise (about->window);
+		return;
+	}
+		
+	about = gnome_about_new (_(PACKAGE), VERSION,
+				 _("Copyright (C) 1999 Jacob Berkman"),
+				 authors,
+				 _("The GNOME graphical bug reporting tool"),
+				 "bug-buddy.png");
+	gtk_signal_connect (GTK_OBJECT (about), "destroy",
+			    GTK_SIGNAL_FUNC (gtk_widget_destroyed),
+			    &about);
+
+	href = gnome_href_new ("http://www.andrew.cmu.edu/~jberkman/bug-buddy/",
+			       _("The lame bug-buddy web page"));
+	gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (about)->vbox),
+			    href, FALSE, FALSE, 0);
+
+	gtk_widget_show (href);
+	gtk_widget_show (about);
+}
+
 gboolean
 on_the_druid_cancel (GtkWidget *w)
 {
@@ -323,6 +369,40 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	if (!s || strlen(s) == 0)
 		goto contact_failed;
+
+	w = glade_xml_get_widget (druid_data.xml, "mailer_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	if (!s || strlen (s) == 0 || !g_file_exists (s)) {
+		if (druid_data.submit_type == SUBMIT_TO_SELF ||
+		    druid_data.submit_type == SUBMIT_REPORT) {
+			GtkWidget *d;
+			char *m;
+			m = g_strdup_printf (_("'%s' doesn't seem to exist.  "
+					       "You won't be able to actually\n"
+					       "submit a but report, but you will "
+					       "be able to save it to a file.\n\n"
+					       "Specify a new location for sendmail?"),
+					     s);	
+			d = gnome_question_dialog (m, NULL, NULL);
+			g_free (m);
+			if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (d)))
+				return TRUE;
+		}
+			    
+		w = glade_xml_get_widget (druid_data.xml, "submit_radio");
+		gtk_widget_hide (w);
+		w = glade_xml_get_widget (druid_data.xml, "email_radio");
+		gtk_widget_hide (w);		
+		w = glade_xml_get_widget (druid_data.xml, "file_radio");
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
+					      TRUE);
+		return FALSE;
+	}
+
+	w = glade_xml_get_widget (druid_data.xml, "submit_radio");
+	gtk_widget_show (w);
+	w = glade_xml_get_widget (druid_data.xml, "email_radio");
+	gtk_widget_show (w);
 
 	return FALSE;
 
@@ -448,8 +528,8 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 {
 	GtkWidget *w;
 	gchar *s, *s2, *s3, *subject;
+	char *command;
 	FILE *fp = stdout;
-	ListData *data;	
 	int status, bugnum, i;
 
 	if (druid_data.bug_type == BUG_NEW) {
@@ -468,17 +548,21 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		s2 = s;
 		/* fall through */
 	case SUBMIT_REPORT:
-		/*s3 = g_strconcat (druid_data.mail_cmd, s2, NULL);*/
-		g_message (_("about to run '%s'"), druid_data.mail_cmd);
-		fp = popen (druid_data.mail_cmd, "w");
+		w = glade_xml_get_widget (druid_data.xml, "mailer_entry");
+		s3 = gtk_entry_get_text (GTK_ENTRY (w));
+		command = g_strconcat (s3, " -i -t", NULL);
+		g_message (_("about to run '%s'"), command);
+		fp = popen (command, "w");	       
 		if (!fp) {
 			s = g_strdup_printf (_("Unable to start mail program:\n"
-					       "'%s'"), druid_data.mail_cmd);
+					       "'%s'"), s3);
 			w = gnome_error_dialog (s);
 			g_free (s);
+			g_free (command);
 			gnome_dialog_run_and_close (GNOME_DIALOG (w));
 			return FALSE;
 		}
+		g_free (command);
 		break;
 	case SUBMIT_FILE:
 		w = glade_xml_get_widget (druid_data.xml, "file_entry");
@@ -502,7 +586,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		return FALSE;
 	}
 
-	fprintf (fp, "From %s\nTo: %s\n", g_get_user_name(), s2);
+	fprintf (fp, "To: %s\n", s2);
 
 	w = glade_xml_get_widget (druid_data.xml, "name_entry");
 	s2 = gtk_entry_get_text (GTK_ENTRY (w));
@@ -780,7 +864,7 @@ init_ui ()
 
 	glade_xml_signal_autoconnect (druid_data.xml);
 
-	load_config ();
+	load_config ();	
 
 	w = glade_xml_get_widget (druid_data.xml, "the_druid");
 	druid_data.the_druid = w;
@@ -953,6 +1037,11 @@ init_ui ()
 		gtk_clist_append (GTK_CLIST (w), row);
 	}
 
+	w = glade_xml_get_widget (druid_data.xml, "about_button");
+	gtk_signal_connect (GTK_OBJECT (w), "clicked",
+			    GTK_SIGNAL_FUNC (on_about_button_clicked),
+			    NULL);
+
 	/* less page */
 	druid_data.stop_button = w = 
 		glade_xml_get_widget (druid_data.xml, "stop_button");
@@ -979,7 +1068,7 @@ init_ui ()
 	druid_data.less     = glade_xml_get_widget (druid_data.xml, 
 						    "less_page");
 	druid_data.action   = glade_xml_get_widget (druid_data.xml, 
-						    "action_page");
+						    "action_page");	
 }
 
 int
@@ -997,20 +1086,6 @@ main (int argc, char *argv[])
 	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, 
 				    options, 0, NULL);
 	glade_gnome_init ();
-
-
-	/* from gnome-bug */
-	if (g_file_exists ("/usr/sbin/sendmail"))
-		druid_data.mail_cmd = "/usr/sbin/sendmail -t";
-	else if (g_file_exists ("/usr/lib/sendmail"))
-		druid_data.mail_cmd = "/usr/lib/sendmail -t";
-	else if ( !(druid_data.mail_cmd = 
-		    gnome_is_program_in_path ("rmail")) ) {
-		GtkWidget *d = gnome_error_dialog (_("Could not find a mail program.\n"));
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
-		return 0;
-	}
-
 
 	xml_path = BUDDY_DATADIR "/bug-buddy.glade";
 	if (!g_file_exists (xml_path)) {

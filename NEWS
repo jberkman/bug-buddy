@@ -1,3 +1,24 @@
+0.5:
+
+* Fixes:
+
+	- text areas now have their text wrapped when you send
+
+	- correctly detect debian systems
+
+* Improvements:
+
+	- it's now possible to add information to an existing bug report
+
+	- can now query dpkg on debian systems
+
+	- now detects Linux-Mandrake  (patches readily accepted for 
+	detecting other distributions)
+
+	- less druid pages, and prettier UI
+
+	- availability of .deb and .rpm packages
+
 0.4:
 
 * Fixes:

@@ -27,13 +27,6 @@
 #include "distro.h"
 
 #define SUBMIT_ADDRESS "@bugs.gnome.org"
-#define COMMAND_SIZE 5
-
-typedef struct {
-	const gchar *label;
-	const gchar *cmds[COMMAND_SIZE];	
-	gint row;
-} ListData;
 
 typedef enum {
 	CRASH_NONE,
@@ -76,8 +69,6 @@ typedef struct {
 
 	GtkWidget *stop_button;
 	GtkWidget *refresh_button;
-
-	gchar *mail_cmd;
 
 	CrashType crash_type;
 	SubmitType submit_type;

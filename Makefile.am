@@ -1,6 +1,5 @@
-SUBDIRS = po src intl pixmaps
+SUBDIRS = po intl debian pixmaps src
 
-EXTRA_DIST = bug-buddy.spec.in
-
-dist-hook: bug-buddy.spec
-	cp bug-buddy.spec $(distdir)
+EXTRA_DIST = \
+	bug-buddy.spec.in	\
+	bug-buddy.spec

@@ -54,7 +54,6 @@ start_commandv (const char *args[], int *rfd)
 	int fd[2];
 	pid_t pid;
 	GtkWidget *d;
-	char *s;
 
 	if (pipe (fd) == -1) {
 		perror ("can't open pipe");
@@ -89,7 +88,7 @@ start_commandv (const char *args[], int *rfd)
 pid_t
 start_command (const char *command, int *fd)
 {
-	char *args[] = { "sh", "-c", NULL, NULL };
+	const char *args[] = { "sh", "-c", NULL, NULL };
 	args[2] = command;
 	return start_commandv (args, fd);
 }
@@ -114,7 +113,7 @@ get_line_from_fd (int fd)
 }
 
 char *
-get_line_from_commandv (const gchar **argv)
+get_line_from_commandv (const char *argv[])
 {
 	char *retval;
 	int fd, status;
@@ -133,7 +132,7 @@ get_line_from_commandv (const gchar **argv)
 char *
 get_line_from_command (const char *command)
 {
-	char *args[] = { "sh", "-c", NULL, NULL };
+	const char *args[] = { "sh", "-c", NULL, NULL };
 	args[2] = command;
 	return get_line_from_commandv (args);
 }
