@@ -189,7 +189,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	GtkWidget *d;
 	gchar *s;
-	int fd[2];
+	int fd;
 	const char *args[] = { "gdb", 
 			       "--batch", 
 			       "--quiet",
@@ -215,25 +215,15 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 		return;
 	}
 
-	druid_data.gdb_pid = fork ();
-	if (druid_data.gdb_pid == 0) {
-		close (1);
-		close (fd[0]);
-		dup (fd[1]);
-
-		execvp (args[0], args);
-		d = gnome_error_dialog (_("Could not run gdb.  Time to panic."));
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
-		return;
-	} else if (druid_data.gdb_pid == -1) {
+	druid_data.gdb_pid = start_commandv (args, &fd);
+	if (druid_data.gdb_pid == -1) {
 		d = gnome_error_dialog (_("Error on fork()."));
 		gnome_dialog_run_and_close (GNOME_DIALOG (d));
 		return;
 	}
 	
-	close (fd[1]);
-	druid_data.fd = fd[0];
-	druid_data.ioc = g_io_channel_unix_new (fd[0]);
+	druid_data.fd = fd;
+	druid_data.ioc = g_io_channel_unix_new (fd);
 	g_io_add_watch (druid_data.ioc, G_IO_IN | G_IO_HUP, 
 			handle_gdb_input, NULL);
 	g_io_channel_unref (druid_data.ioc);

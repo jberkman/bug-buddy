@@ -24,6 +24,7 @@
 
 #include <glade/glade.h>
 #include <sys/types.h>
+#include "distro.h"
 
 #define SUBMIT_ADDRESS "@bugs.gnome.org"
 #define COMMAND_SIZE 5
@@ -70,7 +71,8 @@ typedef struct {
 	GtkWidget *version_edit;
 	GtkWidget *version_label;
 	GtkWidget *version_list;
-	ListData *selected_data;
+	int selected_row;
+	Distribution *distro;
 
 	GtkWidget *stop_button;
 	GtkWidget *refresh_button;

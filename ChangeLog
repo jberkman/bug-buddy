@@ -1,3 +1,14 @@
+1999-11-29  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/util.[ch]:
+	* src/distro.h:
+	* src/distro-debian.[ch]:
+	* src/distro-redhat.[ch]: detect package versions a bit
+	differently, and move some stuff used all around to util.c
+
+	* src/gdb-buddy.c:
+	* src/bug-buddy.[ch]: use the new package and util stuff
+
 1999-11-24  Jacob Berkman  <jberkman@serendipity.res.cmu.edu>
 
 	* src/bug-buddy.c: fudge around with dpkg and extract

@@ -12,9 +12,16 @@ bin_PROGRAMS = bug-buddy
 
 bug_buddy_SOURCES = \
 	bug-buddy.c	\
-	gdb-buddy.c	\
 	bug-buddy.h	\
-	packages.c
+	distro.h	\
+	distro-debian.c	\
+	distro-debian.h	\
+	distro-redhat.c	\
+	distro-redhat.h	\
+	gdb-buddy.c	\
+	packages.c	\
+	util.c		\
+	util.h
 
 bug_buddy_LDADD = \
 	$(LIBGLADE_LIBS)	\

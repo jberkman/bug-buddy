@@ -28,6 +28,9 @@
 #include <ctype.h>
 
 #include "bug-buddy.h"
+#include "util.h"
+#include "distro-redhat.h"
+#include "distro-debian.h"
 
 /* libglade callbacks */
 gboolean on_nature_page_next  (GtkWidget *, GtkWidget *);
@@ -95,6 +98,30 @@ struct {
 } popt_data;
 
 DruidData druid_data;
+
+static Distribution distros[] = {
+	{ "Slackware", "/etc/slackware-version", &debian_phy },
+	{ "Debian",    "/etc/debian_version",    &debian_phy },
+	{ "Red Hat",   "/etc/redhat-release",    &redhat_phy },
+	{ "SuSE",      "/etc/SuSE-release",      &redhat_phy },
+	{ "Mandrake",  "/etc/mandrake-release",  &redhat_phy },
+	{ NULL }
+};
+
+static Package package[] = {
+	{ N_("System"), "uname -a" },
+	{ N_("C library"), NULL, "glibc", "libc6", },
+	{ N_("C compiler"), "gcc --version", NULL, NULL, "cc -V", },
+	{ N_("glib"), "glib-config --version", "glib", "libglib1.2" },
+	{ N_("GTK+"), "gtk-config --version", "gtk+", "libgtk1.2" },
+	{ N_("ORBit"), "orbit-config --version", "ORBit", "liborbit0" },
+	{ N_("gnome-libs"), "gnome-config --version", "gnome-libs", "gnome-libs-data" },
+	{ N_("gnome-core"),  "gnome-config --modversion applets "
+	                     "| grep -v gnome-libs "
+	                     "| sed -e 's^applets-^gnome-core ^g'",
+	  "gnome-core", "gnome-core" },
+	{ NULL }
+};
 
 static ListData list_data[] = {
 	{ N_("System"), { "uname -a" } },
@@ -608,7 +635,7 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 			    GdkEventButton *event, gpointer udata)
 {	
 	gchar *s;
-	druid_data.selected_data = gtk_clist_get_row_data (list, row);
+	druid_data.selected_row = row;
 	if (gtk_clist_get_text (list, row, 1, &s))
 		gtk_entry_set_text (GTK_ENTRY (druid_data.version_edit), s);
 	else
@@ -623,9 +650,9 @@ update_selected_row (GtkWidget *w, gpointer data)
 {
 	gchar *s;
 	gint row;
-	if (!druid_data.selected_data)
+	if (druid_data.selected_row == -1)
 		return;
-	row = druid_data.selected_data->row;
+	row = druid_data.selected_row;
 	s = gtk_entry_get_text (GTK_ENTRY (druid_data.version_edit));
 	gtk_clist_set_text (GTK_CLIST (druid_data.version_list), row, 1, s);
 }
@@ -704,33 +731,6 @@ on_existing_radio_toggled (GtkWidget *w, gpointer data)
 	druid_data.bug_type = BUG_EXISTING;
 }
 
-static gchar *
-get_data_from_command (const gchar *cmd)
-{
-	static gchar buf[1024];
-	int status;
-	FILE *fp;
-
-	fp = popen (cmd, "r");
-
-	if (!fp) {
-		g_message (_("Could not run command '%s'"), cmd);
-		return NULL;
-	}
-
-	if (!fgets (buf, 1024, fp)) {
-		g_message (_("Error reading input of '%s'"), cmd);
-		return NULL;
-	} 
-
-	status = pclose (fp);
-#if 0
-	g_message (_("Subprocess exited with status %d"), status);
-#endif
-
-	return g_strchomp (buf);	
-}
-
 static gboolean
 set_severity (GtkWidget *w, gpointer data)
 {
@@ -776,14 +776,6 @@ make_anim (gchar *widget_name, gchar *imgname,
 	return druid_data.gdb_anim;
 }
 
-static gboolean
-clean_hash (gpointer key, gpointer value, gpointer data)
-{
-	g_free (key);
-	g_free (value);
-	return TRUE;
-}
-
 /* ugly stupid dumb stuff stolen from the bug reporting web page */
 static gchar *
 get_package_from_appname (const char *appname)
@@ -821,8 +813,7 @@ get_package_from_appname (const char *appname)
 	package = g_strdup (g_hash_table_lookup (table,
 						 g_filename_pointer (appname)));
 	
-	g_hash_table_foreach_remove (table, clean_hash, NULL);
-	g_hash_table_destroy (table);
+	destroy_hash_table (table, TRUE);
 
 	return package;
 }
@@ -843,9 +834,8 @@ static void
 init_ui ()
 {
 	GtkWidget *w, *m;
-	ListData *data;
 	gchar *row[3] = { NULL };
-	gchar *s, *package = NULL;
+	gchar *s, *p = NULL;
 	int i;
 
 	glade_xml_signal_autoconnect (druid_data.xml);
@@ -903,17 +893,17 @@ init_ui ()
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 
-	package = g_strdup (popt_data.package);
-	if (!package && s)
-		package = get_package_from_appname (s);
+	p = g_strdup (popt_data.package);
+	if (!p && s)
+		p = get_package_from_appname (s);
 
-	if (!package)
-		package = g_strdup ("general");
+	if (!p)
+		p = g_strdup ("general");
 
 	w = glade_xml_get_widget (druid_data.xml, 
 				  "package_entry");
-	gtk_entry_set_text (GTK_ENTRY (w), package);
-	g_free (package);
+	gtk_entry_set_text (GTK_ENTRY (w), p);
+	g_free (p);
 
 	w = druid_data.pid =
 		glade_xml_get_widget (druid_data.xml, "crashed_pid");
@@ -966,14 +956,7 @@ init_ui ()
 
 	init_toggle ("file_radio", druid_data.submit_type, SUBMIT_FILE,
 		     GTK_SIGNAL_FUNC (update_submit_type));
-#if 0
-	/* text areas */
-	w = glade_xml_get_widget (druid_data.xml, "desc_area");
-	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
 
-	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
-	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
-#endif
 	/* system config page */
 	druid_data.version_edit =
 		glade_xml_get_widget (druid_data.xml, "version_edit");
@@ -981,13 +964,35 @@ init_ui ()
 		glade_xml_get_widget (druid_data.xml, "version_label");
 	druid_data.version_list = w =
 		glade_xml_get_widget (druid_data.xml, "version_list");
-	for (data = list_data; data->label; data++) {
-		for (i = 0; data->cmds[i] && !row[1]; i++)
-			row[1] = get_data_from_command (data->cmds[i]);
-		row[0] = _(data->label);
-		data->row = gtk_clist_append (GTK_CLIST (w), row);
-		gtk_clist_set_row_data (GTK_CLIST (w), data->row, data);
-		row[1] = NULL;
+
+	for (i = 0; distros[i].name; i++) {
+		if (!g_file_exists (distros[i].version_file))
+			continue;
+		row[0] = _("Distribution");
+		row[1] = distros[i].phylum->version (&distros[i]);
+		gtk_clist_append (GTK_CLIST (w), row);
+		druid_data.distro = &distros[i];
+		break;
+	}
+
+	/* so we have like 3 passages, but it is better */
+	for (i = 0; package[i].name; i++) {
+		if (!package[i].pre_command)
+			continue;
+		package[i].version = get_line_from_command (package[i].pre_command);
+	}
+
+	if (druid_data.distro)
+		druid_data.distro->phylum->packager (&package);
+
+	for (i = 0; package[i].name; i++) {
+		if (!package[i].version &&
+		    package[i].post_command)
+			package[i].version = 
+				get_line_from_command (package[i].post_command);
+		row[0] = _(package[i].name);
+		row[1] = package[i].version;
+		gtk_clist_append (GTK_CLIST (w), row);
 	}
 
 	/* less page */
