@@ -1,3 +1,8 @@
+2002-04-17  Abel Cheung  <maddog@linux.org.hk>
+
+	* configure.in: Removed en_AU, it's a completely empty translation,
+	unhandled for 2 years.
+
 2002-04-16  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.glade: fix packing of copy/save buttons (fixes bug
