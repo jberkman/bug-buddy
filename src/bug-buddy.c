@@ -1,6 +1,6 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) The Free Software Foundation
+ * Copyright (C) Jacob Berkman
  *
  * Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>
  *
@@ -27,25 +27,25 @@
 #include "bug-buddy.h"
 
 /* libglade callbacks */
-gboolean on_nature_page_next (GtkWidget *, GtkWidget *);
-gboolean on_attach_page_next (GtkWidget *, GtkWidget *);
-gboolean on_core_page_back (GtkWidget *, GtkWidget *);
+gboolean on_nature_page_next  (GtkWidget *, GtkWidget *);
+gboolean on_attach_page_next  (GtkWidget *, GtkWidget *);
+gboolean on_core_page_back    (GtkWidget *, GtkWidget *);
 gboolean on_less_page_prepare (GtkWidget *, GtkWidget *);
-gboolean on_less_page_back (GtkWidget *, GtkWidget *);
-gboolean on_misc_page_back (GtkWidget *, GtkWidget *);
-gboolean on_the_druid_cancel (GtkWidget *);
+gboolean on_less_page_back    (GtkWidget *, GtkWidget *);
+gboolean on_misc_page_back    (GtkWidget *, GtkWidget *);
+gboolean on_the_druid_cancel  (GtkWidget *);
 gboolean on_complete_page_prepare (GtkWidget *, GtkWidget *);
-gboolean on_complete_page_finish (GtkWidget *, GtkWidget *);
-gboolean on_system_page_prepare (GtkWidget *, GtkWidget *);
-gboolean on_gnome_page_prepare (GtkWidget *, GtkWidget *);
-gboolean on_contact_page_next (GtkWidget *, GtkWidget *);
-void on_version_list_select_row (GtkCList *list, gint row, gint col,
-				 GdkEventButton *event, gpointer udata);
-void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
-void on_version_apply_clicked (GtkButton *button, gpointer udata);
-void on_file_radio_toggled (GtkWidget *radio, gpointer data);
-gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
-gboolean on_action_page_back (GtkWidget *page, GtkWidget *druid);
+gboolean on_complete_page_finish  (GtkWidget *, GtkWidget *);
+gboolean on_system_page_prepare   (GtkWidget *, GtkWidget *);
+gboolean on_gnome_page_prepare    (GtkWidget *, GtkWidget *);
+gboolean on_contact_page_next     (GtkWidget *, GtkWidget *);
+void on_version_list_select_row   (GtkCList *list, gint row, gint col,
+				   GdkEventButton *event, gpointer udata);
+void update_selected_row      (GtkWidget *widget, gpointer data);
+void on_version_apply_clicked (GtkButton *button, gpointer data);
+void on_file_radio_toggled    (GtkWidget *radio, gpointer data);
+gboolean on_action_page_next  (GtkWidget *page, GtkWidget *druid);
+gboolean on_action_page_back  (GtkWidget *page, GtkWidget *druid);
 GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
 		       gchar *string2, gint int1, gint int2);
 
@@ -126,33 +126,27 @@ static const struct poptOption options[] = {
 };
 
 static void
-save_config ()
+save_entry (const char *name, const char *name2, const char *save_path)
 {
 	GtkWidget *w;
 	gchar *s;
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	w = glade_xml_get_widget (druid_data.xml, name);
 	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/last/name", s);
-	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
+	gnome_config_set_string (save_path, s);
+	w = glade_xml_get_widget (druid_data.xml, name2);
 	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
 	gnome_entry_save_history (GNOME_ENTRY (w));
+}
 
-	w = glade_xml_get_widget (druid_data.xml, "email_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/last/email", s);
-	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
-	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
-	gnome_entry_save_history (GNOME_ENTRY (w));
+static void
+save_config ()
+{
 
-	w = glade_xml_get_widget (druid_data.xml, "file_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/last/bugfile", s);
-
-	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
-	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
-	gnome_entry_save_history (GNOME_ENTRY (w));
-
+	save_entry ("name_entry",  "name_entry2",  "/bug-buddy/last/name");
+	save_entry ("email_entry", "email_entry2", "/bug-buddy/last/email");
+	save_entry ("file_entry",  "file_entry2",  "/bug-buddy/last/bugfile");
+	
 	gnome_config_set_int ("/bug-buddy/last/submittype", 
 			      druid_data.submit_type);
 
@@ -160,40 +154,34 @@ save_config ()
 }
 
 static void
-load_config ()
+load_entry (const char *name, const char *name2,
+	    const char *path, const char *def)
 {
 	GtkWidget *w;
 	gchar *s;
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry");
-	s = gnome_config_get_string ("/bug-buddy/last/name");
+	w = glade_xml_get_widget (druid_data.xml, name);
+	s = gnome_config_get_string (path);
 	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
-	else
-		gtk_entry_set_text (GTK_ENTRY (w), g_get_real_name ());
+	else if (def)
+		gtk_entry_set_text (GTK_ENTRY (w), def);
 	g_free (s);
-	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
+	w = glade_xml_get_widget (druid_data.xml, name2);
 	gnome_entry_load_history (GNOME_ENTRY (w));
+}
 
-	w = glade_xml_get_widget (druid_data.xml, "email_entry");
-	s = gnome_config_get_string ("/bug-buddy/last/email");
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-	else 
-		gtk_entry_set_text (GTK_ENTRY (w), g_get_user_name ());
-	g_free (s);
-	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
-	gnome_entry_load_history (GNOME_ENTRY (w));
+static void
+load_config ()
+{
+	load_entry ("name_entry", "name_entry2",
+		    "/bug-buddy/last/name", g_get_real_name ());
 
-	w = glade_xml_get_widget (druid_data.xml, "file_entry");
-	s = gnome_config_get_string ("/bug-buddy/last/bugfile");
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-	g_free (s);
+	load_entry ("email_entry", "email_entry2",
+		    "/bug-buddy/last/email", g_get_user_name ());
 
-	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
-	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
-	gnome_entry_load_history (GNOME_ENTRY (w));
+	load_entry ("file_entry", "file_entry2",
+		    "/bug-buddy/last/bugfile", NULL);
 
 	druid_data.submit_type = 
 		gnome_config_get_int ("/bug-buddy/last/submittype=0");
@@ -550,8 +538,8 @@ on_version_list_select_row (GtkCList *list, gint row, gint col,
 	gtk_label_set_text (GTK_LABEL (druid_data.version_label), _(s));
 }
 
-static void
-update_selected_row ()
+void
+update_selected_row (GtkWidget *w, gpointer data)
 {
 	gchar *s;
 	gint row;
@@ -559,18 +547,7 @@ update_selected_row ()
 		return;
 	row = druid_data.selected_data->row;
 	s = gtk_entry_get_text (GTK_ENTRY (druid_data.version_edit));
-	gtk_clist_set_text (GTK_CLIST (druid_data.version_list), row, 1, s);}
-
-void
-on_version_edit_activate (GtkEditable *editable, gpointer user_data)
-{
-	update_selected_row ();
-}
-
-void
-on_version_apply_clicked (GtkButton *button, gpointer udata)
-{
-	update_selected_row ();
+	gtk_clist_set_text (GTK_CLIST (druid_data.version_list), row, 1, s);
 }
 
 void
@@ -620,6 +597,7 @@ static gchar *
 get_data_from_command (const gchar *cmd)
 {
 	static gchar buf[1024];
+	int status;
 	FILE *fp;
 
 	fp = popen (cmd, "r");
@@ -634,7 +612,8 @@ get_data_from_command (const gchar *cmd)
 		return NULL;
 	} 
 
-	fclose (fp);
+	status = pclose (fp);
+	g_message ("Subprocess exited with status %d\n", status);
 
 	return g_strchomp (buf);	
 }
@@ -676,6 +655,7 @@ clean_hash (gpointer key, gpointer value, gpointer data)
 	return TRUE;
 }
 
+/* ugly stupid dumb stuff stolen from the bug reporting web page */
 static gchar *
 get_package_from_appname (const char *appname)
 {
@@ -718,26 +698,38 @@ get_package_from_appname (const char *appname)
 	return package;
 }
 
+static void 
+init_toggle (const char *name, int test, int data, GtkSignalFunc func)
+{
+	GtkWidget *w;
+	w = glade_xml_get_widget (druid_data.xml, name);
+	if (test == data)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
+					      TRUE);
+	gtk_signal_connect (GTK_OBJECT (w), "toggled", func,
+			    GINT_TO_POINTER (data));
+}
+
 static void
-init_ui (GladeXML *xml)
+init_ui ()
 {
 	GtkWidget *w, *m;
 	ListData *data;
 	gchar *row[3] = { NULL };
-	gchar *s;
+	gchar *s, *package = NULL;
 	int i;
 
-	glade_xml_signal_autoconnect(xml);
+	glade_xml_signal_autoconnect (druid_data.xml);
 
 	load_config ();
 
-	w = glade_xml_get_widget (xml, "the_druid");
+	w = glade_xml_get_widget (druid_data.xml, "the_druid");
 	druid_data.the_druid = w;
 
-	w = glade_xml_get_widget (xml, "package_entry2");
+	w = glade_xml_get_widget (druid_data.xml, "package_entry2");
 	for (i = 0; packages[i]; i++)
 		gnome_entry_prepend_history (GNOME_ENTRY (w), FALSE,
-					    packages[i]);
+					     packages[i]);
 
 	m = gtk_menu_new ();
 	for (i = 0; severity[i]; i++) {
@@ -748,7 +740,8 @@ init_ui (GladeXML *xml)
 		gtk_widget_show (w);
 		gtk_menu_append (GTK_MENU (m), w);
 	}
-	w = glade_xml_get_widget (xml, "severity_option");
+
+	w = glade_xml_get_widget (druid_data.xml, "severity_option");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
 	gtk_option_menu_set_history (GTK_OPTION_MENU (w), 2);
 	druid_data.severity = 2;
@@ -762,14 +755,15 @@ init_ui (GladeXML *xml)
 		gtk_widget_show (w);
 		gtk_menu_append (GTK_MENU (m), w);
 	}
-	w = glade_xml_get_widget (xml, "class_option");
+
+	w = glade_xml_get_widget (druid_data.xml, "class_option");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
 
 	/* dialog crash page */
-	w = glade_xml_get_widget (xml, "app_file");
-	if (popt_data.app_file)
-		s = popt_data.app_file;
-	else {
+	w = druid_data.app_file = 
+		glade_xml_get_widget (druid_data.xml, "app_file");
+	s = popt_data.app_file;
+	if (!s) {
 		s = getenv ("GNOME_CRASHED_APPNAME");
 		if (s)
 			g_warning (_("$GNOME_CRASHED_APPNAME is deprecated.\n"
@@ -777,27 +771,25 @@ init_ui (GladeXML *xml)
 				     "argument instead."));
 	}
 
-	if (s) {		
-		char *package;
-		GtkWidget *pw;
-
+	if (s)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
-		druid_data.crash_type = CRASH_DIALOG;
 
+	package = g_strdup (popt_data.package);
+	if (!package && s)
 		package = get_package_from_appname (s);
-		if (package) {
-			pw = glade_xml_get_widget (druid_data.xml, 
-						   "package_entry");
-			gtk_entry_set_text (GTK_ENTRY (pw), package);
-			g_free (package);
-		}
-	}
-	druid_data.app_file = w;
 
-	w = glade_xml_get_widget (xml, "crashed_pid");
-	if (popt_data.pid)
-		s = popt_data.pid;
-	else {
+	if (!package)
+		package = g_strdup ("general");
+
+	w = glade_xml_get_widget (druid_data.xml, 
+				  "package_entry");
+	gtk_entry_set_text (GTK_ENTRY (w), package);
+	g_free (package);
+
+	w = druid_data.pid =
+		glade_xml_get_widget (druid_data.xml, "crashed_pid");
+	s = popt_data.pid;
+	if (!s) {
 		s = getenv ("GNOME_CRASHED_PID");
 		if (s)
 			g_warning (_("$GNOME_CRASHED_PID is deprecated.\n "
@@ -809,81 +801,57 @@ init_ui (GladeXML *xml)
 		gtk_entry_set_text (GTK_ENTRY (w), s);
 		druid_data.crash_type = CRASH_DIALOG;
 	}
-	druid_data.pid = w;
 
 	/* core crash page */
-	w = glade_xml_get_widget (xml, "core_file");
+	w = druid_data.core_file = 
+		glade_xml_get_widget (druid_data.xml, "core_file");
 	if (popt_data.core_file) {
 		gtk_entry_set_text (GTK_ENTRY (w), popt_data.core_file);
 		druid_data.crash_type = CRASH_CORE;
 	}
-	druid_data.core_file = w;
 
 	/* package version */
 	if (popt_data.package_ver) {
-		w = glade_xml_get_widget (xml, "version_entry");
+		w = glade_xml_get_widget (druid_data.xml, "version_entry");
 		gtk_entry_set_text (GTK_ENTRY (w), popt_data.package_ver);
 	}
 
 	/* init radio buttons */
-	w = glade_xml_get_widget (xml, "dialog_radio");
-	if (druid_data.crash_type == CRASH_DIALOG)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_crash_type),
-			    GINT_TO_POINTER (CRASH_DIALOG));
+	init_toggle ("dialog_radio", druid_data.crash_type, CRASH_DIALOG, 
+		     GTK_SIGNAL_FUNC (update_crash_type));
 
-	w = glade_xml_get_widget (xml, "core_radio");
-	if (druid_data.crash_type == CRASH_CORE)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w), 
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_crash_type),
-			    GINT_TO_POINTER (CRASH_CORE));
+	init_toggle ("core_radio", druid_data.crash_type, CRASH_CORE,
+		     GTK_SIGNAL_FUNC (update_crash_type));
 
-	w = glade_xml_get_widget (xml, "no_crash_radio");
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_crash_type),
-			    GINT_TO_POINTER (CRASH_NONE));
+	init_toggle ("no_crash_radio", druid_data.crash_type, CRASH_NONE,
+		     GTK_SIGNAL_FUNC (update_crash_type));
 
-	w = glade_xml_get_widget (xml, "submit_radio");
-	if (druid_data.submit_type == SUBMIT_REPORT)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_submit_type),
-			    GINT_TO_POINTER (SUBMIT_REPORT));
+	init_toggle ("submit_radio", druid_data.submit_type, SUBMIT_REPORT, 
+		     GTK_SIGNAL_FUNC (update_submit_type));
 
-	w = glade_xml_get_widget (xml, "email_radio");
-	if (druid_data.submit_type == SUBMIT_TO_SELF)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_submit_type),
-			    GINT_TO_POINTER (SUBMIT_TO_SELF));
+	init_toggle ("email_radio", druid_data.submit_type, SUBMIT_TO_SELF,
+		     GTK_SIGNAL_FUNC (update_submit_type));
 
-	w = glade_xml_get_widget (xml, "noaction_radio");
-	if (druid_data.submit_type == SUBMIT_NONE)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_submit_type),
-			    GINT_TO_POINTER (SUBMIT_NONE));
-	
-	w = glade_xml_get_widget (xml, "file_radio");
-	if (druid_data.submit_type == SUBMIT_FILE)
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (w),
-					      TRUE);
-	gtk_signal_connect (GTK_OBJECT (w), "toggled",
-			    GTK_SIGNAL_FUNC (update_submit_type),
-			    GINT_TO_POINTER (SUBMIT_FILE));	
+	init_toggle ("noaction_radio", druid_data.submit_type, SUBMIT_NONE,
+		     GTK_SIGNAL_FUNC (update_submit_type));
+
+	init_toggle ("file_radio", druid_data.submit_type, SUBMIT_FILE,
+		     GTK_SIGNAL_FUNC (update_submit_type));
+
+	/* text areas */
+	w = glade_xml_get_widget (druid_data.xml, "desc_area");
+	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
+
+	w = glade_xml_get_widget (druid_data.xml, "repeat_area");
+	gtk_text_set_line_wrap (GTK_TEXT (w), FALSE);
 
 	/* system config page */
-	druid_data.version_edit = glade_xml_get_widget (xml, "version_edit");
-	druid_data.version_label = glade_xml_get_widget (xml, "version_label");
+	druid_data.version_edit =
+		glade_xml_get_widget (druid_data.xml, "version_edit");
+	druid_data.version_label = 
+		glade_xml_get_widget (druid_data.xml, "version_label");
 	druid_data.version_list = w =
-		glade_xml_get_widget (xml, "version_list");
+		glade_xml_get_widget (druid_data.xml, "version_list");
 	for (data = list_data; data->label; data++) {
 		for (i = 0; data->cmds[i] && !row[1]; i++)
 			row[1] = get_data_from_command (data->cmds[i]);
@@ -894,27 +862,34 @@ init_ui (GladeXML *xml)
 	}
 
 	/* less page */
-	druid_data.gdb_text = glade_xml_get_widget (xml, "gdb_text");
-
-	druid_data.nature = glade_xml_get_widget (xml, "nature_page");
-	druid_data.attach = glade_xml_get_widget (xml, "attach_page");
-	druid_data.core = glade_xml_get_widget (xml, "core_page");
-	druid_data.less = glade_xml_get_widget (xml, "less_page");
-	druid_data.action = glade_xml_get_widget (xml, "action_page");
+	druid_data.gdb_text = glade_xml_get_widget (druid_data.xml, 
+						    "gdb_text");
+	druid_data.nature   = glade_xml_get_widget (druid_data.xml,
+						    "nature_page");
+	druid_data.attach   = glade_xml_get_widget (druid_data.xml,
+						    "attach_page");
+	druid_data.core   = glade_xml_get_widget (druid_data.xml,
+						  "core_page");
+	druid_data.less   = glade_xml_get_widget (druid_data.xml, 
+						  "less_page");
+	druid_data.action = glade_xml_get_widget (druid_data.xml, 
+						  "action_page");
 }
 
 int
 main (int argc, char *argv[])
 {
-	GtkWidget *window;
-	gchar *xml_path;
+	GtkWidget *w;
+	gchar *xml_path, *s;
 
 	memset (&druid_data, 0, sizeof (druid_data));
+	memset (&popt_data,  0, sizeof (popt_data));
 
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
 
-	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, options, 0, NULL);
+	gnome_init_with_popt_table (PACKAGE, VERSION, argc, argv, 
+				    options, 0, NULL);
 	glade_gnome_init ();
 
 
@@ -932,32 +907,40 @@ main (int argc, char *argv[])
 
 
 	xml_path = BUDDY_DATADIR "/bug-buddy.glade";
-	if (!xml_path) {
-		GtkWidget *d;
-		gchar *s = g_strdup_printf (_("Could not find our glade file '%s'\n"
-					      "Please make sure bug-buddy was "
-					      "installed correctly."), xml_path);
-		d = gnome_error_dialog (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+	if (!g_file_exists (xml_path)) {
+		s = g_strdup_printf (_("Could not find our glade file '%s'\n"
+				       "Please make sure bug-buddy was "
+				       "installed correctly."), xml_path);
+		w = gnome_error_dialog (s);
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return 0;
 	}
 	druid_data.xml = glade_xml_new (xml_path , "druid_window");
 
 	if (!druid_data.xml) {
-		GtkWidget *d;
-		gchar *s;
-		s = g_strdup_printf (_("XML file '%s' could not be loaded"), xml_path);
-		d = gnome_error_dialog (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		s = g_strdup_printf (_("XML file '%s' could not be loaded"), 
+				     xml_path);
+		w = gnome_error_dialog (s);
+		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		return 0;
 	}
 
 	init_ui (druid_data.xml);
 
-	window = glade_xml_get_widget (druid_data.xml, "druid_window");
-	gtk_widget_show (window);
+	w = glade_xml_get_widget (druid_data.xml, "druid_window");
+	gtk_widget_show (w);
 
 	gtk_main ();
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+

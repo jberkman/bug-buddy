@@ -1,6 +1,6 @@
 /* packages.c: list of packages for reporting bugs
  *
- * Copyright (C) The Free Software Foundation
+ * Copyright (C) Jacob Berkman
  *
  * Author: Jacob Berkman  <jberkman@andrew.cmu.edu>
  * 

@@ -1,3 +1,10 @@
+1999-11-14  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.c: code clean up
+	
+	* src/bug-buddy.c (init_ui): actually do something
+	for the --package command line arg
+
 1999-11-13  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.c: fix tyop (bug #3545)

@@ -1,6 +1,6 @@
 /* bug-buddy bug submitting program
  *
- * Copyright (C) The Free Software Foundation
+ * Copyright (C) Jacob Berkman
  *
  * Author:  Jacob Berkman  <jberkman@andrew.cmu.edu>
  *

@@ -1,6 +1,6 @@
 /* gnome program that crashes
  *
- * Copyright (C) The Free Software Foundation
+ * Copyright (C) Jacob Berkman
  *
  * Author: Jacob Berkman  <jberkman@andrew.cmu.edu>
  * This program is free software; you can redistribute it and/or modify
