@@ -34,8 +34,8 @@
 #include <gdk-pixbuf/gnome-canvas-pixbuf.h>
 #include <libgnomevfs/gnome-vfs.h>
 
-#include <tree.h>
-#include <parser.h>
+#include <libxml/tree.h>
+#include <libxml/parser.h>
 
 #include <sys/types.h>
 #include <signal.h>

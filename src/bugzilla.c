@@ -33,9 +33,9 @@
 #include "libglade-buddy.h"
 #include <dirent.h>
 
-#include <tree.h>
-#include <parser.h>
-#include <xmlmemory.h>
+#include <libxml/tree.h>
+#include <libxml/parser.h>
+#include <libxml/xmlmemory.h>
 
 /* define to x for some debugging output */
 #define d(x)

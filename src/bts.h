@@ -22,8 +22,8 @@
 #ifndef __BTS_H__
 #define __BTS_H__
 
-#include <parser.h>
-#include <tree.h>
+#include <libxml/parser.h>
+#include <libxml/tree.h>
 
 #include <gtk/gtkeditable.h>
 

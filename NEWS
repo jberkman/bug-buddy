@@ -1,3 +1,17 @@
+2.0.3:
+
+  * Fixes:
+
+	- libxml include path fixes
+
+2.0.2:
+
+  * Fixes:
+
+	- Ximian Bugzilla support
+
+	- other small bugs
+
 2.0.1:
 
   * Fixes:

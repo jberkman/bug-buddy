@@ -24,7 +24,7 @@
 #define __BUGZILLA_H__
 
 #include <libgnomevfs/gnome-vfs-types.h>
-#include <parser.h>
+#include <libxml/parser.h>
 
 typedef struct _BugzillaBTS BugzillaBTS;
 

@@ -1,3 +1,13 @@
+2001-06-15  jacob berkman  <jacob@ximian.com>
+
+	* NEWS: 
+	* configure.in: 2.0.3
+
+	* src/bugzilla.[ch]: 
+	* src/bug-buddy.c: 
+	* src/bts.[ch]: 
+	* src/bts-debian.c: libxml include fixes
+
 2001-06-12  jacob berkman  <jacob@ximian.com>
 
 	* various makefiles: fixes and ximian bugzilla support
