@@ -9,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-19 12:59-0400\n"
-"PO-Revision-Date: 2001-06-02 22:19+0200\n"
-"Last-Translator: Matthias Warkus <mawarkus@gnome.org>\n"
+"Project-Id-Version: bug-buddy 2.0.5\n"
+"POT-Creation-Date: 2001-06-19 20:20+0200\n"
+"PO-Revision-Date: 2001-06-19 20:30+0200\n"
+"Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -127,7 +127,7 @@ msgstr ""
 "Von $GNOME_CRASHED_APPNAME wird abgeraten.\n"
 "\n"
 "Bitte verwenden Sie stattdessen --appname als Argument\n"
-"an der Kommandozeile."
+"an der Befehlszeile."
 
 #: src/bug-buddy.c:483
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 "Von $GNOME_CRASHED_PID wird abgeraten.\n"
 "\n"
 "Bitte verwenden Sie stattdessen --pid als Argument\n"
-"an der Kommandozeile."
+"an der Befehlszeile."
 
 #: src/bug-buddy.c:581
 #, c-format
@@ -570,9 +570,8 @@ msgstr ""
 "Beschreibung hinzufügen."
 
 #: src/united-states-of-bug-buddy.c:383
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Bericht abschicken"
+msgstr "Diesen Bericht jetzt abschicken?"
 
 #: src/united-states-of-bug-buddy.c:397
 #, c-format
@@ -595,7 +594,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Ihr Fehlerbericht wurde in '%s' gespeichert."
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -603,9 +602,11 @@ msgid ""
 "\n"
 "Thanks!"
 msgstr ""
-"Ihr Fehlerbericht wurde geschickt an:\n"
+"Ihr Fehlerbericht wurde an\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"geschickt.  Vielen Dank!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
@@ -653,9 +654,3 @@ msgstr "Fehlermelder"
 #: src/bug-buddy.desktop.in.h:2
 msgid "Report a bug in GNOME"
 msgstr "Einen Fehler bei GNOME melden"
-
-#~ msgid "Distribution"
-#~ msgstr "Distribution"
-
-#~ msgid "System"
-#~ msgstr "System"
