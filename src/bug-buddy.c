@@ -154,6 +154,70 @@ static const struct poptOption options[] = {
 	{ "core",        0, POPT_ARG_STRING, &popt_data.core_file,   0, N_("core file from app"),      N_("FILE")},
 	{NULL } };
 
+static void
+save_config ()
+{
+	GtkWidget *w;
+	gchar *s;
+
+	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/last/name", s);
+	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
+	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
+	gnome_entry_save_history (GNOME_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "email_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/last/email", s);
+	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
+	gnome_entry_prepend_history (GNOME_ENTRY (w), TRUE, s);
+	gnome_entry_save_history (GNOME_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "file_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/last/bugfile", s);
+
+	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
+	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
+	gnome_entry_save_history (GNOME_ENTRY (w));
+
+	gnome_config_sync ();
+}
+
+static void
+load_config ()
+{
+	GtkWidget *w;
+	gchar *s;
+
+	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	s = gnome_config_get_string ("/bug-buddy/last/name");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
+	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
+	gnome_entry_load_history (GNOME_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "email_entry");
+	s = gnome_config_get_string ("/bug-buddy/last/email");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
+	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
+	gnome_entry_load_history (GNOME_ENTRY (w));
+
+	w = glade_xml_get_widget (druid_data.xml, "file_entry");
+	s = gnome_config_get_string ("/bug-buddy/last/bugfile");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
+
+	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
+	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
+	gnome_entry_load_history (GNOME_ENTRY (w));
+}
+
 static gboolean
 update_crash_type (GtkWidget *w, gpointer data)
 {
@@ -361,6 +425,8 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 		}
 		break;
 	case SUBMIT_NONE:
+		save_config ();
+		gtk_main_quit ();
 		return FALSE;
 	default:
 		g_assert_not_reached ();
@@ -412,23 +478,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 
 	fclose (fp);
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/contact/name", s);
-
-	w = glade_xml_get_widget (druid_data.xml, "email_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/contact/email", s);
-
-	w = glade_xml_get_widget (druid_data.xml, "file_entry");
-	s = gtk_entry_get_text (GTK_ENTRY (w));
-	gnome_config_set_string ("/bug-buddy/defaults/bugfile", s);
-
-	w = glade_xml_get_widget (druid_data.xml, "file_entry2");
-	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
-	gnome_entry_save_history (GNOME_ENTRY (w));
-
-	gnome_config_sync ();
+	save_config ();
 
 	gtk_main_quit ();
 
@@ -550,6 +600,8 @@ init_ui (GladeXML *xml)
 
 	glade_xml_signal_autoconnect(xml);
 
+	load_config ();
+
 	w = glade_xml_get_widget (xml, "the_druid");
 	druid_data.the_druid = w;
 
@@ -604,28 +656,6 @@ init_ui (GladeXML *xml)
 	gtk_signal_connect (GTK_OBJECT (w), "toggled",
 			    GTK_SIGNAL_FUNC (update_submit_type),
 			    GINT_TO_POINTER (SUBMIT_FILE));	
-
-	w = glade_xml_get_widget (xml, "name_entry");
-	s = gnome_config_get_string ("/bug-buddy/contact/name");
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-	g_free (s);
-
-	w = glade_xml_get_widget (xml, "email_entry");
-	s = gnome_config_get_string ("/bug-buddy/contact/email");
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-	g_free (s);
-
-	w = glade_xml_get_widget (xml, "file_entry");
-	s = gnome_config_get_string ("/bug-buddy/defaults/bugfile");
-	if (s)
-		gtk_entry_set_text (GTK_ENTRY (w), s);
-	g_free (s);
-
-	w = glade_xml_get_widget (xml, "file_entry2");
-	w = gnome_file_entry_gnome_entry (GNOME_FILE_ENTRY (w));
-	gnome_entry_load_history (GNOME_ENTRY (w));
 
 	/* system config page */
 	druid_data.version_edit = glade_xml_get_widget (xml, "version_edit");
