@@ -52,6 +52,8 @@ typedef enum {
 
 typedef enum {
 	STATE_INTRO,
+	STATE_PROXY_CONFIG,
+	STATE_EMAIL_CONFIG,
 	STATE_GDB,
 	STATE_PRODUCT,
 	STATE_COMPONENT,
@@ -62,6 +64,13 @@ typedef enum {
 	STATE_FINISHED,
 	STATE_LAST
 } BuddyState;
+
+typedef struct {
+	const char *name;
+	const char *command;
+	gboolean    start_in_terminal;
+	gboolean    use_moz_remote;
+} MailerItem;
 
 typedef struct {
 	/* contact page */
@@ -149,6 +158,12 @@ typedef struct {
 	gboolean           showing_hand;
 
 	const char *gnome_version;
+
+	GHashTable *mailer_hash;
+	gboolean    use_gnome_mailer;
+	gboolean    use_custom_mailer;
+	MailerItem *mailer;
+	MailerItem  custom_mailer;
 } DruidData;
 
 extern DruidData druid_data;
@@ -179,5 +194,8 @@ char *buddy_get_text_widget (GtkWidget *w);
 
 void  buddy_set_text_widget (GtkWidget *w, const char *s);
 #define buddy_set_text(w, s) (buddy_set_text_widget (GET_WIDGET (w), s))
+
+void gconf_buddy_connect_string (const char *key, const char *opt_widget);
+void gconf_buddy_connect_bool   (const char *key, const char *opt_widget);
 
 #endif /* __bug_buddy_h__ */

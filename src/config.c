@@ -20,25 +20,30 @@
  */
 
 #include "config.h"
-#include <gnome.h>
 
 #include "bug-buddy.h"
 
+#include <gnome.h>
+#include <gconf/gconf-client.h>
+
 #define d(x)
+
+#define INT(s) (strtol ((s), NULL, 0))
 
 typedef enum {
 	CONFIG_DONE,
 	CONFIG_TOGGLE,
 	CONFIG_ENTRY,
 	CONFIG_USER,
-	CONFIG_MAILER
+	CONFIG_MAILER,
+	CONFIG_INT_ENTRY,
 } ConfigType;
 
 typedef struct {
 	ConfigType t;
-	char *w;
-	char *path;
-	char *w2;
+	const char *w;
+	const char *path;
+	const char *w2;
 } ConfigItem;
 
 static ConfigItem configs[] = {
@@ -59,6 +64,121 @@ static ConfigItem configs[] = {
 	{ CONFIG_TOGGLE, "email-cc-toggle",            "/bug-buddy/last/cc=0" },
 	{ CONFIG_DONE }
 };
+
+static ConfigItem gconf_configs[] = {
+	{ CONFIG_TOGGLE,     "use-http-proxy",                    "/system/gnome-vfs/use-http-proxy" },
+	{ CONFIG_ENTRY,      "http-proxy-host",                   "/system/gnome-vfs/http-proxy-host" },
+	{ CONFIG_INT_ENTRY,  "http-proxy-port",                   "/system/gnome-vfs/http-proxy-port" },
+	{ CONFIG_TOGGLE,     "use-http-proxy-authorization",      "/system/gnome-vfs/use-http-proxy-authorization" },
+	{ CONFIG_ENTRY,      "http-proxy-authorization-user",     "/system/gnome-vfs/http-proxy-authorization-user" },
+	{ CONFIG_ENTRY,      "http-proxy-authorization-password", "/system/gnome-vfs/http-proxy-authorization-password" },
+	{ CONFIG_DONE }
+};
+
+static MailerItem default_mailers[] = {
+	{ N_("Evolution"), "evolution", FALSE, FALSE },
+	{ NULL }
+};
+
+static void
+update_string (GtkEntry *entry, const char *key)
+{
+	GConfClient *client;
+
+	client = gconf_client_get_default ();
+	gconf_client_set_string (client, key,
+				 gtk_entry_get_text (entry),
+				 NULL);
+}
+
+void
+gconf_buddy_connect_string (const char *widget_name, const char *key)
+{
+	GtkWidget *widget;
+	GConfClient *client;
+	char *s;
+
+	g_return_if_fail (key != NULL);
+	widget = GET_WIDGET (widget_name);
+	g_return_if_fail (GTK_IS_ENTRY (widget));
+
+	client = gconf_client_get_default ();
+	s = gconf_client_get_string (client, key, NULL);
+
+	gtk_entry_set_text (GTK_ENTRY (widget), s?s:"");
+	g_free (s);
+
+	/* FIXME: fix memleak */
+	g_signal_connect (widget, "changed",
+			  G_CALLBACK (update_string),
+			  g_strdup (key));
+}
+
+static void
+update_bool (GtkToggleButton *button, const char *key)
+{
+	GConfClient *client;
+	
+	client = gconf_client_get_default ();
+	gconf_client_set_bool (client, key, button->active, NULL);
+}
+
+void
+gconf_buddy_connect_bool (const char *widget_name, const char *key)
+{
+	GtkWidget *widget;
+	GConfClient *client;
+	gboolean active;
+
+	g_return_if_fail (key != NULL);
+	widget = GET_WIDGET (widget_name);
+	g_return_if_fail (GTK_IS_TOGGLE_BUTTON (widget));
+
+	client = gconf_client_get_default ();
+	active = gconf_client_get_bool (client, key, NULL);
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget),
+				      active);
+
+	/* FIXME: fix leak */
+	g_signal_connect (widget, "toggled",
+			  G_CALLBACK (update_bool),
+			  g_strdup (key));
+}
+
+static void
+update_int (GtkEntry *entry, const char *key)
+{
+	GConfClient *client;
+
+	client = gconf_client_get_default ();
+	gconf_client_set_int (client, key,
+			      INT (gtk_entry_get_text (entry)),
+			      NULL);
+}
+
+void
+gconf_buddy_connect_int (const char *widget_name, const char *key)
+{
+	GtkWidget *widget;
+	GConfClient *client;
+	char *s;
+
+	g_return_if_fail (key != NULL);
+	widget = GET_WIDGET (widget_name);
+	g_return_if_fail (GTK_IS_ENTRY (widget));
+
+	client = gconf_client_get_default ();
+	s = g_strdup_printf ("%d", gconf_client_get_int (client, key, NULL));
+
+	gtk_entry_set_text (GTK_ENTRY (widget), s);
+	g_free (s);
+
+	/* FIXME: fix memleak */
+	g_signal_connect (widget, "changed",
+			  G_CALLBACK (update_int),
+			  g_strdup (key));
+}
 
 void
 save_config (void)
@@ -103,6 +223,24 @@ save_config (void)
 			      druid_data.submit_type);
 
 	gnome_config_set_bool ("/bug-buddy/last/already_run", 1);
+
+	gnome_config_set_bool ("/bug-buddy/last/use_gnome_mailer",
+			       druid_data.use_gnome_mailer);
+
+	gnome_config_set_bool ("/bug-buddy/last/use_custom_mailer",
+			       druid_data.use_custom_mailer);
+
+	gnome_config_set_string ("/bug-buddy/last/gnome_mailer",
+				 _(druid_data.mailer->name));
+
+	gnome_config_set_string ("/bug-buddy/custom_mailer/command",
+				 druid_data.custom_mailer.command);
+
+	gnome_config_set_bool ("/bug-buddy/custom_mailer/start_in_terminal",
+			       druid_data.custom_mailer.start_in_terminal);
+
+	gnome_config_set_bool("/bug-buddy/custom_mailer/use_moz_remote",
+			      druid_data.custom_mailer.use_moz_remote);
 			       
 	gnome_config_sync ();
 }
@@ -112,6 +250,7 @@ load_config (void)
 {
 	ConfigItem *item;
 	GtkWidget *w;
+	MailerItem *mailer;
 	char *def = NULL, *d2;
 	
 	d(g_print ("loading config...\n"));
@@ -161,6 +300,49 @@ load_config (void)
 		gnome_entry_load_history (GNOME_ENTRY (w));
 #endif
 	}
+
+	for (item = gconf_configs; item->t; item++) {
+		switch (item->t) {
+		case CONFIG_TOGGLE:
+			gconf_buddy_connect_bool (item->w, item->path);
+			break;
+		case CONFIG_ENTRY:
+			gconf_buddy_connect_string (item->w, item->path);
+			break;
+		case CONFIG_INT_ENTRY:
+			gconf_buddy_connect_int (item->w, item->path);
+			break;
+		default:
+			g_assert_not_reached ();
+		}
+	}
+
+	druid_data.mailer_hash = g_hash_table_new (g_str_hash, g_str_equal);
+	for (mailer = default_mailers; mailer->name; mailer++)
+		g_hash_table_insert (druid_data.mailer_hash, _(mailer->name), mailer);
+
+	druid_data.use_gnome_mailer =
+		gnome_config_get_bool ("/bug-buddy/last/use_gnome_mailer=true");
+
+	druid_data.use_custom_mailer =
+		gnome_config_get_bool ("/bug-buddy/last/use_custom_mailer");
+
+	{
+		char *s = g_strconcat ("/bug-buddy/last/gnome_mailer=", _(default_mailers[0].name));
+		char *mailer = gnome_config_get_string (s);
+		g_free (s);
+		druid_data.mailer = g_hash_table_lookup (druid_data.mailer_hash, mailer);
+		g_free (mailer);
+		if (!druid_data.mailer)
+			druid_data.mailer = &default_mailers[0];
+	}
+
+	druid_data.custom_mailer.command =
+		gnome_config_get_string ("/bug-buddy/custom_mailer/command=evolution");
+	druid_data.custom_mailer.start_in_terminal = 
+		gnome_config_get_bool ("/bug-buddy/custom_mailer/start_in_terminal");
+	druid_data.custom_mailer.use_moz_remote =
+		gnome_config_get_bool ("/bug-buddy/custom_mailer/use_moz_remote");
 
 	druid_data.submit_type =
 		gnome_config_get_int ("/bug-buddy/last/submittype");

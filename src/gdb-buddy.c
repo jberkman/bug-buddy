@@ -36,6 +36,7 @@
 
 #define d(x)
 
+#if 0
 static gint
 animate (gpointer data)
 {
@@ -62,6 +63,7 @@ stop_animation (void)
 	gtk_timeout_remove (druid_data.throbber_id);
 	druid_data.throbber_id = 0;
 }
+#endif
 
 void
 start_gdb (void)
@@ -124,7 +126,7 @@ stop_gdb (void)
 	druid_data.gdb_pid = 0;
 
 	druid_set_sensitive (TRUE, TRUE, TRUE);
-	stop_animation ();
+	/*stop_animation ();*/
 
 	druid_data.fd = 0;
 	druid_data.ioc = NULL;
@@ -334,7 +336,7 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	buddy_set_text ("gdb-text", NULL);
 
 	druid_set_sensitive (FALSE, FALSE, TRUE);
-	start_animation ();
+	/*start_animation ();*/
 
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-stop")), TRUE);
 	gtk_widget_set_sensitive (GTK_WIDGET (GET_WIDGET ("gdb-go")), FALSE);

@@ -32,6 +32,7 @@ GtkWidget *make_anim (gchar *widget_name, gchar *string1,
 		      gchar *string2, gint int1, gint int2);
 GtkWidget *make_pixmap_button (gchar *widget_name, gchar *string1, 
 			       gchar *string2, gint int1, gint int2);
+GtkWidget *make_image (char *widget_name, char *s1, char *s2, int i1, int i2);
 gboolean on_more_page_next (GnomeDruidPage *page, GnomeDruid *druid);
 gboolean on_contact_page_prepare (GnomeDruidPage *page, GnomeDruid *druid);
 gboolean on_version_page_prepare (GnomeDruidPage *page, GnomeDruid *druid);
@@ -52,5 +53,8 @@ void side_configure_size (GtkWidget *w, GtkAllocation *alloc, gpointer data);
 void intro_page_changed (GtkWidget *w, gpointer data);
 
 void on_progress_cancel_clicked (GtkWidget *w, gpointer data);
+void on_druid_window_style_set (GtkWidget *w, GtkStyle *old_style, gpointer data);
+void on_email_mailer_radio_toggled (GtkWidget *w, gpointer data);
+void on_email_default_radio_toggled (GtkWidget *w, gpointer data);
 
 #endif /* LIBGLADE_BUDDY_H */

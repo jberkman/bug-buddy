@@ -28,6 +28,7 @@
 #include <string.h>
 
 #include <libgnomevfs/gnome-vfs-mime-utils.h>
+#include <libgnomevfs/gnome-vfs-utils.h>
 
 #if 0
 static char *help_pages[] = {
@@ -46,6 +47,8 @@ static char *help_pages[] = {
 
 static char *state_title[] = {
 	N_("Welcome to Bug Buddy"),
+	N_("HTTP Proxy Configuration"),
+	N_("EMail Configuration"),
 	N_("Debugging Information"),
 	N_("Product"),
 	N_("Component"),
@@ -145,9 +148,14 @@ druid_set_state (BuddyState state)
 	gtk_widget_set_sensitive (GET_WIDGET ("druid-next"),
 				  (state < STATE_FINISHED));
 
-	gnome_canvas_item_set (druid_data.banner,
-			       "text", _(state_title[state]),
-			       NULL);
+	{
+		GtkLabel *label = GTK_LABEL (GET_WIDGET ("druid-label"));
+		char *s = g_strconcat ("<span size=\"xx-large\" weight=\"ultrabold\">",
+				       _(state_title[state]), "</span>", NULL);
+		gtk_label_set_label (label, s);
+		gtk_label_set_use_markup (label, TRUE);
+		g_free (s);
+	}
 
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (GET_WIDGET ("druid-notebook")),
 				       state);	
@@ -156,6 +164,10 @@ druid_set_state (BuddyState state)
 	case STATE_INTRO:
 		/* check what gdb'ing we are going to do, and print
 		 * the right message */
+		break;
+	case STATE_PROXY_CONFIG:
+		break;
+	case STATE_EMAIL_CONFIG:
 		break;
 	case STATE_GDB:
 		start_gdb ();
@@ -193,7 +205,7 @@ druid_set_state (BuddyState state)
 		break;
 	case STATE_EMAIL:
 		/* fill in the content text */
-		s = generate_email_text ();
+		s = generate_email_text (TRUE);
 		w = GET_WIDGET ("email-text");
 		buddy_set_text ("email-text", s);
 		g_free (s);
@@ -262,10 +274,12 @@ email_is_valid (const char *addy)
 
 /* return true if page is ok */
 static gboolean
-intro_page_ok (void)
+mail_config_page_ok (void)
 {
 	GtkWidget *w;
 	gchar *s;
+
+	/* FIXME: check mail config type */
 
 	s = buddy_get_text ("email-name-entry");
 	if (! (s && strlen (s))) {
@@ -576,7 +590,11 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 	switch (druid_data.state) {
 	case STATE_INTRO:
 		/* validate email and sendmail */
-		if (!intro_page_ok ())
+	case STATE_PROXY_CONFIG:
+		/* FIXME: validate proxy settings */
+		break;
+	case STATE_EMAIL_CONFIG:
+		if (!mail_config_page_ok ())
 			return;
 		break;
 	case STATE_GDB:
@@ -632,7 +650,56 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		bugzilla_add_mostfreq (druid_data.product->bts);
 		break;
 	case STATE_MOSTFREQ:
-		/* nothing */
+		if (druid_data.use_gnome_mailer) {
+			MailerItem *mailer;
+			char *orig_body, *uri_body, *to;
+			int argc;
+			char **argv;
+
+			if (druid_data.use_custom_mailer) {
+				mailer = &druid_data.custom_mailer;
+			} else {
+				char *s;
+				s = buddy_get_text ("email-default-entry");
+				mailer = g_hash_table_lookup (druid_data.mailer_hash, s);
+				g_free (s);
+			}
+
+			/* FIXME: validate mailer */
+
+			g_shell_parse_argv (mailer->command, &argc, &argv, NULL);
+			argv = g_realloc (argv, ++argc);
+
+			/* escape from la */
+			orig_body  = generate_email_text (FALSE);
+			uri_body   = gnome_vfs_escape_string (orig_body);
+
+			to = gnome_vfs_escape_string (druid_data.product->bts->email);
+			argv[argc-1] = g_strdup_printf ("mailto:%s?body=%s", to, uri_body);
+			argv[argc]   = NULL;
+
+			{
+				char **s;
+				for (s = argv; *s; s++)
+					g_print ("%s\n", *s);
+			}
+
+			/* FIXME: check for errors */
+			g_spawn_async (NULL, argv, NULL,
+				       G_SPAWN_SEARCH_PATH,
+				       NULL, NULL, NULL, NULL);
+
+			g_strfreev (argv);
+			g_free (orig_body);
+			g_free (uri_body);
+			g_free (to);
+
+			newstate = STATE_FINISHED;
+
+			buddy_set_text ("finished-label", 
+					_("Your email composer has been launched with a template bug report.\n\n"
+					  "Thank you for submitting this bug report."));
+		}
 		break;
 	case STATE_DESC:
 		/* validate subject, description, and file name */

@@ -275,116 +275,37 @@ stock_pixmap_buddy (gchar *w, char *n, char *a, int b, int c)
 }
 
 void
-title_configure_size (GtkWidget *w, GtkAllocation *alloc, gpointer data)
+on_email_mailer_radio_toggled (GtkWidget *w, gpointer data)
 {
-	gnome_canvas_set_scroll_region (GNOME_CANVAS (w), 0.0, 0.0,
-					alloc->width, alloc->height);
-	gnome_canvas_item_set (druid_data.title_box,
-			       "x1", 0.0,
-			       "y1", 0.0,
-			       "x2", (gfloat)alloc->width,
-			       "y2", (gfloat)alloc->height,
-			       "width_units", 1.0, NULL);
-
-	gnome_canvas_item_set (druid_data.banner,
-			       "x", 15.0,
-			       "y", 24.0,
-			       "anchor", GTK_ANCHOR_WEST, NULL);
-
-	gnome_canvas_item_set (druid_data.logo,
-			       "x", (gfloat)(alloc->width - 48),
-			       "y", -2.0,
-			       NULL);
+	gtk_notebook_set_current_page (
+		GTK_NOTEBOOK (GET_WIDGET ("mail-notebook")),
+		GTK_TOGGLE_BUTTON (w)->active ? 0 : 1);
 }
 
 void
-side_configure_size (GtkWidget *w, GtkAllocation *alloc, gpointer data)
+on_email_default_radio_toggled (GtkWidget *w, gpointer data)
 {
-	gnome_canvas_set_scroll_region (GNOME_CANVAS (w), 0.0, 0.0,
-					alloc->width, alloc->height);
-	gnome_canvas_item_set (druid_data.side_box,
-			       "x1", 0.0,
-			       "y1", 0.0,
-			       "x2", (gfloat)alloc->width,
-			       "y2", (gfloat)alloc->height,
-			       "width_units", 1.0, NULL);
+	static const char *widgets[] = {
+		"email-command-label",
+		"email-command-entry",
+		"email-terminal-toggle",
+		"email-remote-toggle",
+		NULL
+	};
+	const char **s;
+	gboolean custom = !GTK_TOGGLE_BUTTON (w)->active;
 
-	gnome_canvas_item_set (druid_data.side_image,
-			       "x", 0.0,
-			       "y", (gfloat)(alloc->height - 179),
-			       "width", 68.0,
-			       "height", 179.0, NULL);
+	gtk_widget_set_sensitive (GET_WIDGET ("email-default-combo"), !custom);
+
+	for (s = widgets; *s; s++) 
+		gtk_widget_set_sensitive (GET_WIDGET (*s), custom);
 }
 
 static void
-init_canvi (void)
+build_custom_mailers (gpointer key, gpointer value, gpointer data)
 {
-	GdkPixbuf *pb;
-	GnomeCanvasItem *root;
-	GnomeCanvas *canvas;
-	PangoFontDescription *pfd;
-
-	canvas = GNOME_CANVAS (GET_WIDGET ("title-canvas"));
-	root = GNOME_CANVAS_ITEM (gnome_canvas_root (GNOME_CANVAS (canvas)));
-
-	druid_data.title_box = 
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       gnome_canvas_rect_get_type (),
-				       "fill_color", "black",
-				       "outline_color", "black", NULL);
-
-	pfd = pango_font_description_from_string ("Helvetica Bold 18");
-	druid_data.banner =
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       gnome_canvas_text_get_type (),
-				       "fill_color", "white",
-				       "font_desc", pfd,
-				       "anchor", GTK_ANCHOR_WEST,
-				       NULL);
-	pango_font_description_free (pfd);
-
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-core.png", NULL);
-	druid_data.logo =
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       GNOME_TYPE_CANVAS_PIXBUF,
-				       "pixbuf", pb, NULL);
-
-
-	/*******************************************************/
-	canvas = GNOME_CANVAS (GET_WIDGET ("side-canvas"));
-	root = GNOME_CANVAS_ITEM (gnome_canvas_root (GNOME_CANVAS (canvas)));
-	druid_data.side_box =
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       gnome_canvas_rect_get_type (),
-				       "fill_color", "black",
-				       "outline_color", "black", NULL);
-
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-flower.png", NULL);
-
-	druid_data.side_image =
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       GNOME_TYPE_CANVAS_PIXBUF,
-				       "pixbuf", pb, NULL);
-
-
-	/*******************************************************/
-	canvas = GNOME_CANVAS (GET_WIDGET ("gdb-canvas"));
-	gnome_canvas_set_scroll_region (GNOME_CANVAS (canvas), -12.0, -12.0, 12.0, 12.0);
-	root = GNOME_CANVAS_ITEM (gnome_canvas_root (GNOME_CANVAS (canvas)));
-	
-	pb = gdk_pixbuf_new_from_file (BUDDY_DATADIR "/bug-buddy.png", NULL);
-	druid_data.throbber_pb = gdk_pixbuf_scale_simple (pb, 24, 24, GDK_INTERP_BILINEAR);
-	g_object_ref (pb);
-
-	druid_data.throbber =
-		gnome_canvas_item_new (GNOME_CANVAS_GROUP (root),
-				       GNOME_TYPE_CANVAS_PIXBUF,
-				       "pixbuf", druid_data.throbber_pb,
-				       "x", -6.0,
-				       "y", -6.0,
-				       "height", 24.0,
-				       "width", 24.0,
-				       NULL);
+	GList **list = data;
+	*list = g_list_append (*list, key);
 }
 
 /* there should be no setting of default values here, I think */
@@ -399,9 +320,11 @@ init_ui (void)
 
 	load_config ();
 
-	init_canvi ();
-
 	w = GET_WIDGET ("druid-notebook");
+	gtk_notebook_set_show_border (GTK_NOTEBOOK (w), FALSE);
+	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (w), FALSE);
+
+	w = GET_WIDGET ("mail-notebook");
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (w), FALSE);
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (w), FALSE);
 
@@ -494,7 +417,32 @@ init_ui (void)
 			bbox, GET_WIDGET ("druid-about"), TRUE);
 	}
 		
+	gtk_misc_set_alignment (GTK_MISC (GET_WIDGET ("druid-logo")),
+				1.0, 0.5);
 
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-mailer-radio")),
+				      druid_data.use_gnome_mailer);
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-custom-radio")),
+				      druid_data.use_custom_mailer);
+
+	buddy_set_text ("email-default-entry"), _(druid_data.mailer->name);
+	buddy_set_text ("email-command-entry", druid_data.custom_mailer.command);
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-terminal-toggle")),
+				      druid_data.custom_mailer.start_in_terminal);
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (GET_WIDGET ("email-remote-toggle")),
+				      druid_data.custom_mailer.use_moz_remote);
+
+	{
+		GList *mailers = NULL;
+		g_hash_table_foreach (druid_data.mailer_hash, build_custom_mailers, &mailers);
+		gtk_combo_set_popdown_strings (GTK_COMBO (GET_WIDGET ("email-default-combo")),
+					       mailers);
+		g_list_free (mailers);
+	}
+			    
 #if 0
 	/* set the cursor at the beginning of the second line */
 	{
@@ -507,12 +455,34 @@ init_ui (void)
 #endif
 }
 
+GtkWidget *
+make_image (char *widget_name, char *s1, char *s2, int i1, int i2)
+{
+	GtkWidget *w = NULL;
+	char *filename;
+	filename = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+					      s1, TRUE, NULL);
+	if (filename) {
+		w = gtk_image_new_from_file (filename);
+		gtk_widget_show (w);
+	}
+	g_free (filename);
+	return w;
+}
+
 gint
 delete_me (GtkWidget *w, GdkEventAny *evt, gpointer data)
 {
 	save_config ();
 	gtk_main_quit ();
 	return FALSE;
+}
+
+void
+on_druid_window_style_set (GtkWidget *widget, GtkStyle *old_style, gpointer data)
+{
+	gtk_widget_modify_fg (GET_WIDGET ("druid-label"), GTK_STATE_NORMAL, &widget->style->fg[GTK_STATE_SELECTED]);
+	gtk_widget_modify_bg (GET_WIDGET ("druid-background"), GTK_STATE_NORMAL, &widget->style->bg[GTK_STATE_SELECTED]);
 }
 
 int
@@ -536,18 +506,22 @@ main (int argc, char *argv[])
 			    LIBGNOMEUI_MODULE,
 			    argc, argv,
 			    GNOME_PARAM_POPT_TABLE, options,
-			    GNOME_PARAM_POPT_FLAGS, 0,
+			    GNOME_PARAM_APP_DATADIR, REAL_DATADIR,
 			    NULL);
 
-	gnome_window_icon_set_default_from_file (BUDDY_ICONDIR"/bug-buddy.png");
+	s = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
+				       "bug-buddy.png", TRUE, NULL);
+	
+	if (s)
+		gnome_window_icon_set_default_from_file (s);
+	g_free (s);
 
-#if 0
-	s = "bug-buddy.glade2";
-	if (!g_file_tests (s))
-#endif
-		s = BUDDY_DATADIR "/bug-buddy.glade2";
-
-	druid_data.xml = glade_xml_new (s, NULL, GETTEXT_PACKAGE);
+	s = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_DATADIR,
+				       "bug-buddy/bug-buddy.glade2", TRUE, NULL);
+	if (s)
+		druid_data.xml = glade_xml_new (s, NULL, GETTEXT_PACKAGE);
+	else
+		druid_data.xml = NULL;
 
 	if (!druid_data.xml) {
 		w = gtk_message_dialog_new (NULL,
@@ -564,6 +538,7 @@ main (int argc, char *argv[])
 		gtk_widget_destroy (w);
 		return 0;
 	}
+	g_free (s);
 
 	init_ui ();
 
@@ -574,13 +549,14 @@ main (int argc, char *argv[])
 	
 	druid_set_state (STATE_INTRO);	
 
+#if 0
 	if (druid_data.already_run && 
 	    gtk_toggle_button_get_active (
 		    GTK_TOGGLE_BUTTON (GET_WIDGET ("intro-skip-toggle"))))
 		on_druid_next_clicked (NULL, NULL);
+#endif
 
 	load_bugzillas ();
-
 
 	gtk_main ();
 

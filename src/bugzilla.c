@@ -949,12 +949,12 @@ format_for_width (const char *s)
  */ 
 
 gchar *
-generate_email_text (void)
+generate_email_text (gboolean include_headers)
 {	
 	char *subject, *product,  *component, *version;
 	char *opsys,   *platform, *severity,  *body, *tmp_body;
 	char *debug_info;
-	char *email, *email1;
+	char *email, *email1= NULL, *email2;
 	char *gnome_version;
 #if 0
 	char *text_file, *sysinfo;
@@ -979,9 +979,10 @@ generate_email_text (void)
 	debug_info = buddy_get_text ("gdb-text");
 
 	if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_FREITAG) {
-		email1 = g_strdup_printf (
-			"Subject: %s\n"
-			"\n"
+		if (include_headers)
+			email1 = g_strdup_printf ("Subject: %s\n\n", subject);
+				
+		email2 = g_strdup_printf (
 			"@product = %s\n"
 			"@component = %s\n"
 			"@version = %s\n"
@@ -993,7 +994,6 @@ generate_email_text (void)
 			"\n"
 			"%s\n"
 			"\n",
-			subject,
 			product,
 			component,
 			version,
@@ -1004,9 +1004,10 @@ generate_email_text (void)
 			severity,
 			body);
 	} else if (druid_data.product->bts->submit_type == BUGZILLA_SUBMIT_DEBIAN) {
-		email1 = g_strdup_printf (
-			"Subject: %s\n"
-			"\n"
+		if (include_headers)
+			email1 = g_strdup_printf ("Subject: %s\n\n", subject);
+
+		email2 = g_strdup_printf (
 			"Package: %s\n"
 			"%s: %s\n"
 			"Version: %s\n"
@@ -1018,7 +1019,6 @@ generate_email_text (void)
 			"Description:\n"
 			"%s\n"
 			"\n",
-			subject,
 			product,
 			druid_data.product->bts->severity_header,
 			severity,
@@ -1029,14 +1029,17 @@ generate_email_text (void)
 			gnome_version,
 			body);
 	} else 
-		email1 = g_strdup ("Unkown format.");
+		email2 = g_strdup ("Unkown format.");
 	
-	if (druid_data.crash_type != CRASH_NONE && debug_info[0]) {
-		email = g_strconcat (email1, "\nDebugging Information:\n\n", debug_info, NULL);
-		g_free (email1);
-	} else
-		email = email1;       
-	
+	email = g_strconcat (email1 ? email1 : "", 
+			     email2, 
+			     druid_data.crash_type != CRASH_NONE && debug_info[0]
+			     ? "\nDebugging Information:\n\n"
+			     : NULL,
+			     debug_info, NULL);
+
+	g_free (email1);
+	g_free (email2);
 	g_free (subject);
 	g_free (version);
 	g_free (body);

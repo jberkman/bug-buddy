@@ -1,3 +1,34 @@
+2002-01-14  jacob berkman  <jacob@ximian.com>
+
+	* src/united-states-of-bug-buddy.c (druid_set_state): steal some
+	code from the new GnomeDruidPageStandard
+	(on_druid_next_clicked): if "use_gnome_mailer" was set fire off
+	the mailer and jump to the finished page
+
+	* src/gdb-buddy.c: comment out animation stuff until it gets fixed
+
+	* src/config.c (update_string): 
+	(gconf_buddy_connect_string):
+	(update_bool):
+	(gconf_buddy_connect_bool):
+	(update_int):
+	(gconf_buddy_connect_int): some gconf sugar
+	(save_config): save the new mailer settings
+	(load_config): load the vfs proxy and new mailer settings
+
+	* src/bugzilla.c (generate_email_text): don't generate a Subject:
+	line if we were told not to
+
+	* src/bug-buddy.c (on_email_mailer_radio_toggled): 
+	(on_email_default_radio_toggled):
+	(make_image):
+	(build_custom_mailers): new funcs for new gui stuff
+	(init_canvi): removed
+	(init_ui): initialize the new widgets
+	(on_druid_window_style_set): use colors from the theme rather than
+	ugly hard coded ones
+	(main): set GNOME_PARAM_APP_DATADIR and use it for finding files.
+
 2002-01-10  jacob berkman  <jacob@ximian.com>
 
 	* NEWS: 

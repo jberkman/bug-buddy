@@ -5,6 +5,7 @@ INCLUDES = \
 	$(BUG_BUDDY_CFLAGS) -I$(includedir)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"	\
+	-DREAL_DATADIR=\""$(datadir)"\"			\
 	-DG_DISABLE_DEPRECATED		\
 	-DGDK_DISABLE_DEPRECATED	\
 	-DGDK_PIXBUF_DISABLE_DEPRECATED	\

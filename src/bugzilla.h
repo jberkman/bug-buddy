@@ -136,6 +136,6 @@ void bugzilla_product_add_components_to_clist (BugzillaProduct *product);
 
 gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);
 
-char *generate_email_text (void);
+char *generate_email_text (gboolean include_headers);
 
 #endif /* __BUGZILLA_H__ */
