@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 2000-04-18 00:14-0400\n"
-"PO-Revision-Date: 2000-04-01 16:42+02:00\n"
+"POT-Creation-Date: 2000-04-18 20:26+0200\n"
+"PO-Revision-Date: 2000-04-18 16:42+02:00\n"
 "Last-Translator: Birger Langkjer <birger.langkjer@image.dk>\n"
 "Language-Team: Dansk/Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,9 +15,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "skaffer stak-trace..."
+msgstr "skaffer stak-trace... (%d)"
 
 #: src/bug-buddy.c:410 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -99,60 +99,52 @@ msgid "Submit bug report"
 msgstr "Send fejlrapport"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Only send report to yourself"
-msgstr "Send *kun* rapport til din epostadresse"
+msgstr "Send *kun* rapport til dig selv"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Save report to file"
-msgstr "Gem rapporten som en fil"
+msgstr "Gem rapport i fil"
 
 #: src/bug-buddy.c:96
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "Indsamler fejlanalyseringsinformation"
+msgstr "Indsamler fejlanalyseringsinformation fra applikation der gik ned"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "Indsamler fejlanalyseringsinformation"
+msgstr "Indsamler fejlanalyseringsinformation fra en 'core' fil"
 
 #: src/bug-buddy.c:98
 msgid "Skip this step"
 msgstr "Spring dette trin over"
 
 #: src/bug-buddy.c:103
-#, fuzzy
 msgid "Create a new bug report"
-msgstr "Send en ny fejlrapport"
+msgstr "Lav en ny fejlrapport"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Add more information to existing report"
-msgstr "Tilføj oplysninger til en eksisterende fejlrapport"
+msgstr "Tilføj oplysninger til en eksisterende rapport"
 
 #: src/bug-buddy.c:113
 msgid "Name of contact"
-msgstr ""
+msgstr "Kontaktnavne"
 
 #: src/bug-buddy.c:113
 msgid "NAME"
 msgstr "NAME"
 
 #: src/bug-buddy.c:114
-#, fuzzy
 msgid "Email address of contact"
-msgstr "Epostadresse"
+msgstr "Epostadresse på kontaktperson"
 
 #: src/bug-buddy.c:114
 msgid "EMAIL"
 msgstr "EMAIL"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Package containing the program"
-msgstr "Pakken programmet tilhører"
+msgstr "Pakken indeholdende programmet"
 
 #: src/bug-buddy.c:115
 msgid "PACKAGE"
@@ -167,16 +159,14 @@ msgid "VERSION"
 msgstr "VERSION"
 
 #: src/bug-buddy.c:117
-#, fuzzy
 msgid "File name of crashed program"
-msgstr "Pakken programmet tilhører"
+msgstr "Filnavn på program der gik ned"
 
 #: src/bug-buddy.c:117 src/bug-buddy.c:119
 msgid "FILE"
 msgstr "FILE"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "PID of crashed program"
 msgstr "PID på program der gik ned"
 
@@ -185,7 +175,6 @@ msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "Core file from program"
 msgstr "core-fil fra programmet"
 
@@ -194,17 +183,17 @@ msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
+"Du skal angive et emne og en beskrivelse \n"
+"i din fejlrapport."
 
 #: src/bug-buddy.c:402
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
 msgstr ""
 "gdb er ikke færdig med at hente\n"
 "fejlanalyseringsinformation.\n"
-"Dræb gdb-processen?\n"
-"(stak-trace vil mangle noget)"
+"Skal gdb-processen dræbes (stak-tracen vil mangle noget)?"
 
 #: src/bug-buddy.c:453
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -226,7 +215,7 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
-"'%s' ser ikke ud til at eksistere. Du vil ikke kunne sende en\n"
+"'%s' ser ikke ud til at eksistere. Du vil ikke kunne indsende en\n"
 "egentlig fejlrapport, men du kan gemme rapporten som en fil.\n"
 "\n"
 "Angiv en ny placering for sendmail?"
@@ -236,44 +225,41 @@ msgid "Please enter your name and email address"
 msgstr "Indtast venligst dit navn og epostadresse"
 
 #: src/bug-buddy.c:605
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"Kunne ikke behandle core-filen med gdb:\n"
-"'%s'"
+msgstr "Kunne ikke åbne fil: '%s'"
 
 #: src/bug-buddy.c:618
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "Skal til at køre '%s'"
 
 #: src/bug-buddy.c:622
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "Kan ikke starte post-program: '%s'"
 
 #: src/bug-buddy.c:653
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "Din fejlrapport blev gemt i '%s'"
 
 #: src/bug-buddy.c:656
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
-msgstr ""
+msgstr "Din fejlrapport er blevet indsendt til <%s>"
 
 #: src/bug-buddy.c:786
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "Du skal angive en e-postadresse på modtageren"
 
 #: src/bug-buddy.c:792
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Send fejlrapport"
+msgstr "Send fejlrapport nu?"
 
 #: src/bug-buddy.c:802
 msgid "Please choose a file to save to."
-msgstr "Vælg venligst en fil at gemme som."
+msgstr "Vælg venligst en fil at gemme i."
 
 #: src/bug-buddy.c:809
 #, c-format
@@ -329,7 +315,7 @@ msgstr "fejl-hjælper"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "Velkommen til bug-buddys vidunderlige verden"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -339,6 +325,11 @@ msgid ""
 "email address so that the bug report can be\n"
 "submitted."
 msgstr ""
+"bug-buddy vil lede dig gennem processen\n"
+"med at indsende en fejlrapport.  Hvis dette er første gang \n"
+"du bruger bug-buddy, vil du blive spurgt om din\n"
+"e-post addresse, så fejlrapporten kan blive\n"
+"afsendt."
 
 #: src/glade-strings.c:14
 msgid "Contact Information"
@@ -366,6 +357,9 @@ msgid ""
 "submitting a bug report.  You can click the help\n"
 "button for a more in-depth explanation of the process."
 msgstr ""
+"bug-buddy vil lede dig gennem processen\n"
+"med at indsende en fejlrapport. Du kan klikke på hjælpeknappn \n"
+"for en uddybende forklaring på processen."
 
 #: src/glade-strings.c:22
 msgid "Report Information"
@@ -376,98 +370,89 @@ msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"Vælg et fejlfølgningssystem du vil bruge, og udfyld så  den resterende "
+"information."
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
-msgstr "Fejlfølgningssystem"
+msgstr "Fejlfølgningssystem "
 
-#: src/glade-strings.c:26
-#, fuzzy
-msgid ""
-"Submit new report\n"
-"Add information to an existing report\n"
-msgstr "Tilføj oplysninger til en eksisterende fejlrapport"
-
-#: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
 msgid "Package"
 msgstr "Pakke"
 
-#: src/glade-strings.c:30
+#: src/glade-strings.c:27
 msgid "Severity"
 msgstr "Alvorlighed"
 
-#: src/glade-strings.c:31
+#: src/glade-strings.c:28
 msgid "Class"
 msgstr "Klasse"
 
-#: src/glade-strings.c:32 src/glade-strings.c:34
+#: src/glade-strings.c:29 src/glade-strings.c:31
 msgid "Version"
 msgstr "Version"
 
-#: src/glade-strings.c:35
+#: src/glade-strings.c:32
 msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"Venligst kontollér om din fejl allerede er blevet indsendt,\n"
+"og brug i så fald ovennnævnte \"Tilføj oplysninger til eksisterende "
+"fejlrapport\"."
 
-#: src/glade-strings.c:37 src/glade-strings.c:38
+#: src/glade-strings.c:34 src/glade-strings.c:35
 msgid "Bug Number"
 msgstr "Fejlnummer"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:36
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:37
 msgid "Short subject for the bug report"
 msgstr "Kort overskrift for fejlrapporten"
 
-#: src/glade-strings.c:41
-#, fuzzy
+#: src/glade-strings.c:38
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "Detaljeret beskrivelse af fejlen (på engelsk):"
+msgstr ""
+"Detaljeret beskrivelse af fejlen, med beskrivelse af hvordan man gentager "
+"den (på engelsk)"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:39
 msgid "Include a text file"
 msgstr "Inkludér en tekstfil"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:40
 msgid "Debugging Information"
 msgstr "Fejlanalyseringsinformation"
 
-#: src/glade-strings.c:44
-msgid ""
-"Collect debugging information from a crashed application\n"
-"Collect debugging information from a core file\n"
-"Skip this step\n"
-msgstr ""
-
-#: src/glade-strings.c:48
+#: src/glade-strings.c:41
 msgid "Select the crashed application's binary"
 msgstr "Vælg kørbar fil for program der gik ned"
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:42
 msgid "Binary"
 msgstr "Binær"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:43
 msgid "Process ID"
 msgstr "Proces-ID"
 
-#: src/glade-strings.c:51
+#: src/glade-strings.c:44
 msgid "Core file"
 msgstr "Core-fil"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:45
 msgid "Select a core file"
 msgstr "Vælg en core-fil"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:46
 msgid "Collecting Debugging Information"
 msgstr "Indsamler fejlanalyseringsinformation"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:47
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -475,144 +460,75 @@ msgstr ""
 "Vent venligst mens fejlanalyserings-\n"
 "informationen indsamles..."
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:49
 msgid "System Configuration"
 msgstr "Systemkonfiguration"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:50
 msgid "Please verify that this information is correct"
 msgstr "Undersøg venligst om disse oplysninger er korrekte"
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:52
 msgid "Version installed"
 msgstr "Installeret version"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:53
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:54
 msgid "Automatically go to next page when complete"
 msgstr "Gå automatisk til næste side når du er færdig"
 
-#: src/glade-strings.c:62
+#: src/glade-strings.c:55
 msgid "Submitting the Report"
 msgstr "Send fejlrapport"
 
-#: src/glade-strings.c:63
-#, fuzzy
-msgid ""
-"Submit bug report\n"
-"Send to your amail address only\n"
-"Save report to file\n"
-msgstr "Send *kun* rapport til din epostadresse"
-
-#: src/glade-strings.c:67
+#: src/glade-strings.c:56
 msgid "To"
-msgstr ""
+msgstr "Til"
 
-#: src/glade-strings.c:68
+#: src/glade-strings.c:57
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "Send kopi til dig selv"
 
-#: src/glade-strings.c:69
+#: src/glade-strings.c:58
 msgid "Save the report to..."
 msgstr "Gem rapporten som..."
 
-#: src/glade-strings.c:70
+#: src/glade-strings.c:59
 msgid "Content"
-msgstr ""
+msgstr "Indhold"
 
-#: src/glade-strings.c:71
+#: src/glade-strings.c:60
 msgid "Summary"
 msgstr "Resumé"
 
-#: src/glade-strings.c:72
+#: src/glade-strings.c:61
 msgid "The GEGL is watching."
 msgstr "GEGL er altseende."
 
-#~ msgid "Contact's name"
-#~ msgstr "Kontaktens navn"
-
-#~ msgid "Contact's email address"
-#~ msgstr "Kontaktens epostadresse"
-
-#~ msgid "Crashed file name"
-#~ msgstr "Navn på filen der gik ned"
+#~ msgid ""
+#~ "Submit new report\n"
+#~ "Add information to an existing report\n"
+#~ msgstr ""
+#~ "Send ny rapport\n"
+#~ "Tilføj oplysninger til en eksisterende fejlrapport\n"
 
 #~ msgid ""
-#~ "Click \"Finish\" to exit bug-buddy.\n"
-#~ "No bug report will be submitted."
+#~ "Collect debugging information from a crashed application\n"
+#~ "Collect debugging information from a core file\n"
+#~ "Skip this step\n"
 #~ msgstr ""
-#~ "Klik \"Færdig\" for at forlade fejl-hjælperen.\n"
-#~ "Ingen fejlrapport vil blive sendt."
+#~ "Indsamler fejlanalyseringsinformation fra applikation der gik ned\n"
+#~ "Indsamler fejlanalyseringsinformation fra en 'core' fil\n"
+#~ "Spring dette trin over\n"
 
 #~ msgid ""
-#~ "You are about to save a bug report in '%s'.\n"
-#~ "This can later be used to report a bug in '%s'."
+#~ "Submit bug report\n"
+#~ "Send to your amail address only\n"
+#~ "Save report to file\n"
 #~ msgstr ""
-#~ "Du er ved at gemme en fejlrapport i '%s'.\n"
-#~ "Den kan senere bruges til at rapportere en fejl i '%s'"
-
-#~ msgid ""
-#~ "You are about to report a bug in '%s'.\n"
-#~ "\n"
-#~ "This will be submitted via email:\n"
-#~ "To: %s\n"
-#~ "From: %s <%s>\n"
-#~ "Subject: %s\n"
-#~ "\n"
-#~ "Clicking on 'Finish' will submit the bug report."
-#~ msgstr ""
-#~ "Du er ved at rapportere en fejl i '%s'.\n"
-#~ "\n"
-#~ "Dette vil blive sendt via epost:\n"
-#~ "Til: %s\n"
-#~ "Fra: %s <%s>\n"
-#~ "Emne: %s\n"
-#~ "\n"
-#~ "Når du trykker på 'Færdig' ryger fejlrapporten afsted."
-
-#~ msgid "all will be revealed."
-#~ msgstr "alt vil blive afsløret"
-
-#~ msgid ""
-#~ "Enter your name and email address, so you will be notified when the\n"
-#~ "bug is resolved, or for developers to request more information from you."
-#~ msgstr ""
-#~ "Indtast dit navn og epostadresse, så du kan få at vide når fejlen er\n"
-#~ "blevet rettet, eller så udviklerne kan bede dig om mere information."
-
-#~ msgid ""
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Action"
-#~ msgstr "Handling"
-
-#~ msgid "More Information"
-#~ msgstr "Flere oplysninger"
-
-#~ msgid "Detailed instructions on how to reproduce the bug"
-#~ msgstr "Detaljerede instrukser om hvordan fejlen kan gentages"
-
-#~ msgid "How to collect debugging information"
-#~ msgstr "Hvordan fejlanalyseringsinformation skal indsamles"
-
-#~ msgid "Attach to a crashed application"
-#~ msgstr "Vedhæft til et program der er gået ned"
-
-#~ msgid "Read from a core file"
-#~ msgstr "Skaf fra en core-fil"
-
-#~ msgid "Submit bug report to bug tracking system"
-#~ msgstr "Send fejlrapport til fejlfølgningssystem"
-
-#~ msgid "Submit to individual author"
-#~ msgstr "Send til individuel udvikler"
-
-#~ msgid "Subprocess exited with status %d"
-#~ msgstr "Underproces afsluttede med status %d"
+#~ "Send fejlrapport\n"
+#~ "Send *kun* rapport til din epostadresse\n"
+#~ "Gem rapporten i en fil\n"
