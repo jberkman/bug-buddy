@@ -14,13 +14,13 @@ gchar *s = N_("Your Name");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
-gchar *s = N_("Enter the information about the\n"
-              "bug you are reporting");
-gchar *s = N_("Package");
-gchar *s = N_("Version");
-gchar *s = N_("Bug severity");
 gchar *s = N_("Short description\n"
               "of the problem");
+gchar *s = N_("Bug severity");
+gchar *s = N_("Version");
+gchar *s = N_("Package");
+gchar *s = N_("Enter the information about the\n"
+              "bug you are reporting");
 gchar *s = N_("What type of bug are you reporting?");
 gchar *s = N_("Application crash with crash dialog");
 gchar *s = N_("Application crash with core file");
