@@ -178,7 +178,7 @@ GNOME bug submission process</text>
 	  <widget>
 	    <class>GtkLabel</class>
 	    <name>Your name</name>
-	    <label>Your name</label>
+	    <label>Your Name</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>
