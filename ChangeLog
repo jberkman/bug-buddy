@@ -1,3 +1,7 @@
+2002-05-08  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* configure.in: Added Vietnamese (eu) to ALL_LINGUAS
+
 2002-05-07  Archit Baweja  <bighead@users.sourceforge.net>
 
 	* src/united-states-of-bug-buddy.c (submit_ok): show Cancel/Submit
