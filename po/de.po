@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-03-20 17:38+0100\n"
+"POT-Creation-Date: 2001-03-24 04:00+0100\n"
 "PO-Revision-Date: 2001-03-20 17:40+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -533,7 +533,7 @@ msgstr "Bitte geben Sie eine gültige E-Mail-Adresse an."
 #: src/united-states-of-bug-buddy.c:286
 #, c-format
 msgid ""
-"`%s' doesn't seem to exist.\n"
+"'%s' doesn't seem to exist.\n"
 "\n"
 "You won't be able to actually submit a bug report, but you will\n"
 "be able to save it to a file.\n"
@@ -637,7 +637,7 @@ msgstr "Es ist nicht möglich, eine Pipe zu öffnen."
 #: src/util.c:72
 #, c-format
 msgid "Could not run '%s'."
-msgstr "Es ist nicht möglich, »%s« zu starten."
+msgstr "Es ist nicht möglich, '%s' zu starten."
 
 #: src/util.c:113
 msgid "Error on read..."
