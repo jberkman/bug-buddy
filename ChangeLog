@@ -1,3 +1,7 @@
+2000-10-29  Christopher R. Gabriel  <cgabriel@softwarelibero.org>
+
+	* configure.in (AC_OUTPUT): added Makefile for italian documentation
+
 2000-10-04  Jacob "Ulysses" Berkman  <jacob@helixcode.com>
 
 	* src/gdb-buddy.c (get_trace_from_pair): check that the file

@@ -57,6 +57,7 @@ debian/changelog
 Makefile
 docs/Makefile
 docs/C/Makefile
+docs/it/Makefile
 po/Makefile.in
 intl/Makefile
 pixmaps/Makefile
