@@ -1,3 +1,8 @@
+2001-01-23  Gregory Leblanc  <gleblanc@cu-portland.edu>
+
+	* docs/C/bug-buddy.sgml: Updated for/tested in Nautilus
+	* docs/it/bug-buddy.sgml: Updated for/tested in Nautilus
+
 2001-01-05  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* configure.in: Added "nn" to ALL_LINGUAS.
