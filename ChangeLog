@@ -1,3 +1,7 @@
+2001-01-05  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* configure.in: Added "nn" to ALL_LINGUAS.
+	
 2000-12-24  Pablo Saratxaga <pablo@mandrakesoft.com>
 
 	* configure.in,po/az.po: Added Azeri language file
