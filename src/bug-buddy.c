@@ -422,7 +422,7 @@ on_contact_page_next (GtkWidget *page, GtkWidget *druid)
 			char *m;
 			m = g_strdup_printf (_("'%s' doesn't seem to exist.  "
 					       "You won't be able to actually\n"
-					       "submit a but report, but you will "
+					       "submit a bug report, but you will "
 					       "be able to save it to a file.\n\n"
 					       "Specify a new location for sendmail?"),
 					     s);	
