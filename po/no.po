@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 1999-10-28 04:21-0400\n"
-"PO-Revision-Date: 1999-10-28 04:23-04:00\n"
+"POT-Creation-Date: 1999-10-29 18:50-0400\n"
+"PO-Revision-Date: 1999-10-29 18:52-04:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,42 @@ msgstr "alvorlig"
 #: src/bug-buddy.c:53
 msgid "wishlist"
 msgstr "ønskeliste"
+
+#: src/bug-buddy.c:117
+msgid "Operating System"
+msgstr "Operativsystem"
+
+#: src/bug-buddy.c:118
+msgid "Distribution"
+msgstr "Distribusjon"
+
+#: src/bug-buddy.c:123
+msgid "C library"
+msgstr "C-bibliotek"
+
+#: src/bug-buddy.c:124
+msgid "C Compiler"
+msgstr "C-kompilator"
+
+#: src/bug-buddy.c:125
+msgid "glib"
+msgstr "glib"
+
+#: src/bug-buddy.c:126
+msgid "GTK+"
+msgstr "GTK+"
+
+#: src/bug-buddy.c:127
+msgid "ORBit"
+msgstr "ORBit"
+
+#: src/bug-buddy.c:128
+msgid "gnome-libs"
+msgstr "gnome-libs"
+
+#: src/bug-buddy.c:129
+msgid "gnome-core"
+msgstr "gnome-core"
 
 #: src/bug-buddy.c:134
 msgid "Contact's name"
@@ -116,21 +152,21 @@ msgstr "henter stack trace..."
 msgid "Unable to start mail program:'%s'"
 msgstr "Kunne ikke starte e-post programmet:'%s'"
 
-#: src/bug-buddy.c:448
+#: src/bug-buddy.c:452
 #, c-format
 msgid "Could not run command '%s'"
 msgstr "Kunne ikke kjøre kommandoen '%s'"
 
-#: src/bug-buddy.c:453
+#: src/bug-buddy.c:457
 #, c-format
 msgid "Error reading input of '%s'"
 msgstr "Feil under lesing av inndata fra '%s'"
 
-#: src/bug-buddy.c:605
+#: src/bug-buddy.c:615
 msgid "Could not find a mail program.\n"
 msgstr "Kunne ikke finne et e-post program.\n"
 
-#: src/bug-buddy.c:613
+#: src/bug-buddy.c:623
 msgid ""
 "Could not find bug-buddy.glade file.\n"
 "Please make sure bug-buddy was installed correctly."
@@ -138,7 +174,7 @@ msgstr ""
 "Kunne ikke finne bug-buddy.glade filen.\n"
 "Vennligst forsikre deg om at bug-buddy ble korrekt installert."
 
-#: src/bug-buddy.c:623
+#: src/bug-buddy.c:633
 #, c-format
 msgid "XML file '%s' could not be loaded"
 msgstr "XML-filen '%s' kunne ikke lastes"
@@ -153,6 +189,14 @@ msgid "bug-buddy"
 msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
+msgid "Email Address"
+msgstr "E-post adresse"
+
+#: src/glade-strings.c:9
+msgid "Your Name"
+msgstr "Ditt navn"
+
+#: src/glade-strings.c:10
 msgid ""
 "Enter your name and email address, so you will be notified when the\n"
 "bug is resolved, or for developers to request more information from you."
@@ -160,14 +204,6 @@ msgstr ""
 "Skriv inn ditt navn og e-post addresse, slik at du vil få beskjed \n"
 "når feilen er rettet opp, eller utviklerene kan forespørre mer \n"
 "informasjon fra deg."
-
-#: src/glade-strings.c:10
-msgid "Email Address"
-msgstr "E-post adresse"
-
-#: src/glade-strings.c:11
-msgid "Your Name"
-msgstr "Ditt navn"
 
 #: src/glade-strings.c:12
 msgid "Please verify that this information is correct"
