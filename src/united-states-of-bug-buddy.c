@@ -519,7 +519,6 @@ submit_ok (void)
 			gtk_widget_destroy (w);
 			return FALSE;
 		}
-		g_free (file);
 	} else {
 		s = buddy_get_text ("email-sendmail-entry");
 		command = g_strdup_printf ("%s -i -t", s);
@@ -538,6 +537,8 @@ submit_ok (void)
 							 GTK_RESPONSE_OK);
 			gtk_dialog_run (GTK_DIALOG (w));
 			gtk_widget_destroy (w);
+			g_free (s);
+			g_free (to);
 			return FALSE;
 		}
 		g_free (s);
@@ -576,6 +577,7 @@ submit_ok (void)
 	g_free (to);
 
 	buddy_set_text ("finished-label", s);
+	g_free (file);
 	g_free (s);
 
 	return TRUE;
