@@ -765,7 +765,7 @@ bug you are reporting</label>
 	    <class>GtkHBox</class>
 	    <name>hbox5</name>
 	    <homogeneous>False</homogeneous>
-	    <spacing>0</spacing>
+	    <spacing>5</spacing>
 	    <child>
 	      <left_attach>1</left_attach>
 	      <right_attach>2</right_attach>
