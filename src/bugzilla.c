@@ -600,6 +600,7 @@ create_products_list (void)
 				    G_TYPE_POINTER);
 
 	g_object_set (G_OBJECT (view), "model", model, NULL);
+	g_object_unref (G_OBJECT (model));
 	
 	ren = gtk_cell_renderer_pixbuf_new ();
 	gtk_tree_view_insert_column_with_attributes (view, -1,
@@ -617,9 +618,6 @@ create_products_list (void)
 						     _("Description"), ren,
 						     "text", PRODUCT_DESC,
 						     NULL);
-	
-
-	druid_data.products_list = model;
 }
 
 static void
@@ -635,6 +633,7 @@ create_components_list (void)
 				    G_TYPE_STRING, G_TYPE_POINTER);
 	
 	g_object_set (G_OBJECT (view), "model", model, NULL);
+	g_object_unref (G_OBJECT (model));
 
 	ren = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (view, -1,
@@ -647,8 +646,6 @@ create_components_list (void)
 						     _("Description"), ren,
 						     "text", COMPONENT_DESC,
 						     NULL);
-
-	druid_data.components_list = model;
 }
 
 
@@ -751,9 +748,8 @@ bugzilla_bts_add_products_to_clist (BugzillaBTS *bts)
 	gtk_tree_view_set_headers_visible (w, TRUE);
 
 	gtk_list_store_clear (druid_data.products_list);
-#if FIXME
-	on_product_list_unselect_row (GTK_WIDGET (w), 0, 0, NULL);
-#endif
+	druid_data.product = NULL;
+
 	g_slist_foreach (bts->products, (GFunc)add_product, w);
 	gtk_tree_view_columns_autosize (w);
 }
@@ -805,9 +801,7 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	gtk_tree_view_set_headers_visible (w, TRUE);
 
 	gtk_list_store_clear (druid_data.components_list);
-#ifdef FIXME
-	on_component_list_select_row (GTK_WIDGET (w), 0, 0, NULL);
-#endif
+	druid_data.component = NULL;
 
 	g_slist_foreach (prod->components, (GFunc)add_component, w);
 

@@ -1,3 +1,23 @@
+2001-11-07  jacob berkman  <jacob@ximian.com>
+
+	* src/united-states-of-bug-buddy.c (get_selected_row): get the
+	selected row from a TreeView
+	(on_druid_next_clicked): use get_selected_row for the product /
+	component
+
+	* src/bugzilla.c (create_products_list): create a GtkListStore and
+	set up the columns with the GtkTreeView
+	(create_components_list): ditto
+	(load_bugzillas): setup the trees
+	(add_product): 
+	(bugzilla_bts_add_products_to_clist): 
+	(add_component): port to GtkTreeView / GtkListStore
+
+	* src/bug-buddy.c: removed a bunch of unused glade callbacks
+	(init_ui): setup some stock things glade 1 doesn't know about
+
+	* src/Makefile.am (INCLUDES): don't set the clist height any more
+
 2001-11-02  jacob berkman  <jacob@ximian.com>
 
 	* src/bug-buddy.glade: use the template description from

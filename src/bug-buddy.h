@@ -140,9 +140,6 @@ typedef struct {
 
 	GnomeVFSAsyncHandle *vfshandle;
 	gboolean need_to_download;
-
-	GtkListStore *products_list;
-	GtkListStore *components_list;
 } DruidData;
 
 extern DruidData druid_data;
