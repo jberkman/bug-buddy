@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.10\n"
 "POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2001-06-20 14:23+0200\n"
+"PO-Revision-Date: 2001-07-28 12:34+0200\n"
 "Last-Translator: Softcatalà <tradgnome@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
 "MIME-Version: 1.0\n"
@@ -562,7 +562,6 @@ msgid "Your bug report was saved in '%s'"
 msgstr "S'ha desat el vostre informe d'errors a '%s'"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -573,6 +572,8 @@ msgstr ""
 "S'ha enviat el vostre informe d'errors a:\n"
 "\n"
 "        <%s>"
+"\n"
+"Gràcies!"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
@@ -878,3 +879,4 @@ msgstr "Informeu d'un error al GNOME"
 
 #~ msgid "Submit to individual author"
 #~ msgstr "Enviar-lo a l'autor"
+
