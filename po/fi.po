@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
 "POT-Creation-Date: 2000-05-10 01:33-0400\n"
-"PO-Revision-Date: 2000-04-29 22:00+0300\n"
+"PO-Revision-Date: 2000-05-14 22:00+0300\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -223,11 +223,13 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
 #: src/bug-buddy.c:682
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\t<%s>"
-msgstr "Virheraportti on lähetetty osoitteeseen <%s>"
+msgstr ""
+"Virheraportti on lähetetty osoitteeseen:\n"
+"\t<%s>"
 
 #: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
@@ -434,7 +436,7 @@ msgstr "Kuvaus"
 
 #: src/glade-strings.c:37
 msgid "Please make your bug report in English, if possible."
-msgstr ""
+msgstr "Tee virheraportti Englannin kielellä, mikäli mahdollista."
 
 #: src/glade-strings.c:38
 msgid "Short subject for the bug report"
