@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
-"POT-Creation-Date: 2002-05-13 16:25-0400\n"
-"PO-Revision-Date: 2002-04-29 01:55+0000\n"
+"POT-Creation-Date: 2002-05-16 00:06+0100\n"
+"PO-Revision-Date: 2002-05-16 01:25+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -154,6 +154,11 @@ msgid ""
 "\n"
 "Please make sure the GNOME Control Center is properly installed."
 msgstr ""
+"Ocorreu um erro ao mostrar as configurações de proxy:\n"
+"\n"
+"%s.\n"
+"\n"
+"Certifique-se que o Centro de Controlo GNOME está correctamente instalado."
 
 #: src/bug-buddy.c:491
 msgid "Hide Debugging Options"
@@ -243,7 +248,7 @@ msgid "Description"
 msgstr "Descrição"
 
 #: src/bugzilla.c:774
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Bug Buddy could not open '%s'.\n"
 "Please make sure Bug Buddy was installed correctly.\n"
@@ -251,14 +256,15 @@ msgid ""
 "Bug Buddy will now quit."
 msgstr ""
 "O Bug Buddy foi incapaz de abrir '%s'.\n"
-"Certifique-se de que o Bug Buddy foi correctamente instalado."
+"Certifique-se de que o Bug Buddy foi correctamente instalado.\n"
+"\n"
+"O Bug Buddy irá agora terminar."
 
 #: src/bugzilla.c:793
 msgid "All"
 msgstr "Todos"
 
 #: src/bugzilla.c:822
-#, fuzzy
 msgid ""
 "Bug Buddy could not find any information on where to submit bugs.\n"
 "\n"
@@ -266,9 +272,11 @@ msgid ""
 "\n"
 "Bug Buddy will now quit."
 msgstr ""
-"O Bug Buddy foi incapaz de carregar o seu ficheiro de interface de "
-"utilizador (%s).\n"
+"O Bug Buddy não encontrou informação sobre para onde enviar os bugs.\n"
+"\n"
 "Certifique-se de que o Bug Buddy foi correctamente instalado."
+"\n"
+"O Bug Buddy irá agora terminar."
 
 #: src/config.c:75
 msgid "Evolution"
@@ -338,13 +346,12 @@ msgid "There was an error running gdb."
 msgstr "Ocorreu um erro na execução do gdb."
 
 #: src/bug-buddy.glade.h:1
-msgid "*"
-msgstr "*"
+msgid "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
 
 #: src/bug-buddy.glade.h:2
-#, fuzzy
-msgid "<span size=\"xx-large\">Bug Buddy</span>"
-msgstr "&lt;span size=\"xx-large\"&gt;Bug Buddy&lt;/span&gt;"
+msgid "*"
+msgstr "*"
 
 #: src/bug-buddy.glade.h:3
 msgid "Advanced"
@@ -704,7 +711,7 @@ msgstr "Submeter agora este relatório de erro?"
 
 #: src/united-states-of-bug-buddy.c:505
 msgid "_Submit"
-msgstr ""
+msgstr "_Submeter"
 
 #: src/united-states-of-bug-buddy.c:526
 #, c-format
