@@ -414,7 +414,10 @@ static void
 update_selected_row ()
 {
 	gchar *s;
-	gint row = druid_data.selected_data->row;
+	gint row;
+	if (!druid_data.selected_data)
+		return;
+	row = druid_data.selected_data->row;
 	s = gtk_entry_get_text (GTK_ENTRY (druid_data.version_edit));
 	gtk_clist_set_text (GTK_CLIST (druid_data.version_list), row, 1, s);}
 

@@ -90,10 +90,8 @@ GNOME bug submission process</text>
 	<widget>
 	  <class>GtkLabel</class>
 	  <name>label30</name>
-	  <label>Enter your name and email address,
-so you will be notified when the
-bug is resolved, or for developers to
-request more information from you.</label>
+	  <label>Enter your name and email address, so you will be notified when the
+bug is resolved, or for developers to request more information from you.</label>
 	  <justify>GTK_JUSTIFY_CENTER</justify>
 	  <wrap>False</wrap>
 	  <xalign>0.5</xalign>
