@@ -1,6 +1,8 @@
 1999-11-13  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.c: fix tyop (bug #3545)
+	(on_action_page_back): use on_action_page_back like
+	the .glade specifies
 
 1999-11-12  Jacob Berkman  <jberkman@andrew.cmu.edu>
 

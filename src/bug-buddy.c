@@ -45,7 +45,7 @@ void on_version_edit_activate (GtkEditable *editable, gpointer user_data);
 void on_version_apply_clicked (GtkButton *button, gpointer udata);
 void on_file_radio_toggled (GtkWidget *radio, gpointer data);
 gboolean on_action_page_next (GtkWidget *page, GtkWidget *druid);
-gboolean on_action_page_prev (GtkWidget *page, GtkWidget *druid);
+gboolean on_action_page_back (GtkWidget *page, GtkWidget *druid);
 GtkWidget * make_anim (gchar *widget_name, gchar *string1, 
 		       gchar *string2, gint int1, gint int2);
 
@@ -323,7 +323,7 @@ on_less_page_back (GtkWidget *page, GtkWidget *druid)
 }
 
 gboolean
-on_action_page_prev (GtkWidget *page, GtkWidget *druid)
+on_action_page_back (GtkWidget *page, GtkWidget *druid)
 {
 	if (druid_data.crash_type != CRASH_NONE)
 		return FALSE;
