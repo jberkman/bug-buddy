@@ -2,23 +2,13 @@
 <products>
   <product name="Evolution">
     <component name="Contacts [was: Addressbook]">
+      <bug bugid="22742">
+        <desc>Contacts list search doesn't function</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=22742</url>
+      </bug>
       <bug bugid="9699">
         <desc>Crash: Adding LDAP server to address book</desc>
         <url>http://bugzilla.ximian.com/show_bug.cgi?id=9699</url>
-      </bug>
-    </component>
-    <component name="Mailer">
-      <bug bugid="16481">
-        <desc>evolution-mail 1.0 crashes retrieving mail</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=16481</url>
-      </bug>
-      <bug bugid="16453">
-        <desc>Crash: email check?</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=16453</url>
-      </bug>
-      <bug bugid="9553">
-        <desc>crashed on selecting imap folder [giop_main_next_message_2]</desc>
-        <url>http://bugzilla.ximian.com/show_bug.cgi?id=9553</url>
       </bug>
     </component>
     <component name="Gnome-pilot &amp; pilot-link">
@@ -31,6 +21,14 @@
       <bug bugid="5053">
         <desc>Better Summary source selector (including IMAP)</desc>
         <url>http://bugzilla.ximian.com/show_bug.cgi?id=5053</url>
+      </bug>
+    </component>
+  </product>
+  <product name="GtkHtml">
+    <component name="Printing">
+      <bug bugid="19604">
+        <desc>Trying to print mail - evolution-mail process dies</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=19604</url>
       </bug>
     </component>
   </product>

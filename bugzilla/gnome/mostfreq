@@ -1,5 +1,13 @@
 <!DOCTYPE products SYSTEM "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-gnome-org.dtd">
 <products>
+  <product name="dia">
+    <component name="general">
+      <bug bugid="76603">
+        <desc>PNG exporter truncates bezier lines</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=76603</url>
+      </bug>
+    </component>
+  </product>
   <product name="gnome-desktop">
     <component name="gnome-about">
       <bug bugid="8562">
@@ -8,11 +16,43 @@
       </bug>
     </component>
   </product>
+  <product name="gnome-panel">
+    <component name="Window List Applet">
+      <bug bugid="72335">
+        <desc>Window List applet takes up all panel space to the right of it</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=72335</url>
+      </bug>
+    </component>
+  </product>
   <product name="gnome-utils">
     <component name="gdict">
       <bug bugid="70274">
         <desc>Crash after clicking on settings</desc>
         <url>http://bugzilla.gnome.org/show_bug.cgi?id=70274</url>
+      </bug>
+    </component>
+  </product>
+  <product name="gnome-vfs">
+    <component name="Module: vfolder">
+      <bug bugid="71391">
+        <desc>crash when upgrading or changing application menu [g_string_insert_len]</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=71391</url>
+      </bug>
+    </component>
+  </product>
+  <product name="libwnck">
+    <component name="general">
+      <bug bugid="78869">
+        <desc>Panel crash when using deskguide applet [wnck_tasklist_size_request]</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=78869</url>
+      </bug>
+    </component>
+  </product>
+  <product name="nautilus">
+    <component name="general">
+      <bug bugid="72715">
+        <desc>Nautilus provides no way to add application launchers to the panel menus</desc>
+        <url>http://bugzilla.gnome.org/show_bug.cgi?id=72715</url>
       </bug>
     </component>
   </product>

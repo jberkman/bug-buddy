@@ -37,7 +37,7 @@
     <component initialowner="18" description="Evolution's pretty images." initialqacontact="3661" value="Icons and Artwork" />
     <component initialowner="330" description="Library for handling iCalendar data." initialqacontact="3661" value="libical" />
     <component initialowner="27" description="User Docs" initialqacontact="3661" value="User Documentation" />
-    <component initialowner="12" description="Bugs in the Ximian Connector for Exchange that don't belong in Mail, Calendar, or Contacts" initialqacontact="3661" value="Connector" />
+    <component initialowner="12" description="Bugs in the Ximian Connector for Exchange that don't belong in Mail, Calendar, or Contacts" initialqacontact="5143" value="Connector" />
     <version value="unspecified" />
     <version value="0.8" />
     <version value="post-0.8" />
@@ -64,6 +64,7 @@
     <version value="1.0.2" />
     <version value="1.1.0.99" />
     <version value="1.0.1" />
+    <version value="1.0.3" />
   </product>
   <product votestoconfirm="0" description="GNOME's lightweight engine for the rendering, printing and editing of HTML." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="GtkHtml">
     <component initialowner="450" description="The GtkHTML C API." initialqacontact="3661" value="API" />
@@ -75,7 +76,7 @@
     <component initialowner="450" description="Configuration Capplet" initialqacontact="3661" value="capplet" />
     <version value="unspecified" />
   </product>
-  <product votestoconfirm="0" description="Please do not file general bug reports against this product. It is intended for tracking of bugs pertaining to the bug tracking system in general (e.g. requests to add a new product or component) and any problems with bugzilla.ximian.com." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian BTS">
+  <product votestoconfirm="0" description="For Bugs with the Bug Tracker Itself.  Please do not file general bug reports against this product. It is for bugs/problems with bugzilla.ximian.com and the bug tracking system in general (e.g. requests to add a new product or component to the BTS)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian BTS (bugzilla.ximian.com)">
     <component initialowner="1038" description="We'll add more categories if we get lots of bugs here." initialqacontact="67" value="Generic" />
     <component initialowner="478" description="The interface for reports submitted by email." initialqacontact="1038" value="Email Interface" />
     <version value="unspecified" />
@@ -114,6 +115,8 @@
     <version value="1.2.2" />
     <version value="1.2.3" />
     <version value="1.2.99" />
+    <version value="1.2.99.5" />
+    <version value="1.3" />
   </product>
   <product votestoconfirm="0" description="The Ximian Setup Tools simplify workstation system configuration" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Setup Tools">
     <component initialowner="143" description="The network interfaces / DNS settings tool." initialqacontact="1569" value="network" />
@@ -149,7 +152,7 @@
     <component initialowner="170" description="a collection of GNOME games" initialqacontact="3545" value="gnome-games" />
     <component initialowner="170" description="a collection of GNOME media components" initialqacontact="3545" value="gnome-media" />
     <component initialowner="170" description="miscellaneous GNOME utilities" initialqacontact="3545" value="gnome-utils" />
-    <component initialowner="170" description="Packages for the GNOME 1.4 Beta" initialqacontact="3545" value="1.4 Beta" />
+    <component initialowner="170" description="Bugs that don't fit anywhere else." initialqacontact="3545" value="general" />
     <component initialowner="170" description="bugs from the old bugzilla that need to be merged into the correct component" initialqacontact="3545" value="to-be-merged" />
     <component initialowner="170" description="A uniform programming interface to standard digital audio formats" initialqacontact="3545" value="audiofile" />
     <component initialowner="170" description="bonobo" initialqacontact="3545" value="bonobo" />
@@ -232,7 +235,6 @@
     <component initialowner="170" description="xpm" initialqacontact="3545" value="xpm" />
     <component initialowner="170" description="xscreensaver" initialqacontact="3545" value="xscreensaver" />
     <component initialowner="170" description="zlib" initialqacontact="3545" value="zlib" />
-    <component initialowner="170" description="packages not already in the list of Ximian GNOME components in bugzilla" initialqacontact="3545" value="other packages" />
     <component initialowner="170" description="mozilla" initialqacontact="3545" value="mozilla" />
     <component initialowner="170" description="slib" initialqacontact="3545" value="slib" />
     <component initialowner="170" description="monkeytalk" initialqacontact="3545" value="monkeytalk" />
@@ -272,6 +274,7 @@
     <component initialowner="170" description="Gorilla theme for Sawfish" initialqacontact="3545" value="sawfish-gorilla" />
     <component initialowner="170" description="spelling checker" initialqacontact="3545" value="aspell" />
     <component initialowner="170" description="spellchecking library" initialqacontact="3545" value="pspell" />
+    <component initialowner="170" description="This is only for problems with the Ximian packages, and specifically for problems related to our packaging.  Feature requests etc. that are best handled by Sun should be reported to Sun." initialqacontact="3545" value="StarOffice" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="bonobo component for spell checking" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gnome-spell">
@@ -288,19 +291,20 @@
     <component initialowner="4536" description="System.Web assembly" initialqacontact="4536" value="System.Web" />
     <component initialowner="4536" description="System.XML assembly" initialqacontact="4536" value="System.XML" />
     <component initialowner="264" description="OleDb provider for ADO.NET implementation" initialqacontact="4536" value="System.Data.OleDb" />
+    <component initialowner="264" description="SQL client namespace implementation" initialqacontact="4536" value="System.Data.SqlClient" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="Mono Runtime" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono/Runtime">
     <component initialowner="4536" description="Misc bugs for Mono Runtime" initialqacontact="4536" value="misc" />
     <version value="unspecified" />
   </product>
-  <product votestoconfirm="0" description="This is mainly for internal use, but can be used by the public when
-  reporting a problem with www.ximian.com, store.ximian.com, or
-  support.ximian.com. Bugs relating to bugzilla.ximian.com should be filed against the 'Ximian BTS' component instead." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Web Site">
+  <product votestoconfirm="0" description="NOT for bugzilla.ximian.com bugs! Bugs relating to bugzilla.ximian.com should be filed against &quot;Ximian BTS.&quot;
+  
+  Use Ximian Website for reporting a problem with www.ximian.com, store.ximian.com, or support.ximian.com." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Ximian Website">
     <component initialowner="529" description="For problems with the support section of the website" initialqacontact="1038" value="support" />
-    <component initialowner="529" description="content in the purchase section of the site" initialqacontact="1038" value="purchase" />
+    <component initialowner="4554" description="content in the purchase section of the site" initialqacontact="1038" value="purchase" />
     <component initialowner="529" description="content for the about section of the website" initialqacontact="1038" value="about" />
-    <component initialowner="529" description="content for the devzone section of the website" initialqacontact="1038" value="devzone" />
+    <component initialowner="529" description="content for the developer site" initialqacontact="1038" value="developer" />
     <component initialowner="529" description="content for the products portion of the website" initialqacontact="1038" value="products" />
     <component initialowner="529" description="Things that don't fit elsewhere or apply to everything." initialqacontact="1038" value="general/misc" />
     <component initialowner="529" description="php, scripts, other such" initialqacontact="1038" value="technical" />
@@ -334,7 +338,7 @@
     <component initialowner="3144" description="a collection of GNOME games" initialqacontact="2219" value="gnome-games" />
     <component initialowner="3144" description="a collection of GNOME media components" initialqacontact="2219" value="gnome-media" />
     <component initialowner="3144" description="miscellaneous GNOME utilities" initialqacontact="2219" value="gnome-utils" />
-    <component initialowner="3144" description="Packages for the GNOME 1.4 Beta" initialqacontact="2219" value="1.4 Beta" />
+    <component initialowner="3144" description="Bugs that don't fit or make sense against a different component." initialqacontact="2219" value="general" />
     <component initialowner="3144" description="bugs from the old bugzilla that need to be merged into the correct component" initialqacontact="2219" value="to-be-merged" />
     <component initialowner="3144" description="A uniform programming interface to standard digital audio formats" initialqacontact="2219" value="audiofile" />
     <component initialowner="3144" description="bonobo" initialqacontact="2219" value="bonobo" />
@@ -416,7 +420,6 @@
     <component initialowner="3144" description="xpm" initialqacontact="2219" value="xpm" />
     <component initialowner="3144" description="xscreensaver" initialqacontact="2219" value="xscreensaver" />
     <component initialowner="3144" description="zlib" initialqacontact="2219" value="zlib" />
-    <component initialowner="3144" description="packages not already in the list of Ximian GNOME components in bugzilla" initialqacontact="2219" value="other packages" />
     <component initialowner="3144" description="mozilla" initialqacontact="2219" value="mozilla" />
     <component initialowner="3144" description="slib" initialqacontact="2219" value="slib" />
     <component initialowner="3144" description="monkeytalk" initialqacontact="2219" value="monkeytalk" />
@@ -457,6 +460,7 @@
     <component initialowner="37" description="Adding accessible interfaces to GNOME applications" initialqacontact="37" value="Accessibility Enhancement" />
     <component initialowner="37" description="Implementing features and applications that GNOME lacks but CDE has" initialqacontact="37" value="Building CDE equivalent features" />
     <component initialowner="37" description="Tasks to help the GNOME 2 community" initialqacontact="37" value="Community Engagement" />
+    <component initialowner="37" description="Ensuring the stability and bugfreeness of GNOME 2." initialqacontact="37" value="Bugfixing" />
     <version value="ongoing" />
     <version value="0%" />
     <version value="10%" />
@@ -485,5 +489,44 @@
     <version value="95%" />
     <version value="done" />
     <version value="ongoing" />
+  </product>
+  <product votestoconfirm="0" description="Project management for Evolution" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Evolution Tasks">
+    <component initialowner="3" description="Administrative tasks" initialqacontact="3" value="Administrative" />
+    <component initialowner="3" description="Tasks for the Mail Component" initialqacontact="3" value="Mail" />
+    <component initialowner="3" description="Tasks for the Calendar component" initialqacontact="3" value="Calendar" />
+    <component initialowner="3" description="Tasks for the Addressbook component." initialqacontact="3" value="Addressbook" />
+    <component initialowner="3" description="Tasks for Evolution's shell" initialqacontact="3" value="Shell" />
+    <component initialowner="3" description="Tasks related to Pilot synchronization" initialqacontact="3" value="Pilot Synchronization" />
+    <component initialowner="3" description="Tasks related to the message composer" initialqacontact="3" value="Composer" />
+    <component initialowner="3" description="Tasks related to the imported functionality in Evolution." initialqacontact="3" value="Importers" />
+    <component initialowner="3" description="GtkHTML Tasks" initialqacontact="3" value="GtkHTML" />
+    <version value="0%" />
+    <version value="10%" />
+    <version value="20%" />
+    <version value="40%" />
+    <version value="30%" />
+    <version value="50%" />
+    <version value="60%" />
+    <version value="70%" />
+    <version value="80%" />
+    <version value="90%" />
+    <version value="done" />
+    <version value="ongoing" />
+  </product>
+  <product votestoconfirm="0" description="Bugzilla-based project management system" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Natzilla">
+    <component initialowner="37" description="Miscellaneous bugs" initialqacontact="37" value="General" />
+    <version value="1.0" />
+    <version value="1.0beta" />
+  </product>
+  <product votestoconfirm="0" description="Project management for Natzilla (do not file bugs here)" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Natzilla Tasks">
+    <component initialowner="37" description="Catch-all." initialqacontact="37" value="General" />
+    <version value="10%" />
+    <version value="0%" />
+  </product>
+  <product votestoconfirm="0" description="Documentation tools and support libraries for Mono." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Mono/Doctools">
+    <component initialowner="2539" description="Core documentation libraries" initialqacontact="2539" value="Core" />
+    <component initialowner="2539" description="Monodoc GUI interface" initialqacontact="2539" value="Gui" />
+    <component initialowner="2539" description="Monodoc commandline interface" initialqacontact="2539" value="Console" />
+    <version value="unspecified" />
   </product>
 </products>

@@ -5,6 +5,7 @@
     <component initialowner="2211" description="The actual bug data in the Bugtracker" initialqacontact="0" value="bug data" />
     <component initialowner="2211" description="Problems with the email interface / email notifications." initialqacontact="0" value="email" />
     <version value="unspecified" />
+    <version value="G3" />
   </product>
   <product votestoconfirm="0" description="GNOME Portable System Access Library" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="libgtop">
     <component initialowner="1" description="Bugs in the LibGTop library." initialqacontact="0" value="general" />
@@ -91,8 +92,8 @@
     <version value="2.0.x" />
   </product>
   <product votestoconfirm="0" description="gedit is a small lightweight text editor for GNOME." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gedit">
-    <component initialowner="134" description="general" initialqacontact="0" value="general" />
-    <component initialowner="134" description="Bugs referred to plugins" initialqacontact="0" value="Plugins" />
+    <component initialowner="134" description="general" initialqacontact="5420" value="general" />
+    <component initialowner="134" description="Bugs referred to plugins" initialqacontact="5420" value="Plugins" />
     <version value="0.9.4" />
     <version value="0.9.3" />
     <version value="0.9.2" />
@@ -119,6 +120,8 @@
     <version value="1.112.0" />
     <version value="1.113.0" />
     <version value="1.114.0" />
+    <version value="1.115.0" />
+    <version value="1.116.0" />
   </product>
   <product votestoconfirm="0" description="The GLib base library used by GTK+ and GNOME" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="glib">
     <component initialowner="44" description="The GLib reference documentation" initialqacontact="0" value="docs" />
@@ -145,7 +148,7 @@
   </product>
   <product votestoconfirm="0" description="GNOME Applets" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-applets">
     <component initialowner="59" description="unspecified" initialqacontact="1286" value="general" />
-    <component initialowner="96" description="Tasklist applet" initialqacontact="0" value="tasklist" />
+    <component initialowner="96" description="Tasklist applet" initialqacontact="1286" value="tasklist" />
     <component initialowner="59" description="Deskguide applet" initialqacontact="1286" value="deskguide" />
     <component initialowner="59" description="Analogue clock similar to that of CDE." initialqacontact="0" value="another_clock" />
     <component initialowner="59" description="AfterStep clock in the style of the NeXT" initialqacontact="0" value="as_clock" />
@@ -186,6 +189,7 @@
     <component initialowner="59" description="Mini-Commander applet adds a command line to your Panel." initialqacontact="1286" value="mini-commander" />
     <component initialowner="59" description="an applet that plays the game of life" initialqacontact="0" value="life_applet" />
     <component initialowner="1123" description="GNOME stock ticker applet" initialqacontact="59" value="gtik" />
+    <component initialowner="2395" description="The applet that provides a separate panel menu, accessed from Utility-&gt;Menu Bar in GNOME2. This is _not_ the menu-panel's menu; those bugs should be filed against gnome-panel." initialqacontact="1286" value="menu applet" />
     <version value="unspecified" />
     <version value="1.0.x" />
     <version value="1.1.x" />
@@ -247,15 +251,16 @@
     <version value="1.2.3" />
     <version value="1.3.3-Devel" />
     <version value="1.3.4-Devel" />
+    <version value="1.3.5-Devel" />
   </product>
   <product votestoconfirm="0" description="A collection of GNOME media components" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-media">
-    <component initialowner="325" description="A GNOME cd player and its text-based friend, tcd." initialqacontact="0" value="gtcd" />
-    <component initialowner="325" description="A GNOME mixer" initialqacontact="0" value="gnome-volume-control [was: gmix]" />
-    <component initialowner="325" description="All unspecified bugs" initialqacontact="0" value="general" />
-    <component initialowner="325" description="The GNOME2 CD player- a replacement for gtcd." initialqacontact="0" value="Gnome-CD" />
-    <component initialowner="325" description="A component for getting data from FreeDB or other CDDB-style databases." initialqacontact="0" value="CDDBSlave2" />
-    <component initialowner="325" description="A GNOME application for recording sound." initialqacontact="0" value="Gnome-Sound-Recorder" />
-    <component initialowner="325" description="A visual volume meter; AKA 'Flashy lights that move in time to the music'" initialqacontact="0" value="VU-meter" />
+    <component initialowner="325" description="A GNOME cd player and its text-based friend, tcd." initialqacontact="1286" value="gtcd" />
+    <component initialowner="325" description="A GNOME mixer" initialqacontact="1286" value="gnome-volume-control [was: gmix]" />
+    <component initialowner="325" description="All unspecified bugs" initialqacontact="1286" value="general" />
+    <component initialowner="325" description="The GNOME2 CD player- a replacement for gtcd." initialqacontact="1286" value="Gnome-CD" />
+    <component initialowner="325" description="A component for getting data from FreeDB or other CDDB-style databases." initialqacontact="1286" value="CDDBSlave2" />
+    <component initialowner="325" description="A GNOME application for recording sound." initialqacontact="1286" value="Gnome-Sound-Recorder" />
+    <component initialowner="325" description="A visual volume meter; AKA 'Flashy lights that move in time to the music'" initialqacontact="1286" value="VU-meter" />
     <version value="unspecified" />
     <version value="1.2.x" />
     <version value="1.112.0" />
@@ -270,18 +275,20 @@
   <product votestoconfirm="0" description="The GNOME Control Center" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="control-center">
     <component initialowner="145" description="All unclassified bugs" initialqacontact="1286" value="general" />
     <component initialowner="170" description="user documentation" initialqacontact="0" value="docs" />
-    <component initialowner="1464" description="Keyboard configuration" initialqacontact="1286" value="keyboard" />
-    <component initialowner="1464" description="mouse configuration" initialqacontact="1286" value="mouse" />
-    <component initialowner="1464" description="background configuration" initialqacontact="1286" value="background" />
-    <component initialowner="1464" description="screensaver configuration" initialqacontact="1286" value="screensaver" />
-    <component initialowner="1464" description="sound configuration" initialqacontact="1286" value="sound" />
-    <component initialowner="1464" description="other capplets" initialqacontact="1286" value="other capplets" />
-    <component initialowner="1464" description="The shell component of the control-center" initialqacontact="1286" value="shell" />
-    <component initialowner="8" description="The nautilus view of the control center" initialqacontact="1286" value="nautilus control center view" />
-    <component initialowner="1464" description="This is the gtk theme selector" initialqacontact="1286" value="theme-selector" />
-    <component initialowner="1464" description="Metatheme selector" initialqacontact="1286" value="metatheme" />
-    <component initialowner="2401" description="Mime types gnome-vfs capplet" initialqacontact="1286" value="mime-types" />
+    <component initialowner="145" description="Keyboard configuration" initialqacontact="1286" value="keyboard" />
+    <component initialowner="145" description="mouse configuration" initialqacontact="1286" value="mouse" />
+    <component initialowner="145" description="background configuration" initialqacontact="1286" value="background" />
+    <component initialowner="145" description="screensaver configuration" initialqacontact="1286" value="screensaver" />
+    <component initialowner="145" description="sound configuration" initialqacontact="1286" value="sound" />
+    <component initialowner="145" description="other capplets" initialqacontact="1286" value="other capplets" />
+    <component initialowner="145" description="The shell component of the control-center" initialqacontact="1286" value="shell" />
+    <component initialowner="145" description="The nautilus view of the control center" initialqacontact="1286" value="nautilus control center view" />
+    <component initialowner="145" description="This is the gtk theme selector" initialqacontact="1286" value="theme-selector" />
+    <component initialowner="145" description="Metatheme selector" initialqacontact="1286" value="metatheme" />
+    <component initialowner="145" description="Mime types gnome-vfs capplet" initialqacontact="1286" value="mime-types" />
     <component initialowner="145" description="This is for bugs against the gnome2-settings-daemon" initialqacontact="1286" value="settings-daemon" />
+    <component initialowner="145" description="Keyboard Accessibility dialog" initialqacontact="1286" value="Keyboard Accessibility" />
+    <component initialowner="145" description="Keybindings dialog" initialqacontact="1286" value="Keybinding" />
     <version value="unspecified" />
     <version value="pre 1.4.0" />
     <version value="1.4.0" />
@@ -308,6 +315,7 @@
     <component initialowner="2442" description="FAQ, README, Web page" initialqacontact="90" value="Documentation" />
     <component initialowner="90" description="general" initialqacontact="90" value="general" />
     <component initialowner="90" description="Translations, charsets ..." initialqacontact="90" value="i18n" />
+    <component initialowner="87" description="Galeon acting like a nautilus view" initialqacontact="90" value="Nautilus view" />
     <version value="unspecified" />
     <version value="0.8.4" />
     <version value="0.9pre3" />
@@ -352,10 +360,11 @@
     <component initialowner="148" description="The Palm Pilot conduits shipped with gnome-pim (the addressbook and calendar conduits).  The GNOME Pilot daemon, applets, and conduits should be filed in the gnome-pilot product." initialqacontact="0" value="conduits" />
     <component initialowner="147" description="Unclassified and other bugs in gnome-pim" initialqacontact="0" value="general" />
     <version value="unspecified" />
-    <version value="1.2.0" />
+    <version value="1.2.x" />
     <version value="1.0.x" />
     <version value="1.1.x" />
-    <version value="1.4.0" />
+    <version value="1.4.x" />
+    <version value="1.90.x" />
   </product>
   <product votestoconfirm="0" description="A uniform programming interface to standard digital audio formats" maxvotesperbug="10000" votesperuser="0" disallownew="1" name="audiofile">
     <component initialowner="110" description="general bugs for audiofile" initialqacontact="0" value="general" />
@@ -477,6 +486,7 @@
     <version value="1.108.0" />
     <version value="1.109.0" />
     <version value="1.107.0" />
+    <version value="1.1xx" />
   </product>
   <product votestoconfirm="0" description="Spreadsheet" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gnumeric">
     <component initialowner="25" description="Gnumeric does not run when initially installed.  This is almost certain to be a packaging bug rather than something specific to Gnumeric." initialqacontact="0" value="Installation" />
@@ -494,6 +504,7 @@
     <component initialowner="25" description="Problems while importing html or generating it." initialqacontact="0" value="html import/export" />
     <component initialowner="1038" description="Problems with the functionality or appearance of graphs, either when displayed on the screen or when printed." initialqacontact="0" value="Graphing" />
     <component initialowner="25" description="Problems with the expression/range selection widget." initialqacontact="0" value="Expression Entry Widget" />
+    <component initialowner="143" description="Problems with the database plugin, which allows to insert data from a database into a Gnumeric spreadsheet" initialqacontact="25" value="Database plugin" />
     <version value="0.61" />
     <version value="unspecified" />
     <version value="0.00-0.48" />
@@ -519,10 +530,10 @@
     <version value="1.1.x" />
   </product>
   <product votestoconfirm="0" description="An IDE program in development" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="anjuta2">
-    <component initialowner="27" description="The shell which binds the various components together" initialqacontact="0" value="shell" />
-    <component initialowner="27" description="Any miscellaneous items" initialqacontact="0" value="miscellaneous" />
-    <component initialowner="27" description="The utility lib for plugins and components" initialqacontact="0" value="libanjuta" />
-    <component initialowner="79" description="The various plugins that ship with gIDE." initialqacontact="0" value="plugins" />
+    <component initialowner="5584" description="The shell which binds the various components together" initialqacontact="0" value="shell" />
+    <component initialowner="5584" description="Any miscellaneous items" initialqacontact="0" value="miscellaneous" />
+    <component initialowner="5584" description="The utility lib for plugins and components" initialqacontact="0" value="libanjuta" />
+    <component initialowner="5584" description="The various plugins that ship with anjuta2." initialqacontact="0" value="plugins" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="A chess interface for playing chess against gnuchess, crafty or on-line." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-chess">
@@ -532,10 +543,10 @@
     <version value="0.3.0" />
   </product>
   <product votestoconfirm="0" description="A set of bonobo components for build files" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnome-build">
-    <component initialowner="27" description="Any miscellaneous items" initialqacontact="0" value="miscellaneous" />
-    <component initialowner="27" description="The available gui controls" initialqacontact="0" value="controls" />
-    <component initialowner="27" description="The C client library to the gnome-build framework" initialqacontact="0" value="libgbf" />
-    <component initialowner="27" description="The automake project backend" initialqacontact="0" value="libgbf_am" />
+    <component initialowner="5585" description="Any miscellaneous items" initialqacontact="0" value="miscellaneous" />
+    <component initialowner="5585" description="The available gui controls" initialqacontact="0" value="controls" />
+    <component initialowner="5585" description="The C client library to the gnome-build framework" initialqacontact="0" value="libgbf" />
+    <component initialowner="5585" description="The automake project backend" initialqacontact="0" value="libgbf_am" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="A library providing XSLT XML based transformations and built
@@ -543,6 +554,7 @@
     <component initialowner="88" description="general" initialqacontact="0" value="general" />
     <version value="unspecified" />
     <version value="1.0.10" />
+    <version value="1.0.15" />
   </product>
   <product votestoconfirm="0" description="libgda is a CORBA-based architecture intended to allow a uniform access to several different, unrelated database systems" maxvotesperbug="10000" milestoneurl="http://www.gnome-db.org" votesperuser="10" disallownew="0" name="libgda">
     <component initialowner="178" description="The C++ bindings" initialqacontact="143" value="c++ bindings" />
@@ -772,6 +784,7 @@
     <version value="0.11.1.93" />
     <version value="0.11.2.90" />
     <version value="0.11.90" />
+    <version value="0.11.2.91" />
   </product>
   <product votestoconfirm="0" description="Launcher feeback system" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="xalf">
     <component initialowner="363" description="Capplet for xalf" initialqacontact="0" value="xalf-capplet" />
@@ -789,7 +802,7 @@
     <component initialowner="1388" description="Issues related to the idl-compiler." initialqacontact="0" value="idl-compiler" />
     <version value="0.5" />
   </product>
-  <product votestoconfirm="0" description="Code shared between gnome-debug, gnome-build, and gIDE" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gdl">
+  <product votestoconfirm="0" description="Code shared between gnome-debug, gnome-build, and anjuta2" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gdl">
     <component initialowner="79" description="General bugs" initialqacontact="0" value="general" />
     <component initialowner="79" description="The scintilla-based code editing bonobo control." initialqacontact="0" value="scintilla control" />
     <version value="unspecified" />
@@ -882,10 +895,10 @@
     <version value="0.40" />
   </product>
   <product votestoconfirm="0" description="GNOME RPM graphical tool" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnorpm">
-    <component initialowner="513" description="web and internet searches gnorpm uses (only for gnorpm, not other
-    programs' use of it)" initialqacontact="0" value="rpmfind" />
-    <component initialowner="513" description="gnorpm user documentation" initialqacontact="0" value="docs" />
-    <component initialowner="513" description="general gnorpm bugs" initialqacontact="0" value="general" />
+    <component initialowner="37" description="web and internet searches gnorpm uses (only for gnorpm, not other
+    programs' use of it)- currently UNMAINTAINED" initialqacontact="0" value="rpmfind" />
+    <component initialowner="37" description="gnorpm user documentation- currently UNMAINTAINED" initialqacontact="0" value="docs" />
+    <component initialowner="37" description="general gnorpm bugs- currently UNMAINTAINED" initialqacontact="0" value="general" />
     <version value="prehistoric" />
     <version value="0.95.2" />
     <version value="0.96" />
@@ -1168,37 +1181,37 @@
     <version value="0.6.5" />
   </product>
   <product votestoconfirm="0" description="The GNOME graphical shell and file manager" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="nautilus">
-    <component initialowner="2274" description="Custom appearance: Different backgrounds per directory, customized colors, emblems, and themes." initialqacontact="0" value="Backgrounds Emblems and Themes" />
-    <component initialowner="2274" description="The bookmark menu, and the bookmark-type menu items in the Go menu." initialqacontact="0" value="Bookmarks" />
-    <component initialowner="2274" description="The build system, including the make files, build and release process including making RPMs, and test frameworks. Eazel's special build system is covered by a separate product." initialqacontact="0" value="Builds" />
-    <component initialowner="2274" description="Places where we allow external modules to extend Nautilus." initialqacontact="0" value="Component Frameworks" />
-    <component initialowner="2274" description="Support for the &quot;clipboard&quot; features." initialqacontact="2280" value="Cut Copy Paste Undo" />
-    <component initialowner="2274" description="Icons on the desktop controlled by Nautilus." initialqacontact="2280" value="Desktop" />
+    <component initialowner="2274" description="Custom appearance: Different backgrounds per directory, customized colors, emblems, and themes." initialqacontact="5439" value="Backgrounds Emblems and Themes" />
+    <component initialowner="2274" description="The bookmark menu, and the bookmark-type menu items in the Go menu." initialqacontact="5439" value="Bookmarks" />
+    <component initialowner="2274" description="The build system, including the make files, build and release process including making RPMs, and test frameworks. Eazel's special build system is covered by a separate product." initialqacontact="5439" value="Builds" />
+    <component initialowner="2274" description="Places where we allow external modules to extend Nautilus." initialqacontact="5439" value="Component Frameworks" />
+    <component initialowner="2274" description="Support for the &quot;clipboard&quot; features." initialqacontact="5439" value="Cut Copy Paste Undo" />
+    <component initialowner="2274" description="Icons on the desktop controlled by Nautilus." initialqacontact="5439" value="Desktop" />
     <component initialowner="300" description="Documentation and On-line Help" initialqacontact="226" value="Documentation" />
-    <component initialowner="2274" description="Actual changes to files and folders: Move, Copy, Rename, Delete, Change Permissions, etc. This includes the Trash." initialqacontact="0" value="File and Folder Operations" />
-    <component initialowner="2274" description="Interface for running searches and handling search results" initialqacontact="0" value="File Search Interface" />
-    <component initialowner="226" description="The nautilus-based help system including the help-related sidebar panels, the gnome-vfs module for the help-related protocols, and the help converter programs." initialqacontact="0" value="Help System" />
-    <component initialowner="2274" description="Image thumbnail generation and display." initialqacontact="0" value="Thumbnails" />
-    <component initialowner="2274" description="The statically linked bootstrap installer for nautilus." initialqacontact="0" value="Installer" />
-    <component initialowner="2274" description="Internationalization issues, including font support, i18n of strings, UI breakages visible in only certain locales, and potentially i18n of other parts such as graphics." initialqacontact="0" value="Internationalization (i18n)" />
-    <component initialowner="2274" description="Tasks relating to adding a way to do something with the keyboard" initialqacontact="0" value="Keyboardability" />
-    <component initialowner="2274" description="Management of metafiles and metadata." initialqacontact="0" value="Metadata" />
-    <component initialowner="2274" description="Navigation between locations, including Back/Forward/Up/Home buttons &amp; menu items, uri text field, and zoom control" initialqacontact="2280" value="Navigation" />
-    <component initialowner="2274" description="Preferences and other program-wide or system-wide settings." initialqacontact="2280" value="Preferences" />
-    <component initialowner="2274" description="The sidebar, formerly known as the index panel." initialqacontact="0" value="Sidebar" />
-    <component initialowner="2274" description="Separate components that implement pages in the sidebar. This component is for sidebar panels that don't have their own component" initialqacontact="0" value="Sidebar Panel: (Other)" />
-    <component initialowner="2274" description="Sidebar panel that shows a tree of the whole filesystem" initialqacontact="0" value="Sidebar Panel: Tree" />
-    <component initialowner="2274" description="Sound" initialqacontact="0" value="Sound" />
-    <component initialowner="2274" description="Trash icon, Trash window, moving files to Trash and deleting them immediately, emptying the trash, etc." initialqacontact="2280" value="Trash" />
-    <component initialowner="2274" description="Things in common to both icon and list views of directories." initialqacontact="0" value="View as (Icons or List)" />
-    <component initialowner="2274" description="Viewers for showing the contents of files or directories in nice ways depending on their type. Some viewers have their own component already." initialqacontact="0" value="View as (Other)" />
-    <component initialowner="2274" description="The icon view for directories." initialqacontact="0" value="View as Icons" />
-    <component initialowner="2274" description="List view for directories." initialqacontact="0" value="View as List" />
-    <component initialowner="2274" description="Custom directory view that enables MP3 playback directly from Nautilus." initialqacontact="0" value="View as Music" />
-    <component initialowner="2274" description="This is the embedded mozilla component" initialqacontact="0" value="View as Web Page" />
-    <component initialowner="2274" description="General visual issues (icons, splash screens, widget design), and bugs of a visual nature that need pixel work before going to their engineering owner." initialqacontact="0" value="Visual Design" />
-    <component initialowner="2274" description="Catch-all component for things that don't fit into others." initialqacontact="0" value="general" />
-    <component initialowner="2274" description="Bugs against the 'scripts' functionality of nautilus (accessed by right clicking on an item and selecting 'scripts') should be filed here." initialqacontact="0" value="Scripts facilities" />
+    <component initialowner="2274" description="Actual changes to files and folders: Move, Copy, Rename, Delete, Change Permissions, etc. This includes the Trash." initialqacontact="5439" value="File and Folder Operations" />
+    <component initialowner="2274" description="Interface for running searches and handling search results" initialqacontact="5439" value="File Search Interface" />
+    <component initialowner="226" description="The nautilus-based help system including the help-related sidebar panels, the gnome-vfs module for the help-related protocols, and the help converter programs." initialqacontact="5439" value="Help System" />
+    <component initialowner="2274" description="Image thumbnail generation and display." initialqacontact="5439" value="Thumbnails" />
+    <component initialowner="2274" description="The statically linked bootstrap installer for nautilus." initialqacontact="5439" value="Installer" />
+    <component initialowner="2274" description="Internationalization issues, including font support, i18n of strings, UI breakages visible in only certain locales, and potentially i18n of other parts such as graphics." initialqacontact="5439" value="Internationalization (i18n)" />
+    <component initialowner="2274" description="Tasks relating to adding a way to do something with the keyboard" initialqacontact="5439" value="Keyboardability" />
+    <component initialowner="2274" description="Management of metafiles and metadata." initialqacontact="5439" value="Metadata" />
+    <component initialowner="2274" description="Navigation between locations, including Back/Forward/Up/Home buttons &amp; menu items, uri text field, and zoom control" initialqacontact="5439" value="Navigation" />
+    <component initialowner="2274" description="Preferences and other program-wide or system-wide settings." initialqacontact="5439" value="Preferences" />
+    <component initialowner="2274" description="The sidebar, formerly known as the index panel." initialqacontact="5439" value="Sidebar" />
+    <component initialowner="2274" description="Separate components that implement pages in the sidebar. This component is for sidebar panels that don't have their own component" initialqacontact="5439" value="Sidebar Panel: (Other)" />
+    <component initialowner="2274" description="Sidebar panel that shows a tree of the whole filesystem" initialqacontact="5439" value="Sidebar Panel: Tree" />
+    <component initialowner="2274" description="Sound" initialqacontact="5439" value="Sound" />
+    <component initialowner="2274" description="Trash icon, Trash window, moving files to Trash and deleting them immediately, emptying the trash, etc." initialqacontact="5439" value="Trash" />
+    <component initialowner="2274" description="Things in common to both icon and list views of directories." initialqacontact="5439" value="View as (Icons or List)" />
+    <component initialowner="2274" description="Viewers for showing the contents of files or directories in nice ways depending on their type. Some viewers have their own component already." initialqacontact="5439" value="View as (Other)" />
+    <component initialowner="2274" description="The icon view for directories." initialqacontact="5439" value="View as Icons" />
+    <component initialowner="2274" description="List view for directories." initialqacontact="5439" value="View as List" />
+    <component initialowner="2274" description="Custom directory view that enables MP3 playback directly from Nautilus." initialqacontact="5439" value="View as Music" />
+    <component initialowner="2274" description="This is the embedded mozilla component" initialqacontact="5439" value="View as Web Page" />
+    <component initialowner="2274" description="General visual issues (icons, splash screens, widget design), and bugs of a visual nature that need pixel work before going to their engineering owner." initialqacontact="5439" value="Visual Design" />
+    <component initialowner="2274" description="Catch-all component for things that don't fit into others." initialqacontact="5439" value="general" />
+    <component initialowner="2274" description="Bugs against the 'scripts' functionality of nautilus (accessed by right clicking on an item and selecting 'scripts') should be filed here." initialqacontact="5439" value="Scripts facilities" />
     <version value="1.0.4" />
     <version value="unspecified" />
     <version value="0.1" />
@@ -1359,6 +1372,7 @@
     <version value="0.2" />
     <version value="0.1" />
     <version value="0.3" />
+    <version value="0.4" />
   </product>
   <product votestoconfirm="0" description="A fax sender/manager for GNOME, part of GNOME Office" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="Gfax">
     <component initialowner="3602" description="For general bugs about gfax" initialqacontact="0" value="general" />
@@ -1386,6 +1400,10 @@
     <component initialowner="88" description="General libxml2 bugs" initialqacontact="0" value="general" />
     <component initialowner="88" description="libxml2 documentation bugs" initialqacontact="0" value="docs" />
     <version value="2.4.13" />
+    <version value="2.4.16" />
+    <version value="2.4.17" />
+    <version value="2.4.18" />
+    <version value="2.4.19" />
   </product>
   <product votestoconfirm="0" description="A library that provides terminal functionality." maxvotesperbug="10000" milestoneurl="2.0" votesperuser="0" disallownew="0" name="libzvt">
     <component initialowner="185" description="Bugs against libzvt" initialqacontact="37" value="general" />
@@ -1424,6 +1442,7 @@
     <component initialowner="4570" description="The Workspace Switcher Applet" initialqacontact="1286" value="Workspace Switcher Applet" />
     <component initialowner="4570" description="Wanda the Fish" initialqacontact="1286" value="Fish Applet" />
     <component initialowner="4570" description="Build problems etc." initialqacontact="1286" value="general" />
+    <component initialowner="226" description="Help Documentation for all components in gnome-panel" initialqacontact="0" value="help-docs" />
     <version value="unspecified" />
     <version value="1.5.x" />
   </product>
@@ -1460,6 +1479,9 @@
   </product>
   <product votestoconfirm="0" description="The RhythmBox iTunes clone" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="rhythmbox">
     <component initialowner="4903" description="General bugs" initialqacontact="0" value="General" />
+    <component initialowner="4903" description="Interface Bugs" initialqacontact="0" value="Interface" />
+    <component initialowner="4903" description="The monkey sound backend for RhythMbox" initialqacontact="0" value="Monkey Sound" />
+    <component initialowner="4903" description="The RhythmBox &quot;server&quot; interface" initialqacontact="0" value="CORBA interface" />
     <version value="unspecified" />
   </product>
   <product votestoconfirm="0" description="HTML rendering library" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gtkhtml2">
@@ -1473,6 +1495,66 @@
     <component initialowner="185" description="Bugs against the capplet." initialqacontact="1286" value="capplet" />
     <component initialowner="185" description="The screen locking tool" initialqacontact="1286" value="screen locker" />
     <component initialowner="185" description="gnome-specific xscreensaver bugs. General xscreensaver bugs ('xscreensaver crashes') should NOT be filed here and will immediately be marked NOTGNOME." initialqacontact="1286" value="general gnome-xscreensaver bugs" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="Bugs related to the jhbuild build scripts should be reported here." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="jhbuild">
+    <component initialowner="50" description="General jhbuild bugs" initialqacontact="0" value="general" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="GConf GUI tool" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gconf-editor">
+    <component initialowner="96" description="general gconf-editor bugs" initialqacontact="0" value="general" />
+    <version value="unspecified" />
+  </product>
+  <product votestoconfirm="0" description="API document browser" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="devhelp">
+    <component initialowner="831" description="General component for devhelp" initialqacontact="0" value="General" />
+    <version value="unspecified" />
+    <version value="0.3" />
+  </product>
+  <product votestoconfirm="0" description="GStreamer is a framework for streaming media.
+  GStreamer allows the construction of graphs of media-handling components, 
+  ranging from simple mp3 playback to complex audio (mixing) and video 
+  (non-linear editing) processing. Applications can take advantage of 
+  advances in codec and filter technology transparently. Developers can add 
+  new codecs and filters by writing a simple plugin with a clean, generic 
+  interface. GStreamer is released under the LGPL, with many of the included 
+  plugins retaining the license of the code they were derived from, usually 
+  GPL or BSD." maxvotesperbug="10000" milestoneurl="http://www.gstreamer.net" votesperuser="0" defaultmilestone="0.4.0" name="GStreamer" disallownew="0">
+    <component initialowner="4754" description="This includes everything about gstreamer for now." initialqacontact="4754" value="gstreamer (core)" />
+    <component initialowner="4754" description="File anything you cannot classify further here." initialqacontact="4754" value="don't know" />
+    <component initialowner="4754" description="File plugin related bugs here." initialqacontact="4754" value="gst-plugins" />
+    <component initialowner="4754" description="File all editor related bugs here." initialqacontact="4754" value="gst-editor" />
+    <version value="0.3.3" />
+    <version value="cvs" />
+    <version value="0.4.0" />
+    <version value="0.5.0" />
+    <version value="0.3.4" />
+  </product>
+  <product votestoconfirm="0" description="C++ bindings for GTK+" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gtkmm">
+    <component initialowner="5595" description="general" initialqacontact="0" value="general" />
+    <component initialowner="5595" description="TreeView, ListStore, TreeStore, TreeIter, etc." initialqacontact="0" value="TreeView" />
+    <component initialowner="5595" description="compiling and installing issues" initialqacontact="0" value="build" />
+    <version value="unspecified" />
+    <version value="1.2" />
+    <version value="2.0" />
+  </product>
+  <product votestoconfirm="0" description="C++ bindings for GNOME libs" maxvotesperbug="10000" votesperuser="0" disallownew="0" name="gnomemm">
+    <component initialowner="5595" description="libgnome wrappers" initialqacontact="0" value="libgnomemm" />
+    <component initialowner="5595" description="libgnomecanvas wrappers" initialqacontact="0" value="libgnomecanvasmm" />
+    <component initialowner="5595" description="gconf wrappers" initialqacontact="0" value="gconfmm" />
+    <component initialowner="5595" description="libgnomeui wrappers" initialqacontact="0" value="libgnomeuimm" />
+    <component initialowner="5595" description="libbonobo wrappers" initialqacontact="0" value="libbonobomm" />
+    <component initialowner="5595" description="libbonoboui wrappers" initialqacontact="0" value="libbonobouimm" />
+    <component initialowner="5595" description="compiling and installing issues" initialqacontact="0" value="build" />
+    <component initialowner="5595" description="C++ wrappers for libglade" initialqacontact="0" value="libglademm" />
+    <component initialowner="5595" description="C++ wrappers for libgda" initialqacontact="0" value="libgdamm" />
+    <version value="unspecified" />
+    <version value="1.2" />
+    <version value="2.0" />
+  </product>
+  <product votestoconfirm="0" description="Sun's port of CDE's dtprintinfo to gtk. in gnome cvs in the printman module." maxvotesperbug="10000" votesperuser="0" disallownew="0" name="printman">
+    <component initialowner="613" description="bugs against the print tool" initialqacontact="0" value="general" />
+    <component initialowner="613" description="bugs against the solaris backend." initialqacontact="0" value="solaris backend" />
+    <component initialowner="613" description="bugs against the frontend" initialqacontact="0" value="frontend" />
     <version value="unspecified" />
   </product>
 </products>

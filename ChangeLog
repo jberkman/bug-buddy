@@ -1,3 +1,11 @@
+2002-04-19  jacob berkman  <jacob@ximian.com>
+
+	* configure.in: 2.1.5
+	
+	* src/bug-buddy.glade: fix icon
+
+	* bugzilla/*: update
+
 2002-04-17  Abel Cheung  <maddog@linux.org.hk>
 
 	* configure.in: Removed en_AU, it's a completely empty translation,

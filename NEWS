@@ -1,3 +1,28 @@
+2.1.5:
+
+  * Fixes:
+
+	- fix .desktop file for gnome 2 install (Seth Nickell)
+
+	- fix dynamic export ldflags (bugs #77035 and #76384, thanks
+	to Dan Winship)
+
+	- install .omf files
+
+	- handle g_convert() not returning anything
+
+	- fix icon in druid
+
+  * Improvements:
+
+	- uses glade-2 now, so libglade-convert is no longer needed
+
+	- add ability to save/copy stack trace w/o having to go
+	through all the steps (fixes #77891)
+
+	- run gdb with 'bt full' rather than just 'bt' (fixes #78675,
+	havoc)
+
 2.1.4:
 
   * Fixes:
