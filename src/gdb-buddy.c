@@ -92,7 +92,7 @@ get_trace_from_pair (GnomeLess *gl, const gchar *app, const gchar *extra)
 		return;
 	}
 
-	cmd_buf = g_strdup_printf ("gdb --quiet --command=%s %s %s",
+	cmd_buf = g_strdup_printf ("gdb --batch --quiet --command=%s %s %s",
 				   cmd_file, app, extra);
 	g_free (cmd_file);
 	
