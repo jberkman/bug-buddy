@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
 "POT-Creation-Date: 2000-04-18 00:14-0400\n"
-"PO-Revision-Date: 2000-03-27 06:54+02:00\n"
+"PO-Revision-Date: 2000-04-18 10:13+02:00\n"
 "Last-Translator: Christopher R. Gabriel <cgabriel@pluto.linux.it>\n"
 "Language-Team: ITALIANO <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,9 +14,9 @@ msgstr ""
 "Content-Transfer-Encoding: 7bit\n"
 
 #: src/gdb-buddy.c:41
-#, fuzzy, c-format
+#, c-format
 msgid "obtaining stack trace... (%d)"
-msgstr "generazione stack trace..."
+msgstr "generazione stack trace... (%d)"
 
 #: src/bug-buddy.c:410 src/gdb-buddy.c:81
 msgid "gdb has already exited"
@@ -94,54 +94,46 @@ msgid "support"
 msgstr "supporto"
 
 #: src/bug-buddy.c:89
-#, fuzzy
 msgid "Submit bug report"
 msgstr "Invia il resoconto"
 
 #: src/bug-buddy.c:90
-#, fuzzy
 msgid "Only send report to yourself"
 msgstr "Invia il resoconto unicamente al proprio indirizzo di posta"
 
 #: src/bug-buddy.c:91
-#, fuzzy
 msgid "Save report to file"
 msgstr "Salva il resoconto in un file"
 
 #: src/bug-buddy.c:96
-#, fuzzy
 msgid "Collect debugging information from a crashed application"
-msgstr "Raccolta informazioni di debugging"
+msgstr "Raccolta informazioni sul crash per il debugging"
 
 #: src/bug-buddy.c:97
-#, fuzzy
 msgid "Collect debugging information from a core file"
-msgstr "Raccolta informazioni di debugging"
+msgstr "Raccolta informazioni per il debug da un file core"
 
 #: src/bug-buddy.c:98
 msgid "Skip this step"
 msgstr "Ignora questo passo"
 
 #: src/bug-buddy.c:103
-#, fuzzy
 msgid "Create a new bug report"
 msgstr "Crea un nuovo resoconto di errore"
 
 #: src/bug-buddy.c:104
-#, fuzzy
 msgid "Add more information to existing report"
 msgstr "Aggiungi informazioni ad un precedente resoconto"
 
 #: src/bug-buddy.c:113
 msgid "Name of contact"
-msgstr ""
+msgstr "Nome del contatto"
 
 #: src/bug-buddy.c:113
 msgid "NAME"
 msgstr "NOME"
 
 #: src/bug-buddy.c:114
-#, fuzzy
 msgid "Email address of contact"
 msgstr "Indirizzo Email"
 
@@ -150,7 +142,6 @@ msgid "EMAIL"
 msgstr "EMAIL"
 
 #: src/bug-buddy.c:115
-#, fuzzy
 msgid "Package containing the program"
 msgstr "Pacchetto del programma"
 
@@ -167,7 +158,6 @@ msgid "VERSION"
 msgstr "VERSIONE"
 
 #: src/bug-buddy.c:117
-#, fuzzy
 msgid "File name of crashed program"
 msgstr "Pacchetto del programma"
 
@@ -176,7 +166,6 @@ msgid "FILE"
 msgstr "FILE"
 
 #: src/bug-buddy.c:118
-#, fuzzy
 msgid "PID of crashed program"
 msgstr "PID dell'applicazione terminata"
 
@@ -185,7 +174,6 @@ msgid "PID"
 msgstr "PID"
 
 #: src/bug-buddy.c:119
-#, fuzzy
 msgid "Core file from program"
 msgstr "file core dall'applicazione"
 
@@ -194,9 +182,10 @@ msgid ""
 "You must include a subject and a description\n"
 "in your bug report."
 msgstr ""
+"È necessario includere un soggetto e una descrizione\n"
+"nel resoconto di errore."
 
 #: src/bug-buddy.c:402
-#, fuzzy
 msgid ""
 "gdb has not finished getting the debugging information.\n"
 "Kill the gdb process (the stack trace will be incomplete)?"
@@ -217,7 +206,7 @@ msgid "The lame bug-buddy web page"
 msgstr "La pagina web di bug-buddy"
 
 #: src/bug-buddy.c:550
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
 "submit a bug report, but you will be able to save it to a file.\n"
@@ -234,40 +223,37 @@ msgid "Please enter your name and email address"
 msgstr "Inserire il proprio nome e indirizzo email"
 
 #: src/bug-buddy.c:605
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to open file: '%s'"
-msgstr ""
-"Impossibile leggere il file core con gdb:\n"
-"%s"
+msgstr "Impossibile aprire il file '%s'"
 
 #: src/bug-buddy.c:618
 #, c-format
 msgid "about to run '%s'"
-msgstr ""
+msgstr "prossimo ad eseguire '%s'"
 
 #: src/bug-buddy.c:622
 #, c-format
 msgid "Unable to start mail program: '%s'"
-msgstr ""
+msgstr "Impossibile avviare il programma di posta: '%s'"
 
 #: src/bug-buddy.c:653
 #, c-format
 msgid "Your bug report was saved in '%s'"
-msgstr ""
+msgstr "Il vostro resoconto è stato salvato nel file '%s'"
 
 #: src/bug-buddy.c:656
 #, c-format
 msgid "Your bug report has been submitted to <%s>"
-msgstr ""
+msgstr "Il vostro resoconto è stato inviato a <%s>"
 
 #: src/bug-buddy.c:786
 msgid "You must specify a recipient email address"
-msgstr ""
+msgstr "È necessario specificare un destinatario per il messaggio email"
 
 #: src/bug-buddy.c:792
-#, fuzzy
 msgid "Submit this bug report now?"
-msgstr "Invia il resoconto"
+msgstr "Inviare il resoconto adesso?"
 
 #: src/bug-buddy.c:802
 msgid "Please choose a file to save to."
@@ -300,7 +286,6 @@ msgstr ""
 "Utilizzate l'argomento da linea di comando --appname."
 
 #: src/bug-buddy.c:1023
-#, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -328,7 +313,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr ""
+msgstr "Benvenuti nel fantastico mondo di Bug-Buddy!"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -375,18 +360,20 @@ msgid ""
 "Select a bug tracking system to use, and then fill out\n"
 "the remaining information."
 msgstr ""
+"Selezionare il sistema di bug-track da utilizzare, e compilare il\n"
+"modulo con le informazioni mancanti"
 
 #: src/glade-strings.c:25
-#, fuzzy
 msgid "Bug Tracking System "
 msgstr "Sistema di bug tracking"
 
 #: src/glade-strings.c:26
-#, fuzzy
 msgid ""
 "Submit new report\n"
 "Add information to an existing report\n"
-msgstr "Aggiungi informazioni ad un precedente resoconto"
+msgstr ""
+"Invia un nuovo resoconto\n"
+"Aggiungi informazioni ad un precedente resoconto\n"
 
 #: src/glade-strings.c:29 src/glade-strings.c:33 src/glade-strings.c:58
 msgid "Package"
@@ -409,6 +396,8 @@ msgid ""
 "Please check to see if your bug has already been submitted,\n"
 "and if so, use \"Add information to existing report\" above."
 msgstr ""
+"Assicuratevi che il vostro errore non sia già stato riportato,\n"
+"e, se si, utilizzate la voce \"Aggiungi informazioni ad un precedente resoconto\""
 
 #: src/glade-strings.c:37 src/glade-strings.c:38
 msgid "Bug Number"
@@ -423,9 +412,8 @@ msgid "Short subject for the bug report"
 msgstr "Soggetto breve per il resoconto"
 
 #: src/glade-strings.c:41
-#, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
-msgstr "Descrizione completa dell'errore"
+msgstr "Descrizione completa dell'errore, inclusa la procedura di riproduzione"
 
 #: src/glade-strings.c:42
 msgid "Include a text file"
@@ -499,20 +487,22 @@ msgid "Submitting the Report"
 msgstr "Invia il resoconto"
 
 #: src/glade-strings.c:63
-#, fuzzy
 msgid ""
 "Submit bug report\n"
 "Send to your amail address only\n"
 "Save report to file\n"
-msgstr "Invia il resoconto unicamente al proprio indirizzo di posta"
+msgstr ""
+"Invia un resoconto\n"
+"Invia unicamente indirizzo email\n"
+"Save il resoconto in un file\n"
 
 #: src/glade-strings.c:67
 msgid "To"
-msgstr ""
+msgstr "A"
 
 #: src/glade-strings.c:68
 msgid "Send copy to yourself"
-msgstr ""
+msgstr "Invia copia a me stesso"
 
 #: src/glade-strings.c:69
 msgid "Save the report to..."
@@ -520,7 +510,7 @@ msgstr "Salva il resoconto in..."
 
 #: src/glade-strings.c:70
 msgid "Content"
-msgstr ""
+msgstr "Contenuto"
 
 #: src/glade-strings.c:71
 msgid "Summary"
