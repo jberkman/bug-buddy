@@ -1,0 +1,87 @@
+0.3 release:
+
+No release announcement this time, I guess.
+
+* Fixes:
+
+	- fix duplicate message sendome with qmail
+
+	- make sure the user wants to overwrite a file
+
+	- more descriptive error message when the .glade
+	file doesn't exist
+
+	- do some stuff for when we aren't installed in 
+	the gnome prefix
+
+	- fix some warnings etc. for intl.
+
+	- spec.in file
+
+0.2 release:
+
+Hello,
+
+I've made a couple of minor (but kind of important) fixes to bug-buddy.
+
+* Availability:
+
+	- ftp://ftp.gnome.org/pub/GNOME/sources/bug-buddy/
+
+* Changes:
+
+	- should more correctly determine the gnome-core version
+
+	- change 'severe' severity to 'grave'
+
+	- better mime regex
+
+Enjoy,
+Jacob
+
+0.1 release:
+
+Hello bug hunters,
+
+I've just released the first version of bug-buddy, a graphical
+bug reporting utility.
+
+The goal of bug-buddy is to make reporting bugs very simple and easy
+for the user, while making the reports themselves more useful and
+informative for the developer.
+
+* Availability:
+
+	- ftp://ftp.gnome.org/pub/GNOME/sources/bug-buddy/
+
+* Features:
+
+	- automatic stack trace gathering, either from a core file
+	  or from a crashed application.  No messing with gdb :)
+
+	- determines the versions of different components installed
+	  on your machine
+
+	- can be started from gmc (double clicking on a core file)
+	  and from the crash dialog, if you have gnome-libs 1.0.53
+	  (October GNOME) or higher installed
+
+* Requirements:
+
+	- libglade: 0.5 or later required (CVS version has some layout
+	  fixes)
+
+	- gdb is required to obtain a stack trace automatically
+
+	- gnome-libs 1.0.53 or higher recommended
+
+* Notes:
+
+	- yes, some information about your system will be submitted
+	  to the bug tracking system.  This is limited to versions of
+	  system and gnome components, but I figure I should mention it.
+
+	- bug reports for bug-buddy are appreciated
+
+Enjoy,
+Jacob

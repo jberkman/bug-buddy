@@ -1,5 +1,7 @@
 1999-11-11  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* NEWS: update for 0.3
+
 	* src/bug-buddy.c (on_action_page_next): ask the
 	user if they really want to override a file if
 	it exists  (based on a patch from Ali Abdin 
