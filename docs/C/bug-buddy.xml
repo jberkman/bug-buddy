@@ -209,6 +209,7 @@
 	  &app; opens with a welcome and some important buttons at the bottom of 
 	  the screen.  The four buttons at the very bottom of the screen will 
 	  not change in &app; while using the program.
+<!--
 	  <figure id="bug-buddy">
 		<title>&app; Startup Window</title>
 		<screenshot>
@@ -223,7 +224,7 @@
 		  </mediaobject>
 		</screenshot>
 	  </figure>
-
+-->
 	  <itemizedlist>
 		<listitem>
 		  <para>
@@ -232,6 +233,7 @@
 			There is a <guibutton>Credits</guibutton> button in the 
 			<guilabel>About Bug Buddy</guilabel> dialog which lists the 
 			authors of the program and documentation.
+<!--
 			<figure id="about-bug-buddy">
 			  <title>About Bug Buddy dialog</title>
 			  <screenshot>
@@ -246,6 +248,7 @@
 				</mediaobject>
 			  </screenshot>
 			</figure>
+-->
 		  </para>
 		</listitem>
 		<listitem>
@@ -259,6 +262,7 @@
 			continue your bug report.  Pressing the <guibutton>Yes</guibutton> 
 			button will close the program and cancel the bug report you were 
 			making.
+<!--
 			<figure id="question-dialog">
 			  <title>Question Dialog</title>
 			  <screenshot>
@@ -273,6 +277,7 @@
 				</mediaobject>
 			  </screenshot>
 			</figure>
+-->
 		  </para>
 		</listitem>
 		<listitem>
@@ -318,6 +323,7 @@
 			  This is the default option. If you did not start
 			  <application>Bug Buddy</application> following a crash, and
 			  do not have a core file you want debugged, pick this.
+<!--
 			  <figure id="debug-nothing">
 				<title>Debug Nothing Window</title>
 				<screenshot>
@@ -333,6 +339,7 @@
 				  </mediaobject>
 				</screenshot>
 			  </figure>
+-->
 			</para>
 		  </listitem>
 		</varlistentry>
@@ -346,6 +353,7 @@
 			  which you know was created as a result of the bug you are reporting.
 			  An extra box will appear where you can tell it where the core file
 			  lives.
+<!--
 			  <figure id="debug-core-file">
 				<title>Debug Core File Window</title>
 				<screenshot>
@@ -364,6 +372,7 @@
 				  </mediaobject>
 				</screenshot>
 			  </figure>
+-->
 			</para>
 		  </listitem>
 		</varlistentry>
@@ -421,6 +430,7 @@
 	  This page gives you a list of products, from which you can select.  
 	  Select the product you want to report a bug in and click on the 
 	  <guibutton>Forward</guibutton> button to proceed to the next screen.
+<!--
 	  <figure id="select-product">
 		<title>Select a Product Window</title>
 		<screenshot>
@@ -435,6 +445,7 @@
 		  </mediaobject>
 		</screenshot>
 	  </figure>
+-->
 	</para>
 
 	<para>
