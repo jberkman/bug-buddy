@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.1\n"
-"POT-Creation-Date: 2000-03-05 22:03+0100\n"
-"PO-Revision-Date: 2000-03-05 22:19+01:00\n"
+"POT-Creation-Date: 2000-04-01 16:29+0200\n"
+"PO-Revision-Date: 2000-04-01 16:42+02:00\n"
 "Last-Translator: Birger Langkjer <birger.langkjer@image.dk>\n"
 "Language-Team: Dansk/Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -147,11 +147,15 @@ msgstr "core-fil fra programmet"
 
 #: src/bug-buddy.c:290
 msgid ""
-"gdb has not finished getting thedebugging information.\n"
-"Kill the gdb process (the stack tracewill be incomplete)?"
+"gdb has not finished getting the\n"
+"debugging information.\n"
+"Kill the gdb process (the stack trace\n"
+"will be incomplete)?"
 msgstr ""
-"gdb er ikke færdig med at hente aflusningsinformation.\n"
-"Dræb gdb-processen (stak-trace vil mangle noget)?"
+"gdb er ikke færdig med at hente\n"
+"fejlanalyseringsinformation.\n"
+"Dræb gdb-processen?\n"
+"(stak-trace vil mangle noget)"
 
 #: src/bug-buddy.c:341
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -169,7 +173,7 @@ msgstr "Den kedelige fejl-hjælper hjemmeside"
 #, c-format
 msgid ""
 "'%s' doesn't seem to exist.  You won't be able to actually\n"
-"submit a but report, but you will be able to save it to a file.\n"
+"submit a bug report, but you will be able to save it to a file.\n"
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
@@ -253,7 +257,7 @@ msgstr ""
 #: src/bug-buddy.c:878
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
-" Please use the --pid command lineargument instead."
+"Please use the --pid command lineargument instead."
 msgstr ""
 "$GNOME_CRASHED_PID bruges ikke længere.\n"
 "Brug venligst --pid kommandolinieargumentet istedet."
@@ -297,8 +301,8 @@ msgid ""
 "Enter your name and email address, so you will be notified when the\n"
 "bug is resolved, or for developers to request more information from you."
 msgstr ""
-"Indtast dit navn og e-postaddresse, så du kan få at vide når fejlen er\n"
-"blevet rettet, eller så udviklerne kan bede om mere information fra dig."
+"Indtast dit navn og epostadresse, så du kan få at vide når fejlen er\n"
+"blevet rettet, eller så udviklerne kan bede dig om mere information."
 
 #: src/glade-strings.c:14
 msgid "Bug Tracking System"
@@ -318,7 +322,7 @@ msgstr "Vælg hvilken sendmail"
 
 #: src/glade-strings.c:19
 msgid "Full path of sendmail"
-msgstr "Fulde sti til sendmail"
+msgstr "Placering af sendmail"
 
 #: src/glade-strings.c:20
 msgid "System Configuration"
@@ -334,7 +338,7 @@ msgstr "Pakke"
 
 #: src/glade-strings.c:23
 msgid "Version installed"
-msgstr "Version installeret"
+msgstr "Installeret version"
 
 #: src/glade-strings.c:24
 msgid "%P %%"
@@ -342,7 +346,7 @@ msgstr "%P %%"
 
 #: src/glade-strings.c:25
 msgid "Automatically go to next page when complete"
-msgstr "Gå automatisk til næste side når færdig"
+msgstr "Gå automatisk til næste side når du er færdig"
 
 #: src/glade-strings.c:26
 msgid "Report Information"
@@ -402,11 +406,11 @@ msgstr "Inkludér en tekstfil"
 
 #: src/glade-strings.c:41
 msgid "Debugging Information"
-msgstr "Aflusningsinformation"
+msgstr "Fejlanalyseringsinformation"
 
 #: src/glade-strings.c:42
 msgid "How to collect debugging information"
-msgstr "Hvordan aflusningsinformation skal indsamles"
+msgstr "Hvordan fejlanalyseringsinformation skal indsamles"
 
 #: src/glade-strings.c:43
 msgid "Attach to a crashed application"
@@ -442,14 +446,14 @@ msgstr "Vælg en core-fil"
 
 #: src/glade-strings.c:51
 msgid "Collecting Debugging Information"
-msgstr "Indsamler aflusningsinformation"
+msgstr "Indsamler fejlanalyseringsinformation"
 
 #: src/glade-strings.c:52
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
 msgstr ""
-"Vent venligst mens aflusnings-\n"
+"Vent venligst mens fejlanalyserings-\n"
 "informationen indsamles..."
 
 #: src/glade-strings.c:54
