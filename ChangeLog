@@ -1,3 +1,8 @@
+2001-02-12  Gediminas Paulauskas <menesis@delfi.lt>
+
+	* configure.in: added lt to ALL_LINGUAS.
+	* src/bug-buddy.glade, src/glade-strings.c: fixed two typos.
+
 2001-02-11  jacob berkman  <jacob@ximian.com>
 
 	* `find .`: (almost) completely rewritten to support bugzilla and

@@ -10,7 +10,7 @@ gchar *s = N_("This program will walk you through the steps for \n"
               "\n"
               "These bug reports are submitted via email, so\n"
               "please specify your email address so you can be\n"
-              "contacted if furthur information is requred, or\n"
+              "contacted if further information is required, or\n"
               "when a fixed version is available.");
 gchar *s = N_("Skip this step in the future");
 gchar *s = N_("Name");

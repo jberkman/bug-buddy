@@ -144,7 +144,7 @@ submitting a bug report for projects such as GNOME.
 
 These bug reports are submitted via email, so
 please specify your email address so you can be
-contacted if furthur information is requred, or
+contacted if further information is required, or
 when a fixed version is available.</label>
 	    <justify>GTK_JUSTIFY_LEFT</justify>
 	    <wrap>False</wrap>
