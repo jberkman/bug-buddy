@@ -3,14 +3,14 @@
 # Richard Hult <rhult@hem.passagen.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000-2001.
-# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
+# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000-2001.
 #
 # $Id$
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
-"POT-Creation-Date: 2001-02-26 11:17-0500\n"
+"POT-Creation-Date: 2001-03-01 15:10+0100\n"
 "PO-Revision-Date: 2001-02-12 22:08+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -445,7 +445,6 @@ msgid "email info"
 msgstr "e-postinformation"
 
 #: src/glade-strings.c:66
-#, fuzzy
 msgid "Assbarn Phenomenon"
 msgstr "Assbarn-fenomenet"
 
