@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 2.0.7\n"
-"POT-Creation-Date: 2002-05-07 12:35+0200\n"
-"PO-Revision-Date: 2002-04-23 12:01+0200\n"
+"POT-Creation-Date: 2002-05-12 14:53+0200\n"
+"PO-Revision-Date: 2002-05-12 14:54+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -226,8 +226,8 @@ msgstr "Produkt"
 msgid "Component"
 msgstr "Komponent"
 
-#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
-#: src/bugzilla.c:711
+#: src/bugzilla.c:642 src/bugzilla.c:683 src/bugzilla.c:711
+#: src/bug-buddy.glade.h:20
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -702,11 +702,15 @@ msgstr "Du må inkludere et forståelig emne i din feilrapport."
 msgid "You must include a comprehensible description in your bug report."
 msgstr "Du må inkludere en forståelig beskrivelse i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:488
+#: src/united-states-of-bug-buddy.c:493
 msgid "Submit this bug report now?"
 msgstr "Send denne feilrapporten nå?"
 
-#: src/united-states-of-bug-buddy.c:508
+#: src/united-states-of-bug-buddy.c:496
+msgid "_Submit"
+msgstr "_Send inn"
+
+#: src/united-states-of-bug-buddy.c:517
 #, c-format
 msgid ""
 "Unable to open file '%s':\n"
@@ -715,12 +719,12 @@ msgstr ""
 "Kunne ikke åpne fil «%s»:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:522
+#: src/united-states-of-bug-buddy.c:531
 #, c-format
 msgid "about to run '%s'"
 msgstr "i ferd med å kjøre «%s»"
 
-#: src/united-states-of-bug-buddy.c:530
+#: src/united-states-of-bug-buddy.c:539
 #, c-format
 msgid ""
 "Unable to start mail program '%s':\n"
@@ -729,12 +733,12 @@ msgstr ""
 "Kunne ikke starte e-postprogram «%s»:\n"
 "%s"
 
-#: src/united-states-of-bug-buddy.c:568
+#: src/united-states-of-bug-buddy.c:577
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din feilrapport ble lagret som '%s'"
 
-#: src/united-states-of-bug-buddy.c:571
+#: src/united-states-of-bug-buddy.c:580
 #, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
@@ -749,7 +753,7 @@ msgstr ""
 "\n"
 "Takk!"
 
-#: src/united-states-of-bug-buddy.c:626
+#: src/united-states-of-bug-buddy.c:635
 msgid ""
 "Since Bug Buddy doesn't know about the product you wish to submit a bug "
 "report in, you will have to manually address the bug report."
@@ -757,19 +761,19 @@ msgstr ""
 "Siden Bug Buddy ikke vet om produktet du ønsker å sende inn en feilrapport "
 "om, må du adressere rapporten manuelt."
 
-#: src/united-states-of-bug-buddy.c:647
+#: src/united-states-of-bug-buddy.c:656
 msgid "You must specify a product for your bug report."
 msgstr "Du må spesifisere et produkt i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:670
+#: src/united-states-of-bug-buddy.c:679
 msgid "You must specify a component for your bug report."
 msgstr "Du må spesifisere en komponent i din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:684
+#: src/united-states-of-bug-buddy.c:693
 msgid "You must specify a version for your bug report."
 msgstr "Du må spesifisere en versjon for din feilrapport."
 
-#: src/united-states-of-bug-buddy.c:765
+#: src/united-states-of-bug-buddy.c:774
 msgid ""
 "Your email program has been launched.  Please look it over and send it.\n"
 "\n"
@@ -779,7 +783,7 @@ msgstr ""
 "\n"
 "Takk for at du sender inn denne feilrapporten."
 
-#: src/united-states-of-bug-buddy.c:792
+#: src/united-states-of-bug-buddy.c:801
 msgid ""
 "Are you sure you want to cancel\n"
 "this bug report?"
