@@ -1,3 +1,8 @@
+1999-11-08  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* docs/multiple_bts.txt: email excerpt talking about
+	supporting multiple BTS's, and what needs to be done.
+
 1999-11-07  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/bug-buddy.mime: ok, this regex works now
