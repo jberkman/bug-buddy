@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 2.0\n"
-"POT-Creation-Date: 2001-06-21 15:27-0400\n"
-"PO-Revision-Date: 2001-02-15 11:11+0100\n"
+"Project-Id-Version: bug-buddy 2.0.6\n"
+"POT-Creation-Date: 2001-06-22 19:09+0200\n"
+"PO-Revision-Date: 2001-06-22 19:08+0200\n"
 "Last-Translator: Christophe Merlet (RedFox) <redfox@eikonex.org>\n"
 "Language-Team: GNOME French Team <gnomefr@gnomefr.traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -575,7 +575,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Votre rapport d'anomalies a été enregistré dans « %s »"
 
 #: src/united-states-of-bug-buddy.c:465
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -585,7 +585,9 @@ msgid ""
 msgstr ""
 "Votre rapport d'anomalies a été transmis à :\n"
 "\n"
-"        <%s>"
+"        <%s>\n"
+"\n"
+"Merci !"
 
 #: src/united-states-of-bug-buddy.c:503
 msgid "You must specify a product for your bug report."
@@ -859,8 +861,7 @@ msgstr "Crée un rapport d'anomalies pour GNOME"
 #~ "\n"
 #~ "Clicking on 'Finish' will submit the bug report."
 #~ msgstr ""
-#~ "Vous êtes sur le point de soumettre un rapport de bug à propos de « %s "
-#~ "».\n"
+#~ "Vous êtes sur le point de soumettre un rapport de bug à propos de « %s ».\n"
 #~ "\n"
 #~ "Il sera envoyé par email :\n"
 #~ "To: %s\n"
