@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
-"PO-Revision-Date: 2000-04-20 22:10+0300\n"
+"POT-Creation-Date: 2000-04-29 21:50+0300\n"
+"PO-Revision-Date: 2000-04-29 22:00+0300\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,13 +14,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/bts.c:99
-#, fuzzy
 msgid "Distribution"
-msgstr "Kuvaus"
+msgstr "Distribuutio"
 
 #: src/bts.c:107
 msgid "System"
-msgstr ""
+msgstr "J‰rjestelm‰"
 
 #: src/bug-buddy.c:74
 msgid "critical"
@@ -140,17 +139,17 @@ msgstr "Sovelluksen j‰tt‰m‰ core-tiedosto"
 
 #: src/bug-buddy.c:365
 msgid "The specified file does not exist."
-msgstr ""
+msgstr "Annettu tiedostonimi ei ole olemassa."
 
 #: src/bug-buddy.c:370
 #, c-format
 msgid "File is of type: %s"
-msgstr ""
+msgstr "Tiedosto on tyyppi‰: %s"
 
 #: src/bug-buddy.c:373
 #, c-format
 msgid "'%s' does not look like a text file."
-msgstr ""
+msgstr "'%s' ei ole tekstitiedosto."
 
 #: src/bug-buddy.c:387
 msgid ""
@@ -300,7 +299,7 @@ msgstr ""
 #: src/gdb-buddy.c:140
 #, c-format
 msgid "Child process exited with status %d"
-msgstr "Lapsi-prosessi lopetti toimintansa tilassa %d"
+msgstr "Lapsiprosessi lopetti toimintansa tilassa %d"
 
 #: src/gdb-buddy.c:143
 #, c-format
@@ -528,16 +527,14 @@ msgid "The GEGL is watching."
 msgstr "The GEGL is watching."
 
 #: src/util.c:60
-#, fuzzy
 msgid "Unable to open pipe"
-msgstr "Ei pysty aukaisemaan tiedostoa: '%s'"
+msgstr "Ei pysty aukaisemaan putkea"
 
 #: src/util.c:72
-#, fuzzy, c-format
+#, c-format
 msgid "Could not run '%s'."
-msgstr "juuri ajamassa '%s'"
+msgstr "Ei voinut ajaa '%s'"
 
 #: src/util.c:112
-#, fuzzy
 msgid "Error on read..."
-msgstr "Virhe luettaessa...keskeytet‰‰n"
+msgstr "Virhe luettaessa..."
