@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-10-04 16:50-0400\n"
+"POT-Creation-Date: 2000-10-05 00:16+0200\n"
 "PO-Revision-Date: 2000-05-12 11:42+02:00\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
@@ -150,7 +150,7 @@ msgstr ""
 "Det vil være til stor hjælp hvis du kan\n"
 "specificere en mere specifik pakke.\n"
 "\n"
-"Vil du fortsætte alligevel?"
+"Specificér venligst en pakke!"
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
@@ -188,7 +188,6 @@ msgid "gdb has already exited"
 msgstr "gdb er allerede afsluttet"
 
 #: src/bug-buddy.c:486
-#, fuzzy
 msgid "The graphical bug reporting tool for GNOME."
 msgstr "Gnomes grafiske fejlrapporteringsværktøj"
 
@@ -197,14 +196,12 @@ msgid "The lame bug-buddy web page"
 msgstr "Den kedelige Fejl-Frede hjemmeside"
 
 #: src/bug-buddy.c:603
-#, fuzzy
 msgid "Please enter your name."
-msgstr "Indtast venligst dit navn og epostadresse"
+msgstr "Indtast venligst dit navn."
 
 #: src/bug-buddy.c:609
-#, fuzzy
 msgid "Please enter a valid email address."
-msgstr "Indtast venligst dit navn og epostadresse"
+msgstr "Indtast venligst din epostadresse"
 
 #: src/bug-buddy.c:620
 #, c-format
