@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy\n"
 "POT-Creation-Date: 2002-05-16 00:35+0200\n"
-"PO-Revision-Date: 2002-05-16 00:38+0200\n"
+"PO-Revision-Date: 2002-05-31 15:45+0200\n"
 "Last-Translator: GNOME PL Team <translators@gnome.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -516,7 +516,7 @@ msgstr "Powaga"
 
 #: src/bug-buddy.glade.h:1
 msgid "Show _Debugging Details"
-msgstr "Wyświetlanie _szczegółów na temat przebiegu programu"
+msgstr "Wyświetl _szczegóły na temat przebiegu"
 
 #: src/bug-buddy.glade.h:1
 msgid "Show most frequent bugs in:"
@@ -588,7 +588,7 @@ msgstr "opis"
 
 #: src/bug-buddy.glade.h:1
 msgid "email info"
-msgstr "informacje o e-mailu"
+msgstr "informacje o adresie e-mail"
 
 #: src/bug-buddy.glade.h:1
 msgid "finished"
