@@ -917,6 +917,23 @@ and if so, use &quot;Add information to existing report&quot; above.</label>
 	</child>
 
 	<widget>
+	  <class>GtkLabel</class>
+	  <name>label74</name>
+	  <label>Please make your bug report in English, if possible.</label>
+	  <justify>GTK_JUSTIFY_CENTER</justify>
+	  <wrap>False</wrap>
+	  <xalign>0.5</xalign>
+	  <yalign>0.5</yalign>
+	  <xpad>0</xpad>
+	  <ypad>0</ypad>
+	  <child>
+	    <padding>0</padding>
+	    <expand>False</expand>
+	    <fill>False</fill>
+	  </child>
+	</widget>
+
+	<widget>
 	  <class>GtkFrame</class>
 	  <name>frame11</name>
 	  <label>Short subject for the bug report</label>

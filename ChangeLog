@@ -1,5 +1,7 @@
 2000-05-04  Jacob Berkman  <jacob@helixcode.com>
 
+	* src/bug-buddy.glade: mention that reports should be in English
+
 	* configure.in: check for new gnome-libs 1.0.59
 
 	* src/bug-buddy.c (main): push / pop the visual / colormap

@@ -34,6 +34,7 @@ gchar *s = N_("Please check to see if your bug has already been submitted,\n"
 gchar *s = N_("Bug Number");
 gchar *s = N_("Bug Number");
 gchar *s = N_("Description");
+gchar *s = N_("Please make your bug report in English, if possible.");
 gchar *s = N_("Short subject for the bug report");
 gchar *s = N_("Full description of the bug, including how to reproduce it");
 gchar *s = N_("Include a text file");
