@@ -731,7 +731,7 @@ msgstr ""
 #: src/united-states-of-bug-buddy.c:540
 #, c-format
 msgid "about to run '%s'"
-msgstr "'%s'을 실행할려고 함"
+msgstr "'%s'을(를) 실행할려고 함"
 
 #: src/united-states-of-bug-buddy.c:548
 #, c-format
