@@ -1,0 +1,606 @@
+# bug-buddy fr.po
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 0.1\n"
+"POT-Creation-Date: 1999-11-30 23:12-0500\n"
+"PO-Revision-Date: 1999-10-30 00:33+02:00\n"
+"Last-Translator: Arjan van de Ven\n"
+"Language-Team:\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: src/gdb-buddy.c:40
+msgid "obtaining stack trace..."
+msgstr "Bezig met het verkrijgen van de stack trace ..."
+
+#: src/bug-buddy.c:295 src/gdb-buddy.c:81
+msgid "gdb has already exited"
+msgstr "De gdb debugger is reeds beeindigd"
+
+#: src/bug-buddy.c:650 src/gdb-buddy.c:90
+#, c-format
+msgid "Subprocess exited with status %d"
+msgstr "Het deelprogramma is geeindigd met statuscode %d"
+
+#: src/gdb-buddy.c:118
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Het is niet mogelijk om de volgende core-dump met gdb te onderzoeken :\n"
+"'%s' "
+
+#: src/gdb-buddy.c:143
+#, c-format
+msgid "Child process exited with status %d"
+msgstr ""
+
+#: src/gdb-buddy.c:146
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+"Het is niet mogelijk te achterhalen welk programma\n"
+"de file '%s' heeft gecreerd."
+
+#: src/gdb-buddy.c:175
+msgid "Error on read... aborting"
+msgstr ""
+
+#: src/gdb-buddy.c:206
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+"De gdb-cmd file kan niet gevonden worden.\n"
+"Zou U bug-buddy opnieuw kunnen installeren?"
+
+#: src/gdb-buddy.c:214
+msgid "Error on fork()."
+msgstr ""
+
+#: src/bug-buddy.c:67
+msgid "critical"
+msgstr "kritiek"
+
+#: src/bug-buddy.c:68
+msgid "grave"
+msgstr "ernstig"
+
+#: src/bug-buddy.c:69
+msgid "normal"
+msgstr "normaal"
+
+#: src/bug-buddy.c:70
+msgid "wishlist"
+msgstr "Verzoek"
+
+#: src/bug-buddy.c:74
+msgid "software bug"
+msgstr ""
+
+#: src/bug-buddy.c:75
+msgid "documentation bug"
+msgstr "Documentatie fout"
+
+#: src/bug-buddy.c:76
+msgid "change request"
+msgstr "Verzoek om verandering"
+
+#: src/bug-buddy.c:77
+msgid "support"
+msgstr "ondersteuning"
+
+#: src/bug-buddy.c:109
+msgid "System"
+msgstr "Systeem"
+
+#: src/bug-buddy.c:110
+msgid "C library"
+msgstr "C bibliotheek"
+
+#: src/bug-buddy.c:111
+#, fuzzy
+msgid "C compiler"
+msgstr ""
+
+#: src/bug-buddy.c:112
+msgid "glib"
+msgstr "glib"
+
+#: src/bug-buddy.c:113
+msgid "GTK+"
+msgstr ""
+
+#: src/bug-buddy.c:114
+msgid "ORBit"
+msgstr "ORBit"
+
+#: src/bug-buddy.c:115
+msgid "gnome-libs"
+msgstr "gnome-libs"
+
+#: src/bug-buddy.c:116
+msgid "gnome-core"
+msgstr "gnome-core"
+
+#: src/bug-buddy.c:124
+msgid "Contact's name"
+msgstr "Naam van de contactpersoon"
+
+#: src/bug-buddy.c:124
+msgid "NAME"
+msgstr "NAAM"
+
+#: src/bug-buddy.c:125
+msgid "Contact's email address"
+msgstr "E-mail adres"
+
+#: src/bug-buddy.c:125
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:126
+msgid "Package of the program"
+msgstr "Package waar het programma bij hoort"
+
+#: src/bug-buddy.c:126
+msgid "PACKAGE"
+msgstr "\"PACKAGE"
+
+#: src/bug-buddy.c:127
+msgid "Version of the package"
+msgstr "Versie van het package"
+
+#: src/bug-buddy.c:127
+msgid "VERSION"
+msgstr "VERSIE"
+
+#: src/bug-buddy.c:128
+msgid "Crashed file name"
+msgstr "Naam van het gecrashte programma"
+
+#: src/bug-buddy.c:128 src/bug-buddy.c:130
+msgid "FILE"
+msgstr "BESTAND"
+
+#: src/bug-buddy.c:129
+msgid "PID of crashed app"
+msgstr "PID van de gecrashte applicatie"
+
+#: src/bug-buddy.c:129
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:130
+msgid "core file from app"
+msgstr "core bestand van het programma"
+
+#: src/bug-buddy.c:287
+msgid ""
+"gdb has not finished getting thedebugging information.\n"
+"Kill the gdb process (the stack tracewill be incomplete)?"
+msgstr ""
+
+#: src/bug-buddy.c:332
+msgid "Copyright (C) 1999 Jacob Berkman"
+msgstr ""
+
+#: src/bug-buddy.c:334
+msgid "The GNOME graphical bug reporting tool"
+msgstr ""
+
+#: src/bug-buddy.c:341
+msgid "The lame bug-buddy web page"
+msgstr ""
+
+#: src/bug-buddy.c:380
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a but report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+
+#: src/bug-buddy.c:410
+msgid "Please enter your name and email address"
+msgstr ""
+
+#: src/bug-buddy.c:449
+msgid ""
+"Click \"Finish\" to exit bug-buddy.\n"
+"No bug report will be submitted."
+msgstr ""
+
+#: src/bug-buddy.c:469
+#, c-format
+msgid ""
+"You are about to save a bug report in '%s'.\n"
+"This can later be used to report a bug in '%s'."
+msgstr ""
+
+#: src/bug-buddy.c:474
+#, c-format
+msgid ""
+"You are about to report a bug in '%s'.\n"
+"\n"
+"This will be submitted via email:\n"
+"To: %s\n"
+"From: %s <%s>\n"
+"Subject: %s\n"
+"\n"
+"Clicking on 'Finish' will submit the bug report."
+msgstr ""
+
+#: src/bug-buddy.c:554
+#, fuzzy, c-format
+msgid "about to run '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:557
+#, fuzzy, c-format
+msgid ""
+"Unable to start mail program:\n"
+"'%s'"
+msgstr "Kan het '%s' programma niet starten"
+
+#: src/bug-buddy.c:572
+#, fuzzy, c-format
+msgid ""
+"Unable to open file:\n"
+"'%s'"
+msgstr ""
+"Kan het bestand '%s' niet openen.\n"
+
+#: src/bug-buddy.c:712
+msgid "Please choose a file to save to."
+msgstr ""
+
+#: src/bug-buddy.c:719
+#, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+
+#: src/bug-buddy.c:912
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:938
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+" Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:1013
+msgid "Distribution"
+msgstr "Distributie"
+
+#: src/bug-buddy.c:1092
+#, fuzzy, c-format
+msgid ""
+"Could not find our glade file '%s'\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Ik kan het 'bug-budd.glade' bestand niet vinden.\n"
+"Controleer of bug-buddy correct is geinstalleerd."
+
+#: src/bug-buddy.c:1102
+#, c-format
+msgid "XML file '%s' could not be loaded"
+msgstr "Het XML bestand '%s' kan niet geladen worden"
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:8
+#, fuzzy
+msgid "GNOME bug-buddy"
+msgstr "bug-buddy"
+
+#: src/glade-strings.c:9
+msgid "This will guide you through submitting a bug report."
+msgstr ""
+
+#: src/glade-strings.c:10
+#, fuzzy
+msgid "Contact Information"
+msgstr "Naam"
+
+#: src/glade-strings.c:11
+msgid "Email Address"
+msgstr "E-mail adres"
+
+#: src/glade-strings.c:12
+msgid "Your Name"
+msgstr "Uw naam"
+
+#: src/glade-strings.c:13
+#, fuzzy
+msgid ""
+"Enter your name and email address, so you will be notified when the\n"
+"bug is resolved, or for developers to request more information from you."
+msgstr ""
+"Vult U uw E-mail adres in, zodat U op de hoogte gehouden kunt worden\n"
+"als de bug is opgelost, of als de software-ontwikkelaar meer informatie\n"
+"nodig heeft."
+
+#: src/glade-strings.c:15
+msgid "Bug tracking system to use"
+msgstr ""
+
+#: src/glade-strings.c:16
+#, fuzzy
+msgid "GNOME\n"
+msgstr "GNOME"
+
+#: src/glade-strings.c:18
+msgid "Choose which sendmail to use"
+msgstr ""
+
+#: src/glade-strings.c:19
+msgid "/home/jberkman/"
+msgstr ""
+
+#: src/glade-strings.c:20
+msgid "Full path of sendmail"
+msgstr ""
+
+#: src/glade-strings.c:21
+msgid "System Configuration"
+msgstr ""
+
+#: src/glade-strings.c:22
+#, fuzzy
+msgid "Please verify that this information is correct"
+msgstr ""
+"Controleerd U of deze informatie correct is"
+
+#: src/glade-strings.c:23 src/glade-strings.c:31
+msgid "Package"
+msgstr "Package"
+
+#: src/glade-strings.c:24
+msgid "Version installed"
+msgstr ""
+
+#: src/glade-strings.c:25
+#, fuzzy
+msgid "Report Information"
+msgstr ""
+
+#: src/glade-strings.c:26 src/glade-strings.c:53
+msgid "Action"
+msgstr ""
+
+#: src/glade-strings.c:27
+#, fuzzy
+msgid "File a new bug report"
+msgstr "Een nieuw bug-report versturen"
+
+#: src/glade-strings.c:28
+msgid "Add information to an existing bug report"
+msgstr ""
+
+#: src/glade-strings.c:29
+msgid "Bug severity"
+msgstr "Ernst van de bug"
+
+#: src/glade-strings.c:30
+msgid "Version"
+msgstr "Versie"
+
+#: src/glade-strings.c:32
+msgid "Bug class"
+msgstr ""
+
+#: src/glade-strings.c:33
+msgid "(descriptions)"
+msgstr ""
+
+#: src/glade-strings.c:34
+msgid "Bug number "
+msgstr ""
+
+#: src/glade-strings.c:35
+msgid "(Existing bugs)"
+msgstr ""
+
+#: src/glade-strings.c:36
+#, fuzzy
+msgid "Short description"
+msgstr ""
+"Korte omschrijving"
+
+#: src/glade-strings.c:37
+msgid "Extra Information"
+msgstr ""
+
+#: src/glade-strings.c:38
+#, fuzzy
+msgid "Full description of the bug:"
+msgstr ""
+"Lange omschrijving van het probleem"
+
+#: src/glade-strings.c:39
+msgid "How to repeat the bug:"
+msgstr ""
+
+#: src/glade-strings.c:40 src/glade-strings.c:41
+msgid "Debugging Information"
+msgstr ""
+
+#: src/glade-strings.c:42
+msgid "Attach to a crashed application"
+msgstr ""
+
+#: src/glade-strings.c:43
+msgid "Obtain from a core file"
+msgstr ""
+
+#: src/glade-strings.c:44
+#, fuzzy
+msgid "No debugging information"
+msgstr ""
+
+#: src/glade-strings.c:45
+msgid "Binary"
+msgstr ""
+
+#: src/glade-strings.c:46
+msgid "Process ID"
+msgstr "Nummer van het proces (PID)"
+
+#: src/glade-strings.c:47
+msgid "Select the crashed application's binary"
+msgstr ""
+
+#: src/glade-strings.c:48
+#, fuzzy
+msgid "Core file"
+msgstr "Plaats van het core bestand"
+
+#: src/glade-strings.c:49
+#, fuzzy
+msgid "Select a core file"
+msgstr "Kies een core bestand"
+
+#: src/glade-strings.c:50
+#, fuzzy
+msgid "Collecting Debugging Information"
+msgstr ""
+
+#: src/glade-strings.c:51
+#, fuzzy
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr ""
+"Even geduld AUB\n"
+"De debug-informatie wordt verzameld"
+
+#: src/glade-strings.c:54
+msgid "Choose the action you wish to take"
+msgstr "Kies wat U met deze situatie wilt doen"
+
+#: src/glade-strings.c:55
+msgid "Submit bug report"
+msgstr "Een bugrapport opsturen"
+
+#: src/glade-strings.c:56
+msgid "Send report to your email address *only*"
+msgstr "Een bugrapport alleen naar uw eigen E-mail adres sturen"
+
+#: src/glade-strings.c:57
+msgid "Do not send bug report anywhere"
+msgstr "Geen bugrapport sturen"
+
+#: src/glade-strings.c:58
+msgid "Save the report to a file"
+msgstr "Het bugrapport in een bestand opslaan"
+
+#: src/glade-strings.c:59
+msgid "Save the report to..."
+msgstr ""
+
+#: src/glade-strings.c:60
+msgid "Summary"
+msgstr ""
+
+#: src/glade-strings.c:61
+msgid "The GEGL is watching."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Unable to open pipe"
+#~ msgstr ""
+#~ "Het is niet mogelijk om verbinding met GDB te maken"
+
+#~ msgid "Could not run command '%s'"
+#~ msgstr "Kan het programma '%s' niet uitvoern"
+
+#~ msgid "Error reading input of '%s'"
+#~ msgstr "Er is een probleem met het lezen van het '%s' bestand"
+
+#~ msgid "Could not find a mail program.\n"
+#~ msgstr "Er is geen mail-programma gevonden.\n"
+
+#~ msgid ""
+#~ "Enter the information about the\n"
+#~ "bug you are reporting"
+#~ msgstr ""
+#~ "Vul de informatie over het onstane probleem in. \n"
+
+#~ msgid "What type of bug are you reporting?"
+#~ msgstr "Wat voor soort bugrapport wilt U versturen?"
+
+#~ msgid "Application crash with crash dialog"
+#~ msgstr "Een crash van een programma, via het GNOME crash-venster"
+
+#~ msgid "No crash"
+#~ msgstr "Geen crash"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please enter the filename and pid of\n"
+#~ "the application that crashed."
+#~ msgstr ""
+#~ "Vul AUB de bestandsnaam en het PID \n"
+#~ "van het programma in."
+
+#~ msgid "File"
+#~ msgstr "Bestand"
+
+#, fuzzy
+#~ msgid "Application Core Dump"
+#~ msgstr "Programma Core Dump"
+
+#~ msgid "Enter the filename of the core dump"
+#~ msgstr "Vul de bestandsnaam van het core bestand in"
+
+#~ msgid "Operating System"
+#~ msgstr "Besturingssysteem"
+
+#, fuzzy
+#~ msgid "Distribution version"
+#~ msgstr "Distributie"
+
+#~ msgid "severe"
+#~ msgstr "ernstig"
+
+#~ msgid "libc version"
+#~ msgstr "libc versie"
+
+#~ msgid "gtk+"
+#~ msgstr "gtk+"
+
+#~ msgid ""
+#~ "This is the debugging information\n"
+#~ "bug-buddy has obtained:"
+#~ msgstr ""
+#~ "Bug-buddy heeft de volgende informatie\n"
+#~ "achterhaald:"
+
+#~ msgid ""
+#~ "Please enter any extra information about\n"
+#~ "the bug, such as how to reproduce it,\n"
+#~ "patches, or suggested fixes."
+#~ msgstr ""
+#~ "Vult U AUB extra informatie over het probleem in, \n"
+#~ "bijvoorbeeld over hoe het probleem te reproduceren is."
