@@ -4,6 +4,7 @@
 	user if they really want to override a file if
 	it exists  (based on a patch from Ali Abdin 
 	<ALIABDIN@aucegypt.edu>)
+	(on_action_page_next): fix something dumb
 
 1999-11-10  Jacob Berkman  <jberkman@andrew.cmu.edu>
 

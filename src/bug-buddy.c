@@ -593,7 +593,6 @@ on_action_page_next (GtkWidget *page, GtkWidget *druid)
 {
 	GtkWidget *entry, *d;
 	char *s, *title;
-	int res;
 
 	if (druid_data.submit_type != SUBMIT_FILE)
 		return FALSE;
@@ -614,15 +613,10 @@ on_action_page_next (GtkWidget *page, GtkWidget *druid)
 	title = g_strdup_printf (_("The file '%s' already exists.\n"
 				   "Overwrite this file?"), s);
 
-	g_message ("hrm: %s\n", title);
-
-	d = gnome_dialog_new (title, 
-			      GNOME_STOCK_BUTTON_YES,
-			      GNOME_STOCK_BUTTON_NO,
-			      NULL);
-	res = gnome_dialog_run_and_close (GNOME_DIALOG (d));
+	d = gnome_question_dialog (title, NULL, NULL);
 	g_free (title);
-	return (res == GNOME_NO);
+
+	return (GNOME_NO == gnome_dialog_run_and_close (GNOME_DIALOG (d)));
 }
 
 static gchar *
