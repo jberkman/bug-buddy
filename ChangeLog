@@ -1,3 +1,7 @@
+2000-01-26  Yukihiro Nakai <nakai@gnome.gr.jp>
+
+	* configure.in (ALL_LINGUAS): add ja
+
 2000-01-24  Jacob Berkman  <jacob@helixcode.com>
 
 	* configure.in (ALL_LINGUAS): add el
