@@ -1,5 +1,12 @@
 2001-11-07  jacob berkman  <jacob@ximian.com>
 
+	* src/Makefile.am (INCLUDES): build with
+	-DGNOME_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
+	-DG_DISABLE_DEPRECATED
+
+	* src/*.c: use GtkMessageDialog instead of GnomeMessageBox, and
+	the other things to get it to build w/o deprecated stuff
+
 	* src/united-states-of-bug-buddy.c (get_selected_row): get the
 	selected row from a TreeView
 	(on_druid_next_clicked): use get_selected_row for the product /

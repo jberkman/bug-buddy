@@ -1225,16 +1225,6 @@ of products for the bug tracking systems.</label>
 	      <class>GtkCList</class>
 	      <name>product-list</name>
 	      <can_focus>True</can_focus>
-	      <signal>
-		<name>select_row</name>
-		<handler>on_product_list_select_row</handler>
-		<last_modification_time>Wed, 07 Feb 2001 21:48:28 GMT</last_modification_time>
-	      </signal>
-	      <signal>
-		<name>unselect_row</name>
-		<handler>on_product_list_unselect_row</handler>
-		<last_modification_time>Wed, 07 Feb 2001 21:48:34 GMT</last_modification_time>
-	      </signal>
 	      <columns>2</columns>
 	      <column_widths>80,80</column_widths>
 	      <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
@@ -1366,16 +1356,6 @@ of products for the bug tracking systems.</label>
 	      <class>GtkCList</class>
 	      <name>component-list</name>
 	      <can_focus>True</can_focus>
-	      <signal>
-		<name>select_row</name>
-		<handler>on_component_list_select_row</handler>
-		<last_modification_time>Wed, 07 Feb 2001 22:14:19 GMT</last_modification_time>
-	      </signal>
-	      <signal>
-		<name>unselect_row</name>
-		<handler>on_component_list_unselect_row</handler>
-		<last_modification_time>Wed, 07 Feb 2001 22:14:24 GMT</last_modification_time>
-	      </signal>
 	      <columns>2</columns>
 	      <column_widths>79,80</column_widths>
 	      <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
@@ -1539,11 +1519,6 @@ of products for the bug tracking systems.</label>
 	      <class>GtkCList</class>
 	      <name>version-clist</name>
 	      <can_focus>True</can_focus>
-	      <signal>
-		<name>select_row</name>
-		<handler>on_version_list_select_row</handler>
-		<last_modification_time>Wed, 27 Oct 1999 17:21:26 GMT</last_modification_time>
-	      </signal>
 	      <columns>2</columns>
 	      <column_widths>114,80</column_widths>
 	      <selection_mode>GTK_SELECTION_SINGLE</selection_mode>
@@ -1630,11 +1605,6 @@ of products for the bug tracking systems.</label>
 	      <class>GtkButton</class>
 	      <name>version-apply</name>
 	      <can_focus>True</can_focus>
-	      <signal>
-		<name>clicked</name>
-		<handler>update_selected_row</handler>
-		<last_modification_time>Sun, 14 Nov 1999 09:33:06 GMT</last_modification_time>
-	      </signal>
 	      <stock_button>GNOME_STOCK_BUTTON_APPLY</stock_button>
 	      <relief>GTK_RELIEF_NORMAL</relief>
 	      <child>
@@ -2085,6 +2055,7 @@ of products for the bug tracking systems.</label>
 	<widget>
 	  <class>GtkButton</class>
 	  <name>druid-help</name>
+	  <sensitive>False</sensitive>
 	  <can_default>True</can_default>
 	  <can_focus>True</can_focus>
 	  <signal>

@@ -19,11 +19,17 @@
  */
 
 #include "config.h"
-#include <gnome.h>
+
 #include "bug-buddy.h"
 
 #include "libglade-buddy.h"
 
+#include <gnome.h>
+#include <string.h>
+
+#include <libgnomevfs/gnome-vfs-mime.h>
+
+#if 0
 static char *help_pages[] = {
 	"index.html",
 	"debug-info.html",
@@ -36,6 +42,7 @@ static char *help_pages[] = {
 	"summary.html",
 	NULL
 };
+#endif
 
 static char *state_title[] = {
 	N_("Welcome to Bug Buddy"),
@@ -73,7 +80,7 @@ on_druid_help_clicked (GtkWidget *w, gpointer data)
 void
 on_druid_about_clicked (GtkWidget *button, gpointer data)
 {
-	static GtkWidget *about, *href;
+	static GtkWidget *about;
 	static const char *authors[] = {
 		"Jacob Berkman  <jacob@bug-buddy.org>",
 		NULL
@@ -98,9 +105,9 @@ on_druid_about_clicked (GtkWidget *button, gpointer data)
 				 documentors,
 				 NULL, NULL);
 
-	gtk_signal_connect (GTK_OBJECT (about), "destroy",
-			    GTK_SIGNAL_FUNC (gtk_widget_destroyed),
-			    &about);
+	g_signal_connect (G_OBJECT (about), "destroy",
+			  G_CALLBACK (gtk_widget_destroyed),
+			  &about);
 
 #if 0
 	href = gnome_href_new ("http://bug-buddy.org/",
@@ -120,7 +127,6 @@ druid_set_state (BuddyState state)
 	BuddyState oldstate;
 	GtkWidget *w;
 	char *s;
-	int pos = 0;
 
 	g_return_if_fail (state >= 0);
 	g_return_if_fail (state < STATE_LAST);
@@ -143,8 +149,8 @@ druid_set_state (BuddyState state)
 			       "text", _(state_title[state]),
 			       NULL);
 
-	gtk_notebook_set_page (GTK_NOTEBOOK (GET_WIDGET ("druid-notebook")),
-			       state);	
+	gtk_notebook_set_current_page (GTK_NOTEBOOK (GET_WIDGET ("druid-notebook")),
+				       state);	
 
 	switch (druid_data.state) {
 	case STATE_INTRO:
@@ -239,23 +245,23 @@ email_is_valid (const char *addy)
 		return TRUE ;
 	}
 
-	if (g_strncasecmp (rev, "moc.", 4) &&
-	    g_strncasecmp (rev, "gro.", 4) &&
-	    g_strncasecmp (rev, "ten.", 4) &&
-	    g_strncasecmp (rev, "ude.", 4) &&
-	    g_strncasecmp (rev, "lim.", 4) &&
-	    g_strncasecmp (rev, "vog.", 4) &&
-	    g_strncasecmp (rev, "tni.", 4) &&
-	    g_strncasecmp (rev, "apra.", 5) &&
+	if (g_ascii_strncasecmp (rev, "moc.", 4) &&
+	    g_ascii_strncasecmp (rev, "gro.", 4) &&
+	    g_ascii_strncasecmp (rev, "ten.", 4) &&
+	    g_ascii_strncasecmp (rev, "ude.", 4) &&
+	    g_ascii_strncasecmp (rev, "lim.", 4) &&
+	    g_ascii_strncasecmp (rev, "vog.", 4) &&
+	    g_ascii_strncasecmp (rev, "tni.", 4) &&
+	    g_ascii_strncasecmp (rev, "apra.", 5) &&
 
 	    /* In the year 2000, seven new toplevel domains were approved by ICANN. */
-	    g_strncasecmp (rev, "orea.", 5) &&
-	    g_strncasecmp (rev, "zib.", 4) &&
-	    g_strncasecmp (rev, "pooc.", 5) &&
-	    g_strncasecmp (rev, "ofni.", 5) &&
-	    g_strncasecmp (rev, "muesum.", 5) &&
-	    g_strncasecmp (rev, "eman.", 5) &&
-	    g_strncasecmp (rev, "orp.", 5)) {
+	    g_ascii_strncasecmp (rev, "orea.", 5) &&
+	    g_ascii_strncasecmp (rev, "zib.", 4) &&
+	    g_ascii_strncasecmp (rev, "pooc.", 5) &&
+	    g_ascii_strncasecmp (rev, "ofni.", 5) &&
+	    g_ascii_strncasecmp (rev, "muesum.", 5) &&
+	    g_ascii_strncasecmp (rev, "eman.", 5) &&
+	    g_ascii_strncasecmp (rev, "orp.", 5)) {
 		g_free (rev);
 		return FALSE;
 	}
@@ -275,11 +281,13 @@ intro_page_ok (void)
 	s = buddy_get_text ("email-name-entry");
 	if (! (s && strlen (s))) {
 		g_free (s);
-		w = gnome_message_box_new (_("Please enter your name."),
-					   GNOME_MESSAGE_BOX_ERROR,
-					   GNOME_STOCK_BUTTON_OK,
-					   NULL);
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Please enter your name."));
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
 		return FALSE;
 	}
 	g_free (s);
@@ -287,33 +295,37 @@ intro_page_ok (void)
 	s = buddy_get_text ("email-email-entry");
 	if (!email_is_valid (s)) {
 		g_free (s);
-		w = gnome_message_box_new (_("Please enter a valid email address."),
-					   GNOME_MESSAGE_BOX_ERROR,
-					   GNOME_STOCK_BUTTON_OK,
-					   NULL);
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Please enter a valid email address."));
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
 		return FALSE;
 	}
 	g_free (s);
 
 	s = buddy_get_text ("email-sendmail-entry");
-	if (! (s && strlen (s) && g_file_exists (s))) {
+	if (!g_file_test (s, G_FILE_TEST_EXISTS)) {
 		if (druid_data.submit_type == SUBMIT_TO_SELF ||
 		    druid_data.submit_type == SUBMIT_REPORT) {
-			GtkWidget *d;
-			char *m;
-			m = g_strdup_printf (_("'%s' doesn't seem to exist.\n\n"
-					       "You won't be able to actually "
-					       "submit a bug report, but you will\n"
-					       "be able to save it to a file.\n\n"
-					       "Specify a new location for sendmail?"),
-					     s);	
-			d = gnome_question_dialog (m, NULL, NULL);
-			g_free (m);
-			if (GNOME_YES == gnome_dialog_run_and_close (GNOME_DIALOG (d))) {
+			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_QUESTION,
+						    GTK_BUTTONS_YES_NO,
+						    _("'%s' doesn't seem to exist.\n\n"
+						      "You won't be able to actually "
+						      "submit a bug report, but you will\n"
+						      "be able to save it to a file.\n\n"
+						      "Specify a new location for sendmail?"),
+						    s);	
+			if (GTK_RESPONSE_YES == gtk_dialog_run (GTK_DIALOG (w))) {
 				g_free (s);
+				gtk_widget_destroy (w);
 				return FALSE;
 			}
+			gtk_widget_destroy (w);
 		}
 	}
 	g_free (s);
@@ -348,51 +360,68 @@ desc_page_ok (void)
 
 	char *s = buddy_get_text ("desc-file-entry");
 
-	if (getenv ("BUG_ME_HARDER"))
+	if (getenv ("BUG_ME_HARDER")) {
+		g_free (s);
 		return TRUE;
+	}
 
 	if (s && *s) {
 		const char *mime_type;
-		if (!g_file_exists (s)) {
-			w = gnome_error_dialog (
-				_("The specified file does not exist."));
-			gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		if (!g_file_test (s, G_FILE_TEST_EXISTS)) {
+			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("The specified file does not exist."));
+			gtk_dialog_run (GTK_DIALOG (w));
+			gtk_widget_destroy (w);
 			g_free (s);
 			return FALSE;
 		}
 
-#ifdef FIXME
-		mime_type = gnome_mime_type_of_file (s);
+		mime_type = gnome_vfs_get_file_mime_type (s, NULL, FALSE);
 		d(g_message (_("File is of type: %s"), mime_type));
 		
-		if (!mime_type || strncmp ("text/", mime_type, 5)) {
-			char *msg = g_strdup_printf (_("'%s' does not look like a text file."), s);
-			gnome_dialog_run_and_close (
-				GNOME_DIALOG (gnome_error_dialog (msg)));
-			g_free (msg);
+		if (strncmp ("text/", mime_type, 5)) {
+			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("'%s' is a %s file.\n\n"
+						      "Bug Buddy can only submit plaintext (text/*) files."),
+						    s, mime_type);
+			gtk_dialog_run (GTK_DIALOG (w));
+			gtk_widget_destroy (w);
 			g_free (s);
 			return FALSE;
 		}
-#endif
 	}
 	g_free (s);
 
 	s = buddy_get_text ("desc-subject");
 	if (!text_is_sensical (s, 6)) {
 		g_free (s);
-		w = gnome_error_dialog (
-			_("You must include a comprehensible subject line in your bug report."));
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("You must include a comprehensible subject line in your bug report."));
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
 		return FALSE;
 	}
 	g_free (s);
 
 	s = buddy_get_text ("desc-text");
 	if (!text_is_sensical (s, 8)) {
-		w = gnome_error_dialog (
-			_("You must include a comprehensible description in your bug report."));		
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
 		g_free (s);
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("You must include a comprehensible description in your bug report."));
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
 		return FALSE;
 	}
 	g_free (s);
@@ -402,15 +431,21 @@ desc_page_ok (void)
 static gboolean
 submit_ok (void)
 {
-	gchar *to, *s, *s2, *file=NULL, *command;
+	gchar *to, *s, *file=NULL, *command;
 	GtkWidget *w;
 	FILE *fp;
 
 	if (druid_data.submit_type != SUBMIT_FILE) {
-		w = gnome_question_dialog (_("Submit this bug report now?"),
-					   NULL, NULL);
-		if (gnome_dialog_run_and_close (GNOME_DIALOG (w)))
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_QUESTION,
+					    GTK_BUTTONS_YES_NO,
+					    _("Submit this bug report now?"));
+		if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (w))) {
+			gtk_widget_destroy (w);
 			return FALSE;
+		}
+		gtk_widget_destroy (w);
 	}
 
 	to = buddy_get_text (druid_data.submit_type == SUBMIT_TO_SELF 
@@ -421,12 +456,16 @@ submit_ok (void)
 		file = buddy_get_text ("email-file-entry");
 		fp = fopen (file, "w");
 		if (!fp) {
-			s = g_strdup_printf (_("Unable to open file: '%s'"), file);
-			w = gnome_error_dialog (s);
+			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("Unable to open file '%s':\n%s"), 
+						    file, g_strerror (errno));
 			g_free (file);
-			g_free (s);
 			g_free (to);
-			gnome_dialog_run_and_close (GNOME_DIALOG (w));
+			gtk_dialog_run (GTK_DIALOG (w));
+			gtk_widget_destroy (w);
 			return FALSE;
 		}
 		g_free (file);
@@ -438,11 +477,14 @@ submit_ok (void)
 		fp =  popen (command, "w");
 		g_free (command);
 		if (!fp) {
-			s2 = g_strdup_printf (_("Unable to start mail program: '%s'"), s);
-			w = gnome_error_dialog (s2);
-			g_free (s);
-			g_free (s2);
-			gnome_dialog_run_and_close (GNOME_DIALOG (w));
+			w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("Unable to start mail program '%s':\n%s"), 
+						    s, g_strerror (errno));
+			gtk_dialog_run (GTK_DIALOG (w));
+			gtk_widget_destroy (w);
 			return FALSE;
 		}
 		g_free (s);
@@ -516,6 +558,7 @@ get_selected_row (const char *w, int col)
 void
 on_druid_next_clicked (GtkWidget *w, gpointer data)
 {
+	GtkWidget *d;
 	BuddyState newstate;
 	char *s;
 
@@ -539,9 +582,13 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 		/* check that the package is ok */
 		druid_data.product = get_selected_row ("product-list", PRODUCT_DATA);
 		if (!druid_data.product) {
-			gnome_dialog_run_and_close (
-				GNOME_DIALOG (gnome_error_dialog (
-						      _("You must specify a product for your bug report."))));
+			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("You must specify a product for your bug report."));
+			gtk_dialog_run (GTK_DIALOG (d));
+			gtk_widget_destroy (d);
 			return;
 		}
 		bugzilla_product_add_components_to_clist (druid_data.product);
@@ -550,17 +597,25 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 	case STATE_COMPONENT:
 		druid_data.component = get_selected_row ("component-list", COMPONENT_DATA);
 		if (!druid_data.component) {
-			gnome_dialog_run_and_close (
-				GNOME_DIALOG (gnome_error_dialog (
-						      _("You must specify a component for your bug report."))));
+			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("You must specify a component for your bug report."));
+			gtk_dialog_run (GTK_DIALOG (d));
+			gtk_widget_destroy (d);
 			return;
 		}
 		s = buddy_get_text ("the-version-entry");
 		if (!s[0] && !getenv ("BUG_ME_HARDER")) {
 			g_free (s);
-			gnome_dialog_run_and_close (
-				GNOME_DIALOG (gnome_error_dialog (
-						      _("You must specify a version for your bug report."))));
+			d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+						    GTK_DIALOG_NO_SEPARATOR,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    _("You must specify a version for your bug report."));
+			gtk_dialog_run (GTK_DIALOG (d));
+			gtk_widget_destroy (d);
 			return;
 		}
 		g_free (s);
@@ -588,11 +643,17 @@ on_druid_cancel_clicked (GtkWidget *w, gpointer data)
 {
 	GtkWidget *d;
 
-	d = gnome_question_dialog (
-		_("Are you sure you want to cancel\n"
-		  "this bug report?"), NULL, NULL);
-	if (gnome_dialog_run_and_close (GNOME_DIALOG (d)))
+	d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+				    GTK_DIALOG_NO_SEPARATOR,
+				    GTK_MESSAGE_QUESTION,
+				    GTK_BUTTONS_YES_NO,
+				    _("Are you sure you want to cancel\n"
+				      "this bug report?"));
+	if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (d))) {
+		gtk_widget_destroy (d);
 		return;
+	}
+	gtk_widget_destroy (d);
 
 	save_config ();
 	gtk_main_quit ();

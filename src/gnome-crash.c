@@ -26,8 +26,11 @@ int
 main (int argc, char *argv[])
 {
 	int *n = NULL;
-	gnome_client_disable_master_connection ();
-	gnome_init ("Crashing GNOME Program", VERSION, argc, argv);
+	gnome_program_init ("Crashing GNOME Program", VERSION,
+			    LIBGNOMEUI_MODULE,
+			    argc, argv,
+			    GNOME_CLIENT_PARAM_SM_CONNECT, FALSE,
+			    NULL);
 	n[27] = 10-7-78;
 	return 0;
 }

@@ -6,7 +6,10 @@ INCLUDES = \
 	$(BUG_BUDDY_CFLAGS) -I$(includedir)		\
 	-DBUDDY_DATADIR=\""$(buddydir)"\"		\
         -DBUDDY_ICONDIR=\""$(datadir)/pixmaps"\"	\
-	-D_GNU_SOURCE
+	-D_GNU_SOURCE	\
+	-DGNOME_DISABLE_DEPRECATED	\
+	-DGTK_DISABLE_DEPRECATED	\
+	-DG_DISABLE_DEPRECATED
 
 
 bin_PROGRAMS = bug-buddy

@@ -2,7 +2,6 @@
 #define LIBGLADE_BUDDY_H
 
 #include <libgnomeui/gnome-druid.h>
-#include <gtk/gtkclist.h>
 #include <gtk/gtkbutton.h>
 
 /* this file should include all of the definitions for libglade */
@@ -22,8 +21,6 @@ gboolean on_complete_page_finish  (GtkWidget *, GtkWidget *);
 gboolean on_gnome_page_prepare    (GtkWidget *, GtkWidget *);
 gboolean on_version_page_back (GtkWidget *page, GnomeDruid *druid);
 gboolean on_contact_page_next     (GtkWidget *, GtkWidget *);
-void on_version_list_select_row   (GtkCList *list, gint row, gint col,
-				   GdkEventButton *event, gpointer udata);
 
 void update_selected_row      (GtkWidget *widget, gpointer data);
 void on_version_apply_clicked (GtkButton *button, gpointer data);
@@ -51,12 +48,6 @@ void on_druid_cancel_clicked (GtkWidget *w, gpointer);
 GtkWidget *stock_pixmap_buddy (char *w, char *n, char *a, int b, int c);
 void title_configure_size (GtkWidget *w, GtkAllocation *alloc, gpointer data);
 void side_configure_size (GtkWidget *w, GtkAllocation *alloc, gpointer data);
-
-void on_product_list_select_row (GtkWidget *w, int row, int col, gpointer data);
-void on_product_list_unselect_row (GtkWidget *w, int row, int col, gpointer data);
-
-void on_component_list_select_row (GtkWidget *w, int row, int col, gpointer data);
-void on_component_list_unselect_row (GtkWidget *w, int row, int col, gpointer data);
 
 void intro_page_changed (GtkWidget *w, gpointer data);
 

@@ -28,6 +28,8 @@
 #include <sys/types.h>
 #include <utime.h>
 #include <errno.h>
+#include <string.h>
+#include <ctype.h>
 
 #include <gnome.h>
 
@@ -201,7 +203,8 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 	}
 
 	if (info->bytes_total)
-		gtk_progress_set_percentage (GTK_PROGRESS (GET_WIDGET ("progress-progress")), (gfloat)info->total_bytes_copied / info->bytes_total);
+		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (GET_WIDGET ("progress-progress")), 
+					       (gfloat)info->total_bytes_copied / info->bytes_total);
 
 	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
 		GList *li;
@@ -281,7 +284,6 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 {
 	BugzillaXMLFile *xmlfile;
 	char *localdir, *tmppath, *src_uri;
-	char *err;
 	struct stat sys_stat, local_stat;
 	gboolean sys_is_newer, cache_is_old;
 	xmlDoc *doc;
@@ -295,19 +297,18 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	xmlfile = g_new0 (BugzillaXMLFile, 1);
 	xmlfile->xml_func = parse_func;
 
-	xmlfile->system_path = g_strdup_printf (BUDDY_DATADIR "/bugzilla/%s/%s", bts->subdir, key);
-	tmppath = gnome_util_home_file ("bug-buddy.d/bugzilla/");
-	localdir = g_concat_dir_and_file (tmppath, bts->subdir);
-	xmlfile->cache_path = g_concat_dir_and_file (localdir, key);
+	tmppath = gnome_util_home_file ("bug-buddy.d");
+
+	xmlfile->system_path = g_build_filename (BUDDY_DATADIR, "bugzilla", bts->subdir, key, NULL);
+	xmlfile->cache_path  = g_build_filename (tmppath,       "bugzilla", bts->subdir, key, NULL);
+	localdir = g_build_filename (tmppath, "bugzilla", bts->subdir, NULL);
 
 	g_free (tmppath);
 
 	if (stat (xmlfile->cache_path, &local_stat)) {
-		err = g_strerror (errno);
-		d(g_message ("could not stat local file: `%s': %s\n", xmlfile->cache_path, err));
+		d(g_message ("could not stat local file: `%s': %s\n", xmlfile->cache_path, g_strerror (errno)));
 		if (e_mkdir_hier (localdir, S_IRWXU)) {
-			err = g_strerror (errno);
-			d(g_warning ("could not create local dir: `%s': %s\n", localdir, err));
+			d(g_warning ("could not create local dir: `%s': %s\n", localdir, g_strerror (errno)));
 			g_free (localdir);			
 			return xmlfile;
 		}
@@ -318,8 +319,7 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	g_free (localdir);
 
 	if (stat (xmlfile->system_path, &sys_stat)) {
-		err = g_strerror (errno);
-		d(g_warning ("could not stat sys file: `%s': %s\n", xmlfile->system_path, err));
+		d(g_warning ("could not stat sys file: `%s': %s\n", xmlfile->system_path, g_strerror (errno)));
 		goto append_uris;
 	}
        
@@ -412,7 +412,7 @@ load_bugzilla (const char *filename)
 	if (pixmap[0] == '/')
 		bts->icon = g_strdup (pixmap);
 	else
-		bts->icon = g_concat_dir_and_file (BUDDY_DATADIR, pixmap);
+		bts->icon = g_build_filename (BUDDY_DATADIR, pixmap, NULL);
 	g_free (pixmap);
 
 	s = gnome_config_get_string ("submit_type=freitag");
@@ -448,50 +448,6 @@ load_bugzilla (const char *filename)
 	return bts;
 }
 
-static int
-start_xfer (gpointer null)
-{
-	/*gtk_widget_show (GET_WIDGET ("progress-cancel"));*/
-
-	while (gtk_events_pending ())
-		gtk_main_iteration ();
-
-	if (GNOME_VFS_OK != gnome_vfs_async_xfer (	    
-		    &druid_data.vfshandle,
-		    druid_data.dlsources,
-		    druid_data.dldests,
-		    GNOME_VFS_XFER_DEFAULT,
-		    GNOME_VFS_XFER_ERROR_MODE_ABORT,
-		    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
-		    GNOME_VFS_PRIORITY_DEFAULT,
-		    async_update, NULL, NULL, NULL))
-		goto_product_page ();
-
-	return FALSE;
-}
-
-#if 0
-/* 
- * GNOME VFS has no way to pause the progress, which is what we want to do, really 
- * so just let it cancel for now 
- */
-static gint
-check_yoself (void)
-{
-	GtkWidget *m;
-
-	m = gnome_question_dialog (
-		_("Are you sure you want to cancel this update?"), NULL, NULL);
-	
-	if (gnome_dialog_run_and_close (GNOME_DIALOG (m))) {
-		gnome_vfs_async_cancel (druid_data.vfshandle);
-		goto_product_page ();
-		return TRUE;
-	}
-	return FALSE;
-}
-#endif
-
 void
 on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 {
@@ -500,14 +456,6 @@ on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 	d(g_print ("shaggy?\n"));
 	goto_product_page ();
 	d(g_print ("scooby dooby doo!\n"));
-}
-
-static void
-download_stuff (void)
-{
-	gtk_idle_add (start_xfer, NULL);
-	gtk_main ();
-	/*gtk_widget_hide (GET_WIDGET ("progress-cancel"));*/
 }
 
 static void
@@ -564,11 +512,11 @@ load_bugzilla_xml (void)
 		}
 
 		w = gtk_menu_item_new_with_label (bts->name);
-		gtk_signal_connect (GTK_OBJECT (w), "activate",
-				    GTK_SIGNAL_FUNC (show_products),
-				    bts);
+		g_signal_connect (G_OBJECT (w), "activate",
+				  G_CALLBACK (show_products),
+				  bts);
 		gtk_widget_show (w);
-		gtk_menu_append (GTK_MENU (m), w);
+		gtk_menu_shell_append (GTK_MENU_SHELL (m), w);
 	}
 	w = GET_WIDGET ("bts-menu");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
@@ -576,6 +524,7 @@ load_bugzilla_xml (void)
 	bugzilla_bts_add_products_to_clist (druid_data.all_products);	
 }
 
+#if 0
 static void
 p_string (GnomeVFSURI *uri, gpointer data)
 {
@@ -585,6 +534,7 @@ p_string (GnomeVFSURI *uri, gpointer data)
 	g_print ("\t%s\n", s);
 	g_free (s);
 }
+#endif
 
 static void
 create_products_list (void)
@@ -656,17 +606,20 @@ load_bugzillas (void)
 	GtkWidget *w;
 	DIR *dir;
 	struct dirent *dent;
-	char *s, *p;
+	char *p;
 
 	dir = opendir (BUDDY_DATADIR"/bugzilla/");
 	if (!dir) {
-		s = g_strdup_printf (_("Could not open '%s'.\n"
-				       "Please make sure Bug Buddy was "
-				       "installed correctly."),
-				     BUDDY_DATADIR "/bugzilla/");
-		w = gnome_error_dialog (s);
-		g_free (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (w));
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Could not open '%s'.\n"
+					      "Please make sure Bug Buddy was "
+					      "installed correctly."),
+					    BUDDY_DATADIR "/bugzilla/");
+		gtk_dialog_run (GTK_DIALOG (w));
+		gtk_widget_destroy (w);
 		exit (0);
 	}
 
@@ -687,7 +640,7 @@ load_bugzillas (void)
 		if (!p || strcmp (p, ".bugzilla")) 
 			continue;	
 		
-		p = g_concat_dir_and_file (BUDDY_DATADIR"/bugzilla", dent->d_name);
+		p = g_build_filename (BUDDY_DATADIR, "bugzilla", dent->d_name, NULL);
 		d(g_print ("trying to load `%s'\n", p));
 		bts = load_bugzilla (p);
 		g_free (p);
@@ -698,19 +651,24 @@ load_bugzillas (void)
 	}
 
 	if (druid_data.need_to_download) {
-		GtkWidget *w = gnome_question_dialog (
-			_("Bug Buddy has determined that some of its information about\n"
-			  "the various bug tracking systems may need to be updated.\n\n"
-			  "Should Bug Buddy try to update these files now?"), NULL, NULL);
+		GtkWidget *w;
 
-		gnome_dialog_set_default (GNOME_DIALOG (w), GNOME_YES);
+		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_QUESTION,
+					    GTK_BUTTONS_YES_NO,
+					    _("Bug Buddy has determined that some of its information about\n"
+					      "the various bug tracking systems may need to be updated.\n\n"
+					      "Should Bug Buddy try to update these files now?"));
+
+		gtk_dialog_set_default_response (GTK_DIALOG (w), GTK_RESPONSE_YES);
 
 		d(g_print ("downloading:\n"));
 		d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));
 		d(g_print ("to:\n"));
 		d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
 
-		if (!gnome_dialog_run_and_close (GNOME_DIALOG (w)))
+		if (GTK_RESPONSE_YES != gtk_dialog_run (GTK_DIALOG (w))) {
 			if (GNOME_VFS_OK == gnome_vfs_async_xfer (	    
 				    &druid_data.vfshandle,
 				    druid_data.dlsources,
@@ -719,19 +677,23 @@ load_bugzillas (void)
 				    GNOME_VFS_XFER_ERROR_MODE_ABORT,
 				    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
 				    GNOME_VFS_PRIORITY_DEFAULT,
-				    async_update, NULL, NULL, NULL))
+				    async_update, NULL, NULL, NULL)) {
+				gtk_widget_destroy (w);
 				return;
+			}
+		}
+		gtk_widget_destroy (w);
 	}
 	goto_product_page ();
 }
 
 static void
-add_product (BugzillaProduct *p, GtkCList *w)
+add_product (BugzillaProduct *p, GtkListStore *store)
 {
 	GtkTreeIter iter;
 
-	gtk_list_store_append (druid_data.products_list, &iter);
-	gtk_list_store_set (druid_data.products_list, &iter,
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
 			    PRODUCT_ICON, p->bts->pixbuf,
 			    PRODUCT_NAME, p->name,
 			    PRODUCT_DESC, p->description,
@@ -743,24 +705,27 @@ void
 bugzilla_bts_add_products_to_clist (BugzillaBTS *bts)
 {
 	GtkTreeView *w;
+	GtkListStore *store;
 
 	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
 	gtk_tree_view_set_headers_visible (w, TRUE);
 
-	gtk_list_store_clear (druid_data.products_list);
+	g_object_get (G_OBJECT (w), "model", &store, NULL);
+
+	gtk_list_store_clear (store);
 	druid_data.product = NULL;
 
-	g_slist_foreach (bts->products, (GFunc)add_product, w);
+	g_slist_foreach (bts->products, (GFunc)add_product, store);
 	gtk_tree_view_columns_autosize (w);
 }
 
 static void
-add_component (BugzillaComponent *comp, GtkCList *w)
+add_component (BugzillaComponent *comp, GtkListStore *store)
 {
 	GtkTreeIter iter;
 
-	gtk_list_store_append (druid_data.components_list, &iter);
-	gtk_list_store_set (druid_data.components_list, &iter,
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
 			    COMPONENT_NAME, comp->name,
 			    COMPONENT_DESC, comp->description,
 			    COMPONENT_DATA, comp,
@@ -779,11 +744,11 @@ add_severity (char *s, GtkMenu *m)
 	GtkWidget *w;
 
 	w = gtk_menu_item_new_with_label (s);
-	gtk_signal_connect (GTK_OBJECT (w), "activate",
-			    GTK_SIGNAL_FUNC (update_severity),
-			    s);
+	g_signal_connect (G_OBJECT (w), "activate",
+			  G_CALLBACK (update_severity),
+			  s);
 	gtk_widget_show (w);
-	gtk_menu_append (m, w);
+	gtk_menu_shell_append (GTK_MENU_SHELL (m), w);
 	if (!strcasecmp (s, "normal") || !strcasecmp (s, "unknown")) {
 		gtk_menu_item_activate (GTK_MENU_ITEM (w));
 		gtk_option_menu_set_history (GTK_OPTION_MENU (GET_WIDGET ("severity-list")), 
@@ -796,14 +761,17 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 {
 	GtkWidget *m, *c;
 	GtkTreeView *w;
+	GtkListStore *store;
 
 	w = GTK_TREE_VIEW (GET_WIDGET ("component-list"));
 	gtk_tree_view_set_headers_visible (w, TRUE);
 
-	gtk_list_store_clear (druid_data.components_list);
+	g_object_get (G_OBJECT (w), "model", &store, NULL);
+
+	gtk_list_store_clear (store);
 	druid_data.component = NULL;
 
-	g_slist_foreach (prod->components, (GFunc)add_component, w);
+	g_slist_foreach (prod->components, (GFunc)add_component, store);
 
 	gtk_tree_view_columns_autosize (w);
 
@@ -891,8 +859,11 @@ generate_email_text (void)
 {	
 	char *subject, *product,  *component, *version;
 	char *opsys,   *platform, *severity,  *body, *tmp_body;
-	char *sysinfo, *debug_info, *text_file;
+	char *debug_info;
 	char *email, *email1;
+#if 0
+	char *text_file, *sysinfo;
+#endif
 
 	subject    = buddy_get_text ("desc-subject");
 	product    = druid_data.product->name;

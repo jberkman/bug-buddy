@@ -22,9 +22,6 @@
 
 #include "bug-buddy.h"
 
-/* for GtkText */
-#define GTK_ENABLE_BROKEN
-
 #include <gnome.h>
 
 #include <stdio.h>
@@ -33,6 +30,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <math.h>
+#include <string.h>
 
 #include <libart_lgpl/libart.h>
 
@@ -120,7 +118,7 @@ stop_gdb (void)
 		return;
 	}
 	
-	g_io_channel_close (druid_data.ioc);
+	g_io_channel_shutdown (druid_data.ioc, 1, NULL);
 	waitpid (druid_data.gdb_pid, NULL, 0);
 	
 	druid_data.gdb_pid = 0;
@@ -153,11 +151,15 @@ get_trace_from_core (const gchar *core_file)
 	g_free (gdb_cmd);
 
 	if (!f) {
-		gchar *s = g_strdup_printf (_("Unable to process core file with gdb:\n"
+		GtkWidget *d;
+		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Unable to process core file with gdb:\n"
 					      "'%s'"), core_file);
-		GtkWidget *d = gnome_error_dialog (s);
-		g_free (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy (d);
 		return;
 	}
 
@@ -179,11 +181,15 @@ get_trace_from_core (const gchar *core_file)
 	status = pclose(f);
 
 	if (!binary) {
-		gchar *s = g_strdup_printf (_("Unable to determine which binary created\n"
+		GtkWidget *d;
+		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("GDB was unable to determine which binary created\n"
 					      "'%s'"), core_file);
-		GtkWidget *d = gnome_error_dialog (s);
-		g_free (s);
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy (d);
 		return;
 	}	
 
@@ -199,28 +205,28 @@ get_trace_from_core (const gchar *core_file)
 static gboolean
 handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 {	
-	GtkWidget *w = NULL;
+	gboolean retval = FALSE;
 	gchar buf[1024];
 	guint len;
-
-	if (condition == G_IO_HUP) {
-		stop_gdb ();
-		return FALSE;
-	}
+	GIOStatus io_status;
 
  gdb_try_read:
-	switch (g_io_channel_read (ioc, buf, 1024, &len)) {
-	case G_IO_ERROR_NONE:
-		break;
-	case G_IO_ERROR_AGAIN:
+	io_status = g_io_channel_read_chars (ioc, buf, 1024, &len, NULL);
+
+	switch (io_status) {
+	case G_IO_STATUS_AGAIN:
 		goto gdb_try_read;
-	default:
+	case G_IO_STATUS_ERROR:
 		d(g_warning (_("Error on read... aborting")));
-		stop_gdb ();
-		return FALSE;
+		break;
+	case G_IO_STATUS_NORMAL:
+		retval = TRUE;
+		break;
+	default:
+		break;
 	}
 
-	{
+	if (len > 0) {
 		GtkTextIter end;
 		GtkTextBuffer *buffy;
 		GtkTextView *tv;
@@ -232,14 +238,16 @@ handle_gdb_input (GIOChannel *ioc, GIOCondition condition, gpointer data)
 		gtk_text_buffer_insert (buffy, &end, buf, len);
 	}
 
-	return TRUE;
+	if (!retval)
+		stop_gdb ();
+
+	return retval;
 }
 
 void
 get_trace_from_pair (const gchar *app, const gchar *extra)
 {
 	GtkWidget *d;
-	int fd;
 	char *app2;
 	char *args[] = { "gdb",
 			 "--batch", 
@@ -250,11 +258,15 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 	args[5] = (char *)extra;
 
 	if (!args[0]) {
+		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("GDB could not be found on your system.\n"
+					      "Debugging information will not be obtained."));
 		d(g_message ("Path: %s", getenv ("PATH")));
-		gnome_dialog_run_and_close (
-			GNOME_DIALOG (
-				gnome_error_dialog (_("GDB could not be found on your system.\n"
-						      "Debugging information will not be obtained."))));
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy (d);
 		return;
 	}
 
@@ -277,10 +289,15 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 
 	d(g_message ("About to debug '%s'", app2));
 	
-	if (!g_file_exists (BUDDY_DATADIR "/gdb-cmd")) {
-		d = gnome_error_dialog (_("Could not find the gdb-cmd file.\n"
-					  "Please try reinstalling Bug Buddy."));
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+	if (!g_file_test (BUDDY_DATADIR "/gdb-cmd", G_FILE_TEST_EXISTS)) {
+		d = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("Could not find the gdb-cmd file.\n"
+					      "Please try reinstalling Bug Buddy."));
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy (d);
 		g_free (app2);
 		return;
 	}
@@ -291,8 +308,13 @@ get_trace_from_pair (const gchar *app, const gchar *extra)
 				       NULL, 
 				       &druid_data.fd, 
 				       NULL, NULL)) {
-		d = gnome_error_dialog (_("Error on fork()."));
-		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		d = gtk_message_dialog_new (GTK_WINDOW (GTK_WIDGET ("druid-window")),
+					    GTK_DIALOG_NO_SEPARATOR,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    _("There was an error running gdb."));
+		gtk_dialog_run (GTK_DIALOG (d));
+		gtk_widget_destroy (d);
 		g_free (app2);
 		return;
 	}
