@@ -1,6 +1,6 @@
 dnl Configure script for bug-buddy
 
-AC_INIT(src/bug-buddy-druid.c)
+AC_INIT(src/bug-buddy.c)
 
 AM_CONFIG_HEADER(config.h)
 
@@ -27,7 +27,7 @@ AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)
 
 ALL_LINGUAS=""
-AM_GNU_GETTEXT
+AM_GNOME_GETTEXT
 
 AC_OUTPUT([
 Makefile
