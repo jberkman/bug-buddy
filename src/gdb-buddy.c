@@ -25,7 +25,7 @@
 #include "gdb-buddy.h"
 
 void 
-get_trace_from_core (GnomeLess *gl, gchar *core_file)
+get_trace_from_core (GnomeDruid *druid, GtkText *text, gchar *core_file)
 {
 	gchar *gdb_cmd;
 	gchar buf[1024];
@@ -71,12 +71,42 @@ get_trace_from_core (GnomeLess *gl, gchar *core_file)
 		return;
 	}	
 
-	get_trace_from_pair (gl, binary, core_file);
+	get_trace_from_pair (druid, text, binary, core_file);
 	g_free (binary);
 }
 
+typedef struct {
+	FILE *fp;
+	GtkText *text;
+	GnomeDruid *druid;
+	int input;
+} GdbData;
+GdbData gdb_data;
+
+static void
+handle_gdb_input (gpointer data, int source, GdkInputCondition cond)
+{	
+	char buf[1024];
+	GdbData *gdb_data = data;
+
+	if (feof (gdb_data->fp)) {
+		gdk_input_remove (gdb_data->input);
+		gnome_druid_set_buttons_sensitive (gdb_data->druid, 
+						   TRUE, TRUE, TRUE);
+		return;
+	}
+
+	fgets (buf, 1024, gdb_data->fp);
+
+	gtk_text_set_point (gdb_data->text, gtk_text_get_length(gdb_data->text));
+	gtk_text_insert (gdb_data->text, NULL, NULL, NULL, buf, strlen(buf)); 
+
+	return;
+}
+
 void
-get_trace_from_pair (GnomeLess *gl, const gchar *app, const gchar *extra)
+get_trace_from_pair (GnomeDruid *druid, GtkText *text,
+		     const gchar *app, const gchar *extra)
 {
 	gchar *cmd_buf;
 	gchar *cmd_file;
@@ -97,6 +127,21 @@ get_trace_from_pair (GnomeLess *gl, const gchar *app, const gchar *extra)
 	g_free (cmd_file);
 	
 	g_message ("about to run: %s", cmd_buf);
-	gnome_less_show_command (GNOME_LESS (gl), cmd_buf);
+	gdb_data.fp = popen (cmd_buf, "r");
 	g_free (cmd_buf);
+
+	if (!gdb_data.fp) {
+		gchar *s = g_strdup_printf (_("Unable to start '%s'.\n"), cmd_buf);
+		GtkWidget *d = gnome_error_dialog (s);
+		g_free (s);
+		gnome_dialog_run_and_close (GNOME_DIALOG (d));
+		return;
+	}
+
+	gdb_data.druid = druid;
+	gdb_data.text = text;
+	gdb_data.input = gdk_input_add (fileno (gdb_data.fp),
+					GDK_INPUT_READ,
+					handle_gdb_input,
+					&gdb_data);
 }

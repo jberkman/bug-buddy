@@ -1,5 +1,11 @@
 1999-11-05  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
+	* src/bug-buddy.glade:
+	* src/gdb-buddy.[ch]:
+	* src/bug-buddy.c: bye-bye blocking bug-buddy
+
+	This probably introduces lots of nice bugs.
+
 	* src/bug-buddy.glade: spelling mistake
 	
 	* src/bug-buddy.c (on_complete_page_prepare): add a \n

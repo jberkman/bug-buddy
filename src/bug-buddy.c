@@ -102,7 +102,7 @@ struct {
 	GtkWidget *less;
 	GtkWidget *misc;
 
-	GtkWidget *gdb_less;
+	GtkWidget *gdb_text;
 	GtkWidget *app_file;
 	GtkWidget *pid;
 	GtkWidget *core_file;
@@ -295,6 +295,8 @@ on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 	gchar *app = NULL, *extra = NULL;
 
 	g_message (_("obtaining stack trace..."));
+	gnome_druid_set_buttons_sensitive (GNOME_DRUID (druid),
+					   FALSE, FALSE, TRUE);
 	switch (druid_data.crash_type) {
 	case CRASH_DIALOG:
 		app = gtk_entry_get_text (GTK_ENTRY (druid_data.app_file));
@@ -302,7 +304,8 @@ on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 		if ((old_type != CRASH_DIALOG) ||
 		    (!old_app || strcmp (app, old_app)) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_pair (GNOME_LESS (druid_data.gdb_less), 
+			get_trace_from_pair (GNOME_DRUID (druid_data.the_druid),
+					     GTK_TEXT (druid_data.gdb_text),
 					     app, extra);
 		}
 		break;
@@ -310,7 +313,8 @@ on_less_page_prepare (GtkWidget *page, GtkWidget *druid)
 		extra = gtk_entry_get_text (GTK_ENTRY (druid_data.core_file));
 		if ((old_type != CRASH_CORE) ||
 		    (!old_extra || strcmp (extra, old_extra))) {
-			get_trace_from_core (GNOME_LESS (druid_data.gdb_less), 
+			get_trace_from_core (GNOME_DRUID (druid_data.the_druid),
+					     GTK_TEXT (druid_data.gdb_text),
 					     extra);
 		}
 		break;
@@ -519,7 +523,7 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 	w = glade_xml_get_widget (druid_data.xml, "package_entry");
 	s = gtk_entry_get_text (GTK_ENTRY (w));
 	if (!strlen(s))
-		w = "general";
+		s = "general";
 	fprintf (fp, "\nPackage: %s\n", s);
 
 	fprintf (fp, "Severity: %s\n", severity[druid_data.severity]);
@@ -798,7 +802,7 @@ init_ui (GladeXML *xml)
 	}
 
 	/* less page */
-	druid_data.gdb_less = glade_xml_get_widget (xml, "gdb_less");
+	druid_data.gdb_text = glade_xml_get_widget (xml, "gdb_text");
 
 	druid_data.nature = glade_xml_get_widget (xml, "nature_page");
 	druid_data.attach = glade_xml_get_widget (xml, "attach_page");

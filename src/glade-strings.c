@@ -13,6 +13,9 @@ gchar *s = N_("Email Address");
 gchar *s = N_("Your Name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
+gchar *s = N_("Bug tracking system to use");
+gchar *s = N_("GNOME\n"
+              "");
 gchar *s = N_("System Configuration");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
@@ -38,8 +41,7 @@ gchar *s = N_("Process ID");
 gchar *s = N_("Application Core Dump");
 gchar *s = N_("Enter the filename of the core dump");
 gchar *s = N_("Debugging Information");
-gchar *s = N_("This is the debugging information\n"
-              "bug-buddy has obtained:");
+gchar *s = N_("Please wait while bug-buddy collects debugging info...");
 gchar *s = N_("Extra Information");
 gchar *s = N_("How to repeat the bug:");
 gchar *s = N_("Extra information (patches, special configuration, etc)");
