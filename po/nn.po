@@ -1,0 +1,587 @@
+# Norwegian (Nynorsk) KDE translation.
+# Copyright (C) 2000 Gaute Hvoslef Kvalnes.
+# Gaute Hvoslef Kvalnes <ai98ghk@stud.hib.no>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE PIM/abbrowser\n"
+"POT-Creation-Date: 2001-01-07 03:55+0100\n"
+"PO-Revision-Date: 2000-09-07 20:17+02:00\n"
+"Last-Translator: Gaute Hvoslef Kvalnes <ai98ghk@stud.hib.no>\n"
+"Language-Team: Norwegian (Nynorsk)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/bts.c:100
+msgid "Distribution"
+msgstr "Distribusjon"
+
+#: src/bts.c:108
+msgid "System"
+msgstr "System"
+
+#: src/bug-buddy.c:81
+msgid "critical"
+msgstr "kritisk"
+
+#: src/bug-buddy.c:82
+msgid "grave"
+msgstr "alvorleg"
+
+#: src/bug-buddy.c:83
+msgid "normal"
+msgstr "normal"
+
+#: src/bug-buddy.c:84
+#, fuzzy
+msgid "wishlist"
+msgstr "Ønskeliste"
+
+#: src/bug-buddy.c:89
+msgid "software bug"
+msgstr ""
+
+#: src/bug-buddy.c:90
+#, fuzzy
+msgid "documentation bug"
+msgstr "Hjelpetekst"
+
+#: src/bug-buddy.c:91
+#, fuzzy
+msgid "change request"
+msgstr "Endra pensel"
+
+#: src/bug-buddy.c:92
+#, fuzzy
+msgid "support"
+msgstr "vcs-støtte"
+
+#: src/bug-buddy.c:97
+#, fuzzy
+msgid "Submit bug report"
+msgstr "Send ein feilrapport"
+
+#: src/bug-buddy.c:98
+#, fuzzy
+msgid "Only send report to yourself"
+msgstr "Alltid kryptera til seg sjølv"
+
+#: src/bug-buddy.c:99
+#, fuzzy
+msgid "Save report to file"
+msgstr "Lagra til fil"
+
+#: src/bug-buddy.c:104
+msgid "Collect debugging information from a crashed application"
+msgstr ""
+
+#: src/bug-buddy.c:105
+#, fuzzy
+msgid "Collect debugging information from a core file"
+msgstr "Les informasjon frå alle lokale pakkefiler"
+
+#: src/bug-buddy.c:106
+msgid "Skip this step"
+msgstr ""
+
+#: src/bug-buddy.c:111
+#, fuzzy
+msgid "Create a new bug report"
+msgstr "Lag ny side"
+
+#: src/bug-buddy.c:112
+msgid "Add more information to existing report"
+msgstr ""
+
+#: src/bug-buddy.c:121
+#, fuzzy
+msgid "Name of contact"
+msgstr "innhaldsliste"
+
+#: src/bug-buddy.c:121
+#, fuzzy
+msgid "NAME"
+msgstr "AM"
+
+#: src/bug-buddy.c:122
+#, fuzzy
+msgid "Email address of contact"
+msgstr "E-post-adresse:"
+
+#: src/bug-buddy.c:122
+msgid "EMAIL"
+msgstr ""
+
+#: src/bug-buddy.c:123
+#, fuzzy
+msgid "Package containing the program"
+msgstr "Namnet på programmet."
+
+#: src/bug-buddy.c:123
+msgid "PACKAGE"
+msgstr ""
+
+#: src/bug-buddy.c:124
+#, fuzzy
+msgid "Version of the package"
+msgstr "Versjonen av programmet."
+
+#: src/bug-buddy.c:124
+msgid "VERSION"
+msgstr ""
+
+#: src/bug-buddy.c:125
+#, fuzzy
+msgid "File name of crashed program"
+msgstr "Omsett programnamn."
+
+#: src/bug-buddy.c:125 src/bug-buddy.c:127 src/bug-buddy.c:128
+msgid "FILE"
+msgstr ""
+
+#: src/bug-buddy.c:126
+#, fuzzy
+msgid "PID of crashed program"
+msgstr "PID-en til programmet."
+
+#: src/bug-buddy.c:126
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:127
+#, fuzzy
+msgid "Core file from program"
+msgstr "Fila er eit program"
+
+#: src/bug-buddy.c:128
+msgid "Text file to include in the report"
+msgstr ""
+
+#: src/bug-buddy.c:332
+msgid ""
+"It is much more helpful if you specify\n"
+"a more specific package than 'general'.\n"
+"\n"
+"Please specify a package."
+msgstr ""
+
+#: src/bug-buddy.c:374
+msgid "The specified file does not exist."
+msgstr "Den oppgitte fila finst ikkje."
+
+#: src/bug-buddy.c:379
+#, fuzzy, c-format
+msgid "File is of type: %s"
+msgstr "Fil opna: %s"
+
+#: src/bug-buddy.c:382
+#, fuzzy, c-format
+msgid "'%s' does not look like a text file."
+msgstr "Kunne ikkje lasta fila."
+
+#: src/bug-buddy.c:396
+#, fuzzy
+msgid ""
+"You must include a subject and a description\n"
+"in your bug report."
+msgstr ""
+"Du må oppgi både emne og skildring\n"
+"før du kan senda feilrapporten."
+
+#: src/bug-buddy.c:439
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+
+#: src/bug-buddy.c:447 src/gdb-buddy.c:83
+#, fuzzy
+msgid "gdb has already exited"
+msgstr "Spelet er alt starta  ..."
+
+#: src/bug-buddy.c:490
+msgid "The graphical bug reporting tool for GNOME."
+msgstr ""
+
+#: src/bug-buddy.c:500
+msgid "The lame bug-buddy web page"
+msgstr ""
+
+#: src/bug-buddy.c:607
+#, fuzzy
+msgid "Please enter your name."
+msgstr "&Skriv inn namnet ditt:"
+
+#: src/bug-buddy.c:613
+#, fuzzy
+msgid "Please enter a valid email address."
+msgstr "Du må oppgi eit gyldig nummer."
+
+#: src/bug-buddy.c:624
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.  You won't be able to actually\n"
+"submit a bug report, but you will be able to save it to a file.\n"
+"\n"
+"Specify a new location for sendmail?"
+msgstr ""
+
+#: src/bug-buddy.c:675
+#, fuzzy, c-format
+msgid "Unable to open file: '%s'"
+msgstr "Kan ikkje døypa om fil."
+
+#: src/bug-buddy.c:689
+#, c-format
+msgid "about to run '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:693
+#, fuzzy, c-format
+msgid "Unable to start mail program: '%s'"
+msgstr "Kunne ikkje køyra e-postprogram"
+
+#: src/bug-buddy.c:722
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr ""
+
+#: src/bug-buddy.c:725
+#, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>"
+msgstr ""
+
+#: src/bug-buddy.c:855
+#, fuzzy
+msgid "You must specify a recipient email address"
+msgstr "Du må oppgi ein mottakar"
+
+#: src/bug-buddy.c:861
+#, fuzzy
+msgid "Submit this bug report now?"
+msgstr "Send ein feilrapport"
+
+#: src/bug-buddy.c:871
+msgid "Please choose a file to save to."
+msgstr ""
+
+#: src/bug-buddy.c:878
+#, fuzzy, c-format
+msgid ""
+"The file '%s' already exists.\n"
+"Overwrite this file?"
+msgstr ""
+"Fila %1 finst alt.\n"
+"Vil du skriva over den?"
+
+#: src/bug-buddy.c:930
+msgid "About"
+msgstr "Om"
+
+#: src/bug-buddy.c:930
+msgid "Help"
+msgstr "Hjelp"
+
+#: src/bug-buddy.c:930
+msgid "Stop"
+msgstr "Stopp"
+
+#: src/bug-buddy.c:930
+msgid "Refresh"
+msgstr "Oppfrisk"
+
+#: src/bug-buddy.c:971
+#, c-format
+msgid ""
+"Could not open '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+
+#: src/bug-buddy.c:1076
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:1089
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:1221
+#, fuzzy, c-format
+msgid ""
+"Could not find '%s'.\n"
+"Please make sure bug-buddy was installed correctly."
+msgstr ""
+"Fann ikkje PGP-programmet.\n"
+"Sjekk at søkestien PATH er rett oppsett."
+
+#: src/gdb-buddy.c:43
+#, fuzzy, c-format
+msgid "obtaining stack trace... (%d)"
+msgstr "Lastar tilbakelogg ..."
+
+#: src/gdb-buddy.c:117
+#, fuzzy, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Kunne ikkje skriva med:\n"
+" %1"
+
+#: src/gdb-buddy.c:143
+#, c-format
+msgid ""
+"Unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+
+#: src/gdb-buddy.c:174
+#, fuzzy
+msgid "Error on read... aborting"
+msgstr "feil ved lasting av %1, avbryt\n"
+
+#: src/gdb-buddy.c:218
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling bug-buddy."
+msgstr ""
+
+#: src/gdb-buddy.c:227 src/util.c:75
+#, fuzzy
+msgid "Error on fork()."
+msgstr "Feilfarge"
+
+#.
+#. * Translatable strings file generated by Glade.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: src/glade-strings.c:7
+msgid "bug-buddy"
+msgstr ""
+
+#: src/glade-strings.c:8
+msgid "Welcome to the Wonderful World of bug-buddy"
+msgstr ""
+
+#: src/glade-strings.c:9
+msgid ""
+"bug-buddy will walk you through the process\n"
+"of submitting a bug report.  If this is your first time \n"
+"using bug-buddy, you will be prompted for your\n"
+"email address so that the bug report can be\n"
+"submitted."
+msgstr ""
+
+#: src/glade-strings.c:14
+msgid "Contact Information"
+msgstr "Kontaktinformasjon"
+
+#: src/glade-strings.c:15
+#, fuzzy
+msgid "Choose which sendmail to use"
+msgstr "&Vel kva for teneste som skal stoppast:"
+
+#: src/glade-strings.c:16
+msgid "Email Address"
+msgstr "E-postadresse"
+
+#: src/glade-strings.c:17
+#, fuzzy
+msgid "Full path of sendmail"
+msgstr "I ferd med å senda e-post ..."
+
+#: src/glade-strings.c:18
+msgid "Your Name"
+msgstr "Namnet ditt"
+
+#: src/glade-strings.c:19
+msgid ""
+"bug-buddy will walk you through the process of\n"
+"submitting a bug report.  You can click the help\n"
+"button for a more in-depth explanation of the process."
+msgstr ""
+
+#: src/glade-strings.c:22
+#, fuzzy
+msgid "Report Information"
+msgstr "Minneinformasjon"
+
+#: src/glade-strings.c:23
+msgid ""
+"Select a bug tracking system to use, and then fill out\n"
+"the remaining information."
+msgstr ""
+
+#: src/glade-strings.c:25
+#, fuzzy
+msgid "Bug Tracking System "
+msgstr "Bakgrunnslager"
+
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
+msgid "Package"
+msgstr "Pakke"
+
+#: src/glade-strings.c:27
+msgid "Severity"
+msgstr "Kor alvorleg?"
+
+#: src/glade-strings.c:28
+msgid "Class"
+msgstr "Klasse"
+
+#: src/glade-strings.c:29 src/glade-strings.c:31
+msgid "Version"
+msgstr "Versjon"
+
+#: src/glade-strings.c:32
+msgid ""
+"Please check to see if your bug has already been submitted,\n"
+"and if so, use \"Add information to existing report\" above."
+msgstr ""
+
+#: src/glade-strings.c:34 src/glade-strings.c:35
+#, fuzzy
+msgid "Bug Number"
+msgstr "Nummer"
+
+#: src/glade-strings.c:36
+msgid "Description"
+msgstr "Skildring"
+
+#: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
+msgid "Short subject for the bug report"
+msgstr ""
+
+#: src/glade-strings.c:39
+msgid "Full description of the bug, including how to reproduce it"
+msgstr ""
+
+#: src/glade-strings.c:40
+#, fuzzy
+msgid "Include a text file"
+msgstr "Inkluder fil"
+
+#: src/glade-strings.c:41
+#, fuzzy
+msgid "Debugging Information"
+msgstr "Rekningsinformasjon"
+
+#: src/glade-strings.c:42
+#, fuzzy
+msgid "Select the crashed application's binary"
+msgstr "veljer programnamnet."
+
+#: src/glade-strings.c:43
+msgid "Binary"
+msgstr "Binær"
+
+#: src/glade-strings.c:44
+#, fuzzy
+msgid "Process ID"
+msgstr "Prosess"
+
+#: src/glade-strings.c:45
+#, fuzzy
+msgid "Core file"
+msgstr "Kjeldefil"
+
+#: src/glade-strings.c:46
+#, fuzzy
+msgid "Select a core file"
+msgstr "Vel ei biletefil"
+
+#: src/glade-strings.c:47
+#, fuzzy
+msgid "Collecting Debugging Information"
+msgstr "generer avlusingsinformasjon"
+
+#: src/glade-strings.c:48
+#, fuzzy
+msgid ""
+"Please wait while debugging\n"
+"information is collected..."
+msgstr "generer avlusingsinformasjon"
+
+#: src/glade-strings.c:50
+#, fuzzy
+msgid "System Configuration"
+msgstr "Lagra oppsett"
+
+#: src/glade-strings.c:51
+msgid "Please verify that this information is correct"
+msgstr ""
+
+#: src/glade-strings.c:53
+#, fuzzy
+msgid "Version installed"
+msgstr "Versjonskontroll:"
+
+#: src/glade-strings.c:54
+#, fuzzy
+msgid "%P %%"
+msgstr "%1 %2"
+
+#: src/glade-strings.c:55
+#, fuzzy
+msgid "Automatically go to next page when complete"
+msgstr "Start videospeling automatisk"
+
+#: src/glade-strings.c:56
+#, fuzzy
+msgid "Submitting the Report"
+msgstr "Send ein feilrapport"
+
+#: src/glade-strings.c:57
+msgid "To"
+msgstr "Til"
+
+#: src/glade-strings.c:58
+msgid "Send copy to yourself"
+msgstr ""
+
+#: src/glade-strings.c:59
+#, fuzzy
+msgid "Save the report to..."
+msgstr "Lagrar prosjektet som ..."
+
+#: src/glade-strings.c:60
+msgid "Content"
+msgstr "Innhald"
+
+#: src/glade-strings.c:61
+msgid "Summary"
+msgstr "Samandrag"
+
+#: src/glade-strings.c:62
+#, fuzzy
+msgid "The GEGL is watching."
+msgstr "Tabellen flyt"
+
+#: src/util.c:60
+#, fuzzy
+msgid "Unable to open pipe"
+msgstr "Kan ikkje opna fila."
+
+#: src/util.c:72
+#, fuzzy, c-format
+msgid "Could not run '%s'."
+msgstr "Kunne ikkje starta %1."
+
+#: src/util.c:113
+#, fuzzy
+msgid "Error on read..."
+msgstr "Feil funne.\n"
+
