@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
-"PO-Revision-Date: 2000-04-29 02:38+0200\n"
+"Project-Id-Version: bug-buddy 0.9\n"
+"POT-Creation-Date: 2000-05-06 11:11+0200\n"
+"PO-Revision-Date: 2000-05-06 11:12+0200\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -251,7 +251,7 @@ msgstr ""
 "O ficheiro '%s' xa existe.\n"
 "¿Sobrescribilo?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:937
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -262,7 +262,7 @@ msgstr ""
 
 # Xa sei que 'obsoleto' non é o mesmo que "deprecated", pero non
 # atopo outra traducción, e 'deprecado' non ten nada que ver
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1044
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -270,7 +270,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --appname no seu lugar."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1057
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -278,7 +278,7 @@ msgstr ""
 "$GNOME_CRASHED_PID é obsoleto.\n"
 "Por favor, use o argumento de liña de comandos --pid no seu lugar."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1189
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -403,7 +403,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Sistema de Seguimento de Erros "
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Paquete"
 
@@ -436,46 +436,50 @@ msgid "Description"
 msgstr "Descrición"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr "Por favor, faga o seu informe de erro en inglés, a ser posible."
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Resume curto para o informe de erro"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Descrición completa do erro, incluindo como reproducilo"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Incluir un ficheiro de texto"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Información de debug"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Selecciona-lo binario da aplicación estragada"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binario"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "ID do proceso"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Ficheiro core"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Selecciona-lo ficheiro core"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Recollendo a Información de Debug"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -484,51 +488,51 @@ msgstr ""
 "recolle a información de\n"
 "debug..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Configuración do Sistema"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Por favor, comprobe que esta información é correcta"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Versión instalada"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Ir automáticamente á vindeira páxina cando estea completo"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Enviando o Informe"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "A"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Enviar unha copia a vostede"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Garda-lo informe en..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Contido"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Resume"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "O GEGL está a mirar."
 
