@@ -387,11 +387,15 @@ on_complete_page_finish (GtkWidget *page, GtkWidget *druid)
 
 	fclose (fp);
 
-	w = glade_xml_get_widget (druid_data.xml, "name_entry2");
-	gnome_entry_save_history (GNOME_ENTRY (w));
+	w = glade_xml_get_widget (druid_data.xml, "name_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/contact/name", s);
 
-	w = glade_xml_get_widget (druid_data.xml, "email_entry2");
-	gnome_entry_save_history (GNOME_ENTRY (w));
+	w = glade_xml_get_widget (druid_data.xml, "email_entry");
+	s = gtk_entry_get_text (GTK_ENTRY (w));
+	gnome_config_set_string ("/bug-buddy/contact/email", s);
+
+	gnome_config_sync ();
 
 	gtk_main_quit ();
 
@@ -524,11 +528,17 @@ init_ui (GladeXML *xml)
 			    GTK_SIGNAL_FUNC (update_submit_type),
 			    GINT_TO_POINTER (SUBMIT_NONE));
 	
-	w = glade_xml_get_widget (xml, "name_entry2");
-	gnome_entry_load_history (GNOME_ENTRY (w));
+	w = glade_xml_get_widget (xml, "name_entry");
+	s = gnome_config_get_string ("/bug-buddy/contact/name");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
 
-	w = glade_xml_get_widget (xml, "email_entry2");
-	gnome_entry_load_history (GNOME_ENTRY (w));
+	w = glade_xml_get_widget (xml, "email_entry");
+	s = gnome_config_get_string ("/bug-buddy/contact/email");
+	if (s)
+		gtk_entry_set_text (GTK_ENTRY (w), s);
+	g_free (s);
 
 	/* system config page */
 	druid_data.version_edit = glade_xml_get_widget (xml, "version_edit");

@@ -1,3 +1,7 @@
+1999-10-28  Jacob Berkman  <jberkman@andrew.cmu.edu>
+
+	* src/bug-buddy.c: save the name/email in our config file
+
 1999-10-27  Jacob Berkman  <jberkman@andrew.cmu.edu>
 
 	* src/packages.c (packages): fix tyop

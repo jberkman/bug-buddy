@@ -88,30 +88,12 @@ GNOME bug submission process</text>
 	</child>
 
 	<widget>
-	  <class>GtkLabel</class>
-	  <name>label30</name>
-	  <label>Enter your name and email address, so you will be notified when the
-bug is resolved, or for developers to request more information from you.</label>
-	  <justify>GTK_JUSTIFY_CENTER</justify>
-	  <wrap>False</wrap>
-	  <xalign>0.5</xalign>
-	  <yalign>0.5</yalign>
-	  <xpad>0</xpad>
-	  <ypad>0</ypad>
-	  <child>
-	    <padding>5</padding>
-	    <expand>False</expand>
-	    <fill>False</fill>
-	  </child>
-	</widget>
-
-	<widget>
 	  <class>GtkTable</class>
 	  <name>table1</name>
-	  <rows>2</rows>
+	  <rows>3</rows>
 	  <columns>2</columns>
 	  <homogeneous>False</homogeneous>
-	  <row_spacing>15</row_spacing>
+	  <row_spacing>10</row_spacing>
 	  <column_spacing>5</column_spacing>
 	  <child>
 	    <padding>0</padding>
@@ -123,6 +105,80 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <class>GtkLabel</class>
 	    <name>label11</name>
 	    <label>Email Address</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
+	    <wrap>False</wrap>
+	    <xalign>0.5</xalign>
+	    <yalign>0.5</yalign>
+	    <xpad>0</xpad>
+	    <ypad>0</ypad>
+	    <child>
+	      <left_attach>0</left_attach>
+	      <right_attach>1</right_attach>
+	      <top_attach>2</top_attach>
+	      <bottom_attach>3</bottom_attach>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	      <xexpand>False</xexpand>
+	      <yexpand>False</yexpand>
+	      <xshrink>False</xshrink>
+	      <yshrink>False</yshrink>
+	      <xfill>False</xfill>
+	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>GtkEntry</class>
+	    <name>name_entry</name>
+	    <can_focus>True</can_focus>
+	    <editable>True</editable>
+	    <text_visible>True</text_visible>
+	    <text_max_length>0</text_max_length>
+	    <text></text>
+	    <child>
+	      <left_attach>1</left_attach>
+	      <right_attach>2</right_attach>
+	      <top_attach>1</top_attach>
+	      <bottom_attach>2</bottom_attach>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	      <xexpand>True</xexpand>
+	      <yexpand>False</yexpand>
+	      <xshrink>False</xshrink>
+	      <yshrink>False</yshrink>
+	      <xfill>True</xfill>
+	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>GtkEntry</class>
+	    <name>email_entry</name>
+	    <can_focus>True</can_focus>
+	    <editable>True</editable>
+	    <text_visible>True</text_visible>
+	    <text_max_length>0</text_max_length>
+	    <text></text>
+	    <child>
+	      <left_attach>1</left_attach>
+	      <right_attach>2</right_attach>
+	      <top_attach>2</top_attach>
+	      <bottom_attach>3</bottom_attach>
+	      <xpad>0</xpad>
+	      <ypad>0</ypad>
+	      <xexpand>True</xexpand>
+	      <yexpand>False</yexpand>
+	      <xshrink>False</xshrink>
+	      <yshrink>False</yshrink>
+	      <xfill>True</xfill>
+	      <yfill>False</yfill>
+	    </child>
+	  </widget>
+
+	  <widget>
+	    <class>GtkLabel</class>
+	    <name>Your name</name>
+	    <label>Your name</label>
 	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>
@@ -146,74 +202,11 @@ bug is resolved, or for developers to request more information from you.</label>
 	  </widget>
 
 	  <widget>
-	    <class>GnomeEntry</class>
-	    <name>name_entry2</name>
-	    <history_id>name_entry</history_id>
-	    <max_saved>10</max_saved>
-	    <child>
-	      <left_attach>1</left_attach>
-	      <right_attach>2</right_attach>
-	      <top_attach>0</top_attach>
-	      <bottom_attach>1</bottom_attach>
-	      <xpad>0</xpad>
-	      <ypad>0</ypad>
-	      <xexpand>True</xexpand>
-	      <yexpand>False</yexpand>
-	      <xshrink>False</xshrink>
-	      <yshrink>False</yshrink>
-	      <xfill>True</xfill>
-	      <yfill>False</yfill>
-	    </child>
-
-	    <widget>
-	      <class>GtkEntry</class>
-	      <child_name>GnomeEntry:entry</child_name>
-	      <name>name_entry</name>
-	      <can_focus>True</can_focus>
-	      <editable>True</editable>
-	      <text_visible>True</text_visible>
-	      <text_max_length>0</text_max_length>
-	      <text></text>
-	    </widget>
-	  </widget>
-
-	  <widget>
-	    <class>GnomeEntry</class>
-	    <name>email_entry2</name>
-	    <history_id>email_entry</history_id>
-	    <max_saved>10</max_saved>
-	    <child>
-	      <left_attach>1</left_attach>
-	      <right_attach>2</right_attach>
-	      <top_attach>1</top_attach>
-	      <bottom_attach>2</bottom_attach>
-	      <xpad>0</xpad>
-	      <ypad>0</ypad>
-	      <xexpand>True</xexpand>
-	      <yexpand>False</yexpand>
-	      <xshrink>False</xshrink>
-	      <yshrink>False</yshrink>
-	      <xfill>True</xfill>
-	      <yfill>False</yfill>
-	    </child>
-
-	    <widget>
-	      <class>GtkEntry</class>
-	      <child_name>GnomeEntry:entry</child_name>
-	      <name>email_entry</name>
-	      <can_focus>True</can_focus>
-	      <editable>True</editable>
-	      <text_visible>True</text_visible>
-	      <text_max_length>0</text_max_length>
-	      <text></text>
-	    </widget>
-	  </widget>
-
-	  <widget>
 	    <class>GtkLabel</class>
-	    <name>label10</name>
-	    <label>Your Name</label>
-	    <justify>GTK_JUSTIFY_LEFT</justify>
+	    <name>label30</name>
+	    <label>Enter your name and email address, so you will be notified when the
+bug is resolved, or for developers to request more information from you.</label>
+	    <justify>GTK_JUSTIFY_CENTER</justify>
 	    <wrap>False</wrap>
 	    <xalign>0.5</xalign>
 	    <yalign>0.5</yalign>
@@ -221,7 +214,7 @@ bug is resolved, or for developers to request more information from you.</label>
 	    <ypad>0</ypad>
 	    <child>
 	      <left_attach>0</left_attach>
-	      <right_attach>1</right_attach>
+	      <right_attach>2</right_attach>
 	      <top_attach>0</top_attach>
 	      <bottom_attach>1</bottom_attach>
 	      <xpad>0</xpad>

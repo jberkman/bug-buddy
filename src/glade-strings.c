@@ -5,10 +5,10 @@
  */
 
 gchar *s = N_("bug-buddy");
+gchar *s = N_("Email Address");
+gchar *s = N_("Your name");
 gchar *s = N_("Enter your name and email address, so you will be notified when the\n"
               "bug is resolved, or for developers to request more information from you.");
-gchar *s = N_("Email Address");
-gchar *s = N_("Your Name");
 gchar *s = N_("Please verify that this information is correct");
 gchar *s = N_("Package");
 gchar *s = N_("Version installed");
