@@ -1,4 +1,4 @@
-# Norwegian translation of bug-buddy.
+# Ukrainian translation of bug-buddy.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Yuri Syrota <rasta@renome.rovno.ua>, 1999.
 #
@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/gdb-buddy.c:41
 msgid "obtaining stack trace..."
-msgstr ""
+msgstr "отримання страси стеку..."
 
 #: src/bug-buddy.c:298 src/gdb-buddy.c:82
 msgid "gdb has already exited"
@@ -24,7 +24,7 @@ msgstr "gdb вже завершив роботу"
 #: src/gdb-buddy.c:91
 #, c-format
 msgid "Subprocess exited with status %d"
-msgstr ""
+msgstr "П╕дпроцес завершено ╕з кодом снану %d"
 
 #: src/gdb-buddy.c:119
 #, c-format
@@ -32,6 +32,8 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
+"Не вдалося обробити core-файл gdb:\n"
+"\"%s\""
 
 #: src/gdb-buddy.c:144
 #, c-format
@@ -54,6 +56,8 @@ msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling bug-buddy."
 msgstr ""
+"Незнайдено файл gdb-cmd.\n"
+"Будь ласка, спробуйте пере╕нстралювати bug-buddy."
 
 #: src/gdb-buddy.c:218
 msgid "Error on fork()."
@@ -61,19 +65,19 @@ msgstr "Помилка на fork()."
 
 #: src/bug-buddy.c:70
 msgid "critical"
-msgstr ""
+msgstr "критична"
 
 #: src/bug-buddy.c:71
 msgid "grave"
-msgstr ""
+msgstr "загрозлива"
 
 #: src/bug-buddy.c:72
 msgid "normal"
-msgstr ""
+msgstr "звичайна"
 
 #: src/bug-buddy.c:73
 msgid "wishlist"
-msgstr ""
+msgstr "побажання"
 
 #: src/bug-buddy.c:77
 msgid "software bug"
@@ -85,11 +89,11 @@ msgstr "помилка документац╕╖"
 
 #: src/bug-buddy.c:79
 msgid "change request"
-msgstr ""
+msgstr "запит на зм╕ну"
 
 #: src/bug-buddy.c:80
 msgid "support"
-msgstr ""
+msgstr "п╕дтримка"
 
 #: src/bug-buddy.c:88
 msgid "Contact's name"
@@ -125,7 +129,7 @@ msgstr "ВЕРС╤Я"
 
 #: src/bug-buddy.c:92
 msgid "Crashed file name"
-msgstr ""
+msgstr "Назва файлу, що зазна╓ збою"
 
 #: src/bug-buddy.c:92 src/bug-buddy.c:94
 msgid "FILE"
@@ -133,7 +137,7 @@ msgstr "ФАЙЛ"
 
 #: src/bug-buddy.c:93
 msgid "PID of crashed app"
-msgstr ""
+msgstr "PID програми, що зазнала збою"
 
 #: src/bug-buddy.c:93
 msgid "PID"
@@ -141,13 +145,15 @@ msgstr "PID"
 
 #: src/bug-buddy.c:94
 msgid "core file from app"
-msgstr ""
+msgstr "core-файл в╕д програми"
 
 #: src/bug-buddy.c:290
 msgid ""
 "gdb has not finished getting thedebugging information.\n"
 "Kill the gdb process (the stack tracewill be incomplete)?"
 msgstr ""
+"gdb не завершив отримання налагоджувально╖ ╕нормац╕╖.\n"
+"Знищити процес gdb (траса стеку буде неповною)?"
 
 #: src/bug-buddy.c:341
 msgid "Copyright (C) 1999 Jacob Berkman"
@@ -155,11 +161,11 @@ msgstr "Copyright © 1999 Jacob Berkman"
 
 #: src/bug-buddy.c:343
 msgid "The GNOME graphical bug reporting tool"
-msgstr ""
+msgstr "Граф╕чний ╕нструмент зв╕тування про помилки"
 
 #: src/bug-buddy.c:350
 msgid "The lame bug-buddy web page"
-msgstr ""
+msgstr "Простенька веб-стор╕нка bug-buddy"
 
 #: src/bug-buddy.c:422
 #, c-format
@@ -169,16 +175,22 @@ msgid ""
 "\n"
 "Specify a new location for sendmail?"
 msgstr ""
+"Зда╓ться, що \"%s\" нема╓.  Ви не зможете зараз в╕д╕слати\n"
+"зв╕т про помилку, але ви можете зберегти його у файл╕.\n"
+"\n"
+"Вказати нове м╕сце знаходження sendmail?"
 
 #: src/bug-buddy.c:459
 msgid "Please enter your name and email address"
-msgstr "Будь ласка, введ╕ть ваш╕ ╕м'я та електронну адресу"
+msgstr "Будь ласка, введ╕ть ваш╕ ╕м'я та е-адресу"
 
 #: src/bug-buddy.c:499
 msgid ""
 "Click \"Finish\" to exit bug-buddy.\n"
 "No bug report will be submitted."
 msgstr ""
+"Клацн╕ть \"Finish\" для звершення роботи з bug-buddy.\n"
+"Н╕яких зв╕т╕в над╕слано не буде."
 
 #: src/bug-buddy.c:522
 #, c-format
@@ -186,6 +198,8 @@ msgid ""
 "You are about to save a bug report in '%s'.\n"
 "This can later be used to report a bug in '%s'."
 msgstr ""
+"Ви зберегли зв╕т про помилку в \"%s\".\n"
+"Це дозволя╓ зв╕тувати про помилку в \"%s\" п╕зн╕ше."
 
 #: src/bug-buddy.c:527
 #, c-format
@@ -199,6 +213,14 @@ msgid ""
 "\n"
 "Clicking on 'Finish' will submit the bug report."
 msgstr ""
+"Ви п╕дготували зв╕т про пом╕лку в \"%s\".\n"
+"\n"
+"Його буде в╕д╕слано через е-пошту:\n"
+"До: %s\n"
+"В╕д: %s <%s>\n"
+"Заголовок: %s\n"
+"\n"
+"Клацн╕ть на \"Finish\" для в╕дсилання зв╕ту."
 
 #: src/bug-buddy.c:639
 msgid "Please choose a file to save to."
@@ -219,18 +241,24 @@ msgid ""
 "Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
+"Не можливо в╕дкрити \"%s\".\n"
+"Будь ласка, пересв╕дчитесь, що bug-buddy ╕нстальовано коректно."
 
 #: src/bug-buddy.c:855
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
+"Використовуйте аргумент командного рядка --appname\n"
+"зам╕сть $GNOME_CRASHED_APPNAME."
 
 #: src/bug-buddy.c:868
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 " Please use the --pid command lineargument instead."
 msgstr ""
+"Використовуйте аргумент командного рядка --pid\n"
+"зам╕сть $GNOME_CRASHED_PID."
 
 #: src/bug-buddy.c:974
 #, c-format
@@ -252,7 +280,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "all will be revealed."
-msgstr ""
+msgstr "все буде виявлено."
 
 #: src/glade-strings.c:9
 msgid "Contact Information"
@@ -260,7 +288,7 @@ msgstr "Контактна ╕нформац╕я"
 
 #: src/glade-strings.c:10
 msgid "Email Address"
-msgstr "Ваша ел.адреса"
+msgstr "Ваша е-адреса"
 
 #: src/glade-strings.c:11
 msgid "Your Name"
@@ -286,11 +314,11 @@ msgstr ""
 
 #: src/glade-strings.c:18
 msgid "Choose which sendmail to use"
-msgstr ""
+msgstr "Вибер╕ть, який sendmail використовувати"
 
 #: src/glade-strings.c:19
 msgid "Full path of sendmail"
-msgstr ""
+msgstr "Повний шлях до sendmail"
 
 #: src/glade-strings.c:20
 msgid "System Configuration"
@@ -322,11 +350,11 @@ msgstr ""
 
 #: src/glade-strings.c:27 src/glade-strings.c:55
 msgid "Action"
-msgstr ""
+msgstr "Д╕я"
 
 #: src/glade-strings.c:28
 msgid "File a new bug report"
-msgstr ""
+msgstr "В╕д╕слати новий зв╕т про помилку"
 
 #: src/glade-strings.c:29
 msgid "Add information to an existing bug report"
@@ -370,31 +398,31 @@ msgstr "Детальн╕ ╕нструкц╕╖, як повторити помилку"
 
 #: src/glade-strings.c:40
 msgid "Include a text file"
-msgstr ""
+msgstr "Долучити текстовий файл"
 
 #: src/glade-strings.c:41
 msgid "Debugging Information"
-msgstr ""
+msgstr "Налагоджувальна ╕нформац╕я"
 
 #: src/glade-strings.c:42
 msgid "How to collect debugging information"
-msgstr ""
+msgstr "Де знаходиться налагоджувальна ╕нформац╕я"
 
 #: src/glade-strings.c:43
 msgid "Attach to a crashed application"
-msgstr ""
+msgstr "Долучено до програми, що зазнала збою"
 
 #: src/glade-strings.c:44
 msgid "Read from a core file"
-msgstr ""
+msgstr "Знаходиться в core-файл╕"
 
 #: src/glade-strings.c:45
 msgid "Skip this step"
-msgstr ""
+msgstr "Пропустити цей крок"
 
 #: src/glade-strings.c:46
 msgid "Binary"
-msgstr ""
+msgstr "Виконуваний файл"
 
 #: src/glade-strings.c:47
 msgid "Process ID"
@@ -402,37 +430,39 @@ msgstr "╤дентиф╕катор процесу"
 
 #: src/glade-strings.c:48
 msgid "Select the crashed application's binary"
-msgstr ""
+msgstr "Вибур╕ть виконуваний файл, що зазна╓ збою"
 
 #: src/glade-strings.c:49
 msgid "Core file"
-msgstr ""
+msgstr "core-файл"
 
 #: src/glade-strings.c:50
 msgid "Select a core file"
-msgstr ""
+msgstr "Вибер╕ть core-файл"
 
 #: src/glade-strings.c:51
 msgid "Collecting Debugging Information"
-msgstr ""
+msgstr "Збирання налагоджувально╖ ╕нформац╕╖"
 
 #: src/glade-strings.c:52
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
 msgstr ""
+"Будь ласка, закечайте поки збира╓ться\n"
+"налагоджувальна ╕нформац╕я..."
 
 #: src/glade-strings.c:54
 msgid "Submitting the Report"
-msgstr ""
+msgstr "П╕дсилання звиту"
 
 #: src/glade-strings.c:56
 msgid "Submit bug report"
-msgstr ""
+msgstr "В╕д╕слати зв╕т"
 
 #: src/glade-strings.c:57
 msgid "Send report to your email address only"
-msgstr ""
+msgstr "В╕д╕слати зв╕т лише на вашу адресу"
 
 #: src/glade-strings.c:58
 msgid "Save the report to a file"
@@ -444,8 +474,8 @@ msgstr "Зберегти зв╕т в..."
 
 #: src/glade-strings.c:60
 msgid "Summary"
-msgstr ""
+msgstr "Резюме"
 
 #: src/glade-strings.c:61
 msgid "The GEGL is watching."
-msgstr ""
+msgstr "GEGL спостер╕га╓."
