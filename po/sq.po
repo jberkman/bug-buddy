@@ -1,0 +1,790 @@
+# Albanian translation for bug-buddy
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Laurent Dhima <laurenti@alblinux.net>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bug-buddy 1.90\n"
+"POT-Creation-Date: 2002-07-24 17:05+0200\n"
+"PO-Revision-Date: 2002-07-27 00:06GMT\n"
+"Last-Translator: Laurent Dhima , Team Gnome-albanian <laurenti@alblinux.net>\n"
+"Language-Team: albanian <Gnome-albanian-perkthyesit@sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
+
+#: src/bug-buddy.c:55
+msgid "Submit bug report"
+msgstr "DÃ«rgoje njoftimin"
+
+#: src/bug-buddy.c:56
+msgid "Only send report to yourself"
+msgstr "DÃ«rgoja njoftimin vetÃ«m vetvetes"
+
+#: src/bug-buddy.c:57
+msgid "Save report to file"
+msgstr "ShpÃ«toje njoftimin nÃ« njÃ« file"
+
+#: src/bug-buddy.c:62
+msgid "crashed application"
+msgstr "aplikativi qÃ« shkoi nÃ« crash"
+
+#: src/bug-buddy.c:63
+msgid "core file"
+msgstr "file core"
+
+#: src/bug-buddy.c:64
+msgid "nothing"
+msgstr "asgjÃ«"
+
+#: src/bug-buddy.c:69
+msgid "Create a new bug report"
+msgstr "Krijo njÃ« njoftim tÃ« ri difekti"
+
+#: src/bug-buddy.c:70
+msgid "Add more information to existing report"
+msgstr "Shtoi informacione tÃ« tjera njÃ« raporti ekzistues"
+
+#: src/bug-buddy.c:79
+msgid "Name of contact"
+msgstr "Emri i kontaktit"
+
+#: src/bug-buddy.c:79
+msgid "NAME"
+msgstr "EMRI"
+
+#: src/bug-buddy.c:80
+msgid "Email address of contact"
+msgstr "Adresa email e kontaktit"
+
+#: src/bug-buddy.c:80
+msgid "EMAIL"
+msgstr "EMAIL"
+
+#: src/bug-buddy.c:81
+msgid "Package containing the program"
+msgstr "Paketi qÃ« pÃ«rmban programin"
+
+#: src/bug-buddy.c:81
+msgid "PACKAGE"
+msgstr "PAKETI"
+
+#: src/bug-buddy.c:82
+msgid "Version of the package"
+msgstr "Versioni i paketit"
+
+#: src/bug-buddy.c:82
+msgid "VERSION"
+msgstr "VERSIONI"
+
+#: src/bug-buddy.c:83
+msgid "File name of crashed program"
+msgstr "Emri i programit tÃ« bllokuar"
+
+#: src/bug-buddy.c:83 src/bug-buddy.c:85 src/bug-buddy.c:86
+msgid "FILE"
+msgstr "FILE"
+
+#: src/bug-buddy.c:84
+msgid "PID of crashed program"
+msgstr "PID i programit qÃ« shkoi nÃ« crash"
+
+#: src/bug-buddy.c:84
+msgid "PID"
+msgstr "PID"
+
+#: src/bug-buddy.c:85
+msgid "Core file from program"
+msgstr "File core i programit"
+
+#: src/bug-buddy.c:86
+msgid "Text file to include in the report"
+msgstr "File teksti qÃ« do tÃ« pÃ«rfshihet nÃ« raportim"
+
+#: src/bug-buddy.c:96
+#, c-format
+msgid "Could not find widget named %s at %s"
+msgstr "Could not find widget named %s at %s"
+
+#: src/bug-buddy.c:208
+msgid ""
+"gdb has not finished getting the debugging information.\n"
+"Kill the gdb process (the stack trace will be incomplete)?"
+msgstr ""
+"gdb nuk ka pÃ«rfunduar marrjen e informacioneve tÃ« debugging.\n"
+"PÃ«rfundoj procesin gdb (stack trace do tÃ« jetÃ« e paplotÃ«) ?"
+
+#: src/bug-buddy.c:219 src/gdb-buddy.c:125
+msgid "gdb has already exited"
+msgstr "gdb ka dalÃ«"
+
+#: src/bug-buddy.c:286
+msgid "Save Backtrace"
+msgstr "ShpÃ«to Backtrace"
+
+#: src/bug-buddy.c:305
+#, c-format
+msgid ""
+"There was an error trying to save %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Please choose another file and try again."
+msgstr ""
+"U verifikua njÃ« gabim gjatÃ« shpÃ«timit tÃ« %s:\n"
+"\n"
+"%s\n"
+"\n"
+"Ju lutem zgjidhni njÃ« file tjetÃ«r dhe riprovoni."
+
+#: src/bug-buddy.c:402
+msgid "_Start Mailer"
+msgstr "_Fillo Mailer-in"
+
+#: src/bug-buddy.c:406
+msgid "_Send Report"
+msgstr "_DÃ«rgo Raportin"
+
+#: src/bug-buddy.c:443
+#, c-format
+msgid ""
+"There was an error showing the proxy settings:\n"
+"\n"
+"%s.\n"
+"\n"
+"Please make sure the GNOME Control Center is properly installed."
+msgstr ""
+"U verifikua njÃ« gabim gjatÃ« shfaqjes sÃ« konfigurimit proxy:\n"
+"\n"
+"%s.\n"
+"\n"
+"Ju lutem sigurohuni qÃ« Qendra e Kontrollit GNOME Ã«shtÃ« instaluar siÃ§ duhet."
+
+#: src/bug-buddy.c:491
+msgid "Hide Debugging Options"
+msgstr "Fshih Opcionet e Debugging"
+
+#: src/bug-buddy.c:492
+msgid "Show Debugging Options"
+msgstr "Trego Opcionet e Debugging"
+
+#: src/bug-buddy.c:556
+msgid ""
+"$GNOME_CRASHED_APPNAME is deprecated.\n"
+"Please use the --appname command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:566
+msgid ""
+"$GNOME_CRASHED_PID is deprecated.\n"
+"Please use the --pid command lineargument instead."
+msgstr ""
+
+#: src/bug-buddy.c:582
+msgid ""
+"Welcome to Bug Buddy, a bug reporting tool for GNOME.\n"
+"It will step you through the process of submitting a bug report."
+msgstr ""
+"MirÃ«sevini tek Bug Buddy, njÃ« vegÃ«l pÃ«r njoftimin e difekteve pÃ«r GNOME.\n"
+"Ai do t'ju udhÃ«heqÃ« gjatÃ« procesit tÃ« raportimit tÃ« njÃ« difekti."
+
+#: src/bug-buddy.c:585
+msgid ""
+"\n"
+"\n"
+"You are seeing this because another application has crashed."
+msgstr ""
+"\n"
+"\n"
+"Jeni duke e shikuar kÃ«tÃ« pasi njÃ« program ka shkur nÃ« crash."
+
+#: src/bug-buddy.c:588
+msgid ""
+"\n"
+"\n"
+"Please wait a few moments while Bug Buddy obtains debugging information from "
+"the applications.  This allows Bug Buddy to provide a more useful bug report."
+msgstr ""
+
+#: src/bug-buddy.c:727
+#, c-format
+msgid "Could not find pixmap: %s (%d)\n"
+msgstr ""
+
+#: src/bug-buddy.c:794
+#, c-format
+msgid ""
+"Bug Buddy could not load its user interface file (%s).\n"
+"Please make sure Bug Buddy was installed correctly."
+msgstr ""
+"Bug Buddy nuk po arrin tÃ« lexojÃ« file e tij tÃ« interfaqes (%s).\n"
+"Ju lutem sigurohuni qÃ« Bug Buddy Ã«shtÃ« instaluar siÃ§ duhet."
+
+#: src/bug-buddy.desktop.in.h:1
+msgid "Bug Report Tool"
+msgstr "VegÃ«l pÃ«r Njoftimin e Difekteve"
+
+#: src/bug-buddy.desktop.in.h:2
+msgid "Report a bug in GNOME"
+msgstr "Raporto njÃ« difekt nÃ« GNOME"
+
+#: src/bug-buddy.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: src/bug-buddy.glade.h:2
+msgid "<span size=\"xx-large\">Bug Buddy</span>"
+msgstr "<span size=\"xx-large\">Bug Buddy</span>"
+
+#: src/bug-buddy.glade.h:3
+msgid "Advanced"
+msgstr "Avancuar"
+
+#: src/bug-buddy.glade.h:4
+msgid "Assbarn Phenomenon"
+msgstr "Assbarn Phenomenon"
+
+#: src/bug-buddy.glade.h:5
+msgid "Binary file:"
+msgstr "File Binar:"
+
+#: src/bug-buddy.glade.h:6 src/united-states-of-bug-buddy.c:95
+msgid "Bug Buddy"
+msgstr "Bug Buddy"
+
+#: src/bug-buddy.glade.h:7
+msgid ""
+"Bug Buddy can send debugging information with your bug report.\n"
+"The correct options should have been selected for you automatically.\n"
+"For more information, please click the Help button below."
+msgstr ""
+"Bug Buddy mund tÃ« dÃ«rgojÃ« informacionet e debugging bashke me raportin tuaj mbi difektin.\n"
+"Opcionet e duhura janÃ« zgjedhur automatikisht pÃ«r ju.\n"
+"PÃ«r informacione tÃ« tjera, ju lutem kliko tek pulsanti NdihmÃ«."
+
+#: src/bug-buddy.glade.h:10
+msgid ""
+"Bug Buddy uses email to submit the bug reports.\n"
+"Please choose how you would like Bug Buddy to send email.\n"
+"If you choose to use the default GNOME mailer, this setting\n"
+"will be shared with some other GNOME applications."
+msgstr ""
+"Bug Buddy pÃ«rdor email pÃ«r tÃ« dÃ«rguar njoftimet mbi difektet.\n"
+"Ju lutem vendosni se si dÃ«shironi qÃ« Bug Buddy tÃ« dÃ«rgojÃ« email.\n"
+"NÃ«se vendosni tÃ« pÃ«rdorni GNOME mailer-in e zakonshÃ«m, kjo zgjedhje\n"
+"do tÃ« pÃ«rdoret e dhe nga disa programe tÃ« tjerÃ« GNOME."
+
+#: src/bug-buddy.glade.h:14
+msgid "Bug tracking system"
+msgstr "Sistemi i shÃ«nimit tÃ« difekteve"
+
+#: src/bug-buddy.glade.h:15
+msgid "Cc"
+msgstr "Cc"
+
+#: src/bug-buddy.glade.h:16
+msgid "Command"
+msgstr "Komanda"
+
+#: src/bug-buddy.glade.h:17
+msgid "Core file"
+msgstr "File core"
+
+#: src/bug-buddy.glade.h:18
+msgid "Custom mailer"
+msgstr ""
+
+#: src/bug-buddy.glade.h:19
+msgid "Debug"
+msgstr "Debug"
+
+#: src/bug-buddy.glade.h:20 src/bugzilla.c:642 src/bugzilla.c:683
+#: src/bugzilla.c:711
+msgid "Description"
+msgstr "PÃ«rshkrimi"
+
+#: src/bug-buddy.glade.h:21
+msgid "Download Progress"
+msgstr "Progresi i Download"
+
+#: src/bug-buddy.glade.h:22
+msgid "Email"
+msgstr "Email"
+
+#: src/bug-buddy.glade.h:23
+msgid "GNOME Mailer Settings"
+msgstr "Konfigurimet e GNOME Mailer"
+
+#: src/bug-buddy.glade.h:24
+msgid "Include a text file"
+msgstr "PÃ«rfshi njÃ« file teksti"
+
+#: src/bug-buddy.glade.h:25
+msgid "Just save to a file so I can submit a bug report manually"
+msgstr ""
+
+#: src/bug-buddy.glade.h:26
+msgid "Name"
+msgstr "Emri"
+
+#: src/bug-buddy.glade.h:27
+msgid "Path of sendmail"
+msgstr "Pozicioni i sendmail"
+
+#: src/bug-buddy.glade.h:28
+msgid "Please choose a component, version, and severity level."
+msgstr "Ju lutem zgjidhni njÃ« komponues, version, dhe nivelin e rÃ«ndÃ«sisÃ«."
+
+#: src/bug-buddy.glade.h:29
+msgid "Please make any final corrections to the bug report."
+msgstr ""
+
+#: src/bug-buddy.glade.h:30
+msgid "Please make your bug report in English, if possible."
+msgstr "Ju lutem shkruani raportin mbi difektin mundÃ«sisht nÃ« Anglisht."
+
+#: src/bug-buddy.glade.h:31
+msgid "Please select the product for the bug you wish to report."
+msgstr "Ju lutem seleksiononi produktin pÃ«r difektin qÃ« doni tÃ« raportoni."
+
+#: src/bug-buddy.glade.h:32
+msgid ""
+"Please take a minute to see if your bug is one of the most frequently "
+"reported bugs.\n"
+"If the bug is already reported, please do not report it again."
+msgstr ""
+"Ju lutem ndaloni disa minuta pÃ«r tÃ« kontrolluar nÃ«se difekti qÃ« jeni duke raportuar bÃ«n pjesÃ« "
+"nÃ« difektet e raportuar shpesh herÃ« nga tÃ« tjerÃ«.\n"
+"NÃ«se difekti rezulton i raportuar, ju lutem mos e raportoni pÃ«rsÃ«ri."
+
+#: src/bug-buddy.glade.h:34
+msgid ""
+"Please wait while Bug Buddy updates its list\n"
+"of products for the bug tracking systems."
+msgstr ""
+"Ju lutem duroni sa Bug Buddy tÃ« rifreskojÃ« listÃ«n e tij\n"
+"tÃ« produkteve pÃ«r sistemet e shÃ«nimit tÃ« difekteve."
+
+#: src/bug-buddy.glade.h:36
+msgid "Process ID:"
+msgstr "ID e procesit:"
+
+#: src/bug-buddy.glade.h:37
+msgid "Proxy Settings..."
+msgstr "Konfigurimi i Proxy..."
+
+#: src/bug-buddy.glade.h:38
+msgid "Save in"
+msgstr "ShpÃ«toje tek"
+
+#: src/bug-buddy.glade.h:39
+msgid "Save the report to..."
+msgstr "ShpÃ«toje raportin nÃ«..."
+
+#: src/bug-buddy.glade.h:40
+msgid "Saving:"
+msgstr "ShpÃ«tuar:"
+
+#: src/bug-buddy.glade.h:41
+msgid "Select a mailer"
+msgstr "Zgjidh njÃ« mailer"
+
+#: src/bug-buddy.glade.h:42
+msgid "Sendmail Settings"
+msgstr "Konfigurimet e Sendmail"
+
+#: src/bug-buddy.glade.h:43
+msgid "Severity"
+msgstr "RÃ«ndÃ«sia"
+
+#: src/bug-buddy.glade.h:44
+msgid "Show _Debugging Details"
+msgstr "Trego hollÃ«sitÃ« e _Debugging"
+
+#: src/bug-buddy.glade.h:45
+msgid "Show most frequent bugs in:"
+msgstr "Trego difektet mÃ« tÃ« shpeshtÃ« nÃ«:"
+
+#: src/bug-buddy.glade.h:46
+msgid "Simple"
+msgstr "ThjeshtÃ«"
+
+#: src/bug-buddy.glade.h:47
+msgid "Start"
+msgstr "Fillo"
+
+#: src/bug-buddy.glade.h:48
+msgid "Start in terminal"
+msgstr "Fillo nÃ« terminal"
+
+#: src/bug-buddy.glade.h:49
+msgid "Stop"
+msgstr "Ndalo"
+
+#: src/bug-buddy.glade.h:50
+msgid "Submit another bug"
+msgstr "Shto njÃ« difekt tjetÃ«r"
+
+#: src/bug-buddy.glade.h:51
+msgid "Summary"
+msgstr "PÃ«rmbledhja"
+
+#: src/bug-buddy.glade.h:52
+msgid "The product is not listed above."
+msgstr ""
+
+#: src/bug-buddy.glade.h:53
+msgid "To"
+msgstr "PÃ«r"
+
+#: src/bug-buddy.glade.h:54
+msgid "To:"
+msgstr "PÃ«r:"
+
+#: src/bug-buddy.glade.h:55
+msgid "Understands Netscape remote control"
+msgstr ""
+
+#: src/bug-buddy.glade.h:56
+msgid "Updating products list:"
+msgstr "Duke rifreskuar listÃ«n e produkteve:"
+
+#: src/bug-buddy.glade.h:57
+msgid "Use sendmail directly"
+msgstr "PÃ«rdor direkt sendmail"
+
+#: src/bug-buddy.glade.h:58
+msgid "Use the default GNOME mailer"
+msgstr "PÃ«rdor GNOME mailer-in e zakonshÃ«m"
+
+#: src/bug-buddy.glade.h:59
+msgid "Version"
+msgstr "Versioni"
+
+#: src/bug-buddy.glade.h:60
+msgid "component"
+msgstr "komponenti"
+
+#: src/bug-buddy.glade.h:61
+msgid "desc"
+msgstr ""
+
+#: src/bug-buddy.glade.h:62
+msgid "email info"
+msgstr "email info"
+
+#: src/bug-buddy.glade.h:63
+msgid "finished"
+msgstr "mbaruar"
+
+#: src/bug-buddy.glade.h:64
+msgid "gdb"
+msgstr "gdb"
+
+#: src/bug-buddy.glade.h:65
+msgid "gnome"
+msgstr "gnome"
+
+#: src/bug-buddy.glade.h:66
+msgid "mail config"
+msgstr "mail konfig"
+
+#: src/bug-buddy.glade.h:67
+msgid "mostfreq"
+msgstr "mÃ«tÃ«shpesh"
+
+#: src/bug-buddy.glade.h:68
+msgid "product"
+msgstr "produkti"
+
+#: src/bug-buddy.glade.h:69
+msgid "sendmail"
+msgstr "sendmail"
+
+#: src/bugzilla.c:616
+msgid "ID"
+msgstr "ID"
+
+#: src/bugzilla.c:630 src/bugzilla.c:665
+msgid "Product"
+msgstr "Produkti"
+
+#: src/bugzilla.c:636 src/bugzilla.c:705
+msgid "Component"
+msgstr "Komponenti"
+
+#: src/bugzilla.c:774
+#, c-format
+msgid ""
+"Bug Buddy could not open '%s'.\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy nuk arrin tÃ« hapÃ« '%s'.\n"
+"Ju lutem sigurohuni qÃ« Bug Buddy Ã«shtÃ« instaluar korrektsisht.\n"
+"\n"
+"Bug Buddy tani do tÃ« mbyllet."
+
+#: src/bugzilla.c:793
+msgid "All"
+msgstr "TÃ« gjithÃ«"
+
+#: src/bugzilla.c:822
+msgid ""
+"Bug Buddy could not find any information on where to submit bugs.\n"
+"\n"
+"Please make sure Bug Buddy was installed correctly.\n"
+"\n"
+"Bug Buddy will now quit."
+msgstr ""
+"Bug Buddy nuk arrin tÃ« gjejÃ« asnjÃ« informacion se ku duhet t'i dÃ«rgojÃ« bugs.\n"
+"\n"
+"Ju lutem sigurohuni qÃ« Bug Buddy Ã«shtÃ« instaluar korrektsisht.\n"
+"\n"
+"Bug Buddy tani do tÃ« mbyllet."
+
+#: src/cell-renderer-uri.c:145
+msgid "URI"
+msgstr "URI"
+
+#: src/cell-renderer-uri.c:146
+msgid "URI to show when clicked."
+msgstr "URI pÃ«r t'u treguar kur klikohet."
+
+#: src/cell-renderer-uri.c:153
+msgid "Visited"
+msgstr "Vizituar"
+
+#: src/cell-renderer-uri.c:154
+msgid "If the URI has been visited before."
+msgstr "NÃ«se URI Ã«shtÃ« vizituar mÃ« parÃ«."
+
+#: src/config.c:75
+msgid "Evolution"
+msgstr "Evolution"
+
+#: src/gdb-buddy.c:82
+#, c-format
+msgid "Obtaining stack trace... (%d)"
+msgstr ""
+
+#: src/gdb-buddy.c:165
+#, c-format
+msgid ""
+"Unable to process core file with gdb:\n"
+"'%s'"
+msgstr ""
+"Nuk arrij tÃ« procesoj file core me gdb:\n"
+"'%s'"
+
+#: src/gdb-buddy.c:196
+#, c-format
+msgid ""
+"GDB was unable to determine which binary created\n"
+"'%s'"
+msgstr ""
+
+#: src/gdb-buddy.c:228
+msgid "Error on read... aborting"
+msgstr "Gabim gjatÃ« leximit... ndÃ«rpritet"
+
+#: src/gdb-buddy.c:274
+msgid ""
+"GDB could not be found on your system.\n"
+"Debugging information will not be obtained."
+msgstr ""
+"GDB nuk u gjet tek sistemi juaj.\n"
+"Informacionet e Debugging nuk do tÃ« regjistrohen."
+
+#: src/gdb-buddy.c:308
+msgid ""
+"Could not find the gdb-cmd file.\n"
+"Please try reinstalling Bug Buddy."
+msgstr ""
+"Nuk arrij tÃ« gjej file gdb-cmd.\n"
+"Ju lutem provoni tÃ« reinstaloni Bug Buddy."
+
+#: src/gdb-buddy.c:328
+msgid "There was an error running gdb."
+msgstr "NdeshÃ«m nÃ« njÃ« difekt gjatÃ« zbatimit tÃ« gdb."
+
+#: src/united-states-of-bug-buddy.c:49
+msgid "Welcome to Bug Buddy"
+msgstr "MirÃ«sevini tek Bug Buddy"
+
+#: src/united-states-of-bug-buddy.c:50
+msgid "Select a Product"
+msgstr "Zgjidhni njÃ« produkt"
+
+#: src/united-states-of-bug-buddy.c:51
+msgid "Select a Component"
+msgstr "Zgjidhni njÃ« Komponent"
+
+#: src/united-states-of-bug-buddy.c:52
+msgid "Frequently Reported Bugs"
+msgstr "Difektet e Raportuar Shpesh"
+
+#: src/united-states-of-bug-buddy.c:53
+msgid "Bug Description"
+msgstr "PÃ«rshkrimi i difektit"
+
+#: src/united-states-of-bug-buddy.c:54
+msgid "Mail Configuration"
+msgstr "Konfigurimi i Mail"
+
+#: src/united-states-of-bug-buddy.c:55
+msgid "Confirmation"
+msgstr "Konfermimi"
+
+#: src/united-states-of-bug-buddy.c:56
+msgid "Finished!"
+msgstr "Mabruam!"
+
+#: src/united-states-of-bug-buddy.c:98
+msgid "The graphical bug reporting tool for GNOME."
+msgstr "Tool grafik i GNOME pÃ«r raportimin e difekteve."
+
+#: src/united-states-of-bug-buddy.c:109
+msgid "The lame Bug Buddy web page"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:293
+msgid "Please enter your name."
+msgstr "Ju lutem shkruani emrin tuaj."
+
+#: src/united-states-of-bug-buddy.c:309
+msgid "Please enter a valid email address."
+msgstr "Ju lutem shkruani njÃ« adresÃ« email tÃ« vlefshme."
+
+#: src/united-states-of-bug-buddy.c:325
+#, c-format
+msgid ""
+"'%s' doesn't seem to exist.\n"
+"\n"
+"Please check the path to sendmail again."
+msgstr ""
+"'%s' nuk ekziston.\n"
+"\n"
+"Ju lutem kontrolloni pozicionin pÃ«r tek sendmail pÃ«rsÃ«ri."
+
+#: src/united-states-of-bug-buddy.c:357
+msgid "Please enter a valid email command."
+msgstr "Ju lutem shkruani njÃ« komandÃ« email tÃ« vlefshme."
+
+#: src/united-states-of-bug-buddy.c:421
+msgid "The specified file does not exist."
+msgstr "File i specifikuar nuk ekziston."
+
+#: src/united-states-of-bug-buddy.c:431
+#, c-format
+msgid "File is of type: %s"
+msgstr "File Ã«shtÃ« i tipit: %s"
+
+#: src/united-states-of-bug-buddy.c:438
+#, c-format
+msgid ""
+"'%s' is a %s file.\n"
+"\n"
+"Bug Buddy can only submit plaintext (text/*) files."
+msgstr ""
+"'%s' Ã«shtÃ« njÃ« file %s.\n"
+"\n"
+"Bug Buddy pranon vetÃ«m plaintext (text/*) files."
+
+#: src/united-states-of-bug-buddy.c:458
+msgid "You must include a comprehensible subject line in your bug report."
+msgstr "Duhet tÃ« shkruani njÃ« rrjesht tÃ« qartÃ« subjekti tek raporti juaj i difektit."
+
+#: src/united-states-of-bug-buddy.c:474
+msgid "You must include a comprehensible description in your bug report."
+msgstr "Duhet tÃ« shkruani njÃ« pÃ«rshkrim tÃ« qartÃ« nÃ« raportin tuaj."
+
+#: src/united-states-of-bug-buddy.c:502
+msgid "Submit this bug report now?"
+msgstr "DÃ«rgon kÃ«tÃ« raport tani?"
+
+#: src/united-states-of-bug-buddy.c:505
+msgid "_Submit"
+msgstr "_DÃ«rgo"
+
+#: src/united-states-of-bug-buddy.c:526
+#, c-format
+msgid ""
+"Unable to open file '%s':\n"
+"%s"
+msgstr ""
+"Nuk arrij tÃ« hap file '%s':\n"
+"%s"
+
+#: src/united-states-of-bug-buddy.c:540
+#, c-format
+msgid "about to run '%s'"
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:548
+#, c-format
+msgid ""
+"Unable to start mail program '%s':\n"
+"%s"
+msgstr ""
+"Nuk arrij tÃ« filloj programin e mail '%s':\n"
+"%s"
+
+#: src/united-states-of-bug-buddy.c:586
+#, c-format
+msgid "Your bug report was saved in '%s'"
+msgstr "Raporti juaj u shpÃ«tua tek '%s'"
+
+#: src/united-states-of-bug-buddy.c:589
+#, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\n"
+"        <%s>\n"
+"\n"
+"Thanks!"
+msgstr ""
+"Raporti juaj u dÃ«rgua tek:\n"
+"\n"
+"        <%s>\n"
+"\n"
+"Faleminderit!"
+
+#: src/united-states-of-bug-buddy.c:644
+msgid ""
+"Since Bug Buddy doesn't know about the product you wish to submit a bug "
+"report in, you will have to manually address the bug report."
+msgstr ""
+
+#: src/united-states-of-bug-buddy.c:665
+msgid "You must specify a product for your bug report."
+msgstr "Ju duhet tÃ« specifikoni njÃ« produkt pÃ«r raportin tuaj."
+
+#: src/united-states-of-bug-buddy.c:688
+msgid "You must specify a component for your bug report."
+msgstr "Ju duhet tÃ« specifikoni njÃ« komponent pÃ« raportin tuaj."
+
+#: src/united-states-of-bug-buddy.c:702
+msgid "You must specify a version for your bug report."
+msgstr "Ju duhet tÃ« specifikoni njÃ« version pÃ« raportin tuaj."
+
+#: src/united-states-of-bug-buddy.c:785
+msgid ""
+"Your email program has been launched.  Please look it over and send it.\n"
+"\n"
+"Thank you for submitting this bug report."
+msgstr ""
+"Programi juaj email u fillua.  Ju lutem hidhini njÃ« sy dhe dÃ«rgoheni.\n"
+"\n"
+"Faleminderit qÃ« dÃ«rguat kÃ«tÃ« njoftim mbi difektin."
+
+#: src/united-states-of-bug-buddy.c:812
+msgid ""
+"Are you sure you want to cancel\n"
+"this bug report?"
+msgstr ""
+"Jeni i sigurt qÃ« dÃ«shironi t'a fshini\n"
+"kÃ«tÃ« njoftim mbi difektin?"
+
