@@ -1,5 +1,8 @@
 2001-11-08  jacob berkman  <jacob@ximian.com>
 
+	* configure.in: zh_TW.po seems to be broken on gettext 0.10.35;
+	disabling for now
+
 	* src/united-states-of-bug-buddy.c (desc_page_ok): use the public
 	mime type function
 
