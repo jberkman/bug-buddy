@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=bug-buddy
 Name[da]=fejl-hjælper
+Name[gl]=bug-buddy
 Name[no]=feil-kompis
 Comment=Report a bug in GNOME
 Comment[da]=Rapportér en fejl i GNOME
+Comment[gl]=Informe dun erro de GNOME
 Comment[no]=Rapporter en feil i GNOME
 Exec=bug-buddy
 Icon=bug-buddy.png

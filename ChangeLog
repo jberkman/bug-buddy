@@ -6,6 +6,8 @@
 
 	* configure.in (ALL_LINGUAS): Added Galician (gl)
 
+	* src/bug-buddy.desktop: Added Galician entries
+
 1999-12-29  Yuri Syrota  <rasta@renome.rovno.ua>
 
 	* configure.in (ALL_LINGUAS): added "uk"
