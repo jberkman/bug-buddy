@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy 1.1\n"
-"POT-Creation-Date: 2000-11-15 15:29-0500\n"
-"PO-Revision-Date: 2000-10-05 20:18+02:00\n"
+"Project-Id-Version: bug-buddy 1.2\n"
+"POT-Creation-Date: 2000-11-16 08:17+0100\n"
+"PO-Revision-Date: 2000-11-16 08:23+01:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr "E-MAIL"
 
 #: src/bug-buddy.c:123
 msgid "Package containing the program"
-msgstr "Paket, das das Programms enthält"
+msgstr "Paket, das das Programm enthält"
 
 #: src/bug-buddy.c:123
 msgid "PACKAGE"
@@ -145,7 +145,7 @@ msgstr "Core-Datei von dem Programm"
 
 #: src/bug-buddy.c:128
 msgid "Text file to include in the report"
-msgstr ""
+msgstr "Textdatei, die in den Bericht eingefügt werden soll"
 
 #: src/bug-buddy.c:332
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 "abschicken können, aber es wird möglich sein, den Bericht in einer\n"
 "Datei zu speichern.\n"
 "\n"
-"Einen neuen Ort für sendmail angeben?"
+"Einen neuen Ort für »sendmail« angeben?"
 
 #: src/bug-buddy.c:675
 #, c-format
@@ -267,7 +267,8 @@ msgstr "Diesen Fehlerbericht jetzt abschicken?"
 msgid "Please choose a file to save to."
 msgstr ""
 "Bitte wählen Sie eine Datei,\n"
-"in der gespeichert werden soll."
+"in der der Bericht gespeichert\n"
+"werden soll."
 
 #: src/bug-buddy.c:878
 #, c-format
@@ -333,7 +334,7 @@ msgid ""
 msgstr ""
 "'%s' konnte nicht gefunden werden.\n"
 "\n"
-"Bitte überprüfen Sie, ob bug-buddy richtig\n"
+"Bitte überprüfen Sie, ob »bug-buddy« richtig\n"
 "installiert wurde."
 
 #: src/gdb-buddy.c:43
@@ -347,7 +348,7 @@ msgid ""
 "Unable to process core file with gdb:\n"
 "'%s'"
 msgstr ""
-"Kann folgende Core-Datei nicht mit gdb verarbeiten:\n"
+"Kann folgende Core-Datei nicht mit »gdb« verarbeiten:\n"
 "`%s'"
 
 #: src/gdb-buddy.c:143
@@ -371,7 +372,7 @@ msgid ""
 msgstr ""
 "Die Datei gdb-cmd konnte nicht gefunden werden.\n"
 "\n"
-"Bitte versuchen Sie, bug-buddy noch einmal zu\n"
+"Bitte versuchen Sie, »bug-buddy« noch einmal zu\n"
 "installieren."
 
 #: src/gdb-buddy.c:227 src/util.c:75
@@ -389,7 +390,7 @@ msgstr "bug-buddy"
 
 #: src/glade-strings.c:8
 msgid "Welcome to the Wonderful World of bug-buddy"
-msgstr "Willkommen in bug-buddys Wundervoller Welt"
+msgstr "Willkommen in »bug-buddys« Wundervoller Welt"
 
 #: src/glade-strings.c:9
 msgid ""
@@ -411,7 +412,7 @@ msgstr "Kontakt-Informationen"
 
 #: src/glade-strings.c:15
 msgid "Choose which sendmail to use"
-msgstr "Wählen Sie, welches sendmail benutzt werden soll"
+msgstr "Wählen Sie, welches »sendmail« benutzt werden soll"
 
 #: src/glade-strings.c:16
 msgid "Email Address"
@@ -545,7 +546,7 @@ msgstr "System-Konfiguration"
 
 #: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
-msgstr "Stellen Sie bitte sicher, dass diese Informationen stimmen"
+msgstr "Stellen Sie bitte sicher, dass diese Informationen stimmen."
 
 #: src/glade-strings.c:53
 msgid "Version installed"
