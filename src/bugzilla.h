@@ -56,6 +56,7 @@ struct _BugzillaBTS {
 
 	BugzillaXMLFile *products_xml;
 	BugzillaXMLFile *config_xml;
+	BugzillaXMLFile *mostfreq_xml;
 
 	BugzillaSubmitType submit_type;
 	char *icon;
@@ -67,11 +68,14 @@ struct _BugzillaBTS {
 	char *severity_header;
 	
 	/* products.xml */
-	GSList    *products;
+	GSList *products;
 
 	/* config.xml */
 	GSList    *severities;
 	GSList    *opsys;
+
+	/* mostfreq.xml */
+	GSList *bugs;
 };
 
 typedef struct {
@@ -87,11 +91,21 @@ typedef struct {
 	char            *description;
 } BugzillaComponent;
 
+typedef struct {
+	char *id;
+	char *product;
+	char *component;
+	char *desc;
+	char *url;
+	/* gboolean shown : 1; */
+} BugzillaBug;
+
 enum {
 	PRODUCT_ICON,
 	PRODUCT_NAME,
 	PRODUCT_DESC,
 	PRODUCT_DATA,
+
 	PRODUCT_COLS
 };
 
@@ -99,7 +113,19 @@ enum {
 	COMPONENT_NAME,
 	COMPONENT_DESC,
 	COMPONENT_DATA,
+
 	COMPONENT_COLS
+};
+
+enum {
+	MOSTFREQ_PRODUCT,
+	MOSTFREQ_COMPONENT,
+	MOSTFREQ_ID,
+	MOSTFREQ_URL,
+	MOSTFREQ_DESC,
+	MOSTFREQ_SHOWN,
+
+	MOSTFREQ_COLS,
 };
 
 void load_bugzillas (void);
@@ -107,6 +133,8 @@ void load_bugzilla_xml (void);
 
 void bugzilla_bts_add_products_to_clist (BugzillaBTS *bts);
 void bugzilla_product_add_components_to_clist (BugzillaProduct *product);
+
+gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);
 
 char *generate_email_text (void);
 

@@ -53,6 +53,9 @@ if test -z "$LIBGLADE_CONVERT" ; then
 	AC_MSG_ERROR([libglade-convert (from libglade 2.0) is needed to build Bug Buddy.])
 fi
 
+AC_PATH_PROG(GLIB_GENMARSHAL, glib-genmarshal)
+AC_SUBST(GLIB
+
 AC_OUTPUT([
 bug-buddy.spec
 Makefile

@@ -47,10 +47,10 @@ static char *help_pages[] = {
 static char *state_title[] = {
 	N_("Welcome to Bug Buddy"),
 	N_("Debugging Information"),
-	N_("Bug Description"),
-	N_("Updating Product Listing"),
 	N_("Product"),
 	N_("Component"),
+	N_("Frequently Reported Bugs"),
+	N_("Bug Description"),
 	N_("System Configuration"),
 	N_("Submitting the Report"),
 	N_("Finished!"),
@@ -160,21 +160,6 @@ druid_set_state (BuddyState state)
 	case STATE_GDB:
 		start_gdb ();
 		break;
-	case STATE_DESC:
-		/* nothing to do */
-		break;
-	case STATE_UPDATE:
-		if (oldstate == STATE_PRODUCT) {
-			druid_set_state (state - 1);
-			break;
-		}
-		if (druid_data.all_products) {
-			druid_set_state (state + 1);
-			return;
-		}
-		druid_set_sensitive (FALSE, FALSE, FALSE);
-		load_bugzillas ();
-		break;
 	case STATE_PRODUCT:
 #if 0
 		if (!druid_data.package_name)
@@ -193,6 +178,10 @@ druid_set_state (BuddyState state)
 		if (!druid_data.component)
 			druid_set_sensitive (TRUE, FALSE,  TRUE);
 #endif
+		break;
+	case STATE_MOSTFREQ:
+	case STATE_DESC:
+		/* nothing to do */
 		break;
 	case STATE_SYSTEM:
 #if 0
@@ -593,11 +582,6 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 	case STATE_GDB:
 		/* nothing */
 		break;
-	case STATE_DESC:
-		/* validate subject, description, and file name */
-		if (!desc_page_ok ())
-			return;
-		break;
 	case STATE_PRODUCT:
 		/* check that the package is ok */
 		druid_data.product = get_selected_row ("product-list", PRODUCT_DATA);
@@ -645,7 +629,15 @@ on_druid_next_clicked (GtkWidget *w, gpointer data)
 			return;
 		}
 		g_free (s);
-		newstate++;
+		bugzilla_add_mostfreq (druid_data.product->bts);
+		break;
+	case STATE_MOSTFREQ:
+		/* nothing */
+		break;
+	case STATE_DESC:
+		/* validate subject, description, and file name */
+		if (!desc_page_ok ())
+			return;
 		break;
 	case STATE_SYSTEM:
 		/* nothing */

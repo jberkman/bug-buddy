@@ -28,6 +28,7 @@
 #include <libgnomecanvas/gnome-canvas.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtkliststore.h>
+#include <gtk/gtktreeviewcolumn.h>
 
 #include <sys/types.h>
 
@@ -51,10 +52,10 @@ typedef enum {
 typedef enum {
 	STATE_INTRO,
 	STATE_GDB,
-	STATE_DESC,
-	STATE_UPDATE,
 	STATE_PRODUCT,
 	STATE_COMPONENT,
+	STATE_MOSTFREQ,
+	STATE_DESC,
 	STATE_SYSTEM,
 	STATE_EMAIL,
 	STATE_FINISHED,
@@ -130,6 +131,8 @@ typedef struct {
 #endif
 	GSList       *packages;
 
+	GSList       *bugs;
+
 	/* Bugzilla BTS stuff */
 	BugzillaProduct   *product;
 	BugzillaComponent *component;
@@ -140,6 +143,9 @@ typedef struct {
 
 	GnomeVFSAsyncHandle *vfshandle;
 	gboolean need_to_download;
+
+	GtkTreeViewColumn *uri_column;
+	gboolean           showing_hand;
 } DruidData;
 
 extern DruidData druid_data;

@@ -23,6 +23,7 @@
 
 #include "bug-buddy.h"
 #include "libglade-buddy.h"
+#include "cell-renderer-uri.h"
 
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -68,11 +69,71 @@ bugzilla_product_insert_component (BugzillaProduct *prod, BugzillaComponent *com
 	prod->components = g_slist_insert_sorted (prod->components, comp, (gpointer)comp_cmp);
 }
 
+static char *
+gify (char *x)
+{
+	char *g = g_strdup (x);
+	xmlFree (x);
+	return g;
+}
+	
+#define XML_NODE_GET_PROP(node, name) (gify (xmlGetProp ((node), (name))))
+#define XML_NODE_GET_CONTENT(node)    (gify (xmlNodeGetContent ((node))))
+
+static void
+load_mostfreq_xml (BugzillaBTS *bts, xmlDoc *doc)
+{
+	xmlNode *prod, *comp, *bug, *node;
+	BugzillaBug *bbug;
+
+	d(g_print ("mostfreq:\n"));
+
+	for (prod = xmlDocGetRootElement (doc)->children; prod; prod = prod->next) {
+		d(g_print ("\t%s\n", prod->name));
+
+		if (strcmp (prod->name, "product"))
+			continue;
+
+		bbug = g_new0 (BugzillaBug, 1);
+
+		bbug->product = XML_NODE_GET_PROP (prod, "name");
+
+		for (comp = prod->children; comp; comp = comp->next) {
+			d(g_print ("\t\t%s\n", comp->name));
+			if (strcmp (comp->name, "component"))
+				continue;
+
+			bbug->component = XML_NODE_GET_PROP (comp, "name");
+
+			for (bug = comp->children; bug; bug = bug->next) {
+				d(g_print ("\t\t\t%s\n", bug->name));
+				if (strcmp (bug->name, "bug"))
+					continue;
+				
+				bbug->id = XML_NODE_GET_PROP (bug, "bugid");
+
+				for (node = bug->children; node; node = node->next) {
+					d(g_print ("\t\t\t\t%s\n", node->name));
+
+					if (!strcmp (node->name, "desc"))
+						bbug->desc = XML_NODE_GET_CONTENT (node);
+					else if (!strcmp (node->name, "url"))
+						bbug->url = XML_NODE_GET_CONTENT (node);
+				}
+			}
+		}
+		
+		bts->bugs = g_slist_prepend (bts->bugs, bbug);
+		
+	}
+
+	xmlFreeDoc (doc);
+}
+
 static void
 load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 {
 	xmlNode *node, *cur;
-	char *s;
 
 	d(g_print ("config:\n"));
 
@@ -83,20 +144,18 @@ load_config_xml (BugzillaBTS *bts, xmlDoc *doc)
 				d(g_print ("\t\t%s\n", cur->name));
 				if (strcmp (cur->name, bts->severity_item))
 					continue;
-				s = xmlNodeGetContent (cur);
-				bts->severities = g_slist_append (bts->severities,
-								  g_strdup (s));
-				xmlFree (s);
+				bts->severities = g_slist_append (
+					bts->severities,
+					XML_NODE_GET_CONTENT (cur));
 			}
 		} else if (!strcmp (node->name, "opsys_list")) {
 			for (cur = node->children; cur; cur = cur->next) {
 				d(g_print ("\t\t%s\n", cur->name));
 				if (strcmp (cur->name, "opsys"))
 					continue;
-				s = xmlNodeGetContent (cur);
-				bts->opsys = g_slist_append (bts->opsys,
-							     g_strdup (s));
-				xmlFree (s);
+				bts->opsys = g_slist_append (
+					bts->opsys,
+					XML_NODE_GET_CONTENT (cur));
 			}
 		}
 	}
@@ -110,7 +169,6 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 	BugzillaProduct *prod;
 	BugzillaComponent *comp;
 	xmlNode *node, *cur;
-	char *s;
 
 	d(g_print ("products:\n"));
 
@@ -120,13 +178,8 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 			prod = g_new0 (BugzillaProduct, 1);
 			prod->bts = bts;
 
-			s = xmlGetProp (node, "name");
-			prod->name = g_strdup (s);
-			xmlFree (s);
-
-			s = xmlGetProp (node, "description");
-			prod->description = g_strdup (s);
-			xmlFree (s);
+			prod->name        = XML_NODE_GET_PROP (node, "name");
+			prod->description = XML_NODE_GET_PROP (node, "description");
 
 			bugzilla_bts_insert_product (bts, prod);
 			bugzilla_bts_insert_product (druid_data.all_products, prod);
@@ -139,13 +192,8 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 				comp = g_new0 (BugzillaComponent, 1);
 				comp->product = prod;
 				
-				s = xmlGetProp (cur, "value");
-				comp->name = g_strdup (s);
-				xmlFree (s);
-
-				s = xmlGetProp (cur, "description");
-				comp->description = g_strdup (s);
-				xmlFree (s);
+				comp->name        = XML_NODE_GET_PROP (cur, "value");
+				comp->description = XML_NODE_GET_PROP (cur, "description");
 
 				bugzilla_product_insert_component (prod, comp);
 			}
@@ -191,7 +239,7 @@ goto_product_page (void)
 static int
 async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpointer data)
 {
-	d(g_print ("%lu\n", info->bytes_copied));
+	d(g_print ("%" GNOME_VFS_SIZE_FORMAT_STR "\n", info->bytes_copied));
 	if (info->source_name) {
 		d(g_print ("source: %s\n", info->source_name));
 		buddy_set_text ("progress-source", info->source_name);
@@ -206,28 +254,7 @@ async_update (GnomeVFSAsyncHandle *handle, GnomeVFSXferProgressInfo *info, gpoin
 		gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (GET_WIDGET ("progress-progress")), 
 					       (gfloat)info->total_bytes_copied / info->bytes_total);
 
-	if (info->phase == GNOME_VFS_XFER_PHASE_COMPLETED) {
-		GList *li;
-		char *remote, *local;
-
-		/* until gnome-vfs will touch the file for us */
-		for (li = druid_data.dldests; li; li=li->next) {
-			remote = gnome_vfs_uri_to_string (li->data, GNOME_VFS_URI_HIDE_NONE);
-			local = gnome_vfs_get_local_path_from_uri (remote);
-			g_free (remote);
-			if (!local)
-				continue;
-			d(g_print ("touching: %s\n", local));
-			utime (local, NULL);
-			g_free (local);
-		}
-
-		goto_product_page ();
-		d(g_print ("w00t!\n"));
-		return FALSE;
-	}
-
-	return TRUE;
+	return info->phase != GNOME_VFS_XFER_PHASE_COMPLETED;
 }
 
 /**
@@ -265,28 +292,11 @@ e_mkdir_hier(const char *path, mode_t mode)
         return 0;
 }
 
-/* 
- * this is probably the scariest function in bug-buddy.
- *
- * here is what it is supposed to do:
- *
- * we should download a new file into our local cache if:
- *
- *  * the cached file doesn't exist
- *  * the cached file is older than the system one
- *  * the cached file is older than a week
- *  * the cached file isn't XML
- *
- */
-
 static BugzillaXMLFile *
 get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 {
 	BugzillaXMLFile *xmlfile;
 	char *localdir, *tmppath, *src_uri;
-	struct stat sys_stat, local_stat;
-	gboolean sys_is_newer, cache_is_old;
-	xmlDoc *doc;
 
 	src_uri = gnome_config_get_string (key);
 	if (!src_uri) {
@@ -304,55 +314,12 @@ get_xml_file (BugzillaBTS *bts, const char *key, XMLFunc parse_func)
 	localdir = g_build_filename (tmppath, "bugzilla", bts->subdir, NULL);
 
 	g_free (tmppath);
-
-	if (stat (xmlfile->cache_path, &local_stat)) {
-		d(g_message ("could not stat local file: `%s': %s\n", xmlfile->cache_path, g_strerror (errno)));
-		if (e_mkdir_hier (localdir, S_IRWXU)) {
-			d(g_warning ("could not create local dir: `%s': %s\n", localdir, g_strerror (errno)));
-			g_free (localdir);			
-			return xmlfile;
-		}
-		g_free (localdir);
-		goto append_uris;
+	
+	if (e_mkdir_hier (localdir, S_IRWXU)) {
+		d(g_warning ("could not create local dir: `%s': %s\n", localdir, g_strerror (errno)));
 	}
-
+	
 	g_free (localdir);
-
-	if (stat (xmlfile->system_path, &sys_stat)) {
-		d(g_warning ("could not stat sys file: `%s': %s\n", xmlfile->system_path, g_strerror (errno)));
-		goto append_uris;
-	}
-       
-#define A_DAY (24 * 60 * 60)
-
-	sys_is_newer = sys_stat.st_mtime > local_stat.st_mtime;
-	cache_is_old = (time (NULL) - local_stat.st_mtime) > (7 * A_DAY);
-
-
-	d(g_print ("sys_is_newer (%d): %d - %d = %d (%f)\n",
-		   sys_is_newer, sys_stat.st_mtime, local_stat.st_mtime,
-		   sys_stat.st_mtime - local_stat.st_mtime,
-		   (sys_stat.st_mtime - local_stat.st_mtime) / (float)A_DAY));
-
-	d(g_print ("cache_is_old (%d): %d - %d = %d (%f)\n",
-		   cache_is_old, time (NULL), local_stat.st_mtime,
-		   time (NULL) - local_stat.st_mtime,
-		   (time (NULL) - local_stat.st_mtime) / (float)A_DAY));
-
-	if (sys_is_newer || cache_is_old)
-		goto append_uris;
-
-	doc = xmlParseFile (xmlfile->cache_path);
-	if (!doc)
-		goto append_uris;
-	
-	parse_func (bts, doc);
-		
-	xmlfile->done = TRUE;
-	
-	return xmlfile;
-
- append_uris:
 
 	d(g_print ("wanting to save: %s\nto %s\n", src_uri, xmlfile->cache_path));
 
@@ -438,6 +405,7 @@ load_bugzilla (const char *filename)
 
 	bts->products_xml = get_xml_file (bts, "products", load_products_xml);
 	bts->config_xml   = get_xml_file (bts, "config",   load_config_xml);
+	bts->mostfreq_xml = get_xml_file (bts, "mostfreq", load_mostfreq_xml);
 
 	gnome_config_pop_prefix ();
 
@@ -500,8 +468,7 @@ load_bugzilla_xml (void)
 		if (bts->config_xml && !bts->config_xml->done) {
 			doc = NULL;
 
-			if (bts->config_xml->read_from_cache)
-				doc = xmlParseFile (bts->config_xml->cache_path);
+			doc = xmlParseFile (bts->config_xml->cache_path);
 
 			if (!doc)
 				doc = xmlParseFile (bts->config_xml->system_path);
@@ -509,6 +476,20 @@ load_bugzilla_xml (void)
 			if (doc) 
 				load_config_xml (bts, doc);
 			bts->config_xml->done = TRUE;
+		}
+
+		if (bts->mostfreq_xml && !bts->mostfreq_xml->done) {
+			doc = NULL;
+
+			if (bts->mostfreq_xml->read_from_cache)
+				doc = xmlParseFile (bts->mostfreq_xml->cache_path);
+
+			if (!doc)
+				doc = xmlParseFile (bts->mostfreq_xml->system_path);
+
+			if (doc)
+				load_mostfreq_xml (bts, doc);
+			bts->mostfreq_xml->done = TRUE;
 		}
 
 		w = gtk_menu_item_new_with_label (bts->name);
@@ -524,7 +505,6 @@ load_bugzilla_xml (void)
 	bugzilla_bts_add_products_to_clist (druid_data.all_products);	
 }
 
-#if 0
 static void
 p_string (GnomeVFSURI *uri, gpointer data)
 {
@@ -533,8 +513,108 @@ p_string (GnomeVFSURI *uri, gpointer data)
 	s = gnome_vfs_uri_to_string (uri, GNOME_VFS_URI_HIDE_NONE);
 	g_print ("\t%s\n", s);
 	g_free (s);
+
+	return;
+
+	/* reference ourselves to make gcc quiet */
+	p_string (NULL, NULL);
 }
-#endif
+
+static void
+uri_visited (CellRendererUri *uri, const char *path, GtkListStore *model)
+{
+	GtkTreeIter iter;
+
+	if (!gtk_tree_model_get_iter_from_string (GTK_TREE_MODEL (model), &iter, path))
+		return;
+
+	gtk_list_store_set (model, &iter, 
+			    MOSTFREQ_SHOWN, TRUE,
+			    -1);
+}
+
+static gboolean
+mostfreq_motion (GtkWidget *w, GdkEventMotion *event, gpointer data)
+{
+	int tx, ty;
+	GtkTreeViewColumn *col;
+	GdkCursor *cursor;
+	gboolean showing_hand, inside;
+
+	gtk_tree_view_widget_to_tree_coords (GTK_TREE_VIEW (w), 
+					     event->x, event->y,
+					     &tx, &ty);
+	
+	inside = gtk_tree_view_get_path_at_pos (GTK_TREE_VIEW (w),
+						tx, ty,
+						NULL, &col,
+						NULL, NULL);
+
+	showing_hand = inside &&
+		(col == gtk_tree_view_get_column (GTK_TREE_VIEW (w), 0));
+
+	if (showing_hand == druid_data.showing_hand)
+		return FALSE;
+
+	druid_data.showing_hand = showing_hand;
+	cursor = gdk_cursor_new (showing_hand
+				 ? GDK_HAND2
+				 : GDK_LEFT_PTR);
+	gdk_window_set_cursor (w->window, cursor);
+	gdk_cursor_unref (cursor);
+
+	return FALSE;
+}
+
+static void
+create_mostfreq_list (void)
+{
+	GtkListStore *model;
+	GtkTreeView *view;
+	GtkCellRenderer *ren;
+
+	view = GTK_TREE_VIEW (GET_WIDGET ("mostfreq-list"));
+
+	model = gtk_list_store_new (MOSTFREQ_COLS, 
+				    G_TYPE_STRING, G_TYPE_STRING, 
+				    G_TYPE_STRING, G_TYPE_STRING,
+				    G_TYPE_STRING, G_TYPE_BOOLEAN);
+
+	g_object_set (G_OBJECT (view), "model", model, NULL);
+	g_object_unref (G_OBJECT (model));
+
+	ren = g_object_new (TYPE_CELL_RENDERER_URI, NULL);
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("ID"), ren,
+						     "text", MOSTFREQ_ID,
+						     "uri", MOSTFREQ_URL,
+						     "visited", MOSTFREQ_SHOWN,
+						     NULL);
+	
+	g_signal_connect (ren, "uri_visited", G_CALLBACK (uri_visited), model);
+	g_signal_connect (view, "motion-notify-event",
+			  G_CALLBACK (mostfreq_motion),
+			  ren);
+
+
+	ren = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Product"), ren,
+						     "text", MOSTFREQ_PRODUCT,
+						     NULL);
+
+	/*ren = gtk_cell_renderer_text_new ();*/
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Component"), ren,
+						     "text", MOSTFREQ_COMPONENT,
+						     NULL);
+
+	/*ren = gtk_cell_renderer_text_new ();*/
+	gtk_tree_view_insert_column_with_attributes (view, -1,
+						     _("Description"), ren,
+						     "text", MOSTFREQ_DESC,
+						     NULL);
+}
 
 static void
 create_products_list (void)
@@ -629,6 +709,8 @@ load_bugzillas (void)
 
 	create_components_list ();
 
+	create_mostfreq_list ();
+
 	druid_data.all_products = g_new0 (BugzillaBTS, 1);
 	druid_data.all_products->name = _("All");
 
@@ -652,41 +734,22 @@ load_bugzillas (void)
 		}
 	}
 
-	if (druid_data.need_to_download) {
-		GtkWidget *w;
+	closedir (dir);
 
-		w = gtk_message_dialog_new (GTK_WINDOW (GET_WIDGET ("druid-window")),
-					    0,
-					    GTK_MESSAGE_QUESTION,
-					    GTK_BUTTONS_YES_NO,
-					    _("Bug Buddy has determined that some of its information about\n"
-					      "the various bug tracking systems may need to be updated.\n\n"
-					      "Should Bug Buddy try to update these files now?"));
+	d(g_print ("downloading:\n"));
+	d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));
+	d(g_print ("to:\n"));
+	d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
 
-		gtk_dialog_set_default_response (GTK_DIALOG (w), GTK_RESPONSE_YES);
-
-		d(g_print ("downloading:\n"));
-		d(g_list_foreach (druid_data.dlsources, (GFunc)p_string, NULL));
-		d(g_print ("to:\n"));
-		d(g_list_foreach (druid_data.dldests, (GFunc)p_string, NULL));
-
-		if (GTK_RESPONSE_YES == gtk_dialog_run (GTK_DIALOG (w))) {
-			if (GNOME_VFS_OK == gnome_vfs_async_xfer (	    
-				    &druid_data.vfshandle,
-				    druid_data.dlsources,
-				    druid_data.dldests,
-				    GNOME_VFS_XFER_DEFAULT,
-				    GNOME_VFS_XFER_ERROR_MODE_ABORT,
-				    GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
-				    GNOME_VFS_PRIORITY_DEFAULT,
-				    async_update, NULL, NULL, NULL)) {
-				gtk_widget_destroy (w);
-				return;
-			}
-		}
-		gtk_widget_destroy (w);
-	}
-	goto_product_page ();
+	gnome_vfs_async_xfer (	    
+		&druid_data.vfshandle,
+		druid_data.dlsources,
+		druid_data.dldests,
+		GNOME_VFS_XFER_DEFAULT,
+		GNOME_VFS_XFER_ERROR_MODE_ABORT,
+		GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE,
+		GNOME_VFS_PRIORITY_DEFAULT,
+		async_update, NULL, NULL, NULL);
 }
 
 static void
@@ -710,7 +773,6 @@ bugzilla_bts_add_products_to_clist (BugzillaBTS *bts)
 	GtkListStore *store;
 
 	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
-	gtk_tree_view_set_headers_visible (w, TRUE);
 
 	g_object_get (G_OBJECT (w), "model", &store, NULL);
 
@@ -766,7 +828,6 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	GtkListStore *store;
 
 	w = GTK_TREE_VIEW (GET_WIDGET ("component-list"));
-	gtk_tree_view_set_headers_visible (w, TRUE);
 
 	g_object_get (G_OBJECT (w), "model", &store, NULL);
 
@@ -788,6 +849,40 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	c = GET_WIDGET ("severity-list");
 	gtk_option_menu_set_menu (GTK_OPTION_MENU (c), m);
 	g_slist_foreach (prod->bts->severities, (GFunc)add_severity, m);
+}
+
+static void
+add_mostfreq (BugzillaBug *bug, GtkListStore *store)
+{
+	GtkTreeIter iter;
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
+			    MOSTFREQ_PRODUCT,   bug->product,
+			    MOSTFREQ_COMPONENT, bug->component,
+			    MOSTFREQ_URL,       bug->url,
+			    MOSTFREQ_ID,        bug->id,
+			    MOSTFREQ_DESC,      bug->desc,
+			    -1);
+}
+
+gboolean
+bugzilla_add_mostfreq (BugzillaBTS *bts)
+{
+	/* GtkWidget *m, *c; */
+	GtkTreeView *w;
+	GtkListStore *store;
+	
+	w = GTK_TREE_VIEW (GET_WIDGET ("mostfreq-list"));
+	g_object_get (G_OBJECT (w), "model", &store, NULL);;
+
+	gtk_list_store_clear (store);
+
+	g_slist_foreach (bts->bugs, (GFunc)add_mostfreq, store);
+
+	gtk_tree_view_columns_autosize (w);
+
+	return bts->bugs == NULL;
 }
 
 #define LINE_WIDTH 72

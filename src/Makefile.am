@@ -11,13 +11,33 @@ INCLUDES = \
 	-DLIBGLADE_DISABLE_DEPRECATED	\
 	-D_GNU_SOURCE
 
+bb_built_sources = \
+	bb-marshal.c	\
+	bb-marshal.h
+
+bb-marshal.h: bb-marshal.list
+	$(GLIB_GENMARSHAL) --prefix=_bb_marshal bb-marshal.list --header >> xgen-bmh \
+	&& (cmp -s xgen-bmh bb-marshal.h || cp xgen-bmh bb-marshal.h) \
+	&& rm -f xgen-bmh
+
+bb-marshal.c: bb-marshal.list
+	$(GLIB_GENMARSHAL) --prefix=_bb_marshal bb-marshal.list --body >> xgen-bmc \
+	&& (cmp -s xgen-bmc bb-marshal.c || cp xgen-bmc bb-marshal.c) \
+	&& rm -f xgen-bmc
+
+
 bin_PROGRAMS = bug-buddy
 
+$(OBJECTS): $(bb_built_sources)
+
 bug_buddy_SOURCES = \
+	$(bb_built_sources)	\
 	bug-buddy.c		\
 	bug-buddy.h		\
 	bugzilla.c		\
 	bugzilla.h		\
+	cell-renderer-uri.c	\
+	cell-renderer-uri.h	\
 	config.c		\
 	gdb-buddy.c		\
 	libglade-buddy.h	\
@@ -65,4 +85,12 @@ EXTRA_DIST = \
 	$(buddy_DATA)		\
 	bug-buddy.glade		\
 	bug-buddy.mime		\
-	bug-buddy.keys.in
+	bug-buddy.keys.in	\
+	bb-marshal.list
+
+DONT_DIST_SOURCE = $(bb_built_sources)
+
+dist-hook:
+	for file in $(DONT_DIST_SOURCE) ; do \
+		rm -f $(distdir)/$$file ; \
+	done

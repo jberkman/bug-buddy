@@ -387,17 +387,6 @@ init_canvi (void)
 				       NULL);
 }
 
-static gint
-check_intro_skip (gpointer data)
-{
-	if (druid_data.already_run && 
-	    gtk_toggle_button_get_active (
-		    GTK_TOGGLE_BUTTON (GET_WIDGET ("intro-skip-toggle"))))
-		on_druid_next_clicked (NULL, NULL);
-
-	return FALSE;
-}
-
 /* there should be no setting of default values here, I think */
 static void
 init_ui (void)
@@ -567,9 +556,18 @@ main (int argc, char *argv[])
 
 	gtk_widget_show (GET_WIDGET ("druid-window"));
 
-	gtk_idle_add (check_intro_skip, NULL);
+	if (getenv ("BUG_ME_HARDER"))
+		gtk_widget_show (GET_WIDGET ("progress-window"));
 	
-	druid_set_state (STATE_INTRO);
+	druid_set_state (STATE_INTRO);	
+
+	if (druid_data.already_run && 
+	    gtk_toggle_button_get_active (
+		    GTK_TOGGLE_BUTTON (GET_WIDGET ("intro-skip-toggle"))))
+		on_druid_next_clicked (NULL, NULL);
+
+	load_bugzillas ();
+
 
 	gtk_main ();
 

@@ -1,0 +1,45 @@
+<!DOCTYPE products SYSTEM "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-gnome-org.dtd">
+<products>
+  <product name="Evolution">
+    <component name="Contacts [was: Addressbook]">
+      <bug bugid="9699">
+        <desc>Crash: Adding LDAP server to address book</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=9699</url>
+      </bug>
+    </component>
+    <component name="Mailer">
+      <bug bugid="16453">
+        <desc>Crash: email check?</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=16453</url>
+      </bug>
+    </component>
+    <component name="Gnome-pilot &amp; pilot-link">
+      <bug bugid="10427">
+        <desc>gpilotd crash when syncing EToDo</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=10427</url>
+      </bug>
+    </component>
+    <component name="Summary [was My Evolution]">
+      <bug bugid="5053">
+        <desc>Better Summary source selector (including IMAP)</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=5053</url>
+      </bug>
+    </component>
+  </product>
+  <product name="Red Carpet">
+    <component name="Installer">
+      <bug bugid="15869">
+        <desc>Downloading is a serious problem</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
+      </bug>
+    </component>
+  </product>
+  <product name="Ximian GNOME">
+    <component name="installer">
+      <bug bugid="15869">
+        <desc>Downloading is a serious problem</desc>
+        <url>http://bugzilla.ximian.com/show_bug.cgi?id=15869</url>
+      </bug>
+    </component>
+  </product>
+</products>

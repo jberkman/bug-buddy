@@ -1,3 +1,9 @@
+2001-12-11  jacob berkman  <jacob@ximian.com>
+
+	* */*: add mostfreq support and some other stuff.  this module is
+	mine so i don't have to add good changelog entries.
+	neener-neener.
+
 2001-12-08  Abel Cheung  <maddog@linux.org.hk>
 
 	* configure.in: Re-enable zh_TW.po. It's in UTF8 encoding,

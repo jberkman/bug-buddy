@@ -14,7 +14,8 @@ bugzilla_DATA = \
 	\
 	bugzilla/ximian.bugzilla	\
 	bugzilla/ximian/config		\
-	bugzilla/ximian/products
+	bugzilla/ximian/products	\
+	bugzilla/ximian/mostfreq
 
 EXTRA_DIST = \
 	bug-buddy.spec.in	\
@@ -24,3 +25,18 @@ EXTRA_DIST = \
 	intltool-update.in	\
 	COPYING.ximian-logos	\
 	$(bugzilla_DATA)
+
+# this should probably be run at dist time or something
+update-bugzilla:
+	cd $(top_srcdir)/bugzilla/ximian/ \
+	&& for file in products config mostfreq; do \
+		wget "http://bugzilla.ximian.com/bugzilla-$$file.xml" -O $$file.tmp \
+		&& (cmp -s $$file.tmp $$file || cp -v $$file.tmp $$file) \
+		&& rm -f $$file.tmp; \
+	done
+	cd $(top_srcdir)/bugzilla/gnome/ \
+	&& for file in products config; do \
+		wget "http://bugzilla.gnome.org/bugzilla.gnome.org/bugzilla-$$file.xml" -O $$file.tmp \
+		&& (cmp -s $$file.tmp $$file || cp -v $$file.tmp $$file) \
+		&& rm -f $$file.tmp; \
+	done

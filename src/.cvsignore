@@ -10,3 +10,6 @@ debian-packages
 gnome-packages
 bug-buddy.desktop
 bug-buddy.glade.tmp
+bb-marshal.c
+bb-marshal.h
+core.*
