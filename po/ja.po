@@ -4,9 +4,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bug-buddy CVS-20000522\n"
-"POT-Creation-Date: 2000-05-22 05:02-0400\n"
-"PO-Revision-Date: 2000-05-22 08:37+0900\n"
+"Project-Id-Version: bug-buddy CVS-20000524\n"
+"POT-Creation-Date: 2000-05-24 00:50+0900\n"
+"PO-Revision-Date: 2000-05-24 00:52+0900\n"
 "Last-Translator: Akira TAGOH <at@ff.iij4u.or.jp>\n"
 "Language-Team: Japanese <translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -264,19 +264,19 @@ msgstr ""
 
 #: src/bug-buddy.c:899
 msgid "About"
-msgstr ""
+msgstr "bug-buddy について"
 
 #: src/bug-buddy.c:899
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"
 
 #: src/bug-buddy.c:899
 msgid "Stop"
-msgstr ""
+msgstr "停止"
 
 #: src/bug-buddy.c:899
 msgid "Refresh"
-msgstr ""
+msgstr "リフレッシュ"
 
 #: src/bug-buddy.c:949
 #, c-format
