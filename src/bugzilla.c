@@ -45,28 +45,16 @@
 /* define to x for some debugging output */
 #define d(x)
 
-static int
-prod_cmp (BugzillaProduct *a, BugzillaProduct *b)
-{
-	return strcasecmp (a->name, b->name);
-}
-
-static int
-comp_cmp (BugzillaComponent *a, BugzillaComponent *b)
-{
-	return strcasecmp (a->name, b->name);
-}
-
 static void
 bugzilla_bts_insert_product (BugzillaBTS *bts, BugzillaProduct *prod)
 {
-	bts->products = g_slist_insert_sorted (bts->products, prod, (gpointer)prod_cmp);
+	g_hash_table_insert (bts->products, prod->name, prod);
 }
 
 static void
 bugzilla_product_insert_component (BugzillaProduct *prod, BugzillaComponent *comp)
 {
-	prod->components = g_slist_insert_sorted (prod->components, comp, (gpointer)comp_cmp);
+	g_hash_table_insert (prod->components, comp->name, comp);
 }
 
 /* i think the bugzilla files are ISO8859-1 */
@@ -180,8 +168,8 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 
 	d(g_print ("products:\n"));
 
-	/* FIXME: free list */
-	bts->products = NULL;
+	/* FIXME: g_hash_table_foreach_remove(); */
+	bts->products = g_hash_table_new (g_str_hash, g_str_equal);
 
 	for (node = xmlDocGetRootElement (doc)->children; node; node = node->next) {
 		d(g_print ("\t%s\n", node->name));
@@ -191,9 +179,9 @@ load_products_xml (BugzillaBTS *bts, xmlDoc *doc)
 
 			prod->name        = XML_NODE_GET_PROP (node, "name");
 			prod->description = XML_NODE_GET_PROP (node, "description");
+			prod->components  = g_hash_table_new (g_str_hash, g_str_equal);
 
 			bugzilla_bts_insert_product (bts, prod);
-			bugzilla_bts_insert_product (druid_data.all_products, prod);
 
 			for (cur = node->children; cur; cur = cur->next) {
 				d(g_print ("\t\t%s\n", node->name));
@@ -446,12 +434,6 @@ on_progress_cancel_clicked (GtkWidget *w, gpointer data)
 }
 #endif
 
-static void
-show_products (GtkWidget *w, gpointer data)
-{
-	bugzilla_bts_add_products_to_clist ((BugzillaBTS *)data);
-}
-
 static xmlDoc *
 load_bugzilla_xml_file (BugzillaXMLFile *xml_file)
 {
@@ -471,57 +453,67 @@ load_bugzilla_xml_file (BugzillaXMLFile *xml_file)
 	return doc;
 }
 
+static void
+add_product (gpointer key, BugzillaProduct *p, GtkListStore *store)
+{
+	GtkTreeIter iter;
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter,
+			    PRODUCT_ICON, p->bts->pixbuf,
+			    PRODUCT_NAME, p->name,
+			    PRODUCT_DESC, p->description,
+			    PRODUCT_DATA, p,
+			    -1);
+}
+
+static void
+load_bugzilla_xml_cb (gpointer key, BugzillaBTS *bts, GtkListStore *store)
+{
+	xmlDoc *doc;
+
+	if (bts->products_xml) { // && !bts->products_xml->done) {
+		doc = load_bugzilla_xml_file (bts->products_xml);
+		if (doc)
+			load_products_xml (bts, doc);
+		bts->products_xml->done = TRUE;
+	}
+	
+	if (bts->config_xml) { // && !bts->config_xml->done) {
+		doc = load_bugzilla_xml_file (bts->config_xml);
+		if (doc) 
+			load_config_xml (bts, doc);
+		bts->config_xml->done = TRUE;
+	}
+	
+	if (bts->mostfreq_xml) { // && !bts->mostfreq_xml->done) {
+		doc = load_bugzilla_xml_file (bts->mostfreq_xml);
+		if (doc)
+			load_mostfreq_xml (bts, doc);
+		bts->mostfreq_xml->done = TRUE;
+	}
+	
+	g_hash_table_foreach (bts->products, (GHFunc)add_product, store);
+}
+
 void
 load_bugzilla_xml (void)
 {
-	static gboolean loaded;
-	xmlDoc *doc;
-	BugzillaBTS *bts;
-	GSList *item;
-	GtkWidget *m;
-	GtkWidget *w;
+	GtkTreeView *w;
+	GtkListStore *store;
 
-	if (loaded) return;
-	loaded = TRUE;
+	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
+
+	g_object_get (G_OBJECT (w), "model", &store, NULL);
+
+	gtk_list_store_clear (store);
+	druid_data.product = NULL;
 
 	d(g_print ("loading xml..\n"));
 
-	m = gtk_menu_new ();
+	g_hash_table_foreach (druid_data.bugzillas, (GHFunc)load_bugzilla_xml_cb, store);
 
-	for (item = druid_data.bugzillas; item; item = item->next) {
-		bts = (BugzillaBTS *)item->data;
-		if (bts->products_xml) { // && !bts->products_xml->done) {
-			doc = load_bugzilla_xml_file (bts->products_xml);
-			if (doc)
-				load_products_xml (bts, doc);
-			bts->products_xml->done = TRUE;
-		}
-
-		if (bts->config_xml) { // && !bts->config_xml->done) {
-			doc = load_bugzilla_xml_file (bts->config_xml);
-			if (doc) 
-				load_config_xml (bts, doc);
-			bts->config_xml->done = TRUE;
-		}
-
-		if (bts->mostfreq_xml) { // && !bts->mostfreq_xml->done) {
-			doc = load_bugzilla_xml_file (bts->mostfreq_xml);
-			if (doc)
-				load_mostfreq_xml (bts, doc);
-			bts->mostfreq_xml->done = TRUE;
-		}
-
-		w = gtk_menu_item_new_with_label (bts->name);
-		g_signal_connect (G_OBJECT (w), "activate",
-				  G_CALLBACK (show_products),
-				  bts);
-		gtk_widget_show (w);
-		gtk_menu_shell_append (GTK_MENU_SHELL (m), w);
-	}
-	w = GET_WIDGET ("bts-menu");
-	gtk_option_menu_set_menu (GTK_OPTION_MENU (w), m);
-	gtk_option_menu_set_history (GTK_OPTION_MENU (w), 0);
-	bugzilla_bts_add_products_to_clist (druid_data.all_products);	
+	gtk_tree_view_columns_autosize (w);
 }
 
 static void
@@ -780,10 +772,7 @@ load_bugzillas (void)
 
 	create_mostfreq_list ();
 
-	druid_data.all_products = g_new0 (BugzillaBTS, 1);
-	druid_data.all_products->name = _("All");
-
-	druid_data.bugzillas = g_slist_append (druid_data.bugzillas, druid_data.all_products);
+	druid_data.bugzillas = g_hash_table_new (g_str_hash, g_str_equal);
 
 	while ((dent = readdir (dir))) {
 		if (dent->d_name[0] == '.')
@@ -799,7 +788,7 @@ load_bugzillas (void)
 		g_free (p);
 		if (bts) {
 			d(g_print ("bugzilla loaded: %s\n", bts->name));
-			druid_data.bugzillas = g_slist_append (druid_data.bugzillas, bts);
+			g_hash_table_insert (druid_data.bugzillas, bts->name, bts);
 		}
 	}
 
@@ -829,38 +818,7 @@ load_bugzillas (void)
 }
 
 static void
-add_product (BugzillaProduct *p, GtkListStore *store)
-{
-	GtkTreeIter iter;
-
-	gtk_list_store_append (store, &iter);
-	gtk_list_store_set (store, &iter,
-			    PRODUCT_ICON, p->bts->pixbuf,
-			    PRODUCT_NAME, p->name,
-			    PRODUCT_DESC, p->description,
-			    PRODUCT_DATA, p,
-			    -1);
-}
-
-void
-bugzilla_bts_add_products_to_clist (BugzillaBTS *bts)
-{
-	GtkTreeView *w;
-	GtkListStore *store;
-
-	w = GTK_TREE_VIEW (GET_WIDGET ("product-list"));
-
-	g_object_get (G_OBJECT (w), "model", &store, NULL);
-
-	gtk_list_store_clear (store);
-	druid_data.product = NULL;
-
-	g_slist_foreach (bts->products, (GFunc)add_product, store);
-	gtk_tree_view_columns_autosize (w);
-}
-
-static void
-add_component (BugzillaComponent *comp, GtkListStore *store)
+add_component (gpointer key, BugzillaComponent *comp, GtkListStore *store)
 {
 	GtkTreeIter iter;
 
@@ -910,7 +868,7 @@ bugzilla_product_add_components_to_clist (BugzillaProduct *prod)
 	gtk_list_store_clear (store);
 	druid_data.component = NULL;
 
-	g_slist_foreach (prod->components, (GFunc)add_component, store);
+	g_hash_table_foreach (prod->components, (GHFunc)add_component, store);
 
 	gtk_tree_view_columns_autosize (w);
 
@@ -1056,7 +1014,13 @@ generate_email_text (gboolean include_headers)
 		/* This is what gnome.org and ximian.com use */
 		g_string_append_printf (email, "Package: %s\n", druid_data.product->name);
 		g_string_append_printf (email, "%s: %s\n", druid_data.product->bts->severity_header, severity);					
-		g_string_append_printf (email, "Version: %s\n", version);
+		g_string_append_printf (email, "Version: %s %s\n",
+					druid_data.gnome_platform_version
+					? druid_data.gnome_platform_version
+					: "",
+					version);
+		if (druid_data.gnome_vendor)
+			g_string_append_printf (email, "os_details: %s\n", druid_data.gnome_vendor);
 		g_string_append_printf (email, "Synopsis: %s\n", subject);
 		g_string_append_printf (email, "Bugzilla-Product: %s\n", druid_data.product->name);
 		g_string_append_printf (email, "Bugzilla-Component: %s\n", druid_data.component->name);

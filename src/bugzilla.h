@@ -69,7 +69,7 @@ struct _BugzillaBTS {
 	char *severity_header;
 	
 	/* products.xml */
-	GSList *products;
+	GHashTable *products;
 
 	/* config.xml */
 	GSList    *severities;
@@ -83,7 +83,7 @@ typedef struct {
 	BugzillaBTS *bts;
 	char        *name;
 	char        *description;
-	GSList      *components;
+	GHashTable  *components;
 } BugzillaProduct;
 
 typedef struct {
@@ -132,7 +132,6 @@ enum {
 void load_bugzillas (void);
 void load_bugzilla_xml (void);
 
-void bugzilla_bts_add_products_to_clist (BugzillaBTS *bts);
 void bugzilla_product_add_components_to_clist (BugzillaProduct *product);
 
 gboolean bugzilla_add_mostfreq (BugzillaBTS *bts);

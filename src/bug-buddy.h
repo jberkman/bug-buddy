@@ -111,8 +111,7 @@ typedef struct {
 	int         fd;
 	gboolean    explicit_dirty;
 
-	BugzillaBTS *all_products;
-	GSList      *bugzillas;
+	GHashTable  *bugzillas;
 
 	/* Debian BTS stuff */
 	SubmitType    submit_type;

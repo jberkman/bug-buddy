@@ -1,5 +1,17 @@
 2002-08-14  jacob berkman  <jacob@ximian.com>
 
+	* src/bugzilla.[ch] (bugzilla_bts_add_products_to_clist): nuke
+	(BugzillaProduct): make components a hash table
+	(BugzillaBTS): make products a hash table
+	(generate_email_text): submit data from gnome-version.xml
+	(*): fixups for hash tables, and i think fix bug #83109 (can't
+	tell because gnome-vfs crashes for me)
+
+	* src/bug-buddy.h (DruidData): make bugzillas a GHashTable, and
+	nuke all_products
+
+	* src/bug-buddy.glade: kill the bts selection option menu
+
 	* src/bug-buddy.[ch] (init_gnome_version_stuff): read gnome
 	platform version and vendor from
 	$prefix/share/gnome-about/gnome-version.xml
