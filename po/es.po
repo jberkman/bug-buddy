@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 1.0\n"
-"POT-Creation-Date: 2001-08-06 17:14-0400\n"
-"PO-Revision-Date: 2001-02-14 23:07+0100\n"
+"POT-Creation-Date: 2001-08-13 13:23+0200\n"
+"PO-Revision-Date: 2001-08-13 13:25+0200\n"
 "Last-Translator: Carlos Perelló Marín <carlos@gnome-db.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -196,7 +196,7 @@ msgstr ""
 msgid "Error on read... aborting"
 msgstr "Error al leer... abortando"
 
-#: src/gdb-buddy.c:249
+#: src/gdb-buddy.c:248
 msgid ""
 "GDB could not be found on your system.\n"
 "Debugging information will not be obtained."
@@ -204,7 +204,7 @@ msgstr ""
 "No se ha podido encontrar GDB en su sistema.\n"
 "No se obtendrá información de depuración."
 
-#: src/gdb-buddy.c:274
+#: src/gdb-buddy.c:273
 msgid ""
 "Could not find the gdb-cmd file.\n"
 "Please try reinstalling Bug Buddy."
@@ -212,7 +212,7 @@ msgstr ""
 "No se pudo encontrar el archivo gdb-cmd.\n"
 "Pruebe a reinstalar Bug Buddy."
 
-#: src/gdb-buddy.c:283 src/util.c:76
+#: src/gdb-buddy.c:282 src/util.c:76
 msgid "Error on fork()."
 msgstr "Error al hacer fork()."
 
@@ -559,7 +559,7 @@ msgid "Your bug report was saved in '%s'"
 msgstr "Su informe de error fue guardado en '%s'"
 
 #: src/united-states-of-bug-buddy.c:474
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your bug report has been submitted to:\n"
 "\n"
@@ -568,7 +568,10 @@ msgid ""
 "Thanks!"
 msgstr ""
 "Su informe de error fue enviado a:\n"
-"        <%s>"
+"\n"
+"        <%s>\n"
+"\n"
+"¡Gracias!"
 
 #: src/united-states-of-bug-buddy.c:512
 msgid "You must specify a product for your bug report."

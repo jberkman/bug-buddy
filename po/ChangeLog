@@ -1,6 +1,6 @@
-2001-08-06  gettextize  <bug-gnu-utils@gnu.org>
+2001-08-13  Carlos Perelló Marín <carlos@gnome-db.org>
 
-	* Makefile.in.in: Upgrade to gettext-0.10.38.
+	* es.po: Updated Spanish translation.
 
 2001-07-28  Pablo Saratxaga  <pablo@mandrakesoft.com>
 
