@@ -140,17 +140,16 @@ msgid "Core file from program"
 msgstr "core-fil fra programmet"
 
 #: src/bug-buddy.c:328
-#, fuzzy
 msgid ""
 "It is much more helpful if you specify\n"
 "a more specific package than 'general'.\n"
 "\n"
 "Please specify a package."
 msgstr ""
-"Det vil være til stor hjælp hvis du kan\n"
-"specificere en mere specifik pakke.\n"
+"Det er meget mere hjælpsomt hvis du kan angive\n"
+"en medre specifik pakke end 'generel'.\n"
 "\n"
-"Specificér venligst en pakke!"
+"Angiv venligst en pakke."
 
 #: src/bug-buddy.c:370
 msgid "The specified file does not exist."
