@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-03-21 13:58+0000\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -253,33 +253,35 @@ msgstr "πρόκειτε να εκτελεστεί το '%s'"
 msgid "Unable to start mail program: '%s'"
 msgstr "Αδύνατη η εκκίνηση του προγράμματος ηλεκ. αλληλογραφίας: '%s'"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Η αναφορά σφάλματος έχει αποθηκευθεί στο '%s'"
 
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
+#: src/bug-buddy.c:682
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr "Η αναφορά σφάλματός σας έχει σταλεί στο <%s>"
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr "Πρέπει να ορίσετε ηλεκ. διεύθυνση παραλήπτη"
 
 #
 #
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr "Αποστολή αυτής της αναφοράς σφάλματος τώρα;"
 
 #
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Παρακαλώ επιλέξτε ένα αρχείου για να αποθηκεύσετε."
 
 #
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -289,7 +291,7 @@ msgstr ""
 "Επανεγγραφή στο ίδιο αρχείο;"
 
 #
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -299,7 +301,7 @@ msgstr ""
 "Παρακαλώ ελέγξτε ότι το bug-buddy έχει εγκατασταθεί σωστά."
 
 #
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -308,7 +310,7 @@ msgstr ""
 "Παρακαλώ κάντε χρήση της επιλογής --appname command lineargument."
 
 #
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -317,7 +319,7 @@ msgstr ""
 "Αντί αυτού, παρακαλώ κάντε χρήση της επιλογής γραμμής εντολών --pid."
 
 #
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -458,7 +460,7 @@ msgid "Bug Tracking System "
 msgstr "Σύστημα Εντοπισμού Σφαλμάτων"
 
 #
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Πακέτο"
 
@@ -496,58 +498,62 @@ msgstr "Αριθμός Σφάλματος"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Σύντομη περιγραφή της αναφοράς σφάλματος"
 
 #
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Πλήρης περιγραφή του σφάλματος, με πληροφορίες αναπαραγωγής"
 
 #
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Συμπερίληψη αρχείου κειμένου"
 
 #
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Πληροφορίες Εκσφαλμάτωσης"
 
 #
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Επιλογή του δυαδικού αρχείου της εφαρμογής που κατέρρευσε"
 
 #
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Δυαδικό"
 
 #
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Αριθμός Διεργασίας"
 
 #
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Αρχείο core"
 
 #
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Επιλογή του αρχείου core"
 
 #
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Συλλογή Πληροφοριών Εκσφαλμάτωσης"
 
 #
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -556,59 +562,59 @@ msgstr ""
 "οι πληροφορίες εκσφαλμάτωσης..."
 
 #
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Διαμόρφωση Συστήματος"
 
 #
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Παρακαλώ επιβεβεώστε ότι αυτές οι πληροφορίες είναι σωστές"
 
 #
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Εγκατεστημένη έκδοση"
 
 #
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
 #
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Αυτόματη μετάβαση στην επόμενη σελίδα μετά την ολοκλήρωση"
 
 #
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Αποστολή της Αναφοράς"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "Προς"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Αποστολή αντιγράφου στον εαυτό σας"
 
 #
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Αποθήκευση της αναφοράς στο..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Περιεχόμενο"
 
 #
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Περίληψη"
 
 #
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "Το GEGL παρατηρεί."
 

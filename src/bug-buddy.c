@@ -658,7 +658,6 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 		g_free (s);
 	}
 
-
 	fprintf (fp, "To: %s\n", to);
 
 	if (druid_data.submit_type == SUBMIT_REPORT &&
@@ -672,16 +671,15 @@ on_complete_page_prepare (GtkWidget *page, GtkWidget *druid)
 	
 	w = GET_WIDGET ("content_text");
 	s = gtk_editable_get_chars (GTK_EDITABLE (w), 0, -1);
-	write_line_widthv (fp, s);
+	fprintf (fp, "%s", s);
 	g_free (s);
-
 
 	if (druid_data.submit_type == SUBMIT_FILE) {
 		fclose (fp);
 		s = g_strdup_printf (_("Your bug report was saved in '%s'"), file);
 	} else {
 		pclose (fp);
-		s = g_strdup_printf (_("Your bug report has been submitted to <%s>"), to);
+		s = g_strdup_printf (_("Your bug report has been submitted to:\n\t<%s>"), to);
 	}
 	g_free (to);
 

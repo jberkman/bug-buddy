@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 21:50+0300\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-04-29 22:00+0300\n"
 "Last-Translator: Sami Pesonen <spesonen@dlc.fi>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -217,29 +217,31 @@ msgstr "juuri ajamassa '%s'"
 msgid "Unable to start mail program: '%s'"
 msgstr "Ei pysty käynnistämään sähköpostiohjelmaa: '%s'"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Virheraportti talletettiin tiedostoon '%s'"
 
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
+#: src/bug-buddy.c:682
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr "Virheraportti on lähetetty osoitteeseen <%s>"
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr "Määrittele vastaanottajan sähköpostiosoite"
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr "Lähetätkö tämän virheraportin nyt?"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Valitse talletettavan tiedoston nimi."
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -248,7 +250,7 @@ msgstr ""
 "Tiedosto '%s' on jo olemassa.\n"
 "Kirjoitetaanko tämän tiedoston päälle?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -257,7 +259,7 @@ msgstr ""
 "Ei pystynyt avaamaan tiedostoa '%s'\n"
 "Varmista, että bug-buddy on oikein asennettu."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -265,7 +267,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME on virheellinen.\n"
 "Käytä sen sijaan komennon --appname lisäargumenttia."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -273,7 +275,7 @@ msgstr ""
 "$GNOME_CRASHED_PID on virheellinen.\n"
 "Käytä sen sijaan komennon --pid lisäargumenttia."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -398,7 +400,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Virheiden seurantajärjestelmä "
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Paketti"
 
@@ -431,46 +433,50 @@ msgid "Description"
 msgstr "Kuvaus"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Lyhyt otsikko virheraportille"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Virheen yksityiskohtainen kuvaus sisältäen kuinka toistaa se"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Liitä tekstitiedosto"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Virheenkorjaus tieto"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Valitse kaatuneen sovelluksen binääri"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binääri"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Prosessin ID"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Core-tiedosto"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Valitse core-tiedosto"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Keräämässä tietoja virheen korjaamiseksi"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -478,51 +484,51 @@ msgstr ""
 "Odota sillä aikaa kun kerätään \n"
 "tietoja virheen korjaamiseksi..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Järjestelmän kokoonpano"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Tarkista oheisten tietojen paikkansa pitävyys"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Asennettu versio"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Vaihda automaattisesti sivua kun valmis"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Lähettämässä virheraporttia"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "Kenelle"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Lähetä kopio itsellesi"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Tallenna raportti..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Sisältö"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Yhteenveto"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "The GEGL is watching."
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-04-20 12:51+0100\n"
 "Last-Translator: Fatih Demir <kabalak@gmx.net>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -217,29 +217,31 @@ msgstr "`%s''yi çalýþtýrýyorum"
 msgid "Unable to start mail program: '%s'"
 msgstr "ePosta uygulamasý `%s''yi baþlatamadým"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Hata raporu `%s''de kadedildi"
 
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
+#: src/bug-buddy.c:682
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr "Hata raporun <%s>'ye gönderilmiþtir"
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr "Bir ePosta adresini belirlemek zorundasýn"
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr "Bu hata raporunu þimdi göndereyim mi ?"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Kaydedilecek dosyayý seç ."
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -248,7 +250,7 @@ msgstr ""
 "'%s' dosyasý zaten var .\n"
 "Bu dosyanýn üstüne yazayým mý ?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -257,7 +259,7 @@ msgstr ""
 "'%s''yi açamadým .\n"
 "Lütfen bug-buddy'nin doðruca yüklendiðini te'min et ."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -265,7 +267,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME tam desteklenmiyor .\n"
 "Lütfen o'nun yerine --appname komuta seçeneðini seç ."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -273,7 +275,7 @@ msgstr ""
 "$GNOME_CRASHED_PID tam deskteklenmiyor .\n"
 "Lütfen o'nun yerine --pid komuta seçeneðini seç ."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -399,7 +401,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Hata Takip istemi"
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Pakaj"
 
@@ -433,46 +435,50 @@ msgid "Description"
 msgstr "Anlatým"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Hata raporu için kýsa bir üstyazý"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Hata'nýn tam anlatýmý ve hatanýn nasýl ortaya çýkarýlabilindiði"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Bir metin dosyasýný içer"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Çözülme bilgileri"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Çöken uygulamanýn biner þekilini belirle"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Biner"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Iþlem ID'si"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Çöküntü dosyasý"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Bir çöküntü dosyasýný seç"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Çözülme bilgileri toplanýyor"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -480,51 +486,51 @@ msgstr ""
 "Çözülme bilgileri toplanýrken\n"
 "lütfen bekle ..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Sistem Ayarlamasý"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Lütfen bu bilgilerin doðru olmasýna dikkat et"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Yüklenmiþ nesil"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Tamamlanýnca otomatikman ileri git"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Rapor gönderiliyor"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "Gönderilen"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Kendime bir kopya gönder"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Rapor'u farklý kaydet ..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Içerik"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Bir toplama'da"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL þimdi seyrediyor ."
 

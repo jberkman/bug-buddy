@@ -311,7 +311,7 @@ debian_bts_doit (GtkEditable *edit)
 	s = GET_TEXT (GET_WIDGET ("desc_area"));
 	if (s && strlen (s)) {
 		APPEND_TEXT ("\n\nDescription:\n");
-		APPEND_TEXT (s);
+		append_widthv (edit, s, &pos);
 	}
 	g_free (s);
 

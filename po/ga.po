@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy CVS\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-03-10 23:03+0000\n"
 "Last-Translator: Alastair McKinstry <mckinstry@computer.org>\n"
 "Language-Team: Irish <ga@li.org>\n"
@@ -208,55 +208,57 @@ msgstr ""
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:684
+#: src/bug-buddy.c:682
 #, c-format
-msgid "Your bug report has been submitted to <%s>"
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr ""
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr ""
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr ""
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
 "Overwrite this file?"
 msgstr ""
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
 "Please make sure bug-buddy was installed correctly."
 msgstr ""
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
 msgstr ""
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -364,7 +366,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr ""
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr ""
 
@@ -395,96 +397,100 @@ msgid "Description"
 msgstr ""
 
 #: src/glade-strings.c:37
-msgid "Short subject for the bug report"
+msgid "Please make your bug report in English, if possible."
 msgstr ""
 
 #: src/glade-strings.c:38
-msgid "Full description of the bug, including how to reproduce it"
+msgid "Short subject for the bug report"
 msgstr ""
 
 #: src/glade-strings.c:39
-msgid "Include a text file"
+msgid "Full description of the bug, including how to reproduce it"
 msgstr ""
 
 #: src/glade-strings.c:40
-msgid "Debugging Information"
+msgid "Include a text file"
 msgstr ""
 
 #: src/glade-strings.c:41
-msgid "Select the crashed application's binary"
+msgid "Debugging Information"
 msgstr ""
 
 #: src/glade-strings.c:42
-msgid "Binary"
+msgid "Select the crashed application's binary"
 msgstr ""
 
 #: src/glade-strings.c:43
-msgid "Process ID"
+msgid "Binary"
 msgstr ""
 
 #: src/glade-strings.c:44
-msgid "Core file"
+msgid "Process ID"
 msgstr ""
 
 #: src/glade-strings.c:45
-msgid "Select a core file"
+msgid "Core file"
 msgstr ""
 
 #: src/glade-strings.c:46
-msgid "Collecting Debugging Information"
+msgid "Select a core file"
 msgstr ""
 
 #: src/glade-strings.c:47
+msgid "Collecting Debugging Information"
+msgstr ""
+
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
 msgstr ""
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Cumasaíocht coráis"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr ""
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr ""
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr ""
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr ""
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr ""
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr ""
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr ""
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr ""
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr ""
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr ""
 

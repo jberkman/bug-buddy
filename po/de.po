@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-04-29 12:53+02:00\n"
 "Last-Translator: Karl Eichwalder <ke@suse.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -222,31 +222,33 @@ msgstr "dabei '%s' zu starten"
 msgid "Unable to start mail program: '%s'"
 msgstr "Kann das Mail-Programm nicht starten: '%s'"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Ihr Fehlerbericht wurde in '%s' gespeichert."
 
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
+#: src/bug-buddy.c:682
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr "Ihr Fehlerbericht wurde an <%s> geschickt."
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr "Sie müssen die E-Mail-Adreese des Empfängers angeben."
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr "Diesen Fehlerbericht jetzt abschicken?"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr ""
 "Bitte wählen Sie eine Datei,\n"
 "in der gespeichert werden soll."
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -255,7 +257,7 @@ msgstr ""
 "Die Datei `%s' existiert bereits.\n"
 "Diese Datei überschreiben?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -266,7 +268,7 @@ msgstr ""
 "Bitte überprüfen Sie, ob bug-buddy richtig\n"
 "installiert wurde."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -276,7 +278,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --appname als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -286,7 +288,7 @@ msgstr ""
 "Bitte verwenden Sie stattdessen --pid als Argument\n"
 "an der Kommandozeile."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -418,7 +420,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Fehlerverfolgungssystem "
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Paket"
 
@@ -452,48 +454,52 @@ msgid "Description"
 msgstr "Beschreibung"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Kurze Überschrift für den Fehlerbericht"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 msgid "Full description of the bug, including how to reproduce it"
 msgstr ""
 "Ausführliche Beschreibung des Fehlers, einschließlich einer Anleitung zur "
 "Wiederholung"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Eine Textdatei einfügen"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Fehlerdiagnose-Information"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Die Binärdatei des abgestürzten Programmes auswählen"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binärdatei"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Prozess-ID"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Core-Datei"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Eine Core-Datei auswählen"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Beschaffung von Fehlerdiagnose-Information"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -501,51 +507,51 @@ msgstr ""
 "Bitte warten Sie, während die\n"
 "Information beschafft wird..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "System-Konfiguration"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Stellen Sie bitte sicher, dass diese Informationen stimmen"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Installierte Version"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P%%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Wenn vollständig, automatisch zur nächsten Seite gehen"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Abschicken des Berichts"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr "An"
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr "Kopie an sich selbst schicken"
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Den Report speichern unter..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr "Inhalt"
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Zusammenfassung"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "The GEGL is watching."
 

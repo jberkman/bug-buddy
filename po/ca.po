@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-05-03 23:05+0200\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-04-18 20:38+0200\n"
 "Last-Translator: Softcatala <linux@softcatala.org>\n"
 "Language-Team: Catalan <linux@softcatala.org>\n"
@@ -229,30 +229,32 @@ msgstr ""
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:684
+#: src/bug-buddy.c:682
 #, c-format
-msgid "Your bug report has been submitted to <%s>"
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr ""
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Enviant l'informe"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Si us plau, seleccioneu un fitxer on volgueu desar-lo"
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -261,7 +263,7 @@ msgstr ""
 "El fitxer '%s' ja existeix.\n"
 "Sobrescriure aquest fitxer?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -270,7 +272,7 @@ msgstr ""
 "No s'ha pogut obrir '%s'.\n"
 "Si us plau, asegureu-vos que bud-buddy és correctament instal.lat."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -278,7 +280,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME no és permés.\n"
 "Si us plau, substituiu aquest comandament per --appname."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 #, fuzzy
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
@@ -287,7 +289,7 @@ msgstr ""
 "$GNOME_CRASHED_PID no és permés.\n"
 " Si us plau, substitiu aquesta línia de comandament per --pid."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -404,7 +406,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Sistema de seguiment d'errades"
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Paquet"
 
@@ -435,47 +437,51 @@ msgid "Description"
 msgstr "Descripció"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Títol curt per l'informe d'errors"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 #, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Descripció completa de l'error"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Inclure un fitxer de text"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Informació sobre solució d'errors"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Seleccionar el binari de l'aplicació que ha fallat"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binari"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "Identificació de procés"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Fitxer principal"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Seleccionar un fitxer principal"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Reunir informació per a la solució d'errors"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -483,51 +489,51 @@ msgstr ""
 "Si us plau, espereu mentre es reuneix\n"
 "informació sobre la solució d'errors..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Configuració del sistema"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Si us plau, comproveu que aquesta informació sigui correcta"
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Versió instal.lada"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Anar automàticament a la pàgina següent en acabar"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Enviant l'informe"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr ""
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr ""
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Desar l'informe a..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr ""
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Resum"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "El GEGL vigila"
 

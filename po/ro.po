@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.7\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-04-05 19:24+0300\n"
 "Last-Translator: Dan Damian <dand@dnttm.ro>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -231,30 +231,32 @@ msgstr ""
 msgid "Unable to start mail program: '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr ""
 
-#: src/bug-buddy.c:684
+#: src/bug-buddy.c:682
 #, c-format
-msgid "Your bug report has been submitted to <%s>"
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr ""
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr ""
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 #, fuzzy
 msgid "Submit this bug report now?"
 msgstr "Trimite raportul"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Vã rog sã salvaþi un fiºier pentru salvare."
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -263,7 +265,7 @@ msgstr ""
 "Fiºierul '%s' existã deja.\n"
 "Doriþi sã îl suprascrieþi?"
 
-#: src/bug-buddy.c:934
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -272,7 +274,7 @@ msgstr ""
 "Nu am putut deschide '%s'\n"
 "Vã rog sã vã asiguraþi de instalarea corectã a lui bug-buddy."
 
-#: src/bug-buddy.c:1041
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -280,7 +282,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME este depãºit.\n"
 "Vã rog sã folosiþi în locul lui argumentul --appname."
 
-#: src/bug-buddy.c:1054
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -288,7 +290,7 @@ msgstr ""
 "$GNOME_CRASHED_PID este depãºit\n"
 "Vã rog sã folosiþi în locul lui argumentul --pid."
 
-#: src/bug-buddy.c:1181
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"
@@ -405,7 +407,7 @@ msgstr ""
 msgid "Bug Tracking System "
 msgstr "Sistem gestiune probleme"
 
-#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:51
+#: src/glade-strings.c:26 src/glade-strings.c:30 src/glade-strings.c:52
 msgid "Package"
 msgstr "Pachet"
 
@@ -436,47 +438,51 @@ msgid "Description"
 msgstr "Descriere"
 
 #: src/glade-strings.c:37
+msgid "Please make your bug report in English, if possible."
+msgstr ""
+
+#: src/glade-strings.c:38
 msgid "Short subject for the bug report"
 msgstr "Subiect scurt pentru raport-ul de probleme"
 
-#: src/glade-strings.c:38
+#: src/glade-strings.c:39
 #, fuzzy
 msgid "Full description of the bug, including how to reproduce it"
 msgstr "Descriere completã a problemei"
 
-#: src/glade-strings.c:39
+#: src/glade-strings.c:40
 msgid "Include a text file"
 msgstr "Include un fiºier text"
 
-#: src/glade-strings.c:40
+#: src/glade-strings.c:41
 msgid "Debugging Information"
 msgstr "Informaþii de depanare"
 
-#: src/glade-strings.c:41
+#: src/glade-strings.c:42
 msgid "Select the crashed application's binary"
 msgstr "Selecteazã fiºierul binar al aplicaþiei crãpate"
 
-#: src/glade-strings.c:42
+#: src/glade-strings.c:43
 msgid "Binary"
 msgstr "Binar"
 
-#: src/glade-strings.c:43
+#: src/glade-strings.c:44
 msgid "Process ID"
 msgstr "ID proces"
 
-#: src/glade-strings.c:44
+#: src/glade-strings.c:45
 msgid "Core file"
 msgstr "Fiºier core"
 
-#: src/glade-strings.c:45
+#: src/glade-strings.c:46
 msgid "Select a core file"
 msgstr "Selecteazã un fiºier core"
 
-#: src/glade-strings.c:46
+#: src/glade-strings.c:47
 msgid "Collecting Debugging Information"
 msgstr "Colecteazã informaþii de depanare"
 
-#: src/glade-strings.c:47
+#: src/glade-strings.c:48
 msgid ""
 "Please wait while debugging\n"
 "information is collected..."
@@ -484,51 +490,51 @@ msgstr ""
 "Vã rog sã aºteptaþi, colectez\n"
 "informaþii de depanare..."
 
-#: src/glade-strings.c:49
+#: src/glade-strings.c:50
 msgid "System Configuration"
 msgstr "Configurare sistem"
 
-#: src/glade-strings.c:50
+#: src/glade-strings.c:51
 msgid "Please verify that this information is correct"
 msgstr "Vã rog sã vã asiguraþi de corectitudinea informaþiei."
 
-#: src/glade-strings.c:52
+#: src/glade-strings.c:53
 msgid "Version installed"
 msgstr "Versiune instalatã"
 
-#: src/glade-strings.c:53
+#: src/glade-strings.c:54
 msgid "%P %%"
 msgstr "%P %%"
 
-#: src/glade-strings.c:54
+#: src/glade-strings.c:55
 msgid "Automatically go to next page when complete"
 msgstr "Treci automat la urmãtoarea paginã când termini"
 
-#: src/glade-strings.c:55
+#: src/glade-strings.c:56
 msgid "Submitting the Report"
 msgstr "Trimite raportul"
 
-#: src/glade-strings.c:56
+#: src/glade-strings.c:57
 msgid "To"
 msgstr ""
 
-#: src/glade-strings.c:57
+#: src/glade-strings.c:58
 msgid "Send copy to yourself"
 msgstr ""
 
-#: src/glade-strings.c:58
+#: src/glade-strings.c:59
 msgid "Save the report to..."
 msgstr "Salveazã raportul în..."
 
-#: src/glade-strings.c:59
+#: src/glade-strings.c:60
 msgid "Content"
 msgstr ""
 
-#: src/glade-strings.c:60
+#: src/glade-strings.c:61
 msgid "Summary"
 msgstr "Sumar"
 
-#: src/glade-strings.c:61
+#: src/glade-strings.c:62
 msgid "The GEGL is watching."
 msgstr "GEGL vegheazã"
 

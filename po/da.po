@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bug-buddy 0.8\n"
-"POT-Creation-Date: 2000-04-29 17:02-0400\n"
+"POT-Creation-Date: 2000-05-10 01:33-0400\n"
 "PO-Revision-Date: 2000-05-05 11:42+02:00\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Dansk/Danish <dansk@klid.dk>\n"
@@ -218,29 +218,31 @@ msgstr "Skal til at køre '%s'"
 msgid "Unable to start mail program: '%s'"
 msgstr "Kan ikke starte post-program: '%s'"
 
-#: src/bug-buddy.c:681
+#: src/bug-buddy.c:679
 #, c-format
 msgid "Your bug report was saved in '%s'"
 msgstr "Din fejlrapport blev gemt i '%s'"
 
-#: src/bug-buddy.c:684
-#, c-format
-msgid "Your bug report has been submitted to <%s>"
+#: src/bug-buddy.c:682
+#, fuzzy, c-format
+msgid ""
+"Your bug report has been submitted to:\n"
+"\t<%s>"
 msgstr "Din fejlrapport er blevet indsendt til <%s>"
 
-#: src/bug-buddy.c:814
+#: src/bug-buddy.c:812
 msgid "You must specify a recipient email address"
 msgstr "Du skal angive en e-postadresse på modtageren"
 
-#: src/bug-buddy.c:820
+#: src/bug-buddy.c:818
 msgid "Submit this bug report now?"
 msgstr "Send fejlrapport nu?"
 
-#: src/bug-buddy.c:830
+#: src/bug-buddy.c:828
 msgid "Please choose a file to save to."
 msgstr "Vælg venligst en fil at gemme i."
 
-#: src/bug-buddy.c:837
+#: src/bug-buddy.c:835
 #, c-format
 msgid ""
 "The file '%s' already exists.\n"
@@ -249,7 +251,7 @@ msgstr ""
 "Filen '%s' eksisterer allerede.\n"
 "Overskriv denne fil?"
 
-#: src/bug-buddy.c:937
+#: src/bug-buddy.c:935
 #, c-format
 msgid ""
 "Could not open '%s'.\n"
@@ -258,7 +260,7 @@ msgstr ""
 "Kunne ikke åbne '%s'.\n"
 "Tjek venligst om fejl-hjælper er korrekt installeret."
 
-#: src/bug-buddy.c:1044
+#: src/bug-buddy.c:1042
 msgid ""
 "$GNOME_CRASHED_APPNAME is deprecated.\n"
 "Please use the --appname command lineargument instead."
@@ -266,7 +268,7 @@ msgstr ""
 "$GNOME_CRASHED_APPNAME bruges ikke længere.\n"
 "Brug venligst --appname kommandolineargumentet istedet."
 
-#: src/bug-buddy.c:1057
+#: src/bug-buddy.c:1055
 msgid ""
 "$GNOME_CRASHED_PID is deprecated.\n"
 "Please use the --pid command lineargument instead."
@@ -274,7 +276,7 @@ msgstr ""
 "$GNOME_CRASHED_PID bruges ikke længere.\n"
 "Brug venligst --pid kommandolinieargumentet istedet."
 
-#: src/bug-buddy.c:1189
+#: src/bug-buddy.c:1187
 #, c-format
 msgid ""
 "Could not find '%s'.\n"

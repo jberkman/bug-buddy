@@ -1,3 +1,13 @@
+0.90:
+
+ * Fixes:
+
+	- bugs #10159 and #9493
+
+ * Improvements:
+
+	- window icon is now set
+
 0.9:
 
  * Fixes:
